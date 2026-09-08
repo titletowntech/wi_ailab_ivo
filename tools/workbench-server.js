@@ -9,7 +9,8 @@ const { flattenSchema } = require('./schema');
 const { scoreCandidate } = require('./mapping-suggester');
 
 const ROOT = path.resolve(__dirname, '..');
-const HTML_FILE = path.join(ROOT, 'ui', 'ivo-mapping-workbench.html');
+const WORKSPACE_HTML_FILE = path.join(ROOT, 'mockups', 'workspace-tree.html');
+const MAPPING_HTML_FILE = path.join(ROOT, 'ui', 'ivo-mapping-workbench.html');
 const CLIENT_FILE = path.join(ROOT, 'ui', 'workbench.js');
 const PORT = Number(process.env.PORT || 43129);
 const MAX_BODY_BYTES = 50 * 1024 * 1024;
@@ -310,6 +311,128 @@ function atomicWrite(file, content) {
   fs.renameSync(temporary, file);
 }
 
+function workspaceDirectory(customer) {
+  return path.join(ROOT, 'customers', customer, 'workspace');
+}
+
+function requireCustomer(value) {
+  const customer = requireKey(value, 'Customer');
+  if (!exists(path.join(ROOT, 'customers', customer))) throw new Error('Customer not found.');
+  return customer;
+}
+
+function workspaceFile(customer, name) {
+  return path.join(workspaceDirectory(customer), `${name}.json`);
+}
+
+function readJson(file) {
+  return exists(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : null;
+}
+
+function validateWorkspace(workspace) {
+  const issues = [];
+  const add = (severity, message, flowName = null, stepId = null) => {
+    issues.push({ severity, message, flowName, stepId });
+  };
+  const validateScript = (script, label, flowName, stepId) => {
+    if (typeof script !== 'string') return;
+    try { new Function(script); }
+    catch (error) { add('blocking', `${label} is not valid JavaScript: ${error.message}`, flowName, stepId); }
+  };
+  if (!workspace || workspace.schemaVersion !== 1 || !Array.isArray(workspace.flows)) {
+    add('blocking', 'Workspace must use canonical schema version 1 and contain a flows array.');
+    return issues;
+  }
+  if (workspace.flows.length === 0) add('blocking', 'Workspace requires at least one generated flow.');
+  const flowNames = new Set();
+  for (const flow of workspace.flows) {
+    if (!flow.name) add('blocking', 'Every flow requires a name.');
+    else if (flowNames.has(flow.name)) add('blocking', `Flow name must be unique: ${flow.name}.`, flow.name);
+    else flowNames.add(flow.name);
+    if (!flow.trigger) add('blocking', 'Flow trigger is not configured.', flow.name);
+    if (!Array.isArray(flow.steps) || flow.steps.length === 0) add('blocking', 'Flow requires at least one step.', flow.name);
+    const stepIds = new Set();
+    for (const step of flow.steps || []) {
+      if (!step.id) add('blocking', 'Every step requires an ID.', flow.name);
+      else if (stepIds.has(step.id)) add('blocking', `Step ID must be unique within the flow: ${step.id}.`, flow.name, step.id);
+      else stepIds.add(step.id);
+      if (!step.name || !step.type) add('blocking', 'Every step requires a name and App Xchange type.', flow.name, step.id);
+      if (!step.connector) add('blocking', 'Every step requires a connector identity.', flow.name, step.id);
+      if (step.type === 'getdatafromcachev2' && (!step.filter?.property || !step.filter?.operator || !step.filter?.value)) {
+        add('blocking', 'Lookup filter is incomplete.', flow.name, step.id);
+      }
+      if (['if', 'code', 'queueactionv3'].includes(step.type) && typeof step.code !== 'string') {
+        add('blocking', 'This step requires JavaScript code.', flow.name, step.id);
+      }
+      validateScript(step.code, 'Code block', flow.name, step.id);
+      if (step.type === 'callflow') {
+        const calledFlow = step.details?.['Called flow'];
+        if (!calledFlow) add('blocking', 'Called flow is not configured.', flow.name, step.id);
+        else if (!workspace.flows.some((candidate) => candidate.name === calledFlow)) add('blocking', `Called flow does not exist: ${calledFlow}.`, flow.name, step.id);
+        if (typeof step.inputCode !== 'string') add('warning', 'Called flow has no explicit input expression.', flow.name, step.id);
+        validateScript(step.inputCode, 'Called-flow input', flow.name, step.id);
+      }
+    }
+    for (const configuration of flow.configurations || []) {
+      if (!configuration.name || !configuration.type) add('blocking', 'Every configuration requires a name and type.', flow.name);
+      if (configuration.required && String(configuration.defaultValue || '').trim() === '') {
+        add('blocking', `Required configuration has no default value: ${configuration.name || 'unnamed'}.`, flow.name);
+      }
+    }
+  }
+  return issues;
+}
+
+function workspaceBundle(customer) {
+  const directory = workspaceDirectory(customer);
+  const revisionsDirectory = path.join(directory, 'revisions');
+  const revisions = files(revisionsDirectory)
+    .filter((name) => name.endsWith('.json'))
+    .reverse()
+    .map((name) => {
+      const revision = readJson(path.join(revisionsDirectory, name));
+      return { id: name.slice(0, -5), approvedAt: revision?.review?.approvedAt || null, approvedBy: revision?.review?.approvedBy || null };
+    });
+  const draft = readJson(workspaceFile(customer, 'draft'));
+  return {
+    generated: readJson(workspaceFile(customer, 'generated')),
+    draft,
+    approved: readJson(workspaceFile(customer, 'approved')),
+    revisions,
+    validation: draft ? validateWorkspace(draft) : [],
+  };
+}
+
+function saveWorkspaceDraft(customer, workspace) {
+  const issues = validateWorkspace(workspace);
+  if (issues.some((issue) => issue.message.startsWith('Workspace must'))) throw new Error(issues[0].message);
+  const draft = structuredClone(workspace);
+  draft.updatedAt = new Date().toISOString();
+  if (!exists(workspaceFile(customer, 'generated'))) {
+    const generated = structuredClone(draft);
+    generated.review = { status: 'generated', generatedAt: generated.provenance?.generatedAt || draft.updatedAt };
+    atomicWrite(workspaceFile(customer, 'generated'), JSON.stringify(generated, null, 2) + '\n');
+  }
+  atomicWrite(workspaceFile(customer, 'draft'), JSON.stringify(draft, null, 2) + '\n');
+  return { draft, validation: issues };
+}
+
+function approveWorkspace(customer, data) {
+  const draft = readJson(workspaceFile(customer, 'draft'));
+  if (!draft) throw new Error('Save the generated workspace before approving it.');
+  const issues = validateWorkspace(draft);
+  if (issues.some((issue) => issue.severity === 'blocking')) throw new Error('Resolve all blocking validation issues before approval.');
+  if (draft.flows.some((flow) => flow.review?.status !== 'approved')) throw new Error('Approve every flow before approving the workspace.');
+  const approvedAt = new Date().toISOString();
+  const approved = structuredClone(draft);
+  approved.review = { status: 'approved', approvedAt, approvedBy: String(data.approvedBy || 'Local reviewer'), notes: String(data.notes || '') };
+  const revisionId = approvedAt.replace(/[:.]/g, '-');
+  atomicWrite(workspaceFile(customer, 'approved'), JSON.stringify(approved, null, 2) + '\n');
+  atomicWrite(path.join(workspaceDirectory(customer), 'revisions', `${revisionId}.json`), JSON.stringify(approved, null, 2) + '\n');
+  atomicWrite(workspaceFile(customer, 'draft'), JSON.stringify(approved, null, 2) + '\n');
+  return { approved, revisionId, validation: issues };
+}
+
 function saveReview(customer, object, review) {
   const objectDir = path.join(ROOT, 'customers', customer, object);
   const approvedFile = path.join(objectDir, 'output', 'approved-mapping', 'mapping.csv');
@@ -373,6 +496,14 @@ function routeParts(url) {
 async function api(request, response, url) {
   const parts = routeParts(url);
   if (request.method === 'GET' && url.pathname === '/api/catalog') return json(response, 200, catalog());
+  if (parts[1] === 'customers' && parts[3] === 'workspace' && parts.length === 4) {
+    const customer = requireCustomer(parts[2]);
+    if (request.method === 'GET') return json(response, 200, workspaceBundle(customer));
+    if (request.method === 'PUT') return json(response, 200, saveWorkspaceDraft(customer, await body(request)));
+  }
+  if (request.method === 'POST' && parts[1] === 'customers' && parts[3] === 'workspace' && parts[4] === 'approve') {
+    return json(response, 200, approveWorkspace(requireCustomer(parts[2]), await body(request)));
+  }
   if (request.method === 'GET' && url.pathname === '/api/file') {
     const file = safeWorkspaceFile(url.searchParams.get('path'));
     response.writeHead(200, { 'Content-Type': /\.json$/i.test(file) ? 'application/json; charset=utf-8' : 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' });
@@ -479,9 +610,9 @@ async function api(request, response, url) {
   return json(response, 404, { error: 'Not found.' });
 }
 
-function serveHtml(response) {
+function serveHtml(response, file) {
   response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
-  fs.createReadStream(HTML_FILE).pipe(response);
+  fs.createReadStream(file).pipe(response);
 }
 
 function serveClient(response) {
@@ -493,7 +624,8 @@ const server = http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, `http://${request.headers.host || 'localhost'}`);
     if (url.pathname.startsWith('/api/')) return await api(request, response, url);
-    if (request.method === 'GET' && (url.pathname === '/' || url.pathname === '/ui/ivo-mapping-workbench.html')) return serveHtml(response);
+    if (request.method === 'GET' && url.pathname === '/workspace') return serveHtml(response, WORKSPACE_HTML_FILE);
+    if (request.method === 'GET' && (url.pathname === '/' || url.pathname === '/mapping' || url.pathname === '/ui/ivo-mapping-workbench.html')) return serveHtml(response, MAPPING_HTML_FILE);
     if (request.method === 'GET' && url.pathname === '/ui/workbench.js') return serveClient(response);
     return json(response, 404, { error: 'Not found.' });
   } catch (error) {

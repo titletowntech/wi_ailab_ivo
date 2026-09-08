@@ -391,6 +391,10 @@ function showCustomerCatalog() {
 }
 
 function openCustomer(customer) {
+  location.href = `/workspace?customer=${encodeURIComponent(customer)}`;
+}
+
+function openCustomerSources(customer) {
   state.customer = customer;
   openWorkspace('customer');
   showCustomerCatalog();
@@ -834,7 +838,7 @@ function renderReadiness() {
       ? { name: 'IVO-managed fields are not assigned', detail: `${generated.length - generatedAssigned.length} of ${generated.length}`, ...readinessState(generatedAssigned.length === 0) }
       : { name: 'IVO-managed fields are identified', detail: 'None identified in the reference', ...readinessState(false, true) },
     { name: 'Field reviews are complete', detail: open.length ? `${open.length} open` : 'Complete', ...readinessState(open.length === 0) },
-    { name: 'IVO lookup rules are defined', detail: lookups.length ? `${lookups.length} require confirmation` : 'No open lookups', ...readinessState(lookups.length === 0, true) },
+    { name: 'Lookup fields are confirmed', detail: lookups.length ? `${lookups.length} require confirmation` : 'No open lookups', ...readinessState(lookups.length === 0, true) },
     { name: 'IVO reference is approved', detail: referenceReview ? `${referenceReview} fields need review` : 'Ready', ...readinessState(referenceReview === 0, true) },
   ];
   const readyCount = checks.filter((check) => check.label === 'Ready').length;
@@ -978,7 +982,7 @@ function configureUsefulLabels() {
   const processLabels = [
     ['Read field definition', 'Check the JSON and collect each IVO field.'],
     ['Review sample values', 'Summarize how often values appear and what they look like.'],
-    ['Create reference files', 'Prepare fields, lookups, value checks, and an example.'],
+    ['Create reference files', 'Prepare the field list and value checks.'],
     ['Flag decisions', 'Mark fields and rules that still need IVO review.'],
   ];
   document.querySelectorAll('#refPanelProcess .process-row').forEach((row, index) => {
@@ -1183,6 +1187,11 @@ async function start() {
   document.querySelector('.mobile-nav').hidden = true;
   try {
     await loadCatalog();
+    const parameters = new URLSearchParams(location.search);
+    const requestedCustomer = parameters.get('customer');
+    if (parameters.get('view') === 'sources' && state.catalog.customers.some((customer) => customer.key === requestedCustomer)) {
+      openCustomerSources(requestedCustomer);
+    }
   } catch (error) {
     byId('openCustomer').disabled = true;
     showMessage(location.protocol === 'file:' ? 'Start the workbench server to load customer and IVO data.' : error.message, 'error');

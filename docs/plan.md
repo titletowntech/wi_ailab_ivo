@@ -29,7 +29,7 @@ IVO must review `reference/ivo/equipment/` and provide:
 - reference object, key, resolver, scope, and missing-value behavior for lookup IDs;
 - relationship and load-order requirements.
 
-Update `field-catalog.csv`, `lookup-rules.csv`, `validation-rules.json`, and `example-payload.json`. Change `status` to `usable` only when enough information exists for automation.
+Update `field-catalog.csv` and `validation-rules.json`. Change `status` to `usable` only when enough information exists for automation.
 
 Complete when every required or integration-owned Equipment field is `usable` and all required lookups are resolvable.
 

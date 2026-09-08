@@ -1,0 +1,1728 @@
+[
+  {
+    "workspaceId": 14368,
+    "registrationId": 218762,
+    "initiatingInstanceId": "3d21d03f-dec8-4234-abe5-8bc5e50b1fdd",
+    "performanceMetrics": {
+      "peakMemoryInKiloBytes": 715828,
+      "processTimeInSeconds": 2,
+      "score": 717,
+      "numberOfSteps": 19,
+      "processTimeInMilliseconds": 2962.6476000000002,
+      "artifactCounts": {
+        "Action": 2
+      }
+    },
+    "environment": 3,
+    "appXchangeAppUrl": "https://app.xchange.trimble.com/",
+    "appNetworkUrl": "https://api.xchange.trimble.com/connect/v1/"
+  },
+  {
+    "instanceId": "3d21d03f-dec8-4234-abe5-8bc5e50b1fdd",
+    "rootInstanceId": "3d21d03f-dec8-4234-abe5-8bc5e50b1fdd",
+    "startedOn": "2026-09-08T14:16:46.4612167+00:00",
+    "finishedOn": "2026-09-08T14:17:35.7144853+00:00",
+    "configuration": null,
+    "trigger": {
+      "info": {
+        "SubscriberId": 14368,
+        "Type": 100,
+        "EventInfo": {
+          "CacheChangeType": 2,
+          "CacheId": "34d94a1f-842f-418a-ac37-6f44f3457883",
+          "DataObjectPath": "vista/hr/2/resources",
+          "CacheUrl": "appnetwork/subscribers/14368/vista/hr/2/data/resources/cache/34d94a1f-842f-418a-ac37-6f44f3457883",
+          "SubscriberId": 14368,
+          "EventId": 3380643827,
+          "EventOrigin": 1
+        }
+      },
+      "data": {
+        "HRCo": 3,
+        "HRRef": 90484,
+        "PRCo": 3,
+        "PREmp": 90484,
+        "LastName": "Harjochee",
+        "FirstName": "Harbor",
+        "MiddleName": "Dean",
+        "SortName": "HARJOCHEEHARBOR",
+        "Address": "109114 N 3720 Rd",
+        "City": "Okemah ",
+        "State": "OK",
+        "Zip": "74859",
+        "Address2": null,
+        "Phone": "(786) 459-4794",
+        "WorkPhone": "(786) 459-4794",
+        "Pager": null,
+        "CellPhone": "(786) 459-4794",
+        "SSN": "447-92-3647",
+        "Sex": "M",
+        "Race": "05",
+        "BirthDate": "1980-03-29T00:00:00",
+        "HireDate": "2026-05-12T00:00:00",
+        "TermDate": null,
+        "TermReason": null,
+        "ActiveYN": "Y",
+        "Status": "Active",
+        "PRGroup": 1,
+        "PRDept": "300",
+        "StdCraft": "731",
+        "StdClass": "IW",
+        "StdInsCode": "5222",
+        "StdTaxState": "OK",
+        "StdUnempState": "OK",
+        "StdInsState": "OK",
+        "StdLocal": null,
+        "W4CompleteYN": "Y",
+        "PositionCode": "2011",
+        "NoRehireYN": "N",
+        "MaritalStatus": "M",
+        "MaidenName": null,
+        "SpouseName": null,
+        "PassPort": "N",
+        "RelativesYN": "N",
+        "HandicapYN": "N",
+        "HandicapDesc": null,
+        "VetJobCategory": null,
+        "PhysicalYN": "N",
+        "PhysDate": null,
+        "PhysExpireDate": null,
+        "PhysResults": null,
+        "LicNumber": null,
+        "LicType": null,
+        "LicState": null,
+        "LicExpDate": null,
+        "DriveCoVehiclesYN": "N",
+        "I9Status": null,
+        "I9Citizen": null,
+        "I9ReviewDate": null,
+        "TrainingBudget": null,
+        "CafeteriaPlanBudget": null,
+        "HighSchool": null,
+        "HSGradDate": null,
+        "College1": null,
+        "College1BegDate": null,
+        "College1EndDate": null,
+        "College1Degree": null,
+        "College2": null,
+        "College2BegDate": null,
+        "College2EndDate": null,
+        "College2Degree": null,
+        "ApplicationDate": null,
+        "AvailableDate": null,
+        "LastContactDate": null,
+        "ContactPhone": null,
+        "AltContactPhone": null,
+        "ExpectedSalary": null,
+        "Source": null,
+        "SourceCost": null,
+        "CurrentEmployer": null,
+        "CurrentTime": null,
+        "PrevEmployer": null,
+        "PrevTime": null,
+        "NoContactEmplYN": "N",
+        "HistSeq": null,
+        "Notes": null,
+        "ExistsInPR": "Y",
+        "EarnCode": 1,
+        "PhotoName": null,
+        "UniqueAttchID": "4c37d3b3-542f-443f-82da-12d635459800",
+        "TempWorker": "N",
+        "Email": "harbordharjochee@gmail.com",
+        "Suffix": null,
+        "DisabledVetYN": "N",
+        "VietnamVetYN": "N",
+        "OtherVetYN": "N",
+        "VetDischargeDate": null,
+        "OccupCat": "602",
+        "CatStatus": "J",
+        "LicClass": null,
+        "DOLHireState": null,
+        "NonResAlienYN": "N",
+        "KeyID": 7335,
+        "Country": "US",
+        "LicCountry": null,
+        "OTOpt": "W",
+        "OTSched": null,
+        "Shift": null,
+        "PTOAppvrGrp": null,
+        "HDAmt": null,
+        "F1Amt": null,
+        "LCFStock": null,
+        "LCPStock": null,
+        "AFServiceMedalVetYN": "N",
+        "WOTaxState": null,
+        "WOLocalCode": null,
+        "StatusCode": null,
+        "LookBackGroup": null,
+        "InitialMeasurementStartDate": null,
+        "InitialMeasurementEndDate": null,
+        "InitialAdministrativeStartDate": null,
+        "InitialAdministrativeEndDate": null,
+        "InitialStabilityStartDate": null,
+        "InitialStabilityEndDate": null,
+        "HiringLocationID": null,
+        "ActiveDutyWartimeVetYN": "N",
+        "GenderIdentity": "M",
+        "GenderIdentityOther": null,
+        "FederalTaxExemptYN": "Y",
+        "WorkEmail": null,
+        "__custom_fields": {
+          "udActiveWartime": "N",
+          "udDriverSuspended": "N",
+          "udSuspendedNotes": null,
+          "udSmoker": "N",
+          "udInsurabilityForm": "N",
+          "udOvrOps": null
+        },
+        "__Previous": {
+          "HRCo": 3,
+          "HRRef": 90484,
+          "PRCo": 3,
+          "PREmp": 90484,
+          "LastName": "Harjochee",
+          "FirstName": "Harbor",
+          "MiddleName": "Dean",
+          "SortName": "HARJOCHEEHARBOR",
+          "Address": "109114 N 3720 Rd",
+          "City": "Okemah ",
+          "State": "OK",
+          "Zip": "74859",
+          "Address2": null,
+          "Phone": "(786) 459-4794",
+          "WorkPhone": "(786) 459-4794",
+          "Pager": null,
+          "CellPhone": "(786) 459-4794",
+          "SSN": "447-92-3647",
+          "Sex": "M",
+          "Race": "05",
+          "BirthDate": "1980-03-29T00:00:00",
+          "HireDate": "2026-05-12T00:00:00",
+          "TermDate": null,
+          "TermReason": null,
+          "ActiveYN": "Y",
+          "Status": "Active",
+          "PRGroup": 1,
+          "PRDept": "300",
+          "StdCraft": "731",
+          "StdClass": "IW",
+          "StdInsCode": "5222",
+          "StdTaxState": "OK",
+          "StdUnempState": "OK",
+          "StdInsState": "OK",
+          "StdLocal": null,
+          "W4CompleteYN": "Y",
+          "PositionCode": "2011",
+          "NoRehireYN": "N",
+          "MaritalStatus": "M",
+          "MaidenName": null,
+          "SpouseName": null,
+          "PassPort": "N",
+          "RelativesYN": "N",
+          "HandicapYN": "N",
+          "HandicapDesc": null,
+          "VetJobCategory": null,
+          "PhysicalYN": "N",
+          "PhysDate": null,
+          "PhysExpireDate": null,
+          "PhysResults": null,
+          "LicNumber": null,
+          "LicType": null,
+          "LicState": null,
+          "LicExpDate": null,
+          "DriveCoVehiclesYN": "N",
+          "I9Status": null,
+          "I9Citizen": null,
+          "I9ReviewDate": null,
+          "TrainingBudget": null,
+          "CafeteriaPlanBudget": null,
+          "HighSchool": null,
+          "HSGradDate": null,
+          "College1": null,
+          "College1BegDate": null,
+          "College1EndDate": null,
+          "College1Degree": null,
+          "College2": null,
+          "College2BegDate": null,
+          "College2EndDate": null,
+          "College2Degree": null,
+          "ApplicationDate": null,
+          "AvailableDate": null,
+          "LastContactDate": null,
+          "ContactPhone": null,
+          "AltContactPhone": null,
+          "ExpectedSalary": null,
+          "Source": null,
+          "SourceCost": null,
+          "CurrentEmployer": null,
+          "CurrentTime": null,
+          "PrevEmployer": null,
+          "PrevTime": null,
+          "NoContactEmplYN": "N",
+          "HistSeq": null,
+          "Notes": null,
+          "ExistsInPR": "Y",
+          "EarnCode": 1,
+          "PhotoName": null,
+          "UniqueAttchID": "4c37d3b3-542f-443f-82da-12d635459800",
+          "TempWorker": "N",
+          "Email": "harbordharjochee@gmail.com",
+          "Suffix": null,
+          "DisabledVetYN": "N",
+          "VietnamVetYN": "N",
+          "OtherVetYN": "N",
+          "VetDischargeDate": null,
+          "OccupCat": "602",
+          "CatStatus": "J",
+          "LicClass": null,
+          "DOLHireState": null,
+          "NonResAlienYN": "N",
+          "KeyID": 7335,
+          "Country": "US",
+          "LicCountry": null,
+          "OTOpt": "W",
+          "OTSched": null,
+          "Shift": null,
+          "PTOAppvrGrp": null,
+          "HDAmt": null,
+          "F1Amt": null,
+          "LCFStock": null,
+          "LCPStock": null,
+          "AFServiceMedalVetYN": "N",
+          "WOTaxState": null,
+          "WOLocalCode": null,
+          "StatusCode": null,
+          "LookBackGroup": null,
+          "InitialMeasurementStartDate": null,
+          "InitialMeasurementEndDate": null,
+          "InitialAdministrativeStartDate": null,
+          "InitialAdministrativeEndDate": null,
+          "InitialStabilityStartDate": null,
+          "InitialStabilityEndDate": null,
+          "HiringLocationID": null,
+          "ActiveDutyWartimeVetYN": "N",
+          "GenderIdentity": "M",
+          "GenderIdentityOther": null,
+          "FederalTaxExemptYN": "N",
+          "WorkEmail": null,
+          "__custom_fields": {
+            "udActiveWartime": "N",
+            "udDriverSuspended": "N",
+            "udSuspendedNotes": null,
+            "udSmoker": "N",
+            "udInsurabilityForm": "N",
+            "udOvrOps": null
+          }
+        }
+      },
+      "definition": null,
+      "workspace": {
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "lk-emp",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/payroll/1/employee",
+          "SelectProperties": [
+            "uuid",
+            "employeeId",
+            "companyId",
+            "firstName",
+            "lastName",
+            "mobilePhone",
+            "employeeGroupId",
+            "divisionId",
+            "accountingCode",
+            "employeeCode",
+            "defaultLaborCodeId",
+            "assignedToUserId",
+            "createdByUserId",
+            "isActive",
+            "isDeleted",
+            "currentTrackVoJobId"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "accountingCode",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "90484"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+          "employeeId": 17055,
+          "companyId": 265,
+          "firstName": "Harbor",
+          "lastName": "Harjochee",
+          "mobilePhone": "+17864594794",
+          "employeeGroupId": 994,
+          "divisionId": 685,
+          "accountingCode": "90484",
+          "employeeCode": null,
+          "defaultLaborCodeId": 1902,
+          "assignedToUserId": 15941,
+          "createdByUserId": 45,
+          "isActive": true,
+          "isDeleted": false,
+          "currentTrackVoJobId": 25137
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Existing Employees"
+      },
+      {
+        "id": "group",
+        "status": "SUCCESSFUL",
+        "stepType": "code",
+        "inputData": {
+          "Script": "=const code = _.trim(flow.trigger.data?.OccupCat);\nconst employeeGroupsList = [\n  \"100|Management\",\n  \"105|Superintendent\",\n  \"110|Supervision\",\n  \"200|Professional\",\n  \"220|Administrative\",\n  \"240|Administrative/Professional\",\n  \"260|Skilled Craft\",\n  \"300|Technician\",\n  \"400|Sales Workers\",\n  \"500|Clerical\",\n  \"600|Craft Misc Type\",\n  \"602|Ironworker\",\n  \"603|Carpenter\",\n  \"604|Cement Finisher\",\n  \"605|Operating Engineer\",\n  \"606|Mechanic\",\n  \"607|Welder\",\n  \"612|Ironworker Foreman\",\n  \"613|Carpenter Foreman\",\n  \"614|Cement Finisher Foreman\",\n  \"615|Operating Engineer Foreman\",\n  \"616|Mechanic Foreman\",\n  \"617|Welder Foreman\",\n  \"700|Operative Misc Type\",\n  \"702|Ironworker Apprentice\",\n  \"703|Carpenter Apprentice\",\n  \"704|Cement Finisher Apprentice\",\n  \"705|Operating Engineer Apprentice\",\n  \"706|Mechanic Apprentice\",\n  \"707|Welder Apprentice\",\n  \"800|Laborer\",\n  \"801|Laborer Apprentice\",\n  \"810|Laborer Foreman\",\n  \"900|Service Worker\"\n];\n\nreturn employeeGroupsList.find((group) => group.split('|')[0] === code) ?? null;"
+        },
+        "data": "602|Ironworker",
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Vista Employee Group"
+      },
+      {
+        "id": "i-group",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/payroll/1/group",
+          "SelectProperties": [
+            "employeeGroupId"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "employeeGroupName",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "602|Ironworker"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": null,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Employee Group"
+      },
+      {
+        "id": "lite",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "vista/pr/2/employees_lite",
+          "SelectProperties": [
+            "Employee",
+            "LastName",
+            "FirstName",
+            "ActiveYN",
+            "Craft",
+            "Class",
+            "Job",
+            "Email"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "Employee",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 90484
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "Employee": 90484,
+          "LastName": "Harjochee",
+          "FirstName": "Harbor",
+          "ActiveYN": "Y",
+          "Craft": "731",
+          "Class": "IW",
+          "Job": "432501-",
+          "Email": "harbordharjochee@gmail.com"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Vista Employee Lite"
+      },
+      {
+        "id": "job",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/job",
+          "SelectProperties": [
+            "jobId",
+            "jobNumber"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "jobNumber",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "432501"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "jobId": 25005,
+          "jobNumber": "432501"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup IVO Job"
+      },
+      {
+        "id": "v-div",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "vista/pr/2/departments",
+          "SelectProperties": [
+            "PRDept",
+            "Description"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "PRDept",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "300"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "PRDept": "300",
+          "Description": "Construction Overhead"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Vista Division"
+      },
+      {
+        "id": "i-div",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/headquarters/1/division",
+          "SelectProperties": [
+            "divisionId"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "divisionName",
+              "Operator": 103,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "Construction Overhead - 300"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "divisionId": 685
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup IVO Division"
+      },
+      {
+        "id": "lk-pay-cls",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/labor-code",
+          "SelectProperties": [
+            "laborCodeId",
+            "laborCode"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "laborCode",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "731.IW"
+            },
+            {
+              "PropertyName": "accountingCode",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "IW"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "laborCodeId": 1902,
+          "laborCode": "731.IW"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup IVO Labor Pay Class"
+      },
+      {
+        "id": "trigger-type",
+        "status": "False",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "create",
+              "name": "Create Employee",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/payroll/1/employee/add",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return uuid.v4();",
+                  "companyId": "=return 265;",
+                  "firstName": "=return _.trim(flow.trigger.data.FirstName);",
+                  "lastName": "=return _.trim(flow.trigger.data.LastName);",
+                  "employeeGroupId": "=const group = flow.step('i-group')?.output?.employeeGroupId;\n\nif (group) {\n  return group;\n}\n\nreturn null;",
+                  "divisionId": "=const division = flow.step('i-div')?.output?.divisionId;\n\nif (division) {\n  return division;\n}\n\nreturn null;",
+                  "createdByUserId": "=return 45;",
+                  "defaultLaborCodeId": "=const code = flow.step('lk-pay-cls')?.output?.laborCodeId;\n\nif (code) {\n  return code;\n}\n\nreturn null;",
+                  "mobilePhone": "=const rawPhone =\n  _.trim(flow.trigger.data?.WorkPhone) || _.trim(flow.trigger.data?.CellPhone);\n\nreturn rawPhone ? `+1${rawPhone.replace(/\\D/g, '')}` : null;",
+                  "accountingCode": "=return `${flow.trigger.data.PREmp}`;",
+                  "isActive": "=return _.trim(flow.trigger.data.ActiveYN) === 'Y';"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "create-conditional",
+              "name": "Create Employee Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('create').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "call-link-flow-create",
+                    "name": "Call Linked User Flow",
+                    "type": "callflow",
+                    "input": {
+                      "FlowToCallCode": "v2-linked-user-called-flow-ff85ca6f",
+                      "UseExistingInput": false,
+                      "FlowInputData": {
+                        "employee_no": "=return flow.trigger.data.PREmp;",
+                        "first_name": "=return flow.trigger.data.FirstName;",
+                        "last_name": "=return flow.trigger.data.LastName;",
+                        "status": "=return _.trim(flow.trigger.data.ActiveYN) === 'A';",
+                        "state": "=return flow.trigger.data?.State ?? null;",
+                        "email": "=const work = flow.trigger.data?.WorkEmail;\nconst email = flow.trigger.data?.Email;\n\nif (work && _.trim(work) !== '') {\n  return work;\n}\n\nif (email && _.trim(email) !== '') {\n  return email;\n}\n\nif (!work && !email) {\n  const first = _.trim(flow.trigger.data.FirstName);\n  const last = _.trim(flow.trigger.data.LastName);\n  const domain = '@placeholder-domain.com';\n  return first + '.' + last.replace(\" \", \"-\") + domain;\n}",
+                        "phone": "=const rawPhone =\n  _.trim(flow.trigger.data?.WorkPhone) || _.trim(flow.trigger.data?.CellPhone);\n\nreturn rawPhone ? `+1${rawPhone.replace(/\\D/g, '')}` : null;",
+                        "employeeId": "=const id = flow.step('create').actionResponse?.result?.employeeId;\n\nif (id) {\n  return id;\n}\n\nreturn null;",
+                        "userId": "=return null;",
+                        "created_employee": "=const employee = flow.step('create').actionResponse?.result;\n\nif(employee){\n  return employee;\n}\n\nreturn null;"
+                      }
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "create-success",
+                    "name": "Create Employee Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst emp_id = flow.step('create').actionResponse?.result?.employeeId;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} successfully created in IVO with PK ${emp_id} | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "call-link-flow-create",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-create-failure",
+                    "name": "Email Employee Create Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const emp = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\nreturn `Employee ${emp} | Create Action Failure | Vista To IVO | ${time}`;",
+                      "Body": "=const response = flow.step('create').actionResponse;\nconst request = flow.step('create').actionRequest;\nconst title = 'Employee Create Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "create-failure",
+                    "name": "Create Employee Action Failure",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} unsuccessfully created in IVO | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-create-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "update",
+              "name": "Update Employee",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/payroll/1/employee/update",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "employeeId": "=return flow.step('lk-emp').output.employeeId;",
+                  "companyId": "=return flow.step('lk-emp').output.companyId;",
+                  "uuid": "=return flow.step('lk-emp').output.uuid;",
+                  "firstName": "=return _.trim(flow.trigger.data.FirstName);",
+                  "lastName": "=return _.trim(flow.trigger.data.LastName);",
+                  "employeeGroupId": "=const group = flow.step('i-group')?.output?.employeeGroupId;\n\nif (group) {\n  return group;\n}\n\nreturn flow.step('lk-emp').output.employeeGroupId;",
+                  "divisionId": "=return flow.step('lk-emp').output.divisionId;",
+                  "createdByUserId": "=return flow.step('lk-emp').output.createdByUserId;",
+                  "assignedToUserId": "=return flow.step('lk-emp').output.assignedToUserId;",
+                  "defaultLaborCodeId": "=const code = flow.step('lk-pay-cls')?.output?.laborCodeId;\n\nif (code) {\n  return code;\n}\n\nreturn flow.step('lk-emp').output.defaultLaborCodeId;",
+                  "mobilePhone": "=const rawPhone =\n  _.trim(flow.trigger.data?.WorkPhone) || _.trim(flow.trigger.data?.CellPhone);\n\nreturn rawPhone ? `+1${rawPhone.replace(/\\D/g, '')}` : flow.step('lk-emp').output.mobilePhone;",
+                  "accountingCode": "=return flow.step('lk-emp').output.accountingCode;",
+                  "employeeCode": "=return flow.step('lk-emp').output.employeeCode;",
+                  "isActive": "=return _.trim(flow.trigger.data.ActiveYN) === 'Y';"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-conditional",
+              "name": "Update Employee Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('update').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "call-link-flow-update",
+                    "name": "Call Linked User Flow",
+                    "type": "callflow",
+                    "input": {
+                      "FlowToCallCode": "v2-linked-user-called-flow-ff85ca6f",
+                      "UseExistingInput": false,
+                      "FlowInputData": {
+                        "employee_no": "=return flow.trigger.data.PREmp;",
+                        "first_name": "=return flow.trigger.data.FirstName;",
+                        "last_name": "=return flow.trigger.data.LastName;",
+                        "status": "=return _.trim(flow.trigger.data.ActiveYN) === 'Y';",
+                        "state": "=return flow.trigger.data?.State ?? null;",
+                        "email": "=const work = flow.trigger.data?.WorkEmail;\nconst email = flow.trigger.data?.Email;\n\nif (work && _.trim(work) !== '') {\n  return work;\n}\n\nif (email && _.trim(email) !== '') {\n  return email;\n}\n\nif (!work && !email) {\n  const first = _.trim(flow.trigger.data.FirstName);\n  const last = _.trim(flow.trigger.data.LastName);\n  const domain = '@placeholder-domain.com';\n  return first + '.' + last.replace(\" \", \"-\") + domain;\n}",
+                        "phone": "=const rawPhone =\n  _.trim(flow.trigger.data?.WorkPhone) || _.trim(flow.trigger.data?.CellPhone);\n\nreturn rawPhone ? `+1${rawPhone.replace(/\\D/g, '')}` : flow.step('lk-emp').output.mobilePhone;",
+                        "employeeId": "=return flow.step('lk-emp').output?.employeeId ?? null;",
+                        "userId": "=return flow.step('lk-emp').output?.assignedToUserId ?? null;",
+                        "created_employee": "=return flow.step('lk-emp').output;"
+                      }
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-success",
+                    "name": "Update Employee Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst emp_id = flow.step('update').actionResponse?.result?.employeeId;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} successfully updated in IVO with PK ${emp_id} | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "call-link-flow-update",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-update-failure",
+                    "name": "Email Update Employee Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const emp = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\nreturn `Employee ${emp} | Update Action Failure | Vista To IVO | ${time}`;",
+                      "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Employee Update Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-failed",
+                    "name": "Update Employee Action Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} unsuccessfully updated in IVO | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-update-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "update",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ]
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Should Create"
+      },
+      {
+        "id": "update",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/payroll/1/employee/update",
+          "ActionBody": {
+            "employeeId": 17055,
+            "companyId": 265,
+            "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+            "firstName": "Harbor",
+            "lastName": "Harjochee",
+            "employeeGroupId": 994,
+            "divisionId": 685,
+            "createdByUserId": 45,
+            "assignedToUserId": 15941,
+            "defaultLaborCodeId": 1902,
+            "mobilePhone": "+17864594794",
+            "accountingCode": "90484",
+            "employeeCode": null,
+            "isActive": true
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "4491a3e7-2019-4972-9517-56e58d654b41",
+              "actionPath": "ivo-systems/payroll/1/employee/update",
+              "dataObjectCode": "employee",
+              "subscriberCode": "14368",
+              "actionCode": "update",
+              "createdUtc": "2026-09-08T14:16:47.5068517+00:00",
+              "modifiedUtc": "2026-09-08T14:16:56.1373091+00:00",
+              "status": "Successful",
+              "data": {
+                "employeeId": 17055,
+                "companyId": 265,
+                "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+                "firstName": "Harbor",
+                "lastName": "Harjochee",
+                "employeeGroupId": 994,
+                "divisionId": 685,
+                "createdByUserId": 45,
+                "assignedToUserId": 15941,
+                "defaultLaborCodeId": 1902,
+                "mobilePhone": "+17864594794",
+                "accountingCode": "90484",
+                "employeeCode": null,
+                "isActive": true
+              },
+              "result": {
+                "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+                "employeeId": 17055,
+                "companyId": 265,
+                "firstName": "Harbor",
+                "lastName": "Harjochee",
+                "nickname": null,
+                "mobilePhone": "+17864594794",
+                "emergencyContactName": null,
+                "emergencyContactNumber": null,
+                "employeeGroupId": 994,
+                "divisionId": 685,
+                "accountingCode": "90484",
+                "employeeCode": null,
+                "overrideEmployeeGroupColor": null,
+                "defaultLaborCodeId": 1902,
+                "assignedToUserId": 15941,
+                "createdByUserId": 45,
+                "createdTimestampUtc": "2026-07-19 11:39:33",
+                "isActive": true,
+                "isDeleted": false,
+                "currentTrackVoJobId": 25137,
+                "isLocationTracked": true,
+                "isScheduleable": true,
+                "isVendor": false,
+                "vendorName": null,
+                "isTrucking": false,
+                "isForeman": false,
+                "isAssigned": null,
+                "assignedCount": null,
+                "canViewOtherEmployees": true,
+                "canViewOtherVendors": true,
+                "canViewJobNotes": true,
+                "canViewEquipment": true,
+                "canViewOtherEmployeeNotes": true,
+                "canViewOtherVendorNotes": true
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "b6ce8185-8d1c-41c8-86fa-895247c0e40e"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "employeeId": 17055,
+              "companyId": 265,
+              "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+              "firstName": "Harbor",
+              "lastName": "Harjochee",
+              "employeeGroupId": 994,
+              "divisionId": 685,
+              "createdByUserId": 45,
+              "assignedToUserId": 15941,
+              "defaultLaborCodeId": 1902,
+              "mobilePhone": "+17864594794",
+              "accountingCode": "90484",
+              "employeeCode": null,
+              "isActive": true
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "4491a3e7-2019-4972-9517-56e58d654b41",
+          "Content": {
+            "employeeId": 17055,
+            "companyId": 265,
+            "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+            "firstName": "Harbor",
+            "lastName": "Harjochee",
+            "employeeGroupId": 994,
+            "divisionId": 685,
+            "createdByUserId": 45,
+            "assignedToUserId": 15941,
+            "defaultLaborCodeId": 1902,
+            "mobilePhone": "+17864594794",
+            "accountingCode": "90484",
+            "employeeCode": null,
+            "isActive": true
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-08T14:16:47.4959239+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Employee"
+      },
+      {
+        "id": "update-conditional",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "call-link-flow-update",
+              "name": "Call Linked User Flow",
+              "input": {
+                "FlowToCallCode": "v2-linked-user-called-flow-ff85ca6f",
+                "UseExistingInput": false,
+                "FlowInputData": {
+                  "employee_no": "=return flow.trigger.data.PREmp;",
+                  "first_name": "=return flow.trigger.data.FirstName;",
+                  "last_name": "=return flow.trigger.data.LastName;",
+                  "status": "=return _.trim(flow.trigger.data.ActiveYN) === 'Y';",
+                  "state": "=return flow.trigger.data?.State ?? null;",
+                  "email": "=const work = flow.trigger.data?.WorkEmail;\nconst email = flow.trigger.data?.Email;\n\nif (work && _.trim(work) !== '') {\n  return work;\n}\n\nif (email && _.trim(email) !== '') {\n  return email;\n}\n\nif (!work && !email) {\n  const first = _.trim(flow.trigger.data.FirstName);\n  const last = _.trim(flow.trigger.data.LastName);\n  const domain = '@placeholder-domain.com';\n  return first + '.' + last.replace(\" \", \"-\") + domain;\n}",
+                  "phone": "=const rawPhone =\n  _.trim(flow.trigger.data?.WorkPhone) || _.trim(flow.trigger.data?.CellPhone);\n\nreturn rawPhone ? `+1${rawPhone.replace(/\\D/g, '')}` : flow.step('lk-emp').output.mobilePhone;",
+                  "employeeId": "=return flow.step('lk-emp').output?.employeeId ?? null;",
+                  "userId": "=return flow.step('lk-emp').output?.assignedToUserId ?? null;",
+                  "created_employee": "=return flow.step('lk-emp').output;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "callflow"
+            },
+            {
+              "id": "update-success",
+              "name": "Update Employee Action Successful",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst emp_id = flow.step('update').actionResponse?.result?.employeeId;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} successfully updated in IVO with PK ${emp_id} | ${time}`;"
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "call-link-flow-update",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "email-update-failure",
+              "name": "Email Update Employee Action Failure",
+              "input": {
+                "Emails": [
+                  "chawkins@ivosystems.com"
+                ],
+                "Subject": "=const emp = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\nreturn `Employee ${emp} | Update Action Failure | Vista To IVO | ${time}`;",
+                "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Employee Update Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+              },
+              "stepDependencies": [],
+              "type": "sendemail"
+            },
+            {
+              "id": "update-failed",
+              "name": "Update Employee Action Failed",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const emp_no = flow.trigger.data?.PREmp;\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\n\nreturn `Employee ${emp_no} unsuccessfully updated in IVO | ${time}`;"
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "email-update-failure",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Employee Action Succeeded"
+      },
+      {
+        "id": "call-link-flow-update",
+        "status": "SUCCESSFUL",
+        "stepType": "callflow",
+        "inputData": {
+          "FlowToCallCode": "v2-linked-user-called-flow-ff85ca6f",
+          "FlowInputData": {
+            "employee_no": 90484,
+            "first_name": "Harbor",
+            "last_name": "Harjochee",
+            "status": true,
+            "state": "OK",
+            "email": "harbordharjochee@gmail.com",
+            "phone": "+17864594794",
+            "employeeId": 17055,
+            "userId": 15941,
+            "created_employee": {
+              "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+              "employeeId": 17055,
+              "companyId": 265,
+              "firstName": "Harbor",
+              "lastName": "Harjochee",
+              "mobilePhone": "+17864594794",
+              "employeeGroupId": 994,
+              "divisionId": 685,
+              "accountingCode": "90484",
+              "employeeCode": null,
+              "defaultLaborCodeId": 1902,
+              "assignedToUserId": 15941,
+              "createdByUserId": 45,
+              "isActive": true,
+              "isDeleted": false,
+              "currentTrackVoJobId": 25137
+            }
+          }
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Successfully updated linked user 15941 | 09/08/2026 09:17:35"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Call Linked User Flow"
+      },
+      {
+        "id": "update-success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": null,
+          "OutcomeMessage": "Employee 90484 successfully updated in IVO with PK 17055 | 09/08/2026 09:17:35",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Employee 90484 successfully updated in IVO with PK 17055 | 09/08/2026 09:17:35"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Update Employee Action Successful"
+      }
+    ],
+    "children": {
+      "call-link-flow-update": "e11e9310-a5e4-4413-9619-394c1c23de33"
+    },
+    "name": "V2: Employee Base Template Flow"
+  },
+  {
+    "instanceId": "e11e9310-a5e4-4413-9619-394c1c23de33",
+    "parentInstanceId": "3d21d03f-dec8-4234-abe5-8bc5e50b1fdd",
+    "rootInstanceId": "e11e9310-a5e4-4413-9619-394c1c23de33",
+    "startedOn": "2026-09-08T14:17:25.8589884+00:00",
+    "finishedOn": "2026-09-08T14:17:35.6584374+00:00",
+    "configuration": null,
+    "trigger": {
+      "info": {
+        "Type": 241,
+        "WorkspaceId": 14368,
+        "SubscriberId": 14368,
+        "EventInfo": {}
+      },
+      "data": {
+        "employee_no": 90484,
+        "first_name": "Harbor",
+        "last_name": "Harjochee",
+        "status": true,
+        "state": "OK",
+        "email": "harbordharjochee@gmail.com",
+        "phone": "+17864594794",
+        "employeeId": 17055,
+        "userId": 15941,
+        "created_employee": {
+          "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+          "employeeId": 17055,
+          "companyId": 265,
+          "firstName": "Harbor",
+          "lastName": "Harjochee",
+          "mobilePhone": "+17864594794",
+          "employeeGroupId": 994,
+          "divisionId": 685,
+          "accountingCode": "90484",
+          "employeeCode": null,
+          "defaultLaborCodeId": 1902,
+          "assignedToUserId": 15941,
+          "createdByUserId": 45,
+          "isActive": true,
+          "isDeleted": false,
+          "currentTrackVoJobId": 25137
+        }
+      },
+      "definition": null,
+      "workspace": {
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "employee",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/payroll/1/employee",
+          "SelectProperties": [
+            "uuid",
+            "employeeId",
+            "companyId",
+            "firstName",
+            "lastName",
+            "mobilePhone",
+            "employeeGroupId",
+            "divisionId",
+            "accountingCode",
+            "defaultLaborCodeId",
+            "assignedToUserId",
+            "isActive",
+            "isDeleted",
+            "currentTrackVoJobId"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "employeeId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 17055
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "uuid": "dae2106a-9b8d-458b-905f-336a80459f83",
+          "employeeId": 17055,
+          "companyId": 265,
+          "firstName": "Harbor",
+          "lastName": "Harjochee",
+          "mobilePhone": "+17864594794",
+          "employeeGroupId": 994,
+          "divisionId": 685,
+          "accountingCode": "90484",
+          "defaultLaborCodeId": 1902,
+          "assignedToUserId": 15941,
+          "isActive": true,
+          "isDeleted": false,
+          "currentTrackVoJobId": 25137
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Employee"
+      },
+      {
+        "id": "user",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/payroll/1/linked-user",
+          "SelectProperties": [
+            "uuid",
+            "id",
+            "companyId",
+            "email",
+            "first_name",
+            "last_name",
+            "username",
+            "phoneNumber",
+            "companyRoleId",
+            "employeeId",
+            "divisionId",
+            "vendorId",
+            "timezone",
+            "isActive",
+            "isDeleted"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "id",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 15941
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+          "id": 15941,
+          "companyId": 265,
+          "email": "harbordharjochee@gmail.com",
+          "first_name": "Harbor",
+          "last_name": "Harjochee",
+          "username": "kna_90484",
+          "phoneNumber": "+17864594794",
+          "companyRoleId": 15,
+          "employeeId": 17055,
+          "divisionId": 685,
+          "vendorId": null,
+          "timezone": "America/Chicago",
+          "isActive": true,
+          "isDeleted": false
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Linked User"
+      },
+      {
+        "id": "linked-user-exists",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "update",
+              "name": "Update Linked User",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/payroll/1/linked-user/update",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "id": "=return flow.step('user').output.id;",
+                  "companyId": "=return flow.step('user').output.companyId;",
+                  "uuid": "=return flow.step('user').output.uuid;",
+                  "email": "=const current = flow.step('user').output.email;\nconst email = flow.trigger.data?.email;\n\nif (email && _.trim(email) !== '') {\n  return _.trim(email);\n}\n\nreturn current;",
+                  "companyRoleId": "=return flow.step('user').output.companyRoleId;",
+                  "first_name": "=return _.trim(flow.trigger.data.first_name);",
+                  "last_name": "=return _.trim(flow.trigger.data.last_name);",
+                  "employeeId": "=const current = flow.step('user').output?.employeeId;\nconst employeeId = flow.trigger.data?.employeeId;\n\nif (current) {\n  return current;\n}\n\nif (employeeId) {\n  return employeeId;\n}",
+                  "divisionId": "=return flow.step('user').output?.divisionId ?? null;",
+                  "vendorId": "=return flow.step('user').output?.vendorId ?? null;",
+                  "username": "=return `kna_${_.trim(flow.trigger.data.employee_no)}`;\n\n// const current = flow.step('user').output.username;\n// const email = flow.trigger.data?.email;\n\n// if (email && _.trim(email) !== '') {\n//   return _.trim(email);\n// }\n\n// return current;",
+                  "timezone": "=const STATE_TIMEZONES = {\n  CT: 'America/New_York',\n  DE: 'America/New_York',\n  FL: 'America/New_York',\n  GA: 'America/New_York',\n  IN: 'America/Indiana/Indianapolis',\n  ME: 'America/New_York',\n  MD: 'America/New_York',\n  MA: 'America/New_York',\n  MI: 'America/Detroit',\n  NH: 'America/New_York',\n  NJ: 'America/New_York',\n  NY: 'America/New_York',\n  NC: 'America/New_York',\n  OH: 'America/New_York',\n  PA: 'America/New_York',\n  RI: 'America/New_York',\n  SC: 'America/New_York',\n  VT: 'America/New_York',\n  VA: 'America/New_York',\n  WV: 'America/New_York',\n  KY: 'America/New_York',\n  AL: 'America/Chicago',\n  AR: 'America/Chicago',\n  IL: 'America/Chicago',\n  IA: 'America/Chicago',\n  KS: 'America/Chicago',\n  LA: 'America/Chicago',\n  MN: 'America/Chicago',\n  MS: 'America/Chicago',\n  MO: 'America/Chicago',\n  NE: 'America/Chicago',\n  ND: 'America/Chicago',\n  OK: 'America/Chicago',\n  SD: 'America/Chicago',\n  TN: 'America/Chicago',\n  TX: 'America/Chicago',\n  WI: 'America/Chicago',\n  AZ: 'America/Phoenix',\n  CO: 'America/Denver',\n  ID: 'America/Boise',\n  MT: 'America/Denver',\n  NM: 'America/Denver',\n  UT: 'America/Denver',\n  WY: 'America/Denver',\n  CA: 'America/Los_Angeles',\n  NV: 'America/Los_Angeles',\n  OR: 'America/Los_Angeles',\n  WA: 'America/Los_Angeles',\n  AK: 'America/Anchorage',\n  HI: 'Pacific/Honolulu',\n};\n\nconst state = flow.trigger.data?.state;\n\nif (state && _.trim(state) !== '') {\n  return STATE_TIMEZONES[_.trim(state)] ? STATE_TIMEZONES[_.trim(state)] : 'America/Chicago';\n}\n\nreturn 'America/Chicago';",
+                  "phoneNumber": "=return flow.trigger.data?.phone;",
+                  "isActive": "=return flow.trigger.data.status;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-succeeded",
+              "name": "Update Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('update').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "update-success",
+                    "name": "Update Success",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const id = flow.step('user').output.id;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Successfully updated linked user ${id} | ${date}`;"
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "update-failed",
+                    "name": "Update Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const id = flow.step('user').output.id;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Failed to update linked user ${id} | ${date}`;"
+                    },
+                    "stepDependencies": []
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "update",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "create",
+              "name": "Create Linked User",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/payroll/1/linked-user/add",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return uuid.v4();",
+                  "email": "=const email = flow.trigger.data?.email;\n\nif (email && _.trim(email) !== '') {\n  return _.trim(email);\n} else {\n  const first = _.trim(flow.trigger.data.first_name);\n  const last = _.trim(flow.trigger.data.last_name);\n  const domain = '@placeholder-domain.com';\n\n  return first + '.' + last + domain;\n}",
+                  "companyId": "=return flow.step('employee')?.output\n  ? flow.step('employee')?.output?.companyId\n  : flow.trigger.data?.created_employee?.companyId;",
+                  "companyRoleId": "=return 15;",
+                  "first_name": "=return _.trim(flow.trigger.data.first_name);",
+                  "last_name": "=return _.trim(flow.trigger.data.last_name);",
+                  "employeeId": "=return flow.step('employee')?.output ? flow.step('employee')?.output?.employeeId : flow.trigger.data?.created_employee?.employeeId;",
+                  "divisionId": "=return null;",
+                  "vendorId": "=return null;",
+                  "username": "=return `kna_${_.trim(flow.trigger.data.employee_no)}`;\n// const email = flow.trigger.data?.email;\n\n// if (email && _.trim(email) !== '') {\n//   return _.trim(email);\n// } else {\n//   const first = _.trim(flow.trigger.data.first_name);\n//   const last = _.trim(flow.trigger.data.last_name);\n//   const domain = '@placeholder-domain.com';\n\n//   return first + '.' + last + domain;\n// }",
+                  "timezone": "=const STATE_TIMEZONES = {\n  CT: 'America/New_York',\n  DE: 'America/New_York',\n  FL: 'America/New_York',\n  GA: 'America/New_York',\n  IN: 'America/Indiana/Indianapolis',\n  ME: 'America/New_York',\n  MD: 'America/New_York',\n  MA: 'America/New_York',\n  MI: 'America/Detroit',\n  NH: 'America/New_York',\n  NJ: 'America/New_York',\n  NY: 'America/New_York',\n  NC: 'America/New_York',\n  OH: 'America/New_York',\n  PA: 'America/New_York',\n  RI: 'America/New_York',\n  SC: 'America/New_York',\n  VT: 'America/New_York',\n  VA: 'America/New_York',\n  WV: 'America/New_York',\n  KY: 'America/New_York',\n  AL: 'America/Chicago',\n  AR: 'America/Chicago',\n  IL: 'America/Chicago',\n  IA: 'America/Chicago',\n  KS: 'America/Chicago',\n  LA: 'America/Chicago',\n  MN: 'America/Chicago',\n  MS: 'America/Chicago',\n  MO: 'America/Chicago',\n  NE: 'America/Chicago',\n  ND: 'America/Chicago',\n  OK: 'America/Chicago',\n  SD: 'America/Chicago',\n  TN: 'America/Chicago',\n  TX: 'America/Chicago',\n  WI: 'America/Chicago',\n  AZ: 'America/Phoenix',\n  CO: 'America/Denver',\n  ID: 'America/Boise',\n  MT: 'America/Denver',\n  NM: 'America/Denver',\n  UT: 'America/Denver',\n  WY: 'America/Denver',\n  CA: 'America/Los_Angeles',\n  NV: 'America/Los_Angeles',\n  OR: 'America/Los_Angeles',\n  WA: 'America/Los_Angeles',\n  AK: 'America/Anchorage',\n  HI: 'Pacific/Honolulu',\n};\n\nconst state = flow.trigger.data?.state;\n\nif (state && _.trim(state) !== '') {\n  return STATE_TIMEZONES[_.trim(state)] ? STATE_TIMEZONES[_.trim(state)] : 'America/Chicago';\n}\n\nreturn 'America/Chicago';",
+                  "phoneNumber": "=return flow.trigger.data?.phone;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "create-succeeded",
+              "name": "Create Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('create').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "update-employee",
+                    "name": "Update Employee",
+                    "type": "queueactionv3",
+                    "input": {
+                      "app": "ivo-systems",
+                      "ActionPath": "ivo-systems/payroll/1/employee/update",
+                      "UseExistingBody": false,
+                      "EnableRetryPolicy": false,
+                      "WaitForResponse": true,
+                      "ActionBody": {
+                        "employeeId": "=return (\n  flow.step('employee')?.output?.employeeId ??\n  flow.trigger.data?.created_employee?.employeeId\n);",
+                        "companyId": "=return (\n  flow.step('employee')?.output?.companyId ??\n  flow.trigger.data?.created_employee?.companyId\n);",
+                        "uuid": "=return (\n  flow.step('employee')?.output?.uuid ??\n  flow.trigger.data?.created_employee?.uuid\n);",
+                        "firstName": "=return (\n  flow.step('employee')?.output?.firstName ??\n  flow.trigger.data?.created_employee?.firstName\n);",
+                        "lastName": "=return (\n  flow.step('employee')?.output?.lastName ??\n  flow.trigger.data?.created_employee?.lastName\n);",
+                        "employeeGroupId": "=return (\n  flow.step('employee')?.output?.employeeGroupId ??\n  flow.trigger.data?.created_employee?.employeeGroupId\n);",
+                        "divisionId": "=return (\n  flow.step('employee')?.output?.divisionId ??\n  flow.trigger.data?.created_employee?.divisionId\n);",
+                        "createdByUserId": "=return (\n  flow.step('employee')?.output?.createdByUserId ??\n  flow.trigger.data?.created_employee?.createdByUserId\n);",
+                        "assignedToUserId": "=return flow.step('create').actionResponse?.result?.id;",
+                        "defaultLaborCodeId": "=return (\n  flow.step('employee')?.output?.defaultLaborCodeId ??\n  flow.trigger.data?.created_employee?.defaultLaborCodeId\n);",
+                        "mobilePhone": "=return (\n  flow.step('employee')?.output?.mobilePhone ??\n  flow.trigger.data?.created_employee?.mobilePhone\n);",
+                        "accountingCode": "=return (\n  flow.step('employee')?.output?.accountingCode ??\n  flow.trigger.data?.created_employee?.accountingCode\n);",
+                        "employeeCode": "=return (\n  flow.step('employee')?.output?.employeeCode ??\n  flow.trigger.data?.created_employee?.employeeCode\n);",
+                        "isActive": "=return (\n  flow.step('employee')?.output?.isActive ??\n  flow.trigger.data?.created_employee?.isActive\n);"
+                      }
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-employee-conditional",
+                    "name": "Update Succeeded",
+                    "type": "if",
+                    "input": {
+                      "variant": "If/Else",
+                      "Condition": "=return flow.step('update-employee').isActionSuccess();",
+                      "trueSteps": [
+                        {
+                          "id": "create-and-update-success",
+                          "name": "Create And Update Success",
+                          "type": "stop",
+                          "input": {
+                            "Status": "success",
+                            "OutcomeMessage": "=const user = flow.step('create').actionResponse.result;\nconst employee = flow.step('update-employee').actionResponse.result;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Employee ${employee.employeeId} updated with linked user ${employee.assignedToUserId} = ${user.id} | ${date};`"
+                          },
+                          "stepDependencies": []
+                        }
+                      ],
+                      "falseSteps": [
+                        {
+                          "id": "partial-complete",
+                          "name": "Linked User Created / Employee Update Failed",
+                          "type": "stop",
+                          "input": {
+                            "Status": "success",
+                            "OutcomeMessage": "=const user = flow.step('create').actionResponse.result;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Successfully created linked user ${user.id} but failed to update employee | ${date}`;"
+                          },
+                          "stepDependencies": []
+                        }
+                      ]
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "update-employee",
+                        "dependentOnStepResultStatus": ""
+                      }
+                    ]
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "create-failed",
+                    "name": "Create Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const first = _.trim(flow.trigger.data.first_name);\nconst last = _.trim(flow.trigger.data.last_name);\nconst employee = _.trim(flow.trigger.data.employee_no);\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Failed to create a linked user for ${employee} : ${first} ${last} | ${date}`;"
+                    },
+                    "stepDependencies": []
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Linked User Exists"
+      },
+      {
+        "id": "update",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/payroll/1/linked-user/update",
+          "ActionBody": {
+            "id": 15941,
+            "companyId": 265,
+            "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+            "email": "harbordharjochee@gmail.com",
+            "companyRoleId": 15,
+            "first_name": "Harbor",
+            "last_name": "Harjochee",
+            "employeeId": 17055,
+            "divisionId": 685,
+            "vendorId": null,
+            "username": "kna_90484",
+            "timezone": "America/Chicago",
+            "phoneNumber": "+17864594794",
+            "isActive": true
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "0977851e-4ba0-46fe-9be8-14f4556c79bc",
+              "actionPath": "ivo-systems/payroll/1/linked-user/update",
+              "dataObjectCode": "linked-user",
+              "subscriberCode": "14368",
+              "actionCode": "update",
+              "createdUtc": "2026-09-08T14:17:26.7276498+00:00",
+              "modifiedUtc": "2026-09-08T14:17:30.6318893+00:00",
+              "status": "Successful",
+              "data": {
+                "id": 15941,
+                "companyId": 265,
+                "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+                "email": "harbordharjochee@gmail.com",
+                "companyRoleId": 15,
+                "first_name": "Harbor",
+                "last_name": "Harjochee",
+                "employeeId": 17055,
+                "divisionId": 685,
+                "vendorId": null,
+                "username": "kna_90484",
+                "timezone": "America/Chicago",
+                "phoneNumber": "+17864594794",
+                "isActive": true
+              },
+              "result": {
+                "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+                "id": 15941,
+                "companyId": 265,
+                "email": "harbordharjochee@gmail.com",
+                "first_name": "Harbor",
+                "last_name": "Harjochee",
+                "username": "kna_90484",
+                "phoneNumber": "+17864594794",
+                "companyRoleId": 15,
+                "employeeId": 17055,
+                "divisionId": 685,
+                "vendorId": null,
+                "timezone": "America/Chicago",
+                "isMechanic": false,
+                "isDriver": false,
+                "isActive": true,
+                "isDeleted": false,
+                "createdTimestampUtc": "2026-07-20 01:58:57",
+                "updatedTimestampUtc": "2026-08-14 18:09:59"
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "1e0ea400-d204-4ba6-b62f-4bfcc56c91ba"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "id": 15941,
+              "companyId": 265,
+              "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+              "email": "harbordharjochee@gmail.com",
+              "companyRoleId": 15,
+              "first_name": "Harbor",
+              "last_name": "Harjochee",
+              "employeeId": 17055,
+              "divisionId": 685,
+              "vendorId": null,
+              "username": "kna_90484",
+              "timezone": "America/Chicago",
+              "phoneNumber": "+17864594794",
+              "isActive": true
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "0977851e-4ba0-46fe-9be8-14f4556c79bc",
+          "Content": {
+            "id": 15941,
+            "companyId": 265,
+            "uuid": "41818206-4aa2-4f6a-a368-2c1e9f676ae6",
+            "email": "harbordharjochee@gmail.com",
+            "companyRoleId": 15,
+            "first_name": "Harbor",
+            "last_name": "Harjochee",
+            "employeeId": 17055,
+            "divisionId": 685,
+            "vendorId": null,
+            "username": "kna_90484",
+            "timezone": "America/Chicago",
+            "phoneNumber": "+17864594794",
+            "isActive": true
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-08T14:17:26.1079024+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Linked User"
+      },
+      {
+        "id": "update-succeeded",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "update-success",
+              "name": "Update Success",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const id = flow.step('user').output.id;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Successfully updated linked user ${id} | ${date}`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "update-failed",
+              "name": "Update Failed",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const id = flow.step('user').output.id;\nconst date = dayjs().tz('America/Chicago').format('MM/DD/YYYY HH:mm:ss');\n\nreturn `Failed to update linked user ${id} | ${date}`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Succeeded"
+      },
+      {
+        "id": "update-success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": null,
+          "OutcomeMessage": "Successfully updated linked user 15941 | 09/08/2026 09:17:35",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Successfully updated linked user 15941 | 09/08/2026 09:17:35"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Update Success"
+      }
+    ],
+    "children": {},
+    "name": "V2: Linked User Called Flow"
+  }
+]

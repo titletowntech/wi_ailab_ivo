@@ -19,12 +19,16 @@ reference/
     <object>/
       schema.json
       field-catalog.csv
-      lookup-rules.csv
       validation-rules.json
-      example-payload.json
 
 customers/
   <customer>/
+    workspace/
+      generated.json              # immutable AI-generated evidence
+      draft.json                  # current reviewer-edited canonical workspace
+      approved.json               # latest approved workspace contract
+      revisions/
+        <approval-timestamp>.json  # immutable approval snapshot
     <object>/
       table.json                    # selected IVO reference for this customer table
       input/
@@ -94,6 +98,9 @@ optional paired ERP/IVO data -> comparison evidence and regression scoring
 - Put every externally supplied file under `input/`, including optional IVO exports.
 - Put object-specific supporting documents and transcripts under `input/context/`; use `customers/<customer>/input/context/` only for evidence shared by multiple objects.
 - Put every tool-generated or human-reviewed artifact under `output/`.
+- Keep generated workspace evidence separate from reviewer edits: never overwrite `workspace/generated.json`.
+- Treat `workspace/draft.json` as the current review state and `workspace/approved.json` as the deployable internal contract.
+- Create a workspace revision only after every flow is approved and structural validation has no blockers.
 - Treat customer `input/` files as immutable for a run.
 - Never edit generated profile, proposal, or comparison artifacts.
 - Save human decisions only in `output/approved-mapping/`.

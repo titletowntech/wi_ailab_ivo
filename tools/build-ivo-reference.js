@@ -92,28 +92,6 @@ function writeFieldCatalog(schema, profiles, comparisons, file) {
   fs.writeFileSync(file, [toCsvRow(header), ...rows].join('\n') + '\n');
 }
 
-function writeLookupRules(comparisons, file) {
-  const header = [
-    'destination_field', 'reference_object', 'source_business_value', 'resolution_key',
-    'scope', 'resolver', 'on_missing', 'may_create', 'status', 'evidence',
-  ];
-  const rows = comparisons
-    .filter((row) => row.kind === 'lookup')
-    .map((row) => toCsvRow([
-      row.dest_field,
-      '',
-      row.source_field,
-      '',
-      'customer',
-      '',
-      'error',
-      'confirm',
-      'confirm',
-      `Observed ${row.transform}; referenced object, key, API, and create behavior require IVO confirmation.`,
-    ]));
-  fs.writeFileSync(file, [toCsvRow(header), ...rows].join('\n') + '\n');
-}
-
 function writeValidationRules(schema, comparisons, objectName, file) {
   const generatedCandidates = comparisons.filter((row) => row.kind === 'identifier').map((row) => row.dest_field);
   const lookupCandidates = comparisons.filter((row) => row.kind === 'lookup').map((row) => row.dest_field);
@@ -151,45 +129,6 @@ function writeValidationRules(schema, comparisons, objectName, file) {
   fs.writeFileSync(file, JSON.stringify(rules, null, 2) + '\n');
 }
 
-function exampleValue(field) {
-  if (field.path === 'equipmentName') return 'EQ-100';
-  if (field.path === 'accountingCode') return 'EQ-100';
-  if (field.path === 'companyId') return 123;
-  if (field.path === 'equipmentYear') return 2026;
-  if (field.path === 'equipmentDescription') return 'Synthetic equipment example';
-  if (field.path === 'equipmentModel') return 'MODEL-1';
-  if (field.path === 'vinNumber') return '1EXAMPLE000000001';
-  if (field.path === 'licenseNumber') return 'ABC123';
-  if (field.format === 'uuid') return '00000000-0000-4000-8000-000000000001';
-  if (field.types.includes('boolean')) return false;
-  if (field.types.includes('integer')) return 123;
-  if (field.types.includes('number')) return 123.45;
-  return 'example';
-}
-
-function writeExamplePayload(schema, comparisons, objectName, file) {
-  const generated = new Set(comparisons.filter((row) => row.kind === 'identifier').map((row) => row.dest_field));
-  const payload = {};
-  for (const field of schema.values()) {
-    if (generated.has(field.path)) continue;
-    const equipmentExamples = objectName === 'equipment'
-      && ['equipmentYear', 'equipmentDescription', 'equipmentModel', 'vinNumber', 'licenseNumber'].includes(field.path);
-    if (field.required || equipmentExamples) {
-      payload[field.path] = exampleValue(field);
-    }
-  }
-  fs.writeFileSync(file, JSON.stringify({
-    _meta: {
-      synthetic: true,
-      purpose: 'Shape example only; IDs and business values are not production data.',
-      confirmBeforeUse: objectName === 'equipment'
-        ? ['companyId', 'generated fields', 'lookup-backed fields', 'defaults']
-        : ['generated fields', 'lookup-backed fields', 'defaults'],
-    },
-    payload,
-  }, null, 2) + '\n');
-}
-
 function main() {
   const args = parseArgs(process.argv.slice(2));
   const sourceDir = args.source ? path.resolve(args.source) : null;
@@ -210,7 +149,7 @@ function main() {
   }
   const outDir = path.resolve(args.out);
   const objectName = args.object || path.basename(outDir);
-  const managedFiles = ['field-catalog.csv', 'lookup-rules.csv', 'validation-rules.json', 'example-payload.json'];
+  const managedFiles = ['field-catalog.csv', 'validation-rules.json'];
   if (args.force !== 'yes' && managedFiles.some((file) => fs.existsSync(path.join(outDir, file)))) {
     console.error('Reference files already exist. Review changes first, then rerun with --force yes to replace generated files.');
     process.exit(2);
@@ -240,9 +179,7 @@ function main() {
   const targetSchema = path.join(outDir, 'schema.json');
   if (schemaFile !== targetSchema) fs.copyFileSync(schemaFile, targetSchema);
   writeFieldCatalog(schema, profiles, comparisons, path.join(outDir, 'field-catalog.csv'));
-  writeLookupRules(comparisons, path.join(outDir, 'lookup-rules.csv'));
   writeValidationRules(schema, comparisons, objectName, path.join(outDir, 'validation-rules.json'));
-  writeExamplePayload(schema, comparisons, objectName, path.join(outDir, 'example-payload.json'));
   console.log(`IVO ${objectName} reference: ${schema.size} fields → ${path.relative(process.cwd(), outDir)}`);
 }
 

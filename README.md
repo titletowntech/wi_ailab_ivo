@@ -15,7 +15,7 @@ The normal onboarding process requires:
 
 Supporting Word documents and chat or meeting transcripts are optional inputs used to refine a generated proposal. An IVO data export is also optional; when one exists, it can reconstruct an existing integration, support regression testing, or verify a deployment.
 
-## Mapping Workbench
+## Customer Workspace
 
 Start the local workbench from the repository root:
 
@@ -23,9 +23,11 @@ Start the local workbench from the repository root:
 node tools/workbench-server.js
 ```
 
-Then open `http://127.0.0.1:43129`.
+Then open `http://127.0.0.1:43129`. The main page lists discovered customers and provides access to shared IVO references. Selecting a customer opens its flow workspace at `/workspace?customer=<customer-key>`. Source profiling and mapping tools remain available from the main page and at `/mapping`.
 
-The workbench discovers customers from `customers/` and IVO references from `reference/ivo/`. It can upload and analyze customer tables, create IVO references from source files, preview stored files, and save reviewed matches to `customers/<customer>/<object>/output/approved-mapping/mapping.csv`.
+The customer workspace stores an immutable generated baseline, editable draft, approved contract, and approval revisions under `customers/<customer>/workspace/`. Flow approval is required before workspace approval. Blocking structural validation findings prevent approval.
+
+The mapping workbench discovers customers from `customers/` and IVO references from `reference/ivo/`. It can upload and analyze customer tables, create IVO references from source files, preview stored files, and save reviewed matches to `customers/<customer>/<object>/output/approved-mapping/mapping.csv`.
 
 The local workbench uses the repository folders as its data store; no database is required for a single reviewer. A hosted or multi-user version will need authentication, concurrency control, and a shared audit store before it can safely accept simultaneous reviews.
 
@@ -42,12 +44,15 @@ reference/ivo/
   <object>/
     schema.json
     field-catalog.csv
-    lookup-rules.csv
     validation-rules.json
-    example-payload.json
 
 customers/
   <customer>/
+    workspace/
+      generated.json        # immutable AI-generated evidence
+      draft.json            # current reviewer-edited canonical workspace
+      approved.json         # latest approved workspace contract
+      revisions/            # timestamped approval snapshots
     <object>/
       input/
         erp/
@@ -157,7 +162,7 @@ Reviewers must:
 1. Resolve ERP profile questions.
 2. Confirm or reject every proposed mapping.
 3. Supply mappings for required unresolved IVO fields.
-4. Resolve all lookup candidates using `reference/ivo/<object>/lookup-rules.csv`.
+4. Resolve all lookup candidates and record the decision with the approved mapping.
 5. Decide customer-specific constants and defaults.
 6. Save the approved result under `output/approved-mapping/`.
 
@@ -169,7 +174,6 @@ The planned validator will check the approved mapping against:
 
 - `reference/ivo/<object>/schema.json`;
 - `field-catalog.csv` ownership and behavior;
-- `lookup-rules.csv` resolution requirements;
 - `validation-rules.json`;
 - representative ERP rows.
 

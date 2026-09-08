@@ -32,7 +32,7 @@ The builder:
 
 1. Reads the original `schema.json` without modifying it.
 2. Profiles `sample.csv` when present and writes evidence to `profile/` beside the source files.
-3. Copies the schema and creates `field-catalog.csv`, `lookup-rules.csv`, `validation-rules.json`, and `example-payload.json` under `reference/ivo/<object>/`.
+3. Copies the schema and creates `field-catalog.csv` and `validation-rules.json` under `reference/ivo/<object>/`.
 4. Marks unsupported business semantics as `confirm` rather than treating sample observations as universal rules.
 
 `data.csv` is accepted as a legacy alias for `sample.csv`.
@@ -40,7 +40,7 @@ When the preferred names are absent, the builder accepts exactly one root JSON f
 
 ## Review and Publish
 
-The first build creates a draft. IVO must review the five files under `reference/ivo/<object>/`, resolve required `confirm` items, and verify that examples are synthetic. Once approved, that folder is the static destination contract consumed by every customer mapping.
+The first build creates a draft. IVO must review the three files under `reference/ivo/<object>/` and resolve required `confirm` items. Once approved, that folder is the static destination contract consumed by every customer mapping.
 
 The builder refuses to replace existing generated files. For a deliberate IVO contract update, build in a temporary folder and review the diff first. Only then rerun against the published folder with `--force yes`. Preserve manually confirmed semantics while applying structural changes.
 

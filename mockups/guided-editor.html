@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Workspace Mockup B - Guided Editor</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font: 14px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; }
+    button, input, select, textarea { color: inherit; font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--cp-accent); outline-offset: 2px; }
+    header { min-height: 64px; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 2px; font-size: 18px; letter-spacing: 0; }
+    h2 { font-size: 20px; letter-spacing: 0; }
+    h3 { font-size: 13px; letter-spacing: 0; }
+    small, .muted { color: var(--cp-text-muted); }
+    .save { color: var(--cp-success); font-weight: 650; }
+    .tabs { min-height: 48px; padding: 0 24px; display: flex; align-items: end; gap: 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface); }
+    .tab { height: 48px; padding: 0 2px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--cp-text-muted); font-weight: 650; }
+    .tab.active { color: var(--cp-accent); border-color: var(--cp-accent); }
+    .flow-bar { min-height: 52px; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .breadcrumb { color: var(--cp-text-muted); }
+    .breadcrumb strong { color: var(--cp-text); }
+    .steps { display: flex; gap: 4px; align-items: center; }
+    .step-dot { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 50%; background: var(--cp-surface); color: var(--cp-text-muted); font-size: 11px; font-weight: 750; }
+    .step-dot.active { border-color: var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .step-dot.done { border-color: var(--cp-success); color: var(--cp-success); }
+    .layout { width: min(1120px, calc(100% - 40px)); margin: 28px auto 64px; display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; align-items: start; }
+    .task { border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); overflow: hidden; box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+    .task-head { padding: 22px 24px; border-bottom: 1px solid var(--cp-border); }
+    .eyebrow { margin-bottom: 6px; color: var(--cp-accent); font-size: 11px; font-weight: 750; text-transform: uppercase; }
+    .task-head h2 { margin-bottom: 5px; }
+    .task-body { padding: 24px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    label { display: grid; gap: 6px; color: var(--cp-text-muted); font-size: 12px; font-weight: 650; }
+    input, select, textarea { width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    textarea { min-height: 96px; resize: vertical; font-family: Consolas, "Courier New", Courier, monospace; }
+    .span-2 { grid-column: 1 / -1; }
+    details { grid-column: 1 / -1; border: 1px solid var(--cp-border); border-radius: 8px; }
+    summary { padding: 12px; cursor: pointer; font-weight: 650; }
+    .advanced { padding: 0 12px 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mapping { padding: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface-soft); }
+    .task-actions { padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .button { min-height: 36px; padding: 7px 13px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); font-weight: 650; }
+    .button.primary { border-color: var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .button:disabled { opacity: .45; cursor: not-allowed; }
+    .side { display: grid; gap: 16px; }
+    .panel { padding: 16px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); }
+    .panel h3 { margin-bottom: 12px; }
+    .progress { height: 6px; margin: 10px 0 8px; border-radius: 4px; background: var(--cp-border); overflow: hidden; }
+    .progress span { display: block; width: 40%; height: 100%; background: var(--cp-accent); }
+    .checklist { margin: 0; padding: 0; display: grid; gap: 10px; list-style: none; }
+    .checklist li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; color: var(--cp-text-muted); }
+    .checklist .good { color: var(--cp-success); }
+    .checklist .warn { color: var(--cp-warning); }
+    .flow-list { display: grid; gap: 6px; }
+    .flow-list button { padding: 9px 10px; border: 0; border-radius: 8px; background: transparent; text-align: left; }
+    .flow-list button.active { background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 700; }
+    .other { display: none; padding: 56px 24px; text-align: center; }
+    .other.active { display: block; }
+    .empty-card { width: min(620px, 100%); margin: auto; padding: 28px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); }
+    @media (max-width: 800px) {
+      header, .tabs, .flow-bar { padding-left: 16px; padding-right: 16px; }
+      .flow-bar { align-items: flex-start; flex-direction: column; }
+      .layout { width: calc(100% - 28px); grid-template-columns: 1fr; margin-top: 16px; }
+      .side { grid-row: 1; grid-template-columns: 1fr 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .span-2, details { grid-column: auto; }
+      .advanced { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .tabs { gap: 16px; overflow-x: auto; }
+      .side { grid-template-columns: 1fr; }
+      .task-actions { align-items: stretch; flex-direction: column; }
+      .task-actions .button { width: 100%; }
+      .mapping { align-items: stretch; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header><div><h1>KNA workspace</h1><small>Vista to IVO integration blueprint</small></div><div class="save" id="saveState">● Saved</div></header>
+  <nav class="tabs" aria-label="Customer workspace"><button class="tab" data-view="overview">Overview</button><button class="tab" data-view="sources">Sources &amp; mappings</button><button class="tab active" data-view="flows">Flows</button></nav>
+  <section id="flowsView">
+    <div class="flow-bar"><div class="breadcrumb">Equipment sync / <strong id="crumb">Lookup equipment</strong></div><div class="steps" id="stepDots" aria-label="Flow steps"></div></div>
+    <div class="layout">
+      <article class="task">
+        <div class="task-head"><div class="eyebrow" id="stepNumber">Step 2 of 5 · Lookup</div><h2 id="title">Lookup equipment</h2><p class="muted" id="description">Find the matching IVO equipment record using the source accounting code.</p></div>
+        <div class="task-body">
+          <div class="form-grid">
+            <label>Step name<input id="nameInput" value="Lookup equipment"></label>
+            <label>Step type<select id="typeInput"><option>Lookup</option><option>Conditional</option><option>Code</option><option>Connector action</option><option>Stop flow</option></select></label>
+            <label>Connector<select><option>IVO</option><option>Vista</option><option>Enter manually...</option></select></label>
+            <label>Cached object<select><option>Equipment</option><option>Equipment status</option><option>Enter manually...</option></select></label>
+            <label>Filter property<input value="accountingCode"></label>
+            <label>Operator<select><option>equals</option><option>contains</option></select></label>
+            <label class="span-2">Value expression<textarea>flow.trigger.data.Equipment</textarea></label>
+            <div class="mapping span-2"><div><strong>Equipment mapping</strong><br><small>18 approved fields · Reviewer evidence retained</small></div><button class="button">Change mapping</button></div>
+            <details><summary>Advanced dependency settings</summary><div class="advanced"><label>Depends on<select><option>Cache event trigger</option><option>Previous step</option></select></label><label>Required result<select><option>SUCCESSFUL</option><option>FAILED</option><option>Any status</option></select></label></div></details>
+          </div>
+        </div>
+        <div class="task-actions"><button class="button" id="previous">← Previous step</button><button class="button primary" id="next">Save and continue →</button></div>
+      </article>
+      <aside class="side">
+        <section class="panel"><h3>Flow progress</h3><strong id="progressLabel">2 of 5 steps</strong><div class="progress"><span id="progressBar"></span></div><small>Equipment sync</small></section>
+        <section class="panel"><h3>Readiness</h3><ul class="checklist"><li><span class="warn">!</span><span>Confirm lookup result behavior</span></li><li><span class="warn">!</span><span>Select update action path</span></li><li><span class="good">✓</span><span>Approved mapping attached</span></li><li><span class="good">✓</span><span>Step dependencies valid</span></li></ul></section>
+        <section class="panel"><h3>Other flows</h3><div class="flow-list"><button class="active">Equipment sync</button><button>Employee sync</button><button>Contract item sync</button></div></section>
+      </aside>
+    </div>
+  </section>
+  <section class="other" id="overviewView"><div class="empty-card"><h2>Workspace overview</h2><p class="muted">3 flows · 2 blockers · Last saved just now</p><button class="button primary" data-flows>Continue setup</button></div></section>
+  <section class="other" id="sourcesView"><div class="empty-card"><h2>Sources &amp; mappings</h2><p class="muted">Review source profiles and approved mappings without leaving the customer workspace.</p><button class="button primary" data-flows>Return to flow</button></div></section>
+  <script>
+    const steps = [
+      { name: "Cache event trigger", type: "Trigger", description: "Run when Vista equipment data changes." },
+      { name: "Lookup equipment", type: "Lookup", description: "Find the matching IVO equipment record using the source accounting code." },
+      { name: "Equipment exists?", type: "Conditional", description: "Choose the update or not-found path based on lookup results." },
+      { name: "Update equipment", type: "Connector action", description: "Send the approved equipment fields to IVO." },
+      { name: "Complete flow", type: "Stop flow", description: "Finish with an explicit successful result." }
+    ];
+    let active = 1;
+    const saveState = document.getElementById("saveState");
+    const render = () => {
+      const step = steps[active];
+      document.getElementById("crumb").textContent = step.name;
+      document.getElementById("title").textContent = step.name;
+      document.getElementById("nameInput").value = step.name;
+      document.getElementById("typeInput").value = step.type;
+      document.getElementById("description").textContent = step.description;
+      document.getElementById("stepNumber").textContent = `Step ${active + 1} of ${steps.length} · ${step.type}`;
+      document.getElementById("progressLabel").textContent = `${active + 1} of ${steps.length} steps`;
+      document.getElementById("progressBar").style.width = `${((active + 1) / steps.length) * 100}%`;
+      document.getElementById("previous").disabled = active === 0;
+      document.getElementById("next").textContent = active === steps.length - 1 ? "Review flow →" : "Save and continue →";
+      document.getElementById("stepDots").innerHTML = steps.map((item, index) => `<button class="step-dot ${index === active ? "active" : index < active ? "done" : ""}" data-index="${index}" title="${item.name}">${index < active ? "✓" : index + 1}</button>`).join("");
+    };
+    const markSaving = () => {
+      saveState.textContent = "● Saving...";
+      saveState.style.color = "var(--cp-text-muted)";
+      window.clearTimeout(markSaving.timer);
+      markSaving.timer = window.setTimeout(() => { saveState.textContent = "● Saved"; saveState.style.color = "var(--cp-success)"; }, 650);
+    };
+    document.getElementById("stepDots").addEventListener("click", (event) => { const button = event.target.closest("[data-index]"); if (button) { active = Number(button.dataset.index); render(); } });
+    document.getElementById("previous").addEventListener("click", () => { active = Math.max(0, active - 1); render(); });
+    document.getElementById("next").addEventListener("click", () => { markSaving(); active = Math.min(steps.length - 1, active + 1); render(); });
+    document.getElementById("nameInput").addEventListener("input", (event) => { steps[active].name = event.target.value || "Untitled step"; document.getElementById("title").textContent = steps[active].name; document.getElementById("crumb").textContent = steps[active].name; markSaving(); });
+    document.querySelector(".task-body").addEventListener("input", markSaving);
+    const showView = (name) => { document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.view === name)); document.getElementById("flowsView").style.display = name === "flows" ? "block" : "none"; document.querySelectorAll(".other").forEach((view) => view.classList.remove("active")); if (name !== "flows") document.getElementById(`${name}View`).classList.add("active"); };
+    document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => showView(tab.dataset.view)));
+    document.querySelectorAll("[data-flows]").forEach((button) => button.addEventListener("click", () => showView("flows")));
+    render();
+  </script>
+</body>
+</html>

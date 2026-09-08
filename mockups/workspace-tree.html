@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVO Customer Workspace</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font: 14px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; }
+    button, input, select, textarea { color: inherit; font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--cp-accent); outline-offset: 2px; }
+    .shell { height: 100%; min-height: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); overflow: hidden; }
+    header { height: 64px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 2px solid var(--cp-accent); border-radius: 8px; color: var(--cp-accent); font-weight: 800; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 2px; font-size: 18px; letter-spacing: 0; }
+    h2 { font-size: 18px; letter-spacing: 0; }
+    h3 { font-size: 13px; letter-spacing: 0; }
+    .muted, small { color: var(--cp-text-muted); }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .save-state { display: flex; align-items: center; gap: 8px; color: var(--cp-success); white-space: nowrap; }
+    .save-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cp-success); }
+    .tabs { min-height: 48px; padding: 0 24px; display: flex; align-items: end; gap: 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface); }
+    .tab { height: 48px; padding: 0 2px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--cp-text-muted); font-weight: 650; }
+    .tab.active { color: var(--cp-accent); border-color: var(--cp-accent); }
+    .workspace { min-height: 0; display: grid; grid-template-columns: 290px minmax(0, 1fr); overflow: hidden; }
+    aside { min-width: 0; min-height: 0; border-right: 1px solid var(--cp-border); background: var(--cp-bg-elevated); overflow-y: auto; }
+    .rail-head { padding: 18px 16px 12px; display: flex; align-items: center; justify-content: space-between; }
+    .rail-head h2 { margin: 0; font-size: 14px; }
+    .rail-head-actions { display: flex; align-items: center; gap: 6px; }
+    .disclosure-button::before { width: 8px; height: 8px; content: ""; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(225deg); transition: transform 160ms ease; }
+    .workspace.structure-collapsed .disclosure-button::before { transform: rotate(45deg); }
+    .workspace.structure-collapsed .flow-list { display: none; }
+    .workspace.structure-collapsed .rail-head { border-bottom: 1px solid var(--cp-border); }
+    .icon-button, .button { min-height: 34px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); }
+    .icon-button { width: 34px; display: grid; place-items: center; font-size: 20px; }
+    .button { padding: 6px 12px; font-weight: 650; }
+    .button.primary { border-color: var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .flow-list { padding: 0 10px 10px; display: grid; gap: 5px; }
+    .flow-title { width: 100%; padding: 10px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--cp-text); text-align: left; }
+    .flow-title:hover { background: var(--cp-surface-soft); }
+    .flow-title.active { border-color: var(--cp-border); background: var(--cp-surface); color: var(--cp-accent); }
+    .flow-title strong, .flow-title small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .flow-title small { margin-top: 2px; font-size: 10px; font-weight: 400; }
+    .flow-summary { padding: 12px 16px; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); background: var(--cp-surface-soft); }
+    .flow-summary strong { display: block; margin-bottom: 3px; }
+    .tree { padding: 0 10px 18px; }
+    .tree-item { width: 100%; min-height: 40px; padding: 7px 9px; display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; align-items: center; gap: 8px; border: 0; border-radius: 8px; background: transparent; text-align: left; }
+    .tree-item:hover { background: var(--cp-surface-soft); }
+    .tree-item.active { background: var(--cp-accent-soft); color: var(--cp-accent); }
+    .tree-item.branch { margin-left: 18px; width: calc(100% - 18px); }
+    .tree-item.child { margin-left: 36px; width: calc(100% - 36px); }
+    .node-icon { color: var(--cp-text-muted); font-family: Consolas, "Courier New", Courier, monospace; }
+    .badge { max-width: 76px; padding: 2px 6px; overflow: hidden; border: 1px solid var(--cp-border); border-radius: 10px; color: var(--cp-text-muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+    .badge.warn { border-color: var(--cp-warning); color: var(--cp-warning); }
+    .badge.good { border-color: var(--cp-success); color: var(--cp-success); }
+    .badge.blocking { border-color: var(--cp-danger); color: var(--cp-danger); }
+    .badge.generated { border-color: var(--cp-link); color: var(--cp-link); }
+    .review-actions { display: flex; align-items: center; gap: 8px; }
+    .rail-actions { padding: 12px 16px; border-top: 1px solid var(--cp-border); }
+    main { min-width: 0; min-height: 0; overflow-y: auto; }
+    .editor { width: min(900px, calc(100% - 48px)); margin: 28px auto 64px; }
+    .editor-head { display: flex; align-items: start; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+    .type-line { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; color: var(--cp-text-muted); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+    .status { padding: 7px 10px; border-left: 3px solid var(--cp-warning); background: var(--cp-surface-soft); color: var(--cp-text-muted); }
+    .panel { margin-bottom: 16px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); overflow: hidden; box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+    .panel-title { padding: 14px 16px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); font-weight: 700; }
+    .panel-body { padding: 18px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    label { display: grid; gap: 6px; color: var(--cp-text-muted); font-size: 12px; font-weight: 650; }
+    input, select, textarea { width: 100%; min-height: 38px; padding: 8px 10px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    textarea { min-height: 82px; resize: vertical; font-family: Consolas, "Courier New", Courier, monospace; }
+    .code-input { min-height: 180px; padding: 14px; border-color: var(--cp-border-strong); background: var(--cp-bg-elevated); line-height: 1.55; tab-size: 2; }
+    .span-2 { grid-column: 1 / -1; }
+    .filter-row { display: grid; grid-template-columns: 1fr 110px 1.5fr 34px; gap: 8px; align-items: end; }
+    .mapping { padding: 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    .mapping strong { display: block; margin-bottom: 3px; }
+    .details-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .detail-item { min-width: 0; padding: 11px 12px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    .detail-item span { display: block; margin-bottom: 4px; color: var(--cp-text-muted); font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .detail-item strong { display: block; overflow-wrap: anywhere; font: 12px Consolas, "Courier New", Courier, monospace; }
+    .detail-item a { color: var(--cp-link); font: 700 12px Consolas, "Courier New", Courier, monospace; text-underline-offset: 3px; }
+    .detail-item a:hover { color: var(--cp-accent); }
+    .filter-box { margin-top: 16px; padding: 14px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    .filter-box[hidden] { display: none; }
+    .filter-box h3 { margin-bottom: 12px; }
+    .filter-fields { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(130px, .65fr) minmax(220px, 1.5fr); gap: 12px; }
+    .issues { display: grid; gap: 10px; }
+    .issue { padding: 10px 12px; display: grid; grid-template-columns: 16px 1fr; gap: 8px; border-left: 3px solid var(--cp-warning); background: var(--cp-surface-soft); }
+    .issue.blocking { border-color: var(--cp-danger); }
+    .issue button { padding: 0; border: 0; background: transparent; color: var(--cp-link); text-align: left; font-weight: 650; }
+    .review-panel { display: grid; gap: 12px; }
+    .review-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-border); gap: 1px; }
+    .review-metric { padding: 14px; background: var(--cp-surface); }
+    .review-metric strong { display: block; margin-top: 4px; font-size: 20px; }
+    .provenance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .provenance-item { padding: 12px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    .provenance-item span { display: block; margin-bottom: 4px; color: var(--cp-text-muted); font-size: 11px; }
+    .provenance-item strong { display: block; overflow-wrap: anywhere; }
+    .mapping-table { margin-top: 14px; overflow-x: auto; border: 1px solid var(--cp-border); border-radius: 8px; }
+    .mapping-table table { width: 100%; border-collapse: collapse; }
+    .mapping-table th, .mapping-table td { padding: 9px 10px; border-bottom: 1px solid var(--cp-border); text-align: left; vertical-align: top; }
+    .mapping-table tr:last-child td { border-bottom: 0; }
+    .mapping-table th { color: var(--cp-text-muted); background: var(--cp-bg-elevated); font-size: 11px; }
+    .mapping-table code { font: 12px Consolas, "Courier New", Courier, monospace; overflow-wrap: anywhere; }
+    .dialog-body { max-height: calc(100vh - 190px); padding: 20px; overflow: auto; }
+    .dialog-footer { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .dialog-footer-actions { display: flex; gap: 8px; }
+    .json-preview { max-height: 360px; padding: 14px; overflow: auto; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); font: 12px/1.5 Consolas, "Courier New", Courier, monospace; white-space: pre; }
+    .history-list { display: grid; gap: 7px; }
+    .history-item { padding: 10px 12px; display: flex; justify-content: space-between; gap: 16px; border: 1px solid var(--cp-border); border-radius: 8px; }
+    .other-view.active { overflow-y: auto; }
+    .overview-content { width: min(980px, calc(100% - 32px)); margin: 28px auto 60px; text-align: left; }
+    .empty-workspace { width: min(560px, calc(100% - 32px)); margin: 72px auto; padding: 28px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); text-align: center; }
+    .empty-workspace h2 { margin-bottom: 8px; }
+    dialog { width: min(920px, calc(100% - 32px)); max-height: calc(100% - 48px); padding: 0; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); color: var(--cp-text); box-shadow: var(--cp-shadow); }
+    dialog::backdrop { background: var(--cp-overlay); }
+    .dialog-head { padding: 18px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .dialog-head h2 { margin-bottom: 4px; }
+    .dialog-layout { min-height: 460px; display: grid; grid-template-columns: minmax(280px, .85fr) minmax(360px, 1.15fr); }
+    .config-list { min-width: 0; padding: 16px; border-right: 1px solid var(--cp-border); overflow: auto; }
+    .config-list-head { margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .config-list-head h3 { margin: 0; }
+    .config-items { display: grid; gap: 7px; }
+    .config-item { width: 100%; padding: 11px 12px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); text-align: left; }
+    .config-item:hover { border-color: var(--cp-border-strong); }
+    .config-item.active { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+    .config-item strong, .config-item small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .config-type { color: var(--cp-text-muted); font: 10px Consolas, "Courier New", Courier, monospace; text-transform: uppercase; }
+    .config-editor { padding: 20px; overflow: auto; }
+    .config-editor-head { margin-bottom: 18px; }
+    .config-editor-head h3 { margin-bottom: 5px; font-size: 16px; text-transform: none; }
+    .reference-code { margin-top: 6px; padding: 8px 10px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface-soft); color: var(--cp-text-muted); font: 12px Consolas, "Courier New", Courier, monospace; overflow-wrap: anywhere; }
+    .checkbox-field { display: flex; align-items: center; gap: 8px; min-height: 38px; }
+    .checkbox-field input { width: 18px; min-height: 18px; }
+    .dialog-actions { margin-top: 20px; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--cp-border); }
+    .button.danger { color: var(--cp-danger); }
+    .other-view { display: none; padding: 48px 24px; text-align: center; }
+    .other-view.active { display: block; }
+    .placeholder-card { width: min(620px, 100%); margin: 0 auto; padding: 28px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); }
+    @media (max-width: 760px) {
+      header { height: auto; min-height: 64px; padding: 10px 16px; align-items: flex-start; flex-wrap: wrap; }
+      .brand small { display: none; }
+      .header-actions { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .header-actions .button { min-width: 0; padding: 6px 8px; overflow-wrap: anywhere; }
+      .tabs { padding: 0 16px; gap: 18px; overflow-x: auto; }
+      .workspace { grid-template-columns: 1fr; }
+      aside { max-height: 270px; border-right: 0; border-bottom: 1px solid var(--cp-border); }
+      .editor { width: calc(100% - 28px); margin-top: 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .span-2 { grid-column: auto; }
+      .filter-row { grid-template-columns: 1fr; }
+      .filter-row .icon-button { justify-self: end; }
+      .editor-head { display: block; }
+      .status { margin-top: 12px; }
+      .details-grid { grid-template-columns: 1fr; }
+      .filter-fields { grid-template-columns: 1fr; }
+      .header-actions .save-state { display: none; }
+      .dialog-layout { grid-template-columns: 1fr; }
+      .config-list { max-height: 230px; border-right: 0; border-bottom: 1px solid var(--cp-border); }
+      .review-summary, .provenance-grid { grid-template-columns: 1fr; }
+      .review-actions { align-items: stretch; flex-direction: column; }
+      .dialog-footer { align-items: stretch; flex-direction: column; }
+      .dialog-footer-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand"><div class="mark" id="customerMark">?</div><div><h1 id="workspaceTitle">Customer workspace</h1><small id="workspaceDescription">Integration blueprint</small></div></div>
+      <div class="header-actions">
+        <button class="button" id="openConfigurations">Configuration manager <span class="badge" id="configurationCount">3</span></button>
+        <button class="button" id="openValidation">Validation <span class="badge warn" id="validationCount">0</span></button>
+        <button class="button primary" id="openReview">Review &amp; export</button>
+        <div class="save-state" id="saveState"><span class="save-dot"></span><span>Saved</span></div>
+      </div>
+    </header>
+    <nav class="tabs" aria-label="Customer workspace">
+      <button class="tab" data-view="overview">Overview</button>
+      <button class="tab" data-view="sources">Sources &amp; mappings</button>
+      <button class="tab active" data-view="flows">Flows</button>
+    </nav>
+    <section class="workspace" id="flowsView">
+      <aside>
+        <div class="rail-head">
+          <h2>Workspace structure</h2>
+          <div class="rail-head-actions">
+            <button class="icon-button disclosure-button" id="toggleRail" title="Collapse workspace structure" aria-label="Collapse workspace structure" aria-expanded="true"></button>
+            <button class="icon-button" id="addFlow" title="Add flow" aria-label="Add flow">+</button>
+          </div>
+        </div>
+        <div class="flow-list" id="flowList"></div>
+        <div class="flow-summary"><strong>Flow trigger</strong><small id="flowSummaryText"></small></div>
+        <div class="tree" id="tree"></div>
+        <div class="rail-actions"><button class="button" id="addStep">+ Add step</button></div>
+      </aside>
+      <main>
+        <div class="empty-workspace" id="emptyWorkspace" hidden><h2>No flows generated</h2><p class="muted">This customer does not have a generated workspace yet. Complete source mappings, then generate the first Trimble flow draft.</p><button class="button" id="openSourceMappings">Open sources &amp; mappings</button></div>
+        <div class="editor" id="flowEditor">
+          <div class="editor-head">
+            <div><div class="type-line"><span id="stepType">Lookup</span><span>•</span><span id="stepPosition">Step 1</span></div><h2 id="stepTitle">Lookup equipment</h2><p class="muted" id="stepDescription"></p></div>
+            <div class="review-actions"><span class="badge generated" id="flowReviewStatus">Generated</span><button class="button" id="toggleFlowReview">Approve flow</button></div>
+          </div>
+          <section class="panel">
+            <div class="panel-title">Step details</div>
+            <div class="panel-body form-grid"><label>Name<input id="nameInput"></label><label>Step ID<input id="stepIdInput"></label><label>App Xchange step type<input id="rawTypeInput" readonly></label><label>Connector<select id="connectorInput"><option>Vista</option><option>IVO</option><option>App Xchange</option></select></label></div>
+          </section>
+          <section class="panel" id="codePanel" hidden>
+            <div class="panel-title" id="codePanelTitle">Code block</div>
+            <div class="panel-body"><label><span id="codeInputLabel">JavaScript</span><textarea class="code-input" id="codeInput" spellcheck="false"></textarea></label></div>
+          </section>
+          <section class="panel">
+            <div class="panel-title">Step configuration</div>
+            <div class="panel-body">
+              <div class="details-grid" id="stepDetails"></div>
+              <div class="filter-box" id="filterBox" hidden>
+                <h3>Filter</h3>
+                <div class="filter-fields">
+                  <label>Property Name<input id="filterProperty"></label>
+                  <label>Operator<select id="filterOperator"><option>Equals</option><option>Not Equals</option><option>In</option><option>Contains</option></select></label>
+                  <label>Value<input id="filterValue" class="editable"></label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-title">Dependency and flow context</div>
+            <div class="panel-body details-grid" id="contextDetails"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-title">Generation evidence</div>
+            <div class="panel-body">
+              <div class="details-grid" id="generationDetails"></div>
+              <div class="mapping-table" id="propertyMappings" hidden><table><thead><tr><th>Destination property</th><th>Generated expression</th></tr></thead><tbody id="propertyMappingRows"></tbody></table></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </section>
+    <section class="other-view" id="overviewView"><div class="overview-content"><div class="editor-head"><div><h2>Workspace review</h2><p class="muted">Verify generated Trimble configuration before approving the canonical workspace.</p></div><button class="button primary" data-go-flows>Review flows</button></div><div class="review-panel"><div class="review-summary" id="overviewMetrics"></div><section class="panel"><div class="panel-title">Generation provenance</div><div class="panel-body provenance-grid" id="provenanceDetails"></div></section><section class="panel"><div class="panel-title">Readiness</div><div class="panel-body issues" id="overviewIssues"></div></section></div></div></section>
+  </div>
+  <dialog id="configurationDialog" aria-labelledby="configurationTitle">
+    <div class="dialog-head">
+      <div><h2 id="configurationTitle">Equipment sync configurations</h2><small>Custom values available to this flow through <code>flow.config</code>.</small></div>
+      <button class="icon-button" id="closeConfigurations" aria-label="Close configuration manager" title="Close">×</button>
+    </div>
+    <div class="dialog-layout">
+      <section class="config-list">
+        <div class="config-list-head"><h3>Configurations</h3><button class="button" id="addConfiguration">+ Add</button></div>
+        <div class="config-items" id="configurationItems"></div>
+      </section>
+      <section class="config-editor">
+        <div class="config-editor-head"><h3 id="configurationEditorTitle">Edit configuration</h3><div class="reference-code" id="configurationReference">flow.config.companyId</div></div>
+        <div class="form-grid">
+          <label>Name<input id="configurationName"></label>
+          <label>Type<select id="configurationType"><option value="string">String</option><option value="string[]">String array</option><option value="decimal">Decimal</option><option value="decimal[]">Decimal array</option><option value="integer">Integer</option><option value="integer[]">Integer array</option><option value="boolean">Boolean</option></select></label>
+          <label class="span-2">Description<input id="configurationDescription"></label>
+          <label>Default value<input id="configurationDefault"></label>
+          <label>Options<input id="configurationOptions" placeholder="Comma-separated values"></label>
+          <label class="span-2 checkbox-field"><input type="checkbox" id="configurationRequired"> Required before this flow is ready</label>
+        </div>
+        <div class="dialog-actions"><button class="button danger" id="deleteConfiguration">Delete configuration</button><button class="button primary" id="doneConfigurations">Done</button></div>
+      </section>
+    </div>
+  </dialog>
+  <dialog id="validationDialog" aria-labelledby="validationTitle">
+    <div class="dialog-head"><div><h2 id="validationTitle">Workspace validation</h2><small>Blocking findings must be resolved before workspace approval.</small></div><button class="icon-button" data-close-dialog="validationDialog" aria-label="Close validation">×</button></div>
+    <div class="dialog-body"><div class="issues" id="validationIssues"></div></div>
+    <div class="dialog-footer"><span class="muted" id="validationSummary"></span><button class="button" data-close-dialog="validationDialog">Done</button></div>
+  </dialog>
+  <dialog id="reviewDialog" aria-labelledby="reviewTitle">
+    <div class="dialog-head"><div><h2 id="reviewTitle">Review workspace JSON</h2><small>Compare the generated baseline with the reviewed canonical draft.</small></div><button class="icon-button" data-close-dialog="reviewDialog" aria-label="Close review">×</button></div>
+    <div class="dialog-body review-panel">
+      <div class="review-summary" id="reviewMetrics"></div>
+      <section><h3>Changes from generated baseline</h3><div class="issues" id="changeSummary"></div></section>
+      <section><h3>Approval</h3><div class="form-grid"><label>Reviewer<input id="reviewerName" value="Local reviewer"></label><label>Approval notes<input id="approvalNotes" placeholder="Optional review context"></label></div></section>
+      <section><h3>Canonical JSON</h3><pre class="json-preview" id="jsonPreview"></pre></section>
+      <section><h3>Approval history</h3><div class="history-list" id="revisionHistory"></div></section>
+    </div>
+    <div class="dialog-footer"><span class="muted" id="approvalMessage"></span><div class="dialog-footer-actions"><button class="button" id="downloadDraft">Download draft</button><button class="button primary" id="approveWorkspace">Approve workspace</button></div></div>
+  </dialog>
+  <script>
+    const saveState = document.getElementById("saveState");
+    let flows = [
+      {
+        name: "Equipment Location Status Sync", trigger: "Vista equipment location transfer · INSERT",
+        configurations: [
+          { name: "availableEquipmentStatus", type: "integer", description: "IVO status used when Vista equipment is available.", defaultValue: "1308", options: "", required: true },
+          { name: "workingEquipmentStatus", type: "integer", description: "IVO status used when Vista equipment is working.", defaultValue: "1309", options: "", required: true },
+          { name: "downEquipmentStatus", type: "integer", description: "IVO status used when Vista equipment is down.", defaultValue: "1310", options: "", required: true },
+          { name: "noneEquipmentStatus", type: "integer", description: "IVO fallback status.", defaultValue: "1312", options: "", required: true },
+          { name: "availableVistaStatus", type: "string", description: "Vista code mapped to available.", defaultValue: "100", options: "", required: true },
+          { name: "workingVistaStatus", type: "string", description: "Vista code mapped to working.", defaultValue: "WK", options: "", required: true },
+          { name: "downVistaStatus", type: "string", description: "Vista code mapped to down.", defaultValue: "200", options: "", required: true },
+          { name: "noneVistaStatuses", type: "string[]", description: "Vista codes mapped to the fallback status.", defaultValue: "36 configured values", options: "", required: true }
+        ],
+        steps: [
+          { id: "look-eq", name: "Lookup Equipment", type: "getdatafromcachev2", description: "Find the IVO equipment record for the incoming transfer.", details: { "Data object": "IVO Equipment" }, filter: { property: "accountingCode", operator: "Equals", value: "flow.trigger.data.Equipment" } },
+          { id: "exists", name: "Equipment Not Found?", type: "if", description: "Stop when the lookup does not find equipment.", details: { "True branch": "Stop: equipment not found", "False branch": "Continue flow" }, code: "return flow.step('look-eq').output.length === 0;" },
+          { id: "status-type", name: "Get Status Type", type: "code", description: "Map the Vista status to an IVO status using flow configurations.", details: { "Uses configuration": "Status mapping keys", "Output type": "Integer status ID" }, code: "const statusMap = {\n  [flow.config.availableVistaStatus]: flow.config.availableEquipmentStatus,\n  [flow.config.workingVistaStatus]: flow.config.workingEquipmentStatus,\n  [flow.config.downVistaStatus]: flow.config.downEquipmentStatus\n};\n\nreturn statusMap[flow.trigger.data.Status]\n  ?? flow.config.noneEquipmentStatus;" },
+          { id: "look-eq-status", name: "Lookup Equipment Statuses", type: "getdatafromcachev2", description: "Load prior IVO equipment status records.", details: { "Data object": "IVO Equipment Status" }, filter: { property: "equipmentId", operator: "Equals", value: "flow.step('look-eq').output[0].id" } },
+          { id: "sort", name: "Sort Statuses And Get Latest", type: "code", description: "Sort status history and select the latest record.", details: { "Operation": "Sort by ID", "Output": "Latest status record" }, code: "const statuses = flow.step('look-eq-status').output;\n\nreturn [...statuses]\n  .sort((left, right) => right.id - left.id)[0]\n  ?? null;" },
+          { id: "status-conditional-1d43b", name: "Update Required?", type: "if", description: "Stop early when no status update is required.", details: { "True branch": "Continue update", "False branch": "Stop: no update required" }, code: "const latest = flow.step('sort').output;\nconst nextStatus = flow.step('status-type').output;\n\nreturn !latest || latest.statusId !== nextStatus;" },
+          { id: "status-conditional", name: "Status Record Exists?", type: "if", description: "Choose update or create behavior for the status record.", details: { "True branch": "Update existing status", "False branch": "Create company status" }, code: "return flow.step('sort').output !== null;" },
+          { id: "update", name: "Update Equipment Status", type: "queueactionv3", depth: 1, branch: "If true", description: "Update the existing IVO equipment status.", details: { "Action": "Equipment status · Update", "Wait for response": "Yes" }, code: "return {\n  id: flow.step('sort').output.id,\n  endDate: flow.trigger.data.TransferDate\n};" },
+          { id: "update-cons", name: "Update Action Successful?", type: "if", depth: 1, description: "Evaluate the connector action result.", details: { "True branch": "Create next status", "False branch": "Email + Stop failed" }, code: "return flow.step('update').output.success === true;" },
+          { id: "create-c8fc3", name: "Create Equipment Status", type: "queueactionv3", depth: 2, branch: "If successful", description: "Create the next equipment status interval.", details: { "Action": "Equipment status · Create", "Wait for response": "Yes" }, code: "return {\n  equipmentId: flow.step('look-eq').output[0].id,\n  statusId: flow.step('status-type').output,\n  startDate: flow.trigger.data.TransferDate\n};" },
+          { id: "update-success", name: "Update Successful", type: "stop", depth: 2, description: "Terminate with a successful outcome.", details: { "Result": "Success", "Terminates flow": "Yes" } }
+        ]
+      },
+      {
+        name: "Employee Create / Update", trigger: "Vista HR employee change · INSERT / UPDATE", configurations: [],
+        steps: [
+          { id: "lk-emp", name: "Lookup Existing Employees", type: "getdatafromcachev2", description: "Find a matching IVO employee.", details: { "Data object": "IVO Employee" }, filter: { property: "employeeNumber", operator: "Equals", value: "flow.trigger.data.Employee" } },
+          { id: "group", name: "Lookup Vista Employee Group", type: "code", description: "Derive the source employee group.", details: { "Output": "Employee group value", "Script": "JavaScript transform" }, code: "const employee = flow.trigger.data;\n\nreturn employee.EmployeeGroup?.trim() || 'DEFAULT';" },
+          { id: "i-group", name: "Lookup IVO Employee Group", type: "getdatafromcachev2", description: "Resolve the corresponding IVO employee group.", details: { "Data object": "IVO Employee Group" }, filter: { property: "code", operator: "Equals", value: "flow.step('group').output" } },
+          { id: "lite", name: "Lookup Vista Employee Lite", type: "getdatafromcachev2", description: "Load supporting Vista employee data.", details: { "Data object": "Vista Employee Lite" }, filter: { property: "employeeNumber", operator: "Equals", value: "flow.trigger.data.Employee" } },
+          { id: "job", name: "Lookup IVO Job", type: "getdatafromcachev2", description: "Resolve the employee job.", details: { "Data object": "IVO Job" }, filter: { property: "accountingCode", operator: "Equals", value: "flow.step('lite').output[0].Job" } },
+          { id: "v-div", name: "Lookup Vista Division", type: "getdatafromcachev2", description: "Load the Vista division.", details: { "Data object": "Vista Division" }, filter: { property: "divisionCode", operator: "Equals", value: "flow.step('lite').output[0].Division" } },
+          { id: "i-div", name: "Lookup IVO Division", type: "getdatafromcachev2", description: "Resolve the IVO division.", details: { "Data object": "IVO Division" }, filter: { property: "code", operator: "Equals", value: "flow.step('v-div').output[0].Division" } },
+          { id: "lk-pay-cls", name: "Lookup IVO Labor Pay Class", type: "getdatafromcachev2", description: "Resolve the labor pay class.", details: { "Data object": "IVO Labor Pay Class" }, filter: { property: "code", operator: "Equals", value: "flow.step('lite').output[0].PayClass" } },
+          { id: "trigger-type", name: "Create Or Update?", type: "if", description: "Choose behavior based on the trigger change type.", details: { "Insert branch": "Create employee", "Update branch": "Update employee" }, code: "return flow.trigger.changeType === 'INSERT';" },
+          { id: "update", name: "Update Employee", type: "queueactionv3", depth: 1, branch: "Update path", description: "Update the existing IVO employee.", details: { "Action": "Employee · Update" }, code: "return {\n  id: flow.step('lk-emp').output[0].id,\n  employeeNumber: flow.trigger.data.Employee,\n  divisionId: flow.step('i-div').output[0].id\n};" },
+          { id: "update-conditional", name: "Update Successful?", type: "if", depth: 1, description: "Check the employee update result.", details: { "True branch": "Call linked user flow", "False branch": "Stop failed" }, code: "return flow.step('update').output.success === true;" },
+          { id: "call-link-flow-update", name: "Call Linked User Flow", type: "callflow", depth: 2, branch: "If successful", description: "Invoke the linked-user callable flow.", details: { "Called flow": "Linked User Flow", "Use existing input": "No" }, inputCode: "return {\n  employee_no: flow.trigger.data.PREmp,\n  first_name: flow.trigger.data.FirstName,\n  last_name: flow.trigger.data.LastName,\n  status: _.trim(flow.trigger.data.ActiveYN) === 'A',\n  state: flow.trigger.data?.State ?? null,\n  email: flow.trigger.data?.WorkEmail ?? flow.trigger.data?.Email,\n  phone: flow.trigger.data?.WorkPhone ?? flow.trigger.data?.CellPhone,\n  employeeId: flow.step('update').actionResponse?.result?.employeeId ?? null\n};" },
+          { id: "update-success", name: "Update Employee Successful", type: "stop", depth: 2, description: "Terminate after the linked-user flow succeeds.", details: { "Result": "Success", "Terminates flow": "Yes" } }
+        ]
+      },
+      {
+        name: "Project Phase / Job Codes", trigger: "Vista project phase change · INSERT",
+        configurations: [
+          { name: "itemCodesUsed", type: "boolean", description: "Controls whether the item-code callable flow runs.", defaultValue: "false", options: "", required: true },
+          { name: "companyId", type: "integer", description: "Customer company identifier used by called flows.", defaultValue: "Configured integer", options: "", required: true },
+          { name: "phaseCodeFilter", type: "string[]", description: "Allowed project phase codes.", defaultValue: "6 configured phase codes", options: "", required: true }
+        ],
+        steps: [
+          { id: "double-check", name: "Phase Allowed?", type: "if", description: "Check the phase against the configured allowlist.", details: { "True branch": "Continue", "False branch": "Stop: phase filtered", "Uses configuration": "phaseCodeFilter" }, code: "return flow.config.phaseCodeFilter.includes(\n  flow.trigger.data.PhaseCode\n);" },
+          { id: "vista-job", name: "Lookup Vista Job", type: "getdatafromcachev2", description: "Load the source job.", details: { "Data object": "Vista Job" }, filter: { property: "jobId", operator: "Equals", value: "flow.trigger.data.Job" } },
+          { id: "vista-job-exist-cond", name: "Vista Job Missing?", type: "if", description: "Stop if the source job cannot be found.", details: { "True branch": "Stop: job missing", "False branch": "Continue" }, code: "return flow.step('vista-job').output.length === 0;" },
+          { id: "ivo-job", name: "Lookup IVO Job", type: "getdatafromcachev2", description: "Resolve the target IVO job.", details: { "Data object": "IVO Job" }, filter: { property: "accountingCode", operator: "Equals", value: "flow.step('vista-job').output[0].Job" } },
+          { id: "item-config-flag", name: "Use Item Codes?", type: "if", description: "Conditionally call the item-code flow.", details: { "True branch": "Call item-code flow", "False branch": "Continue", "Uses configuration": "itemCodesUsed" }, code: "return flow.config.itemCodesUsed === true;" },
+          { id: "cost-code-call", name: "Call Cost Code Flow", type: "callflow", description: "Create or update the job cost code in a child flow.", details: { "Called flow": "Cost Code Flow", "Use existing input": "No" }, inputCode: "return {\n  job: flow.step('vista-job').output[0].Job,\n  phase: flow.trigger.data.Phase,\n  description: flow.trigger.data.Description,\n  status: flow.trigger.data.ActiveYN === 'Y',\n  uom: flow.trigger.data.UM\n};" },
+          { id: "phase-flow-failed", name: "Cost Code Flow Failed?", type: "if", description: "Check the callable flow result.", details: { "True branch": "Stop failed", "False branch": "Continue" }, code: "return flow.step('cost-code-call').output.success !== true;" },
+          { id: "link-code-call", name: "Call Link Code Flow", type: "callflow", description: "Create or update link codes in a second child flow.", details: { "Called flow": "Link Code Flow", "Use existing input": "No" }, inputCode: "return {\n  job: flow.step('vista-job').output[0].Job,\n  item: flow.trigger.data.Item,\n  phase: flow.trigger.data.Phase,\n  itemCodeId: flow.step('item-code-call').output?.Output?.itemCodeId ?? null,\n  costCodeId: flow.step('cost-code-call').output.Output.costCodeId,\n  jobId: flow.step('cost-code-call').output.Output.jobId,\n  costs: flow.trigger.data.Costs\n};" },
+          { id: "action-con", name: "All Called Flows Successful?", type: "if", description: "Evaluate the combined callable-flow outcomes.", details: { "True branch": "Stop successful", "False branch": "Stop failed" }, code: "return flow.step('cost-code-call').output.success\n  && flow.step('link-code-call').output.success;" },
+          { id: "success", name: "Job Codes Successful", type: "stop", depth: 1, branch: "If successful", description: "Terminate the root flow successfully.", details: { "Result": "Success", "Terminates flow": "Yes" } }
+        ]
+      },
+      {
+        name: "Linked User Flow", trigger: "On demand · Callable", configurations: [],
+        steps: [
+          { id: "user", name: "Lookup IVO Linked User", type: "getdatafromcachev2", description: "Find the linked user for the supplied employee.", details: { "Data object": "IVO Linked User", "Callable input": "employeeId" }, filter: { property: "employeeId", operator: "Equals", value: "flow.trigger.data.employeeId" } },
+          { id: "user-exists", name: "Linked User Exists?", type: "if", description: "Choose whether to update or create the linked user.", details: { "True branch": "Update linked user", "False branch": "Create linked user" }, code: "return flow.step('user').output.length > 0;" },
+          { id: "update-user", name: "Update Linked User", type: "queueactionv3", depth: 1, branch: "If true", description: "Update the existing IVO linked user.", details: { "Action": "Linked user · Update" }, code: "return {\n  id: flow.step('user').output[0].id,\n  email: flow.trigger.data.email,\n  phone: flow.trigger.data.phone,\n  isActive: flow.trigger.data.status\n};" },
+          { id: "create-user", name: "Create Linked User", type: "queueactionv3", depth: 1, branch: "If false", description: "Create an IVO linked user for the employee.", details: { "Action": "Linked user · Create" }, code: "return {\n  employeeId: flow.trigger.data.employeeId,\n  firstName: flow.trigger.data.first_name,\n  lastName: flow.trigger.data.last_name,\n  email: flow.trigger.data.email\n};" }
+        ]
+      },
+      {
+        name: "Cost Code Flow", trigger: "On demand · Callable", configurations: [],
+        steps: [
+          { id: "look-ivo-cost-code", name: "Lookup IVO Cost Code", type: "getdatafromcachev2", description: "Find an existing cost code for the supplied job and phase.", details: { "Data object": "IVO Job Cost Code", "Callable inputs": "job, phase, uom" }, filter: { property: "name", operator: "Equals", value: "flow.trigger.data.phase" } },
+          { id: "cost-code-exists", name: "IVO Cost Code Exists?", type: "if", description: "Choose whether to update or create the cost code.", details: { "True branch": "Update cost code", "False branch": "Create cost code" }, code: "return flow.step('look-ivo-cost-code').output.length === 1;" },
+          { id: "update-cost-code", name: "Update Job Cost Code", type: "queueactionv3", depth: 1, branch: "If true", description: "Update the matching IVO job cost code.", details: { "Action": "Job cost code · Update" }, code: "return {\n  id: flow.step('look-ivo-cost-code').output[0].costCodeId,\n  description: flow.trigger.data.description,\n  isActive: flow.trigger.data.status,\n  unitOfMeasure: flow.trigger.data.uom\n};" },
+          { id: "create-cost-code", name: "Create Job Cost Code", type: "queueactionv3", depth: 1, branch: "If false", description: "Create the missing IVO job cost code.", details: { "Action": "Job cost code · Create" }, code: "return {\n  name: flow.trigger.data.phase,\n  description: flow.trigger.data.description,\n  unitOfMeasure: flow.trigger.data.uom\n};" }
+        ]
+      },
+      {
+        name: "Link Code Flow", trigger: "On demand · Callable", configurations: [],
+        steps: [
+          { id: "look-link-code", name: "Lookup IVO Link Code", type: "getdatafromcachev2", description: "Find the cost-code assignment for the supplied identifiers.", details: { "Data object": "IVO Job Link Code", "Callable inputs": "jobId, costCodeId, itemCodeId" }, filter: { property: "costCodeId", operator: "Equals", value: "flow.trigger.data.costCodeId" } },
+          { id: "link-code-exists", name: "Link Code Exists?", type: "if", description: "Choose whether to update or create the assignment.", details: { "True branch": "Update assignment", "False branch": "Create assignment" }, code: "return flow.step('look-link-code').output.length > 0;" },
+          { id: "update-link-code", name: "Update Link Code", type: "queueactionv3", depth: 1, branch: "If true", description: "Update the existing cost-code assignment.", details: { "Action": "Job link code · Update" }, code: "return {\n  id: flow.step('look-link-code').output[0].costCodeAssignmentId,\n  costs: flow.trigger.data.costs\n};" },
+          { id: "create-link-code", name: "Create Link Code", type: "queueactionv3", depth: 1, branch: "If false", description: "Create a cost-code assignment.", details: { "Action": "Job link code · Create" }, code: "return {\n  jobId: flow.trigger.data.jobId,\n  costCodeId: flow.trigger.data.costCodeId,\n  itemCodeId: flow.trigger.data.itemCodeId,\n  costs: flow.trigger.data.costs\n};" }
+        ]
+      }
+    ];
+    flows = [];
+    const customerKey = new URLSearchParams(location.search).get("customer");
+    let selectedCustomer = null;
+    let workspace = null;
+    let generatedBaseline = null;
+    let approvedWorkspace = null;
+    let revisions = [];
+    let validationIssues = [];
+    const requestedFlow = new URLSearchParams(location.hash.slice(1)).get("flow");
+    let activeFlow = Math.max(0, flows.findIndex((flow) => flow.name === requestedFlow));
+    let selectedStep = 0;
+    let selectedConfiguration = 0;
+    const normalizeWorkspace = () => {
+      workspace = workspace || {
+        schemaVersion: 1,
+        customer: { key: customerKey, name: selectedCustomer.name },
+        name: `${selectedCustomer.name} workspace`,
+        description: "ERP to IVO integration blueprint",
+        provenance: {
+          generatedAt: new Date().toISOString(),
+          generator: "IVO workspace generator",
+          generatorVersion: "1.0",
+          sourceData: "customers/KNA/*/input/erp/data.csv",
+          sourceSchema: "customers/KNA/*/input/erp/schema.json",
+          connectorReference: "reference/ivo/*/schema.json",
+          connectorSchemaVersion: "Repository snapshot at generation",
+          mappingEvidence: "customers/KNA/*/output/approved-mapping/mapping.csv"
+        },
+        review: { status: "generated" },
+        flows: []
+      };
+      flows = workspace.flows;
+      workspace.provenance ||= {};
+      workspace.provenance.generator ||= "IVO workspace generator";
+      workspace.provenance.generatorVersion ||= "1.0";
+      workspace.provenance.connectorSchemaVersion ||= "Repository snapshot at generation";
+      flows.forEach((flow) => {
+        flow.review ||= { status: "generated" };
+        flow.configurations ||= [];
+        flow.steps ||= [];
+        flow.steps.forEach((step) => {
+          step.connector ||= getDefaultConnector(step);
+          step.generation ||= {
+            confidence: step.type === "queueactionv3" ? 84 : 91,
+            rationale: step.type === "getdatafromcachev2"
+              ? "Generated from connector object relationships and observed source identifiers."
+              : "Generated from the source profile, connector schema, and approved field mappings.",
+            sources: step.type === "queueactionv3"
+              ? "Approved mapping + IVO action schema"
+              : "ERP CSV profile + connector schemas"
+          };
+        });
+      });
+    };
+    const flowStatusLabel = (status) => ({ generated: "Generated", "needs-review": "Needs review", approved: "Approved", blocked: "Blocked" }[status] || "Needs review");
+    const flowStatusClass = (status) => status === "approved" ? "good" : status === "blocked" ? "blocking" : status === "generated" ? "generated" : "warn";
+    const showView = (name) => {
+      if (name === "sources") {
+        location.href = `/mapping?customer=${encodeURIComponent(customerKey)}&view=sources`;
+        return;
+      }
+      document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.view === name));
+      document.getElementById("flowsView").style.display = name === "flows" ? "grid" : "none";
+      document.querySelectorAll(".other-view").forEach((view) => view.classList.remove("active"));
+      if (name !== "flows") document.getElementById(`${name}View`).classList.add("active");
+      if (name === "overview") renderOverview();
+    };
+    document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => showView(tab.dataset.view)));
+    document.querySelectorAll("[data-go-flows]").forEach((button) => button.addEventListener("click", () => showView("flows")));
+    const typeLabels = { getdatafromcachev2: "Lookup", if: "Conditional", code: "Code", queueactionv3: "Connector action", stop: "Stop flow", callflow: "Call a flow" };
+    const getDefaultConnector = (step) => {
+      if (step.name.includes("Vista") || Object.values(step.details).some((value) => String(value).includes("Vista"))) return "Vista";
+      if (["if", "code", "stop", "callflow"].includes(step.type)) return "App Xchange";
+      return "IVO";
+    };
+    const appendDetailItems = (container, values) => {
+      container.replaceChildren();
+      Object.entries(values).forEach(([label, value]) => {
+        const item = document.createElement("div");
+        item.className = "detail-item";
+        const caption = document.createElement("span");
+        caption.textContent = label;
+        const content = label === "Called flow" ? document.createElement("a") : document.createElement("strong");
+        content.textContent = value;
+        if (label === "Called flow") content.href = `#flow=${encodeURIComponent(value)}`;
+        item.append(caption, content);
+        container.appendChild(item);
+      });
+    };
+    const propertyMappings = (code) => {
+      const mappings = [];
+      const pattern = /^\s{2}([A-Za-z_$][\w$]*):\s*(.+?),?$/gm;
+      let match;
+      while ((match = pattern.exec(code || ""))) mappings.push({ property: match[1], expression: match[2].replace(/,$/, "") });
+      return mappings;
+    };
+    const renderStep = () => {
+      const flow = flows[activeFlow];
+      const step = flow.steps[selectedStep];
+      document.getElementById("stepTitle").textContent = step.name;
+      document.getElementById("stepType").textContent = typeLabels[step.type] || step.type;
+      document.getElementById("stepPosition").textContent = `Step ${selectedStep + 1} of ${flow.steps.length}`;
+      document.getElementById("stepDescription").textContent = step.description;
+      document.getElementById("nameInput").value = step.name;
+      document.getElementById("stepIdInput").value = step.id;
+      document.getElementById("rawTypeInput").value = step.type;
+      document.getElementById("connectorInput").value = step.connector || getDefaultConnector(step);
+      const codePanel = document.getElementById("codePanel");
+      const codeProperty = typeof step.inputCode === "string" ? "inputCode" : typeof step.code === "string" ? "code" : null;
+      codePanel.hidden = codeProperty === null;
+      if (!codePanel.hidden) {
+        document.getElementById("codePanelTitle").textContent = codeProperty === "inputCode" ? "Input code" : "Code block";
+        document.getElementById("codeInputLabel").textContent = codeProperty === "inputCode" ? "Input data · JavaScript" : "JavaScript";
+        document.getElementById("codeInput").value = step[codeProperty];
+        document.getElementById("codeInput").dataset.property = codeProperty;
+      }
+      appendDetailItems(document.getElementById("stepDetails"), step.details);
+      const filterBox = document.getElementById("filterBox");
+      filterBox.hidden = step.type !== "getdatafromcachev2";
+      if (!filterBox.hidden) {
+        document.getElementById("filterProperty").value = step.filter.property;
+        document.getElementById("filterOperator").value = step.filter.operator;
+        document.getElementById("filterValue").value = step.filter.value;
+      }
+      appendDetailItems(document.getElementById("contextDetails"), { Trigger: flow.trigger, Dependency: selectedStep ? flow.steps[selectedStep - 1].id : "Trigger", Flow: flow.name });
+      appendDetailItems(document.getElementById("generationDetails"), {
+        Confidence: `${step.generation.confidence}%`,
+        Evidence: step.generation.sources,
+        Rationale: step.generation.rationale,
+        "Review scope": "Included in flow approval"
+      });
+      const mappings = step.type === "queueactionv3" ? propertyMappings(step.code) : [];
+      document.getElementById("propertyMappings").hidden = mappings.length === 0;
+      document.getElementById("propertyMappingRows").replaceChildren(...mappings.map((mapping) => {
+        const row = document.createElement("tr");
+        const property = document.createElement("td");
+        const expression = document.createElement("td");
+        property.textContent = mapping.property;
+        const code = document.createElement("code");
+        code.textContent = mapping.expression;
+        expression.appendChild(code);
+        row.append(property, expression);
+        return row;
+      }));
+    };
+    const renderWorkspace = () => {
+      const hasFlows = flows.length > 0;
+      document.getElementById("emptyWorkspace").hidden = hasFlows;
+      document.getElementById("flowEditor").hidden = !hasFlows;
+      document.querySelector(".flow-summary").hidden = !hasFlows;
+      document.getElementById("tree").hidden = !hasFlows;
+      document.getElementById("openConfigurations").disabled = !hasFlows;
+      document.getElementById("addStep").disabled = !hasFlows;
+      if (!hasFlows) {
+        document.getElementById("flowList").replaceChildren();
+        document.getElementById("configurationCount").textContent = "0";
+        return;
+      }
+      const flow = flows[activeFlow];
+      const flowList = document.getElementById("flowList");
+      flowList.replaceChildren();
+      flows.forEach((item, index) => {
+        const button = document.createElement("button");
+        button.className = `flow-title${index === activeFlow ? " active" : ""}`;
+        button.dataset.flow = index;
+        const labels = document.createElement("span");
+        const name = document.createElement("strong");
+        const source = document.createElement("small");
+        const count = document.createElement("span");
+        name.textContent = item.name;
+        source.textContent = item.trigger;
+        count.className = "badge";
+        count.textContent = item.steps.length;
+        button.title = `${flowStatusLabel(item.review.status)} · ${item.steps.length} steps`;
+        labels.append(name, source);
+        button.append(labels, count);
+        flowList.appendChild(button);
+      });
+      document.getElementById("flowSummaryText").textContent = flow.trigger;
+      document.getElementById("configurationCount").textContent = flow.configurations.length;
+      const reviewStatus = document.getElementById("flowReviewStatus");
+      reviewStatus.className = `badge ${flowStatusClass(flow.review.status)}`;
+      reviewStatus.textContent = flowStatusLabel(flow.review.status);
+      document.getElementById("toggleFlowReview").textContent = flow.review.status === "approved" ? "Reopen flow" : "Approve flow";
+      const tree = document.getElementById("tree");
+      tree.replaceChildren();
+      flow.steps.forEach((step, index) => {
+        if (step.branch) {
+          const label = document.createElement("div");
+          label.className = "type-line";
+          label.style.margin = `${index ? 8 : 0}px 9px 4px ${9 + (step.depth || 0) * 18}px`;
+          label.textContent = step.branch;
+          tree.appendChild(label);
+        }
+        const button = document.createElement("button");
+        button.className = `tree-item${index === selectedStep ? " active" : ""}${step.depth ? " branch" : ""}`;
+        if (step.depth > 1) { button.style.marginLeft = `${18 * step.depth}px`; button.style.width = `calc(100% - ${18 * step.depth}px)`; }
+        button.dataset.stepIndex = index;
+        const icon = document.createElement("span");
+        const name = document.createElement("span");
+        const status = document.createElement("span");
+        icon.className = "node-icon";
+        status.className = "badge";
+        icon.textContent = String(index + 1).padStart(2, "0");
+        name.textContent = step.name;
+        status.textContent = typeLabels[step.type] || step.type;
+        button.append(icon, name, status);
+        tree.appendChild(button);
+      });
+      renderStep();
+    };
+    document.getElementById("flowList").addEventListener("click", (event) => { const item = event.target.closest("[data-flow]"); if (!item) return; activeFlow = Number(item.dataset.flow); selectedStep = 0; selectedConfiguration = 0; history.replaceState(null, "", `#flow=${encodeURIComponent(flows[activeFlow].name)}`); renderWorkspace(); });
+    document.getElementById("tree").addEventListener("click", (event) => { const item = event.target.closest("[data-step-index]"); if (!item) return; selectedStep = Number(item.dataset.stepIndex); renderWorkspace(); });
+    document.getElementById("toggleRail").addEventListener("click", (event) => {
+      const workspace = document.getElementById("flowsView");
+      const collapsed = workspace.classList.toggle("structure-collapsed");
+      event.currentTarget.title = collapsed ? "Expand workspace structure" : "Collapse workspace structure";
+      event.currentTarget.setAttribute("aria-label", event.currentTarget.title);
+      event.currentTarget.setAttribute("aria-expanded", String(!collapsed));
+    });
+    const markFlowChanged = () => {
+      if (!workspace) return;
+      if (flows[activeFlow].review.status === "approved") flows[activeFlow].review = { status: "needs-review" };
+      if (workspace.review?.status === "approved") workspace.review = { status: "needs-review" };
+    };
+    const persistWorkspace = async () => {
+      workspace.flows = flows;
+      const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(workspace)
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Unable to save workspace.");
+      workspace = result.draft;
+      flows = workspace.flows;
+      validationIssues = result.validation;
+      updateValidationCount();
+    };
+    const markSaving = (invalidate = true) => {
+      if (invalidate) markFlowChanged();
+      saveState.style.color = "var(--cp-text-muted)";
+      saveState.querySelector("span:last-child").textContent = "Saving...";
+      window.clearTimeout(markSaving.timer);
+      markSaving.timer = window.setTimeout(async () => {
+        try {
+          await persistWorkspace();
+          saveState.style.color = "var(--cp-success)";
+          saveState.querySelector("span:last-child").textContent = "Saved";
+          renderWorkspace();
+        } catch (error) {
+          saveState.style.color = "var(--cp-danger)";
+          saveState.querySelector("span:last-child").textContent = error.message;
+        }
+      }, 500);
+    };
+    document.querySelector("main").addEventListener("input", markSaving);
+    document.getElementById("nameInput").addEventListener("input", (event) => {
+      flows[activeFlow].steps[selectedStep].name = event.target.value || "Untitled step";
+      document.getElementById("stepTitle").textContent = flows[activeFlow].steps[selectedStep].name;
+      document.querySelector(".tree-item.active span:nth-child(2)").textContent = flows[activeFlow].steps[selectedStep].name;
+    });
+    document.getElementById("stepIdInput").addEventListener("input", (event) => {
+      flows[activeFlow].steps[selectedStep].id = event.target.value;
+    });
+    document.getElementById("connectorInput").addEventListener("change", (event) => {
+      flows[activeFlow].steps[selectedStep].connector = event.target.value;
+      markSaving();
+    });
+    document.getElementById("codeInput").addEventListener("input", (event) => {
+      flows[activeFlow].steps[selectedStep][event.target.dataset.property] = event.target.value;
+    });
+    window.addEventListener("hashchange", () => {
+      const flowName = new URLSearchParams(location.hash.slice(1)).get("flow");
+      const flowIndex = flows.findIndex((flow) => flow.name === flowName);
+      if (flowIndex < 0 || flowIndex === activeFlow) return;
+      activeFlow = flowIndex;
+      selectedStep = 0;
+      selectedConfiguration = 0;
+      showView("flows");
+      renderWorkspace();
+    });
+    document.getElementById("filterBox").addEventListener("input", (event) => {
+      const property = { filterProperty: "property", filterOperator: "operator", filterValue: "value" }[event.target.id];
+      if (!property) return;
+      flows[activeFlow].steps[selectedStep].filter[property] = event.target.value;
+      markSaving();
+    });
+    document.getElementById("addStep").addEventListener("click", () => {
+      flows[activeFlow].steps.push({ id: `new-code-${flows[activeFlow].steps.length + 1}`, name: "New code step", type: "code", description: "New authoring step.", details: { Script: "Not configured", Output: "Unknown" }, code: "const input = flow.trigger.data;\n\nreturn input;" });
+      selectedStep = flows[activeFlow].steps.length - 1;
+      renderWorkspace();
+      markSaving();
+    });
+    document.getElementById("addFlow").addEventListener("click", () => {
+      flows.push({ name: "New customer flow", trigger: "On-demand · unresolved", review: { status: "generated" }, configurations: [], steps: [{ id: "start", name: "New code step", type: "code", description: "New authoring step.", details: { Script: "Not configured" }, code: "const input = flow.trigger.data;\n\nreturn input;" }] });
+      normalizeWorkspace();
+      activeFlow = flows.length - 1;
+      selectedStep = 0;
+      selectedConfiguration = 0;
+      renderWorkspace();
+      markSaving();
+    });
+    const configurationDialog = document.getElementById("configurationDialog");
+    const configurationFields = {
+      name: document.getElementById("configurationName"),
+      type: document.getElementById("configurationType"),
+      description: document.getElementById("configurationDescription"),
+      defaultValue: document.getElementById("configurationDefault"),
+      options: document.getElementById("configurationOptions"),
+      required: document.getElementById("configurationRequired")
+    };
+    const renderConfigurations = () => {
+      const configurations = flows[activeFlow].configurations;
+      const list = document.getElementById("configurationItems");
+      list.replaceChildren();
+      configurations.forEach((configuration, index) => {
+        const button = document.createElement("button");
+        button.className = `config-item${index === selectedConfiguration ? " active" : ""}`;
+        button.dataset.index = index;
+        const details = document.createElement("span");
+        const name = document.createElement("strong");
+        const description = document.createElement("small");
+        const type = document.createElement("span");
+        name.textContent = configuration.name;
+        description.textContent = configuration.description || "No description";
+        type.className = "config-type";
+        type.textContent = configuration.type;
+        details.append(name, description);
+        button.append(details, type);
+        list.appendChild(button);
+      });
+      document.getElementById("configurationCount").textContent = configurations.length;
+      document.getElementById("configurationTitle").textContent = `${flows[activeFlow].name} configurations`;
+      const configuration = configurations[selectedConfiguration];
+      document.querySelector(".config-editor").hidden = !configuration;
+      if (!configuration) return;
+      Object.entries(configurationFields).forEach(([property, field]) => { field[field.type === "checkbox" ? "checked" : "value"] = configuration[property]; });
+      document.getElementById("configurationEditorTitle").textContent = configuration.name;
+      document.getElementById("configurationReference").textContent = `flow.config.${configuration.name}`;
+    };
+    document.getElementById("openConfigurations").addEventListener("click", () => { renderConfigurations(); configurationDialog.showModal(); });
+    document.getElementById("closeConfigurations").addEventListener("click", () => configurationDialog.close());
+    document.getElementById("doneConfigurations").addEventListener("click", () => configurationDialog.close());
+    document.getElementById("configurationItems").addEventListener("click", (event) => { const item = event.target.closest("[data-index]"); if (!item) return; selectedConfiguration = Number(item.dataset.index); renderConfigurations(); });
+    document.getElementById("addConfiguration").addEventListener("click", () => { const configurations = flows[activeFlow].configurations; configurations.push({ name: `newConfiguration${configurations.length + 1}`, type: "string", description: "", defaultValue: "", options: "", required: false }); selectedConfiguration = configurations.length - 1; renderConfigurations(); configurationFields.name.focus(); markSaving(); });
+    document.querySelector(".config-editor").addEventListener("input", (event) => {
+      const property = Object.entries(configurationFields).find(([, field]) => field === event.target)?.[0];
+      const configurations = flows[activeFlow].configurations;
+      if (!property || !configurations[selectedConfiguration]) return;
+      configurations[selectedConfiguration][property] = event.target.type === "checkbox" ? event.target.checked : event.target.value;
+      renderConfigurations();
+      event.target.focus();
+      markSaving();
+    });
+    document.getElementById("deleteConfiguration").addEventListener("click", () => { flows[activeFlow].configurations.splice(selectedConfiguration, 1); selectedConfiguration = Math.max(0, selectedConfiguration - 1); renderConfigurations(); markSaving(); });
+    configurationDialog.addEventListener("click", (event) => { if (event.target === configurationDialog) configurationDialog.close(); });
+    const updateValidationCount = () => {
+      const blockers = validationIssues.filter((issue) => issue.severity === "blocking").length;
+      const count = document.getElementById("validationCount");
+      count.textContent = validationIssues.length;
+      count.className = `badge ${blockers ? "blocking" : validationIssues.length ? "warn" : "good"}`;
+    };
+    const navigateToIssue = (issue) => {
+      const flowIndex = flows.findIndex((flow) => flow.name === issue.flowName);
+      if (flowIndex >= 0) {
+        activeFlow = flowIndex;
+        selectedStep = Math.max(0, flows[flowIndex].steps.findIndex((step) => step.id === issue.stepId));
+        history.replaceState(null, "", `#flow=${encodeURIComponent(flows[activeFlow].name)}`);
+      }
+      document.getElementById("validationDialog").close();
+      showView("flows");
+      renderWorkspace();
+    };
+    const renderIssueList = (container, issues, emptyMessage) => {
+      container.replaceChildren();
+      if (!issues.length) {
+        const empty = document.createElement("div");
+        empty.className = "issue";
+        empty.textContent = emptyMessage;
+        container.appendChild(empty);
+        return;
+      }
+      issues.forEach((issue) => {
+        const item = document.createElement("div");
+        item.className = `issue ${issue.severity}`;
+        const marker = document.createElement("strong");
+        marker.textContent = issue.severity === "blocking" ? "!" : "i";
+        const button = document.createElement("button");
+        button.textContent = `${issue.message}${issue.flowName ? ` · ${issue.flowName}` : ""}`;
+        button.addEventListener("click", () => navigateToIssue(issue));
+        item.append(marker, button);
+        container.appendChild(item);
+      });
+    };
+    const metrics = () => {
+      const approved = flows.filter((flow) => flow.review.status === "approved").length;
+      const blockers = validationIssues.filter((issue) => issue.severity === "blocking").length;
+      return [
+        ["Flows", flows.length],
+        ["Approved", approved],
+        ["Need review", flows.length - approved],
+        ["Blockers", blockers]
+      ];
+    };
+    const renderMetrics = (container) => {
+      container.replaceChildren(...metrics().map(([label, value]) => {
+        const item = document.createElement("div");
+        item.className = "review-metric";
+        const caption = document.createElement("span");
+        const count = document.createElement("strong");
+        caption.textContent = label;
+        count.textContent = value;
+        item.append(caption, count);
+        return item;
+      }));
+    };
+    const renderOverview = () => {
+      renderMetrics(document.getElementById("overviewMetrics"));
+      const provenance = workspace.provenance || {};
+      const entries = {
+        "ERP data": provenance.sourceData,
+        "ERP schemas": provenance.sourceSchema,
+        "IVO connector schemas": provenance.connectorReference,
+        "Mapping evidence": provenance.mappingEvidence,
+        "Generator": provenance.generator,
+        "Generator version": provenance.generatorVersion,
+        "Connector schema version": provenance.connectorSchemaVersion,
+        "Generated": provenance.generatedAt ? new Date(provenance.generatedAt).toLocaleString() : "Unknown"
+      };
+      document.getElementById("provenanceDetails").replaceChildren(...Object.entries(entries).map(([label, value]) => {
+        const item = document.createElement("div");
+        item.className = "provenance-item";
+        const caption = document.createElement("span");
+        const content = document.createElement("strong");
+        caption.textContent = label;
+        content.textContent = value || "Not recorded";
+        item.append(caption, content);
+        return item;
+      }));
+      const unreviewed = flows.filter((flow) => flow.review.status !== "approved").map((flow) => ({ severity: "warning", message: "Flow requires reviewer approval.", flowName: flow.name }));
+      renderIssueList(document.getElementById("overviewIssues"), [...validationIssues, ...unreviewed], "Workspace is ready for approval.");
+    };
+    const renderValidation = () => {
+      renderIssueList(document.getElementById("validationIssues"), validationIssues, "No validation findings.");
+      const blockers = validationIssues.filter((issue) => issue.severity === "blocking").length;
+      document.getElementById("validationSummary").textContent = `${blockers} blocking · ${validationIssues.length - blockers} warnings`;
+    };
+    const comparableFlow = (flow) => {
+      const copy = structuredClone(flow);
+      delete copy.review;
+      return copy;
+    };
+    const renderReview = () => {
+      renderMetrics(document.getElementById("reviewMetrics"));
+      const baselineFlows = generatedBaseline?.flows || [];
+      const changes = flows.filter((flow) => {
+        const baseline = baselineFlows.find((candidate) => candidate.name === flow.name);
+        return !baseline || JSON.stringify(comparableFlow(baseline)) !== JSON.stringify(comparableFlow(flow));
+      }).map((flow) => ({ severity: "warning", message: "Reviewed draft differs from generated baseline.", flowName: flow.name }));
+      renderIssueList(document.getElementById("changeSummary"), changes, "No configuration changes from the generated baseline.");
+      document.getElementById("jsonPreview").textContent = JSON.stringify(workspace, null, 2);
+      document.getElementById("revisionHistory").replaceChildren(...(revisions.length ? revisions.map((revision) => {
+        const item = document.createElement("div");
+        item.className = "history-item";
+        const reviewer = document.createElement("strong");
+        const approvedAt = document.createElement("span");
+        reviewer.textContent = revision.approvedBy || "Local reviewer";
+        approvedAt.className = "muted";
+        approvedAt.textContent = revision.approvedAt ? new Date(revision.approvedAt).toLocaleString() : revision.id;
+        item.append(reviewer, approvedAt);
+        return item;
+      }) : [Object.assign(document.createElement("div"), { className: "muted", textContent: "No approved revisions yet." })]));
+      const ready = flows.every((flow) => flow.review.status === "approved") && !validationIssues.some((issue) => issue.severity === "blocking");
+      document.getElementById("approveWorkspace").disabled = !ready;
+      document.getElementById("approvalMessage").textContent = ready ? "Ready for workspace approval." : "Approve every flow and resolve blockers to continue.";
+      document.getElementById("downloadDraft").textContent = approvedWorkspace ? "Download approved JSON" : "Download draft JSON";
+    };
+    document.getElementById("toggleFlowReview").addEventListener("click", async () => {
+      const flow = flows[activeFlow];
+      const blockers = validationIssues.filter((issue) => issue.severity === "blocking" && issue.flowName === flow.name);
+      if (flow.review.status !== "approved" && blockers.length) {
+        renderValidation();
+        document.getElementById("validationDialog").showModal();
+        return;
+      }
+      flow.review = flow.review.status === "approved"
+        ? { status: "needs-review" }
+        : { status: "approved", reviewedAt: new Date().toISOString(), reviewedBy: "Local reviewer" };
+      workspace.review = { status: "needs-review" };
+      await persistWorkspace();
+      renderWorkspace();
+    });
+    document.getElementById("openValidation").addEventListener("click", () => { renderValidation(); document.getElementById("validationDialog").showModal(); });
+    document.getElementById("openReview").addEventListener("click", () => { renderReview(); document.getElementById("reviewDialog").showModal(); });
+    document.getElementById("openSourceMappings").addEventListener("click", () => { location.href = `/mapping?customer=${encodeURIComponent(customerKey)}&view=sources`; });
+    document.querySelectorAll("[data-close-dialog]").forEach((button) => button.addEventListener("click", () => document.getElementById(button.dataset.closeDialog).close()));
+    document.getElementById("approveWorkspace").addEventListener("click", async () => {
+      const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace/approve`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ approvedBy: document.getElementById("reviewerName").value, notes: document.getElementById("approvalNotes").value })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        document.getElementById("approvalMessage").textContent = result.error || "Approval failed.";
+        return;
+      }
+      approvedWorkspace = result.approved;
+      workspace = result.approved;
+      flows = workspace.flows;
+      revisions.unshift({ id: result.revisionId, approvedAt: workspace.review.approvedAt, approvedBy: workspace.review.approvedBy });
+      renderReview();
+      renderWorkspace();
+    });
+    document.getElementById("downloadDraft").addEventListener("click", () => {
+      const documentToDownload = approvedWorkspace || workspace;
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(new Blob([`${JSON.stringify(documentToDownload, null, 2)}\n`], { type: "application/json" }));
+      link.download = `${customerKey.toLowerCase()}-workspace-${approvedWorkspace ? "approved" : "draft"}.json`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+    const loadWorkspace = async () => {
+      try {
+        if (!customerKey) {
+          location.replace("/");
+          return;
+        }
+        const catalogResponse = await fetch("/api/catalog");
+        const catalog = await catalogResponse.json();
+        selectedCustomer = catalog.customers?.find((customer) => customer.key === customerKey);
+        if (!selectedCustomer) throw new Error("The selected customer does not exist.");
+        document.getElementById("customerMark").textContent = selectedCustomer.name.slice(0, 1).toUpperCase();
+        document.getElementById("workspaceTitle").textContent = `${selectedCustomer.name} workspace`;
+        document.getElementById("workspaceDescription").textContent = "ERP to IVO integration blueprint";
+        document.title = `${selectedCustomer.name} · IVO Customer Workspace`;
+        const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace`);
+        const bundle = await response.json();
+        if (!response.ok) throw new Error(bundle.error || "Unable to load workspace.");
+        workspace = bundle.draft;
+        generatedBaseline = bundle.generated;
+        approvedWorkspace = bundle.approved;
+        revisions = bundle.revisions;
+        validationIssues = bundle.validation;
+        const loadedDraft = workspace ? JSON.stringify(workspace) : null;
+        normalizeWorkspace();
+        activeFlow = Math.max(0, flows.findIndex((flow) => flow.name === requestedFlow));
+        if (!bundle.draft) {
+          generatedBaseline = null;
+          validationIssues = [{ severity: "blocking", message: "Workspace requires at least one generated flow.", flowName: null, stepId: null }];
+          saveState.style.color = "var(--cp-text-muted)";
+          saveState.querySelector("span:last-child").textContent = "Not generated";
+        } else if (loadedDraft !== JSON.stringify(workspace)) {
+          await persistWorkspace();
+        }
+        updateValidationCount();
+        renderWorkspace();
+      } catch (error) {
+        saveState.style.color = "var(--cp-danger)";
+        saveState.querySelector("span:last-child").textContent = error.message;
+      }
+    };
+    loadWorkspace();
+  </script>
+</body>
+</html>

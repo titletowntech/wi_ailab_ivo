@@ -1,0 +1,877 @@
+[
+  {
+    "workspaceId": 14368,
+    "registrationId": 214312,
+    "initiatingInstanceId": "a260eddf-e8fb-4f34-9f56-f2320a51cfb5",
+    "performanceMetrics": {
+      "peakMemoryInKiloBytes": 267928,
+      "processTimeInSeconds": 8,
+      "score": 275,
+      "numberOfSteps": 11,
+      "processTimeInMilliseconds": 8952.1141,
+      "artifactCounts": {
+        "Action": 2
+      }
+    },
+    "environment": 3,
+    "appXchangeAppUrl": "https://app.xchange.trimble.com/",
+    "appNetworkUrl": "https://api.xchange.trimble.com/connect/v1/"
+  },
+  {
+    "instanceId": "a260eddf-e8fb-4f34-9f56-f2320a51cfb5",
+    "rootInstanceId": "a260eddf-e8fb-4f34-9f56-f2320a51cfb5",
+    "startedOn": "2026-09-08T16:22:25.4345017+00:00",
+    "finishedOn": "2026-09-08T16:23:39.2348288+00:00",
+    "configuration": {
+      "availableEquipmentStatus": 1308,
+      "workingEquipmentStatus": 1309,
+      "downEquipmentStatus": 1310,
+      "noneEquipmentStatus": 1312,
+      "availableVistaStatus": "100",
+      "workingVistaStatus": "WK",
+      "downVistaStatus": "200",
+      "noneVistaStatuses": [
+        "5",
+        "317",
+        "305",
+        "910",
+        "304",
+        "313",
+        "301",
+        "340",
+        "900",
+        "920",
+        "307",
+        "930",
+        "215",
+        "302",
+        "205",
+        "145",
+        "211",
+        "220",
+        "300",
+        "210",
+        "140",
+        "130",
+        "150",
+        "135",
+        "125",
+        "110",
+        "119",
+        "120",
+        "102",
+        "0BC",
+        "105",
+        "0DW",
+        "101"
+      ]
+    },
+    "trigger": {
+      "info": {
+        "SubscriberId": 14368,
+        "Type": 100,
+        "EventInfo": {
+          "CacheChangeType": 1,
+          "CacheId": "2389e164-4364-4b15-b905-35cae9a8a742",
+          "DataObjectPath": "vista/em/2/location_transfers",
+          "CacheUrl": "appnetwork/subscribers/14368/vista/em/2/data/location_transfers/cache/2389e164-4364-4b15-b905-35cae9a8a742",
+          "SubscriberId": 14368,
+          "EventId": 3382090763,
+          "EventOrigin": 1
+        }
+      },
+      "data": {
+        "LocationHistoryId": 37844,
+        "EMCo": 3,
+        "Equipment": "  551800",
+        "Sequence": 17,
+        "DateIn": "2026-08-31T00:00:00",
+        "TimeIn": "2026-09-08T07:00:00",
+        "ToJCCo": 3,
+        "ToJob": "062602-",
+        "ToLocation": "100",
+        "Memo": "062602 EUR 090526",
+        "EstDateOut": null,
+        "DateTimeIn": "2026-08-31T07:00:00",
+        "Notes": null,
+        "UniqueAttchID": null,
+        "CreatedBy": "eahlstrom@kraemerna.com_21824",
+        "CreatedDate": "2026-09-08T11:13:35.983",
+        "ModifiedBy": "eahlstrom@kraemerna.com_21824",
+        "ModifiedDate": "2026-09-08T11:13:35.99",
+        "__custom_fields": {
+          "udDateAvailable": null,
+          "udFutureLocation": null,
+          "udDateArrived": "2026-08-31T00:00:00",
+          "udFutureDate": null,
+          "udFutureAvailable": null,
+          "udNextJobNotes": null
+        }
+      },
+      "definition": null,
+      "workspace": {
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "look-eq",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/equipment-management/1/equipment",
+          "SelectProperties": [
+            "uuid",
+            "equipmentId",
+            "accountingCode"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "accountingCode",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "  551800"
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "uuid": "47844c01-dcca-4ae8-8fce-3661e0845e4e",
+            "equipmentId": 52580,
+            "accountingCode": "  551800"
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Equipment"
+      },
+      {
+        "id": "exists",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "not-found",
+              "name": "Equipment Not Found In IVO",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const equipment = _.trim(flow.trigger.data.Equipment);\n\nreturn `Unable to find Equipment #: ${equipment} in IVO Cache`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Equipment Exists"
+      },
+      {
+        "id": "status-type",
+        "status": "SUCCESSFUL",
+        "stepType": "code",
+        "inputData": {
+          "Script": "=function getStatusId(stat){\n  switch(stat){\n    case flow.config.availableVistaStatus:\n      return {\n        statusId: flow.config.availableEquipmentStatus\n      };\n    case flow.config.workingVistaStatus:\n      return {\n        statusId: flow.config.workingEquipmentStatus\n      };\n    case flow.config.downVistaStatus:\n      return {\n        statusId: flow.config.downEquipmentStatus\n      };\n    default:\n      return {\n        statusId: flow.config.noneEquipmentStatus\n      };\n  }\n}\n\nconst status = _.trim(flow.trigger.data.ToLocation);\n\nreturn getStatusId(status);"
+        },
+        "data": {
+          "statusId": 1308
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Get Status Type"
+      },
+      {
+        "id": "look-eq-status",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/equipment-management/1/equipment-status",
+          "SelectProperties": [
+            "uuid",
+            "equipmentStatusId",
+            "equipmentId",
+            "startTime",
+            "endTime",
+            "startStatusId",
+            "endStatusId",
+            "createdTimestampUtc",
+            "createdByUserId",
+            "statusNote",
+            "isDeleted",
+            "isActive"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "equipmentId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 52580
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+            "equipmentStatusId": 14553,
+            "equipmentId": 52580,
+            "startTime": "2026-07-21 19:45:37",
+            "endTime": "2026-08-04 07:00:00",
+            "startStatusId": 1310,
+            "endStatusId": 1309,
+            "createdTimestampUtc": "2026-07-21 19:54:11",
+            "createdByUserId": 45,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": false
+          },
+          {
+            "uuid": "36ec94f7-cc48-480f-94ed-a23fecb59a13",
+            "equipmentStatusId": 16159,
+            "equipmentId": 52580,
+            "startTime": "2026-08-04 07:00:00",
+            "endTime": null,
+            "startStatusId": 1309,
+            "endStatusId": null,
+            "createdTimestampUtc": "2026-08-05 13:34:04",
+            "createdByUserId": 45,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": true
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Equipment Statuses"
+      },
+      {
+        "id": "sort",
+        "status": "SUCCESSFUL",
+        "stepType": "code",
+        "inputData": {
+          "Script": "=if(flow.step('look-eq-status').output.length === 1){\n  return flow.step('look-eq-status').output;\n} else {\n  return flow.step('look-eq-status').output.sort((a, b) => b.equipmentStatusId - a.equipmentStatusId);\n}\n"
+        },
+        "data": [
+          {
+            "uuid": "36ec94f7-cc48-480f-94ed-a23fecb59a13",
+            "equipmentStatusId": 16159,
+            "equipmentId": 52580,
+            "startTime": "2026-08-04 07:00:00",
+            "endTime": null,
+            "startStatusId": 1309,
+            "endStatusId": null,
+            "createdTimestampUtc": "2026-08-05 13:34:04",
+            "createdByUserId": 45,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": true
+          },
+          {
+            "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+            "equipmentStatusId": 14553,
+            "equipmentId": 52580,
+            "startTime": "2026-07-21 19:45:37",
+            "endTime": "2026-08-04 07:00:00",
+            "startStatusId": 1310,
+            "endStatusId": 1309,
+            "createdTimestampUtc": "2026-07-21 19:54:11",
+            "createdByUserId": 45,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": false
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Sort Statuses By Id And Get Latest"
+      },
+      {
+        "id": "status-conditional-1d43b",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "no-update",
+              "name": "Statuses Are the Same No Update Required",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "Location Status Is the Same No Update Required"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Is Current Status Same As Triggered Status"
+      },
+      {
+        "id": "status-conditional",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "update",
+              "name": "Update Equipment Status",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/equipment-management/1/equipment-status/update",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return flow.step('look-eq-status').output[0].uuid;",
+                  "equipmentStatusId": "=return flow.step('look-eq-status').output[0].equipmentStatusId;",
+                  "equipmentId": "=return flow.step('look-eq-status').output[0].equipmentId;",
+                  "startTime": "=return flow.step('look-eq-status').output[0].startTime;",
+                  "endTime": "=return dayjs(flow.trigger.data.DateTimeIn).utc().format('YYYY-MM-DD HH:mm:ss');",
+                  "startStatusId": "=return flow.step('look-eq-status').output[0].startStatusId;",
+                  "endStatusId": "=return flow.step('status-type').output.statusId;",
+                  "statusNote": "=return flow.step('look-eq-status').output[0].statusNote;",
+                  "isDeleted": "=return flow.step('look-eq-status').output[0].isDeleted;",
+                  "isActive": "=return false;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-cons",
+              "name": "Update Company Equipment Status Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('update').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "create-c8fc3",
+                    "name": "Create Equipment Status",
+                    "type": "queueactionv3",
+                    "input": {
+                      "app": "ivo-systems",
+                      "ActionPath": "ivo-systems/equipment-management/1/equipment-status/add",
+                      "UseExistingBody": false,
+                      "EnableRetryPolicy": false,
+                      "WaitForResponse": true,
+                      "ActionBody": {
+                        "uuid": "=return uuid.v4();",
+                        "equipmentId": "=return flow.step('look-eq').output[0].equipmentId;",
+                        "startTime": "=return dayjs(flow.trigger.data.DateTimeIn).utc().format('YYYY-MM-DD HH:mm:ss');",
+                        "startStatusId": "=return flow.step('status-type').output.statusId;",
+                        "createdTimestampUtc": "=return dayjs().utc().format('YYYY-MM-DD HH:mm:ss');",
+                        "createdByUserId": "=return 45;",
+                        "statusNote": "=if (flow.trigger.data?.Notes && _.trim(flow.trigger.data.Notes) !== '') {\n  return 'Vista ' + _.trim(flow.trigger.data.Notes);\n} else {\n  return 'Vista';\n}",
+                        "isDeleted": "=return false;",
+                        "isActive": "=return true;"
+                      }
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-success",
+                    "name": "Update Equipment Status Success",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Company equipment status ${_.trim(loc)} successfully updated in Ivo and new entry created | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "create-c8fc3",
+                        "dependentOnStepResultStatus": "ACTION_HANDLED_SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-update-failure",
+                    "name": "Email  Company Equipment Status Update Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Company Equipment Status | Update Failed | Vista To IVO | ${time}`;",
+                      "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Company Equipment Status Update Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-failed",
+                    "name": "Update Company Equipment Status Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Company equipment status ${_.trim(loc)} unsuccessfully updated in Ivo and failed creation | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-update-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "update",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "create",
+              "name": "Create Company Equipment Status",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/equipment-management/1/equipment-status/add",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return uuid.v4();",
+                  "equipmentId": "=return flow.step('look-eq').output[0].equipmentId;",
+                  "startTime": "=return dayjs(flow.trigger.data.DateTimeIn).utc().format('YYYY-MM-DD HH:mm:ss');",
+                  "startStatusId": "=return flow.step('status-type').output.statusId;",
+                  "createdTimestampUtc": "=return dayjs().utc().format('YYYY-MM-DD HH:mm:ss');",
+                  "createdByUserId": "=return 45;",
+                  "statusNote": "=if (flow.trigger.data?.Notes && _.trim(flow.trigger.data.Notes) !== '') {\n  return 'Vista ' + _.trim(flow.trigger.data.Notes);\n} else {\n  return 'Vista';\n}",
+                  "isDeleted": "=return false;",
+                  "isActive": "=return true;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "create-conditional",
+              "name": "Create Company Equipment Status Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('create').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "create-success",
+                    "name": "Create Company Equipment Status Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Equipment status ${_.trim(loc)} successfully created in Ivo | ${time}`;"
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-create-failure",
+                    "name": "Email Company Equipment Status Create Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Company Equipment Status | Create Failed | Vista To IVO | ${time}`;",
+                      "Body": "=const response = flow.step('create').actionResponse;\nconst request = flow.step('create').actionRequest;\nconst title = 'Company Equipment Status Create Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "create-failed",
+                    "name": "Create Company Equipment Status Action Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Equipment status ${_.trim(loc)} unsuccessfully created in Ivo | ${time}`;"
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-create-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Equipment Status Exists"
+      },
+      {
+        "id": "update",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/equipment-management/1/equipment-status/update",
+          "ActionBody": {
+            "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+            "equipmentStatusId": 14553,
+            "equipmentId": 52580,
+            "startTime": "2026-07-21 19:45:37",
+            "endTime": "2026-08-31 07:00:00",
+            "startStatusId": 1310,
+            "endStatusId": 1308,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": false
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "d28395cf-8578-4d05-b77b-d5fbefbbfbf9",
+              "actionPath": "ivo-systems/equipment-management/1/equipment-status/update",
+              "dataObjectCode": "equipment-status",
+              "subscriberCode": "14368",
+              "actionCode": "update",
+              "createdUtc": "2026-09-08T16:22:28.4207025+00:00",
+              "modifiedUtc": "2026-09-08T16:22:37.1891518+00:00",
+              "status": "Successful",
+              "data": {
+                "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+                "equipmentStatusId": 14553,
+                "equipmentId": 52580,
+                "startTime": "2026-07-21 19:45:37",
+                "endTime": "2026-08-31 07:00:00",
+                "startStatusId": 1310,
+                "endStatusId": 1308,
+                "statusNote": "AppXchange",
+                "isDeleted": false,
+                "isActive": false
+              },
+              "result": {
+                "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+                "equipmentStatusId": 14553,
+                "equipmentId": 52580,
+                "startTime": "2026-07-21 19:45:37",
+                "endTime": "2026-08-31 07:00:00",
+                "startStatusId": 1310,
+                "endStatusId": 1308,
+                "createdTimestampUtc": "2026-07-21 19:54:11",
+                "createdByUserId": 45,
+                "statusNote": "AppXchange",
+                "isDeleted": false,
+                "isActive": false
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "3eb4aafb-0470-4f5d-a327-69f1ca3ec282"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+              "equipmentStatusId": 14553,
+              "equipmentId": 52580,
+              "startTime": "2026-07-21 19:45:37",
+              "endTime": "2026-08-31 07:00:00",
+              "startStatusId": 1310,
+              "endStatusId": 1308,
+              "statusNote": "AppXchange",
+              "isDeleted": false,
+              "isActive": false
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "d28395cf-8578-4d05-b77b-d5fbefbbfbf9",
+          "Content": {
+            "uuid": "b257e1be-701a-44c5-bb90-95159754cb99",
+            "equipmentStatusId": 14553,
+            "equipmentId": 52580,
+            "startTime": "2026-07-21 19:45:37",
+            "endTime": "2026-08-31 07:00:00",
+            "startStatusId": 1310,
+            "endStatusId": 1308,
+            "statusNote": "AppXchange",
+            "isDeleted": false,
+            "isActive": false
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-08T16:22:28.3959051+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Equipment Status"
+      },
+      {
+        "id": "update-cons",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "create-c8fc3",
+              "name": "Create Equipment Status",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/equipment-management/1/equipment-status/add",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return uuid.v4();",
+                  "equipmentId": "=return flow.step('look-eq').output[0].equipmentId;",
+                  "startTime": "=return dayjs(flow.trigger.data.DateTimeIn).utc().format('YYYY-MM-DD HH:mm:ss');",
+                  "startStatusId": "=return flow.step('status-type').output.statusId;",
+                  "createdTimestampUtc": "=return dayjs().utc().format('YYYY-MM-DD HH:mm:ss');",
+                  "createdByUserId": "=return 45;",
+                  "statusNote": "=if (flow.trigger.data?.Notes && _.trim(flow.trigger.data.Notes) !== '') {\n  return 'Vista ' + _.trim(flow.trigger.data.Notes);\n} else {\n  return 'Vista';\n}",
+                  "isDeleted": "=return false;",
+                  "isActive": "=return true;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-success",
+              "name": "Update Equipment Status Success",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Company equipment status ${_.trim(loc)} successfully updated in Ivo and new entry created | ${time}`;"
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create-c8fc3",
+                  "dependentOnStepResultStatus": "ACTION_HANDLED_SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "email-update-failure",
+              "name": "Email  Company Equipment Status Update Action Failure",
+              "input": {
+                "Emails": [
+                  "chawkins@ivosystems.com"
+                ],
+                "Subject": "=const time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Company Equipment Status | Update Failed | Vista To IVO | ${time}`;",
+                "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Company Equipment Status Update Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+              },
+              "stepDependencies": [],
+              "type": "sendemail"
+            },
+            {
+              "id": "update-failed",
+              "name": "Update Company Equipment Status Failed",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const loc = flow.trigger.data.ToLocation;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Company equipment status ${_.trim(loc)} unsuccessfully updated in Ivo and failed creation | ${time}`;"
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "email-update-failure",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Company Equipment Status Action Succeeded"
+      },
+      {
+        "id": "create-c8fc3",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/equipment-management/1/equipment-status/add",
+          "ActionBody": {
+            "uuid": "bc087ba7-9492-4518-92e2-a5d27aa92d72",
+            "equipmentId": 52580,
+            "startTime": "2026-08-31 07:00:00",
+            "startStatusId": 1308,
+            "createdTimestampUtc": "2026-09-08 16:22:48",
+            "createdByUserId": 45,
+            "statusNote": "Vista",
+            "isDeleted": false,
+            "isActive": true
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "6fed16ff-525c-4317-a79b-36f9f8b99398",
+              "actionPath": "ivo-systems/equipment-management/1/equipment-status/add",
+              "dataObjectCode": "equipment-status",
+              "subscriberCode": "14368",
+              "actionCode": "add",
+              "createdUtc": "2026-09-08T16:22:48.7254372+00:00",
+              "modifiedUtc": "2026-09-08T16:22:57.2701666+00:00",
+              "status": "Successful",
+              "data": {
+                "uuid": "bc087ba7-9492-4518-92e2-a5d27aa92d72",
+                "equipmentId": 52580,
+                "startTime": "2026-08-31 07:00:00",
+                "startStatusId": 1308,
+                "createdTimestampUtc": "2026-09-08 16:22:48",
+                "createdByUserId": 45,
+                "statusNote": "Vista",
+                "isDeleted": false,
+                "isActive": true
+              },
+              "result": {
+                "uuid": "bc087ba7-9492-4518-92e2-a5d27aa92d72",
+                "equipmentStatusId": 16597,
+                "equipmentId": 52580,
+                "startTime": "2026-08-31 07:00:00",
+                "endTime": null,
+                "startStatusId": 1308,
+                "endStatusId": null,
+                "createdTimestampUtc": "2026-09-08 16:22:57",
+                "createdByUserId": 45,
+                "statusNote": "Vista",
+                "isDeleted": false,
+                "isActive": true
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "6ae80a46-92c0-4475-971c-a1724da5ed0f"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "uuid": "bc087ba7-9492-4518-92e2-a5d27aa92d72",
+              "equipmentId": 52580,
+              "startTime": "2026-08-31 07:00:00",
+              "startStatusId": 1308,
+              "createdTimestampUtc": "2026-09-08 16:22:48",
+              "createdByUserId": 45,
+              "statusNote": "Vista",
+              "isDeleted": false,
+              "isActive": true
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "6fed16ff-525c-4317-a79b-36f9f8b99398",
+          "Content": {
+            "uuid": "bc087ba7-9492-4518-92e2-a5d27aa92d72",
+            "equipmentId": 52580,
+            "startTime": "2026-08-31 07:00:00",
+            "startStatusId": 1308,
+            "createdTimestampUtc": "2026-09-08 16:22:48",
+            "createdByUserId": 45,
+            "statusNote": "Vista",
+            "isDeleted": false,
+            "isActive": true
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-08T16:22:48.7185682+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Create Equipment Status"
+      },
+      {
+        "id": "update-success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": null,
+          "OutcomeMessage": "Company equipment status 100 successfully updated in Ivo and new entry created | 2026-09-08 11:23:39",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Company equipment status 100 successfully updated in Ivo and new entry created | 2026-09-08 11:23:39"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Update Equipment Status Success"
+      }
+    ],
+    "children": {},
+    "name": "V2 Equipment Status (Location Pull Into IVO) Base Template"
+  }
+]

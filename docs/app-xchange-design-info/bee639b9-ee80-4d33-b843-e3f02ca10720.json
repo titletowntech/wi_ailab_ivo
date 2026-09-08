@@ -1,0 +1,1917 @@
+[
+  {
+    "workspaceId": 14368,
+    "registrationId": 212824,
+    "initiatingInstanceId": "bee639b9-ee80-4d33-b843-e3f02ca10720",
+    "performanceMetrics": {
+      "peakMemoryInKiloBytes": 450764,
+      "processTimeInSeconds": 43,
+      "score": 493,
+      "numberOfSteps": 24,
+      "processTimeInMilliseconds": 44764.3158,
+      "artifactCounts": {
+        "Action": 2
+      }
+    },
+    "environment": 3,
+    "appXchangeAppUrl": "https://app.xchange.trimble.com/",
+    "appNetworkUrl": "https://api.xchange.trimble.com/connect/v1/"
+  },
+  {
+    "instanceId": "4f6266cb-65b0-47ad-8ae8-2e063fb052cf",
+    "parentInstanceId": "bee639b9-ee80-4d33-b843-e3f02ca10720",
+    "rootInstanceId": "4f6266cb-65b0-47ad-8ae8-2e063fb052cf",
+    "startedOn": "2026-09-04T13:10:30.8095347+00:00",
+    "finishedOn": "2026-09-04T13:11:30.5848111+00:00",
+    "configuration": null,
+    "trigger": {
+      "info": {
+        "Type": 241,
+        "WorkspaceId": 14368,
+        "SubscriberId": 14368,
+        "EventInfo": {}
+      },
+      "data": {
+        "job": "262602-",
+        "phase": "00.10050",
+        "description": "DEMOBE BARGES",
+        "status": true,
+        "uom": "SF"
+      },
+      "definition": null,
+      "workspace": {
+        "$type": "Ryvit.Workflows.Primitives.SubscriberData, Ryvit.Workflows.Primitives",
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "ivo-job",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/job",
+          "SelectProperties": [
+            "uuid",
+            "jobId",
+            "jobNumber"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "jobNumber",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "262602"
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "uuid": "6cf6c2ce-f183-4daf-b00c-d57ab053b525",
+            "jobId": 25704,
+            "jobNumber": "262602"
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Job"
+      },
+      {
+        "id": "look-ivo-code",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/cost-code",
+          "SelectProperties": [
+            "uuid",
+            "costCodeId",
+            "costCode",
+            "description",
+            "jobId",
+            "quantity",
+            "quantityUnitType",
+            "note",
+            "createdTimestampUtc",
+            "isActive",
+            "isDeleted",
+            "accountingCode",
+            "estimatingCode",
+            "costCodeTemplateId"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "accountingCode",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "00.10050"
+            },
+            {
+              "PropertyName": "jobId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 25704
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+            "costCodeId": 96048,
+            "costCode": "00.10050",
+            "description": "DEMOBE BARGES",
+            "jobId": 25704,
+            "quantity": null,
+            "quantityUnitType": "SF",
+            "note": null,
+            "createdTimestampUtc": null,
+            "isActive": true,
+            "isDeleted": false,
+            "accountingCode": "00.10050",
+            "estimatingCode": null,
+            "costCodeTemplateId": null
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Cost Code"
+      },
+      {
+        "id": "duplicate-check",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "duplicates-found",
+              "name": "Job Cost Code Duplicate Exception",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst uom = _.trim(flow.trigger.data.uom);\nconst id = flow.step('look-ivo-job').output[0].jobId;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Multiple results returned in cost code lookup step for Phase: ${phase} on Job: ${job} (${id}) with Unit of Measure ${uom} | ${time}`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Duplicate Job Cost Code Check"
+      },
+      {
+        "id": "code-conditional",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "vista-phase",
+              "name": "Lookup Project Phase",
+              "input": {
+                "app": "vista",
+                "ExpectedResult": "ExactlyOneOrNone",
+                "IncludeMetadata": false,
+                "DataObjectPath": "vista/pm/2/project_phases",
+                "Filters": [
+                  {
+                    "PropertyName": "Job",
+                    "DataPrefix": "data.",
+                    "Operator": "Equal",
+                    "ValueExpression": "=return flow.trigger.data.job;"
+                  },
+                  {
+                    "PropertyName": "Phase",
+                    "DataPrefix": "data.",
+                    "Operator": "Equal",
+                    "ValueExpression": "=return flow.trigger.data.phase;"
+                  },
+                  {
+                    "PropertyName": "Description",
+                    "DataPrefix": "data.",
+                    "Operator": "Equal",
+                    "ValueExpression": "=return flow.trigger.data.description;"
+                  }
+                ],
+                "SelectProperties": [
+                  "Job",
+                  "Phase",
+                  "Description",
+                  "Item",
+                  "Notes",
+                  "ActiveYN",
+                  "ProjectPhaseCostType"
+                ]
+              },
+              "stepDependencies": [],
+              "type": "getdatafromcachev2"
+            },
+            {
+              "id": "update",
+              "name": "Update Job Cost Code",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/project-management/1/cost-code/update",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "costCodeId": "=return flow.step('look-ivo-code').output[0].costCodeId;",
+                  "uuid": "=return flow.step('look-ivo-code').output[0].uuid;",
+                  "costCode": "=const phase = flow.step('vista-phase')?.output?.Phase;\n\nif (phase && _.trim(phase) !== '') {\n  return _.trim(phase);\n}\n\nreturn flow.step('look-ivo-code').output[0].costCode;",
+                  "description": "=const description = flow.step('vista-phase')?.output?.Description;\n\nif (description && _.trim(description) !== '') {\n  return _.trim(description);\n}\n\nreturn flow.step('look-ivo-code').output[0].description;",
+                  "jobId": "=return flow.step('look-ivo-code').output[0].jobId;",
+                  "quantity": "=const costs = flow.step('vista-phase')?.output?.ProjectPhaseCostType;\n\nif (costs && Array.isArray(costs) && costs.length >= 1) {\n  let cost = costs.find((c) => c.CostType === 1);\n\n  if (cost) {\n    return parseFloat(cost.OrigUnits) ?? 0;\n  } else {\n    return flow.step('look-ivo-code').output[0].quantity;\n  }\n}\n\nreturn flow.step('look-ivo-code').output[0].quantity;",
+                  "quantityUnitType": "=const costs = flow.step('vista-phase')?.output?.ProjectPhaseCostType;\n\nif (costs && Array.isArray(costs) && costs.length >= 1) {\n  let cost = costs.find((c) => c.CostType === 1);\n\n  if (cost) {\n    let uom = cost?.UM;\n    return uom && _.trim(uom) !== '' ? _.trim(uom) : null;\n  } else {\n    return flow.step('look-ivo-code').output[0].quantity;\n  }\n}\n\nreturn flow.step('look-ivo-code').output[0].quantityUnitType;",
+                  "note": "=const note = flow.step('vista-phase')?.output?.Notes;\n\nif (note && _.trim(note) !== '') {\n  return _.trim(note);\n}\n\nreturn flow.step('look-ivo-code').output[0].note;",
+                  "isActive": "=const status = flow.step('vista-phase')?.output?.ActiveYN;\n\nif (status && _.trim(status) !== '') {\n  return _.trim(status) === 'Y';\n}\n\nreturn flow.step('look-ivo-code').output[0].isActive;",
+                  "isDeleted": "=return flow.step('look-ivo-code').output[0].isDeleted;",
+                  "accountingCode": "=return flow.step('look-ivo-code').output[0].accountingCode;",
+                  "estimatingCode": "=return flow.step('look-ivo-code').output[0].estimatingCode;",
+                  "costCodeTemplateId": "=return flow.step('look-ivo-code').output[0].costCodeTemplateId;",
+                  "companyId": "=return 265;"
+                }
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "vista-phase",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-conditional",
+              "name": "Update Job Cost Code Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('update').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "update-success",
+                    "name": "Update Job Cost Code Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst id = flow.step('update').actionResponse.result.costCodeId;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} (${id}) for Job ${job} related with Unit of Measure ${uom} and Description: ${description} successfully updated in Ivo | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 1;",
+                        "Output": "=const response = flow.step('update').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  costCodeId: response?.result?.costCodeId,\n  costCode: response?.result?.costCode,\n  uom: response?.result?.quantityUnitType\n};"
+                      }
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-update-failure",
+                    "name": "Email Job Cost Code Update Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Job Cost Code | Update Failed | Job: ${job} Phase: ${phase} UoM (${uom}) | Vista To Ivo | ${time}`;",
+                      "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Job Cost Code Update Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-failed",
+                    "name": "Update Job Cost Code Action Failure",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} for Job ${job} with Unit of Measure ${uom} and Description: ${description} unsuccessfully updated in Ivo | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 0;",
+                        "Output": "=return undefined;"
+                      }
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-update-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "update",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "create",
+              "name": "Create Job Cost Code",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/project-management/1/cost-code/add",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "uuid": "=return uuid.v4();",
+                  "costCode": "=return _.trim(flow.trigger.data.phase);",
+                  "description": "=return _.trim(flow.trigger.data.description);",
+                  "jobId": "=return flow.step('ivo-job').output[0].jobId;",
+                  "createdByUserId": "=return 45;",
+                  "quantityUnitType": "=return _.trim(flow.trigger.data.uom) ?? ' ';",
+                  "note": "=return null;",
+                  "isActive": "=return true;",
+                  "accountingCode": "=return _.trim(flow.trigger.data.phase);",
+                  "estimatingCode": "=return null;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "create-conditional",
+              "name": "Create Job Cost Code Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('create').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "create-success",
+                    "name": "Create Job Cost Code Action Success",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst id = flow.step('create').actionResponse.result.costCodeId;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} (${id}) for Job ${job} with Unit of Measure ${uom} and Description: ${description} successfully created in Ivo | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 1;",
+                        "Output": "=const response = flow.step('create').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  costCodeId: response?.result?.costCodeId,\n  costCode: response?.result?.costCode,\n  uom: response?.result?.quantityUnitType\n};"
+                      }
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-create-failed",
+                    "name": "Email Job Cost Code Create Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Job Cost Code (Vista) | Create Failed | Job: ${job} Phase: ${phase} UoM (${uom}) | Vista To Ivo | ${time}`;",
+                      "Body": "=const response = flow.step('create').actionResponse;\nconst request = flow.step('create').actionRequest;\nconst title = 'Job Cost Code Update Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "create-failed",
+                    "name": "Create Job Cost Code Action Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} for Job ${job} with Unit of Measure ${uom} and Description: ${description} unsuccessfully created in Ivo | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 0;",
+                        "Output": "=return undefined;"
+                      }
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-create-failed",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Ivo Job Cost Code Exists"
+      },
+      {
+        "id": "vista-phase",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "vista/pm/2/project_phases",
+          "SelectProperties": [
+            "Job",
+            "Phase",
+            "Description",
+            "Item",
+            "Notes",
+            "ActiveYN",
+            "ProjectPhaseCostType"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "Job",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "262602-"
+            },
+            {
+              "PropertyName": "Phase",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "00.10050"
+            },
+            {
+              "PropertyName": "Description",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "DEMOBE BARGES"
+            }
+          ],
+          "ExpectedResult": 2,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": {
+          "Job": "262602-",
+          "Phase": "00.10050",
+          "Description": "DEMOBE BARGES",
+          "Item": "             1-1",
+          "Notes": null,
+          "ActiveYN": "Y",
+          "ProjectPhaseCostType": [
+            {
+              "JCCo": 3,
+              "Job": "262602-",
+              "PhaseGroup": 3,
+              "CostType": 1,
+              "UM": "SF",
+              "BillFlag": "C",
+              "ItemUnitFlag": "N",
+              "PhaseUnitFlag": "N",
+              "BuyOutYN": "N",
+              "LastProjDate": "2026-09-02T00:00:00",
+              "Plugged": "N",
+              "ActiveYN": "Y",
+              "OrigHours": "1241.39",
+              "OrigUnits": "25600.000",
+              "OrigCost": "75336.31",
+              "ProjNotes": null,
+              "SourceStatus": "I",
+              "InterfaceDate": "2026-09-02T00:00:00",
+              "Notes": null,
+              "UniqueAttchID": null,
+              "KeyID": 20296651,
+              "__custom_fields": {
+                "udConvJob": null,
+                "udConvYN": null,
+                "udConvCostType": null,
+                "udConvPhase": null,
+                "udType": null,
+                "udBidPrimary": "N",
+                "udBidUnits": "N"
+              }
+            },
+            {
+              "JCCo": 3,
+              "Job": "262602-",
+              "PhaseGroup": 3,
+              "CostType": 2,
+              "UM": "SF",
+              "BillFlag": "C",
+              "ItemUnitFlag": "N",
+              "PhaseUnitFlag": "N",
+              "BuyOutYN": "N",
+              "LastProjDate": "2026-09-02T00:00:00",
+              "Plugged": "N",
+              "ActiveYN": "Y",
+              "OrigHours": "0.00",
+              "OrigUnits": "25600.000",
+              "OrigCost": "61226.93",
+              "ProjNotes": null,
+              "SourceStatus": "I",
+              "InterfaceDate": "2026-09-02T00:00:00",
+              "Notes": null,
+              "UniqueAttchID": null,
+              "KeyID": 20296652,
+              "__custom_fields": {
+                "udConvJob": null,
+                "udConvYN": null,
+                "udConvCostType": null,
+                "udConvPhase": null,
+                "udType": null,
+                "udBidPrimary": "N",
+                "udBidUnits": "N"
+              }
+            }
+          ]
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Project Phase"
+      },
+      {
+        "id": "update",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/project-management/1/cost-code/update",
+          "ActionBody": {
+            "costCodeId": 96048,
+            "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+            "costCode": "00.10050",
+            "description": "DEMOBE BARGES",
+            "jobId": 25704,
+            "quantity": 25600,
+            "quantityUnitType": "SF",
+            "note": null,
+            "isActive": true,
+            "isDeleted": false,
+            "accountingCode": "00.10050",
+            "estimatingCode": null,
+            "costCodeTemplateId": null,
+            "companyId": 265
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "3a00d2f0-ff08-4961-ab3b-bd203d7cb2e5",
+              "actionPath": "ivo-systems/project-management/1/cost-code/update",
+              "dataObjectCode": "cost-code",
+              "subscriberCode": "14368",
+              "actionCode": "update",
+              "createdUtc": "2026-09-04T13:10:31.1308983+00:00",
+              "modifiedUtc": "2026-09-04T13:10:39.6440515+00:00",
+              "status": "Successful",
+              "data": {
+                "costCodeId": 96048,
+                "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+                "costCode": "00.10050",
+                "description": "DEMOBE BARGES",
+                "jobId": 25704,
+                "quantity": 25600,
+                "quantityUnitType": "SF",
+                "note": null,
+                "isActive": true,
+                "isDeleted": false,
+                "accountingCode": "00.10050",
+                "estimatingCode": null,
+                "costCodeTemplateId": null,
+                "companyId": 265
+              },
+              "result": {
+                "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+                "costCodeId": 96048,
+                "costCode": "00.10050",
+                "description": "DEMOBE BARGES",
+                "jobId": 25704,
+                "quantity": 25600,
+                "quantityUnitType": "SF",
+                "note": null,
+                "createdTimestampUtc": null,
+                "isActive": true,
+                "isDeleted": false,
+                "accountingCode": "00.10050",
+                "estimatingCode": null,
+                "costCodeTemplateId": null
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "b8295308-ec34-41e8-8305-6493a99f3ec0"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "costCodeId": 96048,
+              "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+              "costCode": "00.10050",
+              "description": "DEMOBE BARGES",
+              "jobId": 25704,
+              "quantity": 25600,
+              "quantityUnitType": "SF",
+              "note": null,
+              "isActive": true,
+              "isDeleted": false,
+              "accountingCode": "00.10050",
+              "estimatingCode": null,
+              "costCodeTemplateId": null,
+              "companyId": 265
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "3a00d2f0-ff08-4961-ab3b-bd203d7cb2e5",
+          "Content": {
+            "costCodeId": 96048,
+            "uuid": "7a9b98de-fe72-4f9d-8077-c742a54879a5",
+            "costCode": "00.10050",
+            "description": "DEMOBE BARGES",
+            "jobId": 25704,
+            "quantity": 25600,
+            "quantityUnitType": "SF",
+            "note": null,
+            "isActive": true,
+            "isDeleted": false,
+            "accountingCode": "00.10050",
+            "estimatingCode": null,
+            "costCodeTemplateId": null,
+            "companyId": 265
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-04T13:10:31.1016198+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Job Cost Code"
+      },
+      {
+        "id": "update-conditional",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "update-success",
+              "name": "Update Job Cost Code Action Successful",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst id = flow.step('update').actionResponse.result.costCodeId;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} (${id}) for Job ${job} related with Unit of Measure ${uom} and Description: ${description} successfully updated in Ivo | ${time}`;",
+                "ResultData": {
+                  "Processed": "=return 1;",
+                  "Output": "=const response = flow.step('update').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  costCodeId: response?.result?.costCodeId,\n  costCode: response?.result?.costCode,\n  uom: response?.result?.quantityUnitType\n};"
+                }
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "email-update-failure",
+              "name": "Email Job Cost Code Update Action Failure",
+              "input": {
+                "Emails": [
+                  "chawkins@ivosystems.com"
+                ],
+                "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Job Cost Code | Update Failed | Job: ${job} Phase: ${phase} UoM (${uom}) | Vista To Ivo | ${time}`;",
+                "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Job Cost Code Update Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+              },
+              "stepDependencies": [],
+              "type": "sendemail"
+            },
+            {
+              "id": "update-failed",
+              "name": "Update Job Cost Code Action Failure",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const job = _.trim(flow.trigger.data.job);\nconst phase = _.trim(flow.trigger.data.phase);\nconst description = _.trim(flow.trigger.data.description);\nconst uom = _.trim(flow.trigger.data.uom);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Cost code ${phase} for Job ${job} with Unit of Measure ${uom} and Description: ${description} unsuccessfully updated in Ivo | ${time}`;",
+                "ResultData": {
+                  "Processed": "=return 0;",
+                  "Output": "=return undefined;"
+                }
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "email-update-failure",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Update Job Cost Code Action Succeeded"
+      },
+      {
+        "id": "update-success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": {
+            "__Status": 200,
+            "__OutcomeMessage": "Cost code 00.10050 (96048) for Job 262602- related with Unit of Measure SF and Description: DEMOBE BARGES successfully updated in Ivo | 2026-09-04 08:11:30",
+            "Processed": 1,
+            "Output": {
+              "jobId": 25704,
+              "costCodeId": 96048,
+              "costCode": "00.10050",
+              "uom": "SF"
+            }
+          },
+          "OutcomeMessage": "Cost code 00.10050 (96048) for Job 262602- related with Unit of Measure SF and Description: DEMOBE BARGES successfully updated in Ivo | 2026-09-04 08:11:30",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Cost code 00.10050 (96048) for Job 262602- related with Unit of Measure SF and Description: DEMOBE BARGES successfully updated in Ivo | 2026-09-04 08:11:30",
+          "Processed": 1,
+          "Output": {
+            "jobId": 25704,
+            "costCodeId": 96048,
+            "costCode": "00.10050",
+            "uom": "SF"
+          }
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Update Job Cost Code Action Successful"
+      }
+    ],
+    "children": {},
+    "name": "V2: Cost Code Called Flow Base Template"
+  },
+  {
+    "instanceId": "bee639b9-ee80-4d33-b843-e3f02ca10720",
+    "rootInstanceId": "bee639b9-ee80-4d33-b843-e3f02ca10720",
+    "startedOn": "2026-09-04T13:10:30.5660185+00:00",
+    "finishedOn": "2026-09-04T13:11:48.4059238+00:00",
+    "configuration": {
+      "itemCodesUsed": false,
+      "companyId": 265,
+      "phaseCodeFilter": [
+        "00.10020",
+        "00.10050",
+        "00.10805",
+        "00.78850",
+        "00.78852",
+        "00.78855"
+      ]
+    },
+    "trigger": {
+      "info": {
+        "$type": "Ryvit.Workflows.Primitives.WorkflowState+WorkflowStatePlatformEvent, Ryvit.Workflows.Primitives",
+        "SubscriberId": 14368,
+        "Type": 100,
+        "EventInfo": {
+          "CacheChangeType": 1,
+          "CacheId": "ae423f6c-0014-40c0-9f3c-64b6b0718b0f",
+          "DataObjectPath": "vista/pm/2/project_phases",
+          "CacheUrl": "appnetwork/subscribers/14368/vista/pm/2/data/project_phases/cache/ae423f6c-0014-40c0-9f3c-64b6b0718b0f",
+          "SubscriberId": 14368,
+          "EventId": 3336277562,
+          "EventOrigin": 1
+        }
+      },
+      "data": {
+        "PMCo": 3,
+        "Project": "262602-",
+        "JCCo": 3,
+        "Job": "262602-",
+        "PhaseGroup": 3,
+        "Phase": "00.10050",
+        "Description": "DEMOBE BARGES",
+        "Contract": "262602-",
+        "Item": "             1-1",
+        "ProjMinPct": "0.0000",
+        "ActiveYN": "Y",
+        "Notes": null,
+        "UniqueAttchID": null,
+        "KeyID": 10135849,
+        "InsCode": "5222",
+        "__custom_fields": {
+          "udConvYN": null,
+          "udConvJob": null,
+          "udConvPhase": null
+        },
+        "ProjectPhaseCostType": [
+          {
+            "JCCo": 3,
+            "Job": "262602-",
+            "PhaseGroup": 3,
+            "CostType": 1,
+            "UM": "SF",
+            "BillFlag": "C",
+            "ItemUnitFlag": "N",
+            "PhaseUnitFlag": "N",
+            "BuyOutYN": "N",
+            "LastProjDate": "2026-09-02T00:00:00",
+            "Plugged": "N",
+            "ActiveYN": "Y",
+            "OrigHours": "1241.39",
+            "OrigUnits": "25600.000",
+            "OrigCost": "75336.31",
+            "ProjNotes": null,
+            "SourceStatus": "I",
+            "InterfaceDate": "2026-09-02T00:00:00",
+            "Notes": null,
+            "UniqueAttchID": null,
+            "KeyID": 20296651,
+            "__custom_fields": {
+              "udConvJob": null,
+              "udConvYN": null,
+              "udConvCostType": null,
+              "udConvPhase": null,
+              "udType": null,
+              "udBidPrimary": "N",
+              "udBidUnits": "N"
+            }
+          },
+          {
+            "JCCo": 3,
+            "Job": "262602-",
+            "PhaseGroup": 3,
+            "CostType": 2,
+            "UM": "SF",
+            "BillFlag": "C",
+            "ItemUnitFlag": "N",
+            "PhaseUnitFlag": "N",
+            "BuyOutYN": "N",
+            "LastProjDate": "2026-09-02T00:00:00",
+            "Plugged": "N",
+            "ActiveYN": "Y",
+            "OrigHours": "0.00",
+            "OrigUnits": "25600.000",
+            "OrigCost": "61226.93",
+            "ProjNotes": null,
+            "SourceStatus": "I",
+            "InterfaceDate": "2026-09-02T00:00:00",
+            "Notes": null,
+            "UniqueAttchID": null,
+            "KeyID": 20296652,
+            "__custom_fields": {
+              "udConvJob": null,
+              "udConvYN": null,
+              "udConvCostType": null,
+              "udConvPhase": null,
+              "udType": null,
+              "udBidPrimary": "N",
+              "udBidUnits": "N"
+            }
+          }
+        ]
+      },
+      "definition": null,
+      "workspace": {
+        "$type": "Ryvit.Workflows.Primitives.SubscriberData, Ryvit.Workflows.Primitives",
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "double-check",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "not-allowed",
+              "name": "Phase Not In Allowed List",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "Phase Not in allowed list"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Double Check"
+      },
+      {
+        "id": "vista-job",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "vista/jc/2/jobs",
+          "SelectProperties": [
+            "Job"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "Job",
+              "Operator": 99,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": [
+                "262602-",
+                "262602-"
+              ]
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "Job": "262602-"
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Vista Job"
+      },
+      {
+        "id": "vista-job-exist-cond",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "job-missing-exception",
+              "name": "Job Does Not Exist In AppXchange At Time Of Run",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=// Its Possible a job could be missing from the cache at time of run so we want to try and capture that so we can update the flow as necessary\nconst job = _.trim(flow.trigger.data?.Job);\nconst time = dayjs().tz('America/Chicago').format('MM/DD/YYYY hh:mm:ss');\nconst phase = _.trim(flow.trigger.data?.Phase);\n\nreturn `Unable to create ${phase} due to missing cached job ${job} at ${time}`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Vista  Job Does Not Exist"
+      },
+      {
+        "id": "ivo-job",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/job",
+          "SelectProperties": [
+            "uuid",
+            "jobId",
+            "jobNumber",
+            "jobShortName",
+            "jobColor",
+            "divisionId",
+            "jobTypeId",
+            "jobLongName",
+            "jobDescription",
+            "isActive",
+            "organizations"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "jobNumber",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": "262602"
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [
+          {
+            "uuid": "6cf6c2ce-f183-4daf-b00c-d57ab053b525",
+            "jobId": 25704,
+            "jobNumber": "262602",
+            "jobShortName": "Brunswick, MO - Grand River Bridge ",
+            "jobColor": null,
+            "divisionId": 714,
+            "jobTypeId": null,
+            "jobLongName": " ",
+            "jobDescription": "Grand River Bridge Replacement MP S 189.19",
+            "isActive": true,
+            "organizations": []
+          }
+        ],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Ivo Job"
+      },
+      {
+        "id": "item-config-flag",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "item-code-call",
+              "name": "Item Code Code Called Flow (Placeholder)",
+              "input": {
+                "FlowToCallCode": "v2-item-code-called-flow-base-template-dfed681e",
+                "UseExistingInput": false,
+                "FlowInputData": {
+                  "item": "=return flow.trigger.data.Item;",
+                  "job": "=return flow.trigger.data.Job;",
+                  "phase": "=return flow.trigger.data.Phase;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "callflow"
+            },
+            {
+              "id": "item-flow-failed",
+              "name": "Item Code Called Flow Exception",
+              "input": {
+                "variant": "If",
+                "Condition": "=return flow.step('item-code-call').output.Processed === 0;",
+                "trueSteps": [
+                  {
+                    "id": "item-except",
+                    "name": "Item Code Exception",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "Item Code Called Flow Failed"
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": []
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "item-code-call",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Item Codes Are Used"
+      },
+      {
+        "id": "cost-code-call",
+        "status": "SUCCESSFUL",
+        "stepType": "callflow",
+        "inputData": {
+          "FlowToCallCode": "v2-cost-code-called-flow-base-template-3393c16f",
+          "FlowInputData": {
+            "job": "262602-",
+            "phase": "00.10050",
+            "description": "DEMOBE BARGES",
+            "status": true,
+            "uom": "SF"
+          }
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Cost code 00.10050 (96048) for Job 262602- related with Unit of Measure SF and Description: DEMOBE BARGES successfully updated in Ivo | 2026-09-04 08:11:30",
+          "Processed": 1,
+          "Output": {
+            "jobId": 25704,
+            "costCodeId": 96048,
+            "costCode": "00.10050",
+            "uom": "SF"
+          }
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Cost Code Called Flow (Placeholder)"
+      },
+      {
+        "id": "phase-flow-failed",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "phase-except",
+              "name": "Cost Code Exception",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "Cost Code Flow Failed"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Cost Code Called Flow Exception"
+      },
+      {
+        "id": "link-code-call",
+        "status": "SUCCESSFUL",
+        "stepType": "callflow",
+        "inputData": {
+          "FlowToCallCode": "v2-link-code-called-flow-base-template-29145300",
+          "FlowInputData": {
+            "job": "262602-",
+            "item": "             1-1",
+            "phase": "00.10050",
+            "itemCodeId": null,
+            "costCodeId": 96048,
+            "jobId": 25704,
+            "costs": [
+              {
+                "JCCo": 3,
+                "Job": "262602-",
+                "PhaseGroup": 3,
+                "CostType": 1,
+                "UM": "SF",
+                "BillFlag": "C",
+                "ItemUnitFlag": "N",
+                "PhaseUnitFlag": "N",
+                "BuyOutYN": "N",
+                "LastProjDate": "2026-09-02T00:00:00",
+                "Plugged": "N",
+                "ActiveYN": "Y",
+                "OrigHours": "1241.39",
+                "OrigUnits": "25600.000",
+                "OrigCost": "75336.31",
+                "ProjNotes": null,
+                "SourceStatus": "I",
+                "InterfaceDate": "2026-09-02T00:00:00",
+                "Notes": null,
+                "UniqueAttchID": null,
+                "KeyID": 20296651,
+                "__custom_fields": {
+                  "udConvJob": null,
+                  "udConvYN": null,
+                  "udConvCostType": null,
+                  "udConvPhase": null,
+                  "udType": null,
+                  "udBidPrimary": "N",
+                  "udBidUnits": "N"
+                }
+              },
+              {
+                "JCCo": 3,
+                "Job": "262602-",
+                "PhaseGroup": 3,
+                "CostType": 2,
+                "UM": "SF",
+                "BillFlag": "C",
+                "ItemUnitFlag": "N",
+                "PhaseUnitFlag": "N",
+                "BuyOutYN": "N",
+                "LastProjDate": "2026-09-02T00:00:00",
+                "Plugged": "N",
+                "ActiveYN": "Y",
+                "OrigHours": "0.00",
+                "OrigUnits": "25600.000",
+                "OrigCost": "61226.93",
+                "ProjNotes": null,
+                "SourceStatus": "I",
+                "InterfaceDate": "2026-09-02T00:00:00",
+                "Notes": null,
+                "UniqueAttchID": null,
+                "KeyID": 20296652,
+                "__custom_fields": {
+                  "udConvJob": null,
+                  "udConvYN": null,
+                  "udConvCostType": null,
+                  "udConvPhase": null,
+                  "udType": null,
+                  "udBidPrimary": "N",
+                  "udBidUnits": "N"
+                }
+              }
+            ],
+            "companyId": 265
+          }
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Link Code successfully created for Job 262602- (25704) with Item              1-1 (null) and Phase 00.10050 (96048) | 2026-09-04 08:11:48",
+          "Processed": 1,
+          "Output": {
+            "jobId": 25704,
+            "itemCodeId": null,
+            "costCodeId": 96048,
+            "costCodeAssignmentId": 85446
+          }
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Link Code Called Flow (Placeholder)"
+      },
+      {
+        "id": "action-con",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "success",
+              "name": "Link Code Called Flow Successful",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "Success"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "failed",
+              "name": "Link Code Called Flow Failed",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "Link Code Failed to be processed"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Link Code Flow Succeeded"
+      },
+      {
+        "id": "success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": null,
+          "OutcomeMessage": "Success",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Success"
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Link Code Called Flow Successful"
+      }
+    ],
+    "children": {
+      "cost-code-call": "4f6266cb-65b0-47ad-8ae8-2e063fb052cf",
+      "link-code-call": "1ae2cb37-8411-4b8d-be2a-a85b983dd562"
+    },
+    "name": "V2: Job Codes Base Template"
+  },
+  {
+    "instanceId": "1ae2cb37-8411-4b8d-be2a-a85b983dd562",
+    "parentInstanceId": "bee639b9-ee80-4d33-b843-e3f02ca10720",
+    "rootInstanceId": "1ae2cb37-8411-4b8d-be2a-a85b983dd562",
+    "startedOn": "2026-09-04T13:11:30.7320616+00:00",
+    "finishedOn": "2026-09-04T13:11:48.3355718+00:00",
+    "configuration": null,
+    "trigger": {
+      "info": {
+        "Type": 241,
+        "WorkspaceId": 14368,
+        "SubscriberId": 14368,
+        "EventInfo": {}
+      },
+      "data": {
+        "job": "262602-",
+        "item": "             1-1",
+        "phase": "00.10050",
+        "itemCodeId": null,
+        "costCodeId": 96048,
+        "jobId": 25704,
+        "costs": [
+          {
+            "JCCo": 3,
+            "Job": "262602-",
+            "PhaseGroup": 3,
+            "CostType": 1,
+            "UM": "SF",
+            "BillFlag": "C",
+            "ItemUnitFlag": "N",
+            "PhaseUnitFlag": "N",
+            "BuyOutYN": "N",
+            "LastProjDate": "2026-09-02T00:00:00",
+            "Plugged": "N",
+            "ActiveYN": "Y",
+            "OrigHours": "1241.39",
+            "OrigUnits": "25600.000",
+            "OrigCost": "75336.31",
+            "ProjNotes": null,
+            "SourceStatus": "I",
+            "InterfaceDate": "2026-09-02T00:00:00",
+            "Notes": null,
+            "UniqueAttchID": null,
+            "KeyID": 20296651,
+            "__custom_fields": {
+              "udConvJob": null,
+              "udConvYN": null,
+              "udConvCostType": null,
+              "udConvPhase": null,
+              "udType": null,
+              "udBidPrimary": "N",
+              "udBidUnits": "N"
+            }
+          },
+          {
+            "JCCo": 3,
+            "Job": "262602-",
+            "PhaseGroup": 3,
+            "CostType": 2,
+            "UM": "SF",
+            "BillFlag": "C",
+            "ItemUnitFlag": "N",
+            "PhaseUnitFlag": "N",
+            "BuyOutYN": "N",
+            "LastProjDate": "2026-09-02T00:00:00",
+            "Plugged": "N",
+            "ActiveYN": "Y",
+            "OrigHours": "0.00",
+            "OrigUnits": "25600.000",
+            "OrigCost": "61226.93",
+            "ProjNotes": null,
+            "SourceStatus": "I",
+            "InterfaceDate": "2026-09-02T00:00:00",
+            "Notes": null,
+            "UniqueAttchID": null,
+            "KeyID": 20296652,
+            "__custom_fields": {
+              "udConvJob": null,
+              "udConvYN": null,
+              "udConvCostType": null,
+              "udConvPhase": null,
+              "udType": null,
+              "udBidPrimary": "N",
+              "udBidUnits": "N"
+            }
+          }
+        ],
+        "companyId": 265
+      },
+      "definition": null,
+      "workspace": {
+        "$type": "Ryvit.Workflows.Primitives.SubscriberData, Ryvit.Workflows.Primitives",
+        "Id": 14368,
+        "SubscriberKey": "10593c6f-78c5-4734-93c1-2427c04219ad",
+        "Name": "da566b00-e743-4433-ad57-08de9a2bc229",
+        "DisplayName": "Kraemer North America | Vista",
+        "CosmosDbPartitionKey": "20face32-06af-4fb2-983d-d571fd70225f",
+        "EnableDataObjectScopedPartitions": true
+      }
+    },
+    "stepsRan": [
+      {
+        "id": "look-ivo-link",
+        "status": "SUCCESSFUL",
+        "stepType": "getdatafromcachev2",
+        "inputData": {
+          "DataObjectPath": "ivo-systems/project-management/1/cost-code-assignment",
+          "SelectProperties": [
+            "uuid",
+            "costCodeAssignmentId",
+            "itemCodeId",
+            "costCodeId",
+            "jobId",
+            "equipmentCostBudgetTotal",
+            "laborCostBudgetTotal",
+            "laborHoursBudgetTotal",
+            "isDeleted",
+            "createdTimestampUtc",
+            "quantity"
+          ],
+          "Filters": [
+            {
+              "PropertyName": "jobId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 25704
+            },
+            {
+              "PropertyName": "itemCodeId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": null
+            },
+            {
+              "PropertyName": "costCodeId",
+              "Operator": 13,
+              "Value": null,
+              "DataPrefix": "data.",
+              "ValueExpression": 96048
+            }
+          ],
+          "ExpectedResult": 3,
+          "IncludeMetadata": false,
+          "PageSize": 50
+        },
+        "data": [],
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Lookup Existing Ivo Link Codes"
+      },
+      {
+        "id": "duplicate-check",
+        "status": "SUCCESSFUL",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "duplicate-exception",
+              "name": "Link Code Duplicate Exception",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const costCodeId = flow.trigger.data.costCodeId;\nconst itemCodeId = flow.trigger.data?.itemCodeId;\nconst jobId = flow.trigger.data.jobId;\nconst job = _.trim(flow.trigger.data.job);\nconst item = _.trim(flow.trigger.data.item);\nconst phase = _.trim(flow.trigger.data.phase);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\nlet itemInfo = '';\n\n\nif(itemCodeId){\n  itemInfo = `Item ${item} (${itemCodeId}) `;\n} else {\n  itemInfo = `Item ${item} `;\n}\n\nreturn `Multiple results returned from lookup for link code on Job ${job} (${jobId}) with ${itemInfo} and Phase ${phase} (${costCodeId}) | ${time}`;"
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": []
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Duplicate Link Codes Check"
+      },
+      {
+        "id": "link-conditional",
+        "status": "False",
+        "stepType": "if",
+        "inputData": {
+          "Condition": false,
+          "trueSteps": [
+            {
+              "id": "update",
+              "name": "Update Job Link Code",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/project-management/1/cost-code-assignment/update",
+                "UseExistingBody": false,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": {
+                  "costCodeAssignmentId": "=return flow.step('look-ivo-link').output[0].costCodeAssignmentId;",
+                  "uuid": "=return flow.step('look-ivo-link').output[0].uuid;",
+                  "itemCodeId": "=return flow.step('look-ivo-link').output[0].itemCodeId;",
+                  "costCodeId": "=return flow.step('look-ivo-link').output[0].costCodeId;",
+                  "jobId": "=return flow.step('look-ivo-link').output[0].jobId;",
+                  "isDeleted": "=return flow.step('look-ivo-link').output[0].isDeleted;",
+                  "equipmentCostBudgetTotal": "=return flow.step('look-ivo-link').output[0].equipmentCostBudgetTotal;",
+                  "laborCostBudgetTotal": "=return flow.step('look-ivo-link').output[0].laborCostBudgetTotal;",
+                  "laborHoursBudgetTotal": "=return flow.step('look-ivo-link').output[0].laborHoursBudgetTotal;",
+                  "quantity": "=return flow.step('look-ivo-link').output[0].quantity;"
+                }
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "update-conditional",
+              "name": "Update Job Link Code Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('update').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "update-success",
+                    "name": "Update Job Link Code Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code successfully updated for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 1;",
+                        "Output": "=const response = flow.step('update').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  itemCodeId: response?.result?.itemCodeId,\n  costCodeId: response?.result?.costCodeId,\n  costCodeAssignmentId: response?.result?.costCodeAssignmentId\n};"
+                      }
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-update-failure",
+                    "name": "Email Job Link Code Update Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst item = _.trim(flow.trigger.data.item);\nconst phase = _.trim(flow.trigger.data.phase);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Link Code (Vista) | Update Failed | Vista Push To IVO | Job: ${job} - Item: ${item} - Phase: ${phase} | ${time}`;",
+                      "Body": "=const response = flow.step('update').actionResponse;\nconst request = flow.step('update').actionRequest;\nconst title = 'Job Link Code Update Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "update-failed",
+                    "name": "Update Job Link Code Action Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code unsuccessfully updated for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 0;",
+                        "Output": "=return undefined;"
+                      }
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-update-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "update",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "create",
+              "name": "Create Job Link Code",
+              "input": {
+                "app": "ivo-systems",
+                "ActionPath": "ivo-systems/project-management/1/cost-code-assignment/add",
+                "UseExistingBody": true,
+                "EnableRetryPolicy": false,
+                "WaitForResponse": true,
+                "ActionBody": "=const costs = flow.trigger.data?.costs;\nconst costType1 = costs ? costs.find((c) => c.CostType === 1) : null;\nconst quantity = costType1 ? (parseInt(costType1.OrigUnits) || 0) : 0;\n\nreturn {\n  uuid: uuid.v4(),\n  itemCodeId: flow.trigger.data.itemCodeId,\n  costCodeId: flow.trigger.data.costCodeId,\n  jobNumber: flow.trigger.data.job?.trim().replace(/\\D/g, '') || '',\n  jobId: flow.trigger.data.jobId,\n  isDeleted: false,\n  createdByUserId: 45,\n  quantity: quantity,\n  equipmentCostBudgetTotal: null,\n  laborCostBudgetTotal: null,\n  laborHoursBudgetTotal: null\n};"
+              },
+              "stepDependencies": [],
+              "type": "queueactionv3"
+            },
+            {
+              "id": "create-conditional",
+              "name": "Create Job Link Code Action Succeeded",
+              "input": {
+                "variant": "If/Else",
+                "Condition": "=return flow.step('create').isActionSuccess();",
+                "trueSteps": [
+                  {
+                    "id": "create-success",
+                    "name": "Create Job Link Code Action Successful",
+                    "type": "stop",
+                    "input": {
+                      "Status": "success",
+                      "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code successfully created for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 1;",
+                        "Output": "=const response = flow.step('create').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  itemCodeId: response?.result?.itemCodeId,\n  costCodeId: response?.result?.costCodeId,\n  costCodeAssignmentId: response?.result?.costCodeAssignmentId\n};"
+                      }
+                    },
+                    "stepDependencies": []
+                  }
+                ],
+                "falseSteps": [
+                  {
+                    "id": "email-create-failure",
+                    "name": "Email Job Link Code Create Action Failure",
+                    "type": "sendemail",
+                    "input": {
+                      "Emails": [
+                        "chawkins@ivosystems.com"
+                      ],
+                      "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst item = _.trim(flow.trigger.data.item);\nconst phase = _.trim(flow.trigger.data.phase);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Link Code (Vista) | Create Failed | Vista Push To IVO | Job: ${job} - Item: ${item} - Phase: ${phase} | ${time}`;",
+                      "Body": "=const response = flow.step('create').actionResponse;\nconst request = flow.step('create').actionRequest;\nconst title = 'Job Link Code Create Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+                    },
+                    "stepDependencies": []
+                  },
+                  {
+                    "id": "create-failure",
+                    "name": "Create Job Link Code Action Failed",
+                    "type": "stop",
+                    "input": {
+                      "Status": "failure",
+                      "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code unsuccessfully created for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                      "ResultData": {
+                        "Processed": "=return 0;",
+                        "Output": "=return undefined;"
+                      }
+                    },
+                    "stepDependencies": [
+                      {
+                        "dependentOnStepId": "email-create-failure",
+                        "dependentOnStepResultStatus": "SUCCESSFUL"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "create",
+                  "dependentOnStepResultStatus": ""
+                }
+              ],
+              "type": "if"
+            }
+          ]
+        },
+        "data": false,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Link Code Exists"
+      },
+      {
+        "id": "create",
+        "status": "ACTION_HANDLED_SUCCESSFUL",
+        "stepType": "queueactionv3",
+        "inputData": {
+          "ActionPath": "ivo-systems/project-management/1/cost-code-assignment/add",
+          "ActionBody": {
+            "uuid": "0960a65f-52da-435f-8be7-be27c8c40b59",
+            "itemCodeId": null,
+            "costCodeId": 96048,
+            "jobNumber": "262602",
+            "jobId": 25704,
+            "isDeleted": false,
+            "createdByUserId": 45,
+            "quantity": 25600,
+            "equipmentCostBudgetTotal": null,
+            "laborCostBudgetTotal": null,
+            "laborHoursBudgetTotal": null
+          },
+          "WaitForResponse": true,
+          "WaitForResponseTimeoutInMinutes": null,
+          "EnableRetryPolicy": false,
+          "RetryPolicy": {
+            "ErrorCondition": null,
+            "ExponentialBackoff": false,
+            "IntervalInMinutes": 0,
+            "Attempts": 0
+          }
+        },
+        "data": {
+          "Response": {
+            "HttpStatus": "OK",
+            "Content": {
+              "id": "699a4f8a-c313-4b23-a30e-e37a835568ee",
+              "actionPath": "ivo-systems/project-management/1/cost-code-assignment/add",
+              "dataObjectCode": "cost-code-assignment",
+              "subscriberCode": "14368",
+              "actionCode": "add",
+              "createdUtc": "2026-09-04T13:11:30.8868073+00:00",
+              "modifiedUtc": "2026-09-04T13:11:39.4145193+00:00",
+              "status": "Successful",
+              "data": {
+                "uuid": "0960a65f-52da-435f-8be7-be27c8c40b59",
+                "itemCodeId": null,
+                "costCodeId": 96048,
+                "jobNumber": "262602",
+                "jobId": 25704,
+                "isDeleted": false,
+                "createdByUserId": 45,
+                "quantity": 25600,
+                "equipmentCostBudgetTotal": null,
+                "laborCostBudgetTotal": null,
+                "laborHoursBudgetTotal": null
+              },
+              "result": {
+                "uuid": "0960a65f-52da-435f-8be7-be27c8c40b59",
+                "costCodeAssignmentId": 85446,
+                "itemCodeId": null,
+                "costCodeId": 96048,
+                "jobId": 25704,
+                "equipmentCostBudgetTotal": null,
+                "laborCostBudgetTotal": null,
+                "laborHoursBudgetTotal": null,
+                "isDeleted": false,
+                "createdTimestampUtc": null,
+                "quantity": 25600
+              },
+              "contextJson": {
+                "queued": {
+                  "is-retryable": "false"
+                },
+                "closed": {
+                  "service-runner-job-id": "435e78da-4b85-4151-8364-1b7c9d122c34"
+                }
+              }
+            }
+          },
+          "Request": {
+            "Content": {
+              "uuid": "0960a65f-52da-435f-8be7-be27c8c40b59",
+              "itemCodeId": null,
+              "costCodeId": 96048,
+              "jobNumber": "262602",
+              "jobId": 25704,
+              "isDeleted": false,
+              "createdByUserId": 45,
+              "quantity": 25600,
+              "equipmentCostBudgetTotal": null,
+              "laborCostBudgetTotal": null,
+              "laborHoursBudgetTotal": null
+            }
+          }
+        },
+        "state": {
+          "ActionInstanceId": "699a4f8a-c313-4b23-a30e-e37a835568ee",
+          "Content": {
+            "uuid": "0960a65f-52da-435f-8be7-be27c8c40b59",
+            "itemCodeId": null,
+            "costCodeId": 96048,
+            "jobNumber": "262602",
+            "jobId": 25704,
+            "isDeleted": false,
+            "createdByUserId": 45,
+            "quantity": 25600,
+            "equipmentCostBudgetTotal": null,
+            "laborCostBudgetTotal": null,
+            "laborHoursBudgetTotal": null
+          },
+          "RetryState": {
+            "RetryOnResume": false,
+            "AttemptCount": 0,
+            "CreatedOn": "2026-09-04T13:11:30.8708795+00:00"
+          }
+        },
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Create Job Link Code"
+      },
+      {
+        "id": "create-conditional",
+        "status": "True",
+        "stepType": "if",
+        "inputData": {
+          "Condition": true,
+          "trueSteps": [
+            {
+              "id": "create-success",
+              "name": "Create Job Link Code Action Successful",
+              "input": {
+                "Status": "success",
+                "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code successfully created for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                "ResultData": {
+                  "Processed": "=return 1;",
+                  "Output": "=const response = flow.step('create').actionResponse;\n\nreturn {\n  jobId: response?.result?.jobId,\n  itemCodeId: response?.result?.itemCodeId,\n  costCodeId: response?.result?.costCodeId,\n  costCodeAssignmentId: response?.result?.costCodeAssignmentId\n};"
+                }
+              },
+              "stepDependencies": [],
+              "type": "stop"
+            }
+          ],
+          "falseSteps": [
+            {
+              "id": "email-create-failure",
+              "name": "Email Job Link Code Create Action Failure",
+              "input": {
+                "Emails": [
+                  "chawkins@ivosystems.com"
+                ],
+                "Subject": "=const job = _.trim(flow.trigger.data.job);\nconst item = _.trim(flow.trigger.data.item);\nconst phase = _.trim(flow.trigger.data.phase);\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `V2 Link Code (Vista) | Create Failed | Vista Push To IVO | Job: ${job} - Item: ${item} - Phase: ${phase} | ${time}`;",
+                "Body": "=const response = flow.step('create').actionResponse;\nconst request = flow.step('create').actionRequest;\nconst title = 'Job Link Code Create Action Failure Notification';\nlet body = '';\n\nfunction parseArray(key, val) {\n  if (key === null) return;\n  if (val.length === 0) return;\n  // Remove the recursive check — val is already the array here\n  val.forEach((v, i) => {\n    if (v !== null && typeof v !== 'object') {\n      body += `<tr><td><strong>${key} - ${i}</strong></td><td>${v}</td></tr>`;\n    }\n  });\n}\n\nfunction parseObject(value) {\n  if (value === null) return;\n  Object.entries(value).forEach(([key, val]) => {\n    if (Array.isArray(val)) {\n      parseArray(key, val);\n    } else if (val !== null && typeof val === 'object') {\n      parseObject(val);\n    } else {\n      body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n    }\n  });\n}\n\nbody += `<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;\">\n  <tr>\n    <td style=\"padding:12px 0;font-size:18px;font-weight:bold;\">\n      ${title}\n    </td>\n  </tr>\n</table>\n\n  \n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Request Details</td>\n  </tr>`;\n\nObject.entries(request).forEach(([key, val]) => {\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += `</table>\n\n<br>\n\n<table role=\"presentation\" cellpadding=\"8\" cellspacing=\"0\" border=\"1\" width=\"100%\" style=\"border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px;color:#222;border:1px solid #ccc;\">\n  <tr style=\"background-color:#f5f5f5;font-weight:bold;\">\n    <td colspan=\"2\">Response Details</td>\n  </tr>`;\n\nObject.entries(response.result).forEach(([key, val]) => {\n  if (Array.isArray(val)) {\n    parseArray(key, val);\n  }\n\n  if (val !== null && typeof val === 'object') {\n    parseObject(val);\n  }\n\n  body += `<tr><td><strong>${key}</strong></td><td>${val}</td></tr>`;\n});\n\nbody += '</table>';\n\nreturn body;"
+              },
+              "stepDependencies": [],
+              "type": "sendemail"
+            },
+            {
+              "id": "create-failure",
+              "name": "Create Job Link Code Action Failed",
+              "input": {
+                "Status": "failure",
+                "OutcomeMessage": "=const { job, item, phase, jobId, itemCodeId, costCodeId } = flow.trigger.data;\nconst time = dayjs().tz('America/Chicago').format('YYYY-MM-DD HH:mm:ss');\n\nreturn `Link Code unsuccessfully created for Job ${job} (${jobId}) with Item ${item} (${itemCodeId}) and Phase ${phase} (${costCodeId}) | ${time}`;",
+                "ResultData": {
+                  "Processed": "=return 0;",
+                  "Output": "=return undefined;"
+                }
+              },
+              "stepDependencies": [
+                {
+                  "dependentOnStepId": "email-create-failure",
+                  "dependentOnStepResultStatus": "SUCCESSFUL"
+                }
+              ],
+              "type": "stop"
+            }
+          ]
+        },
+        "data": true,
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": false,
+        "name": "Create Job Link Code Action Succeeded"
+      },
+      {
+        "id": "create-success",
+        "status": "SUCCESSFUL",
+        "stepType": "stop",
+        "inputData": {
+          "Status": "success",
+          "ResultData": {
+            "__Status": 200,
+            "__OutcomeMessage": "Link Code successfully created for Job 262602- (25704) with Item              1-1 (null) and Phase 00.10050 (96048) | 2026-09-04 08:11:48",
+            "Processed": 1,
+            "Output": {
+              "jobId": 25704,
+              "itemCodeId": null,
+              "costCodeId": 96048,
+              "costCodeAssignmentId": 85446
+            }
+          },
+          "OutcomeMessage": "Link Code successfully created for Job 262602- (25704) with Item              1-1 (null) and Phase 00.10050 (96048) | 2026-09-04 08:11:48",
+          "StatusEnum": 0
+        },
+        "data": {
+          "__Status": 200,
+          "__OutcomeMessage": "Link Code successfully created for Job 262602- (25704) with Item              1-1 (null) and Phase 00.10050 (96048) | 2026-09-04 08:11:48",
+          "Processed": 1,
+          "Output": {
+            "jobId": 25704,
+            "itemCodeId": null,
+            "costCodeId": 96048,
+            "costCodeAssignmentId": 85446
+          }
+        },
+        "state": null,
+        "hasErrors": false,
+        "terminateInstance": true,
+        "name": "Create Job Link Code Action Successful"
+      }
+    ],
+    "children": {},
+    "name": "V2: Link Code Called Flow Base Template"
+  }
+]
