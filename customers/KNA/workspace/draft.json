@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "customer": {
+    "key": "KNA",
+    "name": "KNA"
+  },
+  "name": "KNA workspace",
+  "description": "Vista ERP to IVO integration blueprint for equipment and contract items",
+  "provenance": {
+    "generatedAt": "2026-09-08T18:21:02.312Z",
+    "generator": "IVO workspace generator",
+    "generatorVersion": "1.0",
+    "sourceData": "customers/KNA/*/input/erp/*.csv",
+    "sourceSchema": "customers/KNA/*/input/erp/*.json",
+    "connectorReference": "reference/ivo/*/schema.json",
+    "connectorSchemaVersion": "Repository snapshot at generation",
+    "mappingEvidence": "customers/KNA/*/output/approved-mapping/mapping.csv"
+  },
+  "review": {
+    "status": "generated"
+  },
+  "flows": [
+    {
+      "name": "Sync Vista equipment to IVO",
+      "trigger": "On-demand: one Vista equipment record",
+      "review": {
+        "status": "generated"
+      },
+      "configurations": [
+        {
+          "name": "ivoCompanyId",
+          "type": "number",
+          "required": false,
+          "defaultValue": "",
+          "description": "Confirm the KNA IVO company ID before approval."
+        },
+        {
+          "name": "createdByUserId",
+          "type": "number",
+          "required": true,
+          "defaultValue": 45,
+          "description": "Recovered from the observed IVO equipment add action."
+        }
+      ],
+      "reviewQuestions": [
+        "Confirm ivoCompanyId and organizationId.",
+        "Confirm whether missing manufacturers should be created or rejected.",
+        "Resolve lastHourMeterId, lastOdometerId, activeWorkOrders, and isPlannable."
+      ],
+      "steps": [
+        {
+          "id": "validate-equipment",
+          "name": "Validate required Vista equipment fields",
+          "type": "code",
+          "description": "Reject malformed records before IVO lookups or actions.",
+          "details": {
+            "Required source fields": "EMCo, Equipment, Type, Status"
+          },
+          "code": "const record = flow.trigger.data;\nconst missing = ['EMCo', 'Equipment', 'Type', 'Status'].filter((field) => record?.[field] == null || String(record[field]).trim() === '');\nif (missing.length) throw new Error(`Missing required equipment fields: ${missing.join(', ')}`);\nreturn record;",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "eq-check",
+          "name": "Find existing IVO equipment",
+          "type": "getdatafromcachev2",
+          "description": "Preserve IVO identifiers when an equipment record already exists.",
+          "details": {
+            "Object": "Equipment",
+            "Expected results": "Zero or one",
+            "Properties": "uuid, equipmentId, equipmentName, accountingCode"
+          },
+          "filter": {
+            "property": "accountingCode",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Equipment).trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "lk-man",
+          "name": "Resolve equipment manufacturer",
+          "type": "getdatafromcachev2",
+          "description": "Translate Vista Manufacturer to equipmentManufacturerId.",
+          "details": {
+            "Object": "Equipment_Manufacturer",
+            "Expected results": "Zero or one",
+            "Properties": "equipmentManufacturerId"
+          },
+          "filter": {
+            "property": "manufacturerName",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Manufacturer ?? '').trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "lk-grp",
+          "name": "Resolve equipment group",
+          "type": "getdatafromcachev2",
+          "description": "Translate Vista Category to equipmentGroupId.",
+          "details": {
+            "Object": "Equipment_Group",
+            "Expected results": "Exactly one",
+            "Properties": "equipmentGroupId"
+          },
+          "filter": {
+            "property": "accountingCode",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Category ?? '').trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "look-ivo-job",
+          "name": "Resolve current IVO job",
+          "type": "getdatafromcachev2",
+          "description": "Resolve the optional Vista Job assignment.",
+          "details": {
+            "Object": "Job",
+            "Expected results": "Zero or one",
+            "Properties": "jobId"
+          },
+          "filter": {
+            "property": "accountingCode",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Job ?? '').trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "map-equipment",
+          "name": "Build IVO equipment payload",
+          "type": "code",
+          "description": "Apply the approved direct, constant, and lookup mappings.",
+          "details": {
+            "Target": "Equipment",
+            "Evidence": "customers/KNA/equipment/output/approved-mapping/mapping.csv",
+            "Open fields": "organizationId, meter IDs, activeWorkOrders, isPlannable"
+          },
+          "code": "const source = flow.trigger.data;\nconst existing = flow.step('eq-check').output?.[0] ?? {};\nconst manufacturer = flow.step('lk-man').output?.[0];\nconst group = flow.step('lk-grp').output?.[0];\nconst job = flow.step('look-ivo-job').output?.[0];\nconst text = (value) => value == null ? null : String(value).trim();\nconst vin = text(source.VINNumber);\nconst validVin = /^[A-HJ-NPR-Z0-9]{17}$/.test(vin ?? '');\nconst year = Number.parseInt(text(source.ModelYr), 10);\nreturn { uuid: existing.uuid ?? null, equipmentId: existing.equipmentId ?? null, equipmentName: existing.equipmentName ?? text(source.Equipment), equipmentYear: Number.isNaN(year) || year === 0 ? null : year, equipmentManufacturerId: manufacturer?.equipmentManufacturerId ?? null, equipmentModel: text(source.Model) || ' ', equipmentDescription: text(source.Description), serialNumber: validVin ? ' ' : (vin || ' '), vinNumber: validVin ? vin : null, equipmentGroupId: group?.equipmentGroupId ?? null, companyId: Number(flow.config.ivoCompanyId) || null, currentTrackVoJobId: job?.jobId ?? null, isDeleted: false, createdByUserId: Number(flow.config.createdByUserId), isActive: text(source.Status) === 'A', isLocationTracked: true, isScheduleable: false, isScheduleVo: false, isRental: text(source.OwnershipStatus) === 'R', accountingCode: existing.accountingCode ?? text(source.Equipment), licenseNumber: text(source.LicensePlateNo) || '' };",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "equipment-exists",
+          "name": "Choose equipment add or update",
+          "type": "if",
+          "description": "Update one match, add no match, and reject duplicates.",
+          "details": {
+            "True branch": "update-equipment",
+            "False branch": "add-equipment"
+          },
+          "code": "const matches = flow.step('eq-check').output ?? [];\nif (matches.length > 1) throw new Error('Multiple IVO equipment records match the Vista equipment code.');\nreturn matches.length === 1;",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "update-equipment",
+          "name": "Update IVO equipment",
+          "type": "queueactionv3",
+          "description": "Run when equipment-exists is true.",
+          "details": {
+            "Action path": "ivo-systems/equipment-management/1/equipment/update",
+            "Use existing body": "map-equipment",
+            "Wait for response": "Yes"
+          },
+          "code": "return flow.step('map-equipment').output;",
+          "connector": "IVO",
+          "generation": {
+            "confidence": 84,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "Approved mapping + IVO action schema"
+          }
+        },
+        {
+          "id": "add-equipment",
+          "name": "Add IVO equipment",
+          "type": "queueactionv3",
+          "description": "Run when equipment-exists is false.",
+          "details": {
+            "Action path": "ivo-systems/equipment-management/1/equipment/add",
+            "Use existing body": "map-equipment",
+            "Wait for response": "Yes"
+          },
+          "code": "return flow.step('map-equipment').output;",
+          "connector": "IVO",
+          "generation": {
+            "confidence": 84,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "Approved mapping + IVO action schema"
+          }
+        },
+        {
+          "id": "equipment-result",
+          "name": "Finish equipment sync",
+          "type": "stop",
+          "description": "End with the selected connector action status and response.",
+          "details": {
+            "Success": "Return processed equipment identifiers",
+            "Failure": "Return connector request and response for review"
+          },
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sync Vista contract items to IVO job item codes",
+      "trigger": "On-demand: one Vista contract item record",
+      "review": {
+        "status": "generated"
+      },
+      "configurations": [],
+      "reviewQuestions": [
+        "Confirm that Vista Contract resolves to the IVO Job accountingCode.",
+        "Confirm whether OrigContractUnits or ContractUnits supplies quantity.",
+        "Confirm TaxCode mappings, Notes, and default isActive behavior."
+      ],
+      "steps": [
+        {
+          "id": "validate-contract-item",
+          "name": "Validate required Vista contract item fields",
+          "type": "code",
+          "description": "Reject malformed records before IVO lookups or actions.",
+          "details": {
+            "Required source fields": "JCCo, Contract, Item, KeyID"
+          },
+          "code": "const record = flow.trigger.data;\nconst missing = ['JCCo', 'Contract', 'Item', 'KeyID'].filter((field) => record?.[field] == null || String(record[field]).trim() === '');\nif (missing.length) throw new Error(`Missing required contract item fields: ${missing.join(', ')}`);\nreturn record;",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "contract-job",
+          "name": "Resolve contract to IVO job",
+          "type": "getdatafromcachev2",
+          "description": "Resolve the target job before mapping its item code.",
+          "details": {
+            "Object": "Job",
+            "Expected results": "Exactly one",
+            "Properties": "jobId, accountingCode",
+            "Review": "Confirm Contract is the Job accountingCode source"
+          },
+          "filter": {
+            "property": "accountingCode",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Contract).trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "item-check",
+          "name": "Find existing IVO job item code",
+          "type": "getdatafromcachev2",
+          "description": "Find an item by resolved job and Vista Item.",
+          "details": {
+            "Object": "Job_Item_Code",
+            "Expected results": "Zero or one",
+            "Additional filter": "jobId = contract-job.output[0].jobId",
+            "Properties": "uuid, itemCodeId, jobId"
+          },
+          "filter": {
+            "property": "itemCode",
+            "operator": "Equals",
+            "value": "return String(flow.trigger.data.Item).trim();"
+          },
+          "connector": "IVO",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from connector object relationships and observed source identifiers.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "map-contract-item",
+          "name": "Build IVO job item code payload",
+          "type": "code",
+          "description": "Apply accepted mappings and expose unresolved decisions for review.",
+          "details": {
+            "Target": "Job_Item_Code",
+            "Evidence": "customers/KNA/contract_items/output/approved-mapping/mapping.csv",
+            "Review fields": "jobId source, quantity, note, isActive, accounting and estimating codes"
+          },
+          "code": "const source = flow.trigger.data;\nconst existing = flow.step('item-check').output?.[0] ?? {};\nconst job = flow.step('contract-job').output?.[0];\nconst text = (value) => value == null ? null : String(value).trim();\nconst quantity = Number.parseFloat(source.ContractUnits);\nreturn { uuid: existing.uuid ?? null, itemCodeId: existing.itemCodeId ?? null, jobId: job?.jobId ?? null, itemCode: (text(source.Item) ?? '').slice(0, 100), quantity: Number.isNaN(quantity) ? null : quantity, unitOfMeasure: text(source.UM)?.slice(0, 100) ?? null, description: (text(source.Description) ?? '').slice(0, 100), note: text(source.Notes)?.slice(0, 100) ?? null, accountingCode: text(source.TaxCode)?.slice(0, 100) ?? null, estimatingCode: text(source.TaxCode)?.slice(0, 100) ?? null, isActive: true };",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "contract-item-exists",
+          "name": "Choose job item code add or update",
+          "type": "if",
+          "description": "Update one match, add no match, and reject duplicates.",
+          "details": {
+            "True branch": "update-contract-item",
+            "False branch": "add-contract-item"
+          },
+          "code": "const matches = flow.step('item-check').output ?? [];\nif (matches.length > 1) throw new Error('Multiple IVO job item codes match this job and Vista item.');\nreturn matches.length === 1;",
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        },
+        {
+          "id": "update-contract-item",
+          "name": "Update IVO job item code",
+          "type": "queueactionv3",
+          "description": "Run when contract-item-exists is true.",
+          "details": {
+            "Action path": "ivo-systems/project-management/1/item-code/update",
+            "Use existing body": "map-contract-item",
+            "Wait for response": "Yes"
+          },
+          "code": "return flow.step('map-contract-item').output;",
+          "connector": "IVO",
+          "generation": {
+            "confidence": 84,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "Approved mapping + IVO action schema"
+          }
+        },
+        {
+          "id": "add-contract-item",
+          "name": "Add IVO job item code",
+          "type": "queueactionv3",
+          "description": "Run when contract-item-exists is false.",
+          "details": {
+            "Action path": "ivo-systems/project-management/1/item-code/add",
+            "Use existing body": "map-contract-item",
+            "Wait for response": "Yes"
+          },
+          "code": "return flow.step('map-contract-item').output;",
+          "connector": "IVO",
+          "generation": {
+            "confidence": 84,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "Approved mapping + IVO action schema"
+          }
+        },
+        {
+          "id": "contract-item-result",
+          "name": "Finish contract item sync",
+          "type": "stop",
+          "description": "End with the selected connector action status and response.",
+          "details": {
+            "Success": "Return processed job and item code identifiers",
+            "Failure": "Return connector request and response for review"
+          },
+          "connector": "App Xchange",
+          "generation": {
+            "confidence": 91,
+            "rationale": "Generated from the source profile, connector schema, and approved field mappings.",
+            "sources": "ERP CSV profile + connector schemas"
+          }
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-09-08T18:28:44.132Z"
+}
