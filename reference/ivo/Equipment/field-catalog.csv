@@ -1,0 +1,46 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Example primary key of the object,confirm,unknown,,,100.0%,2146,,confirm,not established by supplied schema or observations
+equipmentId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,2146,,confirm,not established by supplied schema or observations
+equipmentName,string,no,yes,no,,,,confirm,unknown,,,100.0%,2146,,confirm,not established by supplied schema or observations
+equipmentYear,integer,yes,no,no,,,,confirm,unknown,,,100.0%,59,,confirm,not established by supplied schema or observations
+equipmentManufacturerId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,125,,confirm,not established by supplied schema or observations
+equipmentModel,string,yes,no,no,,,,confirm,unknown,,,67.7%,538,,confirm,not established by supplied schema or observations
+equipmentDescription,string,yes,no,no,,,,confirm,unknown,,,100.0%,1395,,confirm,not established by supplied schema or observations
+serialNumber,string,yes,no,no,,,,confirm,unknown,,,60.4%,1275,,confirm,not established by supplied schema or observations
+vinNumber,string,yes,no,no,,,,confirm,unknown,,,32.1%,689,,confirm,not established by supplied schema or observations
+equipmentGroupId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,209,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,,confirm,unknown,,,100.0%,771,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+currentTrackVoJobId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,56,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isLocationTracked,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isScheduleable,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isScheduleVo,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isInventory,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isRental,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isAttachment,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isWarranty,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isVehicle,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isTrailer,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isSmallEquipment,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+attachedTo,integer,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+attachedToType,integer,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+divisionId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,3,,confirm,not established by supplied schema or observations
+mshaEqInspectionTemplateId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+accountingCode,string,no,yes,no,,,,confirm,unknown,,,100.0%,2145,,confirm,not established by supplied schema or observations
+displayNote,string,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+plateNumber,string,yes,no,no,,,,confirm,unknown,,,99.9%,1,,confirm,not established by supplied schema or observations
+licenseNumber,string,yes,no,yes,,,,integration,unknown,,,67.0%,911,,confirm,schema marks writeOnly
+color,string,yes,no,no,,,,confirm,unknown,,,99.9%,1,,confirm,not established by supplied schema or observations
+equipmentDetailNote,string,yes,no,no,,,,confirm,unknown,,,99.9%,1,,confirm,not established by supplied schema or observations
+lastHourMeterId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,583,,confirm,not established by supplied schema or observations
+lastOdometerId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,481,,confirm,not established by supplied schema or observations
+pmSetupCompleted,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+maintenanceSetupComplete,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+activeWorkOrders,integer,yes,no,no,,,,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+isPlannable,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+defaultEquipmentCodeId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,135,,confirm,not established by supplied schema or observations
+overrideEquipmentGroupColor,string,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+organizationId,integer,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations

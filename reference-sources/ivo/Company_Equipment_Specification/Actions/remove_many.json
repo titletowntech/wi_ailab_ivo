@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ActionInput": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "companyEquipmentSpecificationId": {
+                "type": "integer"
+              },
+              "companyId": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "uuid",
+              "companyEquipmentSpecificationId",
+              "companyId"
+            ]
+          },
+          "ActionOutput": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string",
+                "format": "uuid"
+              }
+            }
+          },
+          "ActionFailure": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "user_defined_code": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "errors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "details": true
+                  }
+                }
+              }
+            }
+          },
+          "CreateRtap": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "description": "List of equipment specification objects to remove"
+      },
+      "description": "List of equipment specification objects to remove"
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

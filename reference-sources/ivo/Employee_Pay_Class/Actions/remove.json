@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "laborCodeId": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "laborCodeId",
+    "uuid"
+  ]
+}

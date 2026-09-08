@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for company organization object"
+    },
+    "organizationId": {
+      "type": "integer",
+      "description": "Ivo Systems identifier for the company organization object."
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems owning company id for the company organization object."
+    },
+    "organizationName": {
+      "type": "string",
+      "description": "Unique organization name"
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unique accounting code for the organization if applicable"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deletedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deletedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "organizationId",
+    "companyId",
+    "organizationName"
+  ],
+  "description": "Company Organization object."
+}

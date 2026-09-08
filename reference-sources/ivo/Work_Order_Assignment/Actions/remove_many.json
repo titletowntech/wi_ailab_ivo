@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "workOrderAssignmentId": {
+            "type": "integer"
+          },
+          "workOrderId": {
+            "type": "integer"
+          },
+          "assignedToUserId": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "uuid",
+          "workOrderAssignmentId",
+          "workOrderId",
+          "assignedToUserId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

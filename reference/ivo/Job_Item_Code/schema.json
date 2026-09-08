@@ -1,0 +1,91 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the item code"
+    },
+    "itemCodeId": {
+      "type": "integer",
+      "description": "Item Code/Bid Item ID"
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Project Id associated with the item code"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Time at creation of item code object"
+    },
+    "itemCode": {
+      "type": "string",
+      "description": "Item Code/Bid Item Code",
+      "maxLength": 100
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "quantity bid for the job"
+    },
+    "unitOfMeasure": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Description of the unit measurement such as YDS, CUFT, etc.",
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Item code description",
+      "maxLength": 100
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Brief note about the code",
+      "maxLength": 100
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Account used for Item Code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimate code",
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicates if the code is still actively in use"
+    }
+  },
+  "required": [
+    "uuid",
+    "itemCodeId",
+    "itemCode",
+    "description"
+  ],
+  "description": "Item Code/Bid item Data Object."
+}

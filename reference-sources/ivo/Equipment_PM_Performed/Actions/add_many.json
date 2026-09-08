@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "equipmentId": {
+            "type": "integer"
+          },
+          "setupId": {
+            "type": "integer"
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "datePerformed": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hoursPerformed": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "odometerPerformed": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "workOrderId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "createdTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "uuid",
+          "equipmentId",
+          "setupId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

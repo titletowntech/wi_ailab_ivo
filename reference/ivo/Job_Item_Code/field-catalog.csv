@@ -1,0 +1,13 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the item code,confirm,unknown,,,100.0%,172,,confirm,not established by supplied schema or observations
+itemCodeId,integer,no,yes,no,,,Item Code/Bid Item ID,confirm,unknown,,,100.0%,172,,confirm,not established by supplied schema or observations
+jobId,integer,yes,no,no,,,Project Id associated with the item code,confirm,unknown,,,100.0%,156,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Time at creation of item code object,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+itemCode,string,no,yes,no,,100,Item Code/Bid Item Code,confirm,unknown,,,100.0%,14,,confirm,not established by supplied schema or observations
+quantity,number,yes,no,no,,,quantity bid for the job,confirm,unknown,,,100.0%,3,,confirm,not established by supplied schema or observations
+unitOfMeasure,string,yes,no,no,,100,"Description of the unit measurement such as YDS, CUFT, etc.",confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+description,string,no,yes,no,,100,Item code description,confirm,unknown,,,100.0%,20,,confirm,not established by supplied schema or observations
+note,string,yes,no,no,,100,Brief note about the code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+accountingCode,string,yes,no,no,,100,Account used for Item Code,confirm,unknown,,,100.0%,14,,confirm,not established by supplied schema or observations
+estimatingCode,string,yes,no,no,,100,Estimate code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,Indicates if the code is still actively in use,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations

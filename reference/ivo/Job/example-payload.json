@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "purpose": "Shape example only; IDs and business values are not production data.",
+    "confirmBeforeUse": [
+      "generated fields",
+      "lookup-backed fields",
+      "defaults"
+    ]
+  },
+  "payload": {
+    "uuid": "00000000-0000-4000-8000-000000000001"
+  }
+}

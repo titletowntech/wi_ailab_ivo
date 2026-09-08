@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "object": "Linked_User",
+  "sourceOfTruth": "reference/ivo/Linked_User/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "companyId",
+      "email",
+      "first_name",
+      "last_name"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [
+      "email",
+      "first_name",
+      "last_name",
+      "phoneNumber"
+    ],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": []
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "employeeGroupName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 45
+    },
+    "employeeGroupDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "employeeGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "employeeGroupName"
+  ]
+}

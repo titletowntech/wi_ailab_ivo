@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "object": "Equipment_PM_Performed",
+  "sourceOfTruth": "reference/ivo/Equipment_PM_Performed/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "performedId",
+      "equipmentId",
+      "setupId"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "uuid",
+      "performedId",
+      "equipmentId",
+      "setupId",
+      "isDeleted",
+      "createdByUserId",
+      "datePerformed",
+      "hoursPerformed",
+      "odometerPerformed",
+      "workOrderId",
+      "createdTimestampUtc",
+      "note"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

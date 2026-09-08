@@ -1,0 +1,10 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the equipment specification,confirm,unknown,,,100.0%,29,,confirm,not established by supplied schema or observations
+companyEquipmentSpecificationId,integer,no,yes,no,,,Ivo Systems company equipment specification id,confirm,unknown,,,100.0%,29,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems company id,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+specificationName,string,no,yes,no,,,Name of the equipment specification,confirm,unknown,,,100.0%,29,,confirm,not established by supplied schema or observations
+specificationDescription,string,yes,no,no,,,Short description of the equipment specification,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,Boolean flag indicating if the equipment specification is active/inactive,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,Boolean flag indicating if the equipment specification is deleted/inactive,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Utc timestamp generated when the equipment specification was created,confirm,unknown,,,100.0%,14,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,Ivo Systems user id that created the equipment specification - default 45 (IVO Systems User),confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations

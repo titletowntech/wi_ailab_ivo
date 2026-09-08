@@ -1,0 +1,13 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+performedId,yes,integer,no,yes,,100.0%,1283,0,1283,,yes,integer,5,5,0,47375,0.1%,CANDIDATE_KEY
+equipmentId,yes,integer,no,yes,,100.0%,1283,0,602,,,integer,5,5,0,53373,0.9%,
+setupId,yes,integer,no,yes,,100.0%,1283,0,1231,,,integer,5,5,0,36709,0.2%,
+isDeleted,yes,boolean,yes,no,,100.0%,1283,0,2,,,integer,1,1,0,0,99.7%,TYPE_MISMATCH
+createdByUserId,yes,integer,yes,no,,100.0%,1283,0,7,,,integer,4,5,0,9236,91.6%,
+datePerformed,yes,string,yes,no,,100.0%,1283,0,458,,,date,10,10,0,2026-02-16,1.9%,
+hoursPerformed,yes,integer,yes,no,,100.0%,1283,0,681,,,integer,1,5,0,NULL,20.4%,PLACEHOLDER_NULL;MIXED_FORMAT
+odometerPerformed,yes,integer,yes,no,,100.0%,1283,0,59,,,string,3,6,0,NULL,92.7%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+workOrderId,yes,integer,yes,no,,100.0%,1283,0,908,,,integer,4,5,0,98163,0.5%,PLACEHOLDER_NULL
+createdTimestampUtc,yes,string,yes,no,,100.0%,1283,0,946,,,date,19,19,0,2026-08-10 16:12:46,0.5%,
+note,yes,string,yes,no,,99.9%,1282,1,2,,,string,13,21,0,Added from Work Order,99.8%,
+uuid,yes,string,no,yes,,100.0%,1283,0,1283,,yes,uuid,36,36,0,f89b5a88-d45d-43db-9ba7-d207ade0daf2,0.1%,CANDIDATE_KEY

@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentMoveId": {
+      "type": "integer"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "fromLocationId": {
+      "type": "integer"
+    },
+    "toLocationId": {
+      "type": "integer"
+    },
+    "moveNote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scheduledMoveId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentMoveId",
+    "equipmentId",
+    "fromLocationId",
+    "toLocationId"
+  ],
+  "description": "Equipment location move data object."
+}

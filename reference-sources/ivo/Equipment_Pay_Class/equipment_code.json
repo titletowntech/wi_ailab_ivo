@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the equipment code"
+    },
+    "equipmentCodeId": {
+      "type": "integer",
+      "description": "Equipment Code/Rate Id"
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Job Id where code can be utilized"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Timestamp when the object was created"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "User Id of the user who created the object"
+    },
+    "equipmentCode": {
+      "type": "string",
+      "description": "Equipment Code used for identification by users",
+      "maxLength": 100
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Description of the equipment code",
+      "maxLength": 100
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Accounting Code for the equipment code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimating Code for the equipment code",
+      "maxLength": 100
+    },
+    "jobOperatorLaborCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Job Operator Labor Code Id"
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "Indicates if the equipment code is active"
+    },
+    "jobChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Job Charge Rate Per Hour"
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentCodeId",
+    "equipmentCode",
+    "isActive"
+  ],
+  "description": "Equipment Rate Code Data Object"
+}

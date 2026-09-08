@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyEquipmentStatusId": {
+            "type": "integer"
+          },
+          "companyId": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "uuid",
+          "companyEquipmentStatusId",
+          "companyId"
+        ],
+        "description": "List of equipment status objects to remove"
+      },
+      "description": "List of equipment status objects to remove"
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

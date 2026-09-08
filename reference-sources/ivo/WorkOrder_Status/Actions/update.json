@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "statusChangeId": {
+      "type": "integer"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "workOrderStatus": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "changeNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    }
+  },
+  "required": [
+    "uuid",
+    "statusChangeId",
+    "workOrderId"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "workOrderId": {
+            "type": "integer"
+          },
+          "assignedToUserId": {
+            "type": "integer"
+          },
+          "createdTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "deletedByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "deletedTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "workOrderId",
+          "assignedToUserId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

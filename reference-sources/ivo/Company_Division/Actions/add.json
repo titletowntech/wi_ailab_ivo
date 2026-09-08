@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "divisionName": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "divisionDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "divisionName"
+  ]
+}

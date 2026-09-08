@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the cost code"
+    },
+    "costCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Cost Code unique ID"
+    },
+    "costCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Name of the cost code",
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Description of the cost code",
+      "maxLength": 100
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Job ID where cost code is used"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "floating point number of the quantity of the cost code unit"
+    },
+    "quantityUnitType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "User defined quantity unit type",
+      "maxLength": 100
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Cost code notes",
+      "maxLength": 100
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Current timestamp at creation of the cost code"
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Cost code can be used"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Cost code can no longer be used"
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Cost code accounting code number",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimating code for the cost code",
+      "maxLength": 100
+    },
+    "costCodeTemplateId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "An ID of a quick setup template"
+    }
+  },
+  "required": [
+    "uuid"
+  ],
+  "description": "Company Cost Code Object"
+}

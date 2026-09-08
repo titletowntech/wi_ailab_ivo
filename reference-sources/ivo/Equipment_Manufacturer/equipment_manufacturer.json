@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentManufacturerId": {
+      "type": "integer"
+    },
+    "manufacturerShortName": {
+      "type": "string"
+    },
+    "manufacturerLongName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manufacturerDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentManufacturerId",
+    "manufacturerShortName",
+    "companyId"
+  ],
+  "description": "Equipment manufacturer data object."
+}

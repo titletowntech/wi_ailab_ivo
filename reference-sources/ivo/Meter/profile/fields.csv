@@ -1,0 +1,13 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+equipmentId,yes,integer,no,yes,,100.0%,20203,0,547,,,integer,5,5,0,52195,1.8%,
+companyId,yes,integer,no,yes,,100.0%,20203,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+uuid,yes,string,no,yes,,100.0%,20203,0,20203,,yes,uuid,36,36,0,561f44e8-0905-4cca-a364-98c0d1c41ac1,0.0%,CANDIDATE_KEY
+meterId,yes,integer,no,yes,,100.0%,20203,0,20203,,yes,integer,7,8,0,9958396,0.0%,CANDIDATE_KEY
+totalMeter,yes,number,yes,no,,100.0%,20203,0,13349,,,decimal,4,9,0,1539.00,0.5%,
+timestamp,yes,string,yes,no,,100.0%,20203,0,17871,,,date,19,19,0,2026-08-15 12:00:00,0.6%,
+createdTimestampUtc,yes,string,yes,no,,100.0%,20203,0,9571,,,date,19,19,0,2026-08-17 15:08:33,0.0%,
+isDeleted,yes,boolean,yes,no,,100.0%,20203,0,2,,,integer,1,1,0,0,100.0%,TYPE_MISMATCH
+source,yes,string,yes,no,,100.0%,20203,0,11,,,string,4,30,0,Samsara Odometer Stats API,56.2%,PLACEHOLDER_NULL
+note,yes,string,yes,no,,1.2%,233,19970,17,,,string,4,53,2,Initialized from last telematics hour meter ping,65.2%,PADDED;SPARSE
+meterType,yes,string,yes,no,,100.0%,20203,0,2,,,string,4,8,0,ODOMETER,57.3%,
+equipmentCode,yes,string,no,yes,,100.0%,20203,0,547,,,integer,6,8,0,568800,1.8%,MIXED_FORMAT;NUMERIC_AS_STRING

@@ -1,0 +1,171 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ActionInput": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "companyEquipmentSpecificationId": {
+                "type": "integer"
+              },
+              "companyId": {
+                "type": "integer"
+              },
+              "specificationName": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "specificationDescription": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "maxLength": 255
+              },
+              "isActive": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "isDeleted": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "uuid",
+              "companyEquipmentSpecificationId",
+              "companyId"
+            ]
+          },
+          "ActionOutput": {
+            "type": "object",
+            "properties": {
+              "uuid": {
+                "type": "string",
+                "format": "uuid",
+                "description": "Unique key for the equipment specification"
+              },
+              "companyEquipmentSpecificationId": {
+                "type": "integer",
+                "description": "Ivo Systems company equipment specification id"
+              },
+              "companyId": {
+                "type": "integer",
+                "description": "Ivo Systems company id"
+              },
+              "specificationName": {
+                "type": "string",
+                "description": "Name of the equipment specification"
+              },
+              "specificationDescription": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Short description of the equipment specification"
+              },
+              "isActive": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "description": "Boolean flag indicating if the equipment specification is active/inactive"
+              },
+              "isDeleted": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "description": "Boolean flag indicating if the equipment specification is deleted/inactive"
+              },
+              "createdTimestampUtc": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Utc timestamp generated when the equipment specification was created"
+              },
+              "createdByUserId": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "description": "Ivo Systems user id that created the equipment specification - default 45 (IVO Systems User)"
+              }
+            },
+            "required": [
+              "uuid",
+              "companyEquipmentSpecificationId",
+              "companyId",
+              "specificationName"
+            ],
+            "description": "Equipment Specification object"
+          },
+          "ActionFailure": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "user_defined_code": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "errors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "details": true
+                  }
+                }
+              }
+            }
+          },
+          "CreateRtap": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "description": "List of equipment specification objects to update"
+      },
+      "description": "List of equipment specification objects to update"
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

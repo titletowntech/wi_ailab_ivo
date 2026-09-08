@@ -1,0 +1,13 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the equipment code,confirm,unknown,,,100.0%,1918,,confirm,not established by supplied schema or observations
+equipmentCodeId,integer,no,yes,no,,,Equipment Code/Rate Id,confirm,unknown,,,100.0%,1918,,confirm,not established by supplied schema or observations
+jobId,integer,yes,no,no,,,Job Id where code can be utilized,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Timestamp when the object was created,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,User Id of the user who created the object,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+equipmentCode,string,no,yes,no,,100,Equipment Code used for identification by users,confirm,unknown,,,100.0%,821,,confirm,not established by supplied schema or observations
+description,string,yes,no,no,,100,Description of the equipment code,confirm,unknown,,,99.8%,608,,confirm,not established by supplied schema or observations
+accountingCode,string,yes,no,no,,100,Accounting Code for the equipment code,confirm,unknown,,,100.0%,8,,confirm,not established by supplied schema or observations
+estimatingCode,string,yes,no,no,,100,Estimating Code for the equipment code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+jobOperatorLaborCodeId,integer,yes,no,no,,,Job Operator Labor Code Id,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isActive,boolean,no,yes,no,,,Indicates if the equipment code is active,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+jobChargeRatePerHour,number,yes,no,no,,,Job Charge Rate Per Hour,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations

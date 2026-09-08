@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the labor code"
+    },
+    "laborCodeId": {
+      "type": "integer",
+      "description": "Labor Code ID"
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Project Id associated with Labor Code"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Timestamp when the record was created"
+    },
+    "laborCode": {
+      "type": "string",
+      "description": "Labor Code alphanumeric identifier",
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the Labor Code",
+      "maxLength": 100
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional note for the Labor Code",
+      "maxLength": 100
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional accounting code for the Labor Code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional estimating code for the Labor Code",
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": "boolean",
+      "description": "Indicates if the Labor Code is active"
+    },
+    "jobRegularChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Regular charge rate per hour for the Labor Code"
+    },
+    "jobOvertimeChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Overtime charge rate per hour for the Labor Code"
+    },
+    "jobDoubleTimeChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Double time charge rate per hour for the Labor Code"
+    }
+  },
+  "required": [
+    "uuid",
+    "laborCodeId",
+    "laborCode",
+    "description",
+    "isActive"
+  ],
+  "description": "Labor Code Selectable By Field/Shop Employees"
+}

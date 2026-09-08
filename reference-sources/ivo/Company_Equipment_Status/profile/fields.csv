@@ -1,0 +1,10 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+companyEquipmentStatusId,yes,integer,no,yes,,100.0%,5,0,5,,yes,integer,4,4,0,1308,20.0%,CANDIDATE_KEY
+statusName,yes,string,no,yes,,100.0%,5,0,5,,yes,string,4,9,0,Available,20.0%,CANDIDATE_KEY;PLACEHOLDER_NULL
+statusColor,yes,string,yes,no,,80.0%,4,1,4,,,string,7,7,0,#50C878,25.0%,
+isDeleted,yes,boolean,yes,no,,100.0%,5,0,1,yes,,integer,1,1,0,0,100.0%,CONSTANT;TYPE_MISMATCH
+createdTimestampUtc,yes,string,yes,no,,100.0%,5,0,1,yes,,date,19,19,0,2026-04-21 13:22:36,100.0%,CONSTANT
+createdByUserId,yes,integer,yes,no,,100.0%,5,0,1,yes,,integer,2,2,0,45,100.0%,CONSTANT
+companyId,yes,integer,no,yes,,100.0%,5,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+icon,yes,string,yes,no,,100.0%,5,0,1,yes,,string,25,25,0,fas fa-exclamation-circle,100.0%,CONSTANT
+uuid,yes,string,no,yes,,100.0%,5,0,5,,yes,uuid,36,36,0,55c91307-3dc0-4d44-bba5-b2e10fa3fb95,20.0%,CANDIDATE_KEY

@@ -1,0 +1,10 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+workOrderAssignmentId,yes,integer,no,yes,,100.0%,104,0,104,,yes,integer,5,5,0,44620,1.0%,CANDIDATE_KEY
+workOrderId,yes,integer,no,yes,,100.0%,104,0,87,,,integer,5,5,0,96563,4.8%,
+assignedToUserId,yes,integer,no,yes,,100.0%,104,0,20,,,integer,5,5,0,15376,12.5%,
+createdTimestampUtc,yes,string,yes,no,,100.0%,104,0,92,,,date,19,19,0,2026-08-11 13:27:35,4.8%,
+createdByUserId,yes,integer,yes,no,,100.0%,104,0,17,,,integer,5,5,0,16222,58.7%,
+isDeleted,yes,boolean,yes,no,,100.0%,104,0,2,,,integer,1,1,0,0,91.3%,TYPE_MISMATCH
+deletedByUserId,yes,integer,yes,no,,100.0%,104,0,3,,,string,4,5,0,NULL,91.3%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+deletedTimestampUtc,yes,string,yes,no,,100.0%,104,0,10,,,string,4,19,0,NULL,91.3%,PLACEHOLDER_NULL;MIXED_FORMAT
+uuid,yes,string,no,yes,,100.0%,104,0,104,,yes,uuid,36,36,0,7df89c3d-1b6c-4ebe-8749-58859446a92c,1.0%,CANDIDATE_KEY

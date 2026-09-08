@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "divisionId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "divisionName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "divisionDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deletedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deletedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "updatedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updatedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "divisionId",
+    "companyId"
+  ]
+}

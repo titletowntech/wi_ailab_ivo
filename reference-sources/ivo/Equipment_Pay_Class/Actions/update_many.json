@@ -1,0 +1,75 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "equipmentCodeId": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "jobId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "equipmentCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "accountingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "estimatingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "isActive": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "jobChargeRatePerHour": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "equipmentCodeId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemCodeId": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "jobId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "createdTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "itemCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "quantity": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unitOfMeasure": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "accountingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "estimatingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "isActive": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "itemCodeId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

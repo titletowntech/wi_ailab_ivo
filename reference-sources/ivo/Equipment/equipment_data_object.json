@@ -1,0 +1,271 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Example primary key of the object"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "equipmentName": {
+      "type": "string"
+    },
+    "equipmentYear": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "equipmentManufacturerId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "equipmentModel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "equipmentDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serialNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vinNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "equipmentGroupId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "currentTrackVoJobId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isLocationTracked": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isScheduleable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isScheduleVo": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isInventory": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isRental": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isAttachment": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isWarranty": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isVehicle": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isTrailer": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isSmallEquipment": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "attachedTo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "attachedToType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mshaEqInspectionTemplateId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "accountingCode": {
+      "type": "string"
+    },
+    "displayNote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plateNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licenseNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "color": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "equipmentDetailNote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastHourMeterId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lastOdometerId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "pmSetupCompleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "maintenanceSetupComplete": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "activeWorkOrders": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isPlannable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "defaultEquipmentCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "overrideEquipmentGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organizationId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentId",
+    "equipmentName",
+    "companyId",
+    "accountingCode"
+  ],
+  "description": "Updated equipment data object"
+}

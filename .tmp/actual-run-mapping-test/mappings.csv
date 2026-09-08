@@ -1,0 +1,185 @@
+operation,destination_object,destination_field,source_object,source_fields,kind,lookup_steps,value_handling,action_step
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,uuid,vista/em/2/equipment,,generated,,=return uuid.v4();,create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,manufacturerShortName,vista/em/2/equipment,Manufacturer,direct,,"=const man = _.trim(flow.trigger.data?.Manufacturer) ?? null;
+
+if (man) {
+  return man;
+}
+
+return ' ';",create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,manufacturerLongName,vista/em/2/equipment,Manufacturer,direct,,"=const man = _.trim(flow.trigger.data?.Manufacturer) ?? null;
+
+if (man) {
+  return man;
+}
+
+return ' ';",create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,manufacturerDescription,vista/em/2/equipment,Manufacturer,direct,,"=const man = _.trim(flow.trigger.data?.Manufacturer) ?? null;
+
+if (man) {
+  return man;
+}
+
+return ' ';",create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,isDeleted,vista/em/2/equipment,,constant,,=return false;,create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,companyId,vista/em/2/equipment,,constant,,=return 265;,create-man
+add,ivo-systems/equipment-management/1/equipment-manufacturer/add,createdByUserId,vista/em/2/equipment,,constant,,=return 45;,create-man
+add,ivo-systems/equipment-management/1/equipment/add,uuid,vista/em/2/equipment,,generated,,=return uuid.v4();,create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentName,vista/em/2/equipment,Equipment,direct,,=return _.trim(flow.trigger.data?.Equipment);,create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentYear,vista/em/2/equipment,ModelYr,direct,,"=// adjust backend to null out equipment year if zero
+return parseInt(_.trim(flow.trigger.data?.ModelYr)) ?? null;",create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentManufacturerId,vista/em/2/equipment,Manufacturer,lookup,lk-man|create-man,"=const look = flow.step('lk-man')?.output;
+
+if(look === undefined){
+  return flow.step('create-man').actionResponse?.result?.equipmentManufacturerId ?? null;
+}
+
+return look?.equipmentManufacturerId;",create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentModel,vista/em/2/equipment,Model,direct,,"=if (flow.trigger.data?.Model) {
+  const model = _.trim(flow.trigger.data.Model);
+
+  if (model !== '') {
+    return model;
+  } else {
+    return ' ';
+  }
+}
+
+return null;",create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentDescription,vista/em/2/equipment,Description,direct,,"=if (flow.trigger.data?.Description) {
+  const desc = _.trim(flow.trigger.data.Description);
+
+  if (desc !== '') {
+    return desc;
+  } else {
+    return ' ';
+  }
+}
+
+return null;",create
+add,ivo-systems/equipment-management/1/equipment/add,serialNumber,vista/em/2/equipment,VINNumber,direct,,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (isVin(flow.trigger.data?.VINNumber ?? '')) {
+  return ' ';
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? ' ';",create
+add,ivo-systems/equipment-management/1/equipment/add,vinNumber,vista/em/2/equipment,VINNumber,direct,,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (!isVin(flow.trigger.data?.VINNumber ?? ' ')) {
+  return null;
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? null;",create
+add,ivo-systems/equipment-management/1/equipment/add,equipmentGroupId,vista/em/2/equipment,Category,lookup,lk-grp,=return flow.step('lk-grp')?.output?.equipmentGroupId ?? null;,create
+add,ivo-systems/equipment-management/1/equipment/add,companyId,vista/em/2/equipment,,constant,,=return flow.config?.ivoCompanyId;,create
+add,ivo-systems/equipment-management/1/equipment/add,currentTrackVoJobId,vista/em/2/equipment,Job,lookup,look-ivo-job,=return flow.step('look-ivo-job').output?.jobId ?? null;,create
+add,ivo-systems/equipment-management/1/equipment/add,isDeleted,vista/em/2/equipment,,constant,,=return false;,create
+add,ivo-systems/equipment-management/1/equipment/add,createdByUserId,vista/em/2/equipment,,constant,,=return 45;,create
+add,ivo-systems/equipment-management/1/equipment/add,isActive,vista/em/2/equipment,Status,direct,,=return _.trim(flow.trigger.data?.Status) === 'A';,create
+add,ivo-systems/equipment-management/1/equipment/add,isLocationTracked,vista/em/2/equipment,,constant,,=return true;,create
+add,ivo-systems/equipment-management/1/equipment/add,isScheduleable,vista/em/2/equipment,,constant,,=return false;,create
+add,ivo-systems/equipment-management/1/equipment/add,isScheduleVo,vista/em/2/equipment,,constant,,=return false;,create
+add,ivo-systems/equipment-management/1/equipment/add,isRental,vista/em/2/equipment,OwnershipStatus,direct,,=return _.trim(flow.trigger.data?.OwnershipStatus) === 'R';,create
+add,ivo-systems/equipment-management/1/equipment/add,divisionId,vista/em/2/equipment,,constant,,"=// to be set to equipment shop once created so it will be a static id
+return 699;",create
+add,ivo-systems/equipment-management/1/equipment/add,accountingCode,vista/em/2/equipment,Equipment,direct,,=return _.trim(flow.trigger.data?.Equipment);,create
+add,ivo-systems/equipment-management/1/equipment/add,licenseNumber,vista/em/2/equipment,LicensePlateNo,direct,,"=if(flow.trigger.data?.LicensePlateNo){
+  return _.trim(flow.trigger.data.LicensePlateNo);
+}
+
+return null;",create
+add,ivo-systems/equipment-management/1/equipment/add,defaultEquipmentCodeId,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,lk-pay,=return flow.step('lk-pay').output[0]?.equipmentCodeId ?? null;,create
+update,ivo-systems/equipment-management/1/equipment/update,uuid,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,eq-check,=return flow.step('eq-check').output?.uuid;,update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentId,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,eq-check,=return flow.step('eq-check').output?.equipmentId;,update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentName,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,eq-check,=return flow.step('eq-check').output?.equipmentName;,update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentYear,vista/em/2/equipment,ModelYr,direct,,"=// adjust backend to null out equipment year if zero
+return parseInt(_.trim(flow.trigger.data?.ModelYr)) ?? null;",update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentManufacturerId,vista/em/2/equipment,Manufacturer,lookup,lk-man|create-man,"=const look = flow.step('lk-man')?.output;
+
+if(look === undefined){
+  return flow.step('create-man').actionResponse?.result?.equipmentManufacturerId ?? null;
+}
+
+return look?.equipmentManufacturerId;",update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentModel,vista/em/2/equipment,Model,direct,,"=if(flow.trigger.data?.Model){
+  const mod = _.trim(flow.trigger.data.Model);
+
+  if(mod === ''){
+    return ' ';
+  } else {
+    return mod;
+  }
+}
+
+return null;",update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentDescription,vista/em/2/equipment,Description,direct,,=return _.trim(flow.trigger.data?.Description);,update
+update,ivo-systems/equipment-management/1/equipment/update,serialNumber,vista/em/2/equipment,VINNumber,direct,,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (isVin(flow.trigger.data?.VINNumber ?? '')) {
+  return ' ';
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? ' ';",update
+update,ivo-systems/equipment-management/1/equipment/update,vinNumber,vista/em/2/equipment,VINNumber,direct,,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (!isVin(flow.trigger.data?.VINNumber ?? ' ')) {
+  return null;
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? null;",update
+update,ivo-systems/equipment-management/1/equipment/update,equipmentGroupId,vista/em/2/equipment,Category,lookup,lk-grp,=return flow.step('lk-grp').output?.equipmentGroupId;,update
+update,ivo-systems/equipment-management/1/equipment/update,companyId,vista/em/2/equipment,,constant,,=return flow.config.ivoCompanyId;,update
+update,ivo-systems/equipment-management/1/equipment/update,currentTrackVoJobId,vista/em/2/equipment,Job,lookup,look-ivo-job,=return flow.step('look-ivo-job').output?.jobId ?? null;,update
+update,ivo-systems/equipment-management/1/equipment/update,isDeleted,vista/em/2/equipment,,constant,,=return false;,update
+update,ivo-systems/equipment-management/1/equipment/update,isActive,vista/em/2/equipment,Status,direct,,=return _.trim(flow.trigger.data?.Status) === 'A';,update
+update,ivo-systems/equipment-management/1/equipment/update,divisionId,vista/em/2/equipment,Department,lookup,lk-div,"=// hard coded to equipment shop, once created set here
+return flow.step('lk-div').output?.divisionId ?? 699;",update
+update,ivo-systems/equipment-management/1/equipment/update,accountingCode,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,eq-check,=return flow.step('eq-check').output?.accountingCode;,update
+update,ivo-systems/equipment-management/1/equipment/update,licenseNumber,vista/em/2/equipment,LicensePlateNo,direct,,=return _.trim(flow.trigger.data?.LicensePlateNo ?? '');,update
+update,ivo-systems/equipment-management/1/equipment/update,isRental,vista/em/2/equipment,OwnershipStatus,direct,,=return _.trim(flow.trigger.data?.OwnershipStatus) === 'R';,update
+update,ivo-systems/equipment-management/1/equipment/update,defaultEquipmentCodeId,vista/em/2/equipment,Equipment|OriginalEquipmentCode,lookup,lk-pay,=return flow.step('lk-pay').output[0]?.equipmentCodeId ?? null;,update

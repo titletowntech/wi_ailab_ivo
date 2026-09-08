@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "organizationId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "organizationId",
+    "companyId"
+  ]
+}

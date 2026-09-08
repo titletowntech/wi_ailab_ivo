@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "setupId": {
+      "type": "integer"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "pmName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 150
+    },
+    "intervalHours": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "intervalDays": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "intervalOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "beginningHours": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "beginningDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "beginningOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "fixedDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fixedHours": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "fixedOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "partsNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2500
+    },
+    "workNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5000
+    },
+    "triggerDays": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "triggerHours": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "triggerOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lastPerformedId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "companyEquipmentPmTemplateId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "setupId",
+    "equipmentId"
+  ]
+}

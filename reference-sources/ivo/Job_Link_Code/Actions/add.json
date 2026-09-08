@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "itemCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Item Code/Bid Item unique ID"
+    },
+    "costCodeId": {
+      "type": "integer"
+    },
+    "jobNumber": {
+      "type": "string"
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "Indicates if the cost code assignment is deleted [Default: FALSE]"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "quantity": {
+      "type": "number",
+      "description": "floating point number of the quantity of the cost code unit to help track job costing"
+    },
+    "equipmentCostBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Equipment budget allocated for equipment costs by phase code"
+    },
+    "laborCostBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Labor budget allocated for labor costs by phase code"
+    },
+    "laborHoursBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Total number of labor hours budgeted for the cost code assignment"
+    },
+    "companyId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Company ID associated with the cost code assignment"
+    }
+  },
+  "required": [
+    "uuid",
+    "costCodeId",
+    "jobNumber",
+    "isDeleted",
+    "quantity"
+  ]
+}

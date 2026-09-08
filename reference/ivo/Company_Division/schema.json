@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the division"
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems company id that this division belongs to"
+    },
+    "divisionName": {
+      "type": "string",
+      "description": "Display name for the division"
+    },
+    "divisionDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Company description for the division if applicable"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Utc timestamp generated when the division was created"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems user id that created the division - default 45 (IVO Systems User)"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Boolean flag indicating if the division has been deleted in either system"
+    },
+    "deletedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Utc timestamp of time of deletion"
+    },
+    "deletedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems user id that deleted the division"
+    },
+    "updatedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Utc timestamp of time of last update"
+    },
+    "updatedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems user id that last updated the division"
+    },
+    "divisionId": {
+      "type": "integer",
+      "description": "Ivo Systems division id"
+    }
+  },
+  "required": [
+    "uuid",
+    "divisionId",
+    "companyId",
+    "divisionName"
+  ],
+  "description": "Ivo Systems company division object"
+}

@@ -1,0 +1,13 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the division,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems company id that this division belongs to,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+divisionName,string,no,yes,no,,,Display name for the division,confirm,unknown,,,100.0%,38,,confirm,not established by supplied schema or observations
+divisionDescription,string,yes,no,no,,,Company description for the division if applicable,confirm,unknown,,,100.0%,38,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Utc timestamp generated when the division was created,confirm,unknown,,,100.0%,38,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,Ivo Systems user id that created the division - default 45 (IVO Systems User),confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,Boolean flag indicating if the division has been deleted in either system,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+deletedTimestampUtc,string,yes,no,no,,,Utc timestamp of time of deletion,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+deletedByUserId,integer,yes,no,no,,,Ivo Systems user id that deleted the division,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+updatedTimestampUtc,string,yes,no,no,,,Utc timestamp of time of last update,confirm,unknown,,,100.0%,7,,confirm,not established by supplied schema or observations
+updatedByUserId,integer,yes,no,no,,,Ivo Systems user id that last updated the division,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+divisionId,integer,no,yes,no,,,Ivo Systems division id,confirm,unknown,,,100.0%,38,,confirm,not established by supplied schema or observations

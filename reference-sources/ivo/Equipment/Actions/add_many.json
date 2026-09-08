@@ -1,0 +1,238 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "equipmentName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "equipmentYear": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "equipmentManufacturerId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "equipmentModel": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 150
+          },
+          "equipmentDescription": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 150
+          },
+          "serialNumber": {
+            "type": "string",
+            "maxLength": 150
+          },
+          "vinNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 150
+          },
+          "equipmentGroupId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "currentTrackVoJobId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isActive": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isLocationTracked": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isScheduleable": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isScheduleVo": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isInventory": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isRental": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isAttachment": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isWarranty": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isVehicle": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isTrailer": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isSmallEquipment": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "divisionId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "accountingCode": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "displayNote": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "plateNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 55
+          },
+          "licenseNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 55,
+            "writeOnly": true
+          },
+          "color": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 45
+          },
+          "equipmentDetailNote": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "lastHourMeterId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "lastOdometerId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isPlannable": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "defaultEquipmentCodeId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "organizationId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "equipmentName",
+          "serialNumber",
+          "companyId",
+          "accountingCode"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

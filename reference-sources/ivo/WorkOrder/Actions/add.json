@@ -1,0 +1,162 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "datePerformed": {
+      "type": "string"
+    },
+    "hourMeterId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "odometerId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10000
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isPmPerformed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "workOrderStatus": {
+      "type": "integer"
+    },
+    "updatedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sortOrder": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lastUpdatedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "substatusId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "externalCompanyCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "externalWorkOrderId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "externalWorkOrderType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalJobNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "externalCustomerNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "externalServiceStore": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "estimatedArrivalDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completionDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scheduledStart": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requestedDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentId",
+    "datePerformed",
+    "workOrderStatus"
+  ]
+}

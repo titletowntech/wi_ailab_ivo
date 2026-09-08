@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentStatusId": {
+      "type": "integer"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "startTime": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "endTime": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "startStatusId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "endStatusId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "statusNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 150
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentStatusId",
+    "equipmentId"
+  ]
+}

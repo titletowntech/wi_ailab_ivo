@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "companyEquipmentSpecificationId": {
+      "type": "integer"
+    },
+    "specificationValue": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "equipmentId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyEquipmentSpecificationId",
+    "specificationValue",
+    "equipmentId"
+  ]
+}

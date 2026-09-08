@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyEquipmentStatusId": {
+            "type": "integer"
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "statusName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 50
+          },
+          "statusColor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "icon": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "uuid",
+          "companyEquipmentStatusId",
+          "companyId"
+        ],
+        "description": "List of equipment status objects to update"
+      },
+      "description": "List of equipment status objects to update"
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

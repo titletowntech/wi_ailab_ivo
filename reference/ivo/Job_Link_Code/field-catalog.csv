@@ -1,0 +1,12 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the cost code assignment,confirm,unknown,,,100.0%,722,,confirm,not established by supplied schema or observations
+costCodeAssignmentId,integer,no,yes,no,,,Cost Code Assignment unique ID,confirm,unknown,,,100.0%,722,,confirm,not established by supplied schema or observations
+itemCodeId,integer,yes,no,no,,,Item Code/Bid Item unique ID,confirm,unknown,,,100.0%,167,,confirm,not established by supplied schema or observations
+costCodeId,integer,no,yes,no,,,Cost Code unique ID,confirm,unknown,,,100.0%,722,,confirm,not established by supplied schema or observations
+jobId,integer,no,yes,no,,,Job ID where cost code and/or the item code is used,confirm,unknown,,,100.0%,156,,confirm,not established by supplied schema or observations
+equipmentCostBudgetTotal,number,yes,no,no,,,Total budget for equipment on project,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+laborCostBudgetTotal,number,yes,no,no,,,Total budget for labor on project,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+laborHoursBudgetTotal,number,yes,no,no,,,Total budget for labor hours on project,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isDeleted,boolean,no,yes,no,,,Indicates if the cost code assignment is deleted,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Current timestamp at creation of the cost code assignment,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+quantity,number,yes,no,no,,,floating point number of the quantity of the cost code unit,confirm,unknown,,,100.0%,19,,confirm,not established by supplied schema or observations

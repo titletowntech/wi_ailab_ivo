@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "costCodeId": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "costCodeId",
+          "uuid"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

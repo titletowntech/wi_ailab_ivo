@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "meterId": {
+      "type": "integer"
+    },
+    "totalMeter": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "timestamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meterType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "equipmentCode": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentId",
+    "companyId",
+    "meterId",
+    "equipmentCode"
+  ],
+  "description": "Equipment hour and odometer reading data object."
+}

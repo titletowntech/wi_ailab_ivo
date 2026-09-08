@@ -1,0 +1,21 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+jobId,yes,integer,yes,no,,100.0%,169,0,169,,yes,integer,5,5,0,24976,0.6%,CANDIDATE_KEY
+jobNumber,yes,string,yes,no,75,100.0%,169,0,169,,yes,integer,3,6,0,482304,0.6%,CANDIDATE_KEY;MIXED_FORMAT;NUMERIC_AS_STRING
+jobShortName,yes,string,no,no,100,100.0%,169,0,167,,,string,3,57,0,E-470 MM 1 Sign Bridge Replacement,1.2%,
+jobLongName,yes,string,yes,no,150,95.9%,162,7,157,,,string,5,59,0,Harry S Truman Parkway,2.5%,WHITESPACE_NULL
+jobDescription,yes,string,yes,no,255,98.8%,167,2,165,,,string,10,60,0,E-470 MM 1 Sign Bridge Replacement,1.2%,
+jobColor,yes,string,yes,no,75,100.0%,169,0,7,,,string,4,9,0,#000000,34.3%,
+divisionId,yes,integer,yes,no,,100.0%,169,0,6,,,integer,3,3,0,634,33.7%,
+divisionDisplayName,yes,string,yes,no,150,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+jobTypeId,yes,integer,yes,no,,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+jobTypeDisplayName,yes,string,yes,no,50,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+jobDisplayNameWithJobNumber,yes,string,yes,no,200,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+jobDisplayName,yes,string,yes,no,150,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+isActive,yes,boolean,yes,no,,100.0%,169,0,2,,,integer,1,1,0,1,56.2%,TYPE_MISMATCH
+emergencyHospitalName,yes,string,yes,no,100,1.2%,2,167,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;SPARSE
+emergencyHospitalAddress,yes,string,yes,no,150,1.2%,2,167,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;SPARSE
+emergencyHospitalPhone,yes,string,yes,no,45,1.2%,2,167,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;SPARSE
+uuid,yes,string,no,yes,,100.0%,169,0,169,,yes,uuid,36,36,0,bc5a105f-b1fb-49fa-acbe-d6f262646673,0.6%,CANDIDATE_KEY
+accountingCode,yes,string,yes,no,100,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+estimatingCode,yes,string,yes,no,100,100.0%,169,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+organizations,yes,array,yes,no,,100.0%,169,0,1,yes,,string,2,2,0,[],100.0%,CONSTANT;TYPE_MISMATCH

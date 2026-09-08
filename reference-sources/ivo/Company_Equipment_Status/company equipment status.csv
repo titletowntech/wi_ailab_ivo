@@ -1,0 +1,6 @@
+companyEquipmentStatusId,statusName,statusColor,isDeleted,createdTimestampUtc,createdByUserId,companyId,icon,uuid
+1308,Available,#50C878,0,"2026-04-21 13:22:36",45,265,"fas fa-exclamation-circle",55c91307-3dc0-4d44-bba5-b2e10fa3fb95
+1309,Working,#ffc107,0,"2026-04-21 13:22:36",45,265,"fas fa-exclamation-circle",7cf4be7a-db78-43a4-9afe-46ed1d9cb433
+1310,Down,#dc3545,0,"2026-04-21 13:22:36",45,265,"fas fa-exclamation-circle",e30ef927-fad4-4b72-8ba1-a4b6b331510a
+1311,Standby,#17a2b8,0,"2026-04-21 13:22:36",45,265,"fas fa-exclamation-circle",d1a67f09-ae92-41f7-b656-e23e341da3c6
+1312,None,,0,"2026-04-21 13:22:36",45,265,"fas fa-exclamation-circle",4f6e0f32-d175-4e25-a15c-0c4ece51525f

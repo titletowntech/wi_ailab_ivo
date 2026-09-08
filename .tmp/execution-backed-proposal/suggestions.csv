@@ -1,0 +1,98 @@
+dest_field,source_field,kind,transform,status,confidence,score,alternatives,rationale,review_decision,review_notes
+uuid,Equipment,lookup,=return flow.step('eq-check').output?.uuid;,actual-run,high,,OriginalEquipmentCode,Recovered from Trimble update action update via eq-check.,,
+equipmentId,Equipment,lookup,=return flow.step('eq-check').output?.equipmentId;,actual-run,high,,OriginalEquipmentCode,Recovered from Trimble update action update via eq-check.,,
+equipmentName,Equipment,lookup,=return flow.step('eq-check').output?.equipmentName;,actual-run,high,,OriginalEquipmentCode,Recovered from Trimble update action update via eq-check.,,
+equipmentYear,ModelYr,direct,"=// adjust backend to null out equipment year if zero
+return parseInt(_.trim(flow.trigger.data?.ModelYr)) ?? null;",actual-run,high,,,Recovered from Trimble update action update.,,
+equipmentManufacturerId,Manufacturer,lookup,"=const look = flow.step('lk-man')?.output;
+
+if(look === undefined){
+  return flow.step('create-man').actionResponse?.result?.equipmentManufacturerId ?? null;
+}
+
+return look?.equipmentManufacturerId;",actual-run,high,,,"Recovered from Trimble update action update via lk-man, create-man.",,
+equipmentModel,Model,direct,"=if(flow.trigger.data?.Model){
+  const mod = _.trim(flow.trigger.data.Model);
+
+  if(mod === ''){
+    return ' ';
+  } else {
+    return mod;
+  }
+}
+
+return null;",actual-run,high,,,Recovered from Trimble update action update.,,
+equipmentDescription,Description,direct,=return _.trim(flow.trigger.data?.Description);,actual-run,high,,,Recovered from Trimble update action update.,,
+serialNumber,VINNumber,direct,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (isVin(flow.trigger.data?.VINNumber ?? '')) {
+  return ' ';
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? ' ';",actual-run,high,,,Recovered from Trimble update action update.,,
+vinNumber,VINNumber,direct,"=function isVin(input) {
+  if (typeof input !== 'string') return false;
+
+  if (input === null || input === undefined) return false;
+
+  const vin = input.trim().toUpperCase();
+
+  //must be 17 characters long, alphanumeric and cannot contain I, O, Q
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) return false;
+
+  return true;
+}
+
+if (!isVin(flow.trigger.data?.VINNumber ?? ' ')) {
+  return null;
+}
+
+return _.trim(flow.trigger.data?.VINNumber) ?? null;",actual-run,high,,,Recovered from Trimble update action update.,,
+equipmentGroupId,Category,lookup,=return flow.step('lk-grp').output?.equipmentGroupId;,actual-run,high,,,Recovered from Trimble update action update via lk-grp.,,
+createdTimestampUtc,,unexplained,"flow.todo(""Select a source for createdTimestampUtc"")",question,,32%,,No candidate has enough semantic evidence. Best candidate Category: declared types match.,,
+companyId,,constant,=return flow.config.ivoCompanyId;,actual-run,high,,,Recovered from Trimble update action update.,,
+currentTrackVoJobId,Job,lookup,=return flow.step('look-ivo-job').output?.jobId ?? null;,actual-run,high,,,Recovered from Trimble update action update via look-ivo-job.,,
+isDeleted,,constant,=return false;,actual-run,high,,,Recovered from Trimble update action update.,,
+createdByUserId,,constant,=return 45;,actual-run,high,,,Recovered from Trimble add action create.,,
+isActive,Status,direct,=return _.trim(flow.trigger.data?.Status) === 'A';,actual-run,high,,,Recovered from Trimble update action update.,,
+isLocationTracked,,constant,=return true;,actual-run,high,,,Recovered from Trimble add action create.,,
+isScheduleable,,constant,=return false;,actual-run,high,,,Recovered from Trimble add action create.,,
+isScheduleVo,,constant,=return false;,actual-run,high,,,Recovered from Trimble add action create.,,
+isInventory,,constant,flow.config.isInventory,recovered,,,,Single value on every populated row (2135 rows).,,
+isRental,OwnershipStatus,direct,=return _.trim(flow.trigger.data?.OwnershipStatus) === 'R';,actual-run,high,,,Recovered from Trimble update action update.,,
+isAttachment,,constant,flow.config.isAttachment,recovered,,,,Single value on every populated row (2135 rows).,,
+isWarranty,,constant,flow.config.isWarranty,recovered,,,,Single value on every populated row (2135 rows).,,
+isVehicle,,constant,flow.config.isVehicle,recovered,,,,Single value on every populated row (2135 rows).,,
+isTrailer,,constant,flow.config.isTrailer,recovered,,,,Single value on every populated row (2135 rows).,,
+isSmallEquipment,,constant,flow.config.isSmallEquipment,recovered,,,,Single value on every populated row (2135 rows).,,
+attachedTo,,empty,null,recovered,,,,Never populated in this export.,,
+attachedToType,,empty,null,recovered,,,,Never populated in this export.,,
+divisionId,Department,lookup,"=// hard coded to equipment shop, once created set here
+return flow.step('lk-div').output?.divisionId ?? 699;",actual-run,high,,,Recovered from Trimble update action update via lk-div.,,
+mshaEqInspectionTemplateId,,constant,flow.config.mshaEqInspectionTemplateId,recovered,,,,Single value on every populated row (2135 rows).,,
+accountingCode,Equipment,lookup,=return flow.step('eq-check').output?.accountingCode;,actual-run,high,,OriginalEquipmentCode,Recovered from Trimble update action update via eq-check.,,
+displayNote,,empty,null,recovered,,,,Never populated in this export.,,
+plateNumber,,empty,null,recovered,,,,Never populated in this export.,,
+licenseNumber,LicensePlateNo,direct,=return _.trim(flow.trigger.data?.LicensePlateNo ?? '');,actual-run,high,,,Recovered from Trimble update action update.,,
+color,,empty,null,recovered,,,,Never populated in this export.,,
+equipmentDetailNote,,empty,null,recovered,,,,Never populated in this export.,,
+lastHourMeterId,HourDate,lookup-candidate,"flow.todo(""Add a lookup step for HourDate, then map output[0].lastHourMeterId"")",question,low,49%,HourReading 49%; LastUsedDate 45%; ReplacedHourDate 45%,name overlap 40%; string conversion may be required; destination identifier likely requires a lookup,,
+lastOdometerId,LastUsedDate,lookup-candidate,"flow.todo(""Add a lookup step for LastUsedDate, then map output[0].lastOdometerId"")",question,low,49%,,name overlap 40%; string conversion may be required; destination identifier likely requires a lookup,,
+pmSetupCompleted,,constant,flow.config.pmSetupCompleted,recovered,,,,Single value on every populated row (2135 rows).,,
+maintenanceSetupComplete,,constant,flow.config.maintenanceSetupComplete,recovered,,,,Single value on every populated row (2135 rows).,,
+activeWorkOrders,,unexplained,"flow.todo(""Select a source for activeWorkOrders"")",question,,44%,,No candidate has enough semantic evidence. Best candidate udDirtWork: name overlap 33%; type evidence is incomplete.,,
+isPlannable,,unexplained,"flow.todo(""Select a source for isPlannable"")",question,,22%,,No candidate has enough semantic evidence. Best candidate Category: string conversion may be required.,,
+defaultEquipmentCodeId,Equipment,lookup,=return flow.step('lk-pay').output[0]?.equipmentCodeId ?? null;,actual-run,high,,OriginalEquipmentCode,Recovered from Trimble update action update via lk-pay.,,
+overrideEquipmentGroupColor,,empty,null,recovered,,,,Never populated in this export.,,
+organizationId,,unresolved,"flow.todo(""Select a source for organizationId"")",question,,32%,,No candidate has enough semantic evidence. Best candidate KeyID: declared types match.,,

@@ -1,0 +1,249 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the employee"
+    },
+    "employeeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems database ID for the employee"
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems company ID this employee belongs to"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "Employee first name",
+      "writeOnly": true
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Employee last name",
+      "writeOnly": true
+    },
+    "nickname": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Employee nickname"
+    },
+    "mobilePhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Employee mobile phone number",
+      "writeOnly": true
+    },
+    "emergencyContactName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Employee emergency contact name"
+    },
+    "emergencyContactNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Employee emergency contact phone number"
+    },
+    "employeeGroupId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the employee group this employee belongs to"
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the division this employee is assigned to"
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Accounting code for the employee"
+    },
+    "employeeCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Employee code identifier"
+    },
+    "overrideEmployeeGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Hex color override for this employee, overriding their group color"
+    },
+    "defaultLaborCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Default labor code ID for this employee"
+    },
+    "assignedToUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "User ID this employee is assigned to"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "User ID that created this employee record"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "UTC timestamp when the employee record was created"
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee is currently active"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee has been soft deleted"
+    },
+    "currentTrackVoJobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Current tracking job ID for location tracking"
+    },
+    "isLocationTracked": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee's location is being tracked"
+    },
+    "isScheduleable": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee can be scheduled"
+    },
+    "isVendor": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee is also a vendor"
+    },
+    "vendorName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Vendor name if the employee is a vendor"
+    },
+    "isTrucking": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee is involved in trucking"
+    },
+    "isForeman": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee is a foreman"
+    },
+    "isAssigned": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the employee is currently assigned to a job"
+    },
+    "assignedCount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Number of active assignments for the employee"
+    },
+    "canViewOtherEmployees": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view other employees"
+    },
+    "canViewOtherVendors": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view other vendors"
+    },
+    "canViewJobNotes": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view job notes"
+    },
+    "canViewEquipment": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view equipment"
+    },
+    "canViewOtherEmployeeNotes": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view other employees' notes"
+    },
+    "canViewOtherVendorNotes": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: can view other vendors' notes"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "firstName",
+    "lastName"
+  ],
+  "description": "Ivo Systems employee object"
+}

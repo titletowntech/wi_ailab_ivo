@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "subStatusId": {
+      "type": "integer"
+    },
+    "substatusName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deletedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "deletedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "subStatusId",
+    "companyId"
+  ]
+}

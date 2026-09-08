@@ -1,0 +1,8 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+statusChangeId,yes,integer,no,yes,,100.0%,1947,0,1947,,yes,integer,5,5,0,91050,0.1%,CANDIDATE_KEY
+workOrderId,yes,integer,no,yes,,100.0%,1947,0,974,,,integer,5,5,0,96903,0.3%,
+workOrderStatus,yes,integer,yes,no,,100.0%,1947,0,4,,,integer,1,1,0,3,48.9%,
+changeNote,yes,string,yes,no,,0.0%,0,1947,0,,,,0,0,0,,,EMPTY
+createdByUserId,yes,integer,yes,no,,100.0%,1947,0,15,,,integer,4,5,0,9236,89.2%,
+createdTimestampUtc,yes,string,yes,no,,100.0%,1947,0,1944,,,date,19,19,0,2026-08-06 21:23:50,0.1%,
+uuid,yes,string,no,yes,,100.0%,1947,0,1947,,yes,uuid,36,36,0,a535b573-c7f7-4b36-94ba-bcc7e5a6c39f,0.1%,CANDIDATE_KEY

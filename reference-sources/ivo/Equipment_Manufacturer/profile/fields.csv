@@ -1,0 +1,10 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+equipmentManufacturerId,yes,integer,no,yes,,100.0%,153,0,153,,yes,integer,5,5,0,10286,0.7%,CANDIDATE_KEY
+manufacturerShortName,yes,string,no,yes,,99.3%,152,1,152,,,string,2,20,0,LIXER,0.7%,WHITESPACE_NULL;REQUIRED_BUT_EMPTY
+manufacturerLongName,yes,string,yes,no,,99.3%,152,1,152,,,string,2,20,0,LIXER,0.7%,WHITESPACE_NULL
+manufacturerDescription,yes,string,yes,no,,10.5%,16,137,16,,,string,3,19,0,Honda V-Twin,6.3%,SPARSE
+createdTimestampUtc,yes,string,yes,no,,100.0%,153,0,38,,,date,19,19,0,2026-07-15 21:33:45,5.2%,
+isDeleted,yes,boolean,yes,no,,100.0%,153,0,1,yes,,integer,1,1,0,0,100.0%,CONSTANT;TYPE_MISMATCH
+companyId,yes,integer,no,yes,,100.0%,153,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+createdByUserId,yes,integer,yes,no,,100.0%,153,0,2,,,integer,1,2,0,0,89.5%,
+uuid,yes,string,no,yes,,100.0%,153,0,153,,yes,uuid,36,36,0,43fc1af8-5fea-467e-b7cc-5bb50a34cd08,0.7%,CANDIDATE_KEY

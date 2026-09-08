@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "specificationName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "specificationDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "specificationName"
+  ]
+}

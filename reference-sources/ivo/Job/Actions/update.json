@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "jobNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 75
+    },
+    "jobShortName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "jobDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "emergencyHospitalName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "emergencyHospitalAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 150
+    },
+    "emergencyHospitalPhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "orgName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "name or code of organization employee belongs to"
+    }
+  },
+  "required": [
+    "jobId",
+    "companyId"
+  ]
+}

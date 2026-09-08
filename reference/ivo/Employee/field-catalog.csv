@@ -1,0 +1,36 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the employee,confirm,unknown,,,100.0%,1116,,confirm,not established by supplied schema or observations
+employeeId,integer,yes,no,no,,,Ivo Systems database ID for the employee,confirm,unknown,,,100.0%,1116,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems company ID this employee belongs to,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+firstName,string,no,yes,yes,,,Employee first name,integration,unknown,,,100.0%,503,,usable,schema marks writeOnly
+lastName,string,no,yes,yes,,,Employee last name,integration,unknown,,,100.0%,950,,usable,schema marks writeOnly
+nickname,string,yes,no,no,,,Employee nickname,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+mobilePhone,string,yes,no,yes,,,Employee mobile phone number,integration,unknown,,,100.0%,1041,,usable,schema marks writeOnly
+emergencyContactName,string,yes,no,no,,,Employee emergency contact name,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+emergencyContactNumber,string,yes,no,no,,,Employee emergency contact phone number,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+employeeGroupId,integer,yes,no,no,,,ID of the employee group this employee belongs to,confirm,unknown,,,100.0%,26,,confirm,not established by supplied schema or observations
+divisionId,integer,yes,no,no,,,ID of the division this employee is assigned to,confirm,unknown,,,100.0%,17,,confirm,not established by supplied schema or observations
+accountingCode,string,yes,no,no,,,Accounting code for the employee,confirm,unknown,,,100.0%,1116,,confirm,not established by supplied schema or observations
+employeeCode,string,yes,no,no,,,Employee code identifier,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+overrideEmployeeGroupColor,string,yes,no,no,,,"Hex color override for this employee, overriding their group color",confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+defaultLaborCodeId,integer,yes,no,no,,,Default labor code ID for this employee,confirm,unknown,,,100.0%,272,,confirm,not established by supplied schema or observations
+assignedToUserId,integer,yes,no,no,,,User ID this employee is assigned to,confirm,unknown,,,100.0%,1111,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,User ID that created this employee record,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,UTC timestamp when the employee record was created,confirm,unknown,,,100.0%,1101,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,Whether the employee is currently active,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,Whether the employee has been soft deleted,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+currentTrackVoJobId,integer,yes,no,no,,,Current tracking job ID for location tracking,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isLocationTracked,boolean,yes,no,no,,,Whether the employee's location is being tracked,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isScheduleable,boolean,yes,no,no,,,Whether the employee can be scheduled,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isVendor,boolean,yes,no,no,,,Whether the employee is also a vendor,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+vendorName,string,yes,no,no,,,Vendor name if the employee is a vendor,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isTrucking,boolean,yes,no,no,,,Whether the employee is involved in trucking,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isForeman,boolean,yes,no,no,,,Whether the employee is a foreman,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isAssigned,boolean,yes,no,no,,,Whether the employee is currently assigned to a job,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+assignedCount,string,yes,no,no,,,Number of active assignments for the employee,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewOtherEmployees,boolean,yes,no,no,,,Permission flag: can view other employees,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewOtherVendors,boolean,yes,no,no,,,Permission flag: can view other vendors,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewJobNotes,boolean,yes,no,no,,,Permission flag: can view job notes,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewEquipment,boolean,yes,no,no,,,Permission flag: can view equipment,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewOtherEmployeeNotes,boolean,yes,no,no,,,Permission flag: can view other employees' notes,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+canViewOtherVendorNotes,boolean,yes,no,no,,,Permission flag: can view other vendors' notes,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations

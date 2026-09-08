@@ -1,0 +1,16 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+employeeGroupId,yes,integer,yes,no,,100.0%,34,0,34,,yes,integer,3,4,0,983,2.9%,CANDIDATE_KEY
+employeeGroupName,yes,string,no,yes,,100.0%,34,0,34,,yes,string,6,29,0,Management,2.9%,CANDIDATE_KEY
+employeeGroupDescription,yes,string,yes,no,,97.1%,33,1,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+createdTimestampUtc,yes,string,yes,no,,100.0%,34,0,2,,,date,19,19,0,2026-07-16 18:00:20,73.5%,
+isActive,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+isDeleted,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,0,100.0%,CONSTANT;TYPE_MISMATCH
+companyId,yes,integer,no,yes,,100.0%,34,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+createdByUserId,yes,integer,yes,no,,100.0%,34,0,1,yes,,integer,2,2,0,45,100.0%,CONSTANT
+canAccessEquipment,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+canAccessOtherEmployees,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+canAccessDailyJobNotes,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+canAccessOtherEmployeeDetails,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+canAccessJobInformation,yes,boolean,yes,no,,100.0%,34,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+employeeGroupColor,yes,string,yes,no,,100.0%,34,0,1,yes,,string,7,7,0,#f8f9fa,100.0%,CONSTANT
+uuid,yes,string,no,yes,,100.0%,34,0,34,,yes,uuid,36,36,0,35326165-6264-6265-2d34-3362622d3436,2.9%,CANDIDATE_KEY

@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "employeeId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "firstName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "lastName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "employeeGroupId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "assignedToUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "defaultLaborCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mobilePhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45,
+      "writeOnly": true
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "employeeCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "overrideEmployeeGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7
+    },
+    "orgNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "employeeId",
+    "companyId"
+  ]
+}

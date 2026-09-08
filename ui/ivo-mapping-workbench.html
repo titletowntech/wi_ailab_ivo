@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVO Mapping Workbench</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--cp-bg);
+      color: var(--cp-text);
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      overflow: hidden;
+    }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    [hidden] { display: none !important; }
+    .launcher { height: 100%; overflow: auto; background: var(--cp-bg); display: grid; grid-template-rows: 64px minmax(0, 1fr); }
+    .launcher-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 28px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .launcher-brand { display: flex; align-items: center; gap: 12px; }
+    .launcher-main { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 48px 0 64px; }
+    .launcher-main h1 { font-size: 32px; margin-bottom: 8px; }
+    .workspace-choices { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr); gap: 20px; margin-top: 32px; align-items: start; }
+    .workspace-choice { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+    .choice-head { padding: 20px; border-bottom: 1px solid var(--cp-border); display: flex; align-items: flex-start; gap: 12px; }
+    .choice-icon { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 8px; color: var(--cp-accent); background: var(--cp-accent-soft); }
+    .choice-head h2 { margin-bottom: 4px; }
+    .choice-head p { margin-bottom: 0; }
+    .customer-picker { padding: 16px 20px; background: var(--cp-bg-elevated); border-bottom: 1px solid var(--cp-border); display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+    .customer-picker select { width: 100%; }
+    .workspace-list { display: grid; }
+    .workspace-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto auto; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--cp-border); }
+    .workspace-row:last-child { border-bottom: 0; }
+    .workspace-avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; background: var(--cp-surface-soft); border: 1px solid var(--cp-border); font-weight: 700; }
+    .workspace-row strong { display: block; }
+    .workspace-row small { color: var(--cp-text-muted); }
+    .row-meta { color: var(--cp-text-muted); font-size: 12px; text-align: right; }
+    .reference-choice .choice-body { padding: 20px; }
+    .reference-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border: 1px solid var(--cp-border); border-radius: 8px; overflow: hidden; margin: 18px 0; background: var(--cp-border); }
+    .reference-stat { background: var(--cp-bg-elevated); padding: 14px; }
+    .reference-stat strong { display: block; font-size: 20px; }
+    .reference-stat span { color: var(--cp-text-muted); font-size: 11px; }
+    .reference-shell { height: 100%; overflow: auto; background: var(--cp-bg); }
+    .reference-bar { min-height: 64px; padding: 10px 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .reference-title { display: flex; align-items: center; gap: 12px; }
+    .reference-content { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 32px 0 56px; }
+    .reference-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; margin: 24px 0; }
+    .reference-summary .metric { background: var(--cp-surface); }
+    .reference-table { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-surface); }
+    .reference-table table { table-layout: auto; }
+    .reference-table tbody tr { cursor: default; }
+    .reference-screen[hidden] { display: none !important; }
+    .wizard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+    .wizard-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; align-items: start; }
+    .wizard-rail { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-surface); }
+    .wizard-step { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 14px; border-bottom: 1px solid var(--cp-border); color: var(--cp-text-muted); }
+    .wizard-step:last-child { border-bottom: 0; }
+    .wizard-step.active { background: var(--cp-accent-soft); color: var(--cp-accent); }
+    .wizard-step.done { color: var(--cp-success); }
+    .wizard-number { width: 26px; height: 26px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; font-weight: 700; }
+    .wizard-step strong { display: block; color: var(--cp-text); font-size: 12px; }
+    .wizard-step small { font-size: 10px; }
+    .wizard-panel { border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); min-height: 510px; overflow: hidden; }
+    .panel-head { padding: 20px 22px; border-bottom: 1px solid var(--cp-border); }
+    .panel-head h2 { margin-bottom: 5px; }
+    .panel-head p { margin-bottom: 0; }
+    .panel-body { padding: 22px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .field.span-2 { grid-column: 1 / -1; }
+    .field-help { color: var(--cp-text-muted); font-size: 11px; line-height: 1.4; }
+    .panel-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 22px; border-top: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .upload-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .upload-zone { min-height: 190px; padding: 22px; border: 1px dashed var(--cp-border-strong); border-radius: 10px; background: var(--cp-bg-elevated); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+    .upload-zone.ready { border-style: solid; border-color: var(--cp-success); }
+    .upload-zone-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 8px; background: var(--cp-surface-soft); color: var(--cp-accent); }
+    .upload-zone h3 { margin: 12px 0 5px; }
+    .file-pill { display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 7px 10px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); overflow: hidden; }
+    .file-pill span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .info-banner { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-left: 3px solid var(--cp-warning); background: var(--cp-surface-soft); margin-bottom: 18px; }
+    .info-banner p { margin: 0; color: var(--cp-text-muted); line-height: 1.45; }
+    .process-list { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
+    .process-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 13px 14px; border-bottom: 1px solid var(--cp-border); }
+    .process-row:last-child { border-bottom: 0; }
+    .process-dot { width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid var(--cp-border-strong); border-radius: 50%; color: var(--cp-text-muted); font-size: 11px; }
+    .process-row.running .process-dot { color: var(--cp-accent); border-color: var(--cp-accent); }
+    .process-row.done .process-dot { color: var(--cp-success); border-color: var(--cp-success); }
+    .process-row.failed .process-dot { color: var(--cp-danger); border-color: var(--cp-danger); }
+    .process-state { color: var(--cp-text-muted); font-size: 11px; }
+    .generated-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .generated-files { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
+    .generated-file { display: grid; grid-template-columns: 26px 1fr auto; gap: 9px; align-items: center; padding: 11px 12px; border-bottom: 1px solid var(--cp-border); }
+    .generated-file:last-child { border-bottom: 0; }
+    .generated-file svg { color: var(--cp-success); }
+    .generated-file small { display: block; color: var(--cp-text-muted); margin-top: 2px; }
+    .review-callout { display: none; }
+    .review-count { font-size: 30px; font-weight: 700; color: var(--cp-warning); margin: 14px 0 4px; }
+    .review-count.resolved { color: var(--cp-success); }
+    .mini-review { margin-top: 18px; border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
+    .mini-review table { table-layout: auto; }
+    .contract-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+    .contract-name { display: flex; align-items: center; gap: 12px; }
+    .contract-name h1 { margin-bottom: 4px; }
+    .contract-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-border); gap: 1px; margin-bottom: 24px; }
+    .contract-meta-item { padding: 14px 16px; background: var(--cp-surface); }
+    .contract-meta-item span { display: block; color: var(--cp-text-muted); font-size: 11px; margin-bottom: 4px; }
+    .contract-meta-item strong { font-size: 13px; }
+    .contract-layout { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 24px; align-items: start; }
+    .contract-section { min-width: 0; }
+    .contract-section h2 { margin-bottom: 4px; }
+    .contract-section > p { margin: 0 0 14px; }
+    .contract-files .generated-file, .erp-source-files .generated-file { grid-template-columns: 26px minmax(0, 1fr) auto; cursor: pointer; }
+    .contract-files .generated-file:hover, .erp-source-files .generated-file:hover { background: var(--cp-surface-soft); }
+    .contract-files .generated-file:focus-visible, .contract-files .generated-file.selected, .erp-source-files .generated-file:focus-visible, .erp-source-files .generated-file.selected { outline: 2px solid var(--cp-accent); outline-offset: -2px; background: var(--cp-accent-soft); }
+    .field-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .field-toolbar input { width: min(260px, 100%); }
+    .contract-fields { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-surface); }
+    .contract-fields table { table-layout: auto; }
+    .contract-fields tbody tr[hidden] { display: none; }
+    .file-viewer-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .file-viewer-head h2 { margin-bottom: 4px; }
+    .file-viewer-path { color: var(--cp-text-muted); font-family: Consolas, "Courier New", monospace; font-size: 11px; overflow-wrap: anywhere; }
+    .file-viewer-code { min-height: 380px; max-height: 560px; margin: 0; padding: 16px; overflow: auto; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-bg-elevated); color: var(--cp-text); font-family: Consolas, "Courier New", monospace; font-size: 12px; line-height: 1.55; white-space: pre; tab-size: 2; }
+    .file-viewer-code[hidden], .file-viewer-csv[hidden] { display: none; }
+    .file-viewer-csv { border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; background: var(--cp-surface); }
+    .file-viewer-summary { padding: 9px 12px; border-bottom: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 11px; background: var(--cp-bg-elevated); }
+    .file-viewer-table { max-height: 520px; overflow: auto; }
+    .file-viewer-table table { table-layout: auto; min-width: 100%; }
+    .file-viewer-table th { position: sticky; top: 0; z-index: 1; background: var(--cp-bg-elevated); white-space: nowrap; }
+    .file-viewer-table td { max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .erp-empty { padding: 52px 24px; border: 1px dashed var(--cp-border-strong); border-radius: 10px; text-align: center; background: var(--cp-surface); }
+    .erp-empty h2 { margin-bottom: 6px; }
+    .erp-empty p { margin: 0 0 18px; }
+    .erp-add-panel { width: min(820px, 100%); margin: 0 auto; }
+    .button:disabled, .icon-button:disabled { opacity: .45; cursor: not-allowed; }
+    .back-button { flex: 0 0 auto; }
+    .app { display: grid; grid-template-columns: 248px minmax(0, 1fr); height: 100%; }
+    .sidebar {
+      background: var(--cp-bg-elevated);
+      border-right: 1px solid var(--cp-border);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; height: 64px; padding: 0 20px; border-bottom: 1px solid var(--cp-border); }
+    .mark { width: 32px; height: 32px; display: grid; place-items: center; border: 2px solid var(--cp-accent); color: var(--cp-accent); border-radius: 8px; font-weight: 700; }
+    .brand strong { font-size: 15px; }
+    .brand small { display: block; color: var(--cp-text-muted); font-size: 11px; margin-top: 1px; }
+    .case-block { padding: 16px 20px; border-bottom: 1px solid var(--cp-border); }
+    .eyebrow { color: var(--cp-text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .case-name { font-size: 18px; font-weight: 650; margin-top: 5px; }
+    .case-meta { color: var(--cp-text-muted); margin-top: 3px; }
+    .progress { height: 5px; background: var(--cp-border); margin-top: 14px; overflow: hidden; border-radius: 4px; }
+    .progress span { display: block; width: 71%; height: 100%; background: var(--cp-accent); }
+    nav { padding: 12px; display: grid; gap: 4px; }
+    .nav-item {
+      appearance: none; border: 0; background: transparent; color: var(--cp-text-muted);
+      width: 100%; min-height: 44px; padding: 8px 10px; border-radius: 8px;
+      display: grid; grid-template-columns: 26px 1fr auto; align-items: center; text-align: left; gap: 8px;
+    }
+    .nav-item:hover { background: var(--cp-surface-soft); color: var(--cp-text); }
+    .nav-item.active { background: var(--cp-accent-soft); color: var(--cp-accent); font-weight: 650; }
+    .nav-index { width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 50%; font-size: 11px; }
+    .nav-item.done .nav-index { border-color: var(--cp-success); color: var(--cp-success); }
+    .nav-count { font-size: 11px; color: var(--cp-text-muted); }
+    .sidebar-foot { margin-top: auto; padding: 16px 20px; border-top: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 12px; }
+    .main { min-width: 0; min-height: 0; height: 100%; overflow: hidden; display: grid; grid-template-rows: 64px minmax(0, 1fr); }
+    .topbar { background: var(--cp-bg-elevated); border-bottom: 1px solid var(--cp-border); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; gap: 16px; }
+    .breadcrumbs { color: var(--cp-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .breadcrumbs strong { color: var(--cp-text); }
+    .top-actions { display: flex; align-items: center; gap: 8px; }
+    .icon-button, .button { border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 8px; min-height: 36px; }
+    .icon-button { width: 36px; display: grid; place-items: center; }
+    .button { padding: 7px 13px; font-weight: 650; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+    .button:hover, .icon-button:hover { border-color: var(--cp-border-strong); }
+    .button.primary { background: var(--cp-accent); border-color: var(--cp-accent); color: var(--cp-accent-fg); }
+    .button.primary:hover { background: var(--cp-accent-hover); }
+    .content { min-height: 0; overflow: auto; }
+    .view { display: none; min-height: 100%; }
+    .view.active { display: block; }
+    .page-head { padding: 24px 28px 18px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg); }
+    .page-head-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: 24px; line-height: 1.2; letter-spacing: 0; margin-bottom: 6px; }
+    h2 { font-size: 17px; letter-spacing: 0; }
+    h3 { font-size: 14px; letter-spacing: 0; }
+    .subtle { color: var(--cp-text-muted); }
+    .summary-strip { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .metric { padding: 16px 20px; border-right: 1px solid var(--cp-border); }
+    .metric:last-child { border-right: 0; }
+    .metric-value { font-size: 22px; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+    .metric-label { color: var(--cp-text-muted); font-size: 12px; }
+    .metric.good .metric-value { color: var(--cp-success); }
+    .metric.warn .metric-value { color: var(--cp-warning); }
+    .workspace { display: grid; grid-template-columns: minmax(620px, 1fr) 368px; min-height: 620px; }
+    .table-pane { min-width: 0; border-right: 1px solid var(--cp-border); background: var(--cp-surface); }
+    .toolbar { min-height: 56px; padding: 10px 16px; display: flex; gap: 8px; align-items: center; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .search { position: relative; flex: 1; min-width: 180px; }
+    .search svg { position: absolute; left: 10px; top: 9px; color: var(--cp-text-muted); }
+    .search input, select, textarea, .field input { width: 100%; border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 8px; min-height: 36px; padding: 7px 10px; }
+    .search input { padding-left: 36px; }
+    select { width: auto; min-width: 132px; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--cp-accent); outline-offset: 1px; }
+    table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+    th { color: var(--cp-text-muted); background: var(--cp-bg-elevated); font-size: 11px; text-transform: uppercase; text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--cp-border); position: sticky; top: 0; z-index: 1; }
+    td { padding: 11px 12px; border-bottom: 1px solid var(--cp-border); vertical-align: middle; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    tbody tr { cursor: pointer; }
+    tbody tr:hover { background: var(--cp-surface-soft); }
+    tbody tr.selected { background: var(--cp-accent-soft); box-shadow: inset 3px 0 var(--cp-accent); }
+    code { font-family: Consolas, "Courier New", Courier, monospace; font-size: 12px; }
+    .badge { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 8px; border: 1px solid var(--cp-border); border-radius: 999px; font-size: 11px; font-weight: 650; }
+    .badge.accepted { color: var(--cp-success); }
+    .badge.review { color: var(--cp-warning); }
+    .badge.omitted { color: var(--cp-text-muted); }
+    .badge.blocked { color: var(--cp-danger); }
+    .confidence { display: flex; align-items: center; gap: 7px; }
+    .confidence-bar { width: 42px; height: 4px; background: var(--cp-border); border-radius: 4px; overflow: hidden; }
+    .confidence-bar span { height: 100%; display: block; background: var(--cp-success); }
+    .detail-pane { position: sticky; top: 0; align-self: start; max-height: calc(100vh - 64px); overflow-y: auto; background: var(--cp-bg-elevated); min-width: 0; }
+    .detail-head { padding: 18px 20px; border-bottom: 1px solid var(--cp-border); }
+    .detail-body { padding: 20px; display: grid; gap: 22px; }
+    .detail-context { padding-bottom: 10px; }
+    .pair { display: grid; grid-template-columns: 1fr 24px 1fr; align-items: center; gap: 8px; }
+    .pair-box { border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 8px; padding: 10px; min-width: 0; }
+    .pair-box small { color: var(--cp-text-muted); display: block; margin-bottom: 4px; }
+    .pair-box code { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 650; }
+    .pair-box select { width: 100%; min-width: 0; min-height: 32px; padding: 5px 8px; }
+    .match-score { display: flex; align-items: center; justify-content: space-between; color: var(--cp-text-muted); }
+    .match-score strong { color: var(--cp-text); font-size: 18px; }
+    .arrow { color: var(--cp-text-muted); text-align: center; }
+    .review-decision { padding: 10px 20px; background: var(--cp-bg-elevated); border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); }
+    .decision-group { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--cp-border); border-radius: 8px; overflow: hidden; }
+    .decision-group button { min-width: 0; min-height: 34px; border: 0; border-right: 1px solid var(--cp-border); background: var(--cp-surface); padding: 5px; font-size: 11px; }
+    .decision-group button:last-child { border-right: 0; }
+    .decision-group button.active { background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .field { display: grid; gap: 6px; }
+    .field label { color: var(--cp-text-muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    textarea { resize: vertical; min-height: 72px; }
+    .evidence { border-left: 3px solid var(--cp-accent); padding: 2px 0 2px 12px; }
+    .evidence p { color: var(--cp-text-muted); line-height: 1.45; margin-bottom: 6px; }
+    .evidence .button { margin-top: 4px; }
+    .value-dialog { width: min(900px, calc(100vw - 32px)); max-height: min(760px, calc(100vh - 32px)); padding: 0; border: 1px solid var(--cp-border-strong); border-radius: 8px; background: var(--cp-bg-elevated); color: var(--cp-text); }
+    .value-dialog::backdrop { background: color-mix(in srgb, #000 55%, transparent); }
+    .value-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--cp-border); }
+    .value-dialog-head h2 { margin-bottom: 4px; }
+    .value-dialog-body { padding: 18px 20px 20px; }
+    .value-tabs { display: inline-grid; grid-template-columns: 1fr 1fr; margin-bottom: 16px; border: 1px solid var(--cp-border); border-radius: 8px; overflow: hidden; }
+    .value-tabs button { min-height: 36px; padding: 6px 12px; border: 0; border-right: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text-muted); }
+    .value-tabs button:last-child { border-right: 0; }
+    .value-tabs button.active { background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .value-evidence-summary { margin-bottom: 12px; color: var(--cp-text-muted); }
+    .value-evidence-table { max-height: 500px; overflow: auto; border: 1px solid var(--cp-border); border-radius: 8px; }
+    .value-evidence-table table { min-width: 720px; table-layout: auto; }
+    .value-evidence-table tbody tr { cursor: default; }
+    .value-evidence-table td { white-space: normal; overflow-wrap: anywhere; }
+    .value-evidence-empty { padding: 28px; text-align: center; color: var(--cp-text-muted); }
+    .detail-actions { display: flex; justify-content: flex-end; gap: 8px; }
+    .board { padding: 24px 28px 40px; }
+    .flow-layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; }
+    .flow-canvas { border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); min-height: 570px; border-radius: 10px; padding: 24px; background-image: linear-gradient(var(--cp-border) 1px, transparent 1px), linear-gradient(90deg, var(--cp-border) 1px, transparent 1px); background-size: 24px 24px; }
+    .flow-column { width: min(100%, 500px); margin: 0 auto; display: grid; justify-items: center; }
+    .step { width: 100%; background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 10px; padding: 14px 16px; box-shadow: 0 0 2px var(--cp-border), 0 1px 2px var(--cp-border); }
+    .step-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .step-type { color: var(--cp-accent); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .step strong { display: block; margin-top: 3px; }
+    .step p { color: var(--cp-text-muted); font-size: 12px; margin: 8px 0 0; }
+    .connector-line { width: 1px; height: 32px; background: var(--cp-border-strong); position: relative; }
+    .connector-line::after { content: ""; position: absolute; bottom: -1px; left: -3px; width: 7px; height: 7px; border-right: 1px solid var(--cp-border-strong); border-bottom: 1px solid var(--cp-border-strong); transform: rotate(45deg); }
+    .build-panel { border-left: 1px solid var(--cp-border); padding-left: 24px; }
+    .build-panel h2 { margin-bottom: 6px; }
+    .check-list { display: grid; gap: 1px; border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; margin-top: 16px; }
+    .check-row { display: grid; grid-template-columns: 22px 1fr auto; gap: 9px; align-items: center; padding: 11px 12px; background: var(--cp-surface); border-bottom: 1px solid var(--cp-border); }
+    .check-row:last-child { border-bottom: 0; }
+    .check-icon { color: var(--cp-success); }
+    .check-row.block .check-icon, .check-row.block .check-state { color: var(--cp-danger); }
+    .check-state { color: var(--cp-text-muted); font-size: 11px; }
+    .code-block { margin-top: 16px; border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; }
+    .code-head { padding: 9px 12px; background: var(--cp-surface-soft); border-bottom: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 11px; }
+    .delivery-rules { padding: 0 28px 40px; }
+    .delivery-rules-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 14px; }
+    .delivery-rules-head h2 { margin-bottom: 4px; }
+    .delivery-rules-head p { margin: 0; }
+    .delivery-rules-table { border: 1px solid var(--cp-border); border-radius: 8px; overflow: auto; background: var(--cp-surface); }
+    .delivery-rules-table table { min-width: 980px; table-layout: auto; }
+    .delivery-rules-table tbody tr { cursor: default; }
+    .delivery-rules-table td { white-space: normal; }
+    .delivery-rules-table td:nth-child(1), .delivery-rules-table td:nth-child(3) { white-space: nowrap; }
+    .delivery-expression { display: flex; align-items: start; gap: 8px; min-width: 320px; }
+    .delivery-expression code { flex: 1; overflow-wrap: anywhere; }
+    .delivery-expression .button { min-height: 30px; padding: 4px 8px; }
+    .delivery-empty { padding: 30px; text-align: center; color: var(--cp-text-muted); }
+    pre { margin: 0; background: var(--cp-surface); padding: 14px; min-height: 170px; overflow: auto; font: 12px/1.6 Consolas, "Courier New", Courier, monospace; white-space: pre-wrap; }
+    .validation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .validation-card { border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 10px; padding: 18px; min-height: 150px; }
+    .validation-card .big { font-size: 28px; font-weight: 700; margin: 20px 0 4px; }
+    .validation-card.good .big { color: var(--cp-success); }
+    .validation-card.warn .big { color: var(--cp-warning); }
+    .validation-card.bad .big { color: var(--cp-danger); }
+    .profile-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--cp-border); }
+    .profile-metric { padding: 18px 20px; border-right: 1px solid var(--cp-border); }
+    .profile-metric:last-child { border-right: 0; }
+    .profile-metric strong { display: block; margin-top: 8px; font-size: 26px; }
+    .profile-metric.warn strong { color: var(--cp-warning); }
+    .profile-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px 28px; }
+    .profile-section { min-width: 0; }
+    .profile-section h2 { margin-bottom: 4px; }
+    .profile-breakdown { margin-top: 18px; border-top: 1px solid var(--cp-border); }
+    .profile-breakdown-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--cp-border); }
+    .profile-breakdown-row strong { font-variant-numeric: tabular-nums; }
+    .profile-table-section { padding: 0 28px 28px; }
+    .profile-table-section .table-scroll { margin-top: 16px; border: 1px solid var(--cp-border); border-radius: 8px; }
+    .profile-table-section table { min-width: 760px; }
+    .profile-table-section td:first-child { font-weight: 650; }
+    .profile-flag { color: var(--cp-warning); font-weight: 650; }
+    .source-details { padding: 24px 28px 0; }
+    .source-details .contract-meta { margin-bottom: 20px; }
+    .reference-assignment { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 20px; padding: 16px 18px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); }
+    .reference-assignment-copy h2 { margin-bottom: 4px; }
+    .reference-assignment-copy p { margin: 0; }
+    .reference-assignment-controls { display: flex; align-items: end; gap: 10px; min-width: min(100%, 390px); }
+    .reference-assignment-controls .field { flex: 1; }
+    .reference-assignment-controls select { width: 100%; }
+    .source-details-grid { display: grid; grid-template-columns: minmax(260px, .7fr) minmax(0, 1.3fr); gap: 20px; align-items: start; }
+    .source-details-panel { border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); padding: 18px; min-width: 0; }
+    .source-details-panel h2 { margin-bottom: 5px; }
+    .source-details-panel .generated-files { margin-top: 14px; }
+    .source-details-panel .contract-fields { margin-top: 14px; max-height: 390px; overflow: auto; }
+    .source-file-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--cp-border); }
+    .source-file-group:first-of-type { margin-top: 14px; padding-top: 0; border-top: 0; }
+    .source-file-group h3 { margin: 0; }
+    .source-file-group-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .source-file-group-head p { margin: 4px 0 0; }
+    .source-file-empty { padding: 14px; border: 1px dashed var(--cp-border-strong); border-radius: 8px; color: var(--cp-text-muted); font-size: 12px; }
+    .source-file-viewer { padding: 24px 28px 40px; }
+    .empty-view { padding: 48px 28px; max-width: 920px; }
+    .file-list { margin-top: 24px; border-top: 1px solid var(--cp-border); }
+    .file-row { display: grid; grid-template-columns: 30px 1fr 100px 100px; gap: 12px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--cp-border); }
+    .file-status { color: var(--cp-success); }
+    .mobile-nav { display: none; }
+    .app-message { position: fixed; z-index: 20; right: 20px; bottom: 20px; max-width: min(420px, calc(100vw - 40px)); padding: 12px 16px; border: 1px solid var(--cp-border-strong); border-radius: 8px; background: var(--cp-panel-strong); color: var(--cp-text); box-shadow: 0 8px 30px color-mix(in srgb, var(--cp-text) 18%, transparent); }
+    .app-message[data-type="error"] { border-color: var(--cp-danger); }
+    @media (max-width: 1050px) {
+      .workspace-choices { grid-template-columns: 1fr; }
+      .app { grid-template-columns: 76px minmax(0, 1fr); }
+      .brand { padding: 0; justify-content: center; }
+      .brand-copy, .case-block, .nav-label, .nav-count, .sidebar-foot { display: none; }
+      nav { padding: 10px; }
+      .nav-item { grid-template-columns: 1fr; justify-items: center; padding: 8px; }
+      .workspace { grid-template-columns: 1fr; }
+      .table-pane { border-right: 0; }
+      .detail-pane { position: static; max-height: none; overflow: visible; border-top: 1px solid var(--cp-border); }
+      .flow-layout { grid-template-columns: 1fr; }
+      .build-panel { border-left: 0; padding-left: 0; }
+      .source-details-grid { grid-template-columns: 1fr; }
+      .reference-assignment { align-items: stretch; flex-direction: column; }
+      .reference-assignment-controls { min-width: 0; }
+    }
+    @media (max-width: 720px) {
+      body { overflow: auto; }
+      .app { display: block; }
+      .launcher { min-height: 100%; height: auto; }
+      .launcher-bar { padding: 0 16px; }
+      .launcher-main, .reference-content { width: calc(100% - 32px); padding-top: 28px; }
+      .launcher-main h1 { font-size: 26px; }
+      .workspace-choices { margin-top: 24px; }
+      .customer-picker { grid-template-columns: 1fr; }
+      .workspace-row { grid-template-columns: 40px 1fr auto; }
+      .workspace-row .row-meta { display: none; }
+      .reference-summary { grid-template-columns: 1fr; }
+      .reference-summary .metric { border-right: 0; border-bottom: 1px solid var(--cp-border); }
+      .reference-summary .metric:last-child { border-bottom: 0; }
+      .reference-bar { padding: 10px 16px; }
+      .wizard-layout, .generated-grid { grid-template-columns: 1fr; }
+      .contract-layout { grid-template-columns: 1fr; }
+      .contract-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contract-head, .field-toolbar { align-items: stretch; flex-direction: column; }
+      .field-toolbar input { width: 100%; }
+      .contract-fields { overflow-x: auto; }
+      .contract-fields table { min-width: 620px; }
+      .wizard-rail { display: grid; grid-template-columns: repeat(4, 1fr); }
+      .wizard-step { grid-template-columns: 1fr; justify-items: center; text-align: center; border-bottom: 0; border-right: 1px solid var(--cp-border); padding: 10px 4px; }
+      .wizard-step:last-child { border-right: 0; }
+      .wizard-step small { display: none; }
+      .upload-grid, .form-grid { grid-template-columns: 1fr; }
+      .field.span-2 { grid-column: auto; }
+      .reference-table { overflow-x: auto; }
+      .reference-table table, .mini-review table { min-width: 680px; }
+      .sidebar { display: none; }
+      .main { display: block; min-height: 100%; height: auto; overflow: visible; }
+      .topbar { height: auto; min-height: 60px; padding: 10px 14px; }
+      .breadcrumbs { white-space: normal; }
+      .top-actions .button { display: none; }
+      #addErpTable { display: inline-flex; }
+      .content { overflow: visible; }
+      .page-head { padding: 18px 16px; }
+      .source-details, .source-file-viewer { padding: 18px 16px 80px; }
+      .source-file-group-head { align-items: stretch; flex-direction: column; }
+      .source-file-group-head .button { width: 100%; }
+      .delivery-rules { padding: 0 16px 80px; }
+      .delivery-rules-head { align-items: stretch; flex-direction: column; }
+      .page-head-row { display: block; }
+      .summary-strip { grid-template-columns: repeat(2, 1fr); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--cp-border); }
+      .toolbar { flex-wrap: wrap; }
+      .search { flex-basis: 100%; }
+      .table-scroll { overflow-x: auto; }
+      table { min-width: 760px; }
+      .workspace { display: block; padding-bottom: 80px; }
+      .board { padding: 18px 16px 80px; }
+      .validation-grid { grid-template-columns: 1fr; }
+      .file-row { grid-template-columns: 24px minmax(0, 1fr) auto; }
+      .file-row > :first-child { grid-row: 1 / span 2; }
+      .file-row > :nth-child(3) { grid-column: 2; }
+      .file-row > :last-child { grid-column: 3; grid-row: 1 / span 2; }
+      .profile-metrics, .profile-layout { grid-template-columns: 1fr; }
+      .profile-metric { border-right: 0; border-bottom: 1px solid var(--cp-border); }
+      .profile-metric:last-child { border-bottom: 0; }
+      .profile-layout { padding: 20px 16px; }
+      .profile-table-section { padding: 20px 16px 80px; }
+      .mobile-nav { display: grid; position: fixed; z-index: 5; bottom: 0; left: 0; right: 0; grid-template-columns: repeat(4, 1fr); background: var(--cp-panel-strong); border-top: 1px solid var(--cp-border); }
+      .mobile-nav button { min-height: 58px; border: 0; background: transparent; color: var(--cp-text-muted); font-size: 10px; }
+      .mobile-nav button.active { color: var(--cp-accent); font-weight: 700; }
+      .mobile-nav svg { display: block; margin: 0 auto 3px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="launcher" id="launcher">
+    <header class="launcher-bar">
+      <div class="launcher-brand"><div class="mark">IVO</div><div><strong>Mapping Workbench</strong><small class="subtle" style="display:block">Integration delivery</small></div></div>
+      <button class="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+    </header>
+    <main class="launcher-main">
+      <div class="eyebrow">Choose your workspace</div>
+      <h1>What are you working on?</h1>
+      <p class="subtle">Continue a customer onboarding or maintain the reusable IVO contracts that every mapping depends on.</p>
+      <div class="workspace-choices">
+        <section class="workspace-choice">
+          <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h2>Customer onboardings</h2><p class="subtle">Profile ERP data, approve mappings, and prepare Trimble flows.</p></div></div>
+          <div class="customer-picker"><select id="customerSelect" aria-label="Select customer"><option value="KNA">KNA</option><option value="Northwind">Northwind Construction</option><option value="Contoso">Contoso Infrastructure</option></select><button class="button primary" id="openCustomer">Open customer</button></div>
+          <div class="workspace-list">
+            <div class="workspace-row"><div class="workspace-avatar">K</div><div><strong>KNA</strong><small>Vista ERP · Equipment</small></div><div class="row-meta">5 decisions open<br>71% complete</div><button class="icon-button open-kna" title="Open KNA" aria-label="Open KNA"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+            <div class="workspace-row"><div class="workspace-avatar">N</div><div><strong>Northwind Construction</strong><small>ERP inputs requested</small></div><div class="row-meta">Not started</div><button class="icon-button" disabled title="Inputs required" aria-label="Inputs required"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+          </div>
+        </section>
+        <section class="workspace-choice reference-choice">
+          <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><div><h2>Internal IVO references</h2><p class="subtle">Maintain destination contracts, validation rules, and lookup definitions.</p></div></div>
+          <div class="choice-body"><div class="reference-stats"><div class="reference-stat"><strong>2</strong><span>Reference objects</span></div><div class="reference-stat"><strong>1</strong><span>Needs review</span></div></div><button class="button primary" id="openReferences" style="width:100%">Manage IVO references</button></div>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <section class="reference-shell" id="referenceWorkspace" hidden>
+    <header class="reference-bar"><div class="reference-title"><button class="icon-button back-button" data-back title="Change workspace" aria-label="Change workspace"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div><strong>Internal IVO references</strong><small class="subtle" style="display:block">Reusable destination contracts</small></div></div><div class="top-actions"><button class="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button><button class="button primary" id="addObjectContract">Add object</button></div></header>
+    <main class="reference-content reference-screen" id="referenceCatalog">
+      <div class="eyebrow">IVO source of truth</div><h1>IVO Reference Objects</h1><p class="subtle">Define field ownership, validation, lookups, and example payloads before customer mappings are generated.</p>
+      <div class="reference-summary"><div class="metric good"><div class="metric-value">1</div><div class="metric-label">Usable contract</div></div><div class="metric warn"><div class="metric-value">1</div><div class="metric-label">Provisional contract</div></div><div class="metric"><div class="metric-value" id="catalogFieldCount">79</div><div class="metric-label">Cataloged fields</div></div></div>
+      <div class="reference-table"><table><thead><tr><th>IVO object</th><th>Fields</th><th>Contract status</th><th>Source evidence</th><th>Last updated</th><th></th></tr></thead><tbody id="referenceRows"><tr><td><strong>Equipment</strong><div class="subtle">schema · field catalog · lookups · validation</div></td><td>45</td><td><span class="badge review">Provisional</span></td><td>Schema + sample</td><td>Aug 12, 2026</td><td><button class="button">Review contract</button></td></tr><tr><td><strong>Contract items</strong><div class="subtle">schema · field catalog · lookups · validation</div></td><td>34</td><td><span class="badge accepted">Usable</span></td><td>Schema</td><td>Aug 10, 2026</td><td><button class="button">Open contract</button></td></tr></tbody></table></div>
+    </main>
+    <main class="reference-content reference-screen" id="referenceDetail" hidden>
+      <div class="contract-head">
+        <div class="contract-name"><button class="icon-button" id="backToContracts" title="Back to IVO Reference Objects" aria-label="Back to IVO Reference Objects"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div><div class="eyebrow" id="contractDetailName">Contract items</div><h1>Reference Details</h1><p class="subtle">Destination structure used when mapping customer ERP records.</p></div></div>
+        <span class="badge accepted" id="contractDetailStatus">Usable</span>
+      </div>
+      <div class="contract-meta">
+        <div class="contract-meta-item"><span>Object key</span><strong id="contractDetailKey">contract_items</strong></div>
+        <div class="contract-meta-item"><span>Fields</span><strong id="contractDetailFields">34</strong></div>
+        <div class="contract-meta-item"><span>Source evidence</span><strong id="contractDetailSource">Schema</strong></div>
+        <div class="contract-meta-item"><span>Last updated</span><strong id="contractDetailUpdated">Aug 10, 2026</strong></div>
+      </div>
+      <div class="contract-layout">
+        <section class="contract-section contract-files"><h2>Object files</h2><p class="subtle">Files generated and stored for this object.</p><div class="generated-files"><div class="generated-file"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg><div><strong>schema.json</strong><small>Object structure</small></div><span class="badge accepted">Ready</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg><div><strong>field-catalog.csv</strong><small>Field definitions</small></div><span class="badge accepted">Ready</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg><div><strong>lookup-rules.csv</strong><small>Lookup behavior</small></div><span class="badge accepted">Ready</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg><div><strong>validation-rules.json</strong><small>Data checks</small></div><span class="badge accepted">Ready</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg><div><strong>example-payload.json</strong><small>Sample object</small></div><span class="badge accepted">Ready</span></div></div></section>
+        <section class="contract-section" id="contractFieldPanel"><div class="field-toolbar"><div><h2>Fields</h2><p class="subtle" style="margin:4px 0 0">A preview of the object field catalog.</p></div><input id="contractFieldSearch" type="search" placeholder="Search fields" aria-label="Search contract fields"></div><div class="contract-fields"><table><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Behavior</th></tr></thead><tbody id="contractFieldRows"><tr><td><code>contractItemId</code></td><td>integer</td><td>Yes</td><td>IVO generated</td></tr><tr><td><code>contractId</code></td><td>integer</td><td>Yes</td><td>Lookup</td></tr><tr><td><code>itemCodeId</code></td><td>integer</td><td>Yes</td><td>Lookup</td></tr><tr><td><code>description</code></td><td>string</td><td>No</td><td>Direct</td></tr><tr><td><code>quantity</code></td><td>number</td><td>No</td><td>Direct</td></tr><tr><td><code>unitPrice</code></td><td>number</td><td>No</td><td>Direct</td></tr></tbody></table></div></section>
+        <section class="contract-section" id="contractFilePanel" hidden><div class="file-viewer-head"><div><h2 id="contractFileName">schema.json</h2><div class="file-viewer-path" id="contractFilePath"></div></div><button class="button" id="backToFields">Back to fields</button></div><pre class="file-viewer-code" id="contractFileContent" tabindex="0">Loading file…</pre><div class="file-viewer-csv" id="contractCsvPreview" hidden><div class="file-viewer-summary" id="contractCsvSummary"></div><div class="file-viewer-table"><table><thead id="contractCsvHead"></thead><tbody id="contractCsvBody"></tbody></table></div></div></section>
+      </div>
+    </main>
+    <main class="reference-content reference-screen" id="referenceWizard" hidden>
+      <div class="wizard-head"><div><div class="eyebrow">New IVO reference</div><h1 id="wizardTitle">Add object contract</h1><p class="subtle">Add source files, process them, and check the generated object.</p></div><button class="button" id="cancelObject">Cancel</button></div>
+      <div class="wizard-layout">
+        <aside class="wizard-rail" aria-label="Object creation progress">
+          <div class="wizard-step active" data-ref-step="define"><span class="wizard-number">1</span><div><strong>Define object</strong><small>Name and purpose</small></div></div>
+          <div class="wizard-step" data-ref-step="files"><span class="wizard-number">2</span><div><strong>Add files</strong><small>Schema and sample</small></div></div>
+          <div class="wizard-step" data-ref-step="process"><span class="wizard-number">3</span><div><strong>Process</strong><small>Generate files</small></div></div>
+          <div class="wizard-step" data-ref-step="review"><span class="wizard-number">4</span><div><strong>Review</strong><small>Check and finish</small></div></div>
+        </aside>
+        <section class="wizard-panel">
+          <div class="ref-panel" id="refPanelDefine">
+            <div class="panel-head"><h2>Define the IVO object</h2><p class="subtle">This becomes the stable name used by customer mappings and generated files.</p></div>
+            <div class="panel-body"><div class="form-grid"><div class="field"><label for="objectName">Object key</label><input id="objectName" value="work-orders" placeholder="for example: work-orders"><span class="field-help">Lowercase letters, numbers, and hyphens.</span></div><div class="field"><label for="objectLabel">Display name</label><input id="objectLabel" value="Work orders" placeholder="Work orders"></div><div class="field span-2"><label for="objectDescription">Business purpose</label><textarea id="objectDescription">IVO work order records used by maintenance integrations.</textarea><span class="field-help">Describe the IVO-owned concept, not a customer-specific implementation.</span></div></div></div>
+            <div class="panel-actions"><span class="subtle">No files are created until processing runs.</span><button class="button primary" id="continueToFiles">Continue to files</button></div>
+          </div>
+          <div class="ref-panel" id="refPanelFiles" hidden>
+            <div class="panel-head"><h2>Add source evidence</h2><p class="subtle">Original IVO files are preserved separately from the generated contract.</p></div>
+            <div class="panel-body"><div class="info-banner"><svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01"/><circle cx="12" cy="12" r="10"/></svg><p>Use IVO-owned schemas and synthetic or safely masked samples only. Never upload customer integration records as reference evidence.</p></div><div class="upload-grid">
+              <div class="upload-zone" id="schemaZone"><div><div class="upload-zone-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M10 13l-2 2 2 2m4-4 2 2-2 2"/></svg></div><h3>Connector schema</h3><p class="subtle">Required · JSON Schema · one object definition</p></div><input type="file" id="schemaInput" accept=".json,application/json" hidden><button class="button choose-file" data-target="schemaInput">Choose schema.json</button><div class="file-pill" id="schemaFile" hidden><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span></span></div></div>
+              <div class="upload-zone" id="sampleZone"><div><div class="upload-zone-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg></div><h3>Representative sample</h3><p class="subtle">Optional · CSV · synthetic or safely masked</p></div><input type="file" id="sampleInput" accept=".csv,text/csv" hidden><button class="button choose-file" data-target="sampleInput">Choose sample.csv</button><div class="file-pill" id="sampleFile" hidden><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span></span></div></div>
+            </div></div>
+            <div class="panel-actions"><button class="button" id="backToDefine">Back</button><div style="display:flex; gap:8px"><button class="button" id="useDemoFiles">Use demo files</button><button class="button primary" id="continueToProcess" disabled>Review processing plan</button></div></div>
+          </div>
+          <div class="ref-panel" id="refPanelProcess" hidden>
+            <div class="panel-head"><h2>Process source files</h2><p class="subtle">The builder preserves inputs, profiles the sample, and creates the five object files.</p></div>
+            <div class="panel-body"><div class="process-list"><div class="process-row" data-process="schema"><span class="process-dot">1</span><div><strong>Validate and flatten schema</strong><div class="subtle">Check JSON structure and catalog every field.</div></div><span class="process-state">Waiting</span></div><div class="process-row" data-process="profile"><span class="process-dot">2</span><div><strong>Profile representative sample</strong><div class="subtle">Generate observed fill, type, and cardinality evidence.</div></div><span class="process-state">Waiting</span></div><div class="process-row" data-process="draft"><span class="process-dot">3</span><div><strong>Generate draft contract</strong><div class="subtle">Create catalog, lookups, validation rules, and payload example.</div></div><span class="process-state">Waiting</span></div><div class="process-row" data-process="guard"><span class="process-dot">4</span><div><strong>Apply publication safeguards</strong><div class="subtle">Mark unsupported business semantics as confirm.</div></div><span class="process-state">Waiting</span></div></div></div>
+            <div class="panel-actions"><button class="button" id="backToFiles">Back</button><button class="button primary" id="runProcessing">Run processing</button></div>
+          </div>
+          <div class="ref-panel" id="refPanelReview" hidden>
+            <div class="panel-head"><h2>Check generated object</h2><p class="subtle">Confirm the files and sample fields look right, then finish the object.</p></div>
+            <div class="panel-body"><div class="generated-grid"><div class="generated-files"><div class="generated-file"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><div><strong>schema.json</strong><small>Copied source of truth</small></div><span class="badge accepted">42 fields</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><div><strong>field-catalog.csv</strong><small>Ownership and mapping behavior</small></div><span class="badge review confirmation-summary">17 confirm</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><div><strong>lookup-rules.csv</strong><small>ID resolution contracts</small></div><span class="badge review confirmation-summary">2 confirm</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><div><strong>validation-rules.json</strong><small>Blocking and warning rules</small></div><span class="badge accepted">Draft</span></div><div class="generated-file"><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><div><strong>example-payload.json</strong><small>Synthetic payload shape</small></div><span class="badge accepted">Synthetic</span></div></div><aside class="review-callout"><div class="eyebrow">IVO decisions required</div><div class="review-count" id="confirmCount">19</div><p class="subtle" id="confirmMessage">Descriptions, ownership, generated behavior, and lookup resolution still need confirmation.</p><button class="button" id="resolveDemo" style="width:100%; margin-top:12px">Resolve sample decisions</button></aside></div><div class="mini-review"><table><thead><tr><th>Field</th><th>Inferred type</th><th>Ownership</th><th>Behavior</th><th>Status</th></tr></thead><tbody><tr><td><code>workOrderId</code></td><td>integer</td><td>IVO</td><td>generated</td><td><span class="badge accepted">Usable</span></td></tr><tr><td><code>companyId</code></td><td>integer</td><td>integration</td><td>lookup</td><td><span class="badge review review-status">Confirm</span></td></tr><tr><td><code>description</code></td><td>string</td><td>integration</td><td>direct</td><td><span class="badge review review-status">Confirm</span></td></tr></tbody></table></div></div>
+            <div class="panel-actions"><span class="subtle">5 files generated · 42 fields found</span><button class="button primary" id="finishReference">Finish object</button></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <section class="reference-shell" id="customerObjectWorkspace" hidden>
+    <header class="reference-bar"><div class="reference-title"><button class="icon-button back-button" data-back title="Change workspace" aria-label="Change workspace"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div><strong id="erpCustomerTitle">KNA ERP tables</strong><small class="subtle" style="display:block">Customer source objects</small></div></div><div class="top-actions"><button class="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button><button class="button primary" id="addErpTable">Add table</button></div></header>
+    <main class="reference-content reference-screen" id="erpCatalog">
+      <div class="eyebrow"><span id="erpCatalogCustomer">KNA</span> · ERP source</div><h1>ERP Table Objects</h1><p class="subtle">Manage the customer tables, schemas, and source files used to build mappings.</p>
+      <div class="reference-summary"><div class="metric good"><div class="metric-value" id="erpTableCount">2</div><div class="metric-label">Table objects</div></div><div class="metric"><div class="metric-value" id="erpRowCount">49.2K</div><div class="metric-label">Source rows</div></div><div class="metric"><div class="metric-value" id="erpColumnCount">202</div><div class="metric-label">Cataloged columns</div></div></div>
+      <div class="reference-table" id="erpObjectTable"><table><thead><tr><th>ERP table</th><th>Rows</th><th>Columns</th><th>Status</th><th>Last analyzed</th><th></th></tr></thead><tbody id="erpObjectRows"></tbody></table></div>
+      <div class="erp-empty" id="erpEmpty" hidden><h2>No ERP tables yet</h2><p class="subtle">Add the first source table for this customer.</p><button class="button primary" id="addFirstErpTable">Add table</button></div>
+    </main>
+    <main class="reference-content reference-screen" id="erpDetail" hidden>
+      <div class="contract-head"><div class="contract-name"><button class="icon-button" id="backToErpCatalog" title="Back to ERP Table Objects" aria-label="Back to ERP Table Objects"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div><div class="eyebrow" id="erpDetailContext">KNA · Vista ERP</div><h1>Table Details</h1><p class="subtle"><strong id="erpDetailName">Equipment</strong> source data and schema.</p></div></div><div class="top-actions"><span class="badge accepted" id="erpDetailStatus">Profiled</span><button class="button primary" id="openErpMapping">Open mapping workspace</button></div></div>
+      <div class="contract-meta"><div class="contract-meta-item"><span>Table key</span><strong id="erpDetailKey">equipment</strong></div><div class="contract-meta-item"><span>Rows</span><strong id="erpDetailRows">3,423</strong></div><div class="contract-meta-item"><span>Columns</span><strong id="erpDetailColumns">160</strong></div><div class="contract-meta-item"><span>Last analyzed</span><strong id="erpDetailUpdated">Aug 12, 2026</strong></div></div>
+      <div class="contract-layout">
+        <section class="contract-section erp-source-files"><h2>Source files</h2><p class="subtle">Files collected from this customer ERP table.</p><div class="generated-files" id="erpSourceFiles"></div></section>
+        <section class="contract-section" id="erpFieldPanel"><div class="field-toolbar"><div><h2>Columns</h2><p class="subtle" style="margin:4px 0 0">A preview of the profiled source columns.</p></div><input id="erpFieldSearch" type="search" placeholder="Search columns" aria-label="Search ERP columns"></div><div class="contract-fields"><table><thead><tr><th>Column</th><th>Type</th><th>Required</th></tr></thead><tbody id="erpFieldRows"></tbody></table></div></section>
+        <section class="contract-section" id="erpFilePanel" hidden><div class="file-viewer-head"><div><h2 id="erpFileName"></h2><div class="file-viewer-path" id="erpFilePath"></div></div><button class="button" id="backToErpFields">Back to columns</button></div><pre class="file-viewer-code" id="erpFileContent" tabindex="0">Loading file…</pre><div class="file-viewer-csv" id="erpCsvPreview" hidden><div class="file-viewer-summary" id="erpCsvSummary"></div><div class="file-viewer-table"><table><thead id="erpCsvHead"></thead><tbody id="erpCsvBody"></tbody></table></div></div></section>
+      </div>
+    </main>
+    <main class="reference-content reference-screen" id="erpAdd" hidden>
+      <div class="wizard-head"><div><div class="eyebrow" id="erpAddCustomer">KNA · ERP source</div><h1>Add ERP table</h1><p class="subtle">Name the table and attach its source data. A JSON schema is optional.</p></div><button class="button" id="cancelErpAdd">Cancel</button></div>
+      <section class="wizard-panel erp-add-panel"><div class="panel-head"><h2>Table information</h2><p class="subtle">CSV and JSON are supported for this MVP.</p></div><div class="panel-body"><div class="form-grid"><div class="field"><label for="erpTableName">Table name</label><input id="erpTableName" placeholder="for example: Jobs"><span class="field-help">The customer-facing table label.</span></div><div class="field"><label for="erpReference">Matching IVO table</label><select id="erpReference"><option value="">Select an IVO table</option></select><span class="field-help">Fields from this IVO table will be used for matching.</span></div><div class="field"><label for="erpSystemName">ERP system</label><input id="erpSystemName" value="Vista ERP"></div><div class="field span-2"><label>Source files</label><div class="upload-grid"><div class="upload-zone" id="erpCsvZone"><div><div class="upload-zone-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 3v18"/></svg></div><h3>Table data</h3><p class="subtle">Required · CSV</p></div><input type="file" id="erpCsvInput" accept=".csv,text/csv" hidden><button class="button choose-file" data-target="erpCsvInput">Choose CSV</button><div class="file-pill" id="erpCsvFile" hidden><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span></span></div></div><div class="upload-zone" id="erpJsonZone"><div><div class="upload-zone-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></div><h3>Connector schema</h3><p class="subtle">Optional · JSON</p></div><input type="file" id="erpJsonInput" accept=".json,application/json" hidden><button class="button choose-file" data-target="erpJsonInput">Choose JSON</button><div class="file-pill" id="erpJsonFile" hidden><svg viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></svg><span></span></div></div></div></div></div></div><div class="panel-actions"><button class="button" id="useErpDemoFiles">Use demo files</button><button class="button primary" id="finishErpAdd" disabled>Add table</button></div></section>
+    </main>
+  </section>
+
+  <div class="app" id="customerWorkspace" hidden>
+    <aside class="sidebar">
+      <div class="brand"><div class="mark">IVO</div><div class="brand-copy"><strong>Mapping Workbench</strong><small>Integration delivery</small></div></div>
+      <div class="case-block">
+        <div class="eyebrow">Active onboarding</div>
+        <div class="case-name">KNA</div>
+        <div class="case-meta">Vista ERP · Equipment</div>
+        <div class="progress"><span></span></div>
+      </div>
+      <nav aria-label="Workflow">
+        <button class="nav-item done" data-view="profile"><span class="nav-index">✓</span><span class="nav-label">Profile</span><span class="nav-count">160</span></button>
+        <button class="nav-item active" data-view="mapping"><span class="nav-index">2</span><span class="nav-label">Mapping review</span><span class="nav-count" id="navOpen">5 open</span></button>
+        <button class="nav-item" data-view="build"><span class="nav-index">3</span><span class="nav-label">Trimble build</span><span class="nav-count">Draft</span></button>
+        <button class="nav-item" data-view="validate"><span class="nav-index">4</span><span class="nav-label">Validate</span><span class="nav-count">2 blocks</span></button>
+      </nav>
+      <div class="sidebar-foot">Reference: IVO Equipment v0.4<br>Last analyzed Aug 12, 2026</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex; align-items:center; gap:10px; min-width:0"><button class="icon-button back-button" id="backToErpCatalogFromMapping" title="Back to ERP Table Objects" aria-label="Back to ERP Table Objects"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div class="breadcrumbs">Customers / <strong>KNA</strong> / Equipment / <span id="crumb">Mapping review</span></div></div>
+        <div class="top-actions">
+          <button class="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+          <button class="button"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>Export review</button>
+          <button class="button primary" id="buildButton">Generate Trimble draft</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view" id="view-profile">
+          <div class="page-head"><h1>ERP profile</h1><p class="subtle">Profiling results for the KNA Vista Equipment export.</p></div>
+          <div class="profile-metrics">
+            <div class="profile-metric"><span class="eyebrow">Rows analyzed</span><strong>3,423</strong><span class="subtle">Valid records included in statistics</span></div>
+            <div class="profile-metric"><span class="eyebrow">Source columns</span><strong>160</strong><span class="subtle">CSV fields cataloged</span></div>
+            <div class="profile-metric warn"><span class="eyebrow">Rows repaired</span><strong>466</strong><span class="subtle">Multiline records reconstructed</span></div>
+            <div class="profile-metric warn"><span class="eyebrow">Rows quarantined</span><strong>5</strong><span class="subtle">Excluded after repair failed</span></div>
+          </div>
+          <div class="profile-layout">
+            <section class="profile-section">
+              <h2>Column usefulness</h2>
+              <p class="subtle">How much of the export carries information for mapping.</p>
+              <div class="profile-breakdown">
+                <div class="profile-breakdown-row"><span>Carrying information</span><strong>96 <span class="subtle">60.0%</span></strong></div>
+                <div class="profile-breakdown-row"><span>Constant value</span><strong>35 <span class="subtle">21.9%</span></strong></div>
+                <div class="profile-breakdown-row"><span>Never populated</span><strong>29 <span class="subtle">18.1%</span></strong></div>
+              </div>
+            </section>
+            <section class="profile-section">
+              <h2>Schema reconciliation</h2>
+              <p class="subtle">Comparison of the connector schema and observed export.</p>
+              <div class="profile-breakdown">
+                <div class="profile-breakdown-row"><span>Declared in connector schema</span><strong>103</strong></div>
+                <div class="profile-breakdown-row"><span>Customer-defined columns</span><strong>57</strong></div>
+                <div class="profile-breakdown-row"><span>Schema fields absent from export</span><strong>0</strong></div>
+              </div>
+            </section>
+          </div>
+          <section class="profile-table-section">
+            <h2>Fields requiring attention</h2>
+            <p class="subtle">Highest-impact findings to resolve or account for during mapping.</p>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Source field</th><th>Observed result</th><th>Impact</th><th>Recommended action</th></tr></thead>
+                <tbody>
+                  <tr><td>Equipment</td><td>2,567 padded values</td><td><span class="profile-flag">Transform</span></td><td>Trim whitespace; preserve as a string</td></tr>
+                  <tr><td>ExpLifeTimeFrame</td><td>31.9% empty but required</td><td><span class="badge blocked">Schema conflict</span></td><td>Confirm default or source requirement</td></tr>
+                  <tr><td>Model</td><td>Mixed types; 153 values at max length</td><td><span class="badge review">Review</span></td><td>Normalize type and check truncation</td></tr>
+                  <tr><td>VINNumber</td><td>2 placeholder nulls; mixed formats</td><td><span class="badge review">Review</span></td><td>Normalize null markers before mapping</td></tr>
+                  <tr><td>LicensePlateNo</td><td>590 placeholder nulls; mixed formats</td><td><span class="badge review">Review</span></td><td>Normalize nulls and preserve leading zeros</td></tr>
+                  <tr><td>OdoDate</td><td>24.0% populated</td><td><span class="badge review">Sparse</span></td><td>Define destination null handling</td></tr>
+                  <tr><td>Custom fields</td><td>57 found; 9 empty or constant</td><td><span class="profile-flag">48 decisions</span></td><td>Review informative custom columns</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="view active" id="view-mapping">
+          <div class="page-head">
+            <div class="page-head-row">
+              <div><h1>Equipment mapping review</h1><p class="subtle">45 IVO destinations · Vista ERP source · KNA context applied</p></div>
+              <button class="button" id="nextOpen">Next unresolved</button>
+            </div>
+          </div>
+          <div class="summary-strip">
+            <div class="metric good"><div class="metric-value" id="approvedMetric">27</div><div class="metric-label">Approved mappings</div></div>
+            <div class="metric warn"><div class="metric-value" id="reviewMetric">5</div><div class="metric-label">Need decisions</div></div>
+            <div class="metric"><div class="metric-value">8</div><div class="metric-label">Destination-owned</div></div>
+            <div class="metric"><div class="metric-value">2</div><div class="metric-label">Lookup tables</div></div>
+          </div>
+          <div class="workspace">
+            <div class="table-pane">
+              <div class="toolbar">
+                <div class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input id="searchInput" placeholder="Search source or destination" aria-label="Search mappings"></div>
+                <select id="statusFilter" aria-label="Filter status"><option value="all">All decisions</option><option value="accepted">Approved</option><option value="review">Needs decision</option><option value="omitted">Destination-owned</option><option value="blocked">Blocked</option></select>
+                <select aria-label="Filter mapping type"><option>All rule types</option><option>Direct</option><option>Lookup</option><option>Expression</option><option>Configuration</option></select>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th style="width:25%">IVO destination</th><th style="width:22%">Vista source</th><th style="width:16%">Rule</th><th style="width:18%">Confidence</th><th style="width:19%">Decision</th></tr></thead>
+                  <tbody id="mappingRows"></tbody>
+                </table>
+              </div>
+            </div>
+            <aside class="detail-pane">
+              <div class="detail-head"><div class="eyebrow">Review decision</div><h2 id="detailTitle">equipmentName</h2><span class="badge accepted" id="detailBadge">Approved</span></div>
+              <div class="detail-body detail-context">
+                <div class="pair"><div class="pair-box"><small>Vista source</small><select id="detailSource" aria-label="Customer field"></select></div><div class="arrow">→</div><div class="pair-box"><small>IVO destination</small><code id="detailDest">equipmentName</code></div></div>
+                <div class="match-score"><span>Match score</span><strong id="detailScore">—</strong></div>
+              </div>
+              <div class="review-decision"><h3>Decision</h3><div class="decision-group" id="decisionGroup"><button data-decision="accepted" class="active">Accept</button><button data-decision="override">Override</button><button data-decision="omitted">Omit</button><button data-decision="blocked">Block</button></div></div>
+              <div class="detail-body">
+                <div class="field"><label for="expression">Trimble value expression</label><input id="expression" value="flow.mapItem().Equipment.trim()"></div>
+                <div class="evidence"><h3>Evidence</h3><p id="evidenceText">Recovered from paired ERP and IVO values with 100% agreement. Equipment is the customer-facing equipment code.</p><button class="button" id="evidenceLink">View compared values</button></div>
+                <div class="field"><label for="notes">Reviewer notes</label><textarea id="notes">Direct mapping. Trim whitespace before writing to IVO.</textarea></div>
+                <div class="detail-actions"><button class="button">Reset</button><button class="button primary" id="saveDecision">Save decision</button></div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <dialog class="value-dialog" id="valueEvidenceDialog"><div class="value-dialog-head"><div><h2 id="valueEvidenceTitle">Compared values</h2><p class="subtle" id="valueEvidenceFields"></p></div><button class="icon-button" id="closeValueEvidence" title="Close" aria-label="Close">×</button></div><div class="value-dialog-body"><div class="value-tabs" role="tablist"><button class="active" role="tab" data-value-view="matched">Matching values</button><button role="tab" data-value-view="unmatched">Non-matching values</button></div><div class="value-evidence-summary" id="valueEvidenceSummary"></div><div class="value-evidence-table" id="valueEvidenceTable"></div></div></dialog>
+
+        <section class="view" id="view-build"></section>
+
+        <section class="view" id="view-validate">
+          <div class="page-head"><h1>Validation</h1><p class="subtle">Local checks against the IVO Equipment contract and representative Vista records.</p></div>
+          <div class="board">
+            <div class="validation-grid">
+              <div class="validation-card good"><div class="eyebrow">Mapping checks</div><div class="big">38 / 40</div><div class="subtle">Required destinations covered</div></div>
+              <div class="validation-card warn"><div class="eyebrow">Lookup coverage</div><div class="big">98.7%</div><div class="subtle">4 manufacturer values unresolved</div></div>
+              <div class="validation-card bad"><div class="eyebrow">Blocking issues</div><div class="big">2</div><div class="subtle">Organization and division IDs</div></div>
+            </div>
+            <div class="file-list">
+              <div class="file-row"><span class="file-status">✓</span><strong>Source fields exist</strong><span>40 / 40</span><span>Passed</span></div>
+              <div class="file-row"><span class="file-status">✓</span><strong>Generated fields omitted</strong><span>8 / 8</span><span>Passed</span></div>
+              <div class="file-row"><span style="color:var(--cp-danger)">!</span><strong>Required configurations supplied</strong><span>3 / 5</span><span>Blocked</span></div>
+              <div class="file-row"><span style="color:var(--cp-warning)">!</span><strong>Lookup values resolved</strong><span>301 / 305</span><span>Review</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="mobile-nav" aria-label="Mobile workflow">
+    <button data-view="profile">Profile</button><button class="active" data-view="mapping">Review</button><button data-view="build">Build</button><button data-view="validate">Validate</button>
+  </div>
+
+  <script type="text/plain" id="legacyMockScript">
+    const mappings = [
+      { dest: "equipmentName", source: "Equipment", rule: "Direct + trim", confidence: 100, status: "accepted", expression: "flow.mapItem().Equipment.trim()", evidence: "Recovered from paired ERP and IVO values with 100% agreement. Equipment is the customer-facing equipment code.", notes: "Direct mapping. Trim whitespace before writing to IVO." },
+      { dest: "equipmentYear", source: "ModelYr", rule: "Direct", confidence: 99, status: "accepted", expression: "flow.mapItem().ModelYr", evidence: "Recovered from paired values with 99.9% agreement and matching numeric type.", notes: "Preserve the four-digit model year." },
+      { dest: "equipmentManufacturerId", source: "Manufacturer", rule: "Lookup", confidence: 99, status: "accepted", expression: "flow.step('resolve-manufacturer').output[0].equipmentManufacturerId", evidence: "136 Vista values resolve to 133 IVO manufacturer identifiers.", notes: "Fail the lookup unless exactly one result is found." },
+      { dest: "equipmentGroupId", source: "Category", rule: "Lookup", confidence: 100, status: "accepted", expression: "flow.step('resolve-equipment-group').output[0].equipmentGroupId", evidence: "209 Vista categories resolve to 208 IVO equipment group identifiers.", notes: "Review duplicate category aliases before deployment." },
+      { dest: "isActive", source: "Status", rule: "Filter + constant", confidence: 100, status: "accepted", expression: "true", evidence: "Customer recap confirms only Status A equipment is imported. All 1,797 joined active records agree.", notes: "Apply Status === 'A' in a Filter step, then emit true." },
+      { dest: "isRental", source: "OwnershipStatus", rule: "Expression", confidence: 100, status: "accepted", expression: "flow.mapItem().OwnershipStatus === 'R'", evidence: "Customer context defines R as rental; O and L are treated as owned. 2,102 compared rows agree.", notes: "Leased equipment maps to false." },
+      { dest: "currentTrackVoJobId", source: "Job", rule: "Lookup candidate", confidence: 49, status: "review", expression: "", evidence: "Vista project numbers flow to IVO, but the target stores an IVO identifier. Project resolution is not defined.", notes: "Confirm the project-ID lookup and equipment-location workflow." },
+      { dest: "isLocationTracked", source: "Location", rule: "Rejected candidate", confidence: 56, status: "blocked", expression: "", evidence: "Vista Location is operational status, not telematics tracking. IVO/Samsara configuration owns this value.", notes: "Do not map from Vista Location." },
+      { dest: "divisionId", source: "—", rule: "Configuration", confidence: 0, status: "review", expression: "flow.config.divisionId", evidence: "No customer-specific division identifier was supplied in source data or context.", notes: "Collect during customer onboarding." },
+      { dest: "organizationId", source: "—", rule: "Configuration", confidence: 0, status: "review", expression: "flow.config.organizationId", evidence: "IVO organization scope is required but cannot be inferred from Vista records.", notes: "Collect from the target IVO workspace." },
+      { dest: "lastHourMeterId", source: "HourDate", rule: "Destination-owned", confidence: 49, status: "omitted", expression: "", evidence: "The target field stores an IVO meter-record ID, not a Vista date or reading.", notes: "Omit from the equipment payload." },
+      { dest: "activeWorkOrders", source: "udDirtWork", rule: "Destination-owned", confidence: 44, status: "omitted", expression: "", evidence: "IVO owns work orders; Vista work-order line items are being retired.", notes: "Omit from source mapping." },
+      { dest: "defaultEquipmentCodeId", source: "OriginalEquipmentCode", rule: "Lookup candidate", confidence: 56, status: "review", expression: "", evidence: "Vista equipment cost codes must exist in IVO, but the destination lookup contract is unresolved.", notes: "Confirm reference object and missing-value behavior." }
+    ];
+
+    const labels = { accepted: "Approved", review: "Needs decision", omitted: "Destination-owned", blocked: "Blocked", override: "Override" };
+    let selected = 0;
+
+    const rowContainer = document.getElementById("mappingRows");
+    const searchInput = document.getElementById("searchInput");
+    const statusFilter = document.getElementById("statusFilter");
+
+    function renderRows() {
+      const query = searchInput.value.trim().toLowerCase();
+      const status = statusFilter.value;
+      rowContainer.innerHTML = "";
+      mappings.forEach((item, index) => {
+        if (query && !`${item.dest} ${item.source} ${item.rule}`.toLowerCase().includes(query)) return;
+        if (status !== "all" && item.status !== status) return;
+        const row = document.createElement("tr");
+        if (index === selected) row.className = "selected";
+        row.innerHTML = `<td><code>${item.dest}</code></td><td><code>${item.source}</code></td><td>${item.rule}</td><td><div class="confidence"><div class="confidence-bar"><span style="width:${item.confidence}%"></span></div>${item.confidence ? `${item.confidence}%` : "—"}</div></td><td><span class="badge ${item.status}">${labels[item.status]}</span></td>`;
+        row.addEventListener("click", () => { selected = index; renderRows(); renderDetail(); });
+        rowContainer.appendChild(row);
+      });
+    }
+
+    function renderDetail() {
+      const item = mappings[selected];
+      document.getElementById("detailTitle").textContent = item.dest;
+      document.getElementById("detailSource").textContent = item.source;
+      document.getElementById("detailDest").textContent = item.dest;
+      const badge = document.getElementById("detailBadge");
+      badge.textContent = labels[item.status];
+      badge.className = `badge ${item.status}`;
+      document.getElementById("expression").value = item.expression;
+      document.getElementById("evidenceText").textContent = item.evidence;
+      document.getElementById("notes").value = item.notes;
+      document.querySelectorAll("#decisionGroup button").forEach(button => button.classList.toggle("active", button.dataset.decision === item.status));
+    }
+
+    function updateMetrics() {
+      const visibleApproved = mappings.filter(item => item.status === "accepted").length;
+      const open = mappings.filter(item => item.status === "review" || item.status === "blocked").length;
+      document.getElementById("approvedMetric").textContent = 21 + visibleApproved;
+      document.getElementById("reviewMetric").textContent = open;
+      document.getElementById("navOpen").textContent = `${open} open`;
+    }
+
+    function setView(name) {
+      document.querySelectorAll(".view").forEach(view => view.classList.toggle("active", view.id === `view-${name}`));
+      document.querySelectorAll("[data-view]").forEach(button => button.classList.toggle("active", button.dataset.view === name));
+      const navButton = document.querySelector(`.sidebar [data-view="${name}"] .nav-label`);
+      document.getElementById("crumb").textContent = navButton ? navButton.textContent : name;
+      document.querySelector(".content").scrollTop = 0;
+    }
+
+    function openWorkspace(kind) {
+      document.getElementById("launcher").hidden = true;
+      document.getElementById("customerObjectWorkspace").hidden = kind !== "customer";
+      document.getElementById("customerWorkspace").hidden = kind !== "mapping";
+      document.getElementById("referenceWorkspace").hidden = kind !== "references";
+      document.querySelector(".mobile-nav").hidden = kind !== "mapping";
+    }
+
+    function returnToLauncher() {
+      document.getElementById("launcher").hidden = false;
+      document.getElementById("customerObjectWorkspace").hidden = true;
+      document.getElementById("customerWorkspace").hidden = true;
+      document.getElementById("referenceWorkspace").hidden = true;
+      document.querySelector(".mobile-nav").hidden = true;
+    }
+
+    const customerErpObjects = {
+      KNA: [
+        { name: "Equipment", key: "equipment", erp: "Vista ERP", rows: 3423, columns: 160, status: "Profiled", updated: "Aug 12, 2026", files: [
+          { name: "data.csv", path: "customers/KNA/equipment/input/erp/data.csv" },
+          { name: "schema.json", path: "customers/KNA/equipment/input/erp/schema.json" }
+        ], fields: [["EMCo", "integer", "Yes"], ["Equipment", "string", "Yes"], ["Location", "string", "No"], ["Type", "string", "Yes"], ["Department", "string", "No"], ["Description", "string", "No"]] },
+        { name: "Contract items", key: "contract_items", erp: "Vista ERP", rows: 45803, columns: 42, status: "Profiled", updated: "Aug 12, 2026", files: [
+          { name: "contract items.csv", path: "customers/KNA/contract_items/input/erp/contract items.csv" },
+          { name: "contract_items.json", path: "customers/KNA/contract_items/input/erp/contract_items.json" }
+        ], fields: [["JCCo", "integer", "Yes"], ["Contract", "string", "Yes"], ["Item", "string", "Yes"], ["Description", "string", "No"], ["Department", "string", "Yes"], ["UM", "string", "No"]] }
+      ],
+      Northwind: [],
+      Contoso: []
+    };
+    let currentCustomer = "KNA";
+    let currentErpObjectIndex = 0;
+    let pendingErpFiles = [];
+
+    function formatCompactNumber(value) {
+      return value >= 1000 ? `${(value / 1000).toFixed(1)}K` : String(value);
+    }
+
+    function renderErpCatalog() {
+      const objects = customerErpObjects[currentCustomer] || [];
+      document.getElementById("erpCustomerTitle").textContent = `${currentCustomer} ERP tables`;
+      document.getElementById("erpCatalogCustomer").textContent = currentCustomer;
+      document.getElementById("erpTableCount").textContent = objects.length;
+      document.getElementById("erpRowCount").textContent = formatCompactNumber(objects.reduce((sum, object) => sum + object.rows, 0));
+      document.getElementById("erpColumnCount").textContent = objects.reduce((sum, object) => sum + object.columns, 0);
+      document.getElementById("erpObjectRows").innerHTML = objects.map((object, index) => `<tr><td><strong>${object.name}</strong><div class="subtle">${object.erp} · ${object.files.length} source files</div></td><td>${object.rows.toLocaleString()}</td><td>${object.columns}</td><td><span class="badge accepted">${object.status}</span></td><td>${object.updated}</td><td><button class="button" data-erp-index="${index}">Open details</button></td></tr>`).join("");
+      document.getElementById("erpObjectTable").hidden = objects.length === 0;
+      document.getElementById("erpEmpty").hidden = objects.length !== 0;
+    }
+
+    function showErpCatalog() {
+      document.getElementById("erpCatalog").hidden = false;
+      document.getElementById("erpDetail").hidden = true;
+      document.getElementById("erpAdd").hidden = true;
+      document.getElementById("addErpTable").hidden = false;
+      renderErpCatalog();
+    }
+
+    function showErpFields() {
+      document.getElementById("erpFieldPanel").hidden = false;
+      document.getElementById("erpFilePanel").hidden = true;
+      document.querySelectorAll(".erp-source-files .generated-file").forEach(file => file.classList.remove("selected"));
+    }
+
+    function showErpDetail(index) {
+      currentErpObjectIndex = index;
+      const object = customerErpObjects[currentCustomer][index];
+      document.getElementById("erpDetailContext").textContent = `${currentCustomer} · ${object.erp}`;
+      document.getElementById("erpDetailName").textContent = object.name;
+      document.getElementById("erpDetailStatus").textContent = object.status;
+      document.getElementById("erpDetailKey").textContent = object.key;
+      document.getElementById("erpDetailRows").textContent = object.rows.toLocaleString();
+      document.getElementById("erpDetailColumns").textContent = object.columns;
+      document.getElementById("erpDetailUpdated").textContent = object.updated;
+      document.getElementById("openErpMapping").hidden = !(currentCustomer === "KNA" && object.key === "equipment");
+      document.getElementById("erpSourceFiles").innerHTML = object.files.map((file, fileIndex) => `<div class="generated-file" role="button" tabindex="0" data-file-index="${fileIndex}" aria-label="Open ${file.name}"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg><div><strong>${file.name}</strong><small>${file.name.endsWith(".csv") ? "Source records" : "Connector schema"}</small></div><span class="badge accepted">${file.name.split(".").pop().toUpperCase()}</span></div>`).join("");
+      document.getElementById("erpFieldRows").innerHTML = object.fields.map(field => `<tr><td><code>${field[0]}</code></td><td>${field[1]}</td><td>${field[2]}</td></tr>`).join("");
+      document.getElementById("erpFieldSearch").value = "";
+      document.getElementById("erpCatalog").hidden = true;
+      document.getElementById("erpAdd").hidden = true;
+      document.getElementById("erpDetail").hidden = false;
+      document.getElementById("addErpTable").hidden = true;
+      showErpFields();
+    }
+
+    function updateErpAddState() {
+      const hasCsv = pendingErpFiles.some(file => file.name.toLowerCase().endsWith(".csv"));
+      document.getElementById("finishErpAdd").disabled = !document.getElementById("erpTableName").value.trim() || !hasCsv;
+    }
+
+    function setErpPendingFile(kind, file) {
+      const extension = kind === "csv" ? ".csv" : ".json";
+      pendingErpFiles = pendingErpFiles.filter(item => !item.name.toLowerCase().endsWith(extension));
+      pendingErpFiles.push(file);
+      const pill = document.getElementById(`erp${kind === "csv" ? "Csv" : "Json"}File`);
+      pill.hidden = false;
+      pill.querySelector("span").textContent = file.name;
+      document.getElementById(`erp${kind === "csv" ? "Csv" : "Json"}Zone`).classList.add("ready");
+      updateErpAddState();
+    }
+
+    function showErpAdd() {
+      pendingErpFiles = [];
+      document.getElementById("erpTableName").value = "";
+      document.getElementById("erpSystemName").value = "Vista ERP";
+      document.getElementById("erpCsvInput").value = "";
+      document.getElementById("erpJsonInput").value = "";
+      document.querySelectorAll("#erpAdd .file-pill").forEach(pill => pill.hidden = true);
+      document.querySelectorAll("#erpAdd .upload-zone").forEach(zone => zone.classList.remove("ready"));
+      document.getElementById("erpAddCustomer").textContent = `${currentCustomer} · ERP source`;
+      document.getElementById("erpCatalog").hidden = true;
+      document.getElementById("erpDetail").hidden = true;
+      document.getElementById("erpAdd").hidden = false;
+      document.getElementById("addErpTable").hidden = true;
+      updateErpAddState();
+    }
+
+    async function finishErpAdd() {
+      const csvFile = pendingErpFiles.find(file => file.name.toLowerCase().endsWith(".csv"));
+      const csvText = csvFile.content !== undefined ? csvFile.content : await csvFile.file.text();
+      const [headers = [], ...records] = parsePreviewCsv(csvText);
+      const name = document.getElementById("erpTableName").value.trim();
+      const object = {
+        name,
+        key: name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, ""),
+        erp: document.getElementById("erpSystemName").value.trim() || "ERP",
+        rows: records.length,
+        columns: headers.length,
+        status: "Ready",
+        updated: "Just now",
+        files: pendingErpFiles.slice(),
+        fields: headers.slice(0, 8).map(header => [header, "unknown", "Unknown"])
+      };
+      customerErpObjects[currentCustomer].push(object);
+      showErpCatalog();
+    }
+
+    function showErpFileMessage(message) {
+      document.getElementById("erpCsvPreview").hidden = true;
+      const content = document.getElementById("erpFileContent");
+      content.hidden = false;
+      content.textContent = message;
+    }
+
+    function renderErpCsvPreview(text) {
+      const rows = parsePreviewCsv(text);
+      if (!rows.length) throw new Error("CSV file is empty");
+      const [headers, ...records] = rows;
+      const headRow = document.createElement("tr");
+      headers.forEach(header => { const cell = document.createElement("th"); cell.scope = "col"; cell.textContent = header; headRow.appendChild(cell); });
+      document.getElementById("erpCsvHead").replaceChildren(headRow);
+      const visibleRecords = records.slice(0, 100);
+      document.getElementById("erpCsvBody").replaceChildren(...visibleRecords.map(record => { const row = document.createElement("tr"); headers.forEach((_, index) => { const cell = document.createElement("td"); cell.textContent = record[index] || ""; cell.title = record[index] || ""; row.appendChild(cell); }); return row; }));
+      document.getElementById("erpCsvSummary").textContent = `Showing ${visibleRecords.length} of ${records.length.toLocaleString()} rows · ${headers.length} columns`;
+      document.getElementById("erpFileContent").hidden = true;
+      document.getElementById("erpCsvPreview").hidden = false;
+    }
+
+    async function showErpFile(fileIndex, fileRow) {
+      const object = customerErpObjects[currentCustomer][currentErpObjectIndex];
+      const file = object.files[fileIndex];
+      document.getElementById("erpFieldPanel").hidden = true;
+      document.getElementById("erpFilePanel").hidden = false;
+      document.getElementById("erpFileName").textContent = file.name;
+      document.getElementById("erpFilePath").textContent = file.path || `${currentCustomer}/${object.key}/${file.name}`;
+      showErpFileMessage("Loading file…");
+      document.querySelectorAll(".erp-source-files .generated-file").forEach(row => row.classList.toggle("selected", row === fileRow));
+      try {
+        const text = file.content !== undefined ? file.content : file.file ? await file.file.text() : await (await fetch(new URL(`../../${file.path}`, location.href))).text();
+        if (file.name.toLowerCase().endsWith(".json")) showErpFileMessage(JSON.stringify(JSON.parse(text), null, 2));
+        else if (file.name.toLowerCase().endsWith(".csv")) renderErpCsvPreview(text);
+        else throw new Error("Only CSV and JSON previews are supported");
+      } catch (error) {
+        showErpFileMessage(`Unable to preview ${file.name}\n\n${error.message}`);
+      }
+    }
+
+    function openCustomerObjects(customer) {
+      currentCustomer = customer;
+      openWorkspace("customer");
+      showErpCatalog();
+    }
+
+    const referenceSteps = ["define", "files", "process", "review"];
+    function showReferenceStep(step) {
+      const activeIndex = referenceSteps.indexOf(step);
+      referenceSteps.forEach((name, index) => {
+        document.getElementById(`refPanel${name[0].toUpperCase()}${name.slice(1)}`).hidden = name !== step;
+        const marker = document.querySelector(`[data-ref-step="${name}"]`);
+        marker.classList.toggle("active", name === step);
+        marker.classList.toggle("done", index < activeIndex);
+        marker.querySelector(".wizard-number").textContent = index < activeIndex ? "✓" : index + 1;
+      });
+    }
+
+    function showReferenceCatalog() {
+      document.getElementById("referenceCatalog").hidden = false;
+      document.getElementById("referenceDetail").hidden = true;
+      document.getElementById("referenceWizard").hidden = true;
+      document.getElementById("addObjectContract").hidden = false;
+    }
+
+    function showReferenceWizard() {
+      document.getElementById("referenceCatalog").hidden = true;
+      document.getElementById("referenceDetail").hidden = true;
+      document.getElementById("referenceWizard").hidden = false;
+      document.getElementById("addObjectContract").hidden = true;
+      showReferenceStep("define");
+    }
+
+    const contractFieldPreviews = {
+      "Contract items": [
+        ["contractItemId", "integer", "Yes", "IVO generated"],
+        ["contractId", "integer", "Yes", "Lookup"],
+        ["itemCodeId", "integer", "Yes", "Lookup"],
+        ["description", "string", "No", "Direct"],
+        ["quantity", "number", "No", "Direct"],
+        ["unitPrice", "number", "No", "Direct"]
+      ],
+      "Work orders": [
+        ["workOrderId", "integer", "Yes", "IVO generated"],
+        ["companyId", "integer", "Yes", "Lookup"],
+        ["description", "string", "Yes", "Direct"],
+        ["status", "string", "No", "Direct"],
+        ["scheduledDate", "string", "No", "Direct"],
+        ["priority", "string", "No", "Direct"]
+      ]
+    };
+
+    function showReferenceDetail(row) {
+      const cells = row.querySelectorAll("td");
+      const name = cells[0].querySelector("strong").textContent;
+      document.getElementById("contractDetailName").textContent = name;
+      document.getElementById("contractDetailKey").textContent = name.toLowerCase().replace(/\s+/g, "_");
+      document.getElementById("contractDetailFields").textContent = cells[1].textContent.trim();
+      document.getElementById("contractDetailStatus").textContent = cells[2].textContent.trim();
+      document.getElementById("contractDetailSource").textContent = cells[3].textContent.trim();
+      document.getElementById("contractDetailUpdated").textContent = cells[4].textContent.trim();
+      document.getElementById("referenceDetail").dataset.referenceKey = name.toLowerCase().replace(/\s+/g, "_");
+      document.getElementById("contractFieldSearch").value = "";
+      const preview = contractFieldPreviews[name] || contractFieldPreviews["Contract items"];
+      document.getElementById("contractFieldRows").innerHTML = preview.map(field => `<tr><td><code>${field[0]}</code></td><td>${field[1]}</td><td>${field[2]}</td><td>${field[3]}</td></tr>`).join("");
+      document.getElementById("referenceCatalog").hidden = true;
+      document.getElementById("referenceWizard").hidden = true;
+      document.getElementById("referenceDetail").hidden = false;
+      document.getElementById("addObjectContract").hidden = true;
+      showContractFields();
+    }
+
+    function showContractFields() {
+      document.getElementById("contractFieldPanel").hidden = false;
+      document.getElementById("contractFilePanel").hidden = true;
+      document.querySelectorAll(".contract-files .generated-file").forEach(file => file.classList.remove("selected"));
+    }
+
+    function parsePreviewCsv(text) {
+      const rows = [];
+      let row = [];
+      let field = "";
+      let quoted = false;
+      const closesHere = index => text[index + 1] === undefined || text[index + 1] === "," || text[index + 1] === "\n" || text[index + 1] === "\r";
+      for (let index = 0; index < text.length; index++) {
+        const character = text[index];
+        if (quoted) {
+          if (character === '"' && text[index + 1] === '"') { field += '"'; index++; }
+          else if (character === '"' && closesHere(index)) quoted = false;
+          else field += character;
+        } else if (character === '"' && field === "") quoted = true;
+        else if (character === ",") { row.push(field); field = ""; }
+        else if (character === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+        else if (character !== "\r") field += character;
+      }
+      if (field !== "" || row.length) { row.push(field); rows.push(row); }
+      if (!rows.length) return [];
+      const headers = rows[0];
+      const records = [];
+      for (let index = 1; index < rows.length; index++) {
+        if (rows[index].length === 1 && rows[index][0] === "") continue;
+        let current = rows[index].slice();
+        let merged = 0;
+        while (current.length < headers.length && index + 1 < rows.length && merged < 100) {
+          const next = rows[index + 1];
+          if (current.length - 1 + next.length > headers.length) break;
+          current[current.length - 1] += `\n${next[0]}`;
+          current.push(...next.slice(1));
+          index++;
+          merged++;
+        }
+        if (current.length === headers.length) records.push(current);
+      }
+      return [headers, ...records];
+    }
+
+    function showFileMessage(message) {
+      document.getElementById("contractCsvPreview").hidden = true;
+      const content = document.getElementById("contractFileContent");
+      content.hidden = false;
+      content.textContent = message;
+    }
+
+    function renderJsonPreview(text) {
+      const parsed = JSON.parse(text);
+      showFileMessage(JSON.stringify(parsed, null, 2));
+    }
+
+    function renderCsvPreview(text) {
+      const rows = parsePreviewCsv(text);
+      if (!rows.length) throw new Error("CSV file is empty");
+      const [headers, ...records] = rows;
+      const headRow = document.createElement("tr");
+      headers.forEach(header => { const cell = document.createElement("th"); cell.scope = "col"; cell.textContent = header; headRow.appendChild(cell); });
+      document.getElementById("contractCsvHead").replaceChildren(headRow);
+      const bodyRows = records.map(record => {
+        const tableRow = document.createElement("tr");
+        headers.forEach((_, index) => { const cell = document.createElement("td"); cell.textContent = record[index] || ""; cell.title = record[index] || ""; tableRow.appendChild(cell); });
+        return tableRow;
+      });
+      document.getElementById("contractCsvBody").replaceChildren(...bodyRows);
+      document.getElementById("contractCsvSummary").textContent = `${records.length} rows · ${headers.length} columns`;
+      document.getElementById("contractFileContent").hidden = true;
+      document.getElementById("contractCsvPreview").hidden = false;
+    }
+
+    function renderContractFile(fileName, text) {
+      const extension = fileName.split(".").pop().toLowerCase();
+      if (extension === "json") renderJsonPreview(text);
+      else if (extension === "csv") renderCsvPreview(text);
+      else throw new Error("Only CSV and JSON previews are supported");
+    }
+
+    async function showContractFile(fileRow) {
+      const fileName = fileRow.querySelector("strong").textContent;
+      const referenceKey = document.getElementById("referenceDetail").dataset.referenceKey;
+      const relativePath = `reference/ivo/${referenceKey}/${fileName}`;
+      const fileUrl = new URL(`../../${relativePath}`, location.href);
+      document.getElementById("contractFieldPanel").hidden = true;
+      document.getElementById("contractFilePanel").hidden = false;
+      document.getElementById("contractFileName").textContent = fileName;
+      document.getElementById("contractFilePath").textContent = relativePath;
+      showFileMessage("Loading file…");
+      document.querySelectorAll(".contract-files .generated-file").forEach(file => file.classList.toggle("selected", file === fileRow));
+      try {
+        const response = await fetch(fileUrl);
+        if (!response.ok) throw new Error(`File returned ${response.status}`);
+        renderContractFile(fileName, await response.text());
+      } catch (error) {
+        showFileMessage(`Unable to preview ${relativePath}\n\n${error.message}`);
+      }
+    }
+
+    function setMockFile(kind, name) {
+      const file = document.getElementById(`${kind}File`);
+      file.hidden = false;
+      file.querySelector("span").textContent = name;
+      document.getElementById(`${kind}Zone`).classList.add("ready");
+      if (kind === "schema") document.getElementById("continueToProcess").disabled = false;
+    }
+
+    document.querySelectorAll("[data-view]").forEach(button => button.addEventListener("click", () => setView(button.dataset.view)));
+    searchInput.addEventListener("input", renderRows);
+    statusFilter.addEventListener("change", renderRows);
+    document.querySelectorAll("#decisionGroup button").forEach(button => button.addEventListener("click", () => {
+      document.querySelectorAll("#decisionGroup button").forEach(item => item.classList.remove("active"));
+      button.classList.add("active");
+    }));
+    document.getElementById("saveDecision").addEventListener("click", () => {
+      const item = mappings[selected];
+      const decision = document.querySelector("#decisionGroup button.active").dataset.decision;
+      item.status = decision === "override" ? "review" : decision;
+      item.expression = document.getElementById("expression").value;
+      item.notes = document.getElementById("notes").value;
+      renderRows(); renderDetail(); updateMetrics();
+    });
+    document.getElementById("nextOpen").addEventListener("click", () => {
+      const next = mappings.findIndex((item, index) => index > selected && (item.status === "review" || item.status === "blocked"));
+      selected = next >= 0 ? next : mappings.findIndex(item => item.status === "review" || item.status === "blocked");
+      if (selected >= 0) { renderRows(); renderDetail(); }
+    });
+    document.getElementById("buildButton").addEventListener("click", () => setView("build"));
+    document.querySelectorAll(".theme-toggle").forEach(button => button.addEventListener("click", () => {
+      document.documentElement.dataset.theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    }));
+    document.getElementById("openCustomer").addEventListener("click", () => openCustomerObjects(document.getElementById("customerSelect").value));
+    document.querySelector(".open-kna").addEventListener("click", () => openCustomerObjects("KNA"));
+    document.getElementById("addErpTable").addEventListener("click", showErpAdd);
+    document.getElementById("addFirstErpTable").addEventListener("click", showErpAdd);
+    document.getElementById("cancelErpAdd").addEventListener("click", showErpCatalog);
+    document.getElementById("erpTableName").addEventListener("input", updateErpAddState);
+    document.getElementById("erpCsvInput").addEventListener("change", event => { if (event.target.files[0]) setErpPendingFile("csv", { name: event.target.files[0].name, file: event.target.files[0] }); });
+    document.getElementById("erpJsonInput").addEventListener("change", event => { if (event.target.files[0]) setErpPendingFile("json", { name: event.target.files[0].name, file: event.target.files[0] }); });
+    document.getElementById("useErpDemoFiles").addEventListener("click", () => {
+      document.getElementById("erpTableName").value = "Jobs";
+      setErpPendingFile("csv", { name: "jobs.csv", content: "Job,Description,Status\n1001,North yard expansion,Active\n1002,Bridge repair,Closed\n1003,Warehouse fit-out,Active\n" });
+      setErpPendingFile("json", { name: "jobs.json", content: JSON.stringify({ type: "object", properties: { Job: { type: "integer" }, Description: { type: "string" }, Status: { type: "string" } }, required: ["Job", "Description"] }, null, 2) });
+      updateErpAddState();
+    });
+    document.getElementById("finishErpAdd").addEventListener("click", finishErpAdd);
+    document.getElementById("erpObjectRows").addEventListener("click", event => { const button = event.target.closest("[data-erp-index]"); if (button) showErpDetail(Number(button.dataset.erpIndex)); });
+    document.getElementById("backToErpCatalog").addEventListener("click", showErpCatalog);
+    document.getElementById("backToErpFields").addEventListener("click", showErpFields);
+    document.getElementById("erpSourceFiles").addEventListener("click", event => { const file = event.target.closest("[data-file-index]"); if (file) showErpFile(Number(file.dataset.fileIndex), file); });
+    document.getElementById("erpSourceFiles").addEventListener("keydown", event => { const file = event.target.closest("[data-file-index]"); if (file && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); showErpFile(Number(file.dataset.fileIndex), file); } });
+    document.getElementById("erpFieldSearch").addEventListener("input", event => { const query = event.target.value.trim().toLowerCase(); document.querySelectorAll("#erpFieldRows tr").forEach(row => row.hidden = query && !row.textContent.toLowerCase().includes(query)); });
+    document.getElementById("openErpMapping").addEventListener("click", () => openWorkspace("mapping"));
+    document.getElementById("backToErpCatalogFromMapping").addEventListener("click", () => { openWorkspace("customer"); showErpCatalog(); });
+    document.getElementById("openReferences").addEventListener("click", () => openWorkspace("references"));
+    document.querySelectorAll("[data-back]").forEach(button => button.addEventListener("click", returnToLauncher));
+    document.getElementById("addObjectContract").addEventListener("click", showReferenceWizard);
+    document.getElementById("backToContracts").addEventListener("click", showReferenceCatalog);
+    document.getElementById("backToFields").addEventListener("click", showContractFields);
+    document.querySelectorAll(".contract-files .generated-file").forEach(file => { file.tabIndex = 0; file.setAttribute("role", "button"); file.setAttribute("aria-label", `Open ${file.querySelector("strong").textContent}`); });
+    document.querySelector(".contract-files").addEventListener("click", event => {
+      const file = event.target.closest(".generated-file");
+      if (file) showContractFile(file);
+    });
+    document.querySelector(".contract-files").addEventListener("keydown", event => {
+      const file = event.target.closest(".generated-file");
+      if (file && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); showContractFile(file); }
+    });
+    document.getElementById("referenceRows").addEventListener("click", event => {
+      const button = event.target.closest("button");
+      if (button?.textContent.trim() === "Open contract") showReferenceDetail(button.closest("tr"));
+    });
+    document.getElementById("contractFieldSearch").addEventListener("input", event => {
+      const query = event.target.value.trim().toLowerCase();
+      document.querySelectorAll("#contractFieldRows tr").forEach(row => row.hidden = query && !row.textContent.toLowerCase().includes(query));
+    });
+    document.getElementById("cancelObject").addEventListener("click", showReferenceCatalog);
+    document.getElementById("continueToFiles").addEventListener("click", () => showReferenceStep("files"));
+    document.getElementById("backToDefine").addEventListener("click", () => showReferenceStep("define"));
+    document.getElementById("backToFiles").addEventListener("click", () => showReferenceStep("files"));
+    document.querySelectorAll(".choose-file").forEach(button => button.addEventListener("click", () => document.getElementById(button.dataset.target).click()));
+    document.getElementById("schemaInput").addEventListener("change", event => { if (event.target.files[0]) setMockFile("schema", event.target.files[0].name); });
+    document.getElementById("sampleInput").addEventListener("change", event => { if (event.target.files[0]) setMockFile("sample", event.target.files[0].name); });
+    document.getElementById("useDemoFiles").addEventListener("click", () => { setMockFile("schema", "work_orders.schema.json"); setMockFile("sample", "work_orders.sample.csv"); });
+    document.getElementById("continueToProcess").addEventListener("click", () => showReferenceStep("process"));
+    document.getElementById("runProcessing").addEventListener("click", () => {
+      const button = document.getElementById("runProcessing");
+      button.disabled = true;
+      const rows = [...document.querySelectorAll(".process-row")];
+      rows.forEach((row, index) => {
+        setTimeout(() => { row.classList.add("running"); row.querySelector(".process-state").textContent = "Running"; }, index * 260);
+        setTimeout(() => { row.classList.remove("running"); row.classList.add("done"); row.querySelector(".process-dot").textContent = "✓"; row.querySelector(".process-state").textContent = "Complete"; if (index === rows.length - 1) { button.disabled = false; button.textContent = "Processing complete"; document.querySelectorAll(".confirmation-summary").forEach(status => { status.textContent = "Generated"; status.className = "badge accepted confirmation-summary"; }); document.querySelectorAll(".review-status").forEach(status => { status.textContent = "Ready"; status.className = "badge accepted review-status"; }); const validationBadge = document.querySelector("#refPanelReview .generated-file:nth-child(4) .badge"); validationBadge.textContent = "Generated"; showReferenceStep("review"); } }, index * 260 + 220);
+      });
+    });
+    document.getElementById("finishReference").addEventListener("click", () => {
+      const label = document.getElementById("objectLabel").value || "New object";
+      const row = document.createElement("tr");
+      row.innerHTML = `<td><strong>${label}</strong><div class="subtle">schema · field catalog · lookups · validation</div></td><td>42</td><td><span class="badge accepted">Usable</span></td><td>Schema + sample</td><td>Just now</td><td><button class="button">Open contract</button></td>`;
+      document.getElementById("referenceRows").appendChild(row);
+      document.getElementById("catalogFieldCount").textContent = "121";
+      showReferenceCatalog();
+    });
+    document.getElementById("evidenceLink").addEventListener("click", event => event.preventDefault());
+
+    document.querySelector(".mobile-nav").hidden = true;
+    renderRows(); renderDetail(); updateMetrics();
+  </script>
+  <script src="/ui/workbench.js"></script>
+</body>
+</html>

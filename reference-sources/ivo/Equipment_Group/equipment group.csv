@@ -1,0 +1,272 @@
+equipmentGroupId,equipmentGroupShortName,equipmentGroupLongName,equipmentGroupDescription,companyId,equipmentClassId,isDeleted,createdTimestampUtc,createdByUserId,equipmentGroupColor,uuid
+4285,"Compactor CS56 84" SD - 273","Compactor CS56 84" SD","Compactor CS56 84" SD",265,0,0,"2026-07-15 20:18:12",0,NULL,b9f24b1c-d28f-4933-924c-64e8e301b515
+4286,"Exc. Breaker (80K Excavator) - 236","Exc. Breaker (80K Excavator)","Exc. Breaker (80K Excavator)",265,0,0,"2026-07-15 20:18:12",45,NULL,cd522294-63cd-4a45-b13a-2b1384d12806
+4287,"Aerial Scissor Lift Elec - 32' - 335","Aerial Scissor Lift Elec - 32'","Aerial Scissor Lift Elec - 32'",265,0,0,"2026-07-15 20:18:12",45,NULL,fb744ab8-37f4-47d8-879f-8c036785b10e
+4288,"Exc. Breaker (100K Excavator) - 237","Exc. Breaker (100K Excavator)","Exc. Breaker (100K Excavator)",265,0,0,"2026-07-15 20:18:12",45,NULL,ac0b3658-6ba0-4571-90d5-2d0699b29b18
+4289,"Pile Hammer Diesel (D14-19) - 365","Pile Hammer Diesel (D14-19)","Pile Hammer Diesel (D14-19)",265,0,0,"2026-07-15 20:18:12",45,NULL,624df341-20c1-493d-85a3-33540b9d7ca8
+4290,"Crane Crawler - 225 Ton - 140","Crane Crawler - 225 Ton","Crane Crawler - 225 Ton",265,0,0,"2026-07-15 20:18:13",45,NULL,cbdf9049-cf5e-4b3d-8ff2-eda0746cae21
+4291,"Spider Hoists SC1000 - 893","Spider Hoists SC1000","Spider Hoists SC1000",265,0,0,"2026-07-15 20:18:13",45,NULL,7b2da268-33ec-4124-9990-820e12534ebb
+4292,"Barge Section Shurgart (10x40) - 463","Barge Section Shurgart (10x40)","Barge Section Shurgart (10x40)",265,0,0,"2026-07-15 20:18:13",45,NULL,a7187f00-babb-4d48-9f79-313527d4c6fe
+4293,"Compactor CS44 66" SD - 275","Compactor CS44 66" SD","Compactor CS44 66" SD",265,0,0,"2026-07-15 20:18:13",45,NULL,1bae4bb7-2435-4a44-9d15-6d965f824776
+4294,"Boat Motor - 471","Boat Motor","Boat Motor",265,0,0,"2026-07-15 20:18:13",45,NULL,dd1b37e7-492f-4a47-9af1-b972da816cad
+4295,"xFinish Machines Bidwell - 875","xFinish Machines Bidwell","xFinish Machines Bidwell",265,0,0,"2026-07-15 20:18:13",45,NULL,d5e1da32-a98b-45c6-bb36-5883f2e35632
+4296,"Trailer - Office /Lab - 909","Trailer - Office /Lab","Trailer - Office /Lab",265,0,0,"2026-07-15 20:18:13",45,NULL,ce847262-f7ef-41ca-8576-2a0c7cb95b23
+4297,"Railroad Crane - 937","Railroad Crane","Railroad Crane",265,0,0,"2026-07-15 20:18:13",45,NULL,7f377e21-1dd3-497e-8f44-de76442cdba7
+4298,"Attach Skidsteer Brush Mower - 266","Attach Skidsteer Brush Mower","Attach Skidsteer Brush Mower",265,0,0,"2026-07-15 20:18:13",45,NULL,ed5f2df3-7c24-4d29-809d-b8d85d926614
+4299,"xBedding Box 7' - 900","xBedding Box 7'","xBedding Box 7'",265,0,0,"2026-07-15 20:18:14",45,NULL,e797f630-adc0-4b59-ab06-43f0d70a92a4
+4300,"Crane Crawler - 165 Ton - 137","Crane Crawler - 165 Ton","Crane Crawler - 165 Ton",265,0,0,"2026-07-15 20:18:14",45,NULL,6f809849-370f-40f3-a426-d4c8eeab581f
+4301,"Pickup - 3/4 Ton (MY2024+) - 962","Pickup - 3/4 Ton (MY2024+)","Pickup - 3/4 Ton (MY2024+)",265,0,0,"2026-07-15 20:18:14",45,NULL,f405bd3b-590a-4eee-9979-b2a23497d8e3
+4302,"Crane Tele-Boom Crawler-130T - 178","Crane Tele-Boom Crawler-130T","Crane Tele-Boom Crawler-130T",265,0,0,"2026-07-15 20:18:14",45,NULL,4e9ebff7-1d3e-48b8-b48d-1e3d3cad85a9
+4303,"Boat Tug-1300 HP - 467","Boat Tug-1300 HP","Boat Tug-1300 HP",265,0,0,"2026-07-15 20:18:14",45,NULL,7f4f9058-7603-4fd4-adda-6751cc7d6ee2
+4304,"Crane RT - 60 Ton - 165","Crane RT - 60 Ton","Crane RT - 60 Ton",265,0,0,"2026-07-15 20:18:14",45,NULL,077339e3-8086-4820-87d8-60ebb1e8492c
+4305,"Water Truck (4000 GAL) - 926","Water Truck (4000 GAL)","Water Truck (4000 GAL)",265,0,0,"2026-07-15 20:18:14",45,NULL,5ecd63d4-58dd-4ece-951e-e961cc5a51b3
+4306,"Aerial Boom Lift - 135' - 333","Aerial Boom Lift - 135'","Aerial Boom Lift - 135'",265,0,0,"2026-07-15 20:18:14",45,NULL,e6ab2507-469d-4f41-8a5e-b4432a02dd37
+4307,"Vehicle - Executive/Facility - 975","Vehicle - Executive/Facility","Vehicle - Executive/Facility",265,0,0,"2026-07-15 20:18:14",45,NULL,21371d99-1de1-45f7-921c-397b33e73670
+4308,"Crane Carry Deck - 15T - 180","Crane Carry Deck - 15T","Crane Carry Deck - 15T",265,0,0,"2026-07-15 20:18:14",45,NULL,263b48c7-8e14-4e36-bea3-de9e9c2b85c4
+4309,"Crane Tele-Boom Crawler - 15T - 177","Crane Tele-Boom Crawler - 15T","Crane Tele-Boom Crawler - 15T",265,0,0,"2026-07-15 20:18:15",45,NULL,a67fe7ca-2439-492c-9937-fa7e5bc3b9cf
+4310,"Railroad Pickup - 936","Railroad Pickup","Railroad Pickup",265,0,0,"2026-07-15 20:18:15",45,NULL,6476435a-f6b8-4d62-8e9b-d4ebb1827f08
+4311,"Vibratory Hammer/Extr V5 - 350","Vibratory Hammer/Extr V5","Vibratory Hammer/Extr V5",265,0,0,"2026-07-15 20:18:15",45,NULL,cbee390e-7e92-4881-8b6a-5c33365592b1
+4312,"Trailer - Equip 25Ton - 931","Trailer - Equip 25Ton","Trailer - Equip 25Ton",265,0,0,"2026-07-15 20:18:15",45,NULL,5b9af839-dc65-494b-af0d-e46533b11344
+4313,"Compactor Reversible (Large) - 891","Compactor Reversible (Large)","Compactor Reversible (Large)",265,0,0,"2026-07-15 20:18:15",45,NULL,de44cf73-6367-4e38-8ccd-8e0d9bf46a56
+4314,"Attach Tie Back Auger - 257","Attach Tie Back Auger","Attach Tie Back Auger",265,0,0,"2026-07-15 20:18:15",45,NULL,a1a8b240-ad7f-4993-ade2-ae31aada1c84
+4315,"Generator (100-1350KW) - 853","Generator (100-1350KW)","Generator (100-1350KW)",265,0,0,"2026-07-15 20:18:15",45,NULL,1e07b5ee-b334-47fd-b0b6-f0ffbecb136c
+4316,"Attach Broom/Sweepers - 272","Attach Broom/Sweepers","Attach Broom/Sweepers",265,0,0,"2026-07-15 20:18:15",45,NULL,592fe3a7-a856-4783-bc23-86c206d0c97c
+4317,"Barge Crane Set 50 x 80 - 452","Barge Crane Set 50 x 80","Barge Crane Set 50 x 80",265,0,0,"2026-07-15 20:18:15",45,NULL,37c10f87-c559-426e-ad1e-ccb478279b49
+4318,"Forklift (5K Industrial/Shop) - 300","Forklift (5K Industrial/Shop)","Forklift (5K Industrial/Shop)",265,0,0,"2026-07-15 20:18:16",45,NULL,44552500-8a4e-4df3-9055-bf5d8917308c
+4319,"Exc. Processor UP 40 - 252","Exc. Processor UP 40","Exc. Processor UP 40",265,0,0,"2026-07-15 20:18:16",45,NULL,a320d323-698b-4990-ab80-085dd5160f7d
+4320,"Attach Salt Spreader - 601","Attach Salt Spreader","Attach Salt Spreader",265,0,0,"2026-07-15 20:18:16",45,NULL,6a2cf97e-f9d1-4f63-ae9b-bfd9934fb844
+4321,"Barge Crane Set 60 x 60 - 453","Barge Crane Set 60 x 60","Barge Crane Set 60 x 60",265,0,0,"2026-07-15 20:18:16",45,NULL,a5535e7c-d33a-4e8b-b491-96ea6e84fbcb
+4322,"Vibratory Hammer/Extr V17-V22 - 351","Vibratory Hammer/Extr V17-V22","Vibratory Hammer/Extr V17-V22",265,0,0,"2026-07-15 20:18:16",45,NULL,988231c3-889f-4494-8848-e7d47dfa3572
+4323,"Excavator Mini 7,500# - 225","Excavator Mini 7,500#","Excavator Mini 7,500#",265,0,0,"2026-07-15 20:18:16",45,NULL,bbcbf1f2-5c0f-48b7-8089-0e72d9691b13
+4324,"Excavator 30,000-40,000# - 229","Excavator 30,000-40,000#","Excavator 30,000-40,000#",265,0,0,"2026-07-15 20:18:16",45,NULL,65364cbb-eff1-4002-b7ec-920294239f6a
+4325,"xJet Pumps (#7047) - 863","xJet Pumps (#7047)","xJet Pumps (#7047)",265,0,0,"2026-07-15 20:18:16",45,NULL,f870d92f-4a9e-450c-9616-8ef40e1d4a28
+4326,"Crane RT - 80 Ton - 170","Crane RT - 80 Ton","Crane RT - 80 Ton",265,0,0,"2026-07-15 20:18:17",45,NULL,2a00afeb-92c8-429a-b3b1-3598dc104b08
+4327,"Barge Portabarge - 450","Barge Portabarge","Barge Portabarge",265,0,0,"2026-07-15 20:18:17",45,NULL,dd05c033-a8c6-4008-9282-f91a1d444feb
+4328,"Attach Exc Wheel Compactor - 250","Attach Exc Wheel Compactor","Attach Exc Wheel Compactor",265,0,0,"2026-07-15 20:18:17",45,NULL,6451608e-8be9-43aa-991f-515edb00fb03
+4329,"Office Container 8' x 20' - 932","Office Container 8' x 20'","Office Container 8' x 20'",265,0,0,"2026-07-15 20:18:17",45,NULL,ca6f25c6-3b8d-4bf3-aa70-0c0be5ef78d1
+4330,"Compactor W/B Plate (Small) - 281","Compactor W/B Plate (Small)","Compactor W/B Plate (Small)",265,0,0,"2026-07-15 20:18:17",45,NULL,1458508f-ecef-4488-995e-08a7eea8a321
+4331,"Boat Other - 470","Boat Other","Boat Other",265,0,0,"2026-07-15 20:18:17",45,NULL,c89ebdd1-4696-4497-bcd5-5566a36348ed
+4332,"Crane Crawler - 85-100  Ton - 130","Crane Crawler - 85-100  Ton","Crane Crawler - 85-100  Ton",265,0,0,"2026-07-15 20:18:17",45,NULL,0f37745e-f1bc-4fd9-a85f-99a9d2f75ab8
+4333,"Welder - 865",Welder,Welder,265,0,0,"2026-07-15 20:18:18",45,NULL,f225be66-7d45-4029-854a-1a4d70f0002e
+4334,"Pile Hammer Diesel (D36) - 368","Pile Hammer Diesel (D36)","Pile Hammer Diesel (D36)",265,0,0,"2026-07-15 20:18:18",45,NULL,5891c646-107a-4853-a6bc-ad1fa24e27a9
+4335,"Aerial Boom Lift - 65' - 331","Aerial Boom Lift - 65'","Aerial Boom Lift - 65'",265,0,0,"2026-07-15 20:18:18",45,NULL,8a08b82d-8fa1-4814-883a-229c46335ec0
+4336,"OPEN - 312",OPEN,OPEN,265,0,0,"2026-07-15 20:18:18",45,NULL,d68a541b-e169-46cc-9940-7ed46a5f61b5
+4337,"OPEN - 313",OPEN,OPEN,265,0,0,"2026-07-15 20:18:18",45,NULL,c169649e-6561-4cc1-b09b-cf40c40fc352
+4338,"xHydra Platform - 879","xHydra Platform","xHydra Platform",265,0,0,"2026-07-15 20:18:18",45,NULL,fdb204f4-f85a-4dd5-9a4c-9b0ff36dd0a9
+4339,"Truck - Hydro Vac - 957","Truck - Hydro Vac","Truck - Hydro Vac",265,0,0,"2026-07-15 20:18:18",45,NULL,743810ad-4ce9-4e96-9963-b69e1fc4c5c0
+4340,"Excavator 56,000-65,000# - 230","Excavator 56,000-65,000#","Excavator 56,000-65,000#",265,0,0,"2026-07-15 20:18:18",45,NULL,3d03cf22-ac5c-4b2a-95ee-589f478a9139
+4341,"Chairs - 77",Chairs,Chairs,265,0,0,"2026-07-15 20:18:19",45,NULL,8edbc272-487b-4dd6-b7d3-5bd735195e99
+4342,"Truck - Boom 22 Ton - 934","Truck - Boom 22 Ton","Truck - Boom 22 Ton",265,0,0,"2026-07-15 20:18:19",45,NULL,d00ea8d8-1100-4c00-a6f9-14d57d22861d
+4343,"Skid Steer-Wheeled - 270","Skid Steer-Wheeled","Skid Steer-Wheeled",265,0,0,"2026-07-15 20:18:19",45,NULL,527a7175-5de1-4a2e-b415-5ca1118ec5fa
+4344,"Radio Equipment - 96","Radio Equipment","Radio Equipment",265,0,0,"2026-07-15 20:18:19",45,NULL,24d2900a-0a47-44de-90ad-69769b64cf6a
+4345,"Skid Steer-Track CAT 289/265 - 268","Skid Steer-Track CAT 289/265","Skid Steer-Track CAT 289/265",265,0,0,"2026-07-15 20:18:19",45,NULL,95712b3e-e4d8-4d9e-af7a-fe46a2e4b096
+4346,"Trailer - Office 5 Plex60'x60' - 913","Trailer - Office 5 Plex60'x60'","Trailer - Office 5 Plex60'x60'",265,0,0,"2026-07-15 20:18:19",45,NULL,e0cfc0f9-2974-4982-897f-81598ace8b6e
+4347,"Air Compressors 375-600 CFM - 871","Air Compressors 375-600 CFM","Air Compressors 375-600 CFM",265,0,0,"2026-07-15 20:18:19",45,NULL,c280a596-bb41-4495-8815-13baf2ae7a45
+4348,"Software - 91",Software,Software,265,0,0,"2026-07-15 20:18:19",45,NULL,1a0a6ebf-c656-4e1b-86c0-0add06e4bf20
+4349,"Air Compressors 125-185 CFM - 870","Air Compressors 125-185 CFM","Air Compressors 125-185 CFM",265,0,0,"2026-07-15 20:18:20",45,NULL,23eb3197-51bf-4bd3-9134-28de06641bd0
+4350,"OPEN - 161",OPEN,OPEN,265,0,0,"2026-07-15 20:18:20",45,NULL,3062ab61-9d74-456c-8a3c-9b7d51a68bc6
+4351,"Water Tank Trailers 7500-7800 - 922","Water Tank Trailers 7500-7800","Water Tank Trailers 7500-7800",265,0,0,"2026-07-15 20:18:20",45,NULL,59359e9d-dbbc-4dae-9dd4-70f809bea4c5
+4352,"xTorque Tech Winches - 897","xTorque Tech Winches","xTorque Tech Winches",265,0,0,"2026-07-15 20:18:20",45,NULL,aaaf6171-20b8-4fa8-ae9d-eb7c17b5b23b
+4353,"Stripping Wagon - 877","Stripping Wagon","Stripping Wagon",265,0,0,"2026-07-15 20:18:20",45,NULL,42ab70f8-417a-448c-96c1-e2cff6762d72
+4354,"OPEN - 310",OPEN,OPEN,265,0,0,"2026-07-15 20:18:20",45,NULL,59ea7e03-ba2d-426a-9cf5-f781c4fa96cf
+4355,"Truck - Welding - 950","Truck - Welding","Truck - Welding",265,0,0,"2026-07-15 20:18:20",45,NULL,0f800561-9b04-4704-afce-16592988ed2c
+4356,"Water Tower Portable 12,000GL - 923","Water Tower Portable 12,000GL","Water Tower Portable 12,000GL",265,0,0,"2026-07-15 20:18:20",45,NULL,8a02c835-ad5f-4f35-b64d-29aa85069a7e
+4357,"OPEN - 184",OPEN,OPEN,265,0,0,"2026-07-15 20:18:21",45,NULL,da61c6fb-3156-4ad0-9453-5c551f103d53
+4358,"OPEN - 215",OPEN,OPEN,265,0,0,"2026-07-15 20:18:21",45,NULL,27c5adfc-b647-46cf-a638-f46786cea1c8
+4359,"OPEN - 321",OPEN,OPEN,265,0,0,"2026-07-15 20:18:21",45,NULL,3120dc8f-1f32-4081-bacc-e2d4457a5ffb
+4360,"OPEN - 317",OPEN,OPEN,265,0,0,"2026-07-15 20:18:21",45,NULL,68da79a4-83a3-4368-a060-c37c9e182a7f
+4361,"OPEN - 181",OPEN,OPEN,265,0,0,"2026-07-15 20:18:21",45,NULL,7ea33051-4593-46d9-8dfe-60292e187152
+4362,"NOT CURRENTLY USED - 211","NOT CURRENTLY USED","NOT CURRENTLY USED",265,0,0,"2026-07-15 20:18:21",45,NULL,3d53942a-3a61-4bb0-98e5-a6ca88f5e54f
+4363,"Pile Hammer Diesel (D46-32) - 367","Pile Hammer Diesel (D46-32)","Pile Hammer Diesel (D46-32)",265,0,0,"2026-07-15 20:18:21",45,NULL,3e2d3c56-ebc3-4829-b170-471819fc4f72
+4364,"Exc. Breaker (30K-50K Exc) - 235","Exc. Breaker (30K-50K Exc)","Exc. Breaker (30K-50K Exc)",265,0,0,"2026-07-15 20:18:21",45,NULL,cdf1d937-dc03-4351-8ee6-4d8a685f863f
+4365,"Loader Track CAT963K - 262","Loader Track CAT963K","Loader Track CAT963K",265,0,0,"2026-07-15 20:18:22",45,NULL,2bcfab0f-ce77-48f7-993a-08f47593c4f7
+4366,"zShop Overhead Hoist - 989","zShop Overhead Hoist","zShop Overhead Hoist",265,0,0,"2026-07-15 20:18:22",45,NULL,f98639d6-fe82-44b4-93f8-cc7f86de2bb2
+4367,"Attach Bucket Skeleton 66" - 245","Attach Bucket Skeleton 66"","Attach Bucket Skeleton 66"",265,0,0,"2026-07-15 20:18:22",45,NULL,48f51ef5-d761-4546-a6ec-86d828e83533
+4368,"Compactor PD RollerWalk Behind - 277","Compactor PD RollerWalk Behind","Compactor PD RollerWalk Behind",265,0,0,"2026-07-15 20:18:22",45,NULL,7c0526be-b173-4f49-882b-86ea0a2cc84b
+4369,"OPEN - 401",OPEN,OPEN,265,0,0,"2026-07-15 20:18:22",45,NULL,26b391e9-8070-46a3-a443-728419c4ce59
+4370,"Excavator 100,000#+ - 232","Excavator 100,000#+","Excavator 100,000#+",265,0,0,"2026-07-15 20:18:22",45,NULL,442b95ea-5331-4704-96e7-350b3ff815ae
+4371,"Truck - Dump Tandem - 956","Truck - Dump Tandem","Truck - Dump Tandem",265,0,0,"2026-07-15 20:18:22",45,NULL,9cb1116a-7741-4569-8d6a-3d024e3878cd
+4372,"Forklift (5K Telehandler) - 301","Forklift (5K Telehandler)","Forklift (5K Telehandler)",265,0,0,"2026-07-15 20:18:23",45,NULL,8db8fad7-b256-4cb7-a568-47eb76725f76
+4373,"Trailer - Restroom - 907","Trailer - Restroom","Trailer - Restroom",265,0,0,"2026-07-15 20:18:23",45,NULL,98af1fd2-1ac2-432b-b03a-71c202cecc92
+4374,"Barge Crane Set 40 x 80 - 451","Barge Crane Set 40 x 80","Barge Crane Set 40 x 80",265,0,0,"2026-07-15 20:18:23",45,NULL,cfa8f00f-8276-4131-b59f-e0197e5d4bb7
+4375,"Vehicle - Passenger Van - 973","Vehicle - Passenger Van","Vehicle - Passenger Van",265,0,0,"2026-07-15 20:18:23",45,NULL,c08ac03a-3d4c-4dd0-8c0a-3224ac187a24
+4376,"Rotec Conveyor System - 880","Rotec Conveyor System","Rotec Conveyor System",265,0,0,"2026-07-15 20:18:23",45,NULL,f359293e-d381-4586-8a35-4f5d88863b37
+4377,"xAir Tuggers - 896","xAir Tuggers","xAir Tuggers",265,0,0,"2026-07-15 20:18:23",45,NULL,416961ca-e09f-49e1-a090-5f4ec128d37c
+4378,"Vibratory Hammer/Extr V30 - 352","Vibratory Hammer/Extr V30","Vibratory Hammer/Extr V30",265,0,0,"2026-07-15 20:18:23",45,NULL,f9772aa4-2679-4e04-bdb3-3a68a2d00171
+4379,"Crane Crawler - 150 Ton - 135","Crane Crawler - 150 Ton","Crane Crawler - 150 Ton",265,0,0,"2026-07-15 20:18:24",45,NULL,ba464444-388f-478c-a048-157260c042ca
+4380,"Railroad Truck - 938","Railroad Truck","Railroad Truck",265,0,0,"2026-07-15 20:18:24",45,NULL,8cd50897-0745-4ef3-ae23-cec268386265
+4381,"Excavator 15,000-30,000# - 228","Excavator 15,000-30,000#","Excavator 15,000-30,000#",265,0,0,"2026-07-15 20:18:24",45,NULL,557758ea-5b90-4d55-a615-9e346a1165c1
+4382,"Barge Section Shugart (10x20) - 462","Barge Section Shugart (10x20)","Barge Section Shugart (10x20)",265,0,0,"2026-07-15 20:18:24",45,NULL,68218245-f55c-4851-bbd7-ce362557fee3
+4383,"Inventory Fabrication - 999","Inventory Fabrication","Inventory Fabrication",265,0,0,"2026-07-15 20:18:24",45,NULL,04396c99-5228-46aa-8323-d0ddddefe18b
+4384,"Forklift (20K Telehander) - 306","Forklift (20K Telehander)","Forklift (20K Telehander)",265,0,0,"2026-07-15 20:18:24",45,NULL,8f9299ed-50f9-4517-b0aa-c4f32c05129b
+4385,"Attach Ripper 51" - 248","Attach Ripper 51"","Attach Ripper 51"",265,0,0,"2026-07-15 20:18:24",45,NULL,7c93c81a-46c3-4e89-8102-eee9e9d43ea3
+4386,"Office/Tool Container 8'x40' - 933","Office/Tool Container 8'x40'","Office/Tool Container 8'x40'",265,0,0,"2026-07-15 20:18:24",45,NULL,d55366a5-02bb-4e9d-bb20-6f974e81a77a
+4387,"Exc. Processor UP 90 - 254","Exc. Processor UP 90","Exc. Processor UP 90",265,0,0,"2026-07-15 20:18:25",45,NULL,0a679cb2-58a8-4507-b51a-5e5b84ffb13f
+4388,"Printer/Plotter - 92",Printer/Plotter,Printer/Plotter,265,0,0,"2026-07-15 20:18:25",45,NULL,1c2ed5fa-8f0d-4b98-b7e8-134db888f61f
+4389,"yRent/RPO Equipment - 99","yRent/RPO Equipment","yRent/RPO Equipment",265,0,0,"2026-07-15 20:18:25",45,NULL,e2d705d4-6c3e-4967-827e-4b5bb52d8aff
+4390,"Crane Truck - 65-100 Ton - 100","Crane Truck - 65-100 Ton","Crane Truck - 65-100 Ton",265,0,0,"2026-07-15 20:18:25",45,NULL,75c16432-e5e5-4f72-bda9-5689f1c45963
+4391,"Generator (15-20KW) - 854","Generator (15-20KW)","Generator (15-20KW)",265,0,0,"2026-07-15 20:18:25",45,NULL,8c61998b-7f85-40f7-8ef0-c33215a147e3
+4392,"Office/Lab Container 40' - 929","Office/Lab Container 40'","Office/Lab Container 40'",265,0,0,"2026-07-15 20:18:26",45,NULL,f3dc2524-cc3b-4128-a550-2438330d1013
+4393,"Light Plants - Auto Start - 851","Light Plants - Auto Start","Light Plants - Auto Start",265,0,0,"2026-07-15 20:18:26",45,NULL,6344456a-e315-45fb-bd65-40111c99150c
+4394,"Excavator (Rubber-Tired) - 220","Excavator (Rubber-Tired)","Excavator (Rubber-Tired)",265,0,0,"2026-07-15 20:18:26",45,NULL,63d5406b-740f-4d1a-a6eb-981ca67079c7
+4395,"Vehicle - Autos/SUVs - 974","Vehicle - Autos/SUVs","Vehicle - Autos/SUVs",265,0,0,"2026-07-15 20:18:26",45,NULL,39f2dcc8-e0b7-434f-a039-ec7fe1404bd0
+4396,"Other Office Equipment - 87","Other Office Equipment","Other Office Equipment",265,0,0,"2026-07-15 20:18:26",45,NULL,102cb7b9-072f-4e3e-95a4-ef46076fba59
+4397,"Water Truck (1000-2000 GAL) - 925","Water Truck (1000-2000 GAL)","Water Truck (1000-2000 GAL)",265,0,0,"2026-07-15 20:18:26",45,NULL,41c395de-a41f-41ef-b5a2-9923cba78611
+4398,"Excavator 40,000-50,000# - 226","Excavator 40,000-50,000#","Excavator 40,000-50,000#",265,0,0,"2026-07-15 20:18:26",45,NULL,14df7ca7-d807-4357-b553-df9d87e84211
+4399,"Forklift (8K & 10K) - 302","Forklift (8K & 10K)","Forklift (8K & 10K)",265,0,0,"2026-07-15 20:19:12",45,NULL,23e9998a-14e7-4f92-89cc-c7818d8f1ab0
+4400,"Attach Skidsteer Bucket 98" - 267","Attach Skidsteer Bucket 98"","Attach Skidsteer Bucket 98"",265,0,0,"2026-07-15 20:19:12",45,NULL,ef0c262c-a0b3-4329-a732-5da6b1c12a3e
+4401,"Pickup - 3/4 Ton (MY2023&Old) - 967","Pickup - 3/4 Ton (MY2023&Old)","Pickup - 3/4 Ton (MY2023&Old)",265,0,0,"2026-07-15 20:19:12",45,NULL,cd7fb845-6e4f-4cac-93d9-edc7ea2a0fc9
+4402,"Boat Tug-200 HP - 465","Boat Tug-200 HP","Boat Tug-200 HP",265,0,0,"2026-07-15 20:19:12",45,NULL,aa0c51e5-a224-4d1b-9643-7f7e96f5b98e
+4403,"Crane Crawler - 65 Ton - 120","Crane Crawler - 65 Ton","Crane Crawler - 65 Ton",265,0,0,"2026-07-15 20:19:12",45,NULL,3cc6270c-95cc-4709-94ea-12190ba36b2e
+4404,"Pickup - 1/2 Ton (MY2023&Old) - 965","Pickup - 1/2 Ton (MY2023&Old)","Pickup - 1/2 Ton (MY2023&Old)",265,0,0,"2026-07-15 20:19:12",45,NULL,3f5d0ea2-5a96-4168-b4ec-5d1753a34d37
+4405,"Attach Bucket ExtremeWear 55"+ - 247","Attach Bucket ExtremeWear 55"+","Attach Bucket ExtremeWear 55"+",265,0,0,"2026-07-15 20:19:13",45,NULL,8002f498-b4e8-47de-9e0e-34d3362f5e0a
+4406,"Attach Slab Grabber - 255","Attach Slab Grabber","Attach Slab Grabber",265,0,0,"2026-07-15 20:19:13",45,NULL,58e9c213-da9c-484a-9f05-b043ea0c09a6
+4407,"Desks and Tables - 75","Desks and Tables","Desks and Tables",265,0,0,"2026-07-15 20:19:13",45,NULL,e2f4a805-2d31-4a03-8e2b-2c9447ea9723
+4408,"Trailer - Dump - 915","Trailer - Dump","Trailer - Dump",265,0,0,"2026-07-15 20:19:13",45,NULL,27071a9b-cf33-4ada-8d54-5ef003aada6e
+4409,"Crane Crawler - 300 Ton - 150","Crane Crawler - 300 Ton","Crane Crawler - 300 Ton",265,0,0,"2026-07-15 20:19:13",45,NULL,10b324b3-0ad8-4e2b-a835-5ea9369d0c11
+4410,"OPEN - 179",OPEN,OPEN,265,0,0,"2026-07-15 20:19:13",45,NULL,8e5a3eba-79d0-464e-92de-da6f389d543c
+4411,"Generator (125KW) - 858","Generator (125KW)","Generator (125KW)",265,0,0,"2026-07-15 20:19:13",45,NULL,65dabc2b-04ba-41ae-877d-945a92cabef8
+4412,"NOT CURRENTLY USED - 210","NOT CURRENTLY USED","NOT CURRENTLY USED",265,0,0,"2026-07-15 20:19:14",45,NULL,c4361547-8f08-4807-b8f5-1fe633369b55
+4413,"Trailer - Tool Van - 908","Trailer - Tool Van","Trailer - Tool Van",265,0,0,"2026-07-15 20:19:14",45,NULL,fc8ea26b-db6d-4641-bf74-3cf048165e36
+4414,"zCargo Containers - 918","zCargo Containers","zCargo Containers",265,0,0,"2026-07-15 20:19:14",45,NULL,8b0ceb57-fa10-4910-b21c-c7d08114ecc9
+4415,"Crane Tele-Boom Crawler - 6T - 176","Crane Tele-Boom Crawler - 6T","Crane Tele-Boom Crawler - 6T",265,0,0,"2026-07-15 20:19:14",45,NULL,09c20d73-640a-4b7a-867d-0ca02ffc597f
+4416,"Sweeper-3 Wheel Ride On - 279","Sweeper-3 Wheel Ride On","Sweeper-3 Wheel Ride On",265,0,0,"2026-07-15 20:19:14",45,NULL,276897a5-6b7d-4625-82d5-32b0fd6541a2
+4417,"xHydraulic Pumps-Jacking Sys - 898","xHydraulic Pumps-Jacking Sys","xHydraulic Pumps-Jacking Sys",265,0,0,"2026-07-15 20:19:14",45,NULL,bea87678-3a61-47f7-8922-c89f681b6b56
+4418,"Truck - Mechanic - 952","Truck - Mechanic","Truck - Mechanic",265,0,0,"2026-07-15 20:19:15",45,NULL,63c5825a-67ec-4464-846f-3c6e3e3e21df
+4419,"Crane Crawler - 80 Ton - 125","Crane Crawler - 80 Ton","Crane Crawler - 80 Ton",265,0,0,"2026-07-15 20:19:15",45,NULL,4d2c5c8b-a173-4079-abf8-e4504eb5d265
+4420,"OPEN - 326",OPEN,OPEN,265,0,0,"2026-07-15 20:19:15",45,NULL,5a64338d-9153-47e5-ae4e-7caf927c01a3
+4421,"xConcrete Mixer - 610","xConcrete Mixer","xConcrete Mixer",265,0,0,"2026-07-15 20:19:15",45,NULL,0e2be1ce-07e6-4ee6-910d-939aa300efba
+4422,"Skid Steer-Track CAT259/255 - 271","Skid Steer-Track CAT259/255","Skid Steer-Track CAT259/255",265,0,0,"2026-07-15 20:19:15",45,NULL,075f8555-7c72-4a4d-ac6d-5e50382c96a9
+4423,"Crane Crawler - 50-60 Ton - 115","Crane Crawler - 50-60 Ton","Crane Crawler - 50-60 Ton",265,0,0,"2026-07-15 20:19:15",45,NULL,0b647444-6e4f-40de-91f1-9222e4f738cd
+4424,"Heater Ground - 868","Heater Ground","Heater Ground",265,0,0,"2026-07-15 20:19:16",45,NULL,51608f85-a910-4236-8008-3550a308039a
+4425,"Pile Hammers Diesel (D12) - 360","Pile Hammers Diesel (D12)","Pile Hammers Diesel (D12)",265,0,0,"2026-07-15 20:19:16",45,NULL,07ebce32-2fb8-4391-bcff-c8609024560b
+4426,"Skid Steer-Track CAT 299/275 - 269","Skid Steer-Track CAT 299/275","Skid Steer-Track CAT 299/275",265,0,0,"2026-07-15 20:19:16",45,NULL,814d598a-7424-4c68-b5e9-437cdba4f9af
+4427,"OPEN - 205",OPEN,OPEN,265,0,0,"2026-07-15 20:19:16",45,NULL,2ec202b2-425c-4fdf-82c7-460ad9bc2ebe
+4428,"Trailer - Equip 14,000# - 917","Trailer - Equip 14,000#","Trailer - Equip 14,000#",265,0,0,"2026-07-15 20:19:16",45,NULL,40031443-2ec0-488b-a2ec-88a4c5899290
+4429,"Pickup - 1/2 Ton (MY2024+) - 960","Pickup - 1/2 Ton (MY2024+)","Pickup - 1/2 Ton (MY2024+)",265,0,0,"2026-07-15 20:19:16",45,NULL,0314e402-ac75-427f-b1bb-2895ba208b5b
+4430,"Boat Trailer - 916","Boat Trailer","Boat Trailer",265,0,0,"2026-07-15 20:19:17",45,NULL,4969b8f5-f7f4-440b-a905-0816f7833ad9
+4431,"xArrow Boards - 645","xArrow Boards","xArrow Boards",265,0,0,"2026-07-15 20:19:17",45,NULL,1fb3ff6c-f951-4da0-9593-5f0a9d7c44d6
+4432,"zFluke Meters/Load Banks - 864","zFluke Meters/Load Banks","zFluke Meters/Load Banks",265,0,0,"2026-07-15 20:19:17",45,NULL,e867a4f1-b995-4fd1-a399-9c71b2255b22
+4433,"OPEN - 163",OPEN,OPEN,265,0,0,"2026-07-15 20:19:17",45,NULL,e6b5c33d-4342-4ff8-aa3b-55e519660eb8
+4434,"OPEN - 935",OPEN,OPEN,265,0,0,"2026-07-15 20:19:17",45,NULL,0fbdfece-2d4e-46e8-8d5e-ed96727273cb
+4435,"Telephone Systems - 95","Telephone Systems","Telephone Systems",265,0,0,"2026-07-15 20:19:17",45,NULL,8dae5e75-d6c6-4eec-9275-929876f1686a
+4436,"Barge Spud 50-60' - 469","Barge Spud 50-60'","Barge Spud 50-60'",265,0,0,"2026-07-15 20:19:17",45,NULL,1a781488-2bc2-4b03-b720-70db896496d9
+4437,"Attach Snow Plow - 600","Attach Snow Plow","Attach Snow Plow",265,0,0,"2026-07-15 20:19:18",45,NULL,1682abb6-37f8-4916-8af9-15dbf5c4314c
+4438,"Forklift (12K) - 305","Forklift (12K)","Forklift (12K)",265,0,0,"2026-07-15 20:19:18",45,NULL,6095686c-d7dc-4609-a6ce-e8e7222b8b36
+4439,"Pickup - Ranger (MY2024+) - 961","Pickup - Ranger (MY2024+)","Pickup - Ranger (MY2024+)",265,0,0,"2026-07-15 20:19:18",45,NULL,63499649-c6b3-4ab7-a8ad-37855913e345
+4440,"zMaster Tape Measures - 764","zMaster Tape Measures","zMaster Tape Measures",265,0,0,"2026-07-15 20:19:18",45,NULL,4f8d626b-f602-4803-929b-93d6e6331061
+4441,"z3D System - Dirt Equipment - 986","z3D System - Dirt Equipment","z3D System - Dirt Equipment",265,0,0,"2026-07-15 20:19:19",45,NULL,ba649d0a-4442-4679-8e60-1138826370e8
+4442,"zHuese Houses - 904","zHuese Houses","zHuese Houses",265,0,0,"2026-07-15 20:19:19",45,NULL,50f3b82a-af9f-4af1-a444-8837b3a85aa7
+4443,"Crane Crawler - 26-45 Ton - 110","Crane Crawler - 26-45 Ton","Crane Crawler - 26-45 Ton",265,0,0,"2026-07-15 20:19:19",45,NULL,cb1756e8-68c3-4572-8d7c-f3e336d656d1
+4444,"Generator 2.5kw w/ Light - 852","Generator 2.5kw w/ Light","Generator 2.5kw w/ Light",265,0,0,"2026-07-15 20:19:19",45,NULL,04e2dd85-a44f-4e21-9da5-117b873e8ea4
+4445,"Vibratory Hammer/Ext V52 - 354","Vibratory Hammer/Ext V52","Vibratory Hammer/Ext V52",265,0,0,"2026-07-15 20:19:19",45,NULL,b5997c43-4482-4436-be33-91361fa1f78c
+4446,"OPEN - 325",OPEN,OPEN,265,0,0,"2026-07-15 20:19:20",45,NULL,8d60f49e-ce9f-4e98-b1dc-0923f380bd45
+4447,"Trailer - Other - 903","Trailer - Other","Trailer - Other",265,0,0,"2026-07-15 20:19:20",45,NULL,fc58721e-167d-460d-9b9a-0c481961c5a1
+4448,"Crane Tele-Boom Crawler 80-90T - 175","Crane Tele-Boom Crawler 80-90T","Crane Tele-Boom Crawler 80-90T",265,0,0,"2026-07-15 20:19:20",45,NULL,5191cdc2-247f-4b64-a000-22f067a773af
+4449,"yRent Equip - Welders - 97","yRent Equip - Welders","yRent Equip - Welders",265,0,0,"2026-07-15 20:19:20",45,NULL,f2ae2f5e-4200-4d26-9468-4112d5770179
+4450,"Dozer D6 LGP (51,000#) w/GPS - 288","Dozer D6 LGP (51,000#) w/GPS","Dozer D6 LGP (51,000#) w/GPS",265,0,0,"2026-07-15 20:19:20",45,NULL,a320d5e3-ca9d-4c03-8094-e55a028a1c11
+4451,"Dozer D6T XL w/ GPS - 289","Dozer D6T XL w/ GPS","Dozer D6T XL w/ GPS",265,0,0,"2026-07-15 20:19:21",45,NULL,080154de-1a21-4c2c-b19b-0cb557f3e5b6
+4452,"OPEN - 320",OPEN,OPEN,265,0,0,"2026-07-15 20:19:21",45,NULL,c15c4064-32ef-4266-83b2-926a99ecba90
+4453,"OPEN - 460",OPEN,OPEN,265,0,0,"2026-07-15 20:19:21",45,NULL,c75c1dbb-be52-42ba-b33f-a6517b38ec51
+4454,"OPEN - 985",OPEN,OPEN,265,0,0,"2026-07-15 20:19:21",45,NULL,6d5694e7-be77-4bbe-af26-dc0092557688
+4455,"Attach Bucket, ExtremeWear 48" - 249","Attach Bucket, ExtremeWear 48"","Attach Bucket, ExtremeWear 48"",265,0,0,"2026-07-15 20:19:21",45,NULL,e822be6f-5943-4ae7-850a-0233e026edd1
+4456,"Excavator 11,000-14,000# - 227","Excavator 11,000-14,000#","Excavator 11,000-14,000#",265,0,0,"2026-07-15 20:19:21",45,NULL,015609c0-d2b9-40d9-94fe-122b1dac46fb
+4457,"zTrench Box Shoring System - 902","zTrench Box Shoring System","zTrench Box Shoring System",265,0,0,"2026-07-15 20:19:21",45,NULL,bdbc7059-47b5-4002-8049-e4104e2d8e3f
+4458,"Aerial Boom Lift - 40' - 330","Aerial Boom Lift - 40'","Aerial Boom Lift - 40'",265,0,0,"2026-07-15 20:19:21",45,NULL,4d192be0-5d8d-44bb-98da-5d01727cf461
+4459,"Sweeper- Ride On (Yard) - 278","Sweeper- Ride On (Yard)","Sweeper- Ride On (Yard)",265,0,0,"2026-07-15 20:19:22",45,NULL,16a87248-c62b-4149-ba1b-5f8f2fbeaa62
+4460,"Crane Crawler - 250 Ton - 145","Crane Crawler - 250 Ton","Crane Crawler - 250 Ton",265,0,0,"2026-07-15 20:19:22",45,NULL,5d18f228-6a97-4a30-89f8-d328e2661835
+4461,"Heater Forced Air - 869","Heater Forced Air","Heater Forced Air",265,0,0,"2026-07-15 20:19:44",45,NULL,b1f2c37e-903e-4a55-bb21-015b163f7064
+4462,"Pickup -1T DSL/Flatbed (MY24+ - 971","Pickup -1T DSL/Flatbed (MY24+","Pickup -1T DSL/Flatbed (MY24+",265,0,0,"2026-07-15 20:19:44",45,NULL,cd258c72-1f31-4bfb-8f63-3cde56a5e1e0
+4463,"Trailer - Demolition - 905","Trailer - Demolition","Trailer - Demolition",265,0,0,"2026-07-15 20:19:45",45,NULL,23d2b5b6-fd72-462d-86f1-d5f0235611d4
+4464,"Exc. Breaker (17K-25K Exc) - 233","Exc. Breaker (17K-25K Exc)","Exc. Breaker (17K-25K Exc)",265,0,0,"2026-07-15 20:19:46",45,NULL,9bca3681-c058-4604-bc34-d2ee84a3bf25
+4465,"Barge Winch - 892","Barge Winch","Barge Winch",265,0,0,"2026-07-15 20:19:46",45,NULL,26e7689c-a0fb-440b-8599-29b5d128fbac
+4466,"Water Pump on Trailer - 862","Water Pump on Trailer","Water Pump on Trailer",265,0,0,"2026-07-15 20:19:47",45,NULL,965a4a4d-91ec-4e53-992b-9c5b7ec1fa96
+4467,"Crane Craw w/ Ringer - 250 Ton - 151","Crane Craw w/ Ringer - 250 Ton","Crane Craw w/ Ringer - 250 Ton",265,0,0,"2026-07-15 20:19:47",45,NULL,ff74fd2c-4e8e-487e-be4b-d68c001300e4
+4468,"Light Plants - 850","Light Plants","Light Plants",265,0,0,"2026-07-15 20:19:48",45,NULL,c9c9f925-0f7d-4a90-b81c-8de76d2eb47a
+4469,"Dozer D6T/6 Way (49,000#)w/GPS - 287","Dozer D6T/6 Way (49,000#)w/GPS","Dozer D6T/6 Way (49,000#)w/GPS",265,0,0,"2026-07-15 20:19:48",45,NULL,98bcdc91-6ce2-4b48-9832-b030174ff19f
+4470,"Pile HammAttach V5 Timber Pile - 363","Pile HammAttach V5 Timber Pile","Pile HammAttach V5 Timber Pile",265,0,0,"2026-07-15 20:19:49",45,NULL,5fac1ddf-8822-468e-bc59-a5a482524cb4
+4471,"Boat Tug Twin Screw (towable) - 466","Boat Tug Twin Screw (towable)","Boat Tug Twin Screw (towable)",265,0,0,"2026-07-15 20:19:49",45,NULL,72b1db01-735d-4aaf-a46c-d08911fa8915
+4472,"Crane Crawler - MLC300 - 152","Crane Crawler - MLC300","Crane Crawler - MLC300",265,0,0,"2026-07-15 20:19:50",45,NULL,dfc7057d-866a-4923-8612-0c5d4d453cb4
+4473,"Trailer Camera/Security - 849","Trailer Camera/Security","Trailer Camera/Security",265,0,0,"2026-07-15 20:19:51",45,NULL,5d6784e8-fc1d-4658-b56f-6ae684ce7d3f
+4474,"xMessage Boards - 642","xMessage Boards","xMessage Boards",265,0,0,"2026-07-15 20:19:52",45,NULL,8a760ea5-9658-4612-9a3d-8f4557e0f3ef
+4475,"Vibratory Hammer HVR-100 - 353","Vibratory Hammer HVR-100","Vibratory Hammer HVR-100",265,0,0,"2026-07-15 20:19:53",45,NULL,a38ee729-c67f-428a-9024-1eae59fa2067
+4476,"OPEN - 400",OPEN,OPEN,265,0,0,"2026-07-15 20:19:54",45,NULL,37759f0f-b500-4714-b047-cd8c6342f7b6
+4477,"OPEN - 318",OPEN,OPEN,265,0,0,"2026-07-15 20:19:54",45,NULL,373d2729-e311-4a59-aab8-dd1c302868d7
+4478,"Railroad Other - 939","Railroad Other","Railroad Other",265,0,0,"2026-07-15 20:19:55",45,NULL,cb7b10d2-0d41-4e60-9261-2cdaff3eefd2
+4479,"Wood Shelves & Cabinets - 80","Wood Shelves & Cabinets","Wood Shelves & Cabinets",265,0,0,"2026-07-15 20:19:55",45,NULL,3772c9b8-6f49-4ed1-8bc0-f99a71899b5d
+4480,"Loader Rubber-Tired CAT950 - 261","Loader Rubber-Tired CAT950","Loader Rubber-Tired CAT950",265,0,0,"2026-07-15 20:19:55",45,NULL,0b946152-a92a-4ca6-974a-fb81bbae2c18
+4481,"Loader Rubber-Tired CAT938 - 260","Loader Rubber-Tired CAT938","Loader Rubber-Tired CAT938",265,0,0,"2026-07-15 20:19:56",45,NULL,e50d1c48-df3b-4456-a5c6-6f5661d86658
+4482,"Office 4 Plex Building - 927","Office 4 Plex Building","Office 4 Plex Building",265,0,0,"2026-07-15 20:19:56",45,NULL,3c6b1d30-0d54-4627-ab2f-e41d311f9a30
+4483,"OPEN - 322",OPEN,OPEN,265,0,0,"2026-07-15 20:19:56",45,NULL,51124ac7-7934-4d35-b62a-7494bdba1d0d
+4484,"Loader Rubber-Tired CAT980 - 264","Loader Rubber-Tired CAT980","Loader Rubber-Tired CAT980",265,0,0,"2026-07-15 20:19:56",45,NULL,03805b62-3bc5-4ccc-b271-9857153a62ee
+4485,"Welder - Wire Feed - 867","Welder - Wire Feed","Welder - Wire Feed",265,0,0,"2026-07-15 20:19:57",45,NULL,3eb76692-c71c-4bb3-9900-fd2d362c19e5
+4486,"Trailer - Flatbeds/Step Decks - 906","Trailer - Flatbeds/Step Decks","Trailer - Flatbeds/Step Decks",265,0,0,"2026-07-15 20:19:57",45,NULL,7289eb95-4d2d-4282-98e4-ef72d5bbb6f6
+4487,"Trailer - Hot Tar - 930","Trailer - Hot Tar","Trailer - Hot Tar",265,0,0,"2026-07-15 20:19:57",45,NULL,524c3692-58f8-4718-b209-6b6c78e84055
+4488,"Trailer - Filtration System - 914","Trailer - Filtration System","Trailer - Filtration System",265,0,0,"2026-07-15 20:19:57",45,NULL,3de2c079-a562-438c-ab63-3570f22490af
+4489,"Disc - 12' x 32" DEEP - 296","Disc - 12' x 32" DEEP","Disc - 12' x 32" DEEP",265,0,0,"2026-07-15 20:19:58",45,NULL,b7ffd703-3d07-4cdd-a968-8b44b586700a
+4490,"OPEN - 212",OPEN,OPEN,265,0,0,"2026-07-15 20:19:58",45,NULL,980d16b8-7459-49cc-8935-35770cde9f49
+4491,"open - 285",open,open,265,0,0,"2026-07-15 20:19:58",45,NULL,870be6e8-0bc3-4bbc-b3b5-e47053d068dd
+4492,"OPEN - 218",OPEN,OPEN,265,0,0,"2026-07-15 20:19:58",45,NULL,0c44040f-f61d-4542-8571-140ba78bc168
+4493,"Motor Grader W/ GPS - 276","Motor Grader W/ GPS","Motor Grader W/ GPS",265,0,0,"2026-07-15 20:19:58",45,NULL,17229009-0e4f-4337-b305-0bfaa2e150e0
+4494,"Truck - Dump 1Ton - 955","Truck - Dump 1Ton","Truck - Dump 1Ton",265,0,0,"2026-07-15 20:19:59",45,NULL,bd643ca7-6820-4f73-bf95-d19e8adaafc5
+4495,"Generator (150-200KW) - 856","Generator (150-200KW)","Generator (150-200KW)",265,0,0,"2026-07-15 20:19:59",45,NULL,a04cd142-f2dd-4a86-a0f2-202caf74093c
+4496,"OPEN - 324",OPEN,OPEN,265,0,0,"2026-07-15 20:19:59",45,NULL,1b1acc92-6d73-4459-9821-8e196722c1ab
+4497,"Trailer - Low Boy - 919","Trailer - Low Boy","Trailer - Low Boy",265,0,0,"2026-07-15 20:19:59",45,NULL,a0c7eeb3-97ed-40de-adcc-6ddb5800bb72
+4498,"Mainframe Software - 94","Mainframe Software","Mainframe Software",265,0,0,"2026-07-15 20:20:00",45,NULL,1ed4420b-7d39-443c-92a3-6fc658b7bc76
+4499,"Other Bridge Equipment - 895","Other Bridge Equipment","Other Bridge Equipment",265,0,0,"2026-07-15 20:20:00",45,NULL,53d3078f-32af-4d22-9c75-23957dc3a367
+4500,"Truck - Semi Tractor - 959","Truck - Semi Tractor","Truck - Semi Tractor",265,0,0,"2026-07-15 20:20:00",45,NULL,55a18b27-69d1-4c5f-8c24-b37ffc35224c
+4501,"xConcrete Curing Sprayer - 881","xConcrete Curing Sprayer","xConcrete Curing Sprayer",265,0,0,"2026-07-15 20:20:01",45,NULL,0b88e608-f43c-4f3f-a858-9927e1f27040
+4502,"Water Wagons - 920","Water Wagons","Water Wagons",265,0,0,"2026-07-15 20:20:01",45,NULL,dd5e6772-ee8f-437d-95a9-922884e4e8f6
+4503,"OPEN - 890",OPEN,OPEN,265,0,0,"2026-07-15 20:20:01",45,NULL,a4a9ca2d-5b0f-4dee-aa5a-f455a2a6c698
+4504,"Excavator 70,000-80,000# - 231","Excavator 70,000-80,000#","Excavator 70,000-80,000#",265,0,0,"2026-07-15 20:20:01",45,NULL,b31b43e9-bdb9-4f95-9420-79d1fd9ae96a
+4505,"Specialty Work Units - 76","Specialty Work Units","Specialty Work Units",265,0,0,"2026-07-15 20:20:02",45,NULL,ba854008-a015-4115-bb3b-c6408f0cf9e7
+4506,"Crane RT 50 Ton - 160","Crane RT 50 Ton","Crane RT 50 Ton",265,0,0,"2026-07-15 20:20:02",45,NULL,98a8dd28-b95f-4947-ad7c-397dcd9c2635
+4507,"Aerial Boom Lift - 85' - 332","Aerial Boom Lift - 85'","Aerial Boom Lift - 85'",265,0,0,"2026-07-15 20:20:02",45,NULL,471077fd-e51a-4e3b-b39f-164434d4c84f
+4508,"Truck - Fuel/Compressor - 958","Truck - Fuel/Compressor","Truck - Fuel/Compressor",265,0,0,"2026-07-15 20:20:02",45,NULL,c523e19e-5043-46a5-a283-ab9be7624326
+4509,"Radar Boards - 640","Radar Boards","Radar Boards",265,0,0,"2026-07-15 20:20:03",45,NULL,bd182844-7df4-419d-a765-c678328b237a
+4510,"OPEN - 162",OPEN,OPEN,265,0,0,"2026-07-15 20:20:03",45,NULL,1ff2727e-ccf4-41a6-9aac-796987ef18e8
+4511,"Dozer D8T (87,733#) - 290","Dozer D8T (87,733#)","Dozer D8T (87,733#)",265,0,0,"2026-07-15 20:20:03",45,NULL,e3dfb34b-6a80-4f89-98a2-8768dcef263e
+4512,"Attach Road Widener - 297","Attach Road Widener","Attach Road Widener",265,0,0,"2026-07-15 20:20:03",45,NULL,03c51d41-f01d-4bad-bfff-6a1df7939d21
+4513,"Barge Section Work / Crane - 455","Barge Section Work / Crane","Barge Section Work / Crane",265,0,0,"2026-07-15 20:20:03",45,NULL,a68f85a1-6480-447e-a91d-3462075ec505
+4514,"Crane Attachments/Additions - 990","Crane Attachments/Additions","Crane Attachments/Additions",265,0,0,"2026-07-15 20:20:04",45,NULL,c34efd9f-85f3-438f-b4ad-d6e5ecdfe7e9
+4515,"Trailer - 12x32 Lab - 928","Trailer - 12x32 Lab","Trailer - 12x32 Lab",265,0,0,"2026-07-15 20:20:04",45,NULL,83e4e06a-a331-4a3a-a617-eb660d6e9897
+4516,"Forklift (20K+ Straight Mast) - 309","Forklift (20K+ Straight Mast)","Forklift (20K+ Straight Mast)",265,0,0,"2026-07-15 20:20:04",45,NULL,739cd3d5-0430-4b93-8237-1e257fdb9e51
+4517,"Miscellaneous - Shop - 98","Miscellaneous - Shop","Miscellaneous - Shop",265,0,0,"2026-07-15 20:20:04",45,NULL,f33bca0b-11e8-4b62-a1f3-c429768433e0
+4518,"Loader Rubber-Tired CAT966/970 - 263","Loader Rubber-Tired CAT966/970","Loader Rubber-Tired CAT966/970",265,0,0,"2026-07-15 20:20:05",45,NULL,6e394573-e837-4f1c-84b0-4d7cd264e1f0
+4519,"UTV 4WD - 700","UTV 4WD","UTV 4WD",265,0,0,"2026-07-15 20:20:05",45,NULL,bfe2be1d-b576-46c1-8256-1f00209c9242
+4520,"Compactor CP56 84" SF - 274","Compactor CP56 84" SF","Compactor CP56 84" SF",265,0,0,"2026-07-15 20:20:05",45,NULL,918e6172-7ddc-4f1b-b424-85cabf76c4bf
+4521,"Pickup -1T DSL/Flatbed (MY23- - 970","Pickup -1T DSL/Flatbed (MY23-","Pickup -1T DSL/Flatbed (MY23-",265,0,0,"2026-07-15 20:20:05",45,NULL,6a01c215-2227-4d3e-97f0-3c1cbbb51ccd
+4522,"OPEN - 968",OPEN,OPEN,265,0,0,"2026-07-15 20:20:05",45,NULL,4c41a0d9-7474-46c5-aa12-3f2daa595c65
+4523,"OPEN - 314",OPEN,OPEN,265,0,0,"2026-07-15 20:20:06",45,NULL,13df36ff-b95b-4e1f-b420-6fc7004db259
+4524,"Mainframe Hardware - 93","Mainframe Hardware","Mainframe Hardware",265,0,0,"2026-07-15 20:20:06",45,NULL,e744a467-4d68-4955-9075-17f3dc2b9ed5
+4525,"zOther EQ Attachments/Addition - 991","zOther EQ Attachments/Addition","zOther EQ Attachments/Addition",265,0,0,"2026-07-15 20:20:06",45,NULL,8e3fd481-de9e-488f-a281-a3b697dd341e
+4526,"Trailer - Enclosed - 912","Trailer - Enclosed","Trailer - Enclosed",265,0,0,"2026-07-15 20:20:07",45,NULL,16546fbd-2742-4fb0-8b6a-464964b0d004
+4527,"xUnderbridge Work Platform - 878","xUnderbridge Work Platform","xUnderbridge Work Platform",265,0,0,"2026-07-15 20:20:07",45,NULL,82114873-d013-4cb3-b354-50465bacca91
+4528,"Files - 79",Files,Files,265,0,0,"2026-07-15 20:20:07",45,NULL,6644dae1-91ec-4896-9d82-7bd0409d5e44
+4529,"Pile Hammer Diesel (D25-30) - 366","Pile Hammer Diesel (D25-30)","Pile Hammer Diesel (D25-30)",265,0,0,"2026-07-15 20:20:07",45,NULL,2f64f3cf-249d-4ac4-b3c8-7689d60a749c
+4530,"zGrizzly12' Static - 298","zGrizzly12' Static","zGrizzly12' Static",265,0,0,"2026-07-15 20:20:07",45,NULL,f0c63c86-8808-4d6d-9dfd-845a45847f31
+4531,"OPEN - 319",OPEN,OPEN,265,0,0,"2026-07-15 20:20:08",45,NULL,50f33512-85c0-4eee-b79d-023ef0ae5eae
+4532,"Trailer - Skidsteer - 911","Trailer - Skidsteer","Trailer - Skidsteer",265,0,0,"2026-07-15 20:20:08",45,NULL,a63f1d42-c303-48a1-90da-565b73eb2d67
+4533,"Water Pump-6" Submersible - 860","Water Pump-6" Submersible","Water Pump-6" Submersible",265,0,0,"2026-07-15 20:20:08",45,NULL,6cd581e9-98f2-4089-9039-593a36545d0c
+4534,"Truck - Flatbed - 954","Truck - Flatbed","Truck - Flatbed",265,0,0,"2026-07-15 20:20:08",45,NULL,3ba249bf-667e-4238-9bc4-c7906fff0f45
+4535,"Welder - Stud - 866","Welder - Stud","Welder - Stud",265,0,0,"2026-07-15 20:20:09",45,NULL,0a2bf2eb-fc5e-4fc3-9097-ab52850f6c62
+4536,"OPEN - 182",OPEN,OPEN,265,0,0,"2026-07-15 20:20:09",45,NULL,99b78e59-e5be-4e91-b98b-893b98cd9873
+4537,"Forklift - Older - 316","Forklift - Older","Forklift - Older",265,0,0,"2026-07-15 20:20:09",45,NULL,58db7198-deac-405c-967d-834ea0e36440
+4538,"xPressure Washers - 625","xPressure Washers","xPressure Washers",265,0,0,"2026-07-15 20:20:09",45,NULL,4c0c1d49-c628-41f5-a524-1f6c7cbe94c8
+4539,"Forklift - Yard (older units) - 315","Forklift - Yard (older units)","Forklift - Yard (older units)",265,0,0,"2026-07-15 20:20:09",45,NULL,e9a84717-df4a-49ac-9c0d-fbe14ed75a2f
+4540,"Tractor 300-400 HP - 295","Tractor 300-400 HP","Tractor 300-400 HP",265,0,0,"2026-07-15 20:20:10",45,NULL,6a9d806c-b23e-438a-8ee6-e87338372039
+4541,"Dozer D4/D6K2 (31,000#) w/GPS - 286","Dozer D4/D6K2 (31,000#) w/GPS","Dozer D4/D6K2 (31,000#) w/GPS",265,0,0,"2026-07-15 20:20:10",45,NULL,57b631b0-f1ad-4ffa-8fef-f672a7dd931d
+4542,"Sweeper- Ride On - 280","Sweeper- Ride On","Sweeper- Ride On",265,0,0,"2026-07-15 20:20:10",45,NULL,ea384099-94fa-4d07-bd00-76ec52362146
+4543,"Pickup - Ranger (MY2023&Old) - 966","Pickup - Ranger (MY2023&Old)","Pickup - Ranger (MY2023&Old)",265,0,0,"2026-07-15 20:20:10",45,NULL,b04f1c96-0b0d-454e-b135-4af5452cd28d
+4544,"Trailer - Office DBL&TPL Wide - 910","Trailer - Office DBL&TPL Wide","Trailer - Office DBL&TPL Wide",265,0,0,"2026-07-15 20:20:10",45,NULL,5fda1443-e390-4bbc-95df-e8b56a27c244
+4545,"PC's - 90",PC's,PC's,265,0,0,"2026-07-15 20:20:11",45,NULL,76c40387-ff57-4339-a95b-98deed09254a
+4546,"Crane RT 8-25 Ton - 155","Crane RT 8-25 Ton","Crane RT 8-25 Ton",265,0,0,"2026-07-15 20:20:11",45,NULL,c8390fa8-16de-4ba5-b634-c8c0954975bf
+4547,"Air Compressor-Elec 750 CFM - 873","Air Compressor-Elec 750 CFM","Air Compressor-Elec 750 CFM",265,0,0,"2026-07-15 20:20:11",45,NULL,9f8d18c6-714a-4552-b9fb-f7e1bb4b0276
+4548,"Pickup - 1 Ton Gas - 969","Pickup - 1 Ton Gas","Pickup - 1 Ton Gas",265,0,0,"2026-07-15 20:20:11",45,NULL,83581ba9-a674-41c2-a227-b9cf2163c701
+4549,"Generator (25-45KW) - 855","Generator (25-45KW)","Generator (25-45KW)",265,0,0,"2026-07-15 20:20:12",45,NULL,35f031e0-ee74-4990-9f04-fbd2abd8d826
+4550,"Exc. Breaker (6K-11K) - 239","Exc. Breaker (6K-11K)","Exc. Breaker (6K-11K)",265,0,0,"2026-07-15 20:20:12",45,NULL,413b38c1-82db-449e-9848-75ef0bf5994b
+4551,"xBridge Texture Machine - 899","xBridge Texture Machine","xBridge Texture Machine",265,0,0,"2026-07-15 20:20:12",45,NULL,fc2e545e-cfa4-4c5b-8cb5-ed75a9941fc4
+4552,"Attach Compaction Wheel 24" PD - 246","Attach Compaction Wheel 24" PD","Attach Compaction Wheel 24" PD",265,0,0,"2026-07-15 20:20:13",45,NULL,dcf3059e-cc45-4d36-9085-f890c1b5bd2d
+4553,"Truck - Haul - 294","Truck - Haul","Truck - Haul",265,0,0,"2026-07-15 20:20:13",45,NULL,77128d5b-5137-4920-850a-53ba2bbd2a40
+4554,"zTrench Box 8' x 20' - 901","zTrench Box 8' x 20'","zTrench Box 8' x 20'",265,0,0,"2026-07-15 20:21:27",45,NULL,60267825-c1ed-461f-9a54-0872988c9a08
+4581," "," "," ",265,0,0,"2026-07-28 13:52:21",45,NULL,29cf9d86-9e18-4bc7-bfde-7199c3a50694

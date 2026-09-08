@@ -1,0 +1,11 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,,confirm,unknown,,,100.0%,1351,,confirm,not established by supplied schema or observations
+workOrderPmId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,1351,,confirm,not established by supplied schema or observations
+setupId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,1258,,confirm,not established by supplied schema or observations
+workOrderId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,959,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,,confirm,unknown,,,100.0%,1350,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,6,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+deletedByUserId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isCompleted,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "object": "WorkOrder_Substatus",
+  "sourceOfTruth": "reference/ivo/WorkOrder_Substatus/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "subStatusId",
+      "subStatusName"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "uuid",
+      "subStatusId",
+      "subStatusName",
+      "companyId",
+      "isDeleted",
+      "deletedByUserId",
+      "deletedTimestampUtc"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

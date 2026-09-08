@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "organizationId": {
+      "type": "integer"
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "organizationName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "organizationId",
+    "companyId"
+  ]
+}

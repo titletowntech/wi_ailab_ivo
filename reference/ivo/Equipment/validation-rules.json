@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "object": "Equipment",
+  "sourceOfTruth": "reference/ivo/Equipment/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "equipmentId",
+      "equipmentName",
+      "companyId",
+      "accountingCode"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [
+      "licenseNumber"
+    ],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "equipmentId",
+      "equipmentName",
+      "equipmentYear",
+      "equipmentManufacturerId",
+      "equipmentModel",
+      "equipmentDescription",
+      "serialNumber",
+      "vinNumber",
+      "equipmentGroupId",
+      "createdTimestampUtc",
+      "companyId",
+      "currentTrackVoJobId",
+      "isDeleted",
+      "createdByUserId",
+      "isActive",
+      "isLocationTracked",
+      "isScheduleable",
+      "isScheduleVo",
+      "isInventory",
+      "isRental",
+      "isAttachment",
+      "isWarranty",
+      "isVehicle",
+      "isTrailer",
+      "isSmallEquipment",
+      "attachedTo",
+      "attachedToType",
+      "divisionId",
+      "mshaEqInspectionTemplateId",
+      "accountingCode",
+      "displayNote",
+      "plateNumber",
+      "licenseNumber",
+      "color",
+      "equipmentDetailNote",
+      "lastHourMeterId",
+      "lastOdometerId",
+      "pmSetupCompleted",
+      "maintenanceSetupComplete",
+      "activeWorkOrders",
+      "isPlannable",
+      "defaultEquipmentCodeId",
+      "overrideEquipmentGroupColor",
+      "organizationId"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

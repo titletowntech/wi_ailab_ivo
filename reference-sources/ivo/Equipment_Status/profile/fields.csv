@@ -1,0 +1,13 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+equipmentStatusId,yes,integer,no,yes,,100.0%,2273,0,2273,,yes,integer,5,5,0,13841,0.0%,CANDIDATE_KEY
+equipmentId,yes,integer,no,yes,,100.0%,2273,0,2083,,,integer,5,5,0,51976,0.3%,
+startTime,yes,string,yes,no,,100.0%,2273,0,351,,,date,19,19,0,2026-07-22 13:38:05,11.9%,
+endTime,yes,string,yes,no,,100.0%,2273,0,39,,,string,4,19,0,NULL,92.5%,PLACEHOLDER_NULL;MIXED_FORMAT
+startStatusId,yes,integer,yes,no,,100.0%,2273,0,5,,,integer,4,4,0,1309,50.5%,
+endStatusId,yes,integer,yes,no,,100.0%,2273,0,6,,,string,4,4,0,NULL,92.5%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+createdTimestampUtc,yes,string,yes,no,,100.0%,2273,0,676,,,date,19,19,0,2026-07-22 13:38:05,11.9%,
+createdByUserId,yes,integer,yes,no,,100.0%,2273,0,4,,,integer,2,5,0,45,99.6%,
+statusNote,yes,string,yes,no,,99.8%,2268,5,16,,,string,5,135,0,AppXchange,94.9%,
+isDeleted,yes,boolean,yes,no,,100.0%,2273,0,1,yes,,integer,1,1,0,0,100.0%,CONSTANT;TYPE_MISMATCH
+isActive,yes,boolean,yes,no,,100.0%,2273,0,2,,,integer,1,1,0,1,92.3%,TYPE_MISMATCH
+uuid,yes,string,no,yes,,100.0%,2273,0,2273,,yes,uuid,36,36,0,64f2c2d3-f174-4d03-af1d-36b93c076d90,0.0%,CANDIDATE_KEY

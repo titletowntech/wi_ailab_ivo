@@ -1,0 +1,33 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+companyEquipmentPmTemplateId,yes,integer,no,yes,,100.0%,217,0,217,,yes,integer,4,4,0,2566,0.5%,CANDIDATE_KEY
+pmTypeId,yes,integer,yes,no,,100.0%,217,0,4,,,integer,1,1,0,1,78.3%,
+pmName,yes,string,no,yes,,100.0%,217,0,217,,yes,string,6,60,0,1 YEAR SERVICE (BEAM LAUNCHER),0.5%,CANDIDATE_KEY
+intervalHours,yes,integer,yes,no,,100.0%,217,0,10,,,integer,3,5,0,500,28.6%,PLACEHOLDER_NULL;MIXED_FORMAT
+intervalDays,yes,integer,yes,no,,100.0%,217,0,5,,,string,1,4,0,NULL,92.6%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+intervalOdometer,yes,integer,yes,no,,100.0%,217,0,9,,,string,3,5,0,NULL,89.9%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+fixedDate,yes,string,yes,no,,100.0%,217,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+fixedHours,yes,integer,yes,no,,100.0%,217,0,9,,,string,2,4,0,NULL,94.9%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+fixedOdometer,yes,integer,yes,no,,100.0%,217,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+partsNote,yes,string,yes,no,,93.1%,202,15,3,,,string,33,59,162,SEE EQUIPMENT DETAILS - PARTS TAB OR WRITE IN PARTS USED:,98.5%,PADDED;WHITESPACE_NULL
+workNote,yes,string,yes,no,,99.1%,215,2,132,,,string,24,1394,110,"COMPLETE ALL 500 HR ITEMS
+MAIN & AUX HOIST GEAR CASES (DRAIN & FLUSH)
+CHANGE SWING DRIVE OIL
+CHANGE TRAVEL GEARBOX OIL
+SAMPLE HYD FLUID
+TORQUE CONVERTER - DRAIN & REFILL
+TORQUE CONVERTER - CHANGE FILTER
+FLUSH TORQUE COOLER
+SPRAG OIL - DRAIN & REFILL
+CHAIN CASE - DRAIN, INSPECT & REFILL
+UPPER DECK - DRAIN & REFILL
+LOWER TUBS - DRAIN & REFILL
+LUBRICATE HOIST VALVES",3.3%,PADDED
+triggerDays,yes,integer,yes,no,,100.0%,217,0,5,,,string,1,4,0,NULL,92.6%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+triggerHours,yes,integer,yes,no,,100.0%,217,0,8,,,integer,1,4,0,40,76.0%,PLACEHOLDER_NULL;MIXED_FORMAT
+triggerOdometer,yes,integer,yes,no,,100.0%,217,0,4,,,string,2,4,0,NULL,89.9%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+isDeleted,yes,boolean,yes,no,,100.0%,217,0,2,,,integer,1,1,0,0,99.1%,TYPE_MISMATCH
+createdTimestampUtc,yes,string,yes,no,,100.0%,217,0,217,,yes,date,19,19,0,2026-07-22 01:54:54,0.5%,CANDIDATE_KEY
+createdByUserId,yes,integer,yes,no,,100.0%,217,0,2,,,integer,4,5,0,1288,92.2%,
+applyChangesToChildren,yes,boolean,yes,no,,100.0%,217,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+companyId,yes,integer,no,yes,,100.0%,217,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+uuid,yes,string,no,yes,,100.0%,217,0,217,,yes,uuid,36,36,0,73d975b0-cc74-4a74-8b9b-5da529842dc2,0.5%,CANDIDATE_KEY

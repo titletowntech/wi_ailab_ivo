@@ -1,0 +1,13 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+divisionId,yes,integer,no,yes,,100.0%,38,0,38,,yes,integer,3,3,0,634,2.6%,CANDIDATE_KEY
+companyId,yes,integer,no,yes,,100.0%,38,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+divisionName,yes,string,no,yes,,100.0%,38,0,38,,yes,string,4,34,0,None,2.6%,CANDIDATE_KEY;PLACEHOLDER_NULL
+divisionDescription,yes,string,yes,no,,100.0%,38,0,38,,yes,string,4,45,0,No Division,2.6%,CANDIDATE_KEY
+createdTimestampUtc,yes,string,yes,no,,100.0%,38,0,38,,yes,date,19,19,0,2026-04-21 13:22:36,2.6%,CANDIDATE_KEY
+createdByUserId,yes,integer,yes,no,,100.0%,38,0,2,,,integer,2,5,0,45,97.4%,
+isDeleted,yes,boolean,yes,no,,100.0%,38,0,2,,,integer,1,1,0,1,81.6%,TYPE_MISMATCH
+deletedTimestampUtc,yes,string,yes,no,,100.0%,38,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+deletedByUserId,yes,integer,yes,no,,100.0%,38,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+updatedTimestampUtc,yes,string,yes,no,,100.0%,38,0,7,,,string,4,19,0,NULL,84.2%,PLACEHOLDER_NULL;MIXED_FORMAT
+updatedByUserId,yes,integer,yes,no,,100.0%,38,0,2,,,string,4,5,0,NULL,84.2%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+uuid,yes,string,no,yes,,100.0%,38,0,1,yes,,string,3,3,0,...,100.0%,CONSTANT

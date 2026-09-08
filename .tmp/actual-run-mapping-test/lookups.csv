@@ -1,0 +1,12 @@
+step_id,name,data_object_path,filter_field,filter_value,source_fields,select_fields
+eq-check,Check Existing Equipment,ivo-systems/equipment-management/1/equipment,accountingCode,950200,Equipment|OriginalEquipmentCode,uuid|equipmentId|equipmentName|equipmentYear|equipmentManufacturerId|equipmentModel|equipmentDescription|serialNumber|vinNumber|equipmentGroupId|companyId|currentTrackVoJobId|isDeleted|isActive|isRental|divisionId|accountingCode|licenseNumber|lastHourMeterId|lastOdometerId|defaultEquipmentCodeId|organizationId
+lk-cat,Lookup Vista Equipment Category,vista/em/2/categories,Category,975,Category,Category|Description|Notes
+lk-grp,Lookup IVO Equipment Group,ivo-systems/equipment-management/1/equipment-group,equipmentGroupLongName,Vehicle - Executive/Facility,Category,uuid|equipmentGroupId|equipmentGroupShortName|equipmentGroupLongName|equipmentGroupDescription|companyId|isDeleted
+lk-man,Lookup IVO Manufacturer,ivo-systems/equipment-management/1/equipment-manufacturer,manufacturerShortName,FORD,Manufacturer,uuid|equipmentManufacturerId|manufacturerShortName|manufacturerLongName|manufacturerDescription|isDeleted|companyId
+lk-dept,Lookup Vista Department,vista/em/2/departments,Department,340,Department,Department|Description
+lk-div,Lookup IVO Division,ivo-systems/headquarters/1/division,divisionName,Equipment Shop - 340,Department,uuid|companyId|divisionName|divisionDescription|isDeleted|divisionId
+lk-rev,Lookup Revenue Code,vista/em/2/rev_equipment_rates,Equipment,  950200,Equipment|OriginalEquipmentCode|RevenueCode,Equipment|RevCode
+lk-rev,Lookup Revenue Code,vista/em/2/rev_equipment_rates,RevCode,8,Equipment|OriginalEquipmentCode|RevenueCode,Equipment|RevCode
+lk-pay,Lookup Equipment Pay Class,ivo-systems/project-management/1/equipment-code,equipmentCode,950200,Equipment|OriginalEquipmentCode,uuid|equipmentCodeId|jobId|equipmentCode|description|accountingCode|isActive|jobChargeRatePerHour
+lk-pay,Lookup Equipment Pay Class,ivo-systems/project-management/1/equipment-code,accountingCode,,Equipment|OriginalEquipmentCode,uuid|equipmentCodeId|jobId|equipmentCode|description|accountingCode|isActive|jobChargeRatePerHour
+look-ivo-job,Lookup Ivo Job,ivo-systems/project-management/1/job,jobNumber,330,Job,uuid|jobId|jobNumber|jobShortName|divisionId|isActive

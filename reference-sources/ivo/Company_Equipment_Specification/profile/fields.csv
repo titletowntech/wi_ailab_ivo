@@ -1,0 +1,10 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+companyEquipmentSpecificationId,yes,integer,no,yes,,100.0%,29,0,29,,yes,integer,3,3,0,498,3.4%,CANDIDATE_KEY
+specificationName,yes,string,no,yes,,100.0%,29,0,29,,yes,string,5,23,0,Crane Expiration,3.4%,CANDIDATE_KEY
+specificationDescription,yes,string,yes,no,,100.0%,29,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL
+isActive,yes,boolean,yes,no,,100.0%,29,0,1,yes,,integer,1,1,0,1,100.0%,CONSTANT;TYPE_MISMATCH
+isDeleted,yes,boolean,yes,no,,100.0%,29,0,1,yes,,integer,1,1,0,0,100.0%,CONSTANT;TYPE_MISMATCH
+createdTimestampUtc,yes,string,yes,no,,100.0%,29,0,14,,,date,19,19,0,2026-07-24 17:00:18,10.3%,
+companyId,yes,integer,no,yes,,100.0%,29,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+createdByUserId,yes,integer,yes,no,,100.0%,29,0,1,yes,,integer,2,2,0,45,100.0%,CONSTANT
+uuid,yes,string,no,yes,,100.0%,29,0,29,,yes,uuid,36,36,0,1a654e1d-2cb4-4204-9235-6f7208ccdc62,3.4%,CANDIDATE_KEY

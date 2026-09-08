@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "equipmentId": {
+      "type": "integer"
+    },
+    "datePerformed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hourMeterId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "odometerId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isPmPerformed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "workOrderStatus": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "updatedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sortOrder": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lastUpdatedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "substatusId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "externalCompanyCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalWorkOrderNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalWorkOrderType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalJobNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalCustomerNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "externalServiceStore": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "estimatedArrivalDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completionDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scheduledStart": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requestedDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "workOrderId",
+    "equipmentId"
+  ],
+  "description": "Equipment work order data object."
+}

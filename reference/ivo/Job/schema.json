@@ -1,0 +1,192 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the job"
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Example primary key of the object"
+    },
+    "jobNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "job number if it exists",
+      "maxLength": 75
+    },
+    "jobShortName": {
+      "type": "string",
+      "description": "job description without job number or job display name",
+      "maxLength": 100
+    },
+    "jobColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "color displayed on TrackVO and ScheduleVO",
+      "maxLength": 75
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The division id of the job"
+    },
+    "divisionDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Short name of the division",
+      "maxLength": 150
+    },
+    "jobTypeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "1 - Job, 2 - Facility, 3 - Other, 4 - Vendor, 4 > Unknown"
+    },
+    "jobTypeDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Job, Facility, Other, Vendor, Unknown",
+      "maxLength": 50
+    },
+    "jobDisplayNameWithJobNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "job number and job short name",
+      "maxLength": 200
+    },
+    "jobDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "job name - short",
+      "maxLength": 150
+    },
+    "jobLongName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "job name - long",
+      "maxLength": 150
+    },
+    "jobDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "project description",
+      "maxLength": 255
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Is the job active"
+    },
+    "emergencyHospitalName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "emergencyHospitalAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 150
+    },
+    "emergencyHospitalPhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Accounting code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimating code",
+      "maxLength": 100
+    },
+    "organizations": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "organizationId": {
+            "type": "integer",
+            "description": "Unique identifier for the organization"
+          },
+          "companyId": {
+            "type": "integer",
+            "description": "Company id the organization belongs to"
+          },
+          "organizationCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Unique code or name for the organization",
+            "maxLength": 200
+          },
+          "accountingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Default accounting code for the organization",
+            "maxLength": 45
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "description": "Is the organization deleted"
+          }
+        },
+        "description": "List of company organizations the job belongs to"
+      },
+      "description": "List of company organizations the job belongs to"
+    }
+  },
+  "required": [
+    "uuid"
+  ],
+  "description": "Company Job Object"
+}

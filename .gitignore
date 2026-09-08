@@ -1,0 +1,38 @@
+# Real customer ERP data — never committed
+data/
+customers/
+
+# Raw source material — NEVER committed
+knowledge/raw/
+knowledge/index/
+
+# Generated output
+artifacts/
+!artifacts/samples/
+
+# Customer data safety net (belt and braces — redaction happens at ingest)
+**/recordings/
+*.mp4
+*.mp3
+*.wav
+
+# Secrets — must never exist in this repo in any form
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+
+# Experiments are disposable; only commit deliberately
+experiments/**/output/
+experiments/**/.cache/
+
+# Eval run outputs
+evals/runs/
+
+# Tooling
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store

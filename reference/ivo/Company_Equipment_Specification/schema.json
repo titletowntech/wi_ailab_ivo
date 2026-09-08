@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the equipment specification"
+    },
+    "companyEquipmentSpecificationId": {
+      "type": "integer",
+      "description": "Ivo Systems company equipment specification id"
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems company id"
+    },
+    "specificationName": {
+      "type": "string",
+      "description": "Name of the equipment specification"
+    },
+    "specificationDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Short description of the equipment specification"
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Boolean flag indicating if the equipment specification is active/inactive"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Boolean flag indicating if the equipment specification is deleted/inactive"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Utc timestamp generated when the equipment specification was created"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems user id that created the equipment specification - default 45 (IVO Systems User)"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyEquipmentSpecificationId",
+    "companyId",
+    "specificationName"
+  ],
+  "description": "Equipment Specification object"
+}

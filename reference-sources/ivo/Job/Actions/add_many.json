@@ -1,0 +1,150 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "createdByUserId": {
+            "type": "integer"
+          },
+          "jobNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Job or Project Number",
+            "maxLength": 75
+          },
+          "jobShortName": {
+            "type": "string",
+            "description": "Short Name of the Job",
+            "maxLength": 100
+          },
+          "jobLongName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Full name of the job or project",
+            "maxLength": 150
+          },
+          "jobDescription": {
+            "type": "string",
+            "description": "Description of the job or project",
+            "maxLength": 255
+          },
+          "jobOrder": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Display order of the job or project in TrackVO or SchedulerVO"
+          },
+          "color": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Display color of the job or project on TrackVO or SchedulerVO [default: black]",
+            "maxLength": 75
+          },
+          "divisionId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Company Division Id"
+          },
+          "divisionDisplayName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Company Division Display Name",
+            "maxLength": 250
+          },
+          "jobTypeId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Job type id [1 - Job, 2 - Facility, 3 - Other, 4 - Vendor | default: 1]"
+          },
+          "isActive": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Is the job active"
+          },
+          "emergencyHospitalName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Emergency Hospital Name",
+            "maxLength": 100
+          },
+          "emergencyHospitalAddress": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Emergency Hospital Address",
+            "maxLength": 150
+          },
+          "emergencyHospitalPhone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Emergency Hospital Phone",
+            "maxLength": 45
+          },
+          "accountingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Accounting Code",
+            "maxLength": 100
+          },
+          "estimatingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Estimating Code",
+            "maxLength": 100
+          },
+          "orgName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "name or code of organization employee belongs to"
+          }
+        },
+        "required": [
+          "uuid",
+          "companyId",
+          "createdByUserId",
+          "jobShortName",
+          "jobDescription"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

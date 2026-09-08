@@ -1,0 +1,20 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the linked user,confirm,unknown,,,100.0%,1118,,confirm,not established by supplied schema or observations
+id,integer,yes,no,no,,,Ivo Systems database ID for the user account,confirm,unknown,,,100.0%,1118,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems company ID this user belongs to,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+email,string,no,yes,yes,,,User account email address,integration,unknown,,,100.0%,1112,,usable,schema marks writeOnly
+first_name,string,no,yes,yes,,,User first name,integration,unknown,,,100.0%,504,,usable,schema marks writeOnly
+last_name,string,no,yes,yes,,,User last name,integration,unknown,,,100.0%,950,,usable,schema marks writeOnly
+username,string,yes,no,no,,,User account username,confirm,unknown,,,100.0%,1116,,confirm,not established by supplied schema or observations
+phoneNumber,string,yes,no,yes,,,User phone number,integration,unknown,,,94.2%,1042,,usable,schema marks writeOnly
+companyRoleId,integer,yes,no,no,,,ID of the company role assigned to this user,confirm,unknown,,,100.0%,9,,confirm,not established by supplied schema or observations
+employeeId,integer,yes,no,no,,,ID of the employee record linked to this user,confirm,unknown,,,100.0%,1116,,confirm,not established by supplied schema or observations
+divisionId,integer,yes,no,no,,,ID of the division this user is assigned to,confirm,unknown,,,100.0%,19,,confirm,not established by supplied schema or observations
+vendorId,integer,yes,no,no,,,ID of the vendor linked to this user if applicable,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+timezone,string,yes,no,no,,,User's timezone setting,confirm,unknown,,,100.0%,8,,confirm,not established by supplied schema or observations
+isMechanic,boolean,yes,no,no,,,Whether the user is a mechanic,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isDriver,boolean,yes,no,no,,,Whether the user is a driver,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,Whether the user account is active,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,Whether the user account has been soft deleted,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,UTC timestamp when the user account was created,confirm,unknown,,,100.0%,222,,confirm,not established by supplied schema or observations
+updatedTimestampUtc,string,yes,no,no,,,UTC timestamp when the user account was last updated,confirm,unknown,,,100.0%,348,,confirm,not established by supplied schema or observations

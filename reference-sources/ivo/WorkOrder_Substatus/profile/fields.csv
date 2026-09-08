@@ -1,0 +1,8 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+subStatusId,yes,integer,no,yes,,100.0%,83,0,83,,yes,integer,2,3,0,44,1.2%,CANDIDATE_KEY
+subStatusName,yes,string,no,yes,,100.0%,83,0,81,,,string,3,39,0,ANNUAL DEFICIENCIES,2.4%,
+uuid,yes,string,no,yes,,100.0%,83,0,83,,yes,uuid,36,36,0,cebda4fc-0f46-4345-a839-3a0578a5cbd2,1.2%,CANDIDATE_KEY
+companyId,yes,integer,yes,no,,100.0%,83,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+isDeleted,yes,boolean,yes,no,,100.0%,83,0,2,,,integer,1,1,0,0,97.6%,TYPE_MISMATCH
+deletedByUserId,yes,integer,yes,no,,100.0%,83,0,2,,,string,4,5,0,NULL,97.6%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+deletedTimestampUtc,yes,string,yes,no,,100.0%,83,0,3,,,string,4,19,0,NULL,97.6%,PLACEHOLDER_NULL;MIXED_FORMAT

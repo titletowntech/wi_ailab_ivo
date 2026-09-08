@@ -1,0 +1,125 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "pmTypeId": {
+            "type": "integer"
+          },
+          "pmName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "intervalHours": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "intervalDays": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "intervalOdometer": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "fixedDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fixedHours": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "fixedOdometer": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "partsNote": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2500
+          },
+          "workNote": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5000
+          },
+          "triggerDays": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "triggerHours": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "triggerOdometer": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "applyChangesToAllChildren": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "companyId",
+          "pmTypeId",
+          "pmName"
+        ],
+        "description": "List of PM template objects to add"
+      },
+      "description": "List of PM template objects to add"
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

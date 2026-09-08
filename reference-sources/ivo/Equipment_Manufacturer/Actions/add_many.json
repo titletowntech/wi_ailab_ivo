@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "manufacturerShortName": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "manufacturerLongName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 150
+          },
+          "manufacturerDescription": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 255
+          },
+          "createdTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "manufacturerShortName",
+          "companyId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

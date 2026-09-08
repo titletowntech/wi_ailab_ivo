@@ -1,0 +1,20 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+id,yes,integer,yes,no,,100.0%,1118,0,1118,,yes,integer,5,5,0,15419,0.1%,CANDIDATE_KEY
+email,yes,string,no,yes,,100.0%,1118,0,1112,,,email,13,44,0,hrrep@kraemerna.com,0.4%,
+username,yes,string,yes,no,,100.0%,1118,0,1116,,,string,7,22,0,kna_90642,0.2%,
+first_name,yes,string,no,yes,,100.0%,1118,0,504,,,string,1,12,0,Jose,2.3%,
+last_name,yes,string,no,yes,,100.0%,1118,0,950,,,string,2,22,0,Smith,1.1%,
+companyId,yes,integer,no,yes,,100.0%,1118,0,1,yes,,integer,3,3,0,265,100.0%,CONSTANT
+companyRoleId,yes,integer,yes,no,,100.0%,1118,0,9,,,integer,1,2,0,15,53.2%,
+isActive,yes,boolean,yes,no,,100.0%,1118,0,2,,,integer,1,1,0,1,94.1%,TYPE_MISMATCH
+isDeleted,yes,boolean,yes,no,,100.0%,1118,0,2,,,integer,1,1,0,0,99.8%,TYPE_MISMATCH
+timezone,yes,string,yes,no,,100.0%,1118,0,8,,,string,14,28,0,America/Denver,52.2%,
+createdTimestampUtc,yes,string,yes,no,,100.0%,1118,0,222,,,date,19,19,0,2026-07-20 01:58:39,1.3%,
+updatedTimestampUtc,yes,string,yes,no,,100.0%,1118,0,348,,,date,19,19,0,2026-08-14 17:59:53,1.3%,
+phoneNumber,yes,string,yes,no,,94.2%,1053,65,1042,,,integer,4,12,0,NULL,0.9%,PLACEHOLDER_NULL;MIXED_FORMAT;NUMERIC_AS_STRING
+employeeId,yes,integer,yes,no,,100.0%,1118,0,1116,,,integer,5,5,0,18483,0.2%,
+isMechanic,yes,boolean,yes,no,,100.0%,1118,0,2,,,integer,1,1,0,0,98.2%,TYPE_MISMATCH
+isDriver,yes,boolean,yes,no,,100.0%,1118,0,2,,,integer,1,1,0,0,99.9%,TYPE_MISMATCH
+divisionId,yes,integer,yes,no,,100.0%,1118,0,19,,,integer,1,4,0,685,61.7%,PLACEHOLDER_NULL
+vendorId,yes,integer,yes,no,,100.0%,1118,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+uuid,yes,string,no,yes,,100.0%,1118,0,1118,,yes,uuid,4,36,0,937808b2-d044-497e-aa92-6c9de1a1a047,0.1%,CANDIDATE_KEY;PLACEHOLDER_NULL

@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "jobNumber": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "itemCode": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "unitOfMeasure": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "companyId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Company ID associated with the item code"
+    }
+  },
+  "required": [
+    "uuid",
+    "jobNumber",
+    "itemCode",
+    "description"
+  ]
+}

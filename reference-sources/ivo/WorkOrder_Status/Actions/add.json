@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "workOrderStatus": {
+      "type": "integer"
+    },
+    "changeNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "workOrderId",
+    "workOrderStatus"
+  ]
+}

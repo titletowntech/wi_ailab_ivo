@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "equipmentGroupId": {
+      "type": "integer"
+    },
+    "equipmentGroupShortName": {
+      "type": "string"
+    },
+    "equipmentGroupLongName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "equipmentGroupDescription": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "equipmentClassId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "equipmentGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "equipmentGroupId",
+    "equipmentGroupShortName",
+    "companyId"
+  ],
+  "description": "Equipment group type data object."
+}

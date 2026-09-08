@@ -1,0 +1,13 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,,confirm,unknown,,,100.0%,2273,,confirm,not established by supplied schema or observations
+equipmentStatusId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,2273,,confirm,not established by supplied schema or observations
+equipmentId,integer,no,yes,no,,,,confirm,unknown,,,100.0%,2083,,confirm,not established by supplied schema or observations
+startTime,string,yes,no,no,,,,confirm,unknown,,,100.0%,351,,confirm,not established by supplied schema or observations
+endTime,string,yes,no,no,,,,confirm,unknown,,,100.0%,39,,confirm,not established by supplied schema or observations
+startStatusId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+endStatusId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,6,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,,confirm,unknown,,,100.0%,676,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,,confirm,unknown,,,100.0%,4,,confirm,not established by supplied schema or observations
+statusNote,string,yes,no,no,,,,confirm,unknown,,,99.8%,16,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isActive,boolean,yes,no,no,,,,confirm,unknown,,,100.0%,2,,confirm,not established by supplied schema or observations

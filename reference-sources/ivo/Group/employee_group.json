@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the employee group"
+    },
+    "employeeGroupId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems database ID for the employee group"
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems company ID this group belongs to"
+    },
+    "employeeGroupName": {
+      "type": "string",
+      "description": "Display name for the employee group"
+    },
+    "employeeGroupDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Description of the employee group"
+    },
+    "employeeGroupColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Hex color code for the employee group"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "User ID that created this group"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "UTC timestamp when the group was created"
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the group is currently active"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the group has been soft deleted"
+    },
+    "canAccessEquipment": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: group members can access equipment"
+    },
+    "canAccessOtherEmployees": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: group members can access other employees"
+    },
+    "canAccessDailyJobNotes": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: group members can access daily job notes"
+    },
+    "canAccessOtherEmployeeDetails": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: group members can access other employee details"
+    },
+    "canAccessJobInformation": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Permission flag: group members can access job information"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "employeeGroupName"
+  ],
+  "description": "Ivo Systems employee group object"
+}

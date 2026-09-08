@@ -1,0 +1,26 @@
+field,in_schema,declared_type,nullable,required,declared_maxlen,fill_pct,populated,empty,distinct,is_constant,is_unique,observed_type,min_len,max_len,padded,top_value,top_pct,flags
+setupId,yes,integer,no,yes,,100.0%,1742,0,1742,,yes,integer,5,5,0,34719,0.1%,CANDIDATE_KEY
+equipmentId,yes,integer,no,yes,,100.0%,1742,0,682,,,integer,5,5,0,55224,1.0%,
+createdTimestampUtc,yes,string,yes,no,,100.0%,1742,0,1240,,,date,19,19,0,2026-07-30 19:13:14,0.2%,
+pmTypeId,yes,integer,no,yes,,100.0%,1742,0,5,,,integer,1,1,0,1,70.9%,
+isDeleted,yes,boolean,yes,no,,100.0%,1742,0,2,,,integer,1,1,0,0,95.1%,TYPE_MISMATCH
+isActive,yes,boolean,yes,no,,100.0%,1742,0,2,,,integer,1,1,0,1,94.7%,TYPE_MISMATCH
+pmName,yes,string,no,yes,,100.0%,1742,0,213,,,string,3,60,0,CALIBRATION - (WELDER) - 365 DAY,4.8%,
+intervalHours,yes,integer,yes,no,,100.0%,1742,0,10,,,integer,3,5,0,NULL,28.6%,PLACEHOLDER_NULL;MIXED_FORMAT
+intervalDays,yes,integer,yes,no,,100.0%,1742,0,4,,,string,2,4,0,NULL,78.9%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+intervalOdometer,yes,integer,yes,no,,100.0%,1742,0,9,,,string,3,5,0,NULL,93.3%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+beginningHours,yes,integer,yes,no,,100.0%,1742,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+beginningDate,yes,string,yes,no,,100.0%,1742,0,3,,,string,4,10,0,NULL,99.8%,PLACEHOLDER_NULL
+beginningOdometer,yes,integer,yes,no,,100.0%,1742,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+fixedDate,yes,string,yes,no,,100.0%,1742,0,3,,,string,4,10,0,NULL,99.8%,PLACEHOLDER_NULL
+fixedHours,yes,integer,yes,no,,100.0%,1742,0,9,,,string,2,4,0,NULL,95.8%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+fixedOdometer,yes,integer,yes,no,,100.0%,1742,0,1,yes,,string,4,4,0,NULL,100.0%,CONSTANT;PLACEHOLDER_NULL;TYPE_MISMATCH
+partsNote,yes,string,yes,no,,80.9%,1409,333,3,,,string,33,59,1052,SEE EQUIPMENT DETAILS - PARTS TAB OR WRITE IN PARTS USED:,97.4%,PADDED;WHITESPACE_NULL
+workNote,yes,string,yes,no,,99.8%,1738,4,131,,,string,24,1394,1021,SUBMIT WEVR PAPERWORK. WORK ORDER WILL NOT CLOSE UNLESS PAPERWORK IS CORRECT & SUBMITTED.,16.6%,PADDED
+createdByUserId,yes,integer,yes,no,,100.0%,1742,0,2,,,integer,4,5,0,1288,88.8%,
+triggerDays,yes,integer,yes,no,,100.0%,1742,0,5,,,string,1,4,0,NULL,78.8%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+triggerHours,yes,integer,yes,no,,100.0%,1742,0,8,,,integer,1,4,0,40,66.3%,PLACEHOLDER_NULL;MIXED_FORMAT
+triggerOdometer,yes,integer,yes,no,,100.0%,1742,0,4,,,string,2,4,0,NULL,93.3%,PLACEHOLDER_NULL;MIXED_FORMAT;TYPE_MISMATCH
+lastPmPerformedId,yes,integer,yes,no,,100.0%,1742,0,1230,,,integer,4,5,0,NULL,29.4%,PLACEHOLDER_NULL;MIXED_FORMAT
+companyEquipmentPmTemplateId,yes,integer,yes,no,,100.0%,1742,0,207,,,integer,4,4,0,2755,4.8%,PLACEHOLDER_NULL
+uuid,yes,string,no,yes,,100.0%,1742,0,1742,,yes,uuid,36,36,0,266987d5-c6e4-4116-9585-0d4eba6d3646,0.1%,CANDIDATE_KEY

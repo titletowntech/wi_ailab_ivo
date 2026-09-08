@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the equipment status object."
+    },
+    "companyEquipmentStatusId": {
+      "type": "integer",
+      "description": "Ivo Systems identifier for the equipment status object."
+    },
+    "statusName": {
+      "type": "string",
+      "description": "Name/description of the equipment status."
+    },
+    "statusColor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Display color for the equipment status."
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Boolean flag indicating if the equipment status is deleted."
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Utc timestamp indicating when the equipment status was created."
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems user id of who created the equipment status."
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems owning company id for the equipment status."
+    },
+    "icon": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Ivo Systems display icon for the equipment status."
+    }
+  },
+  "required": [
+    "uuid",
+    "companyEquipmentStatusId",
+    "statusName",
+    "companyId"
+  ],
+  "description": "Equipment status object."
+}

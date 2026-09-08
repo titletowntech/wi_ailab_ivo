@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "object": "Equipment_Manufacturer",
+  "sourceOfTruth": "reference/ivo/Equipment_Manufacturer/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "equipmentManufacturerId",
+      "manufacturerShortName",
+      "companyId"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "uuid",
+      "equipmentManufacturerId",
+      "manufacturerShortName",
+      "manufacturerLongName",
+      "manufacturerDescription",
+      "createdTimestampUtc",
+      "isDeleted",
+      "companyId",
+      "createdByUserId"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

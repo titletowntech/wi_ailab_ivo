@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "performedId": {
+      "type": "integer"
+    },
+    "equipmentId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "performedId",
+    "equipmentId"
+  ]
+}

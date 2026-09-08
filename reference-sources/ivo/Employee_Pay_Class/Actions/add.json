@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "jobNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "laborCode": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "jobRegularChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "jobOvertimeChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "jobDoubleTimeChargeRatePerHour": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "laborCode",
+    "description",
+    "isActive"
+  ]
+}

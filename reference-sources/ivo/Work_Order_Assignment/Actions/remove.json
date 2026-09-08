@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "workOrderAssignmentId": {
+      "type": "integer"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "assignedToUserId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "workOrderAssignmentId",
+    "workOrderId",
+    "assignedToUserId"
+  ]
+}

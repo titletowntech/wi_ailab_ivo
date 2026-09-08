@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the cost code assignment"
+    },
+    "costCodeAssignmentId": {
+      "type": "integer",
+      "description": "Cost Code Assignment unique ID"
+    },
+    "itemCodeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Item Code/Bid Item unique ID"
+    },
+    "costCodeId": {
+      "type": "integer",
+      "description": "Cost Code unique ID"
+    },
+    "jobId": {
+      "type": "integer",
+      "description": "Job ID where cost code and/or the item code is used"
+    },
+    "equipmentCostBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Total budget for equipment on project"
+    },
+    "laborCostBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Total budget for labor on project"
+    },
+    "laborHoursBudgetTotal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Total budget for labor hours on project"
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "description": "Indicates if the cost code assignment is deleted"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Current timestamp at creation of the cost code assignment"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "floating point number of the quantity of the cost code unit"
+    }
+  },
+  "required": [
+    "uuid",
+    "costCodeAssignmentId",
+    "costCodeId",
+    "jobId",
+    "isDeleted"
+  ],
+  "description": "Cost Code Assignment assigned to a specfic job."
+}

@@ -1,0 +1,14 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for the labor code,confirm,unknown,,,100.0%,761,,confirm,not established by supplied schema or observations
+laborCodeId,integer,no,yes,no,,,Labor Code ID,confirm,unknown,,,100.0%,761,,confirm,not established by supplied schema or observations
+jobId,integer,yes,no,no,,,Project Id associated with Labor Code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Timestamp when the record was created,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+laborCode,string,no,yes,no,,100,Labor Code alphanumeric identifier,confirm,unknown,,,100.0%,761,,confirm,not established by supplied schema or observations
+description,string,no,yes,no,,100,Description of the Labor Code,confirm,unknown,,,99.5%,404,,confirm,not established by supplied schema or observations
+note,string,yes,no,no,,100,Optional note for the Labor Code,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+accountingCode,string,yes,no,no,,100,Optional accounting code for the Labor Code,confirm,unknown,,,100.0%,125,,confirm,not established by supplied schema or observations
+estimatingCode,string,yes,no,no,,100,Optional estimating code for the Labor Code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+isActive,boolean,no,yes,no,,,Indicates if the Labor Code is active,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+jobRegularChargeRatePerHour,number,yes,no,no,,,Regular charge rate per hour for the Labor Code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+jobOvertimeChargeRatePerHour,number,yes,no,no,,,Overtime charge rate per hour for the Labor Code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+jobDoubleTimeChargeRatePerHour,number,yes,no,no,,,Double time charge rate per hour for the Labor Code,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations

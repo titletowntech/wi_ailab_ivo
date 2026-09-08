@@ -1,0 +1,11 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique key for company organization object,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+organizationId,integer,no,yes,no,,,Ivo Systems identifier for the company organization object.,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems owning company id for the company organization object.,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+organizationName,string,no,yes,no,,,Unique organization name,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+accountingCode,string,yes,no,no,,,Unique accounting code for the organization if applicable,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+deletedTimestampUtc,string,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations
+deletedByUserId,integer,yes,no,no,,,,confirm,unknown,,,,,,confirm,not established by supplied schema or observations

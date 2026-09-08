@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "statusChangeId": {
+      "type": "integer"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "workOrderStatus": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "changeNote": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "statusChangeId",
+    "workOrderId"
+  ],
+  "description": "Work order status change data object."
+}

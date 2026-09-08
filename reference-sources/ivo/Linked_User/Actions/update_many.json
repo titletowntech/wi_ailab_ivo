@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100,
+            "writeOnly": true
+          },
+          "companyRoleId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 50,
+            "writeOnly": true
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 50,
+            "writeOnly": true
+          },
+          "employeeId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "divisionId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "vendorId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "timezone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 175
+          },
+          "phoneNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 45,
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "id",
+          "companyId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

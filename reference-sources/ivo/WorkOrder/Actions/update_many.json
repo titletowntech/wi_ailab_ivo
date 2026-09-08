@@ -1,0 +1,156 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "workOrderId": {
+            "type": "integer"
+          },
+          "equipmentId": {
+            "type": "integer"
+          },
+          "datePerformed": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hourMeterId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "odometerId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10000
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isActive": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isPmPerformed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "workorderStatus": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "updatedTimestampUtc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sortOrder": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "lastUpdatedByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "substatusId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "externalCompanyCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3
+          },
+          "externalWorkOrderId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 45
+          },
+          "externalCustomerNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 45
+          },
+          "externalServiceStore": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 45
+          },
+          "estimatedArrivalDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "completionDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scheduledStart": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requestedDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "workOrderId",
+          "equipmentId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "properties": {
+    "costCodeId": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "costCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Name of the cost code",
+      "maxLength": 100
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Description of the cost code",
+      "maxLength": 100
+    },
+    "jobId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Id of the job where the cost code can be used"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Floating point number of the quantity of the cost code unit"
+    },
+    "quantityUnitType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "User defined quantity unit type",
+      "maxLength": 100
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Additional notes for the cost code",
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Cost code is active"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Cost code is inactive"
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Accounting code for the cost code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimating code for the cost code",
+      "maxLength": 100
+    },
+    "costCodeTemplateId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the quick create template for the cost code"
+    },
+    "companyId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Company ID associated with the cost code"
+    }
+  },
+  "required": [
+    "costCodeId"
+  ]
+}

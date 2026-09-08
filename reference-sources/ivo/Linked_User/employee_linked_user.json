@@ -1,0 +1,136 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the linked user"
+    },
+    "id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Ivo Systems database ID for the user account"
+    },
+    "companyId": {
+      "type": "integer",
+      "description": "Ivo Systems company ID this user belongs to"
+    },
+    "email": {
+      "type": "string",
+      "description": "User account email address",
+      "writeOnly": true
+    },
+    "first_name": {
+      "type": "string",
+      "description": "User first name",
+      "writeOnly": true
+    },
+    "last_name": {
+      "type": "string",
+      "description": "User last name",
+      "writeOnly": true
+    },
+    "username": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "User account username"
+    },
+    "phoneNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "User phone number",
+      "writeOnly": true
+    },
+    "companyRoleId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the company role assigned to this user"
+    },
+    "employeeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the employee record linked to this user"
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the division this user is assigned to"
+    },
+    "vendorId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "ID of the vendor linked to this user if applicable"
+    },
+    "timezone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "User's timezone setting"
+    },
+    "isMechanic": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the user is a mechanic"
+    },
+    "isDriver": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the user is a driver"
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the user account is active"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Whether the user account has been soft deleted"
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "UTC timestamp when the user account was created"
+    },
+    "updatedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "UTC timestamp when the user account was last updated"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyId",
+    "email",
+    "first_name",
+    "last_name"
+  ],
+  "description": "Ivo Systems linked user object - a platform user account linked to an employee"
+}

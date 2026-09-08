@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "costCode": {
+      "type": "string",
+      "description": "Name of the cost code",
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the cost code",
+      "maxLength": 100
+    },
+    "jobId": {
+      "type": "integer",
+      "description": "Job ID where cost code can be used"
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "quantityUnitType": {
+      "type": "string",
+      "description": "User defined quantity unit type",
+      "maxLength": 100
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Additional notes for the cost code",
+      "maxLength": 100
+    },
+    "isActive": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Cost code is actively in use"
+    },
+    "accountingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Accounting code for the cost code",
+      "maxLength": 100
+    },
+    "estimatingCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Estimating code for the cost code",
+      "maxLength": 100
+    },
+    "companyId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Company ID associated with the cost code"
+    },
+    "quantity": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Quantity for the cost code"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicates if the cost code is deleted"
+    }
+  },
+  "required": [
+    "uuid",
+    "costCode",
+    "description",
+    "jobId",
+    "quantityUnitType"
+  ]
+}

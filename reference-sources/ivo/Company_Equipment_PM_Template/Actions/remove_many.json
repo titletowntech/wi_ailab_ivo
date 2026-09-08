@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyEquipmentPmTemplateId": {
+            "type": "integer"
+          },
+          "companyId": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "uuid",
+          "companyEquipmentPmTemplateId",
+          "companyId"
+        ]
+      }
+    }
+  }
+}

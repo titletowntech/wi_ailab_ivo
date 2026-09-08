@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "itemCodeId": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "itemCodeId",
+    "uuid"
+  ]
+}

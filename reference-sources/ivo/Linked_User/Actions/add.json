@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 100,
+      "writeOnly": true
+    },
+    "companyId": {
+      "type": "integer"
+    },
+    "companyRoleId": {
+      "type": "integer"
+    },
+    "first_name": {
+      "type": "string",
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "last_name": {
+      "type": "string",
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "employeeId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "divisionId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "vendorId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "username": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "timezone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 175
+    },
+    "phoneNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45,
+      "writeOnly": true
+    }
+  },
+  "required": [
+    "uuid",
+    "email",
+    "companyId",
+    "companyRoleId",
+    "first_name",
+    "last_name"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "object": "Meter",
+  "sourceOfTruth": "reference/ivo/Meter/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "equipmentId",
+      "companyId",
+      "meterId",
+      "equipmentCode"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "uuid",
+      "equipmentId",
+      "companyId",
+      "meterId",
+      "totalMeter",
+      "timestamp",
+      "createdTimestampUtc",
+      "isDeleted",
+      "source",
+      "note",
+      "meterType",
+      "equipmentCode"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

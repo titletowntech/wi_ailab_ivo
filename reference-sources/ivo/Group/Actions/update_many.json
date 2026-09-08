@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "employeeGroupId": {
+            "type": "integer"
+          },
+          "companyId": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "employeeGroupName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 45
+          },
+          "employeeGroupDescription": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "employeeGroupColor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 7
+          }
+        },
+        "required": [
+          "employeeGroupId",
+          "companyId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

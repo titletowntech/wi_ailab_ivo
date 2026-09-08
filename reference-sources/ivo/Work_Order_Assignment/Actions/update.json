@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "workOrderAssignmentId": {
+      "type": "integer"
+    },
+    "workOrderId": {
+      "type": "integer"
+    },
+    "assignedToUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deletedByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "deletedTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "workOrderAssignmentId",
+    "workOrderId"
+  ]
+}

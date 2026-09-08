@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "jobNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "jobId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "createdByUserId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "equipmentCode": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "accountingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "estimatingCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          },
+          "jobOperatorLaborCodeId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "jobChargeRatePerHour": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "companyId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Company ID associated with the equipment code"
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Indicates if the equipment code is deleted"
+          }
+        },
+        "required": [
+          "uuid",
+          "equipmentCode",
+          "isActive"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

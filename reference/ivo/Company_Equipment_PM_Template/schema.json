@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique key for the equipment PM template object"
+    },
+    "companyEquipmentPmTemplateId": {
+      "type": "integer",
+      "description": "Ivo Systems identifier for the equipment PM template object."
+    },
+    "pmTypeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Type of PM template (1 = Hr Interval, 2 = Od Interval, 3 = Date Interval, 4 = Fixed Hr, 5 = Fixed Od, 6 = Fixed Date)"
+    },
+    "pmName": {
+      "type": "string",
+      "description": "Identifying name for the PM template"
+    },
+    "intervalHours": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of hours until PM is due on equipment (i.e. if interval is every 500 hours, this would be 500)"
+    },
+    "intervalDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of days until PM is due on equipment (i.e. if interval is every 90 days, this would be 90)"
+    },
+    "intervalOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of miles until PM is due on equipment (i.e. if interval is every 5000 miles, this would be 5000)"
+    },
+    "fixedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fixed date to flag when PM is due on equipment"
+    },
+    "fixedHours": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Fixed one time hours to flag when PM is due on equipment"
+    },
+    "fixedOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Fixed one time mileage to flag when PM is due on equipment"
+    },
+    "partsNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Parts required to complete the PM work"
+    },
+    "workNote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Work to be completed for pm template"
+    },
+    "triggerDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Set number of days to alert you at prior to PM being due"
+    },
+    "triggerHours": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Set number of hours to alert you at prior to PM being due"
+    },
+    "triggerOdometer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Set number of miles to alert you at prior to PM being due"
+    },
+    "isDeleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdTimestampUtc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdByUserId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "applyChangesToChildren": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Apply changes to pm templates assigned to equipment when this pm template is updated"
+    },
+    "companyId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "companyEquipmentPmTemplateId",
+    "pmName",
+    "companyId"
+  ],
+  "description": "Equipment PM Template object"
+}

@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "setupId": {
+            "type": "integer"
+          },
+          "equipmentId": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "uuid",
+          "setupId"
+        ]
+      }
+    }
+  },
+  "required": [
+    "items"
+  ]
+}

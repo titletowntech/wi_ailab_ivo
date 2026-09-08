@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "object": "WorkOrder_PM_Performed",
+  "sourceOfTruth": "reference/ivo/WorkOrder_PM_Performed/schema.json",
+  "blockingRules": {
+    "rejectUnknownFields": true,
+    "requireMappedOrDefaulted": [
+      "uuid",
+      "workOrderPmId",
+      "setupId",
+      "workOrderId"
+    ],
+    "prohibitInputFields": [],
+    "enforceDeclaredTypes": true,
+    "enforceNullability": true,
+    "enforceFormats": true,
+    "enforceMaxLengthWhenDeclared": true,
+    "requireLookupResolution": []
+  },
+  "warnings": {
+    "writeOnlyFields": [],
+    "generatedFieldCandidates": [],
+    "lookupCandidates": [],
+    "fieldsRequiringIVOConfirmation": [
+      "uuid",
+      "workOrderPmId",
+      "setupId",
+      "workOrderId",
+      "createdTimestampUtc",
+      "createdByUserId",
+      "isDeleted",
+      "deletedByUserId",
+      "isCompleted",
+      "isActive"
+    ]
+  },
+  "unresolved": [
+    "Business uniqueness rules beyond the supplied JSON Schema",
+    "Customer and organization scoping rules",
+    "Defaults and generated-field behavior beyond observed KNA data",
+    "Lookup endpoints, keys, and missing-value behavior",
+    "Cross-object load order and relationship requirements"
+  ]
+}

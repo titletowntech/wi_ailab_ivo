@@ -1,0 +1,10 @@
+field,type,nullable,required,write_only,format,max_length,description,ownership,mapping_behavior,reference_object,default_value,observed_fill_pct,observed_distinct,observed_classification,status,notes
+uuid,string,no,yes,no,uuid,,Unique identifier for the equipment status object.,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+companyEquipmentStatusId,integer,no,yes,no,,,Ivo Systems identifier for the equipment status object.,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+statusName,string,no,yes,no,,,Name/description of the equipment status.,confirm,unknown,,,100.0%,5,,confirm,not established by supplied schema or observations
+statusColor,string,yes,no,no,,,Display color for the equipment status.,confirm,unknown,,,80.0%,4,,confirm,not established by supplied schema or observations
+isDeleted,boolean,yes,no,no,,,Boolean flag indicating if the equipment status is deleted.,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdTimestampUtc,string,yes,no,no,,,Utc timestamp indicating when the equipment status was created.,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+createdByUserId,integer,yes,no,no,,,Ivo Systems user id of who created the equipment status.,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+companyId,integer,no,yes,no,,,Ivo Systems owning company id for the equipment status.,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
+icon,string,yes,no,no,,,Ivo Systems display icon for the equipment status.,confirm,unknown,,,100.0%,1,,confirm,not established by supplied schema or observations
