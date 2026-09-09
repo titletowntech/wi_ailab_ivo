@@ -1,0 +1,1089 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/cost_adj_bat_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "Source": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "TransType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CostTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ActualDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCTransType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GLTransAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "GLOffsetAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ReversalStatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrigMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrigCostTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "Hours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Units": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Cost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PstUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "PstUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "PstUnitCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "PstECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "AllocCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Employee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Craft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Crew": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EarnFactor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "EarnType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Shift": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LiabilityType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Vendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "POItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SL": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "SLItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MOItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Material": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Loc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "INStdUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "INStdUnitCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "INStdECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "MSTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MSTicket": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "JBBillStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "JBBillMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "JBBillNumber": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EMEquip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EMRevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldPhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldActualDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldJCTransType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "OldGLCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "OldGLTransAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldGLOffsetAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldReversalStatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "OldHours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldPstUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "OldPstUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldPstUnitCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldPstECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldPRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldEmployee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldCraft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldCrew": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldEarnFactor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "OldEarnType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldShift": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldLiabilityType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldVendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldAPCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldAPTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldAPLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldAPRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldPOItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldSL": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldSLItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldMOItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMaterial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldINCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldINStdUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "OldINStdUnitCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldINStdECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldMSTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMSTicket": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldJBBillStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldJBBillMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldJBBillNumber": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldEMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldEMEquip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldEMRevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldEMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldTaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldTaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "TaxCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ToJCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldToJCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "TaxGLTransAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OffsetGLCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldOffsetGLCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldPOItemLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POItemLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FieldTicket": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldFieldTicket": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq",
+    "Source",
+    "TransType",
+    "KeyID"
+  ]
+}

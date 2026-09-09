@@ -1,0 +1,236 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/employee_leaves/cache.json",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Employee": {
+      "type": "integer",
+      "description": ""
+    },
+    "LeaveCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "AccrualUsageOverrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "PRCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "LeaveCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Basis": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          }
+        }
+      }
+    },
+    "EligibleDate": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "FixedUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FixedFreq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap1Freq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap1Max": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Cap1Accum": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "Cap1Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Cap2Freq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap2Max": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Cap2Accum": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "Cap2Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "AvailBalFreq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AvailBalMax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CarryOver": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "AvailBal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "AvailBalDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-01."
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "NegLeaveBalWarn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    }
+  },
+  "required": [
+    "KeyID",
+    "PRCo",
+    "Employee",
+    "LeaveCode"
+  ]
+}

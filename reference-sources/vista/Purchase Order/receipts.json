@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Receipts/cache.json",
+  "type": "object",
+  "properties": {
+    "POCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "POTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "PO": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "POItem": {
+      "type": "integer",
+      "description": ""
+    },
+    "RecvdDate": {
+      "type": "string",
+      "description": ""
+    },
+    "RecvdBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "RecvdUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "RecvdCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "BOUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "BOCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PostedDate": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Receiver#": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "InvdFlag": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "APMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "APTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UIMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UISeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UILine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "POItemLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "POCo",
+    "Mth",
+    "POTrans",
+    "PO",
+    "POItem",
+    "RecvdDate",
+    "RecvdUnits",
+    "RecvdCost",
+    "BOUnits",
+    "BOCost",
+    "PostedDate",
+    "BatchId",
+    "Purge",
+    "InvdFlag",
+    "KeyID"
+  ]
+}

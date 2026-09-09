@@ -1,0 +1,1603 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ms/v2/object/ticket_batch_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": "Format: YYYY-MM-01."
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchTransType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "MSTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SaleDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "FromLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Ticket": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SaleType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "CustGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Customer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CustJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CustPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "PaymentType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "CheckNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Hold": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ToLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Material": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "UM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "MatlPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MatlJCCType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GrossWght": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "TareWght": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "WghtUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "MatlUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "UnitPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "ECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "MatlTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "MatlCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "HaulerType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "HaulVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Truck": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Driver": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Employee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TruckType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "StartTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "StopTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Loads": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Miles": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Zone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "HaulCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "HaulPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "HaulJCCType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "HaulBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "HaulRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "HaulTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PayCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "PayRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "PayTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "RevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "RevBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "RevRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "RevTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "DiscBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DiscRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "DiscOff": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxDisc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Void": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "OldSaleDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "OldTic": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldFromLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldVendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMatlVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldSaleType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldCustGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldCustomer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldCustJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldCustPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldPaymentType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldCheckNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldHold": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "OldJCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldPhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldINCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldToLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldMatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMaterial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "OldMatlPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldMatlJCCType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldGrossWght": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldTareWght": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldWghtUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "OldMatlUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldUnitPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldMatlTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldMatlCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldHaulerType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldHaulVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTruck": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldDriver": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldEMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldEquipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldEMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldPRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldEmployee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTruckType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldStartTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "OldStopTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "OldLoads": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMiles": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldHours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldZone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldHaulCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldHaulPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OldHaulJCCType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldHaulBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldHaulRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldHaulTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldPayCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldPayBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldPayRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldPayTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldRevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldRevBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldRevRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldRevTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldTaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldTaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldTaxTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldDiscBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OldDiscRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldDiscOff": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldTaxDisc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldVoid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "OldMSInv": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldAPRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldVerifyHaul": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Changed": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "OldReasonCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ReasonCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ShipAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "OldShipAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "OldCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "OldZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "OldAPCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldAPMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "MatlAPCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlAPMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "MatlAPRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OldMatlAPCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldMatlAPMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "OldMatlAPRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "OrigMSTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "OldCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "SurchargeKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SurchargeCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SurchargeBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "SurchargeRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "HaulPayTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "HaulPayTaxRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "OldHaulPayTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldHaulPayTaxRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "HaulPayTaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldHaulPayTaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "HaulPayTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldHaulPayTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "__Surcharges": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "SurchargeSeq": {
+              "type": "integer",
+              "description": "Key to this array."
+            },
+            "BatchTransType": {
+              "type": "string",
+              "maxLength": 1,
+              "description": ""
+            },
+            "SurchargeCode": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": ""
+            },
+            "SurchargeMaterial": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 20,
+              "description": ""
+            },
+            "SurchargeBasis": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+              "description": ""
+            },
+            "SurchargeRate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+              "description": ""
+            },
+            "SurchargeTotal": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+              "description": ""
+            },
+            "TaxBasis": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+              "description": ""
+            },
+            "TaxTotal": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+              "description": ""
+            },
+            "MSTBKeyID": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": ""
+            },
+            "MSTDKeyID": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": ""
+            },
+            "KeyID": {
+              "type": "integer",
+              "description": ""
+            },
+            "DiscountOffered": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+              "description": ""
+            },
+            "TaxDiscount": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+              "description": ""
+            },
+            "UM": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 3,
+              "description": ""
+            },
+            "APRef": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 30,
+              "description": ""
+            },
+            "MatlAPRef": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 30,
+              "description": ""
+            }
+          },
+          "required": [
+            "SurchargeSeq",
+            "BatchTransType",
+            "KeyID"
+          ]
+        }
+      ]
+    }
+  }
+}

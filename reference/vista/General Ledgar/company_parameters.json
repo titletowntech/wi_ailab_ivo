@@ -1,0 +1,237 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/CompanyParameters/cache.json",
+  "type": "object",
+  "properties": {
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Consolid": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LastMthSubClsd": {
+      "type": "string",
+      "description": ""
+    },
+    "LastMthGLClsd": {
+      "type": "string",
+      "description": ""
+    },
+    "MaxOpen": {
+      "type": "integer",
+      "description": ""
+    },
+    "CashAccrual": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Unbal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditAccts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditAutoJrnl": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditBals": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditBudgets": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditDetail": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "XCompJrnlEntryYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "LastMthAPClsd": {
+      "type": "string",
+      "description": ""
+    },
+    "LastMthARClsd": {
+      "type": "string",
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "FMConsolid": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Workflows": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/Workflows/cache.json",
+        "type": "object",
+        "properties": {
+          "Mod": {
+            "type": "string",
+            "maxLength": 2,
+            "description": ""
+          },
+          "DocType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mod",
+          "Process",
+          "Active",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "GLCo",
+    "Consolid",
+    "LastMthSubClsd",
+    "LastMthGLClsd",
+    "MaxOpen",
+    "CashAccrual",
+    "Unbal",
+    "AuditCoParams",
+    "AuditAccts",
+    "AuditAutoJrnl",
+    "AuditBals",
+    "AuditBudgets",
+    "AuditDetail",
+    "XCompJrnlEntryYN",
+    "KeyID",
+    "LastMthAPClsd",
+    "LastMthARClsd",
+    "AttachBatchReportsYN"
+  ]
+}

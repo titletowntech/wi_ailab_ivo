@@ -331,8 +331,8 @@ function readJson(file) {
 
 function validateWorkspace(workspace) {
   const issues = [];
-  const add = (severity, message, flowName = null, stepId = null) => {
-    issues.push({ severity, message, flowName, stepId });
+  const add = (severity, message, flowName = null, stepId = null, configurationIndex = null) => {
+    issues.push({ severity, message, flowName, stepId, configurationIndex });
   };
   const validateScript = (script, label, flowName, stepId) => {
     if (typeof script !== 'string') return;
@@ -373,10 +373,10 @@ function validateWorkspace(workspace) {
         validateScript(step.inputCode, 'Called-flow input', flow.name, step.id);
       }
     }
-    for (const configuration of flow.configurations || []) {
-      if (!configuration.name || !configuration.type) add('blocking', 'Every configuration requires a name and type.', flow.name);
+    for (const [configurationIndex, configuration] of (flow.configurations || []).entries()) {
+      if (!configuration.name || !configuration.type) add('blocking', 'Every configuration requires a name and type.', flow.name, null, configurationIndex);
       if (configuration.required && String(configuration.defaultValue || '').trim() === '') {
-        add('blocking', `Required configuration has no default value: ${configuration.name || 'unnamed'}.`, flow.name);
+        add('blocking', `Required configuration has no default value: ${configuration.name || 'unnamed'}.`, flow.name, null, configurationIndex);
       }
     }
   }

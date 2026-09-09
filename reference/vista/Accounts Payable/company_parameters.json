@@ -1,0 +1,872 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "ExpJrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLExpInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLExpSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLExpTransDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLJobDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLInvDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLEquipDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLExpDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "PayJrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLPayInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLPayDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLPaySummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "DiscOffGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "DiscTakenGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ExpPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JobPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RetPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OverridePayType": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "RetHoldCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CMInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "NetAmtOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "INInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EMInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "InvTotYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SLTotYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SLCompChkYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SLAllowPayYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POTotYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POCompChkYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POAllowPayYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ChkLines": {
+      "type": "integer",
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPayTypes": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditVendors": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditHold": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditComp": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditRecur": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditTrans": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPay": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "APRefUnqYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CheckReportTitle": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "OverFlowReportTitle": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "JobLineDescDfltYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "APRefUnq": {
+      "type": "integer",
+      "description": ""
+    },
+    "AllCompChkYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AllAllowPayYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseTaxDiscountYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PMVendUpdYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PMVendAddYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ICRptYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ICRptTitle": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ICPayAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PayCategoryYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PayCategory": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AuditUnappInv": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "InvExceedRecvdYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POItemTotYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "JobLineJobPhaseUMDfltYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EMLineDescDfltYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachVendorPayInfoYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VendorPayAttachTypeID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CheckReportTitleByVendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "EFTRemittanceReport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "EFTRemittanceReportByVendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "TaxBasisNetRetgYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditTransHoldCodeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SMPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POItemLineTotYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "InvExceedRecvdLineYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CreditSvcRemittanceReport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "CreditSvcRemittanceReportByVendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "APCreditService": {
+      "type": "integer",
+      "description": ""
+    },
+    "CSCMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CSCMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CDAcctCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "CDCustID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CDCodeWord": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "TCCo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "TCAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "FtpUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "FtpPort": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FtpUserID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "FtpPassword": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CDLocationCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "CDInvoiceComments": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "CBNAPProgramAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "APRefCaseInsensitiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "APUIAutoReadyYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "WarnExistsOnPOSL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseSecureFilePathYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SecureFilePath": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 300,
+      "description": ""
+    },
+    "NPAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36,
+      "description": ""
+    },
+    "NPPassword": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRVendorUpdateYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PRVendorAddYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "NPAPIKEY": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "APCo",
+    "GLCo",
+    "GLExpInterfaceLvl",
+    "GLPayInterfaceLvl",
+    "OverridePayType",
+    "CMCo",
+    "CMInterfaceLvl",
+    "JCInterfaceLvl",
+    "NetAmtOpt",
+    "INInterfaceLvl",
+    "EMInterfaceLvl",
+    "InvTotYN",
+    "SLTotYN",
+    "SLCompChkYN",
+    "SLAllowPayYN",
+    "POTotYN",
+    "POCompChkYN",
+    "POAllowPayYN",
+    "ChkLines",
+    "AuditCoParams",
+    "AuditPayTypes",
+    "AuditVendors",
+    "AuditHold",
+    "AuditComp",
+    "AuditRecur",
+    "AuditTrans",
+    "AuditPay",
+    "APRefUnqYN",
+    "JobLineDescDfltYN",
+    "APRefUnq",
+    "AllCompChkYN",
+    "AllAllowPayYN",
+    "UseTaxDiscountYN",
+    "PMVendUpdYN",
+    "PMVendAddYN",
+    "ICRptYN",
+    "ICPayAmt",
+    "PayCategoryYN",
+    "AuditUnappInv",
+    "InvExceedRecvdYN",
+    "POItemTotYN",
+    "KeyID",
+    "JobLineJobPhaseUMDfltYN",
+    "EMLineDescDfltYN",
+    "AttachBatchReportsYN",
+    "AttachVendorPayInfoYN",
+    "TaxBasisNetRetgYN",
+    "AuditTransHoldCodeYN",
+    "POItemLineTotYN",
+    "InvExceedRecvdLineYN",
+    "APCreditService",
+    "APRefCaseInsensitiveYN",
+    "APUIAutoReadyYN",
+    "WarnExistsOnPOSL",
+    "UseSecureFilePathYN",
+    "PRVendorUpdateYN",
+    "PRVendorAddYN"
+  ]
+}

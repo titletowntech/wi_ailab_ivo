@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/departments/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "PRDept": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "GLCo": {
+      "type": "integer"
+    },
+    "JCFixedRateGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "EMFixedRateGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "SMFixedRateGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "EarningTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "EarnType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "JCAppEarnGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "EMAppEarnGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "IntercoAppEarnGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "SMAppEarnGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EarnType",
+          "GLCo",
+          "GLAcct",
+          "KeyID"
+        ]
+      },
+      "description": "This property will be added if there are any earning types associated with this department in Vista.  Each item in the array will be the KeyID of an earning type."
+    },
+    "LiabilityTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "LiabType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "JCAppBurdenGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "EMAppBurdenGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "IntercoAppBurdenGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "SMAppBurdenGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "LiabType",
+          "GLCo",
+          "GLAcct"
+        ]
+      },
+      "description": "This property will be added if there are any liability types associated with this department in Vista.  Each item in the array will be the KeyID of a liability type."
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "PRDept",
+    "GLCo",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/wo_scopes/cache.json",
+  "type": "object",
+  "properties": {
+    "SMWorkOrderScopeID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkOrder": {
+      "type": "integer",
+      "description": ""
+    },
+    "Scope": {
+      "type": "integer",
+      "description": ""
+    },
+    "CallType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "WorkScope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ServiceCenter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Division": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CustGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillToARCustomer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ServiceItem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SaleLocation": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "PriorityName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "IsTrackingWIP": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DueStartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DueEndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "CustomerPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "NotToExceed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Agreement": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "Revision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PriceMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Price": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Service": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UseAgreementRates": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "TaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "WorkOrderQuote": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "TaxRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "HoldReason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "FollowUpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "InsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "IsPreventativeMaintenance": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Derived": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "LaborHours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "LaborCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "MaterialCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EquipmentCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SubcontractCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OtherCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CostEstTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "LaborPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "MaterialPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EquipmentPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SubcontractPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OtherPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CommonMarkupEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ReadyToBill": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ReadyToBillAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "WorkOrderQuoteScope": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BudgetCraft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BudgetClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AltBillAddr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxTypeOverride": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Assignment": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RevenueRecognition": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Margin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "MatlTaxOption": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMWorkOrderScopeID",
+    "SMCo",
+    "WorkOrder",
+    "Scope",
+    "SaleLocation",
+    "IsTrackingWIP",
+    "PriceMethod",
+    "Status",
+    "IsPreventativeMaintenance",
+    "RevenueRecognition"
+  ]
+}

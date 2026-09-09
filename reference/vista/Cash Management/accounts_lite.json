@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/accounts_lite/cache.json",
+  "type": "object",
+  "properties": {
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    }
+  },
+  "required": [
+    "CMCo",
+    "CMAcct",
+    "KeyID"
+  ]
+}

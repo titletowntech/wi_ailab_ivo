@@ -1,0 +1,419 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/APPB/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-01."
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CMRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMRefSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EFTSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ChkType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "PaidDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Supplier": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VoidYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VoidMemo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "ReuseYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Overflow": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AddnlInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "AddendaTypeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxFormCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Employee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SeparatePayYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SeparatePayMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-01."
+    },
+    "SeparatePayTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SL": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "PayOverrideYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "OldCMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OldPayMethod": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "LineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Co": {
+            "type": "integer",
+            "description": ""
+          },
+          "Mth": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-01."
+          },
+          "BatchId": {
+            "type": "integer",
+            "description": ""
+          },
+          "BatchSeq": {
+            "type": "integer",
+            "description": ""
+          },
+          "ExpMth": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-01."
+          },
+          "APTrans": {
+            "type": "integer",
+            "description": ""
+          },
+          "APRef": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "InvDate": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-DD"
+          },
+          "Gross": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Retainage": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "PrevPaid": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "PrevDisc": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Balance": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "DiscTaken": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "KeyID"
+  ]
+}

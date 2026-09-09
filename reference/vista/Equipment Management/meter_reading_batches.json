@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/em/v2/object/meter_batches/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "Source": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "TableName": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "InUseBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "DateCreated": {
+      "type": "string",
+      "description": ""
+    },
+    "CreatedBy": {
+      "type": "string",
+      "maxLength": 128,
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "Rstrict": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Adjust": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "PRGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PREndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DatePosted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateClosed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "Source",
+    "TableName",
+    "DateCreated",
+    "CreatedBy",
+    "Status",
+    "Rstrict",
+    "KeyID"
+  ]
+}

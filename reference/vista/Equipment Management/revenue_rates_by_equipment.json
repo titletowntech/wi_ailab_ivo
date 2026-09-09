@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/RevenueRatesByEquipment/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "RevCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "EMGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "UpdtHrMeter": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PostWorkUnits": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ORideRate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AllowPostOride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "Breakdown": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/Breakdown/cache.json",
+        "type": "object",
+        "properties": {
+          "RevBdownCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "RevBdownCode",
+          "Rate",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "Equipment",
+    "RevCode",
+    "EMGroup",
+    "UpdtHrMeter",
+    "PostWorkUnits",
+    "ORideRate",
+    "AllowPostOride",
+    "Rate",
+    "KeyID"
+  ]
+}

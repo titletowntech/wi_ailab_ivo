@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/hq/v2/object/payment_terms/cache.json",
+  "type": "object",
+  "properties": {
+    "PayTerms": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "DiscOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "DaysTillDisc": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DiscDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DueOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "DaysTillDue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DueDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CutOffDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DiscRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": ""
+    },
+    "MatlDisc": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "RollAheadTwoMonths": {
+      "type": "integer",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PayTerms",
+    "DiscOpt",
+    "DueOpt",
+    "DiscRate",
+    "MatlDisc",
+    "RollAheadTwoMonths",
+    "KeyID"
+  ]
+}

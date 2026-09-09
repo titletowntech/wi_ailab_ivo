@@ -1,0 +1,866 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/em/v2/object/equipment/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Department": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Category": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ModelYr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "VINNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 40,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "OdoReading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OdoDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReplacedOdoReading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ReplacedOdoDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "HourReading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "HourDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReplacedHourReading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ReplacedHourDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FuelMatlCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "FuelCapacity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FuelCapUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "FuelUsed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FuelCostCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "FuelCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LastFuelDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AttachToEquip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AttachPostRevenue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PhaseGrp": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UsageCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WeightUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "WeightCapacity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "VolumeUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "VolumeCapacity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Capitalized": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "LicensePlateNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LicensePlateState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "LicensePlateExpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "IRPFleet": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CompOfEquip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ComponentTypeCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CompUpdateHrs": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "CompUpdateMiles": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "CompUpdateFuel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "PostCostToComp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Operator": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Shop": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "GrossVehicleWeight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TareWeight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Height": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Wheelbase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "NoAxles": {
+      "type": "integer",
+      "description": ""
+    },
+    "Width": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OverallLength": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "HorsePower": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "TireSize": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "OwnershipStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "InServiceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ExpLife": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReplCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CurrentAppraisal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SoldDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "SalePrice": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PurchasedFrom": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PurchasePrice": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PurchDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LeasedFrom": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LeaseStartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "LeaseEndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "LeasePayment": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "LeaseResidualValue": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ARCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CustGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Customer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CustEquipNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MSTruckType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "RevenueCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "MechanicNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "JobDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "FuelType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "UpdateYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ShopGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "IFTAState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "LastUsedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "ChangeInProgress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "LastUsedEquipmentCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LastEquipmentChangeDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "LastEquipmentChangeUser": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "EquipmentCodeChanges": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OriginalEquipmentCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ExpLifeTimeFrame": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CrossReferenceUsage": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Parts": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Parts/items",
+        "type": "object",
+        "properties": {
+          "PartNo": {
+            "type": "string",
+            "maxLength": 30,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "MatlGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "HQMatl": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "Qty": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "UM": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "PartNo",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "Equipment",
+    "Type",
+    "Status",
+    "OdoReading",
+    "ReplacedOdoReading",
+    "HourReading",
+    "ReplacedHourReading",
+    "FuelCapacity",
+    "FuelUsed",
+    "WeightCapacity",
+    "VolumeCapacity",
+    "GrossVehicleWeight",
+    "TareWeight",
+    "NoAxles",
+    "ExpLife",
+    "ReplCost",
+    "CurrentAppraisal",
+    "SalePrice",
+    "PurchasePrice",
+    "LeasePayment",
+    "LeaseResidualValue",
+    "FuelType",
+    "UpdateYN",
+    "ShopGroup",
+    "KeyID",
+    "ExpLifeTimeFrame",
+    "CrossReferenceUsage"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/MeterBatch/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "EMTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "PostingDate": {
+      "type": "string",
+      "description": ""
+    },
+    "ReadingDate": {
+      "type": "string",
+      "description": ""
+    },
+    "Source": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "PreviousHourMeter": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CurrentHourMeter": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PreviousTotalHourMeter": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CurrentTotalHourMeter": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PreviousOdometer": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CurrentOdometer": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PreviousTotalOdometer": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CurrentTotalOdometer": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Miles": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "InUseBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "EMCo",
+    "Mth",
+    "EMTrans",
+    "Equipment",
+    "PostingDate",
+    "ReadingDate",
+    "Source",
+    "PreviousHourMeter",
+    "CurrentHourMeter",
+    "PreviousTotalHourMeter",
+    "CurrentTotalHourMeter",
+    "Hours",
+    "PreviousOdometer",
+    "CurrentOdometer",
+    "PreviousTotalOdometer",
+    "CurrentTotalOdometer",
+    "Miles",
+    "KeyID"
+  ]
+}

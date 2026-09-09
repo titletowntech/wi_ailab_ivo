@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/groups/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "PRGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PayFreq": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": "integer",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "AttachGLLedgerRpts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachTypeID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayPeriodsPerYear": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Liabilities": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Liabilities/items",
+        "type": "object",
+        "properties": {
+          "LiabCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "LiabCode",
+          "KeyID"
+        ]
+      }
+    },
+    "LeaveCodes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LeaveCodes/items",
+        "type": "object",
+        "properties": {
+          "LeaveCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "LeaveCode",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "PRGroup",
+    "PayFreq",
+    "GLCo",
+    "GLAcct",
+    "CMCo",
+    "CMAcct",
+    "KeyID",
+    "AttachGLLedgerRpts",
+    "PayPeriodsPerYear"
+  ]
+}

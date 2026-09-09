@@ -1,0 +1,989 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "APInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SLInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "INInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MSInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MSCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EMInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MtlCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SigPartJob": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SigCharsPO": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SigCharsMO": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SigCharsSL": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SLCharsProject": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLCharsVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PONo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "POCharsProject": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POCharsVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MONo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "MOCharsProject": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PhaseDescYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OurFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLSeqLen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POSeqLen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MOSeqLen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLCT1Option": {
+      "type": "integer",
+      "description": ""
+    },
+    "SLCostType2": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MTCT1Option": {
+      "type": "integer",
+      "description": ""
+    },
+    "POSigPartJob": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MOGroupByLoc": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BeginStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "FinalStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "APVendUpdYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocTrackView": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "RQInUse": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POCreate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MOCreate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SLStartSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POStartSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MOStartSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType1": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType2": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType3": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType4": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType5": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType6": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType7": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType8": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType9": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ShowCostType10": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FaxServerName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "DocHistACO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistDrawing": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistInspect": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistOtherDoc": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistPCO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistPunchList": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistRFI": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistRFQ": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistSubmittal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistTestLog": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DocHistTransmittal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditDailyLogs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMCA": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMEC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMEH": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMFM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMIM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMMF": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMMM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMNR": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPA": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPF": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMPN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMSL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPMTH": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "UseApprSubCo": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "MatlPhaseDesc": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "POAddOrigOpen": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "POAddChgOpen": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "MatlCostType2": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLItemCOAutoAdd": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SLItemCOManual": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "DocHistSubCO": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RFIStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "DocHistPOCONum": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "LockDownACOItems": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysResponsibleFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysApprovingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysRequestingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DocHistSubmittalRegister": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ProjMinPct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "ProjInactivePhases": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjPostForecast": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjJobInMultiBatch": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjResDetOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjRemainUCOpt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ProjPercent": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjOverUnder": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjRemain": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjSpreadOption": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "RevProjOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VFETemplate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ProjRemainUnitsOption": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PCODetailNotesCopySUBCO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PCODetailNotesCopyPOCO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "APInUse",
+    "SLInUse",
+    "POInUse",
+    "INInUse",
+    "MSInUse",
+    "PRInUse",
+    "EMInUse",
+    "SigPartJob",
+    "SLNo",
+    "PONo",
+    "MONo",
+    "SLCT1Option",
+    "MTCT1Option",
+    "POSigPartJob",
+    "MOGroupByLoc",
+    "APVendUpdYN",
+    "RQInUse",
+    "POCreate",
+    "MOCreate",
+    "DocHistACO",
+    "DocHistDrawing",
+    "DocHistInspect",
+    "DocHistOtherDoc",
+    "DocHistPCO",
+    "DocHistPunchList",
+    "DocHistRFI",
+    "DocHistRFQ",
+    "DocHistSubmittal",
+    "DocHistTestLog",
+    "DocHistTransmittal",
+    "AuditCoParams",
+    "AuditDailyLogs",
+    "AuditPMCA",
+    "AuditPMEC",
+    "AuditPMEH",
+    "AuditPMFM",
+    "AuditPMIM",
+    "AuditPMMF",
+    "AuditPMMM",
+    "AuditPMNR",
+    "AuditPMPA",
+    "AuditPMPC",
+    "AuditPMPF",
+    "AuditPMPL",
+    "AuditPMPM",
+    "AuditPMPN",
+    "AuditPMSL",
+    "AuditPMTH",
+    "UseApprSubCo",
+    "AttachBatchReportsYN",
+    "KeyID",
+    "MatlPhaseDesc",
+    "POAddOrigOpen",
+    "POAddChgOpen",
+    "SLItemCOAutoAdd",
+    "SLItemCOManual",
+    "DocHistSubCO",
+    "DocHistPOCONum",
+    "LockDownACOItems",
+    "DocHistSubmittalRegister",
+    "ProjMethod",
+    "ProjMinPct",
+    "ProjInactivePhases",
+    "ProjPostForecast",
+    "ProjJobInMultiBatch",
+    "ProjResDetOpt",
+    "ProjRemainUCOpt",
+    "ProjPercent",
+    "ProjOverUnder",
+    "ProjRemain",
+    "ProjSpreadOption",
+    "RevProjOpt",
+    "ProjRemainUnitsOption",
+    "PCODetailNotesCopySUBCO",
+    "PCODetailNotesCopyPOCO"
+  ]
+}

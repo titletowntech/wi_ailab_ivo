@@ -1,0 +1,984 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/invoices/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "APTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "InvId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "APRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "InvDate": {
+      "type": "string",
+      "description": ""
+    },
+    "DiscDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DueDate": {
+      "type": "string",
+      "description": ""
+    },
+    "InvTotal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "HoldCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayControl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PrePaidYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PrePaidMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PrePaidDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PrePaidChk": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PrePaidSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PrePaidProcYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "V1099YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "V1099Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "V1099Box": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayOverrideYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PayName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "PayCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PayState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "PayZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "OpenYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Vista bAPTH field. Y = open AP transaction. Does not indicate remaining balance; use ap/invoice_line_details (APTD.PaidMth)."
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Vista bAPTH field. Y = retain paid transaction during AP Purge (selective purge); not a delete-now flag."
+    },
+    "InPayControl": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Vista bAPTH field. Y = transaction is in AP Payment Control / payment workfile."
+    },
+    "PayAddInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "DocName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "AddendaTypeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Employee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DLcode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxFormCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxPeriodEndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AmountType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "AmtType2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Amount2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "AmtType3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Amount3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SeparatePayYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ChkRev": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "AddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "SLKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LineItems/items",
+        "type": "object",
+        "properties": {
+          "APLine": {
+            "type": "integer",
+            "description": ""
+          },
+          "LineType": {
+            "type": "integer",
+            "description": ""
+          },
+          "PO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "POItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ItemType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SL": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "SLItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "JCCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Phase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "JCCType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EMCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "WO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "WOItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Equip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "CostCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMCType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "CompType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Component": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "INCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Loc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "MatlGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Material": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "UM": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3,
+            "description": ""
+          },
+          "Units": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "UnitCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "ECM": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Supplier": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "PayType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GrossAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "MiscAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "MiscYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "TaxGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "TaxType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxBasis": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "TaxAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Retainage": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Discount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "BurUnitCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "BECM": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "POPayTypeYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "PayCategory": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "Receiver#": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "SLKeyID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMWorkOrder": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Scope": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMStandardItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "POItemLine": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMCostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMJCCostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMPhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SubjToOnCostYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "OnCostStatus": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ocApplyMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ocApplyTrans": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ocApplyLine": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ATOCategory": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4,
+            "description": ""
+          },
+          "ocSchemeID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ocMembershipNbr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "SMPhase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "SMTaxLiability": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "APLine",
+          "LineType",
+          "GLCo",
+          "GLAcct",
+          "Units",
+          "UnitCost",
+          "PayType",
+          "GrossAmt",
+          "MiscAmt",
+          "MiscYN",
+          "TaxBasis",
+          "TaxAmt",
+          "Retainage",
+          "Discount",
+          "BurUnitCost",
+          "POPayTypeYN",
+          "KeyID",
+          "SubjToOnCostYN",
+          "SMTaxLiability"
+        ]
+      }
+    }
+  },
+  "required": [
+    "APCo",
+    "Mth",
+    "APTrans",
+    "VendorGroup",
+    "Vendor",
+    "InvDate",
+    "DueDate",
+    "InvTotal",
+    "PayMethod",
+    "CMCo",
+    "PrePaidYN",
+    "PrePaidProcYN",
+    "V1099YN",
+    "PayOverrideYN",
+    "OpenYN",
+    "BatchId",
+    "Purge",
+    "InPayControl",
+    "SeparatePayYN",
+    "ChkRev",
+    "KeyID"
+  ]
+}

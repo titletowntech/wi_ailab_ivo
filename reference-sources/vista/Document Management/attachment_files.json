@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/dm/v2/object/attachments/cache.json",
+  "type": "object",
+  "properties": {
+    "AttachmentID": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__MD5_file_byte_hash": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Hexadecimal formatted string of the 128bit md5 hash of the file bytes."
+    },
+    "__file_id": {
+      "type": "string",
+      "description": "App Xchange file ID for use in flows and the AppNetwork files API (subscribers/{code}/files/{id}). Direct API integrators should prefer filePointer.location to download file bytes."
+    }
+  },
+  "required": [
+    "AttachmentID",
+    "KeyID",
+    "__file_id"
+  ]
+}

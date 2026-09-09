@@ -1,0 +1,231 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/departments/cache.json",
+  "type": "object",
+  "properties": {
+    "SMDepartmentID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Department": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "EquipCostGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "LaborCostGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "OtherCostGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "EquipRevGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "LaborRevGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "OtherRevGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipCostWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "LaborCostWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "OtherCostWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "MaterialCostWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "MaterialCostGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "MaterialRevGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "EquipRevWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "LaborRevWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "OtherRevWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "MaterialRevWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "AgreementRevGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "AgreementRevDefGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SubcontractCostGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SubcontractRevGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SubcontractCostWIPGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SubcontractRevWIPGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "BurdenCostGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "BurdenCostWIPGLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "MiscCostOffsetGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "WorkOrderRevDefGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMDepartmentID",
+    "SMCo",
+    "Department",
+    "GLCo",
+    "EquipCostGLAcct",
+    "LaborCostGLAcct",
+    "OtherCostGLAcct",
+    "EquipRevGLAcct",
+    "LaborRevGLAcct",
+    "OtherRevGLAcct",
+    "EquipCostWIPGLAcct",
+    "LaborCostWIPGLAcct",
+    "OtherCostWIPGLAcct",
+    "MaterialCostWIPGLAcct",
+    "MaterialCostGLAcct",
+    "MaterialRevGLAcct",
+    "EquipRevWIPGLAcct",
+    "LaborRevWIPGLAcct",
+    "OtherRevWIPGLAcct",
+    "MaterialRevWIPGLAcct",
+    "BurdenCostGLAcct",
+    "BurdenCostWIPGLAcct"
+  ]
+}

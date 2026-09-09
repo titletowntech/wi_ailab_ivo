@@ -1,0 +1,508 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "HRCo": {
+      "type": "integer",
+      "description": "HR Company (Primary Key)"
+    },
+    "PRCo": {
+      "type": "integer",
+      "description": "Processing Company (Primary Key)"
+    },
+    "DependHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Dependent History Y/N flag"
+    },
+    "DependHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BenefitHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Benefit History Y/N flag"
+    },
+    "BenefitHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "SalaryHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Salary History Y/N flag"
+    },
+    "SalaryHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ReviewHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Review History Y/N flag"
+    },
+    "ReviewHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TrainHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Training History Y/N flag"
+    },
+    "TrainHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "SkillsHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Skills History Y/N flag"
+    },
+    "SkillsHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "RewardHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Reward History Y/N flag"
+    },
+    "RewardHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DisciplineHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Discipline History Y/N flag"
+    },
+    "DisciplineHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "GrievHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Grievance History Y/N flag"
+    },
+    "GrievanceHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AccidentHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Accident History Y/N flag"
+    },
+    "AccidentHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DrugHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Drug History Y/N flag"
+    },
+    "DrugHistCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "FMLAReqMonths": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "FMLA Required Months"
+    },
+    "FMLAReqHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": "FMLA Required Hours"
+    },
+    "AuditCoYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Company Y/N flag"
+    },
+    "AuditResourceYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Resource Y/N flag"
+    },
+    "AuditBenefitsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Benefits Y/N flag"
+    },
+    "AuditSalaryHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Salary History Y/N flag"
+    },
+    "AuditReviewYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Review Y/N flag"
+    },
+    "AuditSkillsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Skills Y/N flag"
+    },
+    "AuditTrainingYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Training Y/N flag"
+    },
+    "AuditRewardsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Rewards Y/N flag"
+    },
+    "AuditDisciplineYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Discipline Y/N flag"
+    },
+    "AuditGrievanceYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Grievance Y/N flag"
+    },
+    "AuditAccidentsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Accidents Y/N flag"
+    },
+    "AuditPositionsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Positions Y/N flag"
+    },
+    "AuditEmplHistYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Employment History Y/N flag"
+    },
+    "AuditDrugYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Drug Y/N flag"
+    },
+    "UpdateNameYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Name Y/N flag"
+    },
+    "UpdateAddressYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Address Y/N flag"
+    },
+    "UpdateHireDateYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Hire Date Y/N flag"
+    },
+    "UpdateActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Active Status Y/N flag"
+    },
+    "UpdatePRGroupYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update PR Group Y/N flag"
+    },
+    "UpdateTimecardYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Timecard Y/N flag"
+    },
+    "UpdateW4YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update W4 Y/N flag"
+    },
+    "UpdateSalaryYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Salary Y/N flag"
+    },
+    "UpdateBenefitsYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": "Update Benefits Y/N flag"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Notes"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": "Unique Attachment ID"
+    },
+    "UpdateOccupCatYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update Occupation Category Y/N flag"
+    },
+    "AuditAssetYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit Asset Y/N flag"
+    },
+    "UpdateSSNYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Update SSN Y/N flag"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Record Identifier (Internal Primary Key)"
+    },
+    "AuditPTOYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Audit PTO Y/N flag"
+    },
+    "InitDrugTestStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Attach Batch Reports Y/N flag"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "HRCo",
+    "PRCo",
+    "DependHistYN",
+    "BenefitHistYN",
+    "SalaryHistYN",
+    "ReviewHistYN",
+    "TrainHistYN",
+    "SkillsHistYN",
+    "RewardHistYN",
+    "DisciplineHistYN",
+    "GrievHistYN",
+    "AccidentHistYN",
+    "DrugHistYN",
+    "FMLAReqHours",
+    "AuditCoYN",
+    "AuditResourceYN",
+    "AuditBenefitsYN",
+    "AuditSalaryHistYN",
+    "AuditReviewYN",
+    "AuditSkillsYN",
+    "AuditTrainingYN",
+    "AuditRewardsYN",
+    "AuditDisciplineYN",
+    "AuditGrievanceYN",
+    "AuditAccidentsYN",
+    "AuditPositionsYN",
+    "AuditEmplHistYN",
+    "AuditDrugYN",
+    "UpdateNameYN",
+    "UpdateAddressYN",
+    "UpdateHireDateYN",
+    "UpdateActiveYN",
+    "UpdatePRGroupYN",
+    "UpdateTimecardYN",
+    "UpdateW4YN",
+    "UpdateSalaryYN",
+    "UpdateOccupCatYN",
+    "AuditAssetYN",
+    "UpdateSSNYN",
+    "KeyID",
+    "AuditPTOYN",
+    "AttachBatchReportsYN"
+  ]
+}

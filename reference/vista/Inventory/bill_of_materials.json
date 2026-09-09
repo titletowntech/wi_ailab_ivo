@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/BillOfMaterials/cache.json",
+  "type": "object",
+  "properties": {
+    "INCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "LocGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "FinMatl": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "StdUM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Components": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/BillOfMaterialsOverride/cache.json",
+        "type": "object",
+        "properties": {
+          "CompMatl": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Units": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "CompMatl",
+          "Units",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "INCo",
+    "LocGroup",
+    "MatlGroup",
+    "FinMatl",
+    "KeyID"
+  ]
+}

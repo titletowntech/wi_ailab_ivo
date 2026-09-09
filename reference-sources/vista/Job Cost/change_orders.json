@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/change_orders/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "ACO": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "ACOSequence": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Contract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ApprovedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ApprovalDate": {
+      "type": "string",
+      "description": ""
+    },
+    "ChangeDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "NewCmplDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "IntExt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LineItems/items",
+        "type": "object",
+        "properties": {
+          "ACOItem": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Contract": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Item": {
+            "type": "string",
+            "maxLength": 16,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "ApprovedMonth": {
+            "type": "string",
+            "description": ""
+          },
+          "ContractUnits": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "ContUnitPrice": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "ContractAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "BillGroup": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ChangeDays": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          },
+          "PhaseDetail": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "$id": "#/properties/LineItems/items",
+              "type": "object",
+              "properties": {
+                "PhaseGroup": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "Phase": {
+                  "type": "string",
+                  "maxLength": 20,
+                  "description": ""
+                },
+                "CostType": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "MonthAdded": {
+                  "type": "string",
+                  "description": ""
+                },
+                "UM": {
+                  "type": "string",
+                  "maxLength": 3,
+                  "description": ""
+                },
+                "UnitCost": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+                  "description": ""
+                },
+                "EstHours": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "EstUnits": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+                  "description": ""
+                },
+                "EstCost": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "PhaseGroup",
+                "Phase",
+                "CostType",
+                "MonthAdded",
+                "UM",
+                "UnitCost",
+                "EstHours",
+                "EstUnits",
+                "EstCost",
+                "KeyID"
+              ]
+            }
+          }
+        },
+        "required": [
+          "ACOItem",
+          "Contract",
+          "Item",
+          "ApprovedMonth",
+          "ContractUnits",
+          "ContUnitPrice",
+          "ContractAmt",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "ACO",
+    "Contract",
+    "ApprovalDate",
+    "IntExt",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,910 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/employees/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "Employee": {
+      "type": "integer"
+    },
+    "LastName": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "FirstName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "MidName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "SortName": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Address2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "SSN": {
+      "type": "string",
+      "maxLength": 11,
+      "writeOnly": true
+    },
+    "Race": {
+      "type": "string",
+      "maxLength": 2,
+      "writeOnly": true
+    },
+    "Sex": {
+      "type": "string",
+      "maxLength": 1,
+      "writeOnly": true
+    },
+    "BirthDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "HireDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TermDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PRGroup": {
+      "type": "integer"
+    },
+    "PRDept": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Craft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "InsCode": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "TaxState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "UnempState": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "InsState": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "LocalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "GLCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "UseState": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UseLocal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UseIns": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Crew": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "LastUpdated": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "EarnCode": {
+      "type": "integer",
+      "readOnly": true
+    },
+    "HrlyRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+      "writeOnly": true
+    },
+    "SalaryAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "OTOpt": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "OTSched": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "JCFixedRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$"
+    },
+    "EMFixedRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$"
+    },
+    "YTDSUI": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$"
+    },
+    "OccupCat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "CatStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "DirDeposit": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "RoutingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "writeOnly": true
+    },
+    "BankAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "AcctType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "ActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "PensionYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "writeOnly": true
+    },
+    "PostToAll": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CertYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ChkSort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "AuditYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "Email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255
+    },
+    "DefaultPaySeq": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "DDPaySeq": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Suffix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "TradeSeq": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CSLimit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "writeOnly": true
+    },
+    "CSGarnGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "CSAllocMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "writeOnly": true
+    },
+    "Shift": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "NonResAlienYN": {
+      "type": "string",
+      "maxLength": 1,
+      "writeOnly": true
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2
+    },
+    "HDAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "F1Amt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "LCFStock": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "LCPStock": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "NAICS": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "PayMethodDelivery": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "AUEFTYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AUAccountNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 9,
+      "writeOnly": true
+    },
+    "AUBSB": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "AUReference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 18,
+      "writeOnly": true
+    },
+    "CPPQPPExempt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EIExempt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "PPIPExempt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "TimesheetRevGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "UpdatePRAEYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "WOTaxState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "WOLocalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "UseUnempState": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UseInsState": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "NewHireActStartDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NewHireActEndDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "CellPhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "ArrearsActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "RecentRehireDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RecentSeparationDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SeparationRedundancyRetirement": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "SeparationReason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "writeOnly": true
+    },
+    "SeparationReasonExplanation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "SMFixedRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$"
+    },
+    "WeeklyHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$"
+    },
+    "ETPPostedYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CAProgramAccount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "AdditionalSourceDedns": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$"
+    },
+    "AuthorizedSourceDedns": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$"
+    },
+    "ExemptHealthContribution": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "writeOnly": true
+    },
+    "AlwaysCalcQPIP": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "PrintInFrench": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "QCFileNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "EmailW2YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "Email1095CYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EmailT4YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EmailPAYGSumYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "PAYGIncomeType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "StatusIndianYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "APVendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "APVendor": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "PRUpdateAPVMYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "AdditionalDirectDeposits": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/AdditionalDirectDeposits/items",
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer"
+          },
+          "RoutingId": {
+            "type": "string",
+            "maxLength": 10,
+            "writeOnly": true
+          },
+          "BankAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "writeOnly": true
+          },
+          "Type": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "Status": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "Frequency": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Method": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "Pct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+            "writeOnly": true
+          },
+          "Amount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "RoutingId",
+          "BankAcct",
+          "Type",
+          "Status",
+          "Method",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "Employee",
+    "LastName",
+    "SortName",
+    "SSN",
+    "Race",
+    "Sex",
+    "PRGroup",
+    "PRDept",
+    "InsCode",
+    "UnempState",
+    "InsState",
+    "UseState",
+    "UseLocal",
+    "UseIns",
+    "EarnCode",
+    "HrlyRate",
+    "SalaryAmt",
+    "OTOpt",
+    "JCFixedRate",
+    "EMFixedRate",
+    "YTDSUI",
+    "DirDeposit",
+    "ActiveYN",
+    "PensionYN",
+    "PostToAll",
+    "CertYN",
+    "AuditYN",
+    "DefaultPaySeq",
+    "CSAllocMethod",
+    "NonResAlienYN",
+    "KeyID",
+    "AUEFTYN",
+    "CPPQPPExempt",
+    "EIExempt",
+    "PPIPExempt",
+    "UpdatePRAEYN",
+    "UseUnempState",
+    "UseInsState",
+    "ArrearsActiveYN",
+    "SeparationRedundancyRetirement",
+    "SMFixedRate",
+    "WeeklyHours",
+    "ETPPostedYN",
+    "ExemptHealthContribution",
+    "AlwaysCalcQPIP",
+    "PrintInFrench",
+    "EmailW2YN",
+    "Email1095CYN",
+    "EmailT4YN",
+    "EmailPAYGSumYN",
+    "StatusIndianYN",
+    "PRUpdateAPVMYN"
+  ]
+}

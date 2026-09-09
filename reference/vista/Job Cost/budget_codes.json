@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/budget_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "BudgetCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Active": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CostLevel": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "UnitCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "HrsPerUnit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Percentage": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Basis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "TimeUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "ExcludeFromLookups": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "BudgetCode",
+    "Active",
+    "CostLevel",
+    "UnitCost",
+    "HrsPerUnit",
+    "Percentage",
+    "KeyID",
+    "Basis",
+    "Rate",
+    "ExcludeFromLookups"
+  ]
+}

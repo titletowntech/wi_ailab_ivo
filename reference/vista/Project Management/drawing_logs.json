@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/v/object/drawing_logs/cache.json",
+  "type": "object",
+  "title": "Project Drawing Cache (PMDG Header with PMDR Children)",
+  "description": "Cache schema for Project Drawings (PMDG) and their Revisions (PMDR).",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": "Company Code. (bCompany, tinyint, Not Null)"
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Project/Job number. (bJob, varchar(10), Not Null)"
+    },
+    "DrawingType": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Type of document/drawing (e.g., 'Architectural'). (bDocType, varchar(10), Not Null)"
+    },
+    "Drawing": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Unique drawing or document number. (bDocument, varchar(10), Not Null)"
+    },
+    "DateIssued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "The original date the document was issued. (bDate, smalldatetime)"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": "Current status of the drawing/document. (bStatus, char(6))"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "General notes about the drawing. (varchar(max))"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": "Unique identifier for external attachments. (uniqueidentifier)"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Description of the item or document. (bItemDesc, varchar(60))"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary key identifier for the PMDG record. (bigint, Not Null)"
+    },
+    "Issue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Issue number for the drawing/document. (bIssue, int)"
+    },
+    "Revisions": {
+      "type": "array",
+      "description": "Child array containing all revisions related to this drawing (from dbo.PMDR).",
+      "items": {
+        "type": "object",
+        "title": "PMDR Drawing Revision Detail",
+        "properties": {
+          "PMCo": {
+            "type": "integer",
+            "description": "Company Code (Inherited from header). (bCompany, tinyint, Not Null)"
+          },
+          "Project": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Project/Job number (Inherited from header). (bJob, varchar(10), Not Null)"
+          },
+          "DrawingType": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Type of document/drawing (Inherited from header). (bDocType, varchar(10), Not Null)"
+          },
+          "Drawing": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Unique drawing or document number (Inherited from header). (bDocument, varchar(10), Not Null)"
+          },
+          "Rev": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Revision identifier (e.g., A, B, 01). (varchar(10), Not Null)"
+          },
+          "RevisionDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "description": "Date of the specific revision. (bDate, smalldatetime)"
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "Status of the specific revision. (bStatus, char(6))"
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Notes specific to this revision. (varchar(max))"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": "Unique identifier for attachments specific to this revision. (uniqueidentifier)"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": "Description of the revision. (bItemDesc, varchar(60))"
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": "Primary key identifier for the PMDR revision record. (bigint, Not Null)"
+          },
+          "Issue": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Issue number for the specific revision. (bIssue, int)"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "PMCo",
+          "Project",
+          "DrawingType",
+          "Drawing",
+          "Rev",
+          "KeyID"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "DrawingType",
+    "Drawing",
+    "KeyID",
+    "Revisions"
+  ]
+}

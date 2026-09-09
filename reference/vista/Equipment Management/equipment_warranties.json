@@ -1,0 +1,247 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Warranties/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Sequence": {
+      "type": "integer",
+      "description": ""
+    },
+    "Manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PartNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "SerialNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PartDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "WarrantyDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "HQMaterial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "DatePurchased": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateInstalled": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "MilesAtInstall": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,18}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "HoursAtInstall": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,18}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "InstalledBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "InactiveDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "WarrantyHours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,18}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "WarrantyMiles": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,18}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "WarrantyDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WarrantyMonths": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WarrantyYears": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "WarrantyStartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "WarrantyExpirationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "WarrantyUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "EMCo",
+    "Equipment",
+    "Sequence",
+    "KeyID"
+  ]
+}

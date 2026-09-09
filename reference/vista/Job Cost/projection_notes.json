@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/projection_notes/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": "Company Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Job (JCCo, Job)."
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Job Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Job (JCCo, Job)."
+    },
+    "Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Phase Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Phase (PhaseGroup, Phase)."
+    },
+    "CostType": {
+      "type": "integer",
+      "description": "CostType Id. This property is a natural key for the CostTypes of this Job Phase"
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "__NoteKey": {
+      "type": "string",
+      "description": "Timestamp of message if it was appended. If no appended messages, defaults to 'full'"
+    },
+    "__Note": {
+      "type": "string",
+      "description": ""
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "Phase",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/StandardMaintenanceGroups/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "StdMaintGroup": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Basis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Interval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "IntervalDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Variance": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FixedDateMonth": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FixedDateDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoDelete": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "CreateWOdaysprior": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Items": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/Items/cache.json",
+        "type": "object",
+        "properties": {
+          "StdMaintItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "EMGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "CostCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "RepairType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "InOutFlag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "EstHrs": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "EstCost": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "LastHourMeter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "LastOdometer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "LastGallons": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "LastDoneDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "LastReplacedHourMeter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "LastReplacedOdometer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "StdMaintItem",
+          "EMGroup",
+          "CostCode",
+          "InOutFlag"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "Equipment",
+    "StdMaintGroup",
+    "Basis",
+    "KeyID"
+  ]
+}

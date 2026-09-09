@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/liability_templates/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "LiabTemplate": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LiabilityTypes": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LiabilityTypes/items",
+        "type": "object",
+        "properties": {
+          "LiabType": {
+            "type": "integer",
+            "description": "Natural key for this array (LiabType)"
+          },
+          "PhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Phase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "CostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "CalcMethod": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "LiabilityRate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          },
+          "BasisEarningCodes": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "$id": "#/properties/BasisEarningCodes/items",
+              "type": "object",
+              "properties": {
+                "EarnCode": {
+                  "type": "integer",
+                  "description": "Natural key for this array (EarnCode)"
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "EarnCode",
+                "KeyID"
+              ]
+            }
+          }
+        },
+        "required": [
+          "LiabType",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "LiabTemplate",
+    "KeyID"
+  ]
+}

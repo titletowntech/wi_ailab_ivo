@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/2/progress_bat_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Job Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Job (JCCo, Job)."
+    },
+    "PhaseGroup": {
+      "type": "integer",
+      "description": "Phase Group.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Phase (PhaseGroup, Phase)."
+    },
+    "Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Phase Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Phase (PhaseGroup, Phase)."
+    },
+    "CostType": {
+      "type": "integer",
+      "description": "CostType Id. This property is a natural key for the CostTypes of this Job Phase"
+    },
+    "UM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Unit of Measure."
+    },
+    "ActualUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,3})?$",
+      "description": "Actual Units"
+    },
+    "ProgressCmplt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,4})?$",
+      "description": "Progress Complete"
+    },
+    "PRCo": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Crew": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ActualDate": {
+      "type": "string",
+      "description": "Actual Date"
+    },
+    "CostTrans": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Cost Transaction"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "number",
+      "description": ""
+    }
+  },
+  "required": [
+    "KeyID",
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq",
+    "Job",
+    "PhaseGroup",
+    "Phase",
+    "CostType"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/vendor_compliances/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "CompCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Verify": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ExpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Complied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "APCo",
+    "VendorGroup",
+    "Vendor",
+    "CompCode",
+    "Verify",
+    "KeyID"
+  ]
+}

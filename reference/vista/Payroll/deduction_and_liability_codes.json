@@ -1,0 +1,548 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v1/object/dedc_liab_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "DLCode": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "DLType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "LiabType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Method": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Routine": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DednCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GarnGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RateAmt1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "RateAmt2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "SeqOneOnly": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "YTDCorrect": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BonusOverride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BonusRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "LimitBasis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "LimitAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "LimitPeriod": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "LimitCorrect": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AutoAP": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Vendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TransByEmployee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AccumSubjAmts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SelectPurge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DetOnCert": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "CalcCategory": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "FedType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "RndToDollar": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "IncldW2": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "W2State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "W2Local": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "LimitRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PreTax": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PreTaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ATOCategory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "SchemeID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "PreTaxCatchUpYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SubjToArrearsPayback": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "RptArrearsThreshold": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ThresholdFactor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+      "description": ""
+    },
+    "ThresholdAmount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": ""
+    },
+    "PaybackPerPayPeriod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PaybackFactor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+      "description": ""
+    },
+    "PaybackAmount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": ""
+    },
+    "ROEInsurableYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SuperWeeklyMin": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "BasisOnDednLiabCodeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CAFederalType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "FringeBenefitType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "DednClassType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "FringeBenefitTypeEmars": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "DednClassTypeEmars": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "AatrixTaxType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,18}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "IncludeInSTPGross": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "BasisCodes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/basiscodes/items",
+        "type": "object",
+        "properties": {
+          "EDLCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "SubjectOnly": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "EDLType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EDLCode",
+          "SubjectOnly",
+          "KeyID",
+          "EDLType"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "DLCode",
+    "DLType",
+    "Method",
+    "RateAmt1",
+    "RateAmt2",
+    "SeqOneOnly",
+    "YTDCorrect",
+    "BonusOverride",
+    "LimitBasis",
+    "LimitAmt",
+    "AutoAP",
+    "AccumSubjAmts",
+    "SelectPurge",
+    "DetOnCert",
+    "GLCo",
+    "GLAcct",
+    "CalcCategory",
+    "RndToDollar",
+    "IncldW2",
+    "KeyID",
+    "PreTax",
+    "PreTaxCatchUpYN",
+    "SubjToArrearsPayback",
+    "RptArrearsThreshold",
+    "ThresholdFactor",
+    "ThresholdAmount",
+    "PaybackPerPayPeriod",
+    "PaybackFactor",
+    "PaybackAmount",
+    "ROEInsurableYN",
+    "SuperWeeklyMin",
+    "BasisOnDednLiabCodeYN",
+    "IncludeInSTPGross"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/transfer_bat_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "FromLoc": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "ToLoc": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Material": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "ActDate": {
+      "type": "string",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "UM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Units": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "UnitCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "ECM": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "TotalCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "INTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq",
+    "KeyID"
+  ]
+}

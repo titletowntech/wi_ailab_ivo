@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/hq/v2/object/roles/cache.json",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Role": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Active": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "UsableInPC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UsableInPM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UsableInSM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "SpendingLimits": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/SpendingLimits/items",
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "SubType": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Limit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "Threshold": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Type",
+          "SubType",
+          "Limit",
+          "Threshold",
+          "Active",
+          "KeyID"
+        ]
+      }
+    },
+    "Users": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Users/items",
+        "type": "object",
+        "properties": {
+          "UserName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "UserName",
+          "Active",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "KeyID",
+    "Role",
+    "Active",
+    "UsableInPC",
+    "UsableInPM",
+    "UsableInSM"
+  ]
+}

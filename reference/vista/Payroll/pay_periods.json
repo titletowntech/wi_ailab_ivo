@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/pay_periods/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "PRGroup": {
+      "type": "integer"
+    },
+    "PREndDate": {
+      "type": "string"
+    },
+    "BeginDate": {
+      "type": "string"
+    },
+    "MultiMth": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "BeginMth": {
+      "type": "string"
+    },
+    "EndMth": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "CutoffDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LimitMth": {
+      "type": "string"
+    },
+    "Hrs": {
+      "type": "integer"
+    },
+    "Days": {
+      "type": "integer"
+    },
+    "Wks": {
+      "type": "integer"
+    },
+    "Status": {
+      "type": "integer"
+    },
+    "DateClosed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JCInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "GLInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "APInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "LeaveProcess": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "InUseBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "Conv": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "MaxRegHrsInWeek1": {
+      "type": "integer"
+    },
+    "MaxRegHrsInWeek2": {
+      "type": "integer"
+    },
+    "NumberOfPayments": {
+      "type": "integer"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "PaySequences": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/PaySequences/items",
+        "type": "object",
+        "properties": {
+          "PaySeq": {
+            "type": "integer"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "Bonus": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ]
+          },
+          "OverrideDirDep": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "PaySeq",
+          "Bonus",
+          "OverrideDirDep",
+          "KeyID"
+        ]
+      }
+    },
+    "Holidays": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Holidays/items",
+        "type": "object",
+        "properties": {
+          "Holiday": {
+            "type": "string"
+          },
+          "ApplyToCraft": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Holiday",
+          "ApplyToCraft",
+          "KeyID"
+        ]
+      }
+    },
+    "Frequencies": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Frequencies/items",
+        "type": "object",
+        "properties": {
+          "Frequency": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Frequency",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "PRGroup",
+    "PREndDate",
+    "BeginDate",
+    "MultiMth",
+    "BeginMth",
+    "LimitMth",
+    "Hrs",
+    "Days",
+    "Wks",
+    "Status",
+    "JCInterface",
+    "EMInterface",
+    "GLInterface",
+    "APInterface",
+    "LeaveProcess",
+    "Conv",
+    "KeyID",
+    "MaxRegHrsInWeek1",
+    "MaxRegHrsInWeek2",
+    "NumberOfPayments"
+  ]
+}

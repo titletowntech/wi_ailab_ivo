@@ -1,0 +1,1005 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/sm/v2/object/wo_work_completeds/cache.json",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Type": {
+      "type": "integer",
+      "description": ""
+    },
+    "IsDeleted": {
+      "type": "boolean",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APInUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "APInUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APTLKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCostTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCostTaxTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "InitialCostsCaptured": {
+      "type": "boolean",
+      "description": ""
+    },
+    "CostsCaptured": {
+      "type": "boolean",
+      "description": ""
+    },
+    "CostCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CostMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CostTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PREndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PREmployee": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRPaySeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRPostSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRPostDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Provisional": {
+      "type": "boolean",
+      "description": ""
+    },
+    "AutoAdded": {
+      "type": "boolean",
+      "description": ""
+    },
+    "ReferenceNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "CostDetailID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "NonBillable": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Invoice": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SMSessionID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SessionInvoice": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 18,
+      "description": ""
+    },
+    "SMWorkCompletedID": {
+      "type": "integer",
+      "description": ""
+    },
+    "IsSession": {
+      "type": "boolean",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkOrder": {
+      "type": "integer",
+      "description": ""
+    },
+    "Scope": {
+      "type": "integer",
+      "description": ""
+    },
+    "Date": {
+      "type": "string",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ServiceSite": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ServiceItem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "TaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TaxAmount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CostAccount": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "RevenueAccount": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Technician": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "NoCharge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CostWIPAccount": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "RevenueWIPAccount": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "WorkCompleted": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMWorkCompletedDetailID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PriceRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "PriceTotal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Agreement": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "Revision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Coverage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UseAgreementRates": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "EntitySeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Task": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CostTotal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Quantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "CostQuantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "CostRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "ProjCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ActualUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "ActualCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PriceQuantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "MonthToPostCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TimeUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "WorkUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "LaborWorkCompleted": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LaborSMWorkCompletedID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LaborCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "LaborScope": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Craft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Shift": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipEMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipEMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipEquipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EquipRevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "EquipSMCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipPhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "EquipJCCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EquipUsageUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "StandardItem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ARTLKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ARCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ARMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ARBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ARLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Part": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MaterialDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "MaterialCategory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "UM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "PriceUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "CostECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PriceECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "INLocation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "POCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PONumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "POItem": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POItemLine": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MaterialCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "InvoiceBatchMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReadyToBill": {
+      "type": "string",
+      "description": ""
+    },
+    "APTLAPCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "APTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AlternateTaxBasis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SrcSMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SrcWorkOrder": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SrcWorkCompleted": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DestSMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DestWorkOrder": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DestWorkCompleted": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DestScope": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DestJCCType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrigWorkCompleted": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "HasAdjustment": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "IsFromAdjustment": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "IsCostAdjustment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AdjustmentType": {
+      "type": "string",
+      "maxLength": 17,
+      "description": ""
+    },
+    "TaxTypeOverride": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "KeyID",
+    "SMWorkCompletedID",
+    "SMCo",
+    "WorkOrder",
+    "WorkCompleted",
+    "SMWorkCompletedDetailID"
+  ]
+}

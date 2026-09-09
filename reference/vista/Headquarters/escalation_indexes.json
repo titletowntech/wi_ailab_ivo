@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/hq/v2/object/escalation_indexes/cache.json",
+  "type": "object",
+  "properties": {
+    "Country": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 4,
+      "description": ""
+    },
+    "PriceIndex": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120,
+      "description": ""
+    },
+    "Factor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+      "description": ""
+    },
+    "MinDays": {
+      "type": "integer",
+      "description": ""
+    },
+    "MinAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "MonthlyIndex": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/escalation_indexes/cache.json",
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer",
+            "description": "key"
+          },
+          "FromDate": {
+            "type": "string",
+            "description": ""
+          },
+          "ToDate": {
+            "type": "string",
+            "description": ""
+          },
+          "EnglishPrice": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "MetricPrice": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "Factor": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$",
+            "description": ""
+          },
+          "MinDays": {
+            "type": "integer",
+            "description": ""
+          },
+          "MinAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "FromDate",
+          "ToDate",
+          "EnglishPrice",
+          "MetricPrice",
+          "Factor",
+          "MinDays",
+          "MinAmt",
+          "KeyID"
+        ]
+      }
+    },
+    "Material": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/escalation_indexes/cache.json",
+        "type": "object",
+        "properties": {
+          "MatlGroup": {
+            "type": "integer",
+            "description": "key"
+          },
+          "FinishedMatl": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "key"
+          },
+          "ComponentMatl": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "key"
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "MatlGroup",
+          "FinishedMatl",
+          "ComponentMatl",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Country",
+    "State",
+    "PriceIndex",
+    "Factor",
+    "MinDays",
+    "MinAmt",
+    "KeyID"
+  ]
+}

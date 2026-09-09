@@ -1,0 +1,273 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pm/v2/object/meeting_minutes/cache.json",
+  "type": "object",
+  "title": "Cache Action Schema for Project Meeting Minutes",
+  "description": "Schema defining the structure for caching data for project meeting minutes, combining the PMMM header and PMMI detail items.",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": "Project Management Company ID (tinyint, not null)"
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Project ID (varchar(10), not null)"
+    },
+    "MeetingType": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Meeting Type (varchar(10), not null)"
+    },
+    "MeetingDate": {
+      "type": "string",
+      "description": "Meeting Date (smalldatetime, not null)"
+    },
+    "Meeting": {
+      "type": "integer",
+      "description": "Meeting Number/ID (int, not null)"
+    },
+    "MinutesType": {
+      "type": "integer",
+      "description": "Minutes Type Code (tinyint, not null)"
+    },
+    "MeetingTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Meeting Time (smalldatetime, null)"
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Meeting Location (varchar(30), null)"
+    },
+    "Subject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Meeting Subject (varchar(60), null)"
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Vendor Group (tinyint, null)"
+    },
+    "FirmNumber": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Firm Number (int, null)"
+    },
+    "Preparer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Preparer Employee (int, null)"
+    },
+    "NextDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Next Meeting Date (smalldatetime, null)"
+    },
+    "NextTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Next Meeting Time (smalldatetime, null)"
+    },
+    "NextLocation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Next Meeting Location (varchar(30), null)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Notes (varchar(max), null)"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid",
+      "description": "Unique Attachment ID (uniqueidentifier, null)"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary Key ID (bigint, not null) for PMMM"
+    },
+    "udMinuteCopy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "User-Defined Minute Copy (varchar(20), null)"
+    },
+    "Items": {
+      "type": "array",
+      "description": "Detail records (PMMI) associated with this meeting.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MinutesType": {
+            "type": "integer",
+            "description": "Minutes Type Code (tinyint, not null)"
+          },
+          "Item": {
+            "type": "integer",
+            "description": "Item Number (int, not null)"
+          },
+          "OriginalItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": "Original Item Link (varchar(10), null)"
+          },
+          "Minutes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Minutes Detail (varchar(max), null)"
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Vendor Group (tinyint, null)"
+          },
+          "InitFirm": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Initiating Firm (int, null)"
+          },
+          "Initiator": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Initiator Employee (int, null)"
+          },
+          "ResponsibleFirm": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Responsible Firm (int, null)"
+          },
+          "ResponsiblePerson": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Responsible Employee (int, null)"
+          },
+          "InitDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Initiated Date (smalldatetime, null)"
+          },
+          "DueDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Due Date (smalldatetime, null)"
+          },
+          "FinDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Finished Date (smalldatetime, null)"
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "Status Code (char(6), null)"
+          },
+          "Issue": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Related Issue Number/ID (int, null)"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid",
+            "description": "Unique Attachment ID (uniqueidentifier, null)"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": "Item Description (varchar(60), null)"
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": "Primary Key ID (bigint, not null) for PMMI"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "Custom fields defined for the PMMI detail item."
+          }
+        },
+        "required": [
+          "MinutesType",
+          "Item",
+          "KeyID"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Custom fields defined for the PMMM header object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "MeetingType",
+    "MeetingDate",
+    "Meeting",
+    "MinutesType",
+    "KeyID"
+  ]
+}

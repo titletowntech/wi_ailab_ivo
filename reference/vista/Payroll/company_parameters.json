@@ -1,0 +1,649 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "GLCo": {
+      "type": "integer"
+    },
+    "Jrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2
+    },
+    "GLInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CMCo": {
+      "type": "integer"
+    },
+    "APCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AutoOT": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "OTEarnCode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "JCCo": {
+      "type": "integer"
+    },
+    "AllowNoPhase": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "InsByPhase": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCICraftClass": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCICrew": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIEmployee": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIFactor": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIEarnType": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIShift": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIPostingDate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCILiabType": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIEquip": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCIRevCode": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "EMUsage": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMRevEmployee": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMRevPhase": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMRevPostingDate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EMCostEmployee": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "OfficeState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "OfficeLocal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "TaxStateOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UnempStateOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "InsStateOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "LocalOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditEmployees": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditAccums": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditPayHistory": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditDLs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditCraftClass": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "CheckReportTitle": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "EFTReportTitle": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "NonNegCheckPrint": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CrewRegEC": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CrewOTEC": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CrewDblEC": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AuditTaxes": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AuditStateIns": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ExcludeSSN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCILiabFactor": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "JCILiabShift": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AttachPayStubYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "PayStubAttachTypeID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CheckReportTitleByEmp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "EFTReportTitleByEmp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "W2AuditYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "MessageFileStatusYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "SMInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "SMCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AutoOTUseVariableRatesYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AutoOTUseHighestRateYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ReqStopTimeAfterStartTime": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CBNPayrollProgramAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "QuebecFileNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "TCC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "writeOnly": true
+    },
+    "ForeignTransmitterYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "GenerateACAXmlOnSchemaErrorYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "NAICSCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "EmailPassOption": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "Attach1095CYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AttachW2YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AttachT4YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AttachPAYGSumYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "AttachType1095C": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AttachTypeW2": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AttachTypeT4": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "AttachTypePAYG": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "UseSecureFilePathYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "writeOnly": true
+    },
+    "SecureFilePath": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 300,
+      "writeOnly": true
+    },
+    "AuditLeave": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UpdateEmployeeFromAP": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "GLCo",
+    "GLInterface",
+    "CMCo",
+    "AutoOT",
+    "JCCo",
+    "AllowNoPhase",
+    "JCInterface",
+    "InsByPhase",
+    "JCICraftClass",
+    "JCICrew",
+    "JCIEmployee",
+    "JCIFactor",
+    "JCIEarnType",
+    "JCIShift",
+    "JCIPostingDate",
+    "JCILiabType",
+    "JCIEquip",
+    "JCIRevCode",
+    "EMUsage",
+    "EMInterface",
+    "EMRevEmployee",
+    "EMRevPhase",
+    "EMRevPostingDate",
+    "EMCostEmployee",
+    "TaxStateOpt",
+    "UnempStateOpt",
+    "InsStateOpt",
+    "LocalOpt",
+    "AuditCoParams",
+    "AuditEmployees",
+    "AuditAccums",
+    "AuditPayHistory",
+    "AuditDLs",
+    "AuditCraftClass",
+    "NonNegCheckPrint",
+    "AuditTaxes",
+    "AuditStateIns",
+    "ExcludeSSN",
+    "JCILiabFactor",
+    "JCILiabShift",
+    "KeyID",
+    "AttachBatchReportsYN",
+    "AttachPayStubYN",
+    "W2AuditYN",
+    "MessageFileStatusYN",
+    "SMInterface",
+    "AutoOTUseVariableRatesYN",
+    "AutoOTUseHighestRateYN",
+    "ReqStopTimeAfterStartTime",
+    "ForeignTransmitterYN",
+    "GenerateACAXmlOnSchemaErrorYN",
+    "Attach1095CYN",
+    "AttachW2YN",
+    "AttachT4YN",
+    "AttachPAYGSumYN",
+    "UseSecureFilePathYN",
+    "AuditLeave",
+    "UpdateEmployeeFromAP"
+  ]
+}

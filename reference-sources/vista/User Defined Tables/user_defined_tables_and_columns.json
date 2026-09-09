@@ -1,0 +1,282 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/ud_tables/cache.json",
+  "type": "object",
+  "properties": {
+    "TableName": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "FormName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "CompanyBasedYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CreatedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "DateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "LastRunDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Created": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Dirty": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "AuditTable": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseNotesTab": {
+      "type": "integer",
+      "description": ""
+    },
+    "EnableFieldView": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__columns": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/ud_table_data/cache.json",
+        "type": "object",
+        "properties": {
+          "ColumnName": {
+            "type": "string",
+            "maxLength": 30,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "KeySeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "DataType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "InputType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "InputMask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "InputLength": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Prec": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "FormSeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ControlType": {
+            "type": "integer",
+            "description": ""
+          },
+          "OptionButtons": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "StatusText": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "Tab": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "DDFISeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "AutoSeqType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "ComboType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "ColumnName",
+          "ControlType",
+          "KeyID"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "TableName",
+    "CompanyBasedYN",
+    "Created",
+    "Dirty",
+    "KeyID",
+    "AuditTable",
+    "UseNotesTab",
+    "EnableFieldView"
+  ]
+}

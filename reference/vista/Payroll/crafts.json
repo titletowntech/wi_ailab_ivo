@@ -1,0 +1,525 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/crafts/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "Craft": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "EffectiveDate": {
+      "type": "string"
+    },
+    "ReportType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "OTSched": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TradeSeq": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "HolidayOT": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "MaxRegHrsPerWeek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$"
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2
+    },
+    "PensionNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7
+    },
+    "SuperWeeklyMin": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Classes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/classes/items",
+        "type": "object",
+        "properties": {
+          "Class": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "EEOClass": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1
+          },
+          "OldCapLimit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "NewCapLimit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "WghtAvgOT": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ]
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "SuperWeeklyMin": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "writeOnly": true
+          },
+          "CalcMethod": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "OldBasicHourlyRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "NewBasicHourlyRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "OldFringeBenefitRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "NewFringeBenefitRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "WagePct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,2})?$"
+          },
+          "ApprenticeLevel": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Class",
+          "OldCapLimit",
+          "NewCapLimit",
+          "WghtAvgOT",
+          "KeyID",
+          "SuperWeeklyMin",
+          "CalcMethod",
+          "OldBasicHourlyRate",
+          "NewBasicHourlyRate",
+          "OldFringeBenefitRate",
+          "NewFringeBenefitRate"
+        ]
+      }
+    },
+    "AddonEarnings": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/addonEarnings/items",
+        "type": "object",
+        "properties": {
+          "EDLType": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "EDLCode": {
+            "type": "integer"
+          },
+          "Factor": {
+            "type": "string"
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "Vendor": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 16,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EDLType",
+          "EDLCode",
+          "Factor",
+          "OldRate",
+          "KeyID"
+        ]
+      }
+    },
+    "DednLIabs": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/dednLIabs/items",
+        "type": "object",
+        "properties": {
+          "EDLType": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "EDLCode": {
+            "type": "integer"
+          },
+          "Factor": {
+            "type": "string"
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+            "writeOnly": true
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "Vendor": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 16,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EDLType",
+          "EDLCode",
+          "Factor",
+          "OldRate",
+          "KeyID"
+        ]
+      }
+    },
+    "CappedCodes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/cappedCodes/items",
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer"
+          },
+          "ELType": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "ELCode": {
+            "type": "integer"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 16,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "ELType",
+          "ELCode",
+          "KeyID"
+        ]
+      }
+    },
+    "CappedBasis": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/cappedBasis/items",
+        "type": "object",
+        "properties": {
+          "ELType": {
+            "type": "string",
+            "maxLength": 1
+          },
+          "ELCode": {
+            "type": "integer"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 16,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "ELType",
+          "ELCode",
+          "KeyID"
+        ]
+      }
+    },
+    "Holidays": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/holidays/items",
+        "type": "object",
+        "properties": {
+          "Holiday": {
+            "type": "string"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 16,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Holiday",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "Craft",
+    "EffectiveDate",
+    "KeyID",
+    "HolidayOT",
+    "SuperWeeklyMin"
+  ]
+}

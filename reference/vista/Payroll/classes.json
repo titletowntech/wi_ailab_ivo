@@ -1,0 +1,369 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Classes/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Craft": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Class": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "EEOClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldCapLimit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "NewCapLimit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "WghtAvgOT": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SuperWeeklyMin": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "CalcMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "OldBasicHourlyRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "NewBasicHourlyRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "OldFringeBenefitRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "NewFringeBenefitRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "WagePct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ApprenticeLevel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "PayRates": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/PayRates/cache.json",
+        "type": "object",
+        "properties": {
+          "Shift": {
+            "type": "integer",
+            "description": ""
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Shift",
+          "OldRate",
+          "NewRate",
+          "KeyID"
+        ]
+      }
+    },
+    "VariableEarnings": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/VariableEarnings/cache.json",
+        "type": "object",
+        "properties": {
+          "Shift": {
+            "type": "integer",
+            "description": ""
+          },
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Shift",
+          "EarnCode",
+          "OldRate",
+          "NewRate",
+          "KeyID"
+        ]
+      }
+    },
+    "AddonEarnings": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/AddonEarnings/cache.json",
+        "type": "object",
+        "properties": {
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "Factor": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EarnCode",
+          "Factor",
+          "OldRate",
+          "NewRate",
+          "KeyID"
+        ]
+      }
+    },
+    "DednLiabs": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/DednLiabs/cache.json",
+        "type": "object",
+        "properties": {
+          "DLCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "Factor": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "DLCode",
+          "Factor",
+          "OldRate",
+          "NewRate",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "Craft",
+    "Class",
+    "OldCapLimit",
+    "NewCapLimit",
+    "WghtAvgOT",
+    "KeyID",
+    "SuperWeeklyMin",
+    "CalcMethod",
+    "OldBasicHourlyRate",
+    "NewBasicHourlyRate",
+    "OldFringeBenefitRate",
+    "NewFringeBenefitRate"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/vEmployeeDailyTime/cache.json",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Seq": {
+      "type": "integer",
+      "description": ""
+    },
+    "Employee": {
+      "type": "integer",
+      "description": ""
+    },
+    "Date": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "StartTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "StopTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "BreakHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "JCJMKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCJPKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SMWorkOrderScopeID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SMPayType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "SMTripID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "StartGPSLong": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "StartGPSLat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "StopGPSLong": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "StopGPSLat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "AddedToHQBCKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateModified": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CreatedByUserKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ModifiedByUserKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "KeyID",
+    "PRCo",
+    "Seq",
+    "Employee",
+    "Date",
+    "BreakHours"
+  ]
+}

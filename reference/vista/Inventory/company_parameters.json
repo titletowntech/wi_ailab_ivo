@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/CompanyParameters/cache.json",
+  "type": "object",
+  "properties": {
+    "INCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Jrnl": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLAdjInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLAdjSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLAdjDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLTrnsfrInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLTrnsfrSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLTrnsfrDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLProdInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLProdSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLProdDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ValMethod": {
+      "type": "integer",
+      "description": ""
+    },
+    "CostMethod": {
+      "type": "integer",
+      "description": ""
+    },
+    "BurdenCost": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MiscGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "TaxGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CustPriceOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "JobPriceOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "InvPriceOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "EquipPriceOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "UsageOpt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "NegWarn": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CostOver": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditLoc": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditMatl": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditBoM": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "OverrideGL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "AutoMO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LastMO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CmtdDetailToJC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "JCMOInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLMOInterfaceLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLMOSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLMODetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "AuditMOs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ServicePriceOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReconcileGLCloseVal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/Workflow/cache.json",
+        "type": "object",
+        "properties": {
+          "Mod": {
+            "type": "string",
+            "maxLength": 2,
+            "description": ""
+          },
+          "DocType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mod",
+          "Process",
+          "Active",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "INCo",
+    "GLCo",
+    "Jrnl",
+    "GLAdjInterfaceLvl",
+    "GLTrnsfrInterfaceLvl",
+    "GLProdInterfaceLvl",
+    "ValMethod",
+    "CostMethod",
+    "BurdenCost",
+    "CustPriceOpt",
+    "JobPriceOpt",
+    "InvPriceOpt",
+    "EquipPriceOpt",
+    "UsageOpt",
+    "NegWarn",
+    "CostOver",
+    "AuditCoParams",
+    "AuditLoc",
+    "AuditMatl",
+    "AuditBoM",
+    "OverrideGL",
+    "AutoMO",
+    "CmtdDetailToJC",
+    "JCMOInterfaceLvl",
+    "GLMOInterfaceLvl",
+    "AuditMOs",
+    "KeyID",
+    "AttachBatchReportsYN",
+    "ServicePriceOpt",
+    "ReconcileGLCloseVal"
+  ]
+}

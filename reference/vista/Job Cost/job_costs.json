@@ -1,0 +1,142 @@
+{
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Phase": {
+      "type": "string",
+      "description": ""
+    },
+    "CostType": {
+      "type": "integer",
+      "description": ""
+    },
+    "UM": {
+      "type": "string",
+      "description": ""
+    },
+    "BillFlag": {
+      "type": "string",
+      "description": ""
+    },
+    "LastProjDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ActiveYN": {
+      "type": "string",
+      "description": ""
+    },
+    "ProjNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "InterfaceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "format": "int64",
+      "description": "KeyId of the record in JCCH from which this report is summarized"
+    },
+    "OrigHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "OrigUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "OrigCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "TotalCommited": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "RemainingCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "RevisedBudgetAmount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "ApprovedBudgetChanges": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "ApprovedBudgetUnitChanges": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "ApprovedCommitmentChanges": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "JobToDateDollarsPaid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "MonthToDateCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "MonthToDateDollarsPaid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "MonthToDateUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "OriginalCommitment": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "PercentComplete": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "CommitedInvoiced": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "DirectCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    },
+    "JobToDateCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,3})?$"
+    }
+  }
+}

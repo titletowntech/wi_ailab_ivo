@@ -230,7 +230,7 @@
 <body>
   <div class="shell">
     <header>
-      <div class="brand"><div class="mark" id="customerMark">?</div><div><h1 id="workspaceTitle">Customer workspace</h1><small id="workspaceDescription">Integration blueprint</small></div></div>
+      <div class="brand"><button class="icon-button" id="goHome" title="Back to home" aria-label="Back to home"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div class="mark" id="customerMark">?</div><div><h1 id="workspaceTitle">Customer workspace</h1><small id="workspaceDescription">Integration blueprint</small></div></div>
       <div class="header-actions">
         <button class="button" id="openConfigurations">Configuration manager <span class="badge" id="configurationCount">3</span></button>
         <button class="button" id="openValidation">Validation <span class="badge warn" id="validationCount">0</span></button>
@@ -802,11 +802,24 @@
     };
     const navigateToIssue = (issue) => {
       const flowIndex = flows.findIndex((flow) => flow.name === issue.flowName);
-      if (flowIndex >= 0) {
-        activeFlow = flowIndex;
-        selectedStep = Math.max(0, flows[flowIndex].steps.findIndex((step) => step.id === issue.stepId));
-        history.replaceState(null, "", `#flow=${encodeURIComponent(flows[activeFlow].name)}`);
+      if (flowIndex < 0) {
+        document.getElementById("validationDialog").close();
+        showView("flows");
+        renderWorkspace();
+        return;
       }
+      activeFlow = flowIndex;
+      history.replaceState(null, "", `#flow=${encodeURIComponent(flows[activeFlow].name)}`);
+      if (issue.configurationIndex !== null && issue.configurationIndex !== undefined) {
+        selectedConfiguration = issue.configurationIndex;
+        document.getElementById("validationDialog").close();
+        showView("flows");
+        renderWorkspace();
+        renderConfigurations();
+        configurationDialog.showModal();
+        return;
+      }
+      selectedStep = Math.max(0, flows[flowIndex].steps.findIndex((step) => step.id === issue.stepId));
       document.getElementById("validationDialog").close();
       showView("flows");
       renderWorkspace();
@@ -932,6 +945,7 @@
     });
     document.getElementById("openValidation").addEventListener("click", () => { renderValidation(); document.getElementById("validationDialog").showModal(); });
     document.getElementById("openReview").addEventListener("click", () => { renderReview(); document.getElementById("reviewDialog").showModal(); });
+    document.getElementById("goHome").addEventListener("click", () => { location.href = "/"; });
     document.getElementById("openSourceMappings").addEventListener("click", () => { location.href = `/mapping?customer=${encodeURIComponent(customerKey)}&view=sources`; });
     document.querySelectorAll("[data-close-dialog]").forEach((button) => button.addEventListener("click", () => document.getElementById(button.dataset.closeDialog).close()));
     document.getElementById("approveWorkspace").addEventListener("click", async () => {

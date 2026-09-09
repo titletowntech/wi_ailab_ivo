@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/fixed_rate_template/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "EffectiveDate": {
+      "type": "string",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "DetailItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/DetailItems/items",
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "PRCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Craft": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Class": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Shift": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EarnFactor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "Employee": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OldRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "NewRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "PRCo",
+          "OldRate",
+          "NewRate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "RateTemplate",
+    "EffectiveDate",
+    "KeyID"
+  ]
+}

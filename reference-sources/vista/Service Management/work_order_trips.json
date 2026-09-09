@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "SMTripID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkOrder": {
+      "type": "integer",
+      "description": ""
+    },
+    "Trip": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Details": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "ScheduledDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "EstimatedDuration": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Technician": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "DispatchSequence": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VersionStamp": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "VersionUserName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "OpenDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "OpenTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "NotifiedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "NotifiedTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "InProgressDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "InProgressTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "CompletedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "CompletedTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ScheduledTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ScheduledEndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "MultiDayTrip": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AcceptedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "AcceptedTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "RejectedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "RejectedTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "EnRouteDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "EnRouteTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ArrivedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ArrivedTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Assignment": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReturnReasonCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "ReturnReasonNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    }
+  },
+  "required": [
+    "SMTripID",
+    "SMCo",
+    "WorkOrder",
+    "Trip",
+    "Status",
+    "VersionStamp",
+    "MultiDayTrip",
+    "Assignment"
+  ]
+}

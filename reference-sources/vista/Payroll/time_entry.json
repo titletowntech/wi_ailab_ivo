@@ -1,0 +1,379 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/time_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "PRGroup": {
+      "type": "integer"
+    },
+    "PREndDate": {
+      "type": "string"
+    },
+    "Employee": {
+      "type": "integer"
+    },
+    "PaySeq": {
+      "type": "integer"
+    },
+    "PostSeq": {
+      "type": "integer"
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "PostDate": {
+      "type": "string"
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "JCDept": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "GLCo": {
+      "type": "integer"
+    },
+    "EMCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "WO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "WOItem": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EMGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CostCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "CompType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Component": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "RevCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EquipCType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "UsageUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$"
+    },
+    "TaxState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "LocalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "UnempState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "InsState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "InsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "PRDept": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Crew": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Cert": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "Craft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EarnCode": {
+      "type": "integer",
+      "writeOnly": true
+    },
+    "Shift": {
+      "type": "integer"
+    },
+    "Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$"
+    },
+    "Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{1,5})?$",
+      "writeOnly": true
+    },
+    "Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "BatchId": {
+      "type": "integer"
+    },
+    "Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "EquipPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "SMCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "SMWorkOrder": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "SMScope": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "SMPayType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "SMCostType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "SMJCCostType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "SMPhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "PRTBKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "StartTime": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "StopTime": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "BreakHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$"
+    },
+    "SMDepartment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EquipSMCostType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "FieldTicket": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "CrewTemplateID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "PRGroup",
+    "PREndDate",
+    "Employee",
+    "PaySeq",
+    "PostSeq",
+    "Type",
+    "PostDate",
+    "GLCo",
+    "PRDept",
+    "Cert",
+    "EarnCode",
+    "Shift",
+    "Hours",
+    "Rate",
+    "Amt",
+    "BatchId",
+    "KeyID",
+    "BreakHours"
+  ]
+}

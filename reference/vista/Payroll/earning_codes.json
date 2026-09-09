@@ -1,0 +1,314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/earning_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer"
+    },
+    "EarnCode": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Method": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Factor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,6})?$"
+    },
+    "SubjToAddOns": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "CertRpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "TrueEarns": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "OTCalcs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "EarnType": {
+      "type": "integer"
+    },
+    "JCCostType": {
+      "type": "integer"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "StandardLimit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "writeOnly": true
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "SubjToAutoEarns": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "LimitType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "AutoAP": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "TransByEmployee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ]
+    },
+    "PayType": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "GLCo": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "GLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "IncldLiabDist": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "IncldSalaryDist": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "KeyID": {
+      "type": "integer"
+    },
+    "Routine": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "IncldRemoteTC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ATOCategory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "InsurableEarningsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "InsurableHoursYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ROESeparationYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ROECategory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2
+    },
+    "OtherMonies": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "ROESpecialYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "ROEType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "ROEPeriod": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "ACATrackHrsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "VacationPayType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "FringeBenefitType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "ATType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "ATOtherType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "IncludeInSTPGross": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "EarnCode",
+    "Method",
+    "Factor",
+    "SubjToAddOns",
+    "CertRpt",
+    "TrueEarns",
+    "OTCalcs",
+    "EarnType",
+    "JCCostType",
+    "StandardLimit",
+    "SubjToAutoEarns",
+    "AutoAP",
+    "IncldLiabDist",
+    "IncldSalaryDist",
+    "KeyID",
+    "IncldRemoteTC",
+    "InsurableEarningsYN",
+    "InsurableHoursYN",
+    "ROESeparationYN",
+    "ROESpecialYN",
+    "ACATrackHrsYN",
+    "IncludeInSTPGross"
+  ]
+}

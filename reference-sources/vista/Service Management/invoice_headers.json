@@ -1,0 +1,318 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/sm/v2/object/invoice_headers/cache.json",
+  "type": "object",
+  "properties": {
+    "SMInvoiceID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CustGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "BillToARCustomer": {
+      "type": "integer",
+      "description": ""
+    },
+    "InvoiceNumber": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "InvoiceDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Invoiced": {
+      "type": "boolean",
+      "description": ""
+    },
+    "BatchMonth": {
+      "type": "string",
+      "description": "Format: YYYY-MM-01."
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DueDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DiscDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DiscRate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "ReportID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ARCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "ARPostedMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "ARTrans": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "DescriptionOfWork": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ServiceSite": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "WorkOrder": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "InvoiceSummaryLevel": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "VoidDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "VoidedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "DeliveredDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DeliveredBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "Customer": {
+      "type": "integer",
+      "description": ""
+    },
+    "BillAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BillAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BillCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "BillState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "BillZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "BillCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "InvoiceType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Invoice": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkOrderScope": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PaymentType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PaymentNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DiscountAmount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PaymentAmount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OnAccountAmount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CustomerPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "AltBillingAddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillEmail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "BillName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMInvoiceID",
+    "SMCo",
+    "CustGroup",
+    "BillToARCustomer",
+    "InvoiceNumber",
+    "InvoiceDate",
+    "Invoiced",
+    "BatchMonth",
+    "ARCo",
+    "InvoiceSummaryLevel",
+    "Customer",
+    "InvoiceType",
+    "Invoice",
+    "PaymentType"
+  ]
+}

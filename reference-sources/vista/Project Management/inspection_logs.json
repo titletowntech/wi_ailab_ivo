@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/inspection_logs/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": "Project Management Company (tinyint, not null)"
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Project ID (varchar(10), not null)"
+    },
+    "InspectionType": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Inspection Type (varchar(10), not null)"
+    },
+    "InspectionCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Inspection Code/ID (varchar(10), not null)"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Inspection Description (varchar(60), null)"
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "Location (varchar(10), null)"
+    },
+    "InspectionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Inspection Date (smalldatetime, null)"
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Vendor Group (tinyint, null)"
+    },
+    "InspectionFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Inspection Firm (int, null)"
+    },
+    "InspectionContact": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Inspection Contact Employee (int, null)"
+    },
+    "InspectorName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Inspector Name (varchar(30), null)"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": "Status (char(6), null)"
+    },
+    "Issue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Related Issue (int, null)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Notes (varchar(max), null)"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid",
+      "description": "Unique Attachment ID (uniqueidentifier, null)"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary Key ID (bigint, not null)"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "InspectionType",
+    "InspectionCode",
+    "KeyID"
+  ]
+}

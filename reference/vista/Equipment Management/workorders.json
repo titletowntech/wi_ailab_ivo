@@ -1,0 +1,502 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/WorkOrders/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "WorkOrder": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Shop": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "InvLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Mechanic": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateCreated": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DateDue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DateSched": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoInitSessionID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ShopGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "Complete": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "WOItemInfo": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/WorkOrders/LineItems",
+        "properties": {
+          "WOItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "Equipment": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "ComponentTypeCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Component": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "CostCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "StdMaintGroup": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "StdMaintItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "InHseSubFlag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "StatusCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "RepairType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "RepairCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Mechanic": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EstHrs": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "QuoteAmt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Priority": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "PartCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "SerialNo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "DateCreated": {
+            "type": "string",
+            "description": "Format: YYYY-MM-DD"
+          },
+          "DateDue": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "DateSched": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "DateCompl": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "CurrentHourMeter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "TotalHourMeter": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "CurrentOdometer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "TotalOdometer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "FuelUse": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "PRCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "WOItem",
+          "Equipment",
+          "EMGroup",
+          "CostCode",
+          "InHseSubFlag",
+          "StatusCode",
+          "DateCreated",
+          "KeyID"
+        ]
+      }
+    },
+    "WOItemParts": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/WorkOrders/ItemParts",
+        "properties": {
+          "WOItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "MatlGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Material": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Equipment": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "PartsStatusCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "InvLoc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "QtyNeeded": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "PSFlag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Required": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "INCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "WOItem",
+          "MatlGroup",
+          "Material",
+          "Equipment",
+          "EMGroup",
+          "PartsStatusCode",
+          "UM",
+          "QtyNeeded",
+          "PSFlag",
+          "Required",
+          "Seq",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "WorkOrder",
+    "KeyID"
+  ]
+}

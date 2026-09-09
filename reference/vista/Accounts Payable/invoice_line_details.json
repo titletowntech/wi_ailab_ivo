@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/InvoiceLineDetails/cache.json",
+  "type": "object",
+  "description": "Invoice line details is filtered by the Invoices filter.",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "APTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "APLine": {
+      "type": "integer",
+      "description": ""
+    },
+    "APSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayType": {
+      "type": "integer",
+      "description": ""
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "DiscOffer": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "DiscTaken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "DueDate": {
+      "type": "string",
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "PaidMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PaidDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayMethod": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "CMRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMRefSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EFTSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Supplier": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayCategory": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "GSTtaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TotTaxAmount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldGSTtaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ExpenseGST": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PSTtaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldPSTtaxAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ReleaseDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReleaseBatchMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReleaseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "APCo",
+    "Mth",
+    "APTrans",
+    "APLine",
+    "APSeq",
+    "PayType",
+    "Amount",
+    "DiscOffer",
+    "DiscTaken",
+    "DueDate",
+    "Status",
+    "KeyID",
+    "ExpenseGST",
+    "AuditYN"
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/PurchaseOrderBacthEntires/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchTransType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PO": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "OrderDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrderedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ExpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Loc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ShipLoc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ShipIns": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "HoldCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Attention": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PayAddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "POAddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Address2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/JobDiscounts/items",
+        "type": "object",
+        "properties": {
+          "POItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "BatchTransType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "ItemType": {
+            "type": "integer",
+            "description": ""
+          },
+          "MatlGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Material": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "VendMatId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "RecvYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "PostToCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Loc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Phase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "JCCType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Equip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "CompType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Component": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "CostCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMCType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "WO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "WOItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ReqDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "TaxType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OrigUnits": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "OrigUnitCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "OrigECM": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "OrigCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "OrigTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "RequisitionNum": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "PayCategory": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "PayType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "INCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EMCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "JCCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "JCCmtdTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "JCRemCmtdTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Supplier": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SupplierGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "GSTRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "SMCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMWorkOrder": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMScope": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMPhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMPhase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "SMJCCostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMCostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "POItem",
+          "BatchTransType",
+          "ItemType",
+          "MatlGroup",
+          "UM",
+          "RecvYN",
+          "PostToCo",
+          "GLCo",
+          "OrigUnits",
+          "OrigUnitCost",
+          "OrigCost",
+          "OrigTax",
+          "JCCmtdTax",
+          "JCRemCmtdTax",
+          "TaxRate",
+          "GSTRate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq",
+    "BatchTransType",
+    "PO",
+    "VendorGroup",
+    "Status"
+  ]
+}

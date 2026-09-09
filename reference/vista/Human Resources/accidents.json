@@ -1,0 +1,656 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Accidents/cache.json",
+  "type": "object",
+  "properties": {
+    "HRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Accident": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "AccidentDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "AccidentTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "EmployerPremYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "JobSiteYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ReportedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "DateReported": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "TimeReported": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ClosedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "CorrectiveAction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Witness1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Witness2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "MSHAID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MineName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "__LineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "AccidentType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "HRRef": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EMCo": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Equipment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "PreventableYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "IllnessInjury": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "IllnessType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "FatalityYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "DeathDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "HospitalYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Hospital": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "HazMatYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "MSDSYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "ClaimCloseDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "MSDSDesc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "DOTReportableYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "AccidentCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Supervisor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ProjManager": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ObjSubCause": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "Cause": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "IllnessInjuryDesc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "FirstAidDesc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Activity": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ThirdPartyName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ThirdPartyAddress": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "ThirdPartyCity": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "ThirdPartyState": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4,
+            "description": ""
+          },
+          "ThirdPartyZip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12,
+            "description": ""
+          },
+          "ThirdPartyPhone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "WorkersCompYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "WorkerCompClaim": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ClaimEstimate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "AttendingPhysician": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "OSHALocation": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "EmergencyRoomYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "HospOvernightYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "EmplStartTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "HistSeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "JobExpyr": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "MineExpyr": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TotalExpyr": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "JobExpwk": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "MineExpwk": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TotalExpwk": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OSHA200Illness": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1,
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "Country": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2,
+            "description": ""
+          },
+          "CaseNumber": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "EventDetails": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 7,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__BodyParts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "BodyPart": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 10,
+                  "description": ""
+                },
+                "InjuryType": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 10,
+                  "description": ""
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "KeyID"
+              ]
+            }
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "AccidentType",
+          "PreventableYN",
+          "FatalityYN",
+          "HospitalYN",
+          "HazMatYN",
+          "MSDSYN",
+          "DOTReportableYN",
+          "WorkersCompYN",
+          "ClaimEstimate",
+          "EmergencyRoomYN",
+          "HospOvernightYN",
+          "KeyID"
+        ]
+      }
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "HRCo",
+    "Accident",
+    "AccidentDate",
+    "EmployerPremYN",
+    "JobSiteYN",
+    "KeyID"
+  ]
+}

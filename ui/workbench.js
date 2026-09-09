@@ -1041,6 +1041,7 @@ function bindEvents() {
     document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   }));
   document.querySelectorAll('[data-back]').forEach((button) => button.addEventListener('click', returnToLauncher));
+  byId('mappingHomeButton').addEventListener('click', returnToLauncher);
   byId('openCustomer').addEventListener('click', () => openCustomer(byId('customerSelect').value));
   (byId('customerRows') || document.querySelector('.workspace-list')).addEventListener('click', (event) => {
     const button = event.target.closest('[data-open-customer]');

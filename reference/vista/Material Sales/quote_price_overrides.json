@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ms/v2/object/quote_prc_overrides/cache.json",
+  "type": "object",
+  "properties": {
+    "MSCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Quote": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Seq": {
+      "type": "integer",
+      "description": ""
+    },
+    "LocGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Loc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MatlGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Category": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "UM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "UnitPrice": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "ECM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "MinAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "MSCo",
+    "Quote",
+    "Seq",
+    "LocGroup",
+    "MatlGroup",
+    "Category",
+    "UM",
+    "Rate",
+    "UnitPrice",
+    "MinAmt",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/leave_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "LeaveCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "AccrualUsageDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "PRCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "LeaveCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Basis": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          }
+        }
+      }
+    },
+    "LeaveLevelOverrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "PRCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "LeaveCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "LeaveLevel": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Basis": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          }
+        }
+      }
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "UM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "AccType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "FixedUnits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FixedFreq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap1Freq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap1Max": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Cap2Freq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Cap2Max": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "AvailBalFreq": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AvailBalMax": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CarryOver": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "NegLeaveBalWarn": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "LeaveCode",
+    "KeyID"
+  ]
+}

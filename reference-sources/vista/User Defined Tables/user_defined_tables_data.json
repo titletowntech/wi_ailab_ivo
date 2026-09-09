@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "description": "Columns from the identified UD Table will be included in this object in the cache",
+  "properties": {
+    "__TableName": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    }
+  },
+  "AllowAdditionalProperties": true,
+  "required": [
+    "__TableName",
+    "KeyID"
+  ]
+}

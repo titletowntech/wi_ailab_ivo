@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/hq/v2/object/reviewer_groups/cache.json",
+  "type": "object",
+  "properties": {
+    "ReviewerGroup": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ResponsiblePerson": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "ReviewerGroupType": {
+      "type": "integer",
+      "description": ""
+    },
+    "ActionOnChangedData": {
+      "type": "integer",
+      "description": ""
+    },
+    "AllowUpLevelApproval": {
+      "type": "integer",
+      "description": ""
+    },
+    "EmailOptOnRejOriginator": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EmailOptOnRejResponsiblePerson": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EmailOptOnRejReviewerApproved": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "ApplyThreshToLineYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Active": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Reviewers": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Reviewers/items",
+        "type": "object",
+        "properties": {
+          "Reviewer": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "ApprovalSeq": {
+            "type": "integer",
+            "description": ""
+          },
+          "ApproveWithoutData": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "ThresholdAmount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,16}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "OptionalReviewerYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Reviewer",
+          "ApprovalSeq",
+          "ApproveWithoutData",
+          "Active",
+          "OptionalReviewerYN"
+        ]
+      }
+    }
+  },
+  "required": [
+    "ReviewerGroup",
+    "ResponsiblePerson",
+    "ReviewerGroupType",
+    "ActionOnChangedData",
+    "AllowUpLevelApproval",
+    "EmailOptOnRejOriginator",
+    "EmailOptOnRejResponsiblePerson",
+    "EmailOptOnRejReviewerApproved",
+    "KeyID",
+    "ApplyThreshToLineYN",
+    "Active"
+  ]
+}

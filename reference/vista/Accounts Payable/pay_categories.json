@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/pay_categories/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayCategory": {
+      "type": "integer",
+      "description": ""
+    },
+    "ExpPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JobPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RetPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DiscOffGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "DiscTakenGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "GLCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMPayType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "APCo",
+    "PayCategory",
+    "KeyID"
+  ]
+}

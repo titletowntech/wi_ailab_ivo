@@ -1,0 +1,296 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/em/v2/object/departments/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Department": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "Reviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "DepreciationAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "LaborFixedRateAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "PurchReviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReviewerGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "CostTypes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/CostTypes/items",
+        "type": "object",
+        "properties": {
+          "EMGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "CostType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EMGroup",
+          "CostType",
+          "GLCo"
+        ]
+      }
+    },
+    "CostCodes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/CostCodes/items",
+        "type": "object",
+        "properties": {
+          "CostCode": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "EMGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "ExcludePR": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "CostCode",
+          "EMGroup",
+          "GLCo",
+          "GLAcct",
+          "ExcludePR",
+          "KeyID"
+        ]
+      }
+    },
+    "EarnTypes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/EarnTypes/items",
+        "type": "object",
+        "properties": {
+          "EarnType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EarnType",
+          "GLCo",
+          "GLAcct",
+          "KeyID"
+        ]
+      }
+    },
+    "LiabTypes": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LiabTypes/items",
+        "type": "object",
+        "properties": {
+          "LiabType": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "LiabType",
+          "GLCo",
+          "GLAcct",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "Department",
+    "GLCo",
+    "DepreciationAcct",
+    "KeyID"
+  ]
+}

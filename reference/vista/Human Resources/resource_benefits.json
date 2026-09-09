@@ -1,0 +1,554 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/ResourceBenefits/cache.json",
+  "type": "object",
+  "$comment": "table: HREB",
+  "properties": {
+    "HRCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "HRRef": {
+      "type": "integer",
+      "description": ""
+    },
+    "BenefitCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "DependentSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "EligDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ReminderDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ActiveYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "EffectDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD",
+      "writeOnly": true
+    },
+    "EndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD",
+      "writeOnly": true
+    },
+    "ReinstateYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ReinstateDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD",
+      "writeOnly": true
+    },
+    "SmokerYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "",
+      "writeOnly": true
+    },
+    "EmployerCost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "HistSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UpdatedYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CafePlanYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "CafePlanAmt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "BatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Ben1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "",
+      "writeOnly": true
+    },
+    "Rel1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "",
+      "writeOnly": true
+    },
+    "Ben2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "",
+      "writeOnly": true
+    },
+    "Rel2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "",
+      "writeOnly": true
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SeriesTwoCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "DLCodes": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/ResourceBenefitsDLCodes/cache.json",
+        "type": "object",
+        "$comment": "table: HRBL",
+        "properties": {
+          "DLCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "DLType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "EmplBasedYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Frequency": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "ProcessSeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OverrideCalc": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "RateAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "OverrideGLAcct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "OverrideLimit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Vendor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "APTransDesc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "ReadyYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "BenefitOption": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "",
+            "writeOnly": true
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "DLCode",
+          "KeyID"
+        ]
+      }
+    },
+    "EarnCodes": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/ResourceBenefitsECodes/cache.json",
+        "type": "object",
+        "$comment": "table: HRBE",
+        "properties": {
+          "EarnCode": {
+            "type": "integer",
+            "description": ""
+          },
+          "AutoEarnSeq": {
+            "type": "integer",
+            "description": ""
+          },
+          "Department": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "InsCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "RateAmount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "AnnualLimit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "Frequency": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "ReadyYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "StdHours": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Hours": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "PaySeq": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "BenefitOption": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EarnCode",
+          "KeyID"
+        ]
+      }
+    },
+    "ACACoverageHist": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/ACACoverageHist/cache.json",
+        "type": "object",
+        "$comment": "table: HRResBenACACoverageHist",
+        "properties": {
+          "EffectiveDate": {
+            "type": "string",
+            "description": "Format: YYYY-MM-DD",
+            "writeOnly": true
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "ExpireDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EffectiveDate",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "HRCo",
+    "HRRef",
+    "BenefitCode",
+    "DependentSeq",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/APReleaseRetention/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "pattern": "^([0-9]{4})-(1[0-2]|0[1-9])-01.*$",
+      "description": "Format: YYYY-MM-01."
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "BatchTransType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "TypeOf": {
+      "type": "integer",
+      "description": ""
+    },
+    "APTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "APExpMth": {
+      "type": "string",
+      "pattern": "^([0-9]{4})-(1[0-2]|0[1-9])-01.*$$",
+      "description": "Format: YYYY-MM-01."
+    },
+    "APLine": {
+      "type": "integer",
+      "description": ""
+    },
+    "APSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReleaseDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "GSTTaxAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "TotTaxAmount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldGSTTaxAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PSTTaxAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OldPSTTaxAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ApplyNewTaxRate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq"
+  ]
+}

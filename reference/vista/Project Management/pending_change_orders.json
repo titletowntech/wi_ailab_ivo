@@ -1,0 +1,940 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/pend_change_orders/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "PCOType": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "PCO": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Issue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PendingStatus": {
+      "type": "integer",
+      "description": ""
+    },
+    "Date1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Date2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Date3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ApprovalDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "IntExt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "ROMAmount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Details": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "InitiatedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Priority": {
+      "type": "integer",
+      "description": ""
+    },
+    "ReasonCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BudgetType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SubType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ContractType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "POType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ResponsiblePerson": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ResponsibleFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PricingMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "properties": {
+          "PCOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "ACO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "ACOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "Status": {
+            "type": "string",
+            "maxLength": 6,
+            "description": ""
+          },
+          "ApprovedDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "Units": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "UnitPrice": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "PendingAmount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "ApprovedAmt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Issue": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Date1": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Date2": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Date3": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Contract": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "ContractItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 16,
+            "description": ""
+          },
+          "Approved": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "ApprovedBy": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 128,
+            "description": ""
+          },
+          "ForcePhaseYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "FixedAmountYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "FixedAmount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "BillGroup": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "ChangeDays": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "InterfacedDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ProjectCopy": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "BudgetNo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "RFIType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "RFI": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "InterfacedBy": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 128,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          },
+          "EstimatePurchaseDetails": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ACO": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 10,
+                  "description": ""
+                },
+                "ACOItem": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 10,
+                  "description": ""
+                },
+                "PhaseGroup": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "Phase": {
+                  "type": "string",
+                  "maxLength": 20,
+                  "description": ""
+                },
+                "CostType": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "EstUnits": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+                  "description": ""
+                },
+                "UM": {
+                  "type": "string",
+                  "maxLength": 3,
+                  "description": ""
+                },
+                "UnitHours": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "EstHours": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "HourCost": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+                  "description": ""
+                },
+                "UnitCost": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+                  "description": ""
+                },
+                "ECM": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "description": ""
+                },
+                "EstCost": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "SendYN": {
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ],
+                  "description": ""
+                },
+                "InterfacedDate": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "Format: YYYY-MM-DD"
+                },
+                "Notes": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "CreatedFromAddOn": {
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ],
+                  "description": ""
+                },
+                "DistributedAmt": {
+                  "type": "string",
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "SubCO": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "SubCOSeq": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "PO": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 30,
+                  "description": ""
+                },
+                "Subcontract": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 30,
+                  "description": ""
+                },
+                "PurchaseAmt": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "VendorGroup": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "Vendor": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "POSLItem": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "POCONum": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "POCONumSeq": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "MaterialCode": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 20,
+                  "description": ""
+                },
+                "PurchaseUnits": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+                  "description": ""
+                },
+                "PurchaseUM": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 3,
+                  "description": ""
+                },
+                "PurchaseUnitCost": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+                  "description": ""
+                },
+                "CreateSL": {
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ],
+                  "description": ""
+                },
+                "FromImport": {
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ],
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "PhaseGroup",
+                "Phase",
+                "CostType",
+                "EstUnits",
+                "UM",
+                "UnitHours",
+                "EstHours",
+                "HourCost",
+                "UnitCost",
+                "ECM",
+                "EstCost",
+                "SendYN",
+                "KeyID",
+                "CreatedFromAddOn",
+                "DistributedAmt",
+                "CreateSL",
+                "FromImport"
+              ]
+            }
+          },
+          "Markups": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "object",
+              "properties": {
+                "PhaseGroup": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "CostType": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "IntMarkUp": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+                  "description": ""
+                },
+                "ConMarkUp": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+                  "description": ""
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "PhaseGroup",
+                "CostType",
+                "KeyID"
+              ]
+            }
+          },
+          "AddOns": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "object",
+              "properties": {
+                "AddOn": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "Basis": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "description": ""
+                },
+                "AddOnPercent": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+                  "description": ""
+                },
+                "AddOnAmount": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "Status": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "description": ""
+                },
+                "TotalType": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "description": ""
+                },
+                "UniqueAttchID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "minLength": 36,
+                  "maxLength": 36,
+                  "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+                  "description": ""
+                },
+                "Include": {
+                  "type": "string",
+                  "enum": [
+                    "Y",
+                    "N"
+                  ],
+                  "description": ""
+                },
+                "NetCalcLevel": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "description": ""
+                },
+                "KeyID": {
+                  "type": "integer",
+                  "description": ""
+                },
+                "BasisCostType": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "PhaseGroup": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "RevACOItemId": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": ""
+                },
+                "RevACOItemAmt": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "AmtNotRound": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+                  "description": ""
+                },
+                "__custom_fields": {
+                  "type": "object",
+                  "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+                }
+              },
+              "required": [
+                "AddOn",
+                "Basis",
+                "Status",
+                "TotalType",
+                "Include",
+                "NetCalcLevel",
+                "KeyID"
+              ]
+            }
+          }
+        },
+        "required": [
+          "Status",
+          "UM",
+          "Units",
+          "UnitPrice",
+          "Contract",
+          "Approved",
+          "ForcePhaseYN",
+          "FixedAmountYN",
+          "ProjectCopy",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "PCOType",
+    "PCO",
+    "PendingStatus",
+    "IntExt",
+    "KeyID",
+    "ROMAmount",
+    "Priority",
+    "BudgetType",
+    "SubType",
+    "ContractType",
+    "POType",
+    "PricingMethod"
+  ]
+}

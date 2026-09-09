@@ -1,0 +1,254 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/automatic_earnings/cache.json",
+  "title": "Automatic Earnings Cache Record Schema",
+  "description": "Schema for a single record from the dbo.PRAE table, intended for cache validation.",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "description": "Payroll Company ID",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+    },
+    "Employee": {
+      "description": "Employee ID",
+      "type": "integer"
+    },
+    "EarnCode": {
+      "description": "Earning or Deduction Code",
+      "type": "integer"
+    },
+    "Seq": {
+      "description": "Sequence",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+    },
+    "PaySeq": {
+      "description": "Pay Sequence",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "PRDept": {
+      "description": "Payroll Department",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "InsCode": {
+      "description": "Insurance Code",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Craft": {
+      "description": "Craft",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Class": {
+      "description": "Class",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "JCCo": {
+      "description": "Job Cost Company ID",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "Job": {
+      "description": "Job ID",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "PhaseGroup": {
+      "description": "Phase Group",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "Phase": {
+      "description": "Phase",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "GLCo": {
+      "description": "GL Company ID",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "EMCo": {
+      "description": "Equipment Management Company ID",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "Equipment": {
+      "description": "Equipment ID",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EMGroup": {
+      "description": "Equipment Management Group",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 255
+    },
+    "RevCode": {
+      "description": "Revenue Code",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "UsageUnits": {
+      "description": "Usage Units",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$"
+    },
+    "StdHours": {
+      "description": "Standard Hours Flag",
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "Hours": {
+      "description": "Hours",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$"
+    },
+    "RateAmt": {
+      "description": "Rate Amount",
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$"
+    },
+    "LimitOvrAmt": {
+      "description": "Limit Override Amount",
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$"
+    },
+    "Frequency": {
+      "description": "Frequency",
+      "type": "string",
+      "maxLength": 10
+    },
+    "Notes": {
+      "description": "Notes",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OvrStdLimitYN": {
+      "description": "Override Standard Limit Y/N",
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "UniqueAttchID": {
+      "description": "Unique Attachment ID",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "MechanicsCC": {
+      "description": "Mechanics Cost Code",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EquipMechOpt": {
+      "description": "Equipment Mechanic Option",
+      "type": "string",
+      "maxLength": 1
+    },
+    "KeyID": {
+      "description": "Key ID - likely a surrogate key",
+      "type": "integer"
+    },
+    "UseRegRate": {
+      "description": "Use Regular Rate Y/N",
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PRCo",
+    "Employee",
+    "EarnCode",
+    "Seq",
+    "StdHours",
+    "RateAmt",
+    "LimitOvrAmt",
+    "Frequency",
+    "OvrStdLimitYN",
+    "EquipMechOpt",
+    "KeyID",
+    "UseRegRate"
+  ]
+}

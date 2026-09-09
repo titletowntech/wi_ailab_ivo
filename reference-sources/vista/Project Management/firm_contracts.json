@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/v/object/firm_contacts/cache.json",
+  "type": "object",
+  "properties": {
+    "VendorGroup": {
+      "type": "integer",
+      "description": "The group code assigned to the firm/vendor. (bGroup(tinyint), not null)"
+    },
+    "FirmNumber": {
+      "type": "integer",
+      "description": "The unique identifying number for the firm. (bFirm(int), not null)"
+    },
+    "ContactCode": {
+      "type": "integer",
+      "description": "The unique code for the specific contact. (bEmployee(int), not null)"
+    },
+    "SortName": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Short name used for sorting. (bSortName(varchar(15)), not null)"
+    },
+    "LastName": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Contact's last name. (varchar(30), not null)"
+    },
+    "FirstName": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Contact's first name. (varchar(30), not null)"
+    },
+    "MiddleInit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "Contact's middle initial. (char(1), null)"
+    },
+    "Title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Job title of the contact. (varchar(30), null)"
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Primary phone number. (bPhone(varchar(20)), null)"
+    },
+    "PhoneExt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": "Phone extension. (varchar(5), null)"
+    },
+    "MobilePhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Mobile phone number. (bPhone(varchar(20)), null)"
+    },
+    "Fax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Fax number. (bPhone(varchar(20)), null)"
+    },
+    "EMail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": "Contact email address (legacy field). (varchar(255), null)"
+    },
+    "PrefMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Preferred contact method. (char(1), not null)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "General notes for the contact. (varchar(max), null)"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": "Unique identifier for attachments. (uniqueidentifier, null)"
+    },
+    "ExcludeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Exclude from lists flag. (bYN(char(1)), not null)"
+    },
+    "MailAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Mailing address line 1. (varchar(60), null)"
+    },
+    "MailCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Mailing city. (varchar(30), null)"
+    },
+    "MailState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": "Mailing state. (varchar(4), null)"
+    },
+    "MailZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "Mailing zip code. (bZip(varchar(12)), null)"
+    },
+    "MailAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Mailing address line 2. (varchar(60), null)"
+    },
+    "AllowPortalAccess": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Portal access permission flag. (bYN(char(1)), not null)"
+    },
+    "PortalUserName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": "Username for portal access. (varchar(50), null)"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary key identifier. (bigint, not null)"
+    },
+    "MailCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": "Country code. (char(2), null)"
+    },
+    "Email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": "Modern email field. (varchar(255), null)"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Vista custom fields."
+    }
+  },
+  "required": [
+    "FirmNumber",
+    "ContactCode",
+    "KeyID"
+  ]
+}

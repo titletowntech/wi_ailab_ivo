@@ -1,0 +1,250 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/LocationTransfer/cache.json",
+  "type": "object",
+  "properties": {
+    "LocationHistoryId": {
+      "type": "integer",
+      "description": ""
+    },
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Sequence": {
+      "type": "integer",
+      "description": ""
+    },
+    "DateIn": {
+      "type": "string",
+      "description": ""
+    },
+    "TimeIn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ToJCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ToJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ToLocation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "EstDateOut": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateTimeIn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "CreatedBy": {
+      "type": "string",
+      "maxLength": 128,
+      "description": ""
+    },
+    "CreatedDate": {
+      "type": "string",
+      "description": ""
+    },
+    "ModifiedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "ModifiedDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Attachments": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/Attachments/cache.json",
+        "type": "object",
+        "properties": {
+          "AttachedKeyId": {
+            "type": "integer",
+            "description": ""
+          },
+          "EMCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Equipment": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Sequence": {
+            "type": "integer",
+            "description": ""
+          },
+          "AttachedEquipment": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "AttachedSequence": {
+            "type": "integer",
+            "description": ""
+          },
+          "Memo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "OverrideDateTime": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "DateIn": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "TimeIn": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "CreatedBy": {
+            "type": "string",
+            "maxLength": 128,
+            "description": ""
+          },
+          "CreatedDate": {
+            "type": "string",
+            "description": ""
+          },
+          "ModifiedBy": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 128,
+            "description": ""
+          },
+          "ModifiedDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "AttachedKeyId",
+          "EMCo",
+          "Equipment",
+          "Sequence",
+          "AttachedEquipment",
+          "AttachedSequence",
+          "OverrideDateTime",
+          "CreatedBy",
+          "CreatedDate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "LocationHistoryId",
+    "EMCo",
+    "Equipment",
+    "Sequence",
+    "DateIn",
+    "CreatedBy",
+    "CreatedDate"
+  ]
+}

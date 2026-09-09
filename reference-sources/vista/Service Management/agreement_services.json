@@ -1,0 +1,808 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "SMAgreementServiceID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Agreement": {
+      "type": "string",
+      "description": ""
+    },
+    "Revision": {
+      "type": "integer",
+      "description": ""
+    },
+    "Service": {
+      "type": "integer",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ServiceSite": {
+      "type": "string",
+      "description": ""
+    },
+    "CallType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ServiceCenter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxSource": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PricingMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PricingFrequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PricingPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "BilledSeparately": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "PricingRateTemplate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ScheOptContactBeforeScheduling": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ScheOptDueType": {
+      "type": "integer",
+      "description": ""
+    },
+    "ScheOptDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RecurringPatternType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "DailyType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DailyEveryDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WeeklyEveryWeeks": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WeeklyEverySun": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEveryMon": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEveryTue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEveryWed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEveryThu": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEveryFri": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "WeeklyEverySat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyDayEveryMonths": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyEveryOrdinal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyEveryDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyEveryMonths": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlySelectOrdinal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlySelectDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MonthlyJan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyFeb": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyMar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyApr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyMay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyJun": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyJul": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyAug": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlySep": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyOct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyNov": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "MonthlyDec": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "YearlyType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryYear": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryDateMonth": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryDateMonthDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryDayOrdinal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryDayDay": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "YearlyEveryDayMonth": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "WasCopied": {
+      "type": "boolean",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "Division": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "SeparateWorkOrder": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PricingTermPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Version": {
+      "type": "string",
+      "maxLength": 7,
+      "description": ""
+    },
+    "TaskFrequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "ItemClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "ClassMaintenance": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PrimaryTechnician": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "BillingTotalRemaining": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "UseServiceCenterDepartment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "BillingReduction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "LaborHours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "LaborCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "MaterialCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EquipmentCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SubcontractCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OtherCostEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Derived": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LaborPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "MaterialPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EquipmentPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "SubcontractPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OtherPricingEst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "CommonMarkupEst": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "TaskGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "AmortScheduleFreq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleFreq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BillingScheduleTaxBasisPct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "BudgetCraft": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BudgetClass": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "TaxTypeOverride": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "MaintenanceItemGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "AutoScheduleTrips": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CostRevenueMargin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMAgreementServiceID",
+    "SMCo",
+    "Agreement",
+    "Revision",
+    "Service",
+    "ServiceSite",
+    "TaxSource",
+    "PricingMethod",
+    "ScheOptContactBeforeScheduling",
+    "ScheOptDueType",
+    "RecurringPatternType",
+    "WasCopied",
+    "SeparateWorkOrder",
+    "Version",
+    "Derived",
+    "CommonMarkupEst",
+    "AutoScheduleTrips"
+  ]
+}

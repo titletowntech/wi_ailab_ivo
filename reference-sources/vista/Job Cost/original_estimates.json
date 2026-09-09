@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/original_estimates/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "PhaseGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "CostType": {
+      "type": "integer",
+      "description": ""
+    },
+    "UM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "BillFlag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ItemUnitFlag": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PhaseUnitFlag": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BuyOutYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LastProjDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Plugged": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "OrigHours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "OrigUnits": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OrigCost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ProjNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "SourceStatus": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "InterfaceDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "format": "int64",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "PhaseGroup",
+    "Phase",
+    "CostType",
+    "UM",
+    "BillFlag",
+    "ItemUnitFlag",
+    "PhaseUnitFlag",
+    "BuyOutYN",
+    "Plugged",
+    "ActiveYN",
+    "OrigHours",
+    "OrigUnits",
+    "OrigCost",
+    "SourceStatus",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/sm/v2/object/agreements/cache.json",
+  "type": "object",
+  "properties": {
+    "SMAgreementID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Agreement": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Revision": {
+      "type": "integer",
+      "description": ""
+    },
+    "RevisionType": {
+      "type": "integer",
+      "description": ""
+    },
+    "DateActivated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateCancelled": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateTerminated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "CustGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Customer": {
+      "type": "integer",
+      "description": ""
+    },
+    "EffectiveDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "NonExpiring": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ExpirationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoRenew": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AgreementPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "PricingFrequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ReportID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "AgreementType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "CustomerPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "AlternateAgreement": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "PreviousRevision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AmendmentRevision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "RevenueRecognition": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "MajorVersion": {
+      "type": "integer",
+      "description": ""
+    },
+    "MinorVersion": {
+      "type": "integer",
+      "description": ""
+    },
+    "Version": {
+      "type": "string",
+      "maxLength": 7,
+      "description": ""
+    },
+    "RevisionPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EstProfitMargin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "EstPercentMarkup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "EstServiceRevenue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "RenewThrough": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "RenewMarkUp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "BillingTotalRemaining": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "BillingReduction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "AllowReactivate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "AmortScheduleFreq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleFreq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleTaxType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BillingScheduleTaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BillingScheduleTaxBasisPct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "StartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxTypeOverride": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "AutoScheduleTrips": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CostRevenueMargin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "FinalRevRec": {
+      "type": "boolean",
+      "description": ""
+    },
+    "AdjustmentRevision": {
+      "type": "integer",
+      "description": ""
+    },
+    "EndDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CurrentActiveRevision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RevisionStatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CurrentRevision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OriginalRevision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AgreementStatus": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RecentActiveMinorVersion": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMAgreementID",
+    "SMCo",
+    "Agreement",
+    "Revision",
+    "RevisionType",
+    "CustGroup",
+    "Customer",
+    "NonExpiring",
+    "AutoRenew",
+    "RevenueRecognition",
+    "MajorVersion",
+    "MinorVersion",
+    "Version",
+    "AutoScheduleTrips",
+    "FinalRevRec",
+    "AdjustmentRevision",
+    "AgreementStatus"
+  ]
+}

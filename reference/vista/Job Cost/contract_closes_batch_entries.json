@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/ctrct_cl_batch_entry/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": "Format: YYYY-MM-01."
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "Contract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LastContractMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "LastJobMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "CloseDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "SoftFinal": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CloseStatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "AutoClosePO": {
+      "type": "string",
+      "description": ""
+    },
+    "AutoCloseSL": {
+      "type": "string",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "KeyID",
+    "Mth",
+    "BatchId",
+    "BatchSeq"
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/jobs/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "JobStatus": {
+      "type": "integer",
+      "description": ""
+    },
+    "BidNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LockPhases": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjectMgr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JobPhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "JobFax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MailAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "MailCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "MailState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "MailZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "MailAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ShipAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ShipCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ShipState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "ShipZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ShipAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "LiabTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "InsTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MarkUpDiscRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "PRLocalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PRStateCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Certified": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EEORegion": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": ""
+    },
+    "SMSACode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CraftTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ProjMinPct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLCompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "POCompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ArchEngFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OTSched": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PriceTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "HaulTaxOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "GeoCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BaseTaxOn": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "UpdatePlugs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ContactCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ClosePurgeFlag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "OurFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoAddItemYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "OverProjNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8000,
+      "description": ""
+    },
+    "WghtAvgOT": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "HrsPerManDay": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "AutoGenSubNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SecurityGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DefaultStdDaysDue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DefaultRFIDaysDue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UpdateAPActualsYN": {
+      "type": "string"
+    },
+    "UpdateMSActualsYN": {
+      "type": "string"
+    },
+    "AutoGenPCONo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AutoGenMTGNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AutoGenRFINo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "RevGrpInv": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MailCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "ShipCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "CertDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoGenRFQNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ApplyEscalators": {
+      "type": "string",
+      "description": ""
+    },
+    "UseTaxYN": {
+      "type": "string",
+      "description": ""
+    },
+    "TimesheetRevGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PotentialProjectID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PCVisibleInJC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysResponsibleFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysApprovingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysRequestingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysAutoCalcYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "SubmittalApprovingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalApprovingFirmContact": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FourProjectsContainerName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": ""
+    },
+    "FourProjectsContainerId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ConstructionType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PRLeaveLevel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Reviewers": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Reviewers/items",
+        "type": "object",
+        "properties": {
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "Reviewer": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "Memo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 255,
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "ReviewerType": {
+            "type": "integer",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "OptionalReviewerYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Seq",
+          "Reviewer",
+          "ReviewerType",
+          "KeyID",
+          "OptionalReviewerYN"
+        ]
+      }
+    },
+    "Workflows": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Workflows/items",
+        "type": "object",
+        "properties": {
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "DocType": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "natural key for this array(DocType, Process)"
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "natural key for this array(DocType, Process)"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "KeyID",
+          "DocType",
+          "Process",
+          "Active"
+        ]
+      }
+    },
+    "Roles": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Roles/items",
+        "type": "object",
+        "properties": {
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "VPUserName": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "natural key for this array(Role, VPUserName)"
+          },
+          "Role": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "natural key for this array(Role, VPUserName)"
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "Lead": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "KeyID",
+          "VPUserName",
+          "Role",
+          "Lead",
+          "Active"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "JobStatus",
+    "LockPhases",
+    "TaxGroup",
+    "MarkUpDiscRate",
+    "Certified",
+    "ProjMinPct",
+    "HaulTaxOpt",
+    "BaseTaxOn",
+    "UpdatePlugs",
+    "AutoAddItemYN",
+    "WghtAvgOT",
+    "HrsPerManDay",
+    "AutoGenSubNo",
+    "UpdateAPActualsYN",
+    "UpdateMSActualsYN",
+    "AutoGenPCONo",
+    "AutoGenMTGNo",
+    "AutoGenRFINo",
+    "KeyID",
+    "AutoGenRFQNo",
+    "ApplyEscalators",
+    "UseTaxYN",
+    "PCVisibleInJC"
+  ]
+}

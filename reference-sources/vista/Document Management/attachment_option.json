@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/dm/v2/object/attachment_options/cache.json",
+  "type": "object",
+  "properties": {
+    "OnlyOneRow": {
+      "type": "string",
+      "enum": [
+        "X"
+      ],
+      "description": "Always X"
+    },
+    "TempDirectory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "PermanentDirectory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "ByCompany": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ByModule": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ByForm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ByMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "Custom": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "CustomFormat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100,
+      "description": ""
+    },
+    "UseJPG": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseStructForAttYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SaveToDatabase": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ScanningFileFormat": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "CreateStandAloneOnDelete": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseAuditing": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ArchiveDeletedAttachments": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PdfResolution": {
+      "type": "integer",
+      "description": ""
+    },
+    "UseViewpointViewer": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachmentDatabaseServer": {
+      "type": "string",
+      "maxLength": 128,
+      "description": ""
+    },
+    "AttachmentDatabaseName": {
+      "type": "string",
+      "maxLength": 128,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "UseJPG",
+    "UseStructForAttYN",
+    "SaveToDatabase",
+    "ScanningFileFormat",
+    "CreateStandAloneOnDelete",
+    "UseAuditing",
+    "ArchiveDeletedAttachments",
+    "PdfResolution",
+    "UseViewpointViewer",
+    "AttachmentDatabaseServer",
+    "AttachmentDatabaseName"
+  ]
+}

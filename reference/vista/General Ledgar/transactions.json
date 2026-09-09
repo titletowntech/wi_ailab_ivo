@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/transactions/cache.json",
+  "type": "object",
+  "properties": {
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Mth": {
+      "type": "string",
+      "description": "Format: YYYY-MM-01."
+    },
+    "GLTrans": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Jrnl": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLRef": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "SourceCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Source": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "ActDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DatePosted": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": ""
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "RevStatus": {
+      "type": "integer",
+      "description": ""
+    },
+    "Adjust": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "SrcTable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "SrcKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "GLCo",
+    "Mth",
+    "GLTrans",
+    "GLAcct",
+    "Jrnl",
+    "GLRef",
+    "SourceCo",
+    "Source",
+    "ActDate",
+    "DatePosted",
+    "BatchId",
+    "Amount",
+    "RevStatus",
+    "Adjust",
+    "Purge"
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ms/v2/object/invoice_batch_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Co": {
+      "type": "integer",
+      "description": "Key to this object."
+    },
+    "Mth": {
+      "type": "string",
+      "description": "Format: YYYY-MM-01. Key to this object."
+    },
+    "BatchId": {
+      "type": "integer",
+      "description": "Key to this object."
+    },
+    "BatchSeq": {
+      "type": "integer",
+      "description": "Key to this object."
+    },
+    "MSInv": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "CustGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Customer": {
+      "type": "integer",
+      "description": ""
+    },
+    "CustJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CustPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ShipAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ShipAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "PaymentType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RecType": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "InvDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DiscDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DueDate": {
+      "type": "string",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ApplyToInv": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "InterCoInv": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LocGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PrintLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "SubtotalLvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "SepHaul": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Interfaced": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Void": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "PrintedYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CheckNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "ReportID": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Properties will be added to this object for each Vista Customer field on this form."
+    },
+    "__InvoiceDetails": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "MSTrans": {
+              "type": "integer",
+              "description": "Key to this object in this array."
+            },
+            "CustJob": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 20,
+              "description": ""
+            },
+            "CustPO": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 20,
+              "description": ""
+            },
+            "SaleDate": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Format: YYYY-MM-DD"
+            },
+            "FromLoc": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 10,
+              "description": ""
+            },
+            "MatlGroup": {
+              "type": "integer",
+              "description": ""
+            },
+            "Material": {
+              "type": "string",
+              "maxLength": 20,
+              "description": ""
+            },
+            "UM": {
+              "type": "string",
+              "maxLength": 3,
+              "description": ""
+            },
+            "UnitPrice": {
+              "type": "string",
+              "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+              "description": ""
+            },
+            "Ticket": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 10,
+              "description": ""
+            },
+            "UniqueAttchID": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+              "description": ""
+            },
+            "KeyID": {
+              "type": "integer",
+              "description": ""
+            },
+            "__custom_fields": {
+              "type": "object",
+              "description": "Properties will be added to this object for each Vista Customer field on this form."
+            }
+          },
+          "required": [
+            "MSTrans",
+            "MatlGroup",
+            "Material",
+            "UM",
+            "UnitPrice",
+            "KeyID"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "Co",
+    "Mth",
+    "BatchId",
+    "BatchSeq",
+    "MSInv",
+    "CustGroup",
+    "Customer",
+    "PaymentType",
+    "RecType",
+    "InvDate",
+    "DueDate",
+    "InterCoInv",
+    "PrintLvl",
+    "SubtotalLvl",
+    "SepHaul",
+    "Interfaced",
+    "Void",
+    "PrintedYN",
+    "KeyID",
+    "ReportID"
+  ]
+}

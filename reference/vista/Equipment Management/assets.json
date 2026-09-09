@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/em/v2/object/assets/cache.json",
+  "title": "EM Assets Cache Record",
+  "description": "Schema for a single EM asset cache record from EM Asset Setup (EMDP header and EMDS depreciation schedules).",
+  "$comment": "views: EMDP, EMDS; tables: BEMDP, BEMDS",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 255,
+      "description": "Equipment Management company. Natural key component."
+    },
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Equipment ID. Natural key component. Key to em/equipment(EMCo, Equipment)."
+    },
+    "Asset": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Asset ID. Natural key component."
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Asset description."
+    },
+    "DeprMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Depreciation method."
+    },
+    "DBFactor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": "Double-declining balance factor."
+    },
+    "FirstMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Month depreciation started. Format: YYYY-MM-01."
+    },
+    "NoMonthsToDepr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of months to depreciate."
+    },
+    "TtlToDepr": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Total amount to be depreciated."
+    },
+    "MonthDisposed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Month asset was disposed. Format: YYYY-MM-01."
+    },
+    "PurchasePrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Original purchase price."
+    },
+    "ResidualValue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Residual or salvage value."
+    },
+    "SalePrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Sale price if disposed."
+    },
+    "AccumDeprAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Accumulated depreciation GL account."
+    },
+    "DeprExpAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Depreciation expense GL account."
+    },
+    "DeprAssetAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Depreciable asset GL account."
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": "Unique attachment identifier."
+    },
+    "GLCo": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 255,
+      "description": "General ledger company."
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Asset notes."
+    },
+    "UseResidualVal": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Flag indicating whether residual value is used."
+    },
+    "KeyID": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Surrogate record identifier (EMDP KeyID)."
+    },
+    "DeprStartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Date depreciation started. Format: YYYY-MM-DD."
+    },
+    "DateDisposed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Date asset was disposed. Format: YYYY-MM-DD."
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Custom fields defined for EMDP in Vista."
+    },
+    "DepreciationSchedules": {
+      "type": "array",
+      "description": "Depreciation schedule lines from EMDS.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Month": {
+            "type": "string",
+            "description": "Schedule month. Format: YYYY-MM-01."
+          },
+          "AmtToTake": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Depreciation amount scheduled for the month."
+          },
+          "AmtTaken": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Depreciation amount taken for the month."
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": "Unique attachment identifier."
+          },
+          "KeyID": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Surrogate record identifier (EMDS KeyID)."
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "Custom fields defined for EMDS in Vista."
+          }
+        },
+        "required": [
+          "Month",
+          "AmtToTake",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "Equipment",
+    "Asset",
+    "KeyID"
+  ]
+}

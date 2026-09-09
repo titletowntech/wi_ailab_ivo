@@ -1,0 +1,809 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Subcontracts/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Project": {
+      "type": "string",
+      "description": ""
+    },
+    "SLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "SL": {
+      "type": "string",
+      "description": ""
+    },
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "HoldCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "MthClosed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "description": ""
+    },
+    "Approved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ApprovedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddedMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "AddedBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrigDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SLCloseBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MaxRetgOpt": {
+      "type": "string",
+      "description": ""
+    },
+    "MaxRetgPct": {
+      "type": "string",
+      "description": ""
+    },
+    "MaxRetgAmt": {
+      "type": "string",
+      "description": ""
+    },
+    "InclACOinMaxYN": {
+      "type": "string",
+      "description": ""
+    },
+    "MaxRetgDistStyle": {
+      "type": "string",
+      "description": ""
+    },
+    "ApprovalRequired": {
+      "type": "string",
+      "description": ""
+    },
+    "DocType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "targetInUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-01."
+    },
+    "targetInUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AUQualifiedForPBA": {
+      "type": "string",
+      "description": ""
+    },
+    "AUPBAEligibleDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "NonInterfacedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "PMCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Project": {
+            "type": "string",
+            "description": ""
+          },
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "RecordType": {
+            "type": "string",
+            "description": ""
+          },
+          "PCOType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "PCO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "PCOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ACO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ACOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Line": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Phase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "CostType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Vendor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "SL": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLItem": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLItemDescription": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLItemType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLAddon": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLAddonPct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Units": {
+            "type": "string",
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "description": ""
+          },
+          "UnitCost": {
+            "type": "string",
+            "description": ""
+          },
+          "Amount": {
+            "type": "string",
+            "description": ""
+          },
+          "SubCO": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "WCRetgPct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SMRetgPct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Supplier": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "InterfaceDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "SendFlag": {
+            "type": "string",
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-01."
+          },
+          "SLTrans": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "IntFlag": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "TaxType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "BatchTransType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "BatchTransTypeChangeDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "IncludePCO": {
+            "type": "string",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    },
+    "InterfacedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "SLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "SL": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SLItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "ItemType": {
+            "type": "integer",
+            "description": ""
+          },
+          "Addon": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "AddonPct": {
+            "type": "string",
+            "description": ""
+          },
+          "JCCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Job": {
+            "type": "string",
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Phase": {
+            "type": "string",
+            "description": ""
+          },
+          "JCCType": {
+            "type": "integer",
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "description": ""
+          },
+          "WCRetPct": {
+            "type": "string",
+            "description": ""
+          },
+          "SMRetPct": {
+            "type": "string",
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Supplier": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OrigUnits": {
+            "type": "string",
+            "description": ""
+          },
+          "OrigUnitCost": {
+            "type": "string",
+            "description": ""
+          },
+          "OrigCost": {
+            "type": "string",
+            "description": ""
+          },
+          "CurUnits": {
+            "type": "string",
+            "description": ""
+          },
+          "CurUnitCost": {
+            "type": "string",
+            "description": ""
+          },
+          "CurCost": {
+            "type": "string",
+            "description": ""
+          },
+          "StoredMatls": {
+            "type": "string",
+            "description": ""
+          },
+          "InvUnits": {
+            "type": "string",
+            "description": ""
+          },
+          "InvCost": {
+            "type": "string",
+            "description": ""
+          },
+          "InUseMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-01."
+          },
+          "InUseBatchId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "AddedMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-01."
+          },
+          "AddedBatchID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "TaxType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OrigTax": {
+            "type": "string",
+            "description": ""
+          },
+          "CurTax": {
+            "type": "string",
+            "description": ""
+          },
+          "InvTax": {
+            "type": "string",
+            "description": ""
+          },
+          "JCCmtdTax": {
+            "type": "string",
+            "description": ""
+          },
+          "TaxRate": {
+            "type": "string",
+            "description": ""
+          },
+          "GSTRate": {
+            "type": "string",
+            "description": ""
+          },
+          "JCRemCmtdTax": {
+            "type": "string",
+            "description": ""
+          },
+          "PMSLKeyID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "targetInUseMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-01."
+          },
+          "targetInUseBatchId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "PMCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "InterfaceDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Format: YYYY-MM-DD"
+          },
+          "ACO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "ACOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "PCOType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "PCO": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "PCOItem": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "SubCO": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project"
+  ]
+}

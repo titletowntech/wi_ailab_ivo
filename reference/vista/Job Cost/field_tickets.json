@@ -1,0 +1,372 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/field_tickets/cache.json",
+  "title": "JCFT Record Schema for Cache Action",
+  "description": "Schema for a single record retrieved from the dbo.JCFT table.",
+  "type": "object",
+  "properties": {
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary Key (bigint, not null)"
+    },
+    "JCCo": {
+      "type": "integer",
+      "description": "Company identifier (tinyint, not null)"
+    },
+    "FieldTicket": {
+      "type": "integer",
+      "description": "Field Ticket identifier (integer, not null)"
+    },
+    "Contract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Contract (varchar(10), not null)"
+    },
+    "DateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date created (smalldatetime, not null)"
+    },
+    "CreatedBy": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "User who created the record (varchar(120), not null)"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": "Description (varchar(255), null)"
+    },
+    "CustomerPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Customer Purchase Order (varchar(30), null)"
+    },
+    "OwnerJobNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Owner Job Number (varchar(30), null)"
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Address (varchar(60), null)"
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "City (varchar(30), null)"
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": "State (varchar(4), null)"
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "Zip Code (varchar(12), null)"
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": "Country (char(2), null)"
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Phone (bPhone(varchar(20)), null)"
+    },
+    "Contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Contact person (varchar(60), null)"
+    },
+    "OrderedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Ordered By (varchar(60), null)"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "Status (char(1), null) - Options: O (Open), C (Closed), A (Approved), R (Rejected), B (Billed)",
+      "enum": [
+        "O",
+        "C",
+        "A",
+        "R",
+        "B",
+        null
+      ]
+    },
+    "ApprovedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Approved By (varchar(60), null)"
+    },
+    "DateApproved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Date Approved (bDate(smalldatetime), null)"
+    },
+    "JBBillMonth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "JB Bill Month (bMonth(smalldatetime), null)"
+    },
+    "JBBillNumber": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "JB Bill Number (int, null)"
+    },
+    "UniqueAttachID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": "Unique Attachment ID (uniqueidentifier, null)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Notes (varchar(max), null)"
+    },
+    "PMDLKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "PMDL Key ID (bigint, null)"
+    },
+    "TicketJob": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "Ticket Job (varchar(10), null)"
+    },
+    "DateSubmitted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Date Submitted (datetimeoffset(7), null)"
+    },
+    "TicketPhase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Ticket Phase (varchar(20), null)"
+    },
+    "MaterialBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Material Batch ID (int, null)"
+    },
+    "ProductionBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Production Batch ID (int, null)"
+    },
+    "MaterialBatchMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Material Batch Month (date, null)"
+    },
+    "ProductionBatchMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Production Batch Month (date, null)"
+    },
+    "ApprovedByUserKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Approved By User Key ID (int, null)"
+    },
+    "CreatedByUserKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Created By User Key ID (int, null)"
+    },
+    "SubmittedByUserKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Submitted By User Key ID (int, null)"
+    },
+    "SubmittedSignatureImage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Submitted Signature Image (varbinary(max), null)"
+    },
+    "SignatureLongitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Signature Longitude (decimal(9,6), null)"
+    },
+    "SignatureLatitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Signature Latitude (decimal(9,6), null)"
+    },
+    "SignaturePrintName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500,
+      "description": "Signature Print Name (varchar(500), null)"
+    },
+    "SignatureDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Signature Date (datetime2(7), null)"
+    },
+    "SubmittedSignatureImage2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Submitted Signature Image 2 (varbinary(max), null)"
+    },
+    "SignatureLongitude2": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Signature Longitude 2 (decimal(9,6), null)"
+    },
+    "SignatureLatitude2": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Signature Latitude 2 (decimal(9,6), null)"
+    },
+    "SignaturePrintName2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 500,
+      "description": "Signature Print Name 2 (varchar(500), null)"
+    },
+    "SignatureDate2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Signature Date 2 (datetime2(7), null)"
+    },
+    "TicketApprovedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Ticket Approved By (varchar(60), null)"
+    },
+    "TicketDateApproved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Ticket Date Approved (date, null)"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "KeyID",
+    "JCCo",
+    "FieldTicket",
+    "Contract",
+    "DateCreated",
+    "CreatedBy"
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "ValidPhaseChars": {
+      "type": "integer",
+      "description": ""
+    },
+    "PostClosedJobs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseJobBilling": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DefaultBillType": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ARCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLCostLevel": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLCostOveride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "GLCostJournal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLCostDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLCostSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLRevLevel": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLRevOveride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "GLRevJournal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLRevDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLRevSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLCloseLevel": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLCloseJournal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLCloseDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLCloseSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLMaterialLevel": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLMatJournal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "GLMatDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLMatSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLMiscMatAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ValidateMaterial": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseTaxOnMaterial": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PostCrewProgress": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ProjMinPct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "ProjPercent": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjOverUnder": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjRemain": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditDepts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditContracts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditJobs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditChngOrders": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddJCSICode": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ProjInactivePhases": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPhases": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCostTypes": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "PostSoftClosedJobs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjPostForecast": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjJobInMultiBatch": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPhaseMaster": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjResDetOpt": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjRemainUCOpt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AuditProjectionOverrides": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CFRevMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CFRevInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CFRevParts": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "CFCostMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CFCostInterval": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CFCostParts": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ProjNoteTimeStamp": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AuditLiabilityTemplate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AutoCloseSLWithJob": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AutoClosePOWithJob": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Workflows": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Workflows/items",
+        "type": "object",
+        "properties": {
+          "Mod": {
+            "type": "string",
+            "maxLength": 2,
+            "description": ""
+          },
+          "DocType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mod",
+          "Process",
+          "Active",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "ValidPhaseChars",
+    "PostClosedJobs",
+    "UseJobBilling",
+    "DefaultBillType",
+    "ARCo",
+    "GLCo",
+    "GLCostLevel",
+    "GLCostOveride",
+    "GLRevLevel",
+    "GLRevOveride",
+    "GLCloseLevel",
+    "GLMaterialLevel",
+    "ValidateMaterial",
+    "UseTaxOnMaterial",
+    "PostCrewProgress",
+    "ProjMethod",
+    "ProjMinPct",
+    "ProjPercent",
+    "ProjOverUnder",
+    "ProjRemain",
+    "AuditCoParams",
+    "AuditDepts",
+    "AuditContracts",
+    "AuditJobs",
+    "AuditChngOrders",
+    "AddJCSICode",
+    "ProjInactivePhases",
+    "AuditPhases",
+    "AuditCostTypes",
+    "KeyID",
+    "PostSoftClosedJobs",
+    "ProjPostForecast",
+    "AttachBatchReportsYN",
+    "ProjJobInMultiBatch",
+    "AuditPhaseMaster",
+    "ProjResDetOpt",
+    "ProjRemainUCOpt",
+    "AuditProjectionOverrides",
+    "CFRevMethod",
+    "CFCostMethod",
+    "ProjNoteTimeStamp",
+    "AuditLiabilityTemplate",
+    "AutoCloseSLWithJob",
+    "AutoClosePOWithJob"
+  ]
+}

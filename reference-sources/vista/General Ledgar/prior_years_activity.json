@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/gl/v2/object/prior_years_activity/cache.json",
+  "type": "object",
+  "description": "General Ledger Year Balance (GLYB) Cache Schema",
+  "properties": {
+    "GLCo": {
+      "type": "integer",
+      "description": "General Ledger Company (Primary Key Component)"
+    },
+    "FYEMO": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Fiscal Year End Month (Primary Key Component)"
+    },
+    "GLAcct": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "General Ledger Account (Primary Key Component)"
+    },
+    "BeginBal": {
+      "type": "string",
+      "description": "Beginning Balance (numeric 38,2)"
+    },
+    "NetAdj": {
+      "type": "string",
+      "description": "Net Adjustment (numeric 38,2)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Record Identifier (Internal Primary Key)"
+    },
+    "GLBLWithFYEMO": {
+      "type": "array",
+      "description": "Monthly General Ledger Balances associated with the FYE",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/glblwithfyemo/items",
+        "type": "object",
+        "properties": {
+          "Mth": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Month (Primary Key Component)"
+          },
+          "NetActivity": {
+            "type": "string",
+            "description": "Net Activity for the month (numeric 38,2)"
+          },
+          "Debits": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Total Debits (numeric 38,2)"
+          },
+          "Credits": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Total Credits (numeric 38,2)"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": "Record Identifier (Internal Primary Key)"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mth",
+          "NetActivity",
+          "KeyID"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "GLCo",
+    "FYEMO",
+    "GLAcct",
+    "BeginBal",
+    "NetAdj",
+    "KeyID"
+  ]
+}

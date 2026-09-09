@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/attachment_types/cache.json",
+  "type": "object",
+  "properties": {
+    "AttachmentTypeID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": ""
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 8,
+      "description": ""
+    },
+    "MonthsToRetain": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Secured": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Status",
+    "Secured"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/invoice_holds/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode)."
+    },
+    "Mth": {
+      "type": "string",
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode)."
+    },
+    "APTrans": {
+      "type": "integer",
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode)."
+    },
+    "APLine": {
+      "type": "integer",
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode)."
+    },
+    "APSeq": {
+      "type": "integer",
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode)."
+    },
+    "HoldCode": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Key to this object(APCo, Mth, APTrans, APLine, APSeq, HoldCode). Key to hq/hold_codes(HoldCode)"
+    }
+  },
+  "required": [
+    "APCo",
+    "Mth",
+    "APTrans",
+    "APLine",
+    "APSeq",
+    "HoldCode"
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pr/v2/object/pay_sequences/cache.json",
+  "type": "object",
+  "properties": {
+    "PRCo": {
+      "type": "integer",
+      "description": "key"
+    },
+    "PRGroup": {
+      "type": "integer",
+      "description": "key"
+    },
+    "PREndDate": {
+      "type": "string",
+      "description": "key"
+    },
+    "Employee": {
+      "type": "integer",
+      "description": "key"
+    },
+    "PaySeq": {
+      "type": "integer",
+      "description": "key"
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CMRef": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMRefSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "EFTSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ChkType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PaidDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PaidMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+      "description": ""
+    },
+    "Earnings": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "Dedns": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "SUIEarnings": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "description": "",
+      "writeOnly": true
+    },
+    "PostToAll": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Processed": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CMInterface": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ChkSort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "NumberOfPayments": {
+      "type": "integer",
+      "description": ""
+    },
+    "SubmissionKeyID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "EarningsDeductionsLiabilities": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/EarningsDeductionsLiabilities/items",
+        "type": "object",
+        "properties": {
+          "EDLType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "key"
+          },
+          "EDLCode": {
+            "type": "integer",
+            "description": "key"
+          },
+          "Hours": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "SubjectAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "EligibleAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UseOver": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "OverAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "OverProcess": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Vendor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "APDesc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "OldHours": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "OldAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "OldSubject": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "OldEligible": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "OldMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "OldVendor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OldAPMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "OldAPAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "PaybackAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "PaybackOverAmt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "PaybackOverYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "EDLType",
+          "EDLCode",
+          "Hours",
+          "Amount",
+          "SubjectAmt",
+          "EligibleAmt",
+          "UseOver",
+          "OverAmt",
+          "OverProcess",
+          "OldHours",
+          "OldAmt",
+          "OldSubject",
+          "OldEligible",
+          "OldAPAmt",
+          "PaybackAmt",
+          "PaybackOverAmt",
+          "PaybackOverYN",
+          "KeyID"
+        ]
+      }
+    },
+    "YTDTotals": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/YTDTotals/items",
+        "type": "object",
+        "properties": {
+          "EDLType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "key"
+          },
+          "EDLCode": {
+            "type": "integer",
+            "description": "key"
+          },
+          "YTDTotal": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "EDLType",
+          "EDLCode",
+          "YTDTotal"
+        ]
+      }
+    },
+    "DirectDeposits": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/DirectDeposits/items",
+        "type": "object",
+        "properties": {
+          "DistSeq": {
+            "type": "integer",
+            "description": ""
+          },
+          "RoutingId": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "",
+            "writeOnly": true
+          },
+          "BankAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "",
+            "writeOnly": true
+          },
+          "Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Amt": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "description": "",
+            "writeOnly": true
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "DistSeq",
+          "RoutingId",
+          "BankAcct",
+          "Type",
+          "Amt",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "PRCo",
+    "PRGroup",
+    "PREndDate",
+    "Employee",
+    "PaySeq",
+    "CMCo",
+    "CMAcct",
+    "PayMethod",
+    "Hours",
+    "Earnings",
+    "Dedns",
+    "SUIEarnings",
+    "PostToAll",
+    "Processed",
+    "CMInterface",
+    "KeyID",
+    "NumberOfPayments"
+  ]
+}

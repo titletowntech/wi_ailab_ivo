@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/daily_logs/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": "Project Management Company (tinyint, not null)"
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Project ID (varchar(10), not null)"
+    },
+    "LogDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Log Date (smalldatetime, not null)"
+    },
+    "DailyLog": {
+      "type": "integer",
+      "description": "Daily Log Number (smallint, not null)"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": "Log Description (varchar(255), null)"
+    },
+    "Weather": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": "Weather Conditions (varchar(60), null)"
+    },
+    "Wind": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "Wind Conditions (varchar(30), null)"
+    },
+    "TempHigh": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "High Temperature (smallint, null)"
+    },
+    "TempLow": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Low Temperature (smallint, null)"
+    },
+    "EmployeeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Employee Logged (char(1), not null)"
+    },
+    "CrewYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Crew Logged (char(1), not null)"
+    },
+    "SubcontractYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Subcontract Logged (char(1), not null)"
+    },
+    "EquipmentYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Equipment Logged (char(1), not null)"
+    },
+    "ActivityYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Activity Logged (char(1), not null)"
+    },
+    "ConversationsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Conversations Logged (char(1), not null)"
+    },
+    "DeliveriesYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Deliveries Logged (char(1), not null)"
+    },
+    "AccidentsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Accidents Logged (char(1), not null)"
+    },
+    "VisitorsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "maxLength": 1,
+      "description": "Visitors Logged (char(1), not null)"
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Notes (varchar(max), null)"
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid",
+      "description": "Unique Attachment ID (uniqueidentifier, null)"
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Primary Key ID (bigint, not null)"
+    },
+    "DocType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "Document Type (varchar(10), null)"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "LogDate",
+    "DailyLog",
+    "EmployeeYN",
+    "CrewYN",
+    "SubcontractYN",
+    "EquipmentYN",
+    "ActivityYN",
+    "ConversationsYN",
+    "DeliveriesYN",
+    "AccidentsYN",
+    "VisitorsYN",
+    "KeyID"
+  ]
+}

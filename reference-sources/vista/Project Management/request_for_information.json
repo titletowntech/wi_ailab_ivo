@@ -1,0 +1,293 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/request_for_info/cache.json",
+  "type": "object",
+  "properties": {
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "RFIType": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "RFI": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Subject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "RFIDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Issue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": ""
+    },
+    "Submittal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Drawing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Addendum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "SpecSec": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ScheduleNo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ResponsibleFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ResponsiblePerson": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReqFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReqContact": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "Response": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateDue": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "ImpactDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ImpactDays": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ImpactCosts": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ImpactPrice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "RespondFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "RespondContact": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DateSent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "DateRecd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "PrefMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "InfoRequested": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "ImpactDaysYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ImpactCostsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ImpactPriceYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Suggestion": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "PMCo",
+    "Project",
+    "RFIType",
+    "RFI",
+    "RFIDate",
+    "PrefMethod",
+    "KeyID",
+    "ImpactDaysYN",
+    "ImpactCostsYN",
+    "ImpactPriceYN"
+  ]
+}

@@ -1,0 +1,671 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/em/v2/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "EMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "EMGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "INCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JCCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PRCo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "AdjstGLLvl": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AdjstGLSumDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "AdjstGLDetlDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "AdjstGLJrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "UseAutoGL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseGLLvl": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UseGLSumDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "UseGLDetlDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "UseGLJrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "UseRateOride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseRevBkdwnCodeDefault": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "HoursUM": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "MatlGLLvl": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MatlGLSumDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 70,
+      "description": ""
+    },
+    "MatlGLDetlDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 70,
+      "description": ""
+    },
+    "MatlGLJrnl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "MatlMiscGLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MatlTax": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MatlValid": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DeprCalcReqd": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "DeprLstMnthCalc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DeprLstMnthBdgted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "DeprCostCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DeprCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "GLOverride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "WOBeginStat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "WOCostCodeChg": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "WOPostFinal": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "WOBeginPartStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "WODefaultRepType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LaborCT": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "LaborCostCodeChg": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PartsCT": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OutsideRprCT": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FuelCostCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "FuelCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CompPostCosts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CompUnattachedEquip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "AuditCompany": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditEquipment": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditDepartmentGL": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditAsset": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditRevenueRateCateg": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditRevenueRateEquip": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditLocXfer": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCompXfer": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "WOAutoSeq": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "WorkOrderOption": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "LastWorkOrder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "UsageMeterUpdate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CostPartsMeterUpdate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "FuelMeterUpdate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "JobLocationUpdate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ShowAllWO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AllSMG": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "MatlLastUsedYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "DefaultWarrantyStartDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "AuditWarrantys": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AlwaysInitLinkedSMG": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "LaborLiabs": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/LaborLiabs/items",
+        "type": "object",
+        "properties": {
+          "LiabType": {
+            "type": "integer",
+            "description": ""
+          },
+          "BurdenType": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "BurdenRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "AddonRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "LiabType",
+          "BurdenType",
+          "BurdenRate",
+          "AddonRate",
+          "KeyID"
+        ]
+      }
+    },
+    "Workflows": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Workflows/items",
+        "type": "object",
+        "properties": {
+          "Mod": {
+            "type": "string",
+            "maxLength": 2
+          },
+          "DocType": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "Active": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ]
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "KeyID": {
+            "type": "integer"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mod",
+          "Process",
+          "Active",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "EMCo",
+    "EMGroup",
+    "GLCo",
+    "UseAutoGL",
+    "UseRateOride",
+    "MatlTax",
+    "MatlValid",
+    "DeprCalcReqd",
+    "GLOverride",
+    "WOCostCodeChg",
+    "WOPostFinal",
+    "LaborCostCodeChg",
+    "CompPostCosts",
+    "AuditCompany",
+    "AuditEquipment",
+    "AuditDepartmentGL",
+    "AuditAsset",
+    "AuditRevenueRateCateg",
+    "AuditRevenueRateEquip",
+    "AuditLocXfer",
+    "AuditCompXfer",
+    "WOAutoSeq",
+    "UsageMeterUpdate",
+    "CostPartsMeterUpdate",
+    "FuelMeterUpdate",
+    "JobLocationUpdate",
+    "ShowAllWO",
+    "AllSMG",
+    "KeyID",
+    "MatlLastUsedYN",
+    "AttachBatchReportsYN",
+    "AuditWarrantys",
+    "AlwaysInitLinkedSMG"
+  ]
+}

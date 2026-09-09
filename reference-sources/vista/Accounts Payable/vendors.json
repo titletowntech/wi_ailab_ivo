@@ -1,0 +1,920 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/vendors/cache.json",
+  "type": "object",
+  "properties": {
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "SortName": {
+      "type": "string",
+      "description": "",
+      "maxLength": 15
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "TempYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 30
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Fax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "EMail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Vista default max length is 60."
+    },
+    "URL": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "Address2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "POAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "POCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "POState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "POZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "POAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CustGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Customer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "GLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "V1099YN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "V1099Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "V1099Box": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "",
+      "writeOnly": true
+    },
+    "Prop": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EFT": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RoutingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 34,
+      "description": "",
+      "writeOnly": true
+    },
+    "BankAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 35,
+      "description": "",
+      "writeOnly": true
+    },
+    "AcctType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "LastInvDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AuditYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddnlInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "AddendaTypeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Reviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "SeparatePayInvYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "OverrideMinAmtYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MasterVendor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "APRefUnqOvr": {
+      "type": "integer",
+      "description": ""
+    },
+    "ICFirstName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 28,
+      "description": ""
+    },
+    "ICMInitial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ICLastName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 40
+    },
+    "ICSocSecNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 9,
+      "description": ""
+    },
+    "ICStreetNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ICStreetName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 40,
+      "description": ""
+    },
+    "ICAptNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "ICCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 40,
+      "description": ""
+    },
+    "ICState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "ICZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ICLastRptDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UpdatePMYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "POCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "ICCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "AddRevToAllLinesYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AUVendorEFTYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AUVendorAccountNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 9,
+      "description": "",
+      "writeOnly": true
+    },
+    "AUVendorBSB": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": "",
+      "writeOnly": true
+    },
+    "AUVendorReference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 18,
+      "description": ""
+    },
+    "PayInfoDelivMthd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "IATYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ISODestinationCountryCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "RDFIBankName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 35,
+      "description": "",
+      "writeOnly": true
+    },
+    "BranchCountryCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": "",
+      "writeOnly": true
+    },
+    "RDFIIdentNbrQualifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": "",
+      "writeOnly": true
+    },
+    "GatewayOperatorRDFIIdent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": "",
+      "writeOnly": true
+    },
+    "CMAcct": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "T5FirstName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "T5MiddleInit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "T5LastName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "T5SocInsNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 9,
+      "description": "",
+      "writeOnly": true
+    },
+    "T5BusinessNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": "",
+      "writeOnly": true
+    },
+    "T5BusTypeCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "T5PartnerFIN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 9,
+      "description": "",
+      "writeOnly": true
+    },
+    "AusBusNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "",
+      "writeOnly": true
+    },
+    "AusCorpNbr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "",
+      "writeOnly": true
+    },
+    "CASubjToWC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CAClearanceCert": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "CACertEffectiveDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayControl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "V1099AddressSeq": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PayMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SubjToOnCostYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "CSEmail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "OnCostCostType": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UpdatePREHYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VendorAcctNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": "",
+      "writeOnly": true
+    },
+    "SubcontractorYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "AdditionalAddresses": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "description": "",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "/properties/AdditionalAddresses/items",
+        "properties": {
+          "AddressSeq": {
+            "type": "integer",
+            "description": "This is the key for this array (AddressSeq)"
+          },
+          "Type": {
+            "type": "integer",
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 30
+          },
+          "Address": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "City": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "State": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4,
+            "description": ""
+          },
+          "Zip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12,
+            "description": ""
+          },
+          "Address2": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "Country": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2,
+            "description": ""
+          },
+          "VendorAcctNumber": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "AddressSeq",
+          "Type",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "VendorGroup",
+    "Vendor",
+    "SortName",
+    "Type",
+    "TempYN",
+    "Purge",
+    "GLCo",
+    "V1099YN",
+    "ActiveYN",
+    "EFT",
+    "AuditYN",
+    "SeparatePayInvYN",
+    "OverrideMinAmtYN",
+    "APRefUnqOvr",
+    "UpdatePMYN",
+    "KeyID",
+    "AddRevToAllLinesYN",
+    "AUVendorEFTYN",
+    "IATYN",
+    "CASubjToWC",
+    "PayMethod",
+    "SubjToOnCostYN",
+    "UpdatePREHYN",
+    "SubcontractorYN"
+  ]
+}

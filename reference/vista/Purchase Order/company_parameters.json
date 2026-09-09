@@ -1,0 +1,358 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/po/v2/object/company_parameters/cache.json",
+  "type": "object",
+  "properties": {
+    "POCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "AutoPO": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LastPO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "CmtdDetailToJC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditCoParams": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditPOs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReceiptUpdate": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "GLAccrualAcct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "GLRecExpInterfacelvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "GLRecExpSummaryDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "GLRecExpDetailDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "RecJCInterfacelvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "RecEMInterfacelvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "RecINInterfacelvl": {
+      "type": "integer",
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "AuditPOCompliance": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PayTypeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "AuditPOReceipts": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AttachBatchReportsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AutoRQ": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LastRQ": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "ApprforQuote": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "QuoteReviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "ApprforPurchase": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "PurchaseReviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "Threshold": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ThresholdReviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "AuditRQ": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditReview": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AuditQuote": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ByPassTriggers": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "POAutoClose": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EnforcePhaseCTestLimit": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "CloseJCExceptions": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/CloseJCExceptions/items",
+        "type": "object",
+        "properties": {
+          "POCOJCCTID": {
+            "type": "integer",
+            "description": ""
+          },
+          "JCCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "JCCostType": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "POCOJCCTID",
+          "JCCo",
+          "PhaseGroup",
+          "JCCostType"
+        ]
+      }
+    },
+    "CloseSMExceptions": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/CloseSMExceptions/items",
+        "type": "object",
+        "properties": {
+          "POCOSMCTID": {
+            "type": "integer",
+            "description": ""
+          },
+          "SMCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "SMCostType": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "POCOSMCTID",
+          "SMCo",
+          "SMCostType"
+        ]
+      }
+    }
+  },
+  "required": [
+    "POCo",
+    "AutoPO",
+    "CmtdDetailToJC",
+    "AuditCoParams",
+    "AuditPOs",
+    "ReceiptUpdate",
+    "GLRecExpInterfacelvl",
+    "RecJCInterfacelvl",
+    "RecEMInterfacelvl",
+    "RecINInterfacelvl",
+    "AuditPOCompliance",
+    "PayTypeYN",
+    "KeyID",
+    "AuditPOReceipts",
+    "AttachBatchReportsYN",
+    "AutoRQ",
+    "LastRQ",
+    "ApprforQuote",
+    "ApprforPurchase",
+    "AuditRQ",
+    "AuditReview",
+    "AuditQuote",
+    "ByPassTriggers",
+    "POAutoClose",
+    "EnforcePhaseCTestLimit"
+  ]
+}

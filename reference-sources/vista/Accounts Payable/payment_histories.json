@@ -1,0 +1,382 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/payment_histories/cache.json",
+  "type": "object",
+  "properties": {
+    "APCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CMAcct": {
+      "type": "integer",
+      "description": ""
+    },
+    "PayMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "CMRef": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "CMRefSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "EFTSeq": {
+      "type": "integer",
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ChkType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PaidMth": {
+      "type": "string",
+      "description": ""
+    },
+    "PaidDate": {
+      "type": "string",
+      "description": ""
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Supplier": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "VoidYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "VoidMemo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PurgeYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddnlInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "CreditCardNum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 19,
+      "description": ""
+    },
+    "ExpireDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "CVC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ErrorCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ErrorCodeDesc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "NPPayDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "NPReferenceNum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "NPPayMethod": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "Details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "/properties/Details",
+        "properties": {
+          "Mth": {
+            "type": "string",
+            "description": "Part of the key to this Detail array. (Mth, ApTrans)"
+          },
+          "APTrans": {
+            "type": "integer",
+            "description": "Part of the key to this Detail array. (Mth, ApTrans)"
+          },
+          "APRef": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "InvDate": {
+            "type": "string",
+            "description": ""
+          },
+          "Gross": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Invoice Gross.  To calculate the amount paid from this payment: Gross - Retainage - PrevPaid - PrevDiscTaken - Balance - DiscTaken"
+          },
+          "Retainage": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Retainage held from Gross"
+          },
+          "PrevPaid": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Previously Paid on this Invoice."
+          },
+          "PrevDiscTaken": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Previously Taken Discount on this Invoice."
+          },
+          "Balance": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Balance Remaining on this Invoice at the time of this payment."
+          },
+          "DiscTaken": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Discount Taken for this Payment"
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "TotTaxAmount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Mth",
+          "APTrans",
+          "InvDate",
+          "Gross",
+          "Retainage",
+          "PrevPaid",
+          "PrevDiscTaken",
+          "Balance",
+          "DiscTaken",
+          "KeyID"
+        ]
+      }
+    }
+  },
+  "required": [
+    "APCo",
+    "CMCo",
+    "CMAcct",
+    "PayMethod",
+    "CMRef",
+    "CMRefSeq",
+    "EFTSeq",
+    "VendorGroup",
+    "Vendor",
+    "PaidMth",
+    "PaidDate",
+    "Amount",
+    "VoidYN",
+    "PurgeYN",
+    "KeyID"
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/sm/v2/object/customers/cache.json",
+  "type": "object",
+  "properties": {
+    "SMCustomerID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "CustGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Customer": {
+      "type": "integer",
+      "description": ""
+    },
+    "Contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ContactGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "ContactSeq": {
+            "type": "integer",
+            "description": ""
+          }
+        }
+      }
+    },
+    "Active": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BillToARCustomer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ReportID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "CustomerPOSetting": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "PrimaryTechnician": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "InvoiceGrouping": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "InvoiceSummaryLevel": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "NonBillable": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "BillingName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BillingEmail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "BillingAddress1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BillingAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "BillingCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "BillingState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "BillingPostalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "BillingCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "DeliveryMethod": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "DeliveryTo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Reviewer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "AltBillAddr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "InvoiceGroupingPOOverride": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    }
+  },
+  "required": [
+    "SMCustomerID",
+    "SMCo",
+    "CustGroup",
+    "Customer",
+    "Active",
+    "CustomerPOSetting",
+    "InvoiceGrouping",
+    "InvoiceSummaryLevel",
+    "NonBillable",
+    "DeliveryMethod",
+    "DeliveryTo",
+    "InvoiceGroupingPOOverride"
+  ]
+}

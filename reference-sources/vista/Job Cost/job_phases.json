@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/jc/v2/object/job_phases/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": "Company Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Job (JCCo, Job)."
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Job Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Job (JCCo, Job)."
+    },
+    "PhaseGroup": {
+      "type": "integer",
+      "description": "Phase Group.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Phase (PhaseGroup, Phase)."
+    },
+    "Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Phase Id.  Part of the natural key for this object (JCCo, Job, PhaseGroup, Phase).  Part of key identifying the Phase (PhaseGroup, Phase)."
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Contract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Contract Id.  Part of the key identifying the Contract (JCCo, Contract).  Part of the key identifying the Contract item (JCCo, Contract, Item)."
+    },
+    "Item": {
+      "type": "string",
+      "maxLength": 16,
+      "description": "Contract Item Id.  Part of the key identifying the Contract item (JCCo, Contract, Item)."
+    },
+    "ProjMinPct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": ""
+    },
+    "ActiveYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": "Generated 64 bit integer value identifying the Job Phase record."
+    },
+    "InsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "CostTypes": {
+      "description": "CostTypes for this Phase.",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/CostTypes/items",
+        "type": "object",
+        "properties": {
+          "CostType": {
+            "type": "integer",
+            "description": "CostType Id. This property is a natural key for the CostTypes of this Job Phase"
+          },
+          "UM": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "Unit of Measure."
+          },
+          "BillFlag": {
+            "type": "string",
+            "description": "'Y' = Units and Dollars, 'C' = Dollars Only, 'N' = Neither."
+          },
+          "ItemUnitFlag": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "PhaseUnitFlag": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "BuyOutYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "ActiveYN": {
+            "type": "string",
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": "Generated 64 bit integer value identifying the Cost Type for this Job Phase record."
+          }
+        },
+        "required": [
+          "CostType",
+          "UM",
+          "BillFlag",
+          "ItemUnitFlag",
+          "PhaseUnitFlag",
+          "BuyOutYN",
+          "ActiveYN",
+          "KeyID"
+        ]
+      }
+    },
+    "Roles": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/Roles/items",
+        "type": "object",
+        "properties": {
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "Process": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Natural key for this array(PhaseGroup, Phase, Process, Role"
+          },
+          "Role": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "Natural key for this array(PhaseGroup, Phase, Process, Role"
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "KeyID",
+          "Process",
+          "Role"
+        ]
+      }
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "PhaseGroup",
+    "Phase",
+    "Contract",
+    "Item",
+    "ActiveYN",
+    "KeyID"
+  ]
+}

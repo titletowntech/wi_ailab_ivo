@@ -1,0 +1,645 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/pm/v2/object/projects/cache.json",
+  "type": "object",
+  "properties": {
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "JobStatus": {
+      "type": "integer",
+      "description": ""
+    },
+    "BidNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "LockPhases": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "ProjectMgr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "JobPhone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "JobFax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "MailAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "MailCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "MailState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "MailZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "MailAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ShipAddress": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "ShipCity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ShipState": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "ShipZip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ShipAddress2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "LiabTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "TaxGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "TaxCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "InsTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MarkUpDiscRate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "PRLocalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PRStateCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "Certified": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "EEORegion": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": ""
+    },
+    "SMSACode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CraftTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ProjMinPct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "SLCompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "POCompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ArchEngFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OTSched": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PriceTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "HaulTaxOpt": {
+      "type": "integer",
+      "description": ""
+    },
+    "GeoCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "BaseTaxOn": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "UpdatePlugs": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ContactCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ClosePurgeFlag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "OurFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoAddItemYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "OverProjNotes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8000,
+      "description": ""
+    },
+    "WghtAvgOT": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "HrsPerManDay": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "AutoGenSubNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "SecurityGroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DefaultStdDaysDue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "DefaultRFIDaysDue": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UpdateAPActualsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UpdateMSActualsYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AutoGenPCONo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AutoGenMTGNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "AutoGenRFINo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "RateTemplate": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "RevGrpInv": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "MailCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "ShipCountry": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "CertDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AutoGenRFQNo": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ApplyEscalators": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "UseTaxYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "TimesheetRevGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PotentialProjectID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "PCVisibleInJC": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysResponsibleFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysApprovingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysRequestingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalReviewDaysAutoCalcYN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "SubmittalApprovingFirm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "SubmittalApprovingFirmContact": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "FourProjectsContainerName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200,
+      "description": ""
+    },
+    "FourProjectsContainerId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "ConstructionType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "PRLeaveLevel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Project": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "JCCo",
+    "Job",
+    "JobStatus",
+    "LockPhases",
+    "TaxGroup",
+    "MarkUpDiscRate",
+    "Certified",
+    "ProjMinPct",
+    "HaulTaxOpt",
+    "BaseTaxOn",
+    "UpdatePlugs",
+    "AutoAddItemYN",
+    "WghtAvgOT",
+    "HrsPerManDay",
+    "AutoGenSubNo",
+    "UpdateAPActualsYN",
+    "UpdateMSActualsYN",
+    "AutoGenPCONo",
+    "AutoGenMTGNo",
+    "AutoGenRFINo",
+    "KeyID",
+    "AutoGenRFQNo",
+    "ApplyEscalators",
+    "UseTaxYN",
+    "PCVisibleInJC",
+    "PMCo",
+    "Project"
+  ]
+}

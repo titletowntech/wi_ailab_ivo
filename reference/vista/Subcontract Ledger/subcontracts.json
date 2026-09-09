@@ -1,0 +1,647 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Subcontracts/cache.json",
+  "type": "object",
+  "properties": {
+    "SLCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "SL": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "JCCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "VendorGroup": {
+      "type": "integer",
+      "description": ""
+    },
+    "Vendor": {
+      "type": "integer",
+      "description": ""
+    },
+    "HoldCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "PayTerms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "CompGroup": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Status": {
+      "type": "integer",
+      "description": ""
+    },
+    "MthClosed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "InUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Purge": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "Approved": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        null
+      ],
+      "description": ""
+    },
+    "ApprovedBy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128,
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddedMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AddedBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "OrigDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "KeyID": {
+      "type": "integer",
+      "description": ""
+    },
+    "SLCloseBatchID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "MaxRetgOpt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "MaxRetgPct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "MaxRetgAmt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "InclACOinMaxYN": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MaxRetgDistStyle": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ApprovalRequired": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "DocType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "targetInUseMth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "targetInUseBatchId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "AUQualifiedForPBA": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "AUPBAEligibleDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    },
+    "InExclusions": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/InExclusions/cache.json",
+        "type": "object",
+        "properties": {
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "Seq": {
+            "type": "integer",
+            "description": ""
+          },
+          "Type": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Phase": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": ""
+          },
+          "Detail": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "DateEntered": {
+            "type": "string",
+            "description": ""
+          },
+          "EnteredBy": {
+            "type": "string",
+            "maxLength": 128,
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "KeyID",
+          "Seq",
+          "Type",
+          "DateEntered",
+          "EnteredBy"
+        ]
+      }
+    },
+    "LineItems": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/LineItems/cache.json",
+        "type": "object",
+        "properties": {
+          "SLItem": {
+            "type": "integer",
+            "description": ""
+          },
+          "ItemType": {
+            "type": "integer",
+            "description": ""
+          },
+          "Addon": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "AddonPct": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+            "description": ""
+          },
+          "JCCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "Job": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "PhaseGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Phase": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "JCCType": {
+            "type": "integer",
+            "description": ""
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 60,
+            "description": ""
+          },
+          "UM": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "GLCo": {
+            "type": "integer",
+            "description": ""
+          },
+          "GLAcct": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "WCRetPct": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+            "description": ""
+          },
+          "SMRetPct": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,4})?$",
+            "description": ""
+          },
+          "VendorGroup": {
+            "type": "integer",
+            "description": ""
+          },
+          "Supplier": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OrigUnits": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "OrigUnitCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "OrigCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "CurUnits": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "CurUnitCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,11}(?:.[0-9]{0,5})?$",
+            "description": ""
+          },
+          "CurCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "StoredMatls": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "InvUnits": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": ""
+          },
+          "InvCost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "InUseMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "InUseBatchId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "Notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "AddedMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "AddedBatchID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UniqueAttchID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "KeyID": {
+            "type": "integer",
+            "description": ""
+          },
+          "TaxType": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "TaxCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "TaxGroup": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "OrigTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "CurTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "InvTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "JCCmtdTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "TaxRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "GSTRate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "JCRemCmtdTax": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "PMSLKeyID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "targetInUseMth": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "targetInUseBatchId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "SLItem",
+          "ItemType",
+          "AddonPct",
+          "JCCo",
+          "Job",
+          "PhaseGroup",
+          "Phase",
+          "JCCType",
+          "UM",
+          "GLCo",
+          "GLAcct",
+          "WCRetPct",
+          "SMRetPct",
+          "VendorGroup",
+          "OrigUnits",
+          "OrigUnitCost",
+          "OrigCost",
+          "CurUnits",
+          "CurUnitCost",
+          "CurCost",
+          "StoredMatls",
+          "InvUnits",
+          "InvCost",
+          "KeyID",
+          "OrigTax",
+          "CurTax",
+          "InvTax",
+          "JCCmtdTax",
+          "TaxRate",
+          "GSTRate",
+          "JCRemCmtdTax"
+        ]
+      }
+    }
+  },
+  "required": [
+    "SLCo",
+    "SL",
+    "JCCo",
+    "Job",
+    "VendorGroup",
+    "Vendor",
+    "Status",
+    "Purge",
+    "KeyID",
+    "MaxRetgOpt",
+    "MaxRetgPct",
+    "MaxRetgAmt",
+    "InclACOinMaxYN",
+    "MaxRetgDistStyle",
+    "ApprovalRequired",
+    "AUQualifiedForPBA"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/serviceable_items/cache.json",
+  "type": "object",
+  "properties": {
+    "SMCo": {
+      "type": "integer",
+      "description": ""
+    },
+    "ServiceSite": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "ServiceItem": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120,
+      "description": ""
+    },
+    "ServiceItemSummary": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "Model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "YearManufactured": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "UniqueAttchID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "SMServiceItemID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Class": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "SerialNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "LaborWarranty": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "LaborWarrantyExpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "MaterialWarranty": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "MaterialWarrantyExpDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Active": {
+      "type": "string",
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": ""
+    },
+    "QRCodeID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "SMCo",
+    "ServiceSite",
+    "ServiceItem",
+    "SMServiceItemID",
+    "Class",
+    "Type",
+    "LaborWarranty",
+    "MaterialWarranty",
+    "Active"
+  ]
+}
