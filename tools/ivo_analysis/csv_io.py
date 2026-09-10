@@ -16,34 +16,40 @@ RFC4180 parser survives:
 Records that still do not reach the header field count are quarantined rather
 than padded, because a shifted row silently corrupts every column statistic.
 
-`read_table` prefers Polars' native reader, which is far faster and is what
-makes large exports tractable, but falls back to the port above when the native
-reader raises. Values are always read as strings with no null inference, so
+`read_table` uses Polars' native reader, which is far faster and is what makes
+large exports tractable, but only for files that a standard reader can be
+trusted with. Values are always read as strings with no null inference, so
 leading zeros, surrounding whitespace, and the distinction between an empty
 string and a missing value survive exactly as docs/collecting-inputs.md requires.
 
-Two behaviours measured against the exports in this repo, recorded so they do
-not have to be rediscovered:
+Choosing the reader by catching an exception is not sufficient, and that is the
+important finding here. Measured against the 32 exports in this repo:
 
-  * The fallback is not hypothetical. 5 of 28 committed exports are rejected by
-    the native reader, each for one of the defects above -- e.g. `"92" 6W BLADE"`
+  * 5 files make the native reader raise outright -- e.g. `"92" 6W BLADE"`
     (unescaped mid-field quote) and `"Attach Bucket Skeleton 66""` (undoubled
-    inner quote).
-  * Where both readers succeed they agree on every cell except line endings
-    inside multi-line fields: the tolerant reader rejoins split records with
-    "\n" and so drops the "\r", while the native reader preserves the original
-    "\r\n". Every profiling statistic is computed on the trimmed value, and
-    stripping reduces the difference to zero cells, so this cannot move a score.
-    The native reading is kept because it preserves the source bytes.
+    inner quote). A try/except would catch these.
+  * 2 more files parse without any error and come back **wrong**: the native
+    reader silently swallows inner quote characters, turning
+    `East Colfax Avenue Bus Rapid Transit ("Colfax-BRT") Project` into the same
+    string without its quotes, and `"BROKEN NOT FIXABLE" - [...]` into
+    `BROKEN NOT FIXABLE - [...]`. These are real value changes -- they alter
+    lengths, masks, and distinct counts -- and no exception is raised.
 
-The fallback reads the whole file into a Python string and walks it character by
-character -- roughly 17x slower than the native reader (151 ms vs 8.7 ms on the
-20,203-row Meter export). That is fine at present sizes but would need
-revisiting if a malformed export ever arrived at gigabyte scale.
+So the reader is chosen up front by scanning for a quote that has a
+non-delimiter on both sides, which cannot be a field opener or closer and so
+marks a file the fast path would mishandle. On this corpus that predicate flags
+all 7 problem files, misses none, and over-flags none, leaving 25 files on the
+fast path.
+
+The tolerant reader walks the text character by character in Python -- roughly
+17x slower than the native reader (151 ms vs 8.7 ms on the 20,203-row Meter
+export). That is fine at present sizes but would need revisiting if a malformed
+export ever arrived at gigabyte scale.
 """
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -204,11 +210,35 @@ def _frame_from_records(headers: list[str], records: list[list[str]]) -> pl.Data
     return pl.DataFrame(records, schema=[(c, pl.String) for c in cols], orient="row")
 
 
+# A quote with a non-delimiter on both sides cannot be opening or closing a
+# field, so the file needs the tolerant reader. See the module docstring.
+_IRREGULAR_QUOTE = re.compile(rb'(?<=[^,\r\n"])"(?=[^,\r\n"])')
+_SCAN_CHUNK = 1 << 20
+
+
+def has_irregular_quotes(path: str | Path) -> bool:
+    """Cheap byte scan deciding whether the native reader can be trusted."""
+    tail = b""
+    with open(path, "rb") as handle:
+        while chunk := handle.read(_SCAN_CHUNK):
+            if _IRREGULAR_QUOTE.search(tail + chunk):
+                return True
+            # Keep a few bytes so a match spanning a chunk boundary is not missed.
+            tail = chunk[-4:]
+    return False
+
+
+def read_records(path: str | Path) -> list[dict[str, str]]:
+    """Read a generated CSV as a list of header-keyed dicts, as readCsv() does in Node."""
+    table = read_table(path)
+    return table.frame.to_dicts()
+
+
 def read_table(path: str | Path, *, force_tolerant: bool = False) -> Table:
-    """Read a CSV as all-strings, preferring the fast native reader."""
+    """Read a CSV as all-strings, using the fast native reader where it is safe."""
     path = Path(path)
 
-    if not force_tolerant:
+    if not force_tolerant and not has_irregular_quotes(path):
         try:
             frame = pl.read_csv(
                 path,
@@ -223,7 +253,11 @@ def read_table(path: str | Path, *, force_tolerant: bool = False) -> Table:
         except Exception:
             pass  # fall through to the tolerant reader
 
-    text = path.read_text(encoding="utf-8", errors="replace")
+    # newline="" disables universal-newline translation. Without it Python rewrites
+    # "\r\n" to "\n" before the tokenizer runs, which silently shortens every
+    # multi-line free-text value and changes its length statistics.
+    with open(path, "r", encoding="utf-8", errors="replace", newline="") as handle:
+        text = handle.read()
     headers, records, repaired, quarantined = parse_csv(text)
     return Table(
         headers=headers,

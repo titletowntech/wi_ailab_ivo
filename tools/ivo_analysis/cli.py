@@ -26,11 +26,19 @@ def build_parser() -> argparse.ArgumentParser:
     compare.add_argument("--out", required=True)
     compare.add_argument("--source-label", default="")
     compare.add_argument("--dest-label", default="")
+    compare.add_argument("--source-key")
+    compare.add_argument("--dest-key")
+    compare.add_argument("--min-agreement")
+    compare.add_argument("--min-rows")
+    compare.add_argument("--min-distinct")
+    compare.add_argument("--min-join")
 
     score = sub.add_parser("score", help="Generate a mapping proposal.")
     score.add_argument("--erp-schema", required=True)
     score.add_argument("--erp-profile", required=True)
-    score.add_argument("--ivo-reference", required=True)
+    score.add_argument("--ivo-reference")
+    score.add_argument("--ivo-schema")
+    score.add_argument("--ivo-profile")
     score.add_argument("--comparison")
     score.add_argument("--execution-evidence")
     score.add_argument("--approved")
@@ -60,5 +68,24 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+
+    if args.command == "profile":
+        from .commands import profile
+
+        return profile(args)
+
+    if args.command == "compare":
+        from .commands import compare_exports
+
+        return compare_exports(args)
+
+    if args.command == "score":
+        if not args.ivo_reference and not args.ivo_schema:
+            print("score requires --ivo-reference or --ivo-schema", file=sys.stderr)
+            return 1
+        from .commands import score as score_command
+
+        return score_command(args)
+
     print(f"ivo_analysis: '{args.command}' is not implemented yet.", file=sys.stderr)
     return 1
