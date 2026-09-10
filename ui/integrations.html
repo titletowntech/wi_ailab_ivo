@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVO Integration Definitions</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-accent: #b11f4b;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-accent: #fd8ea1;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font: 14px "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; }
+    button, input, select, textarea { color: inherit; font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--cp-accent); outline-offset: 2px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 2px; font-size: 18px; }
+    h2 { font-size: 18px; }
+    h3 { margin-bottom: 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--cp-text-muted); }
+    .muted, small { color: var(--cp-text-muted); }
+    .shell { height: 100%; display: grid; grid-template-rows: 64px auto auto minmax(0, 1fr); overflow: hidden; }
+    header { padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 2px solid var(--cp-accent); border-radius: 8px; color: var(--cp-accent); font-weight: 800; font-size: 11px; }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .save-state { display: flex; align-items: center; gap: 8px; color: var(--cp-success); white-space: nowrap; }
+    .save-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+    .icon-button, .button { min-height: 34px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); }
+    .icon-button { width: 34px; display: grid; place-items: center; font-size: 18px; }
+    .button { padding: 6px 12px; font-weight: 650; }
+    .button.primary { border-color: var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); }
+    .button.danger { border-color: var(--cp-danger); color: var(--cp-danger); }
+    .button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .button svg, .icon-button svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .connector-bar { padding: 10px 24px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface); }
+    .connector-tab { padding: 7px 12px; display: grid; gap: 1px; border: 1px solid var(--cp-border); border-radius: 8px; background: transparent; text-align: left; }
+    .connector-tab strong { font-size: 13px; }
+    .connector-tab small { font-size: 10px; }
+    .connector-tab.active { border-color: var(--cp-accent); background: var(--cp-accent-soft); color: var(--cp-accent); }
+    .connector-tab.active small { color: inherit; }
+    .tabs { padding: 0 24px; display: flex; align-items: end; gap: 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .tab { height: 46px; padding: 0 2px; display: flex; align-items: center; gap: 8px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--cp-text-muted); font-weight: 650; }
+    .tab.active { color: var(--cp-accent); border-color: var(--cp-accent); }
+    .split { min-height: 0; display: grid; grid-template-columns: 300px minmax(0, 1fr); overflow: hidden; }
+    aside { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border-right: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+    .rail-head { padding: 14px 16px 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .rail-head h2 { margin: 0; font-size: 14px; }
+    .rail-list { padding: 0 10px 16px; display: grid; align-content: start; gap: 4px; overflow-y: auto; }
+    .rail-item { width: 100%; padding: 9px 10px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: inherit; text-align: left; }
+    .rail-item:hover { background: var(--cp-surface-soft); }
+    .rail-item.active { border-color: var(--cp-border); background: var(--cp-surface); color: var(--cp-accent); }
+    .rail-item strong, .rail-item small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rail-item small { margin-top: 2px; font-size: 10px; }
+    .rail-empty { padding: 14px 10px; }
+    main { min-height: 0; padding: 20px 24px 40px; overflow-y: auto; }
+    .editor { max-width: 940px; display: grid; gap: 16px; }
+    .editor-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+    .panel { border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); overflow: hidden; }
+    .panel-title { padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface-soft); font-weight: 650; }
+    .panel-body { padding: 14px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .form-grid label { display: grid; gap: 4px; font-weight: 650; min-width: 0; }
+    .form-grid .span-2 { grid-column: 1 / -1; }
+    .checkbox-field { flex-direction: row; display: flex !important; align-items: center; gap: 8px; }
+    input[type="text"], input[type="number"], select, textarea { padding: 7px 9px; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); font-weight: 400; }
+    textarea { min-height: 60px; resize: vertical; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid var(--cp-border); text-align: left; vertical-align: middle; white-space: nowrap; }
+    th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--cp-text-muted); }
+    tbody tr:last-child td { border-bottom: 0; }
+    td .subtle { display: block; font-size: 11px; color: var(--cp-text-muted); white-space: normal; }
+    td input[type="number"] { width: 78px; }
+    td input[type="text"] { width: 100%; min-width: 150px; }
+    .row-actions { width: 1%; text-align: right; }
+    .picker { padding: 12px 14px; display: flex; align-items: end; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--cp-border); background: var(--cp-surface-soft); }
+    .picker label { display: grid; gap: 4px; font-size: 12px; font-weight: 650; }
+    .picker select, .picker input { min-width: 150px; }
+    .badge { padding: 2px 7px; border: 1px solid var(--cp-border); border-radius: 10px; color: var(--cp-text-muted); font-size: 10px; white-space: nowrap; }
+    .badge.good { border-color: var(--cp-success); color: var(--cp-success); }
+    .badge.warn { border-color: var(--cp-warning); color: var(--cp-warning); }
+    .badge.blocking { border-color: var(--cp-danger); color: var(--cp-danger); }
+    .badge.info { border-color: var(--cp-link); color: var(--cp-link); }
+    .empty { padding: 40px 0; max-width: 520px; }
+    .issues { display: grid; gap: 8px; }
+    .issue { padding: 10px 12px; display: grid; gap: 3px; border: 1px solid var(--cp-border); border-left-width: 3px; border-radius: 8px; }
+    .issue.blocking { border-left-color: var(--cp-danger); }
+    .issue.warning { border-left-color: var(--cp-warning); }
+    .issue small { font-size: 11px; }
+    dialog { width: min(680px, calc(100vw - 32px)); padding: 0; border: 1px solid var(--cp-border); border-radius: 12px; background: var(--cp-surface); color: var(--cp-text); }
+    dialog::backdrop { background: rgba(0, 0, 0, 0.4); }
+    .dialog-head { padding: 14px 18px; display: flex; align-items: start; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--cp-border); }
+    .dialog-head h2 { margin: 0 0 2px; font-size: 16px; }
+    .dialog-body { padding: 16px 18px; max-height: 60vh; overflow-y: auto; }
+    .dialog-footer { padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--cp-border); }
+    @media (max-width: 860px) {
+      .split { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); }
+      aside { border-right: 0; border-bottom: 1px solid var(--cp-border); max-height: 240px; }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">
+        <button class="icon-button" id="goHome" title="Back to home" aria-label="Back to home"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+        <div class="mark">IVO</div>
+        <div><h1>Integration definitions</h1><small id="integrationSubtitle">Features, job schedules, and configurations per ERP connector</small></div>
+      </div>
+      <div class="header-actions">
+        <button class="button" id="openValidation">Validation <span class="badge" id="validationCount">0</span></button>
+        <div class="save-state" id="saveState"><span class="save-dot"></span><span>Saved</span></div>
+      </div>
+    </header>
+    <nav class="connector-bar" id="connectorBar" aria-label="ERP connector"></nav>
+    <nav class="tabs" aria-label="Integration section">
+      <button class="tab active" data-section="features">Features <span class="badge" id="featureCount">0</span></button>
+      <button class="tab" data-section="schedules">Job schedules <span class="badge" id="scheduleCount">0</span></button>
+      <button class="tab" data-section="configurations">Configurations <span class="badge" id="configurationCount">0</span></button>
+    </nav>
+    <section class="split">
+      <aside>
+        <div class="rail-head">
+          <h2 id="railTitle">Features</h2>
+          <button class="button" id="addItem" style="white-space:nowrap">+ Add</button>
+        </div>
+        <div class="rail-list" id="railList"></div>
+      </aside>
+      <main id="editorPane"></main>
+    </section>
+  </div>
+
+  <dialog id="validationDialog" aria-labelledby="validationTitle">
+    <div class="dialog-head">
+      <div><h2 id="validationTitle">Integration validation</h2><small>Composition rules from the App Xchange documentation and IVO's sequencing convention.</small></div>
+      <button class="icon-button" data-close-dialog aria-label="Close validation">&times;</button>
+    </div>
+    <div class="dialog-body"><div class="issues" id="validationIssues"></div></div>
+    <div class="dialog-footer"><span class="muted" id="validationSummary"></span><button class="button" data-close-dialog>Done</button></div>
+  </dialog>
+
+  <script>
+    const state = {
+      connectors: [],
+      connectorKey: null,
+      definition: null,
+      catalog: [],
+      validation: [],
+      section: "features",
+      selected: { features: 0, schedules: 0, configurations: 0 },
+      serviceConnector: null,
+      serviceModule: null,
+    };
+
+    const byId = (id) => document.getElementById(id);
+    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
+
+    const SECTIONS = {
+      features: { title: "Features", singular: "feature" },
+      schedules: { title: "Job schedules", singular: "schedule" },
+      configurations: { title: "Configurations", singular: "configuration" },
+    };
+    const FEATURE_STATUSES = [
+      ["under-construction", "Under construction"],
+      ["active", "Active"],
+      ["deprecated", "Deprecated"],
+      ["archived", "Archived"],
+    ];
+    const CONFIGURATION_TYPES = ["string", "string[]", "decimal", "decimal[]", "integer", "integer[]", "boolean"];
+    const INTERVAL_TYPES = ["Minute", "Hour", "Day"];
+
+    const items = (section = state.section) => state.definition?.[section] || [];
+    const current = () => items()[state.selected[state.section]] || null;
+    const serviceId = (service) => `${service.connector}/${service.module}/${service.object}`;
+
+    // A schedule can only run services that a feature already caches, and flows a feature lists.
+    const definedServices = () => {
+      const found = new Map();
+      for (const feature of items("features")) {
+        for (const service of feature.services || []) {
+          if (service.connector && service.module && service.object) found.set(serviceId(service), service);
+        }
+      }
+      return [...found.values()];
+    };
+    const definedFlows = () => [...new Set(items("features").flatMap((feature) => feature.flows || []))];
+
+    async function request(url, options) {
+      const response = await fetch(url, options);
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || `Request failed (${response.status}).`);
+      return result;
+    }
+
+    function setSaveState(text, color) {
+      const save = byId("saveState");
+      save.style.color = color;
+      save.querySelector("span:last-child").textContent = text;
+    }
+
+    function scheduleSave() {
+      setSaveState("Saving...", "var(--cp-text-muted)");
+      window.clearTimeout(scheduleSave.timer);
+      scheduleSave.timer = window.setTimeout(async () => {
+        try {
+          const result = await request(`/api/integrations/${encodeURIComponent(state.connectorKey)}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(state.definition),
+          });
+          state.definition = result.definition;
+          state.validation = result.validation;
+          setSaveState("Saved", "var(--cp-success)");
+          refreshValidation();
+          renderConnectorBar();
+        } catch (error) {
+          setSaveState(error.message, "var(--cp-danger)");
+        }
+      }, 400);
+    }
+
+    function update(mutate) {
+      mutate();
+      render();
+      scheduleSave();
+    }
+
+    function renderConnectorBar() {
+      byId("connectorBar").innerHTML = state.connectors.map((connector) => {
+        const active = connector.key === state.connectorKey;
+        const counts = active && state.definition
+          ? `${items("features").length} features · ${items("schedules").length} schedules`
+          : `${connector.featureCount} features · ${connector.scheduleCount} schedules`;
+        return `<button class="connector-tab${active ? " active" : ""}" data-connector="${escapeHtml(connector.key)}">
+          <strong>${escapeHtml(connector.name)}</strong><small>${escapeHtml(counts)} · ${connector.objectCount} objects</small></button>`;
+      }).join("");
+    }
+
+    function renderValidationCount() {
+      const blocking = state.validation.filter((issue) => issue.severity === "blocking").length;
+      const badge = byId("validationCount");
+      badge.textContent = state.validation.length;
+      badge.className = `badge${blocking ? " blocking" : state.validation.length ? " warn" : " good"}`;
+    }
+
+    function railLabel(item, section) {
+      if (section === "features") {
+        const status = FEATURE_STATUSES.find(([key]) => key === item.status)?.[1] || "Under construction";
+        return { title: item.name || "Untitled feature", detail: `${status} · ${(item.services || []).length} services · ${(item.flows || []).length} flows` };
+      }
+      if (section === "schedules") {
+        return { title: item.name || "Untitled schedule", detail: `Every ${item.interval} ${String(item.intervalType || "").toLowerCase()}${item.interval === 1 ? "" : "s"} · ${(item.jobs || []).length} jobs` };
+      }
+      return { title: item.key || "Untitled configuration", detail: `${item.type}${item.required ? " · required" : ""}` };
+    }
+
+    function issuesFor(item, section) {
+      if (!item) return [];
+      const name = section === "configurations" ? item.key : item.name;
+      return state.validation.filter((issue) => issue.area === section && issue.name && issue.name === name);
+    }
+
+    function renderRail() {
+      byId("railTitle").textContent = SECTIONS[state.section].title;
+      byId("addItem").setAttribute("aria-label", `Add ${SECTIONS[state.section].singular}`);
+      const list = items();
+      byId("railList").innerHTML = list.map((item, index) => {
+        const { title, detail } = railLabel(item, state.section);
+        const blocking = issuesFor(item, state.section).some((issue) => issue.severity === "blocking");
+        return `<button class="rail-item${index === state.selected[state.section] ? " active" : ""}" data-index="${index}">
+          <span><strong>${escapeHtml(title)}</strong><small>${escapeHtml(detail)}</small></span>
+          ${blocking ? '<span class="badge blocking">Blocking</span>' : ""}</button>`;
+      }).join("") || `<p class="rail-empty muted">No ${SECTIONS[state.section].singular}s yet.</p>`;
+      byId("featureCount").textContent = items("features").length;
+      byId("scheduleCount").textContent = items("schedules").length;
+      byId("configurationCount").textContent = items("configurations").length;
+    }
+
+    function optionList(values, selected) {
+      return values.map(([value, label]) =>
+        `<option value="${escapeHtml(value)}"${value === selected ? " selected" : ""}>${escapeHtml(label)}</option>`).join("");
+    }
+
+    function issueBannerHtml(item) {
+      const found = issuesFor(item, state.section);
+      if (!found.length) return "";
+      return `<div class="issues">${found.map((issue) =>
+        `<div class="issue ${escapeHtml(issue.severity)}"><strong>${issue.severity === "blocking" ? "Blocking" : "Warning"}</strong><small>${escapeHtml(issue.message)}</small></div>`).join("")}</div>`;
+    }
+
+    // Saves are debounced, so findings arrive after the editor is drawn. Refresh only the
+    // banner and rail so the field the reviewer is typing in keeps focus.
+    function refreshValidation() {
+      renderValidationCount();
+      renderRail();
+      const banner = byId("issueBanner");
+      if (banner) banner.innerHTML = issueBannerHtml(current());
+    }
+
+    // IVO reuses module names the ERP connectors also use, so the picker narrows by
+    // connector before module or the two systems' objects would merge under one label.
+    function renderFeatureEditor(feature) {
+      const connectors = [...new Set(state.catalog.map((entry) => entry.connector))];
+      return `
+        <div class="editor-head">
+          <div><h2>${escapeHtml(feature.name || "Untitled feature")}</h2><p class="muted">Cache-writer services and flows that move this part of the integration.</p></div>
+          <button class="button danger" data-delete>Delete feature</button>
+        </div>
+        <div id="issueBanner">${issueBannerHtml(feature)}</div>
+        <section class="panel">
+          <div class="panel-title">Feature details</div>
+          <div class="panel-body form-grid">
+            <label>Name<input type="text" data-field="name" value="${escapeHtml(feature.name)}"></label>
+            <label>Status<select data-field="status">${optionList(FEATURE_STATUSES, feature.status)}</select></label>
+            <label class="span-2">Description<textarea data-field="description" placeholder="What this feature does, the data flow, and any dependencies.">${escapeHtml(feature.description)}</textarea></label>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">Cache-writer services <span class="badge">${feature.services.length}</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Service</th><th>Data object</th><th>Description</th><th>Template</th><th class="row-actions"></th></tr></thead>
+              <tbody>${feature.services.map((service, index) => `
+                <tr>
+                  <td><strong>${escapeHtml(service.connector)}</strong><span class="subtle">${escapeHtml(service.module)}</span></td>
+                  <td>${escapeHtml(service.object)}</td>
+                  <td><input type="text" data-service="${index}" data-service-field="description" value="${escapeHtml(service.description)}" placeholder="Kind of data being cache written"></td>
+                  <td><input type="checkbox" data-service="${index}" data-service-field="template"${service.template ? " checked" : ""} aria-label="Make ${escapeHtml(service.object)} a template"></td>
+                  <td class="row-actions"><button class="icon-button" data-remove-service="${index}" title="Remove service" aria-label="Remove ${escapeHtml(service.object)}">&times;</button></td>
+                </tr>`).join("") || '<tr><td colspan="5" class="muted">No services. Add one cache-writer service per data object this feature’s flows read.</td></tr>'}</tbody>
+            </table>
+          </div>
+          <div class="picker">
+            <label>Connector<select id="serviceConnector">${optionList(connectors.map((connector) => [connector, connector]), connectors.includes(state.serviceConnector) ? state.serviceConnector : connectors[0])}</select></label>
+            <label>Module<select id="serviceModule"></select></label>
+            <label>Data object<select id="serviceObject"></select></label>
+            <button class="button" id="addService">Add service</button>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">Flows <span class="badge">${feature.flows.length}</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Flow name</th><th class="row-actions"></th></tr></thead>
+              <tbody>${feature.flows.map((flow, index) => `
+                <tr>
+                  <td><input type="text" data-flow="${index}" value="${escapeHtml(flow)}"></td>
+                  <td class="row-actions"><button class="icon-button" data-remove-flow="${index}" title="Remove flow" aria-label="Remove ${escapeHtml(flow)}">&times;</button></td>
+                </tr>`).join("") || '<tr><td colspan="2" class="muted">No flows listed. Name the flows authored for this feature so schedules can reference them.</td></tr>'}</tbody>
+            </table>
+          </div>
+          <div class="picker"><button class="button" id="addFlow">Add flow</button></div>
+        </section>`;
+    }
+
+    function renderScheduleEditor(schedule) {
+      const services = definedServices();
+      const flows = definedFlows();
+      const jobOptions = [
+        ...services.map((service) => [`service:${serviceId(service)}`, `Service · ${serviceId(service)}`]),
+        ...flows.map((flow) => [`flow:${flow}`, `Flow · ${flow}`]),
+      ];
+      return `
+        <div class="editor-head">
+          <div><h2>${escapeHtml(schedule.name || "Untitled schedule")}</h2><p class="muted">Lower sequence numbers run first. Equal numbers run in parallel.</p></div>
+          <button class="button danger" data-delete>Delete schedule</button>
+        </div>
+        <div id="issueBanner">${issueBannerHtml(schedule)}</div>
+        <section class="panel">
+          <div class="panel-title">Schedule details</div>
+          <div class="panel-body form-grid">
+            <label>Name<input type="text" data-field="name" value="${escapeHtml(schedule.name)}"></label>
+            <label>Interval<input type="number" min="1" step="1" data-field="interval" value="${escapeHtml(schedule.interval)}"></label>
+            <label>Interval type<select data-field="intervalType">${optionList(INTERVAL_TYPES.map((type) => [type, type]), schedule.intervalType)}</select></label>
+            <label class="checkbox-field"><input type="checkbox" data-field="activeOnSync"${schedule.activeOnSync ? " checked" : ""}> Active on sync</label>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">Jobs <span class="badge">${schedule.jobs.length}</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Sequence</th><th>Job</th><th>Type</th><th class="row-actions"></th></tr></thead>
+              <tbody>${[...schedule.jobs.entries()]
+                .sort(([, left], [, right]) => left.sequence - right.sequence)
+                .map(([index, job]) => `
+                <tr>
+                  <td><input type="number" step="1" min="0" data-job="${index}" data-job-field="sequence" value="${escapeHtml(job.sequence)}"></td>
+                  <td>${escapeHtml(job.kind === "flow" ? job.flow : serviceId(job))}</td>
+                  <td><span class="badge ${job.kind === "flow" ? "info" : ""}">${job.kind === "flow" ? "Flow" : "Cache writer"}</span></td>
+                  <td class="row-actions"><button class="icon-button" data-remove-job="${index}" title="Remove job" aria-label="Remove job">&times;</button></td>
+                </tr>`).join("") || '<tr><td colspan="4" class="muted">No jobs. Add the services this schedule keeps current.</td></tr>'}</tbody>
+            </table>
+          </div>
+          <div class="picker">
+            <label>Service or flow<select id="jobTarget">${jobOptions.length ? optionList(jobOptions, jobOptions[0][0]) : '<option value="">Add a service to a feature first</option>'}</select></label>
+            <label>Sequence<input type="number" id="jobSequence" step="1" min="0" value="10"></label>
+            <button class="button" id="addJob"${jobOptions.length ? "" : " disabled"}>Add job</button>
+          </div>
+        </section>`;
+    }
+
+    function renderConfigurationEditor(configuration) {
+      return `
+        <div class="editor-head">
+          <div><h2>${escapeHtml(configuration.key || "Untitled configuration")}</h2><p class="muted">Integration configurations that flow configurations map to. The key cannot change once flows are mapped to it.</p></div>
+          <button class="button danger" data-delete>Delete configuration</button>
+        </div>
+        <div id="issueBanner">${issueBannerHtml(configuration)}</div>
+        <section class="panel">
+          <div class="panel-title">Configuration</div>
+          <div class="panel-body form-grid">
+            <label>Key<input type="text" data-field="key" value="${escapeHtml(configuration.key)}" placeholder="ivoCompanyId"></label>
+            <label>Title<input type="text" data-field="title" value="${escapeHtml(configuration.title)}" placeholder="IVO company ID"></label>
+            <label>Type<select data-field="type">${optionList(CONFIGURATION_TYPES.map((type) => [type, type]), configuration.type)}</select></label>
+            <label>Options<input type="text" data-field="options" value="${escapeHtml(configuration.options)}" placeholder="Comma-separated values"></label>
+            <label class="span-2">Description<textarea data-field="description" placeholder="What it is for, where the value comes from, and whether it is required.">${escapeHtml(configuration.description)}</textarea></label>
+            <label>Validation<input type="text" data-field="validation" value="${escapeHtml(configuration.validation)}" placeholder="Regular expression or rule"></label>
+            <label class="checkbox-field"><input type="checkbox" data-field="required"${configuration.required ? " checked" : ""}> Required</label>
+          </div>
+        </section>`;
+    }
+
+    function render() {
+      renderRail();
+      renderValidationCount();
+      document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.section === state.section));
+      const pane = byId("editorPane");
+      const item = current();
+      if (!item) {
+        pane.innerHTML = `<div class="empty"><h2>No ${escapeHtml(SECTIONS[state.section].singular)}s yet</h2>
+          <p class="muted">${escapeHtml(emptyHint())}</p></div>`;
+        return;
+      }
+      pane.innerHTML = `<div class="editor">${
+        state.section === "features" ? renderFeatureEditor(item)
+        : state.section === "schedules" ? renderScheduleEditor(item)
+        : renderConfigurationEditor(item)}</div>`;
+      if (state.section === "features") renderServicePicker();
+    }
+
+    function emptyHint() {
+      if (state.section === "features") return "Create a feature for each individual function of this integration, then add one cache-writer service per data object its flows read.";
+      if (state.section === "schedules") return "Create a schedule to run cache-writer services at an interval and sequence. Add services to a feature first.";
+      return "Create the integration configurations that customer flows map their own configurations to.";
+    }
+
+    function renderServicePicker() {
+      const connectorSelect = byId("serviceConnector");
+      const moduleSelect = byId("serviceModule");
+      const objectSelect = byId("serviceObject");
+      if (!connectorSelect || !moduleSelect || !objectSelect) return;
+      const connector = connectorSelect.value;
+      const modules = [...new Set(state.catalog.filter((entry) => entry.connector === connector).map((entry) => entry.module))];
+      moduleSelect.innerHTML = optionList(
+        modules.map((module) => [module, module]),
+        modules.includes(state.serviceModule) ? state.serviceModule : modules[0],
+      );
+      const objects = state.catalog.filter((entry) => entry.connector === connector && entry.module === moduleSelect.value);
+      objectSelect.innerHTML = objects.map((entry) =>
+        `<option value="${escapeHtml(serviceId(entry))}">${escapeHtml(entry.object)}</option>`).join("");
+      byId("addService").disabled = !objects.length;
+    }
+
+    function newItem() {
+      if (state.section === "features") return { name: "New feature", description: "", status: "under-construction", services: [], flows: [] };
+      if (state.section === "schedules") return { name: "New schedule", interval: 1, intervalType: "Hour", activeOnSync: false, jobs: [] };
+      return { key: "", title: "", type: "string", description: "", required: false, options: "", validation: "" };
+    }
+
+    byId("addItem").addEventListener("click", () => update(() => {
+      state.definition[state.section].push(newItem());
+      state.selected[state.section] = state.definition[state.section].length - 1;
+    }));
+
+    byId("railList").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-index]");
+      if (!button) return;
+      state.selected[state.section] = Number(button.dataset.index);
+      render();
+    });
+
+    document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => {
+      state.section = tab.dataset.section;
+      render();
+    }));
+
+    byId("connectorBar").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-connector]");
+      if (!button || button.dataset.connector === state.connectorKey) return;
+      loadIntegration(button.dataset.connector);
+    });
+
+    byId("editorPane").addEventListener("input", (event) => {
+      const item = current();
+      if (!item) return;
+      const target = event.target;
+      const value = target.type === "checkbox" ? target.checked : target.type === "number" ? Number(target.value) : target.value;
+      if (target.dataset.field) {
+        item[target.dataset.field] = value;
+        scheduleSave();
+        renderRail();
+        return;
+      }
+      if (target.dataset.service !== undefined) {
+        item.services[Number(target.dataset.service)][target.dataset.serviceField] = value;
+        scheduleSave();
+        return;
+      }
+      if (target.dataset.job !== undefined) {
+        item.jobs[Number(target.dataset.job)][target.dataset.jobField] = value;
+        scheduleSave();
+        return;
+      }
+      if (target.dataset.flow !== undefined) {
+        item.flows[Number(target.dataset.flow)] = value;
+        scheduleSave();
+      }
+    });
+
+    byId("editorPane").addEventListener("change", (event) => {
+      if (event.target.id === "serviceConnector") {
+        state.serviceConnector = event.target.value;
+        state.serviceModule = null;
+        renderServicePicker();
+        return;
+      }
+      if (event.target.id !== "serviceModule") return;
+      state.serviceModule = event.target.value;
+      renderServicePicker();
+    });
+
+    byId("editorPane").addEventListener("click", (event) => {
+      const item = current();
+      if (!item) return;
+      const target = event.target;
+      if (target.closest("[data-delete]")) {
+        const { title } = railLabel(item, state.section);
+        if (!window.confirm(`Delete ${SECTIONS[state.section].singular} "${title}"? This cannot be undone.`)) return;
+        update(() => {
+          state.definition[state.section].splice(state.selected[state.section], 1);
+          state.selected[state.section] = Math.max(0, state.selected[state.section] - 1);
+        });
+        return;
+      }
+      if (target.id === "addService") {
+        const selected = byId("serviceObject").value;
+        const entry = state.catalog.find((candidate) => serviceId(candidate) === selected);
+        if (!entry) return;
+        if (item.services.some((service) => serviceId(service) === selected)) {
+          window.alert("This feature already has that service. Do not add the same service to a feature more than once.");
+          return;
+        }
+        update(() => item.services.push({ connector: entry.connector, module: entry.module, object: entry.object, description: "", template: false }));
+        return;
+      }
+      if (target.id === "addFlow") {
+        update(() => item.flows.push("New flow"));
+        return;
+      }
+      if (target.id === "addJob") {
+        const [kind, reference] = String(byId("jobTarget").value).split(/:(.*)/s);
+        if (!reference) return;
+        const sequence = Number(byId("jobSequence").value) || 0;
+        const job = kind === "flow"
+          ? { kind: "flow", connector: "", module: "", object: "", flow: reference, sequence }
+          : (() => {
+              const [connector, module, object] = reference.split("/");
+              return { kind: "service", connector, module, object, flow: "", sequence };
+            })();
+        if (item.jobs.some((existing) => existing.kind === job.kind && (job.kind === "flow" ? existing.flow === job.flow : serviceId(existing) === reference))) {
+          window.alert("That service or flow is already on this schedule.");
+          return;
+        }
+        update(() => item.jobs.push(job));
+        return;
+      }
+      const removeService = target.closest("[data-remove-service]");
+      if (removeService) return update(() => item.services.splice(Number(removeService.dataset.removeService), 1));
+      const removeFlow = target.closest("[data-remove-flow]");
+      if (removeFlow) return update(() => item.flows.splice(Number(removeFlow.dataset.removeFlow), 1));
+      const removeJob = target.closest("[data-remove-job]");
+      if (removeJob) return update(() => item.jobs.splice(Number(removeJob.dataset.removeJob), 1));
+    });
+
+    byId("openValidation").addEventListener("click", () => {
+      const blocking = state.validation.filter((issue) => issue.severity === "blocking").length;
+      byId("validationIssues").innerHTML = state.validation.map((issue) =>
+        `<div class="issue ${escapeHtml(issue.severity)}">
+          <strong>${escapeHtml(SECTIONS[issue.area]?.title || issue.area)}${issue.name ? ` · ${escapeHtml(issue.name)}` : ""}</strong>
+          <small>${escapeHtml(issue.message)}</small></div>`).join("")
+        || '<p class="muted">No findings. This integration definition satisfies every composition rule the workbench checks.</p>';
+      byId("validationSummary").textContent = state.validation.length
+        ? `${blocking} blocking · ${state.validation.length - blocking} warnings`
+        : "No findings";
+      byId("validationDialog").showModal();
+    });
+
+    document.querySelectorAll("[data-close-dialog]").forEach((button) =>
+      button.addEventListener("click", () => byId("validationDialog").close()));
+
+    byId("goHome").addEventListener("click", () => { window.location.href = "/"; });
+
+    async function loadIntegration(connectorKey) {
+      state.connectorKey = connectorKey;
+      state.selected = { features: 0, schedules: 0, configurations: 0 };
+      const bundle = await request(`/api/integrations/${encodeURIComponent(connectorKey)}`);
+      state.definition = bundle.definition;
+      state.catalog = bundle.catalog;
+      state.validation = bundle.validation;
+      byId("integrationSubtitle").textContent = `${bundle.definition.connector.name} · ${bundle.catalog.length} cache-writable objects`;
+      window.history.replaceState({}, "", `/integrations?connector=${encodeURIComponent(connectorKey)}`);
+      renderConnectorBar();
+      render();
+      setSaveState("Saved", "var(--cp-success)");
+    }
+
+    (async () => {
+      try {
+        state.connectors = await request("/api/integrations");
+        if (!state.connectors.length) {
+          byId("editorPane").innerHTML = '<div class="empty"><h2>No connectors found</h2><p class="muted">Capture a connector’s data objects under reference/ or reference-sources/ to define an integration for it.</p></div>';
+          return;
+        }
+        const requested = new URLSearchParams(window.location.search).get("connector");
+        const match = state.connectors.find((connector) => connector.key === requested);
+        await loadIntegration((match || state.connectors[0]).key);
+      } catch (error) {
+        byId("editorPane").innerHTML = `<div class="empty"><h2>Unable to load integrations</h2><p class="muted">${escapeHtml(error.message)}</p></div>`;
+      }
+    })();
+  </script>
+</body>
+</html>

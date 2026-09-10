@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pr/v1/object/employee_positions/change.json",
+  "title": "Employee Positions Change Action Schema",
+  "description": "Schema for updating an existing Employee Positions record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

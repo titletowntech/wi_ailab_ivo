@@ -1,0 +1,358 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/fringes/cache.json",
+  "type": "object",
+  "properties": {
+    "__naturalKey": {
+      "type": "string"
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Extra": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Cost_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Category": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Estimated_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Estimated_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Actual_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Actual_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Cost_Update": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Accumulate_As": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Cost_Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Cost_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Bought_Out": {
+      "type": "boolean"
+    },
+    "Original_Estimate": {
+      "type": "string"
+    },
+    "Pending_Estimate_Changes": {
+      "type": "string"
+    },
+    "Approved_Estimate_Changes": {
+      "type": "string"
+    },
+    "Total_Estimate": {
+      "type": "string"
+    },
+    "Original_Estimate_Units": {
+      "type": "string"
+    },
+    "Pending_Est_Unit_Changes": {
+      "type": "string"
+    },
+    "Approved_Est_Unit_Changes": {
+      "type": "string"
+    },
+    "Total_Estimate_Units": {
+      "type": "string"
+    },
+    "Original_Commitment": {
+      "type": "string"
+    },
+    "Pending_Commitment_Changes": {
+      "type": "string"
+    },
+    "Approved_Commitment_Changes": {
+      "type": "string"
+    },
+    "Revised_Commitment": {
+      "type": "string"
+    },
+    "Commitment_Invoiced": {
+      "type": "string"
+    },
+    "JTD_Cost": {
+      "type": "string"
+    },
+    "YTD_Cost": {
+      "type": "string"
+    },
+    "QTD_Cost": {
+      "type": "string"
+    },
+    "MTD_Cost": {
+      "type": "string"
+    },
+    "LM_Cost": {
+      "type": "string"
+    },
+    "NM_Cost": {
+      "type": "string"
+    },
+    "WTD_Cost": {
+      "type": "string"
+    },
+    "LW_Cost": {
+      "type": "string"
+    },
+    "Tax_on_JTD_Cost": {
+      "type": "string"
+    },
+    "Tax_on_YTD_Cost": {
+      "type": "string"
+    },
+    "Tax_on_QTD_Cost": {
+      "type": "string"
+    },
+    "Tax_on_MTD_Cost": {
+      "type": "string"
+    },
+    "Tax_on_LM_Cost": {
+      "type": "string"
+    },
+    "Tax_on_NM_Cost": {
+      "type": "string"
+    },
+    "Tax_on_WTD_Cost": {
+      "type": "string"
+    },
+    "Tax_on_LW_Cost": {
+      "type": "string"
+    },
+    "JTD_Units": {
+      "type": "string"
+    },
+    "YTD_Units": {
+      "type": "string"
+    },
+    "QTD_Units": {
+      "type": "string"
+    },
+    "MTD_Units": {
+      "type": "string"
+    },
+    "LM_Units": {
+      "type": "string"
+    },
+    "NM_Units": {
+      "type": "string"
+    },
+    "WTD_Units": {
+      "type": "string"
+    },
+    "LW_Units": {
+      "type": "string"
+    },
+    "JTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "YTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "QTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "MTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "LM_Dollars_Paid": {
+      "type": "string"
+    },
+    "NM_Dollars_Paid": {
+      "type": "string"
+    },
+    "WTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "LW_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_JTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_YTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_QTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_MTD_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_LM_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_NM_Dollars_Paid": {
+      "type": "string"
+    },
+    "Tax_on_WTD_Dollars_Pd": {
+      "type": "string"
+    },
+    "Tax_on_LW_Dollars_Paid": {
+      "type": "string"
+    },
+    "Percent_Complete": {
+      "type": "string"
+    },
+    "Date_Pct_Complete_Entered": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Previous_Percent_Complete": {
+      "type": "string"
+    },
+    "Msc_Cat_Amt_1": {
+      "type": "string"
+    },
+    "Msc_Cat_Amt_2": {
+      "type": "string"
+    },
+    "Msc_Cat_Amt_3": {
+      "type": "string"
+    },
+    "Msc_Cat_Amt_4": {
+      "type": "string"
+    },
+    "Custom_Total_1_Total": {
+      "type": "string"
+    },
+    "Custom_Total_2_Total": {
+      "type": "string"
+    },
+    "Custom_Total_3_Total": {
+      "type": "string"
+    },
+    "Custom_Total_4_Total": {
+      "type": "string"
+    },
+    "Custom_Total_5_Total": {
+      "type": "string"
+    },
+    "Custom_Total_6_Total": {
+      "type": "string"
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    }
+  },
+  "required": [
+    "Job",
+    "Extra",
+    "Cost_Code",
+    "Category",
+    "__naturalKey"
+  ]
+}

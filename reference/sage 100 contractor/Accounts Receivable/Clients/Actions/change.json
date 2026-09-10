@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/ar/v1/object/clients/change.json",
+  "title": "Clients Change Action Schema",
+  "description": "Schema for updating an existing Clients record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

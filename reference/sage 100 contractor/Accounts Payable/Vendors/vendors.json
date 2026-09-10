@@ -1,0 +1,794 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/ap/2/object/vendors/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "vendor_id": {
+      "type": "integer",
+      "description": "The vendor number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "vendor_name": {
+      "type": "string",
+      "description": "The vendor name",
+      "maxLength": 40
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Enter a brief name for sorting/finding the vendor",
+      "maxLength": 15
+    },
+    "owner": {
+      "type": "string",
+      "description": "Business owner's name (required for 1099 if Federal ID# is a social security number)",
+      "maxLength": 30
+    },
+    "address_1": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 30
+    },
+    "address_2": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 30
+    },
+    "city": {
+      "type": "string",
+      "description": "The city",
+      "maxLength": 25
+    },
+    "state": {
+      "type": "string",
+      "description": "The State abbreviation",
+      "maxLength": 2
+    },
+    "zip": {
+      "type": "string",
+      "description": "The zip code",
+      "maxLength": 10
+    },
+    "federal_id_num": {
+      "type": "string",
+      "description": "The Federal Identification number (used for 1099)",
+      "maxLength": 64
+    },
+    "state_id_num": {
+      "type": "string",
+      "description": "The State Identification number",
+      "maxLength": 20
+    },
+    "resale_num": {
+      "type": "string",
+      "description": "The Resale number",
+      "maxLength": 20
+    },
+    "account_num": {
+      "type": "string",
+      "description": "Enter your account number with the vendor",
+      "maxLength": 20
+    },
+    "license_num": {
+      "type": "string",
+      "description": "The contractor's license number",
+      "maxLength": 20
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 30
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 30
+    },
+    "phone_num": {
+      "type": "string",
+      "description": "The work number",
+      "maxLength": 14
+    },
+    "pager_num": {
+      "type": "string",
+      "description": "The pager number",
+      "maxLength": 14
+    },
+    "fax_num": {
+      "type": "string",
+      "description": "The fax number as dialed (use 1 + area code for long distance, exclude area code for local)",
+      "maxLength": 14
+    },
+    "cell_num": {
+      "type": "string",
+      "description": "The cellular number",
+      "maxLength": 14
+    },
+    "home_num": {
+      "type": "string",
+      "description": "The home number",
+      "maxLength": 14
+    },
+    "email": {
+      "type": "string",
+      "description": "The email address",
+      "maxLength": 75
+    },
+    "discount_rate": {
+      "type": "string",
+      "description": "The discount rate (%) for early payment",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "discount_terms": {
+      "type": "string",
+      "description": "The terms when payment is due to allow a discount (##DY, ##MO, ##TH)",
+      "maxLength": 6
+    },
+    "due_terms": {
+      "type": "string",
+      "description": "The terms when payment is due (##DY, ##MO, ##TH)",
+      "maxLength": 6
+    },
+    "ledger_account": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default ledger account number for posting",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "cost_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The default cost code",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,3})?$",
+      "minimum": 0,
+      "maximum": 99999999999
+    },
+    "cost_type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the default cost type",
+      "minimum": 0,
+      "maximum": 9
+    },
+    "invoice_status": {
+      "type": "integer",
+      "description": "Select the default invoice status",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "po_warning": {
+      "type": "integer",
+      "description": "Select the warning level for invoice entry",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "beginning_balance": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "current_balance": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "vendor_type_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the vendor type",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "1099_type": {
+      "type": "integer",
+      "description": "Select the 1099 type (0-Undetermined, 1-Misc, 2-Rent, 3-Sole Proprietor, 4-Interest, 5-No 1099)",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "minority_type": {
+      "type": "integer",
+      "description": "Select the minority status (0-None, 1-Minority Owned, 2-Women Owned, 3-Disabled Vet)",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "tax_district": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The sales-tax district number",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "internal_vendor": {
+      "type": "integer",
+      "description": "Select if vendor not used for accounting purposes",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "work_comp_rate": {
+      "type": "string",
+      "description": "The workers' compensation rate (%) (for certain states only)",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "use_tax_rate": {
+      "type": "string",
+      "description": "The rate (%) to apply to invoices for use tax",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "default_hot_list": {
+      "type": "integer",
+      "description": "Select to default the vendor's invoices to the hot list"
+    },
+    "purchase_order_type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the default type for purchase orders",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "purchase_order_description": {
+      "type": "string",
+      "description": "The default description for purchase orders",
+      "maxLength": 25
+    },
+    "subcontract_type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the default type for subcontracts",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "subcontract_description": {
+      "type": "string",
+      "description": "The default description for subcontracts",
+      "maxLength": 30
+    },
+    "vendor_notes": {
+      "type": "string",
+      "description": ""
+    },
+    "image_file": {
+      "type": "string",
+      "description": "The path of the bitmap"
+    },
+    "allow_duplicate_invoice__num": {
+      "type": "integer",
+      "description": "Check to allow duplicate AP invoice numbers",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "rfp_type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the default type for RFPs",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "rfp_description": {
+      "type": "string",
+      "description": "The default description for RFPs",
+      "maxLength": 25
+    },
+    "separate_check_for_each_invoice": {
+      "type": "integer",
+      "description": "Check box to print separate checks for each invoice from this vendor",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "contact": {
+      "type": "string",
+      "description": "",
+      "maxLength": 30
+    },
+    "over_po_message_warning_type": {
+      "type": "integer",
+      "description": "0 - No Message, 1 - Warning, 2 - Not allow",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "over_po_message_tolerance_type": {
+      "type": "integer",
+      "description": "0 - No Selection, 1 - No Tolerance, 2 - Flatt Amount, 3 - % of PO, 4 - % Not To Exceed",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "over_po_message_tolerance_amount": {
+      "type": "string",
+      "description": "The amount of tolerance allowed over the PO",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "over_po_message_tolerance_%": {
+      "type": "string",
+      "description": "The percent of the PO allowed",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "over_po_amount_not_to_exceed": {
+      "type": "string",
+      "description": "The amount of tolerance not to exceed over the PO",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "enable_ach_payment": {
+      "type": "integer",
+      "description": "Select if vendor uses ACH payment",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "ach_account_status": {
+      "type": "integer",
+      "description": "Select the vendor's account status",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "account_type": {
+      "type": "integer",
+      "description": "Select the type of bank account",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "routing_num": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 9
+    },
+    "bank_account_number": {
+      "type": "string",
+      "description": "The vendor's bank account number",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "ach_email_receipt_to": {
+      "type": "string",
+      "description": "The email address to receive the ACH payment receipt",
+      "maxLength": 75
+    },
+    "enable_eft_payment": {
+      "type": "integer",
+      "description": "Select if vendor uses EFT payment",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "institution_id_num": {
+      "type": "string",
+      "description": "The bank's institution identification number",
+      "maxLength": 3
+    },
+    "bank_routing_num": {
+      "type": "string",
+      "description": "The vendor's bank routing number",
+      "maxLength": 5
+    },
+    "bank_account_num": {
+      "type": "string",
+      "description": "The vendor's bank account number",
+      "maxLength": 44
+    },
+    "transaction_type": {
+      "type": "string",
+      "description": "The transaction code approved by CPA Standard 005 or leave blank for generic vendor payment",
+      "maxLength": 3
+    },
+    "eft_email_receipt_to": {
+      "type": "string",
+      "description": "The email address to receive the EFT payment receipt",
+      "maxLength": 75
+    },
+    "tax_code_override": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The tax code# for the vendor only if overriding the primary tax code for the vendor's province",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "aatrix_electronic_1099_consent": {
+      "type": "integer",
+      "description": "Select when vendor has consented to an electronic 1099 from Aatrix",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "recipient_email": {
+      "type": "string",
+      "description": "The email address to receive the 1099 from Aatrix",
+      "maxLength": 75
+    },
+    "contacts": {
+      "type": "array",
+      "items": [
+        {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "$id": "http://Sage100.SI.ryvit.com/SIpart/version/object/Vendor/cache.json",
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "vendor_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "vendor_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "contact_name": {
+              "type": "string",
+              "description": "The contact's name",
+              "maxLength": 50
+            },
+            "job_title": {
+              "type": "string",
+              "description": "The contact's job title",
+              "maxLength": 50
+            },
+            "phone_num": {
+              "type": "string",
+              "description": "The contact's phone number",
+              "maxLength": 14
+            },
+            "extension": {
+              "type": "string",
+              "description": "The contact's phone extension",
+              "maxLength": 6
+            },
+            "email": {
+              "type": "string",
+              "description": "The contact's email address",
+              "maxLength": 75
+            },
+            "cell_phone_num": {
+              "type": "string",
+              "description": "The contact's cellular phone number",
+              "maxLength": 14
+            },
+            "fax_num": {
+              "type": "string",
+              "description": "The contact's fax number",
+              "maxLength": 14
+            },
+            "other_num": {
+              "type": "string",
+              "description": "The contact's other phone number",
+              "maxLength": 14
+            },
+            "other_description": {
+              "type": "string",
+              "description": "Enter a description for the contact's other phone number",
+              "maxLength": 25
+            },
+            "notes": {
+              "type": "string",
+              "description": "Enter notes for the contact"
+            },
+            "line_reference": {
+              "type": "string",
+              "description": "",
+              "maxLength": 32
+            },
+            "outllook_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 32
+            },
+            "unique_contact_for_outlook": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "vendor_idnum",
+            "vendor_id",
+            "line_num",
+            "contact_name",
+            "job_title",
+            "phone_num",
+            "extension",
+            "email",
+            "cell_phone_num",
+            "fax_num",
+            "other_num",
+            "other_description",
+            "notes",
+            "line_reference",
+            "unique_contact_for_outlook"
+          ]
+        }
+      ]
+    },
+    "certificates": {
+      "type": "array",
+      "items": [
+        {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "$id": "http://Sage100.SI.ryvit.com/SIpart/version/object/Vendor/cache.json",
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "vendor_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "vendor_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "dscrpt": {
+              "type": "string",
+              "description": "Enter a description of the certificate",
+              "maxLength": 30
+            },
+            "received": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The date when the certificate was received (mm/dd/yyyy)"
+            },
+            "expires": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "The date when the certificate expires (mm/dd/yyyy)"
+            },
+            "warning": {
+              "type": "string",
+              "description": "Enter Y (Yes) to warn of expired certificate",
+              "maxLength": 1
+            },
+            "stop_pay": {
+              "type": "string",
+              "description": "Enter Y (Yes) to stop payment on expiration",
+              "maxLength": 1
+            },
+            "notes": {
+              "type": "string",
+              "description": "Enter notes for this row"
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "vendor_idnum",
+            "vendor_id",
+            "line_num",
+            "description",
+            "warning",
+            "stop_pay",
+            "notes"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "idnum",
+    "vendor_id",
+    "vendor_name",
+    "short_name",
+    "owner",
+    "address_1",
+    "address_2",
+    "city",
+    "state",
+    "zip",
+    "federal_id_num",
+    "state_id_num",
+    "resale_num",
+    "account_num",
+    "license_num",
+    "user_def1",
+    "user_def2",
+    "phone_num",
+    "pager_num",
+    "fax_num",
+    "cell_num",
+    "home_num",
+    "email",
+    "discount_rate",
+    "discount_terms",
+    "due_terms",
+    "invoice_status",
+    "po_warning",
+    "beginning_balance",
+    "current_balance",
+    "1099_type",
+    "minority_type",
+    "internal_vendor",
+    "work_comp_rate",
+    "use_tax_rate",
+    "default_hot_list",
+    "purchase_order_description",
+    "subcontract_description",
+    "vendor_notes",
+    "image_file",
+    "allow_duplicate_invoice__num",
+    "rfp_description",
+    "separate_check_for_each_invoice",
+    "contact",
+    "over_po_message_warning_type",
+    "over_po_message_tolerance_type",
+    "over_po_message_tolerance_amount",
+    "over_po_message_tolerance_%",
+    "over_po_amount_not_to_exceed",
+    "enable_ach_payment",
+    "ach_account_status",
+    "account_type",
+    "routing_num",
+    "bank_account_number",
+    "ach_email_receipt_to",
+    "enable_eft_payment",
+    "institution_id_num",
+    "bank_routing_num",
+    "bank_account_num",
+    "transaction_type",
+    "eft_email_receipt_to",
+    "aatrix_electronic_1099_consent",
+    "recipient_email"
+  ]
+}

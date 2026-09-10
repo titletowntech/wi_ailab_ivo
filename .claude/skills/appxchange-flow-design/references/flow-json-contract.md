@@ -39,7 +39,7 @@ as `generated` on anything you author; only the reviewer approves.
 ```json
 {
   "name": "Sync Vista equipment to IVO",
-  "trigger": "On-demand: one Vista equipment record",
+  "trigger": { "type": "on-demand", "note": "One Vista equipment record per run" },
   "review": { "status": "generated" },
   "configurations": [],
   "reviewQuestions": [],
@@ -47,8 +47,56 @@ as `generated` on anything you author; only the reviewer approves.
 }
 ```
 
-`name` is required and unique across the workspace. `trigger` is required and is a
-human-readable description, not a structured object. `steps` must be non-empty.
+`name` is required and unique across the workspace. `steps` must be non-empty.
+
+## Trigger shape
+
+`trigger` is a structured object. A plain string is still accepted and is migrated on the
+next save into an on-demand trigger whose `note` keeps the original wording, so nothing is
+lost — but author new flows as objects.
+
+`type` is one of `on-demand`, `cache-event`, `action-close-out`, or
+`work-request-batch-ready`. Every flow has exactly one trigger.
+
+| Field | Applies to | Notes |
+| --- | --- | --- |
+| `connector` | cache-event, action-close-out | The connector holding the data object |
+| `dataObject` | cache-event, action-close-out | `Module/object`, e.g. `Equipment Management/equipment` |
+| `subscribedEvents` | cache-event | `Create`, `Update`, `Delete` |
+| `subscribedEvents` | action-close-out | `Any`, `Successful`, `Failed` |
+| `eventOrigin` | cache-event | The connector name, `App Xchange`, or both |
+| `filterExpression` | cache-event | JavaScript; must explicitly `return` |
+| `inputSchemaType` | on-demand | `none` or `custom` |
+| `inputSchema` | on-demand | JSON Schema string when `inputSchemaType` is `custom` |
+| `workRequestType`, `workItemType` | work-request-batch-ready | |
+| `note` | all | Reviewer annotation. Never the trigger's identity |
+| `description` | all | **Derived** on save from the fields above. Do not hand-write it |
+
+```json
+{
+  "type": "cache-event",
+  "connector": "Vista",
+  "dataObject": "Equipment Management/equipment",
+  "subscribedEvents": ["Create", "Update"],
+  "eventOrigin": ["Vista"],
+  "filterExpression": "return flow.trigger.data?.Status === 'A';",
+  "note": "One Vista equipment record per run"
+}
+```
+
+Blocking: a cache-event or action-close-out trigger without a connector, data object, or at
+least one subscribed event; a cache-event trigger with no event origin; a filter expression
+that does not parse or that never returns; a custom input schema that is not valid JSON.
+
+Two rules worth internalizing:
+
+- **Event origin controls loops.** Completed actions also cache write. Select the connector
+  for changes made in the external system and `App Xchange` for changes made by a platform
+  action. Subscribing to both is warned about, because it is how you update one system and
+  immediately update the other forever.
+- **The filter expression must `return`.** Omitting it evaluates as `undefined`, which is
+  falsy, so the flow silently never runs. Use optional chaining — a runtime error surfaces as
+  a trigger error rather than a skipped run.
 
 ## Step shape
 

@@ -1,0 +1,951 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/ap/2/object/invoices/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "invoice_id": {
+      "type": "integer",
+      "description": "Record number (For a new record leave blank)",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "invoice_num": {
+      "type": "string",
+      "description": "The invoice or credit number",
+      "maxLength": 15
+    },
+    "purchase_order_num": {
+      "type": "string",
+      "description": "The customer's purchase order number",
+      "maxLength": 15
+    },
+    "subcontract_num": {
+      "type": "string",
+      "description": "The subcontract number",
+      "maxLength": 15
+    },
+    "vendor_id": {
+      "type": "integer",
+      "description": "The vendor number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "job_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The job number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "phase_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Enter a phase number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "description": {
+      "type": "string",
+      "description": "Enter a description of the invoice or credit",
+      "maxLength": 30
+    },
+    "invoice_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The invoice date (mm/dd/yyyy)"
+    },
+    "due_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date payment is due (mm/dd/yyyy)"
+    },
+    "reference_num": {
+      "type": "string",
+      "description": "The invoice or credit number to apply this entry to",
+      "maxLength": 15
+    },
+    "discount_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the discount will expire (mm/dd/yyyy)"
+    },
+    "invoice_type_id": {
+      "type": "integer",
+      "description": "Select the invoice type",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "status": {
+      "type": "integer",
+      "description": "Invoice status (1-Open, 2-Review, 3-Dispute, 4-Paid, 5-Void)",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "2nd_payee": {
+      "type": "string",
+      "description": "The second payee's name for two-party checks",
+      "maxLength": 30
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 30
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 30
+    },
+    "discount": {
+      "type": "string",
+      "description": "Discount amount available",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "retention": {
+      "type": "string",
+      "description": "The amount to retain",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "set_to_pay": {
+      "type": "string",
+      "description": "The invoice amount to pay",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "paid": {
+      "type": "string",
+      "description": "Amount that has been paid",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "disc_credit": {
+      "type": "string",
+      "description": "Discount amount taken on the invoice",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "invoice_total": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "variance": {
+      "type": "string",
+      "description": "Enter adjustment for differences between PO and invoice",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": -99999,
+      "maximum": 999999
+    },
+    "freight": {
+      "type": "string",
+      "description": "The freight charges",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": -99999,
+      "maximum": 999999
+    },
+    "total_paid": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "balance": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "net_due": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "period": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "entered": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "link_num": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "user": {
+      "type": "string",
+      "description": "",
+      "maxLength": 128
+    },
+    "batch_num": {
+      "type": "integer",
+      "description": "Batch number (for batch reports)",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "hot_list": {
+      "type": "integer",
+      "description": "Add record to hot list",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "shipping_num": {
+      "type": "string",
+      "description": "The shipping tag or ticket number",
+      "maxLength": 15
+    },
+    "work_comp": {
+      "type": "string",
+      "description": "Workers' compensation amount (calculated from vendor's comp rate)",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "use_tax_rate": {
+      "type": "string",
+      "description": "Use tax amount (calculated from vendor's tax rate)",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "edit_void_ref": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999999999
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "description": "Record # of original invoice which is now voided"
+    },
+    "total": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "holdback": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "hb_billed": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "hb_remain": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "pst": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qst": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "gst": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "hst": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "invoice_amount": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "gst_hst": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "posting_year": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "tax_code": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The tax code number that defaults to the grid",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "ritc": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "line_items": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "part_num": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "The part number",
+              "minimum": 0,
+              "maximum": 922330000000000
+            },
+            "description": {
+              "type": "string",
+              "description": "Enter a description of the part",
+              "maxLength": 75
+            },
+            "alpha_part_num": {
+              "type": "string",
+              "description": "Vendor's part number",
+              "maxLength": 30
+            },
+            "unit": {
+              "type": "string",
+              "description": "The unit of measure (lnft, each, lb, etc.)",
+              "maxLength": 10
+            },
+            "quantity": {
+              "type": "string",
+              "description": "The quantity (enter a negative for credits)",
+              "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,4})?$",
+              "minimum": -999999,
+              "maximum": 9999999
+            },
+            "price": {
+              "type": "string",
+              "description": "The price per unit",
+              "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{1,6})?$",
+              "minimum": 0,
+              "maximum": 99999999
+            },
+            "total": {
+              "type": "string",
+              "description": "Quantity x price=total",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "holdback": {
+              "type": "string",
+              "description": "The amount of Holdback",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "invoice_amount": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "tax_code": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "The tax code number for the line",
+              "minimum": 0,
+              "maximum": 9999
+            },
+            "gst_amount": {
+              "type": "string",
+              "description": "The amount of GST tax",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "pst_amount": {
+              "type": "string",
+              "description": "The amount of PST tax",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "hst_amount": {
+              "type": "string",
+              "description": "The amount of HST tax",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "account_id": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "The default ledger account number for posting",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "subaccount_id": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "The subsidiary account or department number",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "location": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "The inventory location number",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "part_serial_num": {
+              "type": "string",
+              "description": "The serial number of the part (for inventory)",
+              "maxLength": 25
+            },
+            "user_defined": {
+              "type": "string",
+              "description": "User defined",
+              "maxLength": 20
+            },
+            "subject_to_gst": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "gst_amount_overriden": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "subject_to_pst": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "pst_amount_overriden": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "subject_to_hst": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "hst_amount_overriden": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "holdback_overriden": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "subcontract_line_reference__num": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 32
+            },
+            "related_invoice_record_id": {
+              "type": "integer",
+              "description": "Related invoice record# (for Canada Holdback Billing)",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "invoice_idnum",
+            "invoice_id",
+            "line_num",
+            "description",
+            "alpha_part_num",
+            "unit",
+            "quantity",
+            "price",
+            "total",
+            "holdback",
+            "invoice_amount",
+            "gst_amount",
+            "pst_amount",
+            "hst_amount",
+            "part_serial_num",
+            "user_defined",
+            "subject_to_gst",
+            "gst_amount_overriden",
+            "subject_to_pst",
+            "pst_amount_overriden",
+            "subject_to_hst",
+            "hst_amount_overriden",
+            "holdback_overriden",
+            "related_invoice_record_id"
+          ]
+        }
+      ],
+      "writeOnly": true
+    },
+    "secondary_payees": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "second_payee": {
+              "type": "string",
+              "description": "The second payee's name",
+              "maxLength": 40
+            },
+            "amount": {
+              "type": "string",
+              "description": "The amount of the payment to the second payee",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "paid": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": 0,
+              "maximum": 999999999
+            },
+            "balance": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": 0,
+              "maximum": 999999999
+            },
+            "to_pay": {
+              "type": "string",
+              "description": "The amount to pay this payee",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": 0,
+              "maximum": 999999999
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "invoice_idnum",
+            "invoice_id",
+            "line_num",
+            "second_payee",
+            "amount",
+            "paid",
+            "balance",
+            "to_pay"
+          ]
+        }
+      ]
+    },
+    "payments": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "invoice_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "description": {
+              "type": "string",
+              "description": "",
+              "maxLength": 12
+            },
+            "trans_num": {
+              "type": "string",
+              "description": "",
+              "maxLength": 15
+            },
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "period": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 12
+            },
+            "amount_paid": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "discount_taken": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "credit_taken": {
+              "type": "string",
+              "description": "",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "ledger_ref_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "ach_payment_batch_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999
+            },
+            "posting_year": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "invoice_idnum",
+            "invoice_id",
+            "description",
+            "trans_num",
+            "period",
+            "amount_paid",
+            "discount_taken",
+            "credit_taken",
+            "ledger_ref_num",
+            "ach_payment_batch_num",
+            "posting_year"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "idnum",
+    "invoice_id",
+    "invoice_num",
+    "purchase_order_num",
+    "subcontract_num",
+    "vendor_id",
+    "description",
+    "reference_num",
+    "invoice_type_id",
+    "status",
+    "2nd_payee",
+    "user_def1",
+    "user_def2",
+    "discount",
+    "retention",
+    "set_to_pay",
+    "paid",
+    "disc_credit",
+    "invoice_total",
+    "variance",
+    "freight",
+    "total_paid",
+    "balance",
+    "net_due",
+    "period",
+    "link_num",
+    "user",
+    "batch_num",
+    "hot_list",
+    "shipping_num",
+    "work_comp",
+    "use_tax_rate",
+    "notes",
+    "edit_void_ref",
+    "total",
+    "holdback",
+    "hb_billed",
+    "hb_remain",
+    "pst",
+    "qst",
+    "gst",
+    "hst",
+    "invoice_amount",
+    "gst_hst",
+    "posting_year",
+    "ritc"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/CostCode/cache.json",
+  "type": "object",
+  "properties": {
+    "__naturalKey": {
+      "type": "string"
+    },
+    "Accumulate_As": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Billing_Item_Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Bought_Out": {
+      "type": "boolean"
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Cost_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Cost_Code": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Cost_Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Exempt_Status": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Extra": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Group_Cost_Code": {
+      "type": "boolean"
+    },
+    "Item": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Job": {
+      "type": "string"
+    },
+    "Orig_Production_Units_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Orig_Scheduled_Value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Send_Cost_to_Billings": {
+      "type": "boolean"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Stored_Material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Use_Empl_Work_StateLocal": {
+      "type": "boolean"
+    },
+    "Verbal_Okay_Schdld_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Bought_Out",
+    "Cost_Code",
+    "Exempt_Status",
+    "Extra",
+    "Group_Cost_Code",
+    "Job",
+    "Send_Cost_to_Billings",
+    "Use_Empl_Work_StateLocal",
+    "__naturalKey"
+  ]
+}

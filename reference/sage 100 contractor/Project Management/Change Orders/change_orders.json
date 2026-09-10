@@ -1,0 +1,605 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/ChangeOrder/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "RECORD_id": {
+      "type": "integer",
+      "description": "Record number (For a new record leave blank)",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "change_num": {
+      "type": "string",
+      "description": "The change order number",
+      "maxLength": 20
+    },
+    "order_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Date of the change order (mm/dd/yyyy)"
+    },
+    "job": {
+      "type": "integer",
+      "description": "Enter a job number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "phase": {
+      "type": "integer",
+      "description": "Enter a phase number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "description": {
+      "type": "string",
+      "description": "Enter a description of the change work",
+      "maxLength": 50
+    },
+    "reason": {
+      "type": "string",
+      "description": "The reason for the change work",
+      "maxLength": 50
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "client_po_num": {
+      "type": "string",
+      "description": "The client's purchase order number (for reference only)",
+      "maxLength": 30
+    },
+    "submitted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the change was submitted (mm/dd/yyyy)"
+    },
+    "approved_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of approval (mm/dd/yyyy)"
+    },
+    "invoiced": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when an invoice is created"
+    },
+    "delay_requested": {
+      "type": "integer",
+      "description": "The number of days of delay requested",
+      "minimum": -999,
+      "maximum": 9999
+    },
+    "delay_approved": {
+      "type": "integer",
+      "description": "The number of approved days of delay",
+      "minimum": -999,
+      "maximum": 9999
+    },
+    "type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the type of change order you are creating",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "status": {
+      "type": "integer",
+      "description": "Prime change status (1-Approved, 2-Open, 3-Review, 4-Disputed, 5-Void, 6-Rejected)",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "submitted_to": {
+      "type": "string",
+      "description": "The name/agency to whom the change was submitted",
+      "maxLength": 50
+    },
+    "submitted_by": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "requested": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "approved_amount": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "budget": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "overhead": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "approved_profit": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "requested_profit": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "entered": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "user": {
+      "type": "string",
+      "description": "",
+      "maxLength": 128
+    },
+    "scope": {
+      "type": "string",
+      "description": ""
+    },
+    "hot_list": {
+      "type": "integer",
+      "description": "Add record to hot list",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "lock_edit": {
+      "type": "integer",
+      "description": "Select to prevent editing",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "approved_period": {
+      "type": "integer",
+      "description": "Accounting Period",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "gross_margin": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "req_gross_margin": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,4})?$",
+      "minimum": -99,
+      "maximum": 999
+    },
+    "estimate": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "estimated_o_h": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "upgrade": {
+      "type": "integer",
+      "description": "Check box for upgrade change order",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "posting_year": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "prime_change_details": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/PrimeChangeDetails/cache.json",
+        "type": "object",
+        "properties": {
+          "idnum": {
+            "type": "string",
+            "description": "",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "PARENT_idnum": {
+            "type": "string",
+            "description": "",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "RECORD_id": {
+            "type": "integer",
+            "description": "",
+            "minimum": 0,
+            "maximum": 9999999999
+          },
+          "line_num": {
+            "type": "integer",
+            "description": "",
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "description": {
+            "type": "string",
+            "description": "Enter a description of the change work",
+            "maxLength": 50
+          },
+          "estimated": {
+            "type": "string",
+            "description": "Estimated amount of cost for change order row",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "minimum": -99999999,
+            "maximum": 999999999
+          },
+          "o_h_rate": {
+            "type": "string",
+            "description": "The rate (%) of overhead",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,4})?$",
+            "minimum": 0,
+            "maximum": 999
+          },
+          "profit_rate": {
+            "type": "string",
+            "description": "The rate (%) of profit",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,4})?$",
+            "minimum": 0,
+            "maximum": 999
+          },
+          "requested": {
+            "type": "string",
+            "description": "The amount of requested change to the bid",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "minimum": -99999999,
+            "maximum": 999999999
+          },
+          "approved": {
+            "type": "string",
+            "description": "The amount of approved change to the bid (modifies the bid amount)",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "minimum": -99999999,
+            "maximum": 999999999
+          },
+          "cost_code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Enter a cost code",
+            "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,3})?$",
+            "minimum": 0,
+            "maximum": 99999999999
+          },
+          "cost_type": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Enter a cost type",
+            "minimum": 0,
+            "maximum": 9
+          },
+          "user_defined": {
+            "type": "string",
+            "description": "User defined",
+            "maxLength": 50
+          },
+          "notes": {
+            "type": "string",
+            "description": "Enter notes for this row (for client)"
+          },
+          "insdte": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "insusr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 128
+          },
+          "upddte": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "updusr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "idnum",
+          "PARENT_idnum",
+          "RECORD_id",
+          "line_num"
+        ]
+      }
+    },
+    "budget_sub_change_details": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/BudgetSubChangeDetails/cache.json",
+        "type": "object",
+        "properties": {
+          "idnum": {
+            "type": "string",
+            "description": "",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "PARENT_idnum": {
+            "type": "string",
+            "description": "",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+          },
+          "RECORD_id": {
+            "type": "integer",
+            "description": "",
+            "minimum": 0,
+            "maximum": 9999999999
+          },
+          "line_num": {
+            "type": "integer",
+            "description": "",
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "description": {
+            "type": "string",
+            "description": "Enter a description of the change work",
+            "maxLength": 50
+          },
+          "budget_hours": {
+            "type": "string",
+            "description": "The change in budgeted labor hours",
+            "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+            "minimum": -9999,
+            "maximum": 99999
+          },
+          "budget_units": {
+            "type": "string",
+            "description": "The change in units (for unitary billing)",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,4})?$",
+            "minimum": -999999,
+            "maximum": 9999999
+          },
+          "budget_amount": {
+            "type": "string",
+            "description": "Amount of change to the budget (modifies the budgeted amount)",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+            "minimum": -99999999,
+            "maximum": 999999999
+          },
+          "vendor": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The vendor number",
+            "minimum": 0,
+            "maximum": 9999999999
+          },
+          "subcontract": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The subcontract record number",
+            "minimum": 0,
+            "maximum": 9999999999
+          },
+          "subcontract_line": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Select the line from the subcontract this change affects, or leave blank if new item for subcontract",
+            "minimum": 0,
+            "maximum": 999999
+          },
+          "change_num": {
+            "type": "string",
+            "description": "The subcontract change order number",
+            "maxLength": 20
+          },
+          "status": {
+            "type": "integer",
+            "description": "Sub change status (1-Approved, 2-Open, 3-Review, 4-Dispute, 5-Void, 6-Rejected)",
+            "minimum": 0,
+            "maximum": 6
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The date of approval by subcontractor (mm/dd/yyyy)"
+          },
+          "cost_code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Enter a cost code",
+            "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,3})?$",
+            "minimum": 0,
+            "maximum": 99999999999
+          },
+          "cost_type": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Enter a cost type",
+            "minimum": 0,
+            "maximum": 9
+          },
+          "user_defined": {
+            "type": "string",
+            "description": "User defined",
+            "maxLength": 50
+          },
+          "change_order_notes": {
+            "type": "string",
+            "description": "Enter notes for this row"
+          },
+          "subcontract_line_reference__num": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 32
+          },
+          "insdte": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "insusr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 128
+          },
+          "upddte": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "updusr": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "idnum",
+          "PARENT_idnum",
+          "RECORD_id",
+          "line_num"
+        ]
+      }
+    }
+  },
+  "required": [
+    "idnum",
+    "RECORD_id",
+    "change_num"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pr/v1/object/employees/add.json",
+  "title": "Employees Add Action Schema",
+  "description": "Schema for adding a new Employees record.",
+  "type": "object",
+  "properties": {}
+}

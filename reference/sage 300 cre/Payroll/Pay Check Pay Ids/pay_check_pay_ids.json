@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/pay_check_pay_ids/cache.json",
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Sequence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period_End_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Liability_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

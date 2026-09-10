@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/union_items/cache.json",
+  "type": "object",
+  "properties": {
+    "Union_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Union_Local": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Union_Class": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Item_Sequence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Pay_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Deduction_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fringe_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,8 +1,12 @@
 # File Layout
 
-IVO-owned reference contracts are shared across customers. Each customer object has one `input/` tree for externally supplied files and one `output/` tree for generated or reviewed artifacts.
+IVO-owned reference contracts are shared across customers. Each customer object has one `input/` tree for externally supplied files and one `output/` tree for generated or reviewed artifacts. Integration definitions are shared across every customer on the same ERP connector; see [Integration definitions](integration-definitions.md).
 
 ```text
+integrations/
+  <connector>/
+    definition.json                # features, job schedules, integration configurations
+
 reference-sources/
   ivo/
     <object>/
@@ -16,6 +20,7 @@ reference-sources/
 reference/
   ivo/
     README.md
+    modules.json                 # groups IVO objects into modules
     <object>/
       schema.json
       field-catalog.csv
@@ -27,8 +32,11 @@ customers/
       generated.json              # immutable AI-generated evidence
       draft.json                  # current reviewer-edited canonical workspace
       approved.json               # latest approved workspace contract
-      revisions/
-        <approval-timestamp>.json  # immutable approval snapshot
+      discovery.json              # transcripts, notes, and tagged customer decisions
+      versions/
+        <timestamp>.json           # session, checkpoint, and approval snapshots
+    input/
+      context/                    # imported transcripts and shared supporting documents
     <object>/
       table.json                    # selected IVO reference for this customer table
       input/

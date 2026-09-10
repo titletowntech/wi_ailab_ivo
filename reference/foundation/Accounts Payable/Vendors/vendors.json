@@ -1,0 +1,758 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "vendor_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "sort_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "zip_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "phone_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "fax_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "email_address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100,
+      "description": ""
+    },
+    "contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "credit_limit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "vendor_since": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "minority": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ship_to_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "terms_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "print_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "federal_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "hold_payment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_gl_account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "tax_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "require_po": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "retainage_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "pay_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ins_certificate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ins_date_expires": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "wc_certificate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "wc_date_expires": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "check_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "check_desc_print_method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "misc_flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "reporting_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "fax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "phone_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "vendor_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "pay_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ship_to_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "terms_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "reporting_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "lien_waiver_default": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "waiver_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_trade_work": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_signature_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "vendor_name_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "postal_code_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "foreign_postal_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "name_control_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "federal_id_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "vendor_name_1099_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "name_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "certificate_1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certificate_date_expires_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "certificate_2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certificate_date_expires_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "certificate_3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certificate_date_expires_3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "certificate_4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certificate_date_expires_4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "certificate_5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certificate_date_expires_5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "address_1_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "address_2_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "city_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "state_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "country_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "zip_code_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "postal_code_flag_1099": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "foreign_postal_code_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "use_1099_address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_tax_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "direct_payment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "federal_id_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "default_fuel_po": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "extension_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "recipient_last_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "recipient_first_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "recipient_middle_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "recipient_name_suffix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "print_invoice_desc": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_payment_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "vendor_no",
+    "record_status",
+    "row_unique_id",
+    "lien_waiver_default",
+    "postal_code_flag",
+    "federal_id_type",
+    "certificate_1",
+    "certificate_2",
+    "certificate_3",
+    "certificate_4",
+    "certificate_5",
+    "postal_code_flag_1099",
+    "default_tax_type",
+    "direct_payment",
+    "default_fuel_po",
+    "print_invoice_desc",
+    "record_guid"
+  ]
+}

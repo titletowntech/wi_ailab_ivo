@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/ExtrasSubJobBasics/cache.json",
+  "type": "object",
+  "properties": {
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Approved_Commitment_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Exempt_from_Finance_Charge": {
+      "type": "boolean"
+    },
+    "Extra": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Finance_Charge_Flat_Rate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_Charge_Percentage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_Charge_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Original_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Contract_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Stored_Material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Verbal_Okay_Contract_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "__custom_fields": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "Exempt_from_Finance_Charge",
+    "Extra",
+    "Job"
+  ]
+}

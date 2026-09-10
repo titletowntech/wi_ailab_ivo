@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "connector": {
+    "key": "sage-100-contractor",
+    "name": "Sage 100 Contractor"
+  },
+  "name": "Sage 100 Contractor integration",
+  "description": "",
+  "features": [],
+  "schedules": [],
+  "configurations": [],
+  "updatedAt": "2026-09-10T02:54:28.688Z"
+}

@@ -1,0 +1,492 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Commitment_CO/cache.json",
+  "type": "object",
+  "properties": {
+    "Commitment_CO_Index": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "Job_Index": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Commitment_Index": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Commitment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Vendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Number_Sort_Key": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 38
+    },
+    "Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Schedule_Impact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Revised_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4000
+    },
+    "Signed_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "CCO_Misc_Text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Release_to_Accounting": {
+      "type": "boolean"
+    },
+    "Revise_Commitment": {
+      "type": "boolean"
+    },
+    "Total": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLenght": 15
+    },
+    "Revised_Commitment_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Commitment_Time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Not_Issued_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Pending_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Approved_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Prev_Approved_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Actual_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Commitment_Co_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Commitment_Co_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "__custom_fields": {
+      "type": "object"
+    },
+    "Line_Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "schema": {
+          "Commitment_CO_Detail_Index": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "Commitment_CO_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 1000
+          },
+          "Units": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Unit_Cost": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Unit_Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6
+          },
+          "Tax_Group": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6
+          },
+          "Pre_Tax_Amount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Tax": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Amount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Job_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Extra": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Cost_Code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15,
+            "description": "12 characters plus up to 3 punctuation characters"
+          },
+          "Category": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3
+          },
+          "Reference_No": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Price_Date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Source_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Source_Number": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "CCOD_Misc": {
+            "type": "boolean"
+          },
+          "CCOD_Misc_Text": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 250
+          },
+          "CCOD_Midsc_Date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "CCOD_Misc_List": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "CCOD_M_Amount": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Commitment_Item_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Commitment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Commitment_Item": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5
+          },
+          "Change_Order_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Change_Request_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Change_Request_Detail_Index": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "Last_Used_NonCosted_Tax": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "User_Pre_Tax_Amount": {
+            "type": "boolean"
+          },
+          "User_Amount": {
+            "type": "boolean"
+          },
+          "Operator_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Date_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Time_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Row_ID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 36
+          },
+          "Row_Version": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          }
+        },
+        "required": [
+          "Commitment_CO_Detail_Index"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Commitment_CO_Index"
+  ]
+}

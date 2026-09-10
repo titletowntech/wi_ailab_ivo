@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/xml/v1/object/ap_messaging_invoice/add.json",
+  "title": "AP Messaging Invoice Add Action Schema",
+  "description": "Schema for adding a new AP Messaging Invoice record.",
+  "type": "object",
+  "properties": {}
+}

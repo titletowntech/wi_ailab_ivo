@@ -1,0 +1,502 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/PendingPOSync/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "po_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "date": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "vendor_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "po_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "po_format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "md_user": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_created": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "po_submitted": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "UserID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "UserName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_created_by": {
+      "type": "string",
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_created_on": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_modified_by": {
+      "type": "string",
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "po_no_changed": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "vendor_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "subcontract_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "source_field": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "retainage_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "terms_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "terms_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "change_order_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "change_order_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__itemDetails": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/PendingPOSync/cache.json",
+        "type": "object",
+        "properties": {
+          "job_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "date": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-DD"
+          },
+          "vendor_no": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "item_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 16,
+            "description": ""
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200,
+            "description": ""
+          },
+          "quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+            "description": ""
+          },
+          "unit_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5,
+            "description": ""
+          },
+          "unit_cost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,6})?$",
+            "description": ""
+          },
+          "md_user": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "po_created": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "po_submitted": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "UserID": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": ""
+          },
+          "UserName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": ""
+          },
+          "record_status": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "row_created_by": {
+            "type": "string",
+            "maxLength": 32,
+            "description": ""
+          },
+          "row_created_on": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-DD"
+          },
+          "row_modified_by": {
+            "type": "string",
+            "maxLength": 32,
+            "description": ""
+          },
+          "row_modified_on": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Format: YYYY-MM-DD"
+          },
+          "row_unique_id": {
+            "type": "integer",
+            "description": ""
+          },
+          "company_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "item_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 16,
+            "description": ""
+          },
+          "job_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "po_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "unit_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "vendor_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "record_guid": {
+            "type": "string",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+            "description": ""
+          },
+          "phase_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "cost_code_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "cost_class_no": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5,
+            "description": ""
+          },
+          "cost_class_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "cost_code_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "phase_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "change_order_no": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "matching_record_guid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 38,
+            "description": ""
+          },
+          "change_order_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "date",
+          "vendor_no",
+          "description",
+          "quantity",
+          "unit_cost",
+          "po_created",
+          "po_submitted",
+          "record_status",
+          "row_created_by",
+          "row_created_on",
+          "row_modified_by",
+          "row_modified_on",
+          "row_unique_id",
+          "record_guid",
+          "change_order_no"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "po_no",
+    "date",
+    "vendor_no",
+    "amount",
+    "po_format",
+    "po_created",
+    "po_submitted",
+    "record_status",
+    "row_created_by",
+    "row_created_on",
+    "row_modified_by",
+    "row_modified_on",
+    "row_unique_id",
+    "po_no_changed",
+    "po_status",
+    "subcontract_flag",
+    "source_field",
+    "record_guid",
+    "change_order_no"
+  ]
+}

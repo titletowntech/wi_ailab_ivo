@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "defaultModule": "Equipment Management",
+  "modules": {
+    "Equipment Management": [
+      "Equipment",
+      "Equipment_Group",
+      "Equipment_Manufacturer",
+      "Equipment_PM_Performed",
+      "Equipment_PM_Setup",
+      "Equipment_Specification",
+      "Equipment_Status",
+      "Meter",
+      "Move",
+      "WorkOrder",
+      "WorkOrder_PM_Performed",
+      "WorkOrder_Status",
+      "WorkOrder_Substatus",
+      "Work_Order_Assignment"
+    ],
+    "Headquarters": [
+      "Company_Division",
+      "Company_Equipment_PM_Template",
+      "Company_Equipment_Specification",
+      "Company_Equipment_Status",
+      "Company_Organization"
+    ],
+    "Payroll": [
+      "Employee",
+      "Group",
+      "Linked_User"
+    ],
+    "Project Management": [
+      "Employee_Pay_Class",
+      "Equipment_Pay_Class",
+      "Job",
+      "Job_Cost_Code",
+      "Job_Item_Code",
+      "Job_Link_Code"
+    ]
+  }
+}

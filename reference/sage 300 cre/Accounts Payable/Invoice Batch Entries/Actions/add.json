@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/ap/v1/object/invoice_batch_entries/add.json",
+  "title": "Invoice Batch Entries Add Action Schema",
+  "description": "Schema for adding a new Invoice Batch Entries record.",
+  "type": "object",
+  "properties": {}
+}

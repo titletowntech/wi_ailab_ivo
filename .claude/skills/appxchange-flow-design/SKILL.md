@@ -15,7 +15,9 @@ has no flow import, so a human rebuilds the approved flow in the UI by hand.
    a file under `reference/`, `reference-sources/`, or the customer's approved mapping.
 2. **Generated evidence and reviewer decisions stay separate.** Write to
    `customers/<KEY>/workspace/draft.json`. Never edit `generated.json`, `approved.json`, or
-   anything in `revisions/`.
+   anything in `versions/`.
+   Read `discovery.json` first — its `open` decisions are what the customer has asked for and
+   nobody has applied yet. See [Discovery log and flow versions](../../../docs/discovery-and-versions.md).
 3. **Unresolved decisions become `reviewQuestions`, not guesses.** A plausible default that
    nobody confirmed is a question. Say what you assumed and why it needs confirmation.
 4. **Do not change customer CSVs, mapping evidence, or reference contracts** while authoring

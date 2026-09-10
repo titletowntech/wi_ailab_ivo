@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pm/v1/object/cost_code/add.json",
+  "title": "Cost Code Add Action Schema",
+  "description": "Schema for adding a new Cost Code record.",
+  "type": "object",
+  "properties": {}
+}

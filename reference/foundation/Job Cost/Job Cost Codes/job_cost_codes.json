@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/JobCostCode/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "job_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "cost_basis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "cost_code_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "compute_variance": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "um_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "production_method": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "archive": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "original_quantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "adjusting_quantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "bid_amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "certified_payroll": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ignore_home_job": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "wc_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "cost_code_method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "gl_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 23,
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "um_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "wc_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_service_repair": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "dept_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ap_invoice_gl_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "dept_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "gen_liab_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "gen_liab_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "phq_imported": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 23,
+      "description": "Format: YYYY-MM-DD"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "job_no",
+    "phase_no",
+    "cost_code_no",
+    "row_unique_id"
+  ]
+}

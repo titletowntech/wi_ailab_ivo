@@ -1,0 +1,734 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/PoHeaders/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_No": {
+      "type": "integer",
+      "description": ""
+    },
+    "PO_Sub_No": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Transaction_Date": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vendor_No": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Job_No": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "Retainage_Percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "GL_Expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Verify_Distribution_Totals": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Printed_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Buyer_No": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Delivery_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Ship_To_No": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "terms_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ship_via_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "FOB": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "Invoice_Chg_Ord_Against": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Closed_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "Manual_Close": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Record_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Row_Modified_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "Row_Modified_On": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "buyer_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ship_to_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ship_via_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "vendor_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_sub_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "terms_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "lien_waiver_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "waiver_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_trade_work": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_signature_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_job_owner": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45,
+      "description": ""
+    },
+    "waiver_job_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_job_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_job_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "waiver_job_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "waiver_job_zip_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "waiver_job_county": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "printable_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "header_format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "body_format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "instructions": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "shipto_address_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "other_contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "other_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "other_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "other_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "other_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "other_zip_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "shipto_job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "force_final_waiver_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "calculate_sales_tax_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tax_exempt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tax_exempt_cert": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "tax_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "tax_base": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "goods_service_amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "tax_amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "old_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "verify_invoice_amount": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "verify_distributions": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "design_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "design_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "Internal_Batch_Number": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ins_certificate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ins_date_expires": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "allow_po_exceed_invoice_percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "job_change_order_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_change_order_seq": {
+      "type": "integer",
+      "description": ""
+    },
+    "job_change_order_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "lien_waiver_format_ap": {
+      "type": "string",
+      "maxLength": 5,
+      "description": ""
+    },
+    "header_on_first_page": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "footer_comment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "description": ""
+    },
+    "dispatch_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "preview_float_summary": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "preview_print_title": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "dispatch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "lien_waiver_format_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "lien_waiver_design_no_ap": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "wp_design_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "warehouse_or_job_transfer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_warehouse_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "default_warehouse_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "wp_design_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_payable_flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "allow_po_exceed_invoice_tax": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "source_field": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_No",
+    "PO_Sub_No",
+    "Transaction_Date",
+    "Vendor_No",
+    "Record_Status",
+    "row_unique_id",
+    "lien_waiver_flag",
+    "printable_flag",
+    "header_format",
+    "body_format",
+    "shipto_address_flag",
+    "force_final_waiver_flag",
+    "calculate_sales_tax_flag",
+    "tax_exempt",
+    "tax_base",
+    "goods_service_amount",
+    "tax_amount",
+    "old_flag",
+    "verify_invoice_amount",
+    "verify_distributions",
+    "format",
+    "ins_certificate",
+    "allow_po_exceed_invoice_percent",
+    "job_change_order_seq",
+    "lien_waiver_format_ap",
+    "header_on_first_page",
+    "preview_float_summary",
+    "preview_print_title",
+    "tax_type",
+    "lien_waiver_format_type",
+    "allow_po_exceed_invoice_tax",
+    "record_guid",
+    "source_field"
+  ]
+}

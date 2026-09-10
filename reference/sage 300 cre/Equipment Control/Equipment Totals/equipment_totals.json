@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://ryvit.com/equipment_totals.json",
+  "type": "object",
+  "title": "Equipment Totals",
+  "required": [
+    "Equipment"
+  ],
+  "properties": {
+    "Equipment": {
+      "type": [
+        "string"
+      ],
+      "maxLength": 50,
+      "description": "Unique identifier for the equipment"
+    },
+    "Week_To_Date_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Week_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Month_To_Date_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Month_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Year_To_Date_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Year_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Life_To_Date_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Cost_Update_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Week_to_Date_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Week_To_Date_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Week_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Week_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Month_To_Date_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Month_To_Date_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Month_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Month_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Year_To_Date_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Year_To_Date_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Year_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Year_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Life_To_Date_Rev_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Life_To_Date_Revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Revenue_Update_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}

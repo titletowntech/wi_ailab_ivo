@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/InvoicePayment/cache.json",
+  "type": "object",
+  "required": [
+    "id",
+    "currentPeriod",
+    "previousPeriod"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentPeriod": {
+      "type": "object",
+      "required": [
+        "code",
+        "endDate"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "endDate": {
+          "type": "string"
+        }
+      }
+    },
+    "previousPeriod": {
+      "type": "object",
+      "required": [
+        "code",
+        "endDate"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "endDate": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

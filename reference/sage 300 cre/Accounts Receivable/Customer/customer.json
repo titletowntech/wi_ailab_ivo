@@ -1,0 +1,608 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Customer": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Customer_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Trade": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Key_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Key_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Telephone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Email_Address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Established": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Prefix": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Days_Before_Due": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Send_Statement": {
+      "type": "boolean"
+    },
+    "PO_Required": {
+      "type": "boolean"
+    },
+    "Credit_Limit": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Credit_Rating": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_5": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_6": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_7": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_8": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_9": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_10": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Address_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Address_4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_City": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Email_Address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Contact": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Invoice_Format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SM_Invoice_Format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Freq": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Reitanage": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Auto_Text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Auto_Num": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Exempt_from_Finance_Charge": {
+      "type": "boolean"
+    },
+    "Finance_Charge_Rate_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_Charge_Percentage_Rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Finance_Charge_Flat_Rate": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Labor_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Material_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Subcontract_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Equipment_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Overhead_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Other_Rate_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Markup_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Addon_Table": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Discount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Total_Billed_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Labor_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Material_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Subcontract_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Equipment_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Overhead_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Other_Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Resale_Cert": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ABN": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Checklist_1": {
+      "type": "boolean"
+    },
+    "Checklist_1_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_2": {
+      "type": "boolean"
+    },
+    "Checklist_2_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_3": {
+      "type": "boolean"
+    },
+    "Checklist_3_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_4": {
+      "type": "boolean"
+    },
+    "Checklist_4_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_5": {
+      "type": "boolean"
+    },
+    "Checklist_5_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_6": {
+      "type": "boolean"
+    },
+    "Checklist_6_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_7": {
+      "type": "boolean"
+    },
+    "Checklist_7_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_8": {
+      "type": "boolean"
+    },
+    "Checklist_8_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_9": {
+      "type": "boolean"
+    },
+    "Checklist_9_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Checklist_10": {
+      "type": "boolean"
+    },
+    "Checklist_10_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Text_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Text_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Text_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Text_4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Text_5": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Text_6": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "AB_Company_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Customer_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Customer_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Customer",
+    "Name"
+  ]
+}

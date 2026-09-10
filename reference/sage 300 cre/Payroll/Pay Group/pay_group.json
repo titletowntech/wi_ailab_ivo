@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/pay_groups/cache.json",
+  "type": "object",
+  "properties": {
+    "Pay_Group": {
+      "type": "string"
+    },
+    "Pay_Group_Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Salary": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Earnings_Expense_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Burden_Expense_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Frequency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Weeks": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Salary_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Custom_Sort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Round_Net": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Basis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Group_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Group_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Pay_Group"
+  ]
+}

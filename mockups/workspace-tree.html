@@ -104,8 +104,14 @@
     .flow-title.active { border-color: var(--cp-border); background: var(--cp-surface); color: var(--cp-accent); }
     .flow-title strong, .flow-title small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .flow-title small { margin-top: 2px; font-size: 10px; font-weight: 400; }
-    .flow-summary { padding: 12px 16px; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); background: var(--cp-surface-soft); }
+    .flow-summary { width: 100%; padding: 12px 16px; display: block; border: 0; border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); background: var(--cp-surface-soft); color: inherit; text-align: left; }
+    .flow-summary:hover { background: var(--cp-accent-soft); color: var(--cp-accent); }
     .flow-summary strong { display: block; margin-bottom: 3px; }
+    .flow-summary small { display: block; }
+    .checkbox-row { display: flex; gap: 18px; flex-wrap: wrap; }
+    .checkbox-row label { display: flex; align-items: center; gap: 7px; color: var(--cp-text); font-size: 13px; }
+    .checkbox-row input { width: auto; min-height: 0; }
+    .hint { margin-bottom: 12px; }
     .tree { padding: 0 10px 18px; }
     .tree-item { width: 100%; min-height: 40px; padding: 7px 9px; display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; align-items: center; gap: 8px; border: 0; border-radius: 8px; background: transparent; text-align: left; }
     .tree-item:hover { background: var(--cp-surface-soft); }
@@ -199,6 +205,26 @@
     .button.danger { color: var(--cp-danger); }
     .other-view { display: none; padding: 48px 24px; text-align: center; }
     .other-view.active { display: block; }
+    .discovery { width: min(1120px, calc(100% - 32px)); margin: 0 auto 60px; text-align: left; }
+    .discovery-head { margin-bottom: 16px; display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+    .discovery-head-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .discovery-layout { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(340px, 1.2fr); border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); overflow: hidden; }
+    .discovery-list { max-height: 640px; padding: 14px; border-right: 1px solid var(--cp-border); overflow: auto; }
+    .discovery-editor { max-height: 640px; padding: 18px; overflow: auto; }
+    .discovery-filters { margin-bottom: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .entry-body { min-height: 170px; font-family: inherit; line-height: 1.55; }
+    .decision-list { display: grid; gap: 8px; }
+    .decision { padding: 10px; display: grid; grid-template-columns: 132px minmax(0, 1fr) 118px 34px; gap: 8px; align-items: center; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-bg-elevated); }
+    .decision-meta { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .tag { padding: 2px 7px; border: 1px solid var(--cp-border); border-radius: 10px; color: var(--cp-text-muted); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+    .tag.open { border-color: var(--cp-warning); color: var(--cp-warning); }
+    .tag.applied { border-color: var(--cp-success); color: var(--cp-success); }
+    .version-item { width: 100%; padding: 11px 12px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; border: 1px solid var(--cp-border); border-radius: 8px; background: var(--cp-surface); color: inherit; text-align: left; }
+    .version-item:hover { border-color: var(--cp-border-strong); }
+    .version-item.active { border-color: var(--cp-accent); background: var(--cp-accent-soft); }
+    .version-item strong, .version-item small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .restore-row { padding: 9px 11px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--cp-border); border-radius: 8px; }
+    .button.danger { border-color: var(--cp-danger); color: var(--cp-danger); }
     .placeholder-card { width: min(620px, 100%); margin: 0 auto; padding: 28px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-surface); }
     @media (max-width: 760px) {
       header { height: auto; min-height: 64px; padding: 10px 16px; align-items: flex-start; flex-wrap: wrap; }
@@ -233,6 +259,7 @@
       <div class="brand"><button class="icon-button" id="goHome" title="Back to home" aria-label="Back to home"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div class="mark" id="customerMark">?</div><div><h1 id="workspaceTitle">Customer workspace</h1><small id="workspaceDescription">Integration blueprint</small></div></div>
       <div class="header-actions">
         <button class="button" id="openConfigurations">Configuration manager <span class="badge" id="configurationCount">3</span></button>
+        <button class="button" id="openVersions">Versions <span class="badge" id="versionCount">0</span></button>
         <button class="button" id="openValidation">Validation <span class="badge warn" id="validationCount">0</span></button>
         <button class="button primary" id="openReview">Review &amp; export</button>
         <div class="save-state" id="saveState"><span class="save-dot"></span><span>Saved</span></div>
@@ -240,6 +267,7 @@
     </header>
     <nav class="tabs" aria-label="Customer workspace">
       <button class="tab" data-view="overview">Overview</button>
+      <button class="tab" data-view="discovery">Discovery</button>
       <button class="tab" data-view="sources">Sources &amp; mappings</button>
       <button class="tab active" data-view="flows">Flows</button>
     </nav>
@@ -253,9 +281,9 @@
           </div>
         </div>
         <div class="flow-list" id="flowList"></div>
-        <div class="flow-summary"><strong>Flow trigger</strong><small id="flowSummaryText"></small></div>
+        <button class="flow-summary" id="openTrigger" title="Edit flow trigger" aria-label="Edit flow trigger"><strong>Flow trigger</strong><small id="flowSummaryText"></small><small id="flowSummaryNote" class="muted"></small></button>
         <div class="tree" id="tree"></div>
-        <div class="rail-actions"><button class="button" id="addStep">+ Add step</button></div>
+        <div class="rail-actions" style="display:flex;gap:8px"><button class="button" id="addStep">+ Add step</button><button class="button danger" id="removeStep">Remove step</button></div>
       </aside>
       <main>
         <div class="empty-workspace" id="emptyWorkspace" hidden><h2>No flows generated</h2><p class="muted">This customer does not have a generated workspace yet. Complete source mappings, then generate the first Trimble flow draft.</p><button class="button" id="openSourceMappings">Open sources &amp; mappings</button></div>
@@ -266,7 +294,7 @@
           </div>
           <section class="panel">
             <div class="panel-title">Step details</div>
-            <div class="panel-body form-grid"><label>Name<input id="nameInput"></label><label>Step ID<input id="stepIdInput"></label><label>App Xchange step type<input id="rawTypeInput" readonly></label><label>Connector<select id="connectorInput"><option>Vista</option><option>IVO</option><option>App Xchange</option></select></label></div>
+            <div class="panel-body form-grid"><label>Name<input id="nameInput"></label><label>Step ID<input id="stepIdInput"></label><label>App Xchange step type<select id="rawTypeInput"></select></label><label>Connector<select id="connectorInput"><option>Vista</option><option>IVO</option><option>App Xchange</option></select></label></div>
           </section>
           <section class="panel" id="codePanel" hidden>
             <div class="panel-title" id="codePanelTitle">Code block</div>
@@ -301,7 +329,112 @@
       </main>
     </section>
     <section class="other-view" id="overviewView"><div class="overview-content"><div class="editor-head"><div><h2>Workspace review</h2><p class="muted">Verify generated Trimble configuration before approving the canonical workspace.</p></div><button class="button primary" data-go-flows>Review flows</button></div><div class="review-panel"><div class="review-summary" id="overviewMetrics"></div><section class="panel"><div class="panel-title">Generation provenance</div><div class="panel-body provenance-grid" id="provenanceDetails"></div></section><section class="panel"><div class="panel-title">Readiness</div><div class="panel-body issues" id="overviewIssues"></div></section></div></div></section>
+    <section class="other-view" id="discoveryView">
+      <div class="discovery">
+        <div class="discovery-head">
+          <div>
+            <h2>Discovery log</h2>
+            <p class="muted">What the customer asked for, what their fields mean, and what they do not want brought in. Each decision here is why a flow changes.</p>
+          </div>
+          <div class="discovery-head-actions">
+            <button class="button" id="importTranscript">Import transcript</button>
+            <button class="button primary" id="addEntry">Add note</button>
+          </div>
+        </div>
+        <input type="file" id="transcriptFile" accept=".txt,.md,.vtt,.srt,.docx" hidden>
+        <div class="review-summary" id="discoveryMetrics"></div>
+        <div class="discovery-layout" style="margin-top:12px">
+          <section class="discovery-list">
+            <div class="discovery-filters">
+              <label>Category<select id="filterCategory"></select></label>
+              <label>Status<select id="filterStatus"></select></label>
+            </div>
+            <div class="config-items" id="entryItems"></div>
+          </section>
+          <section class="discovery-editor" id="entryEditor"></section>
+        </div>
+      </div>
+    </section>
   </div>
+  <dialog id="triggerDialog" aria-labelledby="triggerTitle">
+    <div class="dialog-head">
+      <div><h2 id="triggerTitle">Flow trigger</h2><small>Every flow has exactly one trigger. It defines what causes the flow to run.</small></div>
+      <button class="icon-button" data-close-dialog="triggerDialog" aria-label="Close trigger">&times;</button>
+    </div>
+    <div class="dialog-body">
+      <div class="form-grid">
+        <label>Trigger type<select id="triggerType"></select></label>
+        <label>Note<input id="triggerNote" placeholder="Optional reviewer note"></label>
+      </div>
+      <section class="panel" id="triggerSourcePanel" style="margin-top:16px">
+        <div class="panel-title">Source</div>
+        <div class="panel-body form-grid">
+          <label>Connector<select id="triggerConnector"></select></label>
+          <label>Data object<input id="triggerObject" list="triggerObjectList" placeholder="Equipment Management/equipment"><datalist id="triggerObjectList"></datalist></label>
+        </div>
+      </section>
+      <section class="panel" id="triggerEventsPanel">
+        <div class="panel-title">Subscribed events</div>
+        <div class="panel-body"><div class="checkbox-row" id="triggerEvents"></div></div>
+      </section>
+      <section class="panel" id="triggerOriginPanel">
+        <div class="panel-title">Event origin</div>
+        <div class="panel-body">
+          <p class="muted hint">Choose the connector for changes made directly in the external system, App Xchange for changes made by a platform action, or both. Completed actions also cache write, so subscribing to both can loop when the object is maintained in both systems.</p>
+          <div class="checkbox-row" id="triggerOrigins"></div>
+        </div>
+      </section>
+      <section class="panel" id="triggerFilterPanel">
+        <div class="panel-title">Filter expression</div>
+        <div class="panel-body">
+          <p class="muted hint">JavaScript evaluated against each cache event. It must explicitly <code>return</code> a truthy value or the flow never runs. Leave it empty to trigger on every event. Use optional chaining — a runtime error surfaces as a trigger error.</p>
+          <textarea class="code-input" id="triggerFilter" spellcheck="false" placeholder="return flow.trigger.data.Status === 'OPEN';"></textarea>
+        </div>
+      </section>
+      <section class="panel" id="triggerSchemaPanel">
+        <div class="panel-title">Input schema</div>
+        <div class="panel-body">
+          <label>Input schema type<select id="triggerSchemaType"><option value="none">No input</option><option value="custom">Custom schema</option></select></label>
+          <label id="triggerSchemaField" style="margin-top:14px">JSON schema<textarea class="code-input" id="triggerSchema" spellcheck="false"></textarea></label>
+        </div>
+      </section>
+      <section class="panel" id="triggerWorkPanel">
+        <div class="panel-title">Work request</div>
+        <div class="panel-body form-grid">
+          <label>Work request type<input id="triggerWorkRequestType"></label>
+          <label>Work item type<input id="triggerWorkItemType"></label>
+        </div>
+      </section>
+    </div>
+    <div class="dialog-footer"><span class="muted" id="triggerSummary"></span><button class="button" data-close-dialog="triggerDialog">Done</button></div>
+  </dialog>
+  <dialog id="versionDialog" aria-labelledby="versionTitle">
+    <div class="dialog-head">
+      <div><h2 id="versionTitle">Version history</h2><small>Edits are grouped into one version per working session. Checkpoints and approvals are kept separately.</small></div>
+      <button class="icon-button" data-close-dialog="versionDialog" aria-label="Close version history">&times;</button>
+    </div>
+    <div class="dialog-layout">
+      <section class="config-list">
+        <div class="config-list-head"><h3>Versions</h3><button class="button" id="addCheckpoint">+ Checkpoint</button></div>
+        <div class="config-items" id="versionItems"></div>
+      </section>
+      <section class="config-editor" id="versionDetail"></section>
+    </div>
+  </dialog>
+  <dialog id="checkpointDialog" aria-labelledby="checkpointTitle">
+    <div class="dialog-head">
+      <div><h2 id="checkpointTitle">Mark a checkpoint</h2><small>Names the current draft so you can return to it later.</small></div>
+      <button class="icon-button" data-close-dialog="checkpointDialog" aria-label="Close checkpoint">&times;</button>
+    </div>
+    <div class="dialog-body">
+      <div class="form-grid">
+        <label class="span-2">Label<input id="checkpointLabel" placeholder="Drop rental fields"></label>
+        <label class="span-2">Reason from the discovery log<select id="checkpointEntry"></select></label>
+        <label class="span-2">Notes<input id="checkpointNotes" placeholder="Optional detail"></label>
+      </div>
+    </div>
+    <div class="dialog-footer"><span class="muted" id="checkpointMessage"></span><button class="button primary" id="saveCheckpoint">Save checkpoint</button></div>
+  </dialog>
   <dialog id="configurationDialog" aria-labelledby="configurationTitle">
     <div class="dialog-head">
       <div><h2 id="configurationTitle">Equipment sync configurations</h2><small>Custom values available to this flow through <code>flow.config</code>.</small></div>
@@ -444,6 +577,7 @@
     let generatedBaseline = null;
     let approvedWorkspace = null;
     let revisions = [];
+    let triggerCatalog = [];
     let validationIssues = [];
     const requestedFlow = new URLSearchParams(location.hash.slice(1)).get("flow");
     const requestedView = new URLSearchParams(location.search).get("view");
@@ -478,6 +612,7 @@
         flow.review ||= { status: "generated" };
         flow.configurations ||= [];
         flow.steps ||= [];
+        flow.trigger = normalizeTriggerValue(flow.trigger);
         flow.steps.forEach((step) => {
           step.connector ||= getDefaultConnector(step);
           step.generation ||= {
@@ -492,6 +627,46 @@
         });
       });
     };
+    const TRIGGER_TYPES = [["on-demand", "On-Demand"], ["cache-event", "Cache Event"], ["action-close-out", "Action Close-Out"], ["work-request-batch-ready", "Work Request Batch Ready"]];
+    const CACHE_EVENTS = ["Create", "Update", "Delete"];
+    const ACTION_EVENTS = ["Any", "Successful", "Failed"];
+    const APP_XCHANGE_ORIGIN = "App Xchange";
+    const STEP_TYPES = [["code", "Code"], ["if", "Conditional"], ["getdatafromcachev2", "Lookup"], ["queueactionv3", "Connector action"], ["callflow", "Call a flow"], ["stop", "Stop flow"]];
+    // Mirrors normalizeTrigger on the server so a workspace still holding the old string form
+    // renders and edits before it has been saved once.
+    const normalizeTriggerValue = (value) => {
+      const legacy = typeof value === "string" ? value.trim() : null;
+      const source = legacy === null ? (value || {}) : {};
+      const type = TRIGGER_TYPES.some(([key]) => key === source.type) ? source.type : "on-demand";
+      const allowed = type === "action-close-out" ? ACTION_EVENTS : CACHE_EVENTS;
+      return {
+        type,
+        connector: source.connector || "",
+        dataObject: source.dataObject || "",
+        subscribedEvents: [...new Set((Array.isArray(source.subscribedEvents) ? source.subscribedEvents : []).filter((event) => allowed.includes(event)))],
+        eventOrigin: Array.isArray(source.eventOrigin) ? [...new Set(source.eventOrigin.filter(Boolean))] : [],
+        filterExpression: typeof source.filterExpression === "string" ? source.filterExpression : "",
+        inputSchemaType: source.inputSchemaType === "custom" ? "custom" : "none",
+        inputSchema: typeof source.inputSchema === "string" ? source.inputSchema : "",
+        workRequestType: source.workRequestType || "",
+        workItemType: source.workItemType || "",
+        note: legacy ?? (source.note || "")
+      };
+    };
+    // Always derived from the structure. A note is the reviewer's annotation and can go stale
+    // when the trigger changes, so it never stands in for the trigger's identity.
+    const triggerLabel = (trigger) => {
+      const target = `${trigger.connector || "connector"} ${trigger.dataObject || "data object"}`;
+      const events = trigger.subscribedEvents.join(", ") || "no events";
+      if (trigger.type === "cache-event") return `Cache event: ${target} on ${events}`;
+      if (trigger.type === "action-close-out") return `Action close-out: ${target} on ${events}`;
+      if (trigger.type === "work-request-batch-ready") return `Work request batch ready: ${trigger.workRequestType || "work request type"}`;
+      return trigger.inputSchemaType === "custom" ? "On-demand with a custom input schema" : "On-demand";
+    };
+    const renderTriggerSummary = (trigger) => {
+      document.getElementById("flowSummaryText").textContent = triggerLabel(trigger);
+      document.getElementById("flowSummaryNote").textContent = trigger.note;
+    };
     const flowStatusLabel = (status) => ({ generated: "Generated", "needs-review": "Needs review", approved: "Approved", blocked: "Blocked" }[status] || "Needs review");
     const flowStatusClass = (status) => status === "approved" ? "good" : status === "blocked" ? "blocking" : status === "generated" ? "generated" : "warn";
     const showView = (name) => {
@@ -504,6 +679,7 @@
       document.querySelectorAll(".other-view").forEach((view) => view.classList.remove("active"));
       if (name !== "flows") document.getElementById(`${name}View`).classList.add("active");
       if (name === "overview") renderOverview();
+      if (name === "discovery") renderDiscovery();
     };
     document.querySelectorAll(".tab").forEach((tab) => tab.addEventListener("click", () => showView(tab.dataset.view)));
     document.querySelectorAll("[data-go-flows]").forEach((button) => button.addEventListener("click", () => showView("flows")));
@@ -543,7 +719,10 @@
       document.getElementById("stepDescription").textContent = step.description;
       document.getElementById("nameInput").value = step.name;
       document.getElementById("stepIdInput").value = step.id;
-      document.getElementById("rawTypeInput").value = step.type;
+      const typeSelect = document.getElementById("rawTypeInput");
+      const known = STEP_TYPES.some(([value]) => value === step.type) ? STEP_TYPES : [...STEP_TYPES, [step.type, step.type]];
+      typeSelect.innerHTML = known.map(([value, label]) =>
+        `<option value="${value}"${value === step.type ? " selected" : ""}>${label}</option>`).join("");
       document.getElementById("connectorInput").value = step.connector || getDefaultConnector(step);
       const codePanel = document.getElementById("codePanel");
       const codeProperty = typeof step.inputCode === "string" ? "inputCode" : typeof step.code === "string" ? "code" : null;
@@ -562,11 +741,12 @@
         document.getElementById("filterOperator").value = step.filter.operator;
         document.getElementById("filterValue").value = step.filter.value;
       }
-      appendDetailItems(document.getElementById("contextDetails"), { Trigger: flow.trigger, Dependency: selectedStep ? flow.steps[selectedStep - 1].id : "Trigger", Flow: flow.name });
+      appendDetailItems(document.getElementById("contextDetails"), { Trigger: triggerLabel(flow.trigger), Dependency: selectedStep ? flow.steps[selectedStep - 1].id : "Trigger", Flow: flow.name });
+      const generation = step.generation || {};
       appendDetailItems(document.getElementById("generationDetails"), {
-        Confidence: `${step.generation.confidence}%`,
-        Evidence: step.generation.sources,
-        Rationale: step.generation.rationale,
+        Confidence: generation.confidence === undefined ? "Not recorded" : `${generation.confidence}%`,
+        Evidence: generation.sources || "Authored by the reviewer",
+        Rationale: generation.rationale || "Added during review rather than generated.",
         "Review scope": "Included in flow approval"
       });
       const mappings = step.type === "queueactionv3" ? propertyMappings(step.code) : [];
@@ -608,7 +788,7 @@
         const source = document.createElement("small");
         const count = document.createElement("span");
         name.textContent = item.name;
-        source.textContent = item.trigger;
+        source.textContent = item.trigger.note || triggerLabel(item.trigger);
         count.className = "badge";
         count.textContent = item.steps.length;
         button.title = `${flowStatusLabel(item.review.status)} · ${item.steps.length} steps`;
@@ -616,7 +796,7 @@
         button.append(labels, count);
         flowList.appendChild(button);
       });
-      document.getElementById("flowSummaryText").textContent = flow.trigger;
+      renderTriggerSummary(flow.trigger);
       document.getElementById("configurationCount").textContent = flow.configurations.length;
       const reviewStatus = document.getElementById("flowReviewStatus");
       reviewStatus.className = `badge ${flowStatusClass(flow.review.status)}`;
@@ -675,7 +855,9 @@
       workspace = result.draft;
       flows = workspace.flows;
       validationIssues = result.validation;
+      if (result.versions) versions = result.versions;
       updateValidationCount();
+      updateVersionCount();
     };
     const markSaving = (invalidate = true) => {
       if (invalidate) markFlowChanged();
@@ -729,11 +911,136 @@
     document.getElementById("addStep").addEventListener("click", () => {
       flows[activeFlow].steps.push({ id: `new-code-${flows[activeFlow].steps.length + 1}`, name: "New code step", type: "code", description: "New authoring step.", details: { Script: "Not configured", Output: "Unknown" }, code: "const input = flow.trigger.data;\n\nreturn input;" });
       selectedStep = flows[activeFlow].steps.length - 1;
+      normalizeWorkspace();
       renderWorkspace();
       markSaving();
     });
+    document.getElementById("removeStep").addEventListener("click", () => {
+      const steps = flows[activeFlow].steps;
+      if (steps.length <= 1) {
+        window.alert("A flow needs at least one step. Add a replacement before removing this one.");
+        return;
+      }
+      const step = steps[selectedStep];
+      const referencedBy = steps.filter((candidate, index) => index !== selectedStep && (
+        String(candidate.code || "").includes(`'${step.id}'`)
+        || String(candidate.inputCode || "").includes(`'${step.id}'`)
+        || Object.values(candidate.details || {}).some((value) => String(value) === step.id)
+        || String(candidate.filter?.value || "").includes(`'${step.id}'`)
+      )).map((candidate) => candidate.name);
+      const warning = referencedBy.length
+        ? `\n\nThese steps still reference "${step.id}" and will break:\n· ${referencedBy.join("\n· ")}`
+        : "";
+      if (!window.confirm(`Remove step "${step.name}"?${warning}`)) return;
+      steps.splice(selectedStep, 1);
+      selectedStep = Math.max(0, selectedStep - 1);
+      renderWorkspace();
+      markSaving();
+    });
+    document.getElementById("rawTypeInput").addEventListener("change", (event) => {
+      const step = flows[activeFlow].steps[selectedStep];
+      step.type = event.target.value;
+      // Give the new type the fields its validation requires rather than leaving it invalid.
+      if (step.type === "getdatafromcachev2") step.filter ||= { property: "", operator: "Equals", value: "" };
+      if (["if", "code", "queueactionv3"].includes(step.type) && typeof step.code !== "string") {
+        step.code = step.type === "if" ? "return true;" : "return flow.trigger.data;";
+      }
+      if (step.type === "callflow") {
+        step.details = { ...step.details, "Called flow": step.details?.["Called flow"] || "" };
+        if (typeof step.inputCode !== "string") step.inputCode = "return {};";
+      }
+      renderWorkspace();
+      markSaving();
+    });
+
+    const triggerDialog = document.getElementById("triggerDialog");
+    const activeTrigger = () => flows[activeFlow].trigger;
+    const renderTrigger = () => {
+      const trigger = activeTrigger();
+      const isCache = trigger.type === "cache-event";
+      const isAction = trigger.type === "action-close-out";
+      const isWork = trigger.type === "work-request-batch-ready";
+      const isDemand = trigger.type === "on-demand";
+      document.getElementById("triggerType").innerHTML = TRIGGER_TYPES.map(([value, label]) =>
+        `<option value="${value}"${value === trigger.type ? " selected" : ""}>${label}</option>`).join("");
+      document.getElementById("triggerNote").value = trigger.note;
+      document.getElementById("triggerSourcePanel").hidden = isDemand;
+      document.getElementById("triggerEventsPanel").hidden = !isCache && !isAction;
+      document.getElementById("triggerOriginPanel").hidden = !isCache;
+      document.getElementById("triggerFilterPanel").hidden = !isCache;
+      document.getElementById("triggerSchemaPanel").hidden = !isDemand;
+      document.getElementById("triggerWorkPanel").hidden = !isWork;
+
+      const connectors = [...new Set(triggerCatalog.map((entry) => entry.connector))];
+      const choices = connectors.includes(trigger.connector) || !trigger.connector ? connectors : [...connectors, trigger.connector];
+      document.getElementById("triggerConnector").innerHTML = ['<option value="">Choose a connector</option>',
+        ...choices.map((connector) => `<option value="${connector}"${connector === trigger.connector ? " selected" : ""}>${connector}</option>`)].join("");
+      document.getElementById("triggerObject").value = trigger.dataObject;
+      document.getElementById("triggerObjectList").innerHTML = triggerCatalog
+        .filter((entry) => !trigger.connector || entry.connector === trigger.connector)
+        .map((entry) => `<option value="${entry.module}/${entry.object}"></option>`).join("");
+
+      const events = isAction ? ACTION_EVENTS : CACHE_EVENTS;
+      document.getElementById("triggerEvents").innerHTML = events.map((event) =>
+        `<label><input type="checkbox" data-event="${event}"${trigger.subscribedEvents.includes(event) ? " checked" : ""}> ${event}</label>`).join("");
+      const origins = [trigger.connector || "Source connector", APP_XCHANGE_ORIGIN];
+      document.getElementById("triggerOrigins").innerHTML = origins.map((origin) =>
+        `<label><input type="checkbox" data-origin="${origin}"${trigger.eventOrigin.includes(origin) ? " checked" : ""}> ${origin}</label>`).join("");
+
+      document.getElementById("triggerFilter").value = trigger.filterExpression;
+      document.getElementById("triggerSchemaType").value = trigger.inputSchemaType;
+      document.getElementById("triggerSchemaField").hidden = trigger.inputSchemaType !== "custom";
+      document.getElementById("triggerSchema").value = trigger.inputSchema;
+      document.getElementById("triggerWorkRequestType").value = trigger.workRequestType;
+      document.getElementById("triggerWorkItemType").value = trigger.workItemType;
+      document.getElementById("triggerSummary").textContent = triggerLabel(trigger);
+      renderTriggerSummary(trigger);
+    };
+    document.getElementById("openTrigger").addEventListener("click", () => {
+      if (!flows.length) return;
+      renderTrigger();
+      triggerDialog.showModal();
+    });
+    triggerDialog.addEventListener("change", (event) => {
+      const trigger = activeTrigger();
+      const target = event.target;
+      if (target.id === "triggerType") {
+        trigger.type = target.value;
+        const allowed = trigger.type === "action-close-out" ? ACTION_EVENTS : CACHE_EVENTS;
+        trigger.subscribedEvents = trigger.subscribedEvents.filter((item) => allowed.includes(item));
+      } else if (target.id === "triggerConnector") {
+        // Origins are named for the connector, so a connector change invalidates the old name.
+        const previous = trigger.connector;
+        trigger.connector = target.value;
+        trigger.eventOrigin = trigger.eventOrigin.map((origin) => (origin === previous ? target.value : origin)).filter(Boolean);
+      } else if (target.id === "triggerSchemaType") {
+        trigger.inputSchemaType = target.value;
+      } else if (target.dataset.event) {
+        trigger.subscribedEvents = target.checked
+          ? [...new Set([...trigger.subscribedEvents, target.dataset.event])]
+          : trigger.subscribedEvents.filter((item) => item !== target.dataset.event);
+      } else if (target.dataset.origin) {
+        const origin = target.dataset.origin;
+        trigger.eventOrigin = target.checked
+          ? [...new Set([...trigger.eventOrigin, origin])]
+          : trigger.eventOrigin.filter((item) => item !== origin);
+      } else return;
+      renderTrigger();
+      markSaving();
+    });
+    triggerDialog.addEventListener("input", (event) => {
+      const trigger = activeTrigger();
+      const fields = { triggerNote: "note", triggerObject: "dataObject", triggerFilter: "filterExpression", triggerSchema: "inputSchema", triggerWorkRequestType: "workRequestType", triggerWorkItemType: "workItemType" };
+      const property = fields[event.target.id];
+      if (!property) return;
+      trigger[property] = event.target.value;
+      document.getElementById("triggerSummary").textContent = triggerLabel(trigger);
+      renderTriggerSummary(trigger);
+      markSaving();
+      return;
+    });
     document.getElementById("addFlow").addEventListener("click", () => {
-      flows.push({ name: "New customer flow", trigger: "On-demand · unresolved", review: { status: "generated" }, configurations: [], steps: [{ id: "start", name: "New code step", type: "code", description: "New authoring step.", details: { Script: "Not configured" }, code: "const input = flow.trigger.data;\n\nreturn input;" }] });
+      flows.push({ name: "New customer flow", trigger: { type: "on-demand", note: "" }, review: { status: "generated" }, configurations: [], steps: [{ id: "start", name: "New code step", type: "code", description: "New authoring step.", details: { Script: "Not configured" }, code: "const input = flow.trigger.data;\n\nreturn input;" }] });
       normalizeWorkspace();
       activeFlow = flows.length - 1;
       selectedStep = 0;
@@ -773,7 +1080,7 @@
       document.getElementById("configurationCount").textContent = configurations.length;
       document.getElementById("configurationTitle").textContent = `${flows[activeFlow].name} configurations`;
       const configuration = configurations[selectedConfiguration];
-      document.querySelector(".config-editor").hidden = !configuration;
+      configurationDialog.querySelector(".config-editor").hidden = !configuration;
       if (!configuration) return;
       Object.entries(configurationFields).forEach(([property, field]) => { field[field.type === "checkbox" ? "checked" : "value"] = configuration[property]; });
       document.getElementById("configurationEditorTitle").textContent = configuration.name;
@@ -784,7 +1091,9 @@
     document.getElementById("doneConfigurations").addEventListener("click", () => configurationDialog.close());
     document.getElementById("configurationItems").addEventListener("click", (event) => { const item = event.target.closest("[data-index]"); if (!item) return; selectedConfiguration = Number(item.dataset.index); renderConfigurations(); });
     document.getElementById("addConfiguration").addEventListener("click", () => { const configurations = flows[activeFlow].configurations; configurations.push({ name: `newConfiguration${configurations.length + 1}`, type: "string", description: "", defaultValue: "", options: "", required: false }); selectedConfiguration = configurations.length - 1; renderConfigurations(); configurationFields.name.focus(); markSaving(); });
-    document.querySelector(".config-editor").addEventListener("input", (event) => {
+    // Scoped to this dialog: the version history dialog reuses .config-editor and precedes
+    // it in the DOM, so a document-wide lookup binds the wrong pane.
+    configurationDialog.querySelector(".config-editor").addEventListener("input", (event) => {
       const property = Object.entries(configurationFields).find(([, field]) => field === event.target)?.[0];
       const configurations = flows[activeFlow].configurations;
       if (!property || !configurations[selectedConfiguration]) return;
@@ -975,6 +1284,379 @@
       link.click();
       URL.revokeObjectURL(link.href);
     });
+    const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (character) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
+    const DECISION_CATEGORIES = [["service", "Service wanted"], ["field", "Field meaning"], ["include", "Include"], ["exclude", "Exclude"], ["rule", "Business rule"], ["question", "Open question"]];
+    const DECISION_STATUSES = [["open", "Open"], ["applied", "Applied"], ["rejected", "Rejected"]];
+    const ENTRY_SOURCES = [["transcript", "Transcript"], ["note", "Note"], ["meeting", "Meeting"], ["email", "Email"]];
+    const labelOf = (pairs, key) => pairs.find(([value]) => value === key)?.[1] || key;
+    const options = (pairs, selected) => pairs.map(([value, label]) =>
+      `<option value="${esc(value)}"${value === selected ? " selected" : ""}>${esc(label)}</option>`).join("");
+    let discovery = { entries: [] };
+    let versions = [];
+    let selectedEntry = 0;
+    let selectedVersion = null;
+    let selectedVersionDetail = null;
+    const entryFilters = { category: "all", status: "all" };
+
+    const visibleEntries = () => discovery.entries.filter((entry) =>
+      (entryFilters.category === "all" || entry.decisions.some((decision) => decision.category === entryFilters.category))
+      && (entryFilters.status === "all" || entry.decisions.some((decision) => decision.status === entryFilters.status)));
+    const currentEntry = () => visibleEntries()[selectedEntry] || null;
+    const allDecisions = () => discovery.entries.flatMap((entry) => entry.decisions);
+
+    const persistDiscovery = async () => {
+      const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/discovery`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(discovery)
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Unable to save the discovery log.");
+      discovery = result;
+    };
+    const saveDiscoverySoon = (rerender = false) => {
+      saveState.style.color = "var(--cp-text-muted)";
+      saveState.querySelector("span:last-child").textContent = "Saving...";
+      window.clearTimeout(saveDiscoverySoon.timer);
+      saveDiscoverySoon.timer = window.setTimeout(async () => {
+        try {
+          await persistDiscovery();
+          saveState.style.color = "var(--cp-success)";
+          saveState.querySelector("span:last-child").textContent = "Saved";
+          if (rerender) renderDiscovery(); else renderDiscoveryMetrics();
+        } catch (error) {
+          saveState.style.color = "var(--cp-danger)";
+          saveState.querySelector("span:last-child").textContent = error.message;
+        }
+      }, 500);
+    };
+
+    const renderDiscoveryMetrics = () => {
+      const decisions = allDecisions();
+      const metrics = [
+        ["Log entries", discovery.entries.length],
+        ["Decisions", decisions.length],
+        ["Open", decisions.filter((decision) => decision.status === "open").length],
+        ["Applied", decisions.filter((decision) => decision.status === "applied").length]
+      ];
+      document.getElementById("discoveryMetrics").innerHTML = metrics.map(([label, value]) =>
+        `<div class="review-metric"><span>${esc(label)}</span><strong>${value}</strong></div>`).join("");
+      document.getElementById("entryItems").innerHTML = visibleEntries().map((entry, index) => {
+        const open = entry.decisions.filter((decision) => decision.status === "open").length;
+        return `<button class="config-item${index === selectedEntry ? " active" : ""}" data-entry="${index}">
+          <span><strong>${esc(entry.title)}</strong><small class="muted">${esc(entry.date)} · ${esc(labelOf(ENTRY_SOURCES, entry.source))} · ${entry.decisions.length} decisions</small></span>
+          ${open ? `<span class="tag open">${open} open</span>` : ""}</button>`;
+      }).join("") || '<p class="muted">No entries match this filter.</p>';
+    };
+
+    const renderEntryEditor = () => {
+      const entry = currentEntry();
+      const pane = document.getElementById("entryEditor");
+      if (!entry) {
+        pane.innerHTML = `<div style="padding:8px"><h3>No entry selected</h3>
+          <p class="muted">Import a call transcript or add a note to start recording what this customer asked for.</p></div>`;
+        return;
+      }
+      pane.innerHTML = `
+        <div class="editor-head">
+          <div><h2>${esc(entry.title)}</h2><small class="muted">${esc(labelOf(ENTRY_SOURCES, entry.source))} · ${esc(entry.date)}${
+            entry.sourceFile ? ` · <a href="/api/file?path=${encodeURIComponent(entry.sourceFile)}" target="_blank" rel="noopener">original file</a>` : ""}</small></div>
+          <button class="button danger" id="deleteEntry">Delete entry</button>
+        </div>
+        <section class="panel">
+          <div class="panel-title">Entry</div>
+          <div class="panel-body form-grid">
+            <label>Title<input data-entry-field="title" value="${esc(entry.title)}"></label>
+            <label>Date<input type="date" data-entry-field="date" value="${esc(entry.date)}"></label>
+            <label class="span-2">Source<select data-entry-field="source">${options(ENTRY_SOURCES, entry.source)}</select></label>
+            <label class="span-2">Notes<textarea class="entry-body" data-entry-field="body" spellcheck="true">${esc(entry.body)}</textarea></label>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-title">Decisions <span class="badge">${entry.decisions.length}</span></div>
+          <div class="panel-body">
+            <div class="decision-list">${entry.decisions.map((decision, index) => `
+              <div class="decision">
+                <select data-decision="${index}" data-decision-field="category" aria-label="Category">${options(DECISION_CATEGORIES, decision.category)}</select>
+                <input data-decision="${index}" data-decision-field="statement" value="${esc(decision.statement)}" placeholder="What was decided" aria-label="Statement">
+                <select data-decision="${index}" data-decision-field="status" aria-label="Status">${options(DECISION_STATUSES, decision.status)}</select>
+                <button class="icon-button" data-remove-decision="${index}" title="Remove decision" aria-label="Remove decision">&times;</button>
+                <div class="decision-meta">
+                  <input data-decision="${index}" data-decision-field="object" value="${esc(decision.object)}" placeholder="Object (optional)" aria-label="Object">
+                  <input data-decision="${index}" data-decision-field="field" value="${esc(decision.field)}" placeholder="Field (optional)" aria-label="Field">
+                </div>
+              </div>`).join("") || '<p class="muted">No decisions tagged yet. Pull the concrete asks out of the notes above so they can drive flow changes.</p>'}</div>
+            <div style="margin-top:12px"><button class="button" id="addDecision">+ Add decision</button></div>
+          </div>
+        </section>`;
+    };
+
+    const renderDiscovery = () => {
+      document.getElementById("filterCategory").innerHTML = options([["all", "All categories"], ...DECISION_CATEGORIES], entryFilters.category);
+      document.getElementById("filterStatus").innerHTML = options([["all", "All statuses"], ...DECISION_STATUSES], entryFilters.status);
+      if (selectedEntry >= visibleEntries().length) selectedEntry = 0;
+      renderDiscoveryMetrics();
+      renderEntryEditor();
+    };
+
+    document.getElementById("filterCategory").addEventListener("change", (event) => {
+      entryFilters.category = event.target.value;
+      selectedEntry = 0;
+      renderDiscovery();
+    });
+    document.getElementById("filterStatus").addEventListener("change", (event) => {
+      entryFilters.status = event.target.value;
+      selectedEntry = 0;
+      renderDiscovery();
+    });
+    document.getElementById("entryItems").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-entry]");
+      if (!button) return;
+      selectedEntry = Number(button.dataset.entry);
+      renderDiscovery();
+    });
+    document.getElementById("addEntry").addEventListener("click", () => {
+      const now = new Date().toISOString();
+      discovery.entries.unshift({
+        id: now.replace(/[:.]/g, "-"), date: now.slice(0, 10), title: "New note",
+        source: "note", sourceFile: "", body: "", decisions: [], createdAt: now, updatedAt: now
+      });
+      entryFilters.category = "all";
+      entryFilters.status = "all";
+      selectedEntry = 0;
+      renderDiscovery();
+      saveDiscoverySoon();
+    });
+    document.getElementById("importTranscript").addEventListener("click", () => document.getElementById("transcriptFile").click());
+    document.getElementById("transcriptFile").addEventListener("change", async (event) => {
+      const file = event.target.files?.[0];
+      event.target.value = "";
+      if (!file) return;
+      saveState.style.color = "var(--cp-text-muted)";
+      saveState.querySelector("span:last-child").textContent = "Importing...";
+      try {
+        const content = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(String(reader.result).split(",")[1] || "");
+          reader.onerror = () => reject(new Error("Unable to read that file."));
+          reader.readAsDataURL(file);
+        });
+        const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/discovery/import`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ file: { name: file.name, content } })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to import that transcript.");
+        discovery = result;
+        entryFilters.category = "all";
+        entryFilters.status = "all";
+        selectedEntry = 0;
+        renderDiscovery();
+        saveState.style.color = "var(--cp-success)";
+        saveState.querySelector("span:last-child").textContent = "Saved";
+      } catch (error) {
+        saveState.style.color = "var(--cp-danger)";
+        saveState.querySelector("span:last-child").textContent = error.message;
+      }
+    });
+    document.getElementById("entryEditor").addEventListener("input", (event) => {
+      const entry = currentEntry();
+      if (!entry) return;
+      const target = event.target;
+      if (target.dataset.entryField) {
+        entry[target.dataset.entryField] = target.value;
+        if (target.dataset.entryField === "title" || target.dataset.entryField === "date") renderDiscoveryMetrics();
+        saveDiscoverySoon();
+        return;
+      }
+      if (target.dataset.decision !== undefined) {
+        entry.decisions[Number(target.dataset.decision)][target.dataset.decisionField] = target.value;
+        renderDiscoveryMetrics();
+        saveDiscoverySoon();
+      }
+    });
+    document.getElementById("entryEditor").addEventListener("click", (event) => {
+      const entry = currentEntry();
+      if (!entry) return;
+      if (event.target.closest("#addDecision")) {
+        entry.decisions.push({ category: "rule", statement: "", object: "", field: "", status: "open" });
+        renderEntryEditor();
+        renderDiscoveryMetrics();
+        saveDiscoverySoon();
+        return;
+      }
+      const remove = event.target.closest("[data-remove-decision]");
+      if (remove) {
+        entry.decisions.splice(Number(remove.dataset.removeDecision), 1);
+        renderEntryEditor();
+        renderDiscoveryMetrics();
+        saveDiscoverySoon();
+        return;
+      }
+      if (event.target.closest("#deleteEntry")) {
+        if (!window.confirm(`Delete "${entry.title}"? This removes it from the discovery log permanently.`)) return;
+        discovery.entries = discovery.entries.filter((candidate) => candidate.id !== entry.id);
+        selectedEntry = 0;
+        renderDiscovery();
+        saveDiscoverySoon();
+      }
+    });
+
+    const updateVersionCount = () => { document.getElementById("versionCount").textContent = versions.length; };
+    const versionLabel = (version) => version.label
+      || (version.kind === "session" ? `Editing session · ${version.editCount} save${version.editCount === 1 ? "" : "s"}` : version.id);
+    const renderVersionDetail = () => {
+      const pane = document.getElementById("versionDetail");
+      const summary = versions.find((version) => version.id === selectedVersion);
+      if (!summary) {
+        pane.innerHTML = '<p class="muted">Select a version to see what it contains and restore from it.</p>';
+        return;
+      }
+      const past = selectedVersionDetail?.workspace?.flows || [];
+      const names = [...new Set([...past.map((flow) => flow.name), ...flows.map((flow) => flow.name)])];
+      const rows = names.map((name) => {
+        const before = past.find((flow) => flow.name === name);
+        const after = flows.find((flow) => flow.name === name);
+        if (!before) return { name, state: "Added since", restorable: false };
+        if (!after) return { name, state: "Deleted since", restorable: true };
+        return {
+          name,
+          state: JSON.stringify(comparableFlow(before)) === JSON.stringify(comparableFlow(after)) ? "Unchanged" : "Changed since",
+          restorable: JSON.stringify(comparableFlow(before)) !== JSON.stringify(comparableFlow(after))
+        };
+      });
+      const entry = discovery.entries.find((candidate) => candidate.id === summary.discoveryEntryId);
+      pane.innerHTML = `
+        <div class="config-editor-head">
+          <h3>${esc(versionLabel(summary))}</h3>
+          <small class="muted">${esc(labelOf([["session", "Editing session"], ["checkpoint", "Checkpoint"], ["approval", "Approval"]], summary.kind))}
+            · ${esc(new Date(summary.createdAt).toLocaleString())} · ${esc(summary.createdBy)} · ${summary.flowCount} flows</small>
+        </div>
+        ${summary.notes ? `<p class="muted">${esc(summary.notes)}</p>` : ""}
+        ${entry ? `<div class="status">Reason: ${esc(entry.title)} (${esc(entry.date)})</div>` : ""}
+        <div class="panel" style="margin-top:14px">
+          <div class="panel-title">Compared with the current draft</div>
+          <div class="panel-body">
+            <div class="restore-list">${rows.map((row) => `
+              <div class="restore-row">
+                <div><strong>${esc(row.name)}</strong><br><small class="muted">${esc(row.state)}</small></div>
+                ${row.restorable ? `<button class="button" data-restore-flow="${esc(row.name)}">Restore flow</button>` : ""}
+              </div>`).join("") || '<p class="muted">This version contains no flows.</p>'}</div>
+          </div>
+        </div>
+        <div class="dialog-actions">
+          <span class="muted">Restoring returns the workspace to review.</span>
+          <button class="button primary" id="restoreWorkspace">Restore whole workspace</button>
+        </div>`;
+    };
+    const renderVersions = () => {
+      updateVersionCount();
+      document.getElementById("versionItems").innerHTML = versions.map((version) => `
+        <button class="version-item${version.id === selectedVersion ? " active" : ""}" data-version="${esc(version.id)}">
+          <span><strong>${esc(versionLabel(version))}</strong><small class="muted">${esc(new Date(version.createdAt).toLocaleString())}</small></span>
+          <span class="badge ${version.kind === "approval" ? "good" : version.kind === "checkpoint" ? "generated" : ""}">${esc(version.kind)}</span>
+        </button>`).join("") || '<p class="muted">No versions yet. They are created as you edit.</p>';
+      renderVersionDetail();
+    };
+    const selectVersion = async (id) => {
+      selectedVersion = id;
+      selectedVersionDetail = null;
+      renderVersions();
+      try {
+        const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace/versions/${encodeURIComponent(id)}`);
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to load that version.");
+        selectedVersionDetail = result;
+        renderVersionDetail();
+      } catch (error) {
+        document.getElementById("versionDetail").innerHTML = `<p class="muted">${esc(error.message)}</p>`;
+      }
+    };
+    const applyBundle = (bundle) => {
+      workspace = bundle.draft;
+      approvedWorkspace = bundle.approved;
+      versions = bundle.versions;
+      validationIssues = bundle.validation;
+      normalizeWorkspace();
+      activeFlow = Math.min(activeFlow, Math.max(0, flows.length - 1));
+      selectedStep = 0;
+      updateValidationCount();
+      renderWorkspace();
+      renderVersions();
+    };
+    const restore = async (payload) => {
+      try {
+        const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace/versions/${encodeURIComponent(selectedVersion)}/restore`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to restore that version.");
+        applyBundle(result);
+        saveState.style.color = "var(--cp-success)";
+        saveState.querySelector("span:last-child").textContent = "Restored";
+      } catch (error) {
+        saveState.style.color = "var(--cp-danger)";
+        saveState.querySelector("span:last-child").textContent = error.message;
+      }
+    };
+    document.getElementById("openVersions").addEventListener("click", () => {
+      renderVersions();
+      document.getElementById("versionDialog").showModal();
+    });
+    document.getElementById("versionItems").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-version]");
+      if (button) selectVersion(button.dataset.version);
+    });
+    document.getElementById("versionDetail").addEventListener("click", (event) => {
+      const flowButton = event.target.closest("[data-restore-flow]");
+      if (flowButton) {
+        const name = flowButton.dataset.restoreFlow;
+        if (window.confirm(`Restore "${name}" from this version? The current draft is checkpointed first.`)) restore({ scope: "flow", flow: name });
+        return;
+      }
+      if (event.target.closest("#restoreWorkspace")
+        && window.confirm("Restore the whole workspace from this version? The current draft is checkpointed first.")) {
+        restore({ scope: "workspace" });
+      }
+    });
+    document.getElementById("addCheckpoint").addEventListener("click", () => {
+      document.getElementById("checkpointLabel").value = "";
+      document.getElementById("checkpointNotes").value = "";
+      document.getElementById("checkpointMessage").textContent = "";
+      document.getElementById("checkpointEntry").innerHTML = options(
+        [["", "Not linked to the discovery log"], ...discovery.entries.map((entry) => [entry.id, `${entry.date} · ${entry.title}`])], "");
+      document.getElementById("checkpointDialog").showModal();
+    });
+    document.getElementById("saveCheckpoint").addEventListener("click", async () => {
+      const label = document.getElementById("checkpointLabel").value.trim();
+      if (!label) {
+        document.getElementById("checkpointMessage").textContent = "Give the checkpoint a label.";
+        return;
+      }
+      try {
+        const response = await fetch(`/api/customers/${encodeURIComponent(customerKey)}/workspace/versions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            label,
+            notes: document.getElementById("checkpointNotes").value,
+            discoveryEntryId: document.getElementById("checkpointEntry").value || null
+          })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to save that checkpoint.");
+        versions = result.versions;
+        document.getElementById("checkpointDialog").close();
+        selectVersion(result.version.id);
+      } catch (error) {
+        document.getElementById("checkpointMessage").textContent = error.message;
+      }
+    });
+
     const loadWorkspace = async () => {
       try {
         if (!customerKey) {
@@ -996,7 +1678,11 @@
         generatedBaseline = bundle.generated;
         approvedWorkspace = bundle.approved;
         revisions = bundle.revisions;
+        triggerCatalog = bundle.triggerCatalog || [];
+        versions = bundle.versions || [];
+        discovery = bundle.discovery || { entries: [] };
         validationIssues = bundle.validation;
+        updateVersionCount();
         const loadedDraft = workspace ? JSON.stringify(workspace) : null;
         normalizeWorkspace();
         activeFlow = Math.max(0, flows.findIndex((flow) => flow.name === requestedFlow));

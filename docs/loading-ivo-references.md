@@ -42,6 +42,8 @@ When the preferred names are absent, the builder accepts exactly one root JSON f
 
 The first build creates a draft. IVO must review the three files under `reference/ivo/<object>/` and resolve required `confirm` items. Once approved, that folder is the static destination contract consumed by every customer mapping.
 
+A new object is not listed in `modules.json`, so it groups under the manifest's `defaultModule` (Equipment Management). Add it to the correct module in both `reference/ivo/modules.json` and `reference-sources/ivo/modules.json` as part of publishing. See [the reference contract README](../reference/ivo/README.md#modulesjson).
+
 The builder refuses to replace existing generated files. For a deliberate IVO contract update, build in a temporary folder and review the diff first. Only then rerun against the published folder with `--force yes`. Preserve manually confirmed semantics while applying structural changes.
 
 Customer evidence must never be used to overwrite or silently update the published reference.

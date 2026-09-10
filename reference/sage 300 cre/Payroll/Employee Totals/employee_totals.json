@@ -1,0 +1,479 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Employee/cache.json",
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Prior_Year_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Yr_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Yr_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Mth_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Mth_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Mth_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Mth_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Mth_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    }
+  },
+  "required": [
+    "Employee"
+  ]
+}

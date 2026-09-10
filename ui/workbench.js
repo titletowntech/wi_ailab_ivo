@@ -135,6 +135,13 @@ async function loadCatalog() {
   state.catalog = await request('/api/catalog');
   renderLauncher();
   renderReferenceCatalog();
+  await renderIntegrationSummary();
+}
+
+async function renderIntegrationSummary() {
+  const integrations = await request('/api/integrations').catch(() => []);
+  byId('integrationConnectorCount').textContent = integrations.length;
+  byId('integrationFeatureCount').textContent = integrations.reduce((total, integration) => total + integration.featureCount, 0);
 }
 
 function renderLauncher() {
@@ -172,7 +179,7 @@ function renderReferenceCatalog() {
   if (metrics[0]) metrics[0].textContent = ready;
   if (metrics[1]) metrics[1].textContent = references.length - ready;
   if (metrics[2]) metrics[2].textContent = references.reduce((total, reference) => total + reference.fieldCount, 0);
-  byId('referenceRows').innerHTML = references.map((reference) => `<tr><td><strong>${escapeHtml(reference.name)}</strong><div class="subtle">IVO field definitions and rules</div></td><td>${reference.fieldCount}</td><td><span class="badge ${reference.status === 'Ready' ? 'accepted' : 'review'}">${escapeHtml(reference.status)}</span></td><td>${reference.files.length} files</td><td>${formatDate(reference.updated)}</td><td><button class="button" data-reference-key="${escapeHtml(reference.key)}">View details</button></td></tr>`).join('');
+  byId('referenceRows').innerHTML = references.map((reference) => `<tr><td><strong>${escapeHtml(reference.name)}</strong><div class="subtle">${escapeHtml(reference.module || 'Equipment Management')}</div></td><td>${reference.fieldCount}</td><td><span class="badge ${reference.status === 'Ready' ? 'accepted' : 'review'}">${escapeHtml(reference.status)}</span></td><td>${reference.files.length} files</td><td>${formatDate(reference.updated)}</td><td><button class="button" data-reference-key="${escapeHtml(reference.key)}">View details</button></td></tr>`).join('');
 }
 
 function showReferenceCatalog() {
@@ -1064,6 +1071,7 @@ function bindEvents() {
     if (button) openCustomer(button.dataset.openCustomer);
   });
   byId('openReferences').addEventListener('click', () => { openWorkspace('references'); showReferenceCatalog(); });
+  byId('openIntegrations').addEventListener('click', () => { location.href = '/integrations'; });
   document.querySelectorAll('[data-workspace-view]').forEach((button) => button.addEventListener('click', () => {
     const view = button.dataset.workspaceView;
     if (view === 'sources') return;

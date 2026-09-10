@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/gl/v1/object/fiscal_controls/change.json",
+  "title": "Fiscal Controls Change Action Schema",
+  "description": "Schema for updating an existing Fiscal Controls record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

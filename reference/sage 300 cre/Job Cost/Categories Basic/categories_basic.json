@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/categorybasic/cache.json",
+  "type": "object",
+  "properties": {
+    "__naturalKey": {
+      "type": "string"
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Extra": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Cost_Code": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Category": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Accumulate_As": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Cost_Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Cost_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Bought_Out": {
+      "type": "boolean"
+    },
+    "Original_Estimate": {
+      "type": "string"
+    },
+    "Original_Estimate_Units": {
+      "type": "string"
+    },
+    "Original_Commitment": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Job",
+    "Extra",
+    "Cost_Code",
+    "Category",
+    "__naturalKey"
+  ]
+}

@@ -1,0 +1,456 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/SalesTaxes/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "tax_no": {
+      "type": "string",
+      "maxLength": 5,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "force_pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "gl_tax_payable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "gl_use_tax_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "gl_use_tax_accrued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "misc_taxable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "freight_taxable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "use_tax_flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 23,
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "state_tax_group_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "state_percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "county_percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "other_percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "ar_use_tax_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ar_gl_use_tax_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "ar_gl_use_tax_accrued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "ar_phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ar_cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ar_cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "gl_sales_tax_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "ap_sales_phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ap_sales_cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ap_sales_cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ap_sales_cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ap_sales_cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ap_sales_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ar_cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ar_cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ar_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "state_tax_group_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "allow_negative_adj_use_tax": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "_rates": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://vista.si.ryvit.com//v/object/SalesTaxRate/cache.json",
+        "type": "object",
+        "properties": {
+          "company_no": {
+            "type": "integer",
+            "description": ""
+          },
+          "tax_no": {
+            "type": "string",
+            "maxLength": 5,
+            "description": ""
+          },
+          "effective_date": {
+            "type": "string",
+            "maxLength": 23,
+            "description": "Format: YYYY-MM-DD"
+          },
+          "state_percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+            "description": ""
+          },
+          "state_limit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "local_percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+            "description": ""
+          },
+          "local_limit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "other_percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+            "description": ""
+          },
+          "other_limit": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "record_status": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "row_modified_by": {
+            "type": "string",
+            "maxLength": 32,
+            "description": ""
+          },
+          "row_modified_on": {
+            "type": "string",
+            "maxLength": 23,
+            "description": "Format: YYYY-MM-DD"
+          },
+          "row_unique_id": {
+            "type": "integer",
+            "description": ""
+          },
+          "company_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "tax_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": ""
+          },
+          "provider": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5,
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "row_unique_id"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "tax_no",
+    "row_unique_id"
+  ]
+}

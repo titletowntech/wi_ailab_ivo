@@ -11,6 +11,11 @@ layout, a sequencing constraint, or a service that had to be split or combined. 
 Platform behavior cited here comes from `docs/app-xchange-help-markdown/`. IVO-specific
 convention comes from `docs/what-we-know.md` and the customer workspaces.
 
+This file explains *why* services are composed the way they are. The composition itself is
+recorded per ERP connector under `integrations/<connector>/definition.json` and edited in the
+workbench — see [Integration definitions](integration-definitions.md), which enforces the
+rules below that can be checked mechanically.
+
 ---
 
 ## 1. Why services decide flow design

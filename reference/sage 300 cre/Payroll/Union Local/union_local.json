@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/union_locals/cache.json",
+  "type": "object",
+  "properties": {
+    "Union_ID": {
+      "type": "string"
+    },
+    "Union_Local": {
+      "type": "string"
+    },
+    "Union_Local_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Zip_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_Phone_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contact_Fax_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Good_Thru_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Union_Local_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Union_ID",
+    "Union_Local"
+  ]
+}

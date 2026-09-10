@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/SIpart/version/object/vendor_types/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "purchase_order_type_id": {
+      "type": "integer",
+      "description": "Enter a type number",
+      "minimum": 1,
+      "maximum": 99
+    },
+    "type_name": {
+      "type": "string",
+      "description": "Enter a description",
+      "maxLength": 20
+    },
+    "notes": {
+      "type": "string",
+      "description": "Enter notes for this row"
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    }
+  },
+  "required": [
+    "idnum",
+    "purchase_order_type_id",
+    "type_name",
+    "notes"
+  ]
+}

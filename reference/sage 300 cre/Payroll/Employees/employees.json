@@ -1,0 +1,629 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Employee/cache.json",
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "type": "string",
+      "description": "Type the ID for the employee (no more than 10 alphanumeric characters) or click [List] and select an existing employee from the list. Do not use characters such as an underscore or quotation marks in the ID, because reports may print incorrectly."
+    },
+    "Employee_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type a name for this employee (no more than 30 characters). Separate the last name from the rest of the employee name using a semi-colon followed by a space. Use a second semi-colon when entering a name that includes a notation, such as Jr. or III. Using the second semi-colon in the employee's name prevents the notation from being included with the last name when a report is searching specifically for the last name rather than the entire employee name. Titles or degrees such as Dr. should not be included in the name."
+    },
+    "Title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type a title for this employee (no more than 30 characters), such as Mr. or Ms."
+    },
+    "Occupation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type an occupation for this employee (no more than 30 characters)."
+    },
+    "Country": {
+      "type": "string",
+      "description": "Enter the appropriate country code for this employee. This information is used for reporting purposes. Enter \"US\" for the United States, a Military Post Office (MPO), American Samoa, Guam, the Northern Mariana Islands, Puerto Rico or the Virgin Islands. This code is used for government reporting, such as W-2 forms, and on direct deposit notifications and checks."
+    },
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the street information for this employee's address (no more than to 30 characters for each address line). The address may print on checks and forms, including W-2 forms."
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the city for this employee's address (no more than 15 characters). The city may print on checks and forms."
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the state abbreviation for this employee's address (no more than 4 characters). The state may print on checks and forms."
+    },
+    "Zip_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the ZIP for this employee's address (no more than 10 characters including punctuation). This may print on checks and forms, including W-2 forms."
+    },
+    "Foreign_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If you select a country other than US, type the name of the foreign state or province in which the address is located. The state information prints on W-2 forms, direct deposit notifications, and checks."
+    },
+    "Foreign_Postal_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If you select a country other than US, type the postal code for the address. The postal code prints on W-2 form, direct deposit notifications, and checks."
+    },
+    "Email_address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the email address of the employee."
+    },
+    "Phone_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the telephone number for this employee. The area code is optional. The punctuation is automatically entered for you."
+    },
+    "Social_Security_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the social security number for this employee (required). The punctuation is automatically entered for you.",
+      "writeOnly": true
+    },
+    "Pay_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the pay group to which this employee belongs (no more than 10 characters). This item is required. You can click [List] to select the pay group."
+    },
+    "Mobile_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the mobile phone number for this employee. The area code is optional. The punctuation is automatically entered for you."
+    },
+    "SM_Employee": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select this check box if you want to import and export time entries between Service Management and Payroll for this employee."
+    },
+    "Gender": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select the appropriate gender for this employee. This information can be used for reporting purposes. It is required for the Employment Utilization report."
+    },
+    "Skill_Level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select the appropriate skill level for this employee."
+    },
+    "Birth_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type the date of birth for this employee.",
+      "writeOnly": true
+    },
+    "Ethnic": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select the appropriate ethnic group for this employee. This information can be used for reporting purposes. It is required for the Employment Utilization report. If your company must file the EEO-1 Component 2 report, do not select Other."
+    },
+    "Electronic_W2_Only": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select this check box if this employee will only access his or her W-2 form electronically; the W-2 form for this employee will not be printed and mailed."
+    },
+    "Resident_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Enter the two-character state tax group that corresponds to where this employee lives or click [List] and select a state tax group. Note: This residence state is only required if a reciprocal tax agreement applies to this employee. This item is used when earnings are processed to calculate reciprocal state tax agreements."
+    },
+    "Resident_Local": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If you need to withhold a resident local tax from this employee's earnings, enter the local tax group-or click [List] and select a local tax group. Local taxes and tax groups must be set up before you can enter the local tax group."
+    },
+    "Work_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Required) Enter the two-character state tax group for this employee or click [List] and select a state tax group. This Work State prefills when entering and processing earnings. It is used to determine state taxes for this employee."
+    },
+    "Work_Local": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Enter the local tax group for this employee or click [List] and select a local tax group. The Work Local you enter prefills (but can be changed) when entering and processing earnings. It is used to determine local taxes for this employee. Local taxes and tax groups must be set up before the local tax group can be entered here. Note: The title of this item may be different because this term can be customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Use_Employee_Work_State": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select this check box to have Payroll retrieve the work state (and local) from the employee (set on this tab). If this check box is cleared, Payroll retrieves the work state from the job."
+    },
+    "Workers_Comp_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If workers' compensation should be calculated for a state other than the state used for earnings, enter the two-character workers' compensation state for this employee-or click [List] and select a state. This WC state overrides the Job State entered for the job in Job Cost. This WC state prefills (but can be changed) when entering earnings. If you want the WC state used for earnings to be based on the Job State where the employee works, leave this item blank. Tip: Refer to your workers' compensation insurance documentation for further guidelines regarding which state's workers' comp rates apply."
+    },
+    "WC_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Enter the default workers' compensation code (no more than 10 characters) associated with the work this employee normally performs, if any. This WC code prefills (but can be changed) when entering earnings."
+    },
+    "Use_W4_Amounts": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select this check box if the employee uses the new W-4 form (effective January 2020) that bases tax withholding on amounts. Clear this check box if the employee uses the previous W-4 form that bases tax withholding on exemptions. Note: This check box is automatically selected for employees hired after January 1, 2020."
+    },
+    "W4_Dependents": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "(when Use W-4 amounts is selected) Enter the amount claimed by the employee for dependents in step 3 of the W-4 form."
+    },
+    "W4_Other_Income": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "(when Use W-4 amounts is selected) Enter the annual other income amount that the employee entered in step 4(a) of the W-4 form."
+    },
+    "W4_Deductions": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "(when Use W-4 amounts is selected) Enter the annual deduction amount that the employee entered in step 4(b) of the W-4 form."
+    },
+    "Filing_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Required) Enter the federal tax filing status for this employee (1 or 2 characters) or click [List] and select one of the following filing status codes. The status is used in the federal withholding tax calculation. H or H2: Head of household, M or M2: Married, S or S2: Single. If Use W-4 amounts is selected and the employee selected the check box in step 2(c) of the W-4 form, use the H2, M2, or S2 filing status so more federal tax is withheld. Note: When calculating state taxes, this filing status is also used unless there is a state filing status in the Employee Setup - State window."
+    },
+    "EIC_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee is eligible to receive an advanced Earned Income Credit, enter the EIC status or click [List] and select the EIC status. Use one of the following statuses: M: Married with both filing certificates, M1: Married with one filing certificate, S: Single or married with spouse not filing certificate."
+    },
+    "Personal_Exemptions": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "(if the employee used the previous W-4 form) Enter the number of personal exemptions (no more than 99) declared by the employee. The number of exemptions was used for federal tax withholding and is also used in some state and local tax calculations that use exemptions in the calculation."
+    },
+    "Misc_Tax_Code": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Leave this item blank unless instructed otherwise. This item is reserved for special federal tax calculation purposes."
+    },
+    "Pay_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee usually receives the same pay every pay period, enter the pay ID or click [List] and select the pay ID. This pay ID prefills (but can be changed) when entering earnings."
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee usually works on the same job, enter the job ID or click [List] and select the Job Cost job. This job prefills (but can be changed) when entering earnings. Payroll checks can be printed in order by job. Note: This item is only available if interfacing with Job Cost."
+    },
+    "JC_Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee usually works on the same cost code, enter the JC cost code or click [List] and select the Job Cost cost code. This cost code prefills (but can be changed) when entering earnings. Note: This item is available only if interfacing with Job Cost. The title of this item may be different because this term can be customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee usually works with the same equipment, enter the equipment ID or click [List] and select the piece of equipment from Equipment Cost. This equipment prefills (but can be changed) when entering earnings. Note: This item is available only if interfacing with Equipment Cost. The title of this item may be different because this term can be customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "EQ_Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee usually generates a cost when working with equipment (such as performing maintenance or repairs), enter the EQ cost code ID or click [List] and select an Equipment Cost cost code. This cost code prefills (but can be changed) when entering earnings. Note: This item is available only if interfacing with Equipment Cost. The title of this item may be different because this term can be customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Union_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works with one union, enter the union ID or click [List] and select the union. This union prefills (but can be changed) when entering earnings. Payroll checks can print in order by union. Unions can be linked to issues by selecting Tools > New Issue."
+    },
+    "Union_Local": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works with one union local, enter the union local ID or click [List] and select the union local. This union local prefills (but can be changed) when entering earnings. Payroll checks can print in order by union local. Union locals can be linked to issues by selecting Tools > New Issue."
+    },
+    "Union_Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works with one union class, enter the union class ID or click [List] and select the union class. This union class prefills (but can be changed) when entering earnings. Payroll checks can print in order by union class."
+    },
+    "Department": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works in one department, enter the department ID or click [List] and select the department. This department prefills (but can be changed) when entering earnings. Payroll checks can print in order by department."
+    },
+    "Certified_Class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works with one certified class, enter the certified class or click [List] and select the certified class. This certified class prefills (but can be changed) when entering earnings. The certified class prints on certified reports. It is required on the Employment Utilization report."
+    },
+    "Shift": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee usually works on one work shift, enter a shift code (1 character). For example, Shift 1 might be from 8:00 am to 4:00 p.m., Shift 2 from 4:00 p.m. to midnight, etc. This shift prefills (but can be changed) when entering earnings. Shift numbers can be used to group employees on reports showing workers by shift or schedule."
+    },
+    "Not_Used": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Optional) Enter a default miscellaneous ID (no more than 10 characters). This entry prefills (but can be changed) when entering earnings. Note: You can customize the title of this item in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Misc_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Optional) Enter a default miscellaneous ID (no more than 10 characters). This entry prefills (but can be changed) when entering earnings. Note: You can customize the title of this item in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Retirement_Plan": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select if this employee is covered by a retirement plan. Note: When W-2 forms print, the Retirement plan check box in box 13 is automatically selected on the W-2 form for this employee."
+    },
+    "rd_Party_Sick_Pay_3": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select if this employee received third-party sick pay during the current reporting year. Note: When W-2 forms print, the Third-party sick pay check box in box 13 is automatically selected on the W-2 form for this employee."
+    },
+    "Auto_Bill_Revenue": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select to automatically create revenue entries for Equipment Cost when entering earnings charged to a job for this employee and only if the equipment revenue for this employee is based on the same number of units entered for earnings. Equipment revenue entries are automatically created only if earnings are charged to a job. Note: This item is available only if interfacing with Equipment Cost."
+    },
+    "Exclude_From_Cert_Report": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select to prevent this employee's earnings information from printing on certified reports even if the earnings are posted to a certified job. For example, if an employee picks up and delivers materials for a certified job, you may want to associate the hours with the job when entering earnings, but not include the hours on the certified report. For information about how to track employee hours per day and create daily distribution records even when this box check box is selected, see About tracking employee hours per day."
+    },
+    "Hire_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Enter the date this employee was originally hired. Note: If this is a new employee, also select Not working for ACA Exemption Status in the Affordable Care Act Employee Details window for the months before the new employee worked for your company."
+    },
+    "HIRE_Act_Qualified": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Rehire_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If this employee was hired more than once and you want to preserve the original hire date, enter the rehire date. Note: If this window has a Rehire date that is later than the Termination date, Payroll considers the employee active and no terminated employee warning will be given when entering earnings."
+    },
+    "Termination_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee left your company, enter the date this employee was terminated. When the employee is considered terminated: If you try to enter earnings, you may be warned that the employee was terminated (based on your selection for Terminated employee warning level in the PR Settings window). Auto Salary checks cannot be processed. Note: If this window has a Rehire date that is later than the Termination date, Payroll considers the employee active. Note: Also select Not working for ACA Exemption Status in the Affordable Care Act Employee Details window for the months after the terminated employee leaves your company."
+    },
+    "Termination_Reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If the employee was terminated, select a reason for the termination, such as Leave of Absence."
+    },
+    "Termination_Reason_131": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Sort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "To use a check printing order other than a standard order (by employee, job, union, union local, union class, or department), enter a custom check order for this employee. For example, to print checks in order by supervisor, enter the supervisor's initials for each employee. You must also select Custom Sort in the Check Sort column for this employee's pay group. See Specifying the check order. Note: The title of this item may be different if CM Check was customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Max_Check_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "To limit the check amount for this employee, type the maximum net amount (no more than 8.2 digits). Earnings that exceed this maximum check amount cannot be printed. Note: The title of this item may be different if CM Check was customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Last_Check_Number": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Displays the number of the last check printed for this employee, which is automatically maintained by Payroll. Do not change this number unless you are setting up an employee for the first time, or you are sure a change is required. The last check number is not updated by Void Checks; it stores the number of the last check printed even if that check was subsequently voided. Note: The title of this item may be different if CM Check was customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Last_Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the date of the last check printed for this employee, which is automatically maintained by Payroll. Do not change this date unless you are setting up an employee for the first time, or you are sure a change is required. The last check date is not updated by Void Checks; it stores the date of the last check printed even if that check was subsequently voided. Note: The title of this item may be different if CM Check was customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Last_Check_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the amount of the last check printed for this employee, which is automatically maintained by Payroll. Do not change this amount unless you are setting up an employee for the first time, or you are sure a change is required. The last check amount is not updated by Void Checks; it stores the amount of the last check printed even if that check was subsequently voided. Note: The title of this item may be different if CM Check was customized in the Custom Descriptions windowClosed; select File > Company Settings > Custom Descriptions."
+    },
+    "Check_List_1": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_2": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_3": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_4": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_5": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_6": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_7": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_8": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_9": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Check_List_10": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "These items are used to track various to-do items. You can select the check box for an item when it is complete. For example, if newly-hired employees are required to take a physical and complete a W-4 form, you can set up Check list 1 as Physical? and Check list 2 as W-4 Complete? using [Change desc]. If the description of a check box is changed for a checklist item, it is changed for all employees."
+    },
+    "Standard_Occ_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If your state (such as Alaska, Indiana, and Louisiana) requires the standard occupation code for employee reporting, enter the code for this employee."
+    },
+    "ACA_Exempt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select one of the following choices, which determines if the employee is exempt from ACA reporting. Full-time: The employee works full time and is not exempt from ACA reporting. Not exempt: The employee works part time and is not exempt from ACA reporting. Not working: The employee did not work during the month. Use this choice for a new employee (for the months before the employee worked for your company) and for a terminated employee (for the months after the employee left). Exempt: Employer: The employee is also the employer or owner. Exempt: Relative: The employee is a relative of the employer/owner. Exempt: Seasonal: The employee is seasonal. See the Internal Revenue website for rules to determine if the employee is seasonal and exempt from ACA reporting."
+    },
+    "ACA_Coverage_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the code representing the type of health care coverage your company offered this employee. For information about the codes, see the Internal Revenue website. This code will be used for line 14 (Offer of Coverage) on the 1095-C form for the employee unless it is changed on the Affordable Care Act Employee Details window. Initially, this is the setting from the ACA Settings window, but you can change it."
+    },
+    "ACA_Premium_Share": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's monthly premium amount for self coverage for the lowest cost plan, if applicable. For information about how to determine this amount, see the Internal Revenue website. This amount will be used for line 15 (Employee Share of Lowest Cost Monthly Premium, for Self-Only Minimum Value Coverage) on the 1095-C form for the employee unless it is changed on the Affordable Care Act Employee Details window. Initially, this is the setting from the ACA Settings window, but you can change it."
+    },
+    "ACA_Safe_Harbor_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the code for the safe harbor, employment status, or enrollment status that applies to this employee. For information about the codes, see the Internal Revenue website. This code will be used for line 16 (Applicable Section 4980H Safe Harbor) on the 1095-C form for the employee unless it is changed on the Affordable Care Act Employee Details window. Initially, this is the setting from the ACA Settings window, but you can change it."
+    },
+    "ACA_Policy_Origin_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(If your company generates the 1095-B form for the employee instead of a 1095-C form) Displays the code for the origin of the policy that applies to this employee. For information about the codes, see the Internal Revenue website. This code will be used for line 8 on the 1095-B form for the employee. Initially, this is the setting from the ACA Settings window, but you can change it."
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Add properties to this object for any custom fields you want to set as this record is added to Sage300."
+    }
+  },
+  "required": [
+    "Employee"
+  ]
+}

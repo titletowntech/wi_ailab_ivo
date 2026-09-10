@@ -1,0 +1,590 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/PoItems/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "po_sub_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_sub_item_line": {
+      "type": "integer",
+      "description": ""
+    },
+    "item_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "purchasing_unit_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "unit_cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "extended_cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": "string",
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "po_sub_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "item_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16,
+      "description": ""
+    },
+    "purchasing_unit_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "detail_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000,
+      "description": ""
+    },
+    "stocking_unit_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "stocking_quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "stocking_unit_cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "distribute_to": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "warehouse_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "tax_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tax_base": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "tax_amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "gl_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "inventory_receipt_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "clear_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "clear_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "closed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "order_completion_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "backorder_qty": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "backorder_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "stocking_unit_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "warehouse_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "eq_wo_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "service_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "eq_wo_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "service_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "printable_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "dispatch_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "dispatch_billing": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "delivery_unit_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "delivery_quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "delivery_unit_cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "delivery_unit_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "dispatch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_by_effdate_flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "state_tax_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "state_taxable_limit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "state_tax_amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "local_tax_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "local_taxable_limit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "local_tax_amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "other_tax_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "other_taxable_limit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "other_tax_amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "state_limit_applied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "local_limit_applied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "other_limit_applied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "item_div_level_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "item_div_level_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "item_div_level_3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "item_div_level_4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "full_gl_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "non_inventory_item": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "po_sub_no",
+    "po_sub_item_line",
+    "description",
+    "quantity",
+    "unit_cost",
+    "extended_cost",
+    "record_status",
+    "row_modified_by",
+    "row_modified_on",
+    "row_unique_id",
+    "stocking_quantity",
+    "stocking_unit_cost",
+    "distribute_to",
+    "tax_flag",
+    "tax_base",
+    "tax_amount",
+    "amount",
+    "inventory_receipt_flag",
+    "clear_flag",
+    "backorder_qty",
+    "printable_flag",
+    "dispatch_billing",
+    "delivery_quantity",
+    "delivery_unit_cost",
+    "record_guid",
+    "non_inventory_item"
+  ]
+}

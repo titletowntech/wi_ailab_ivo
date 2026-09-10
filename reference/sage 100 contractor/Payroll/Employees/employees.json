@@ -1,0 +1,947 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/Vendor/cache.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "employee_id": {
+      "type": "integer",
+      "description": "The employee number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "last_name": {
+      "type": "string",
+      "description": "The employee's last name",
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "first_name": {
+      "type": "string",
+      "description": "The employee's first name",
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "mi": {
+      "type": "string",
+      "description": "The employee's middle initial",
+      "maxLength": 1
+    },
+    "status": {
+      "type": "integer",
+      "description": "Employee status (1-Current, 2-On Leave, 3-Quit, 4-Laid Off, 5-Terminated, 6-Probation, 7-Deceased)",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "address_1": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 50
+    },
+    "address_2": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 50
+    },
+    "city": {
+      "type": "string",
+      "description": "The employee's city",
+      "maxLength": 50
+    },
+    "state": {
+      "type": "string",
+      "description": "The employee's state",
+      "maxLength": 2
+    },
+    "zip": {
+      "type": "string",
+      "description": "The employee's zip code",
+      "maxLength": 10
+    },
+    "phone_num": {
+      "type": "string",
+      "description": "The employee's telephone number",
+      "maxLength": 14
+    },
+    "pager_num": {
+      "type": "string",
+      "description": "The employee's pager number",
+      "maxLength": 14
+    },
+    "fax_num": {
+      "type": "string",
+      "description": "The employee's fax number",
+      "maxLength": 14
+    },
+    "cell_num": {
+      "type": "string",
+      "description": "The employee's cell number",
+      "maxLength": 14
+    },
+    "home_num": {
+      "type": "string",
+      "description": "The employee's home number",
+      "maxLength": 14
+    },
+    "email": {
+      "type": "string",
+      "description": "The employee's email address",
+      "maxLength": 75
+    },
+    "social_security_num": {
+      "type": "string",
+      "description": "The employee's social security number",
+      "maxLength": 44,
+      "writeOnly": true
+    },
+    "equipment": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default equipment number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "birth_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The employee's date of birth",
+      "writeOnly": true
+    },
+    "hire_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The employee's date of hire"
+    },
+    "hire_inactive": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the employee record becomes inactive"
+    },
+    "last_raise": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the last raise was given"
+    },
+    "gender": {
+      "type": "integer",
+      "description": "Select the employee's gender",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "benefit_status": {
+      "type": "integer",
+      "description": "Select the employee's benefit status (for reference only)",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "heritage": {
+      "type": "integer",
+      "description": "Select the employee's heritage",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "position": {
+      "type": "integer",
+      "description": "Select the employee's position",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "comp_code": {
+      "type": "integer",
+      "description": "Select the default workers' compensation code"
+    },
+    "always_use_employee_comp_code": {
+      "type": "integer",
+      "description": "Select to use employee's compensation code for all pay"
+    },
+    "exempt_from_certified_reporting": {
+      "type": "integer",
+      "description": "Select to exclude employee from certified payroll reports"
+    },
+    "tax_state": {
+      "type": "string",
+      "description": "The State abbreviation"
+    },
+    "pay_period": {
+      "type": "integer",
+      "description": "Select the pay period"
+    },
+    "paygroup": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The paygroup number"
+    },
+    "regular_hourly_rate": {
+      "type": "string",
+      "description": "The hourly rate for regular pay (leave blank for salaried employees)",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "overtime_hourly_rate": {
+      "type": "string",
+      "description": "The hourly rate for overtime pay (leave blank for salaried employees)",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "premium_hourly_rate": {
+      "type": "string",
+      "description": "The hourly rate for premium pay (leave blank for salaried employees)",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "salary": {
+      "type": "string",
+      "description": "The salary for one pay period",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "advances_due": {
+      "type": "string",
+      "description": "Total amount of outstanding advances due",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "sick_available": {
+      "type": "string",
+      "description": "Available hours of accrued sick time",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": -999,
+      "maximum": 999
+    },
+    "sick_rate": {
+      "type": "string",
+      "description": "The rate of accrual",
+      "pattern": "^[-+]?[0-9]{1,5}(?:.[0-9]{1,5})?$",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "sick_method": {
+      "type": "integer",
+      "description": "Select the method of sick time calculation",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "vacation_available": {
+      "type": "string",
+      "description": "Available hours of accrued vacation time",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": -999,
+      "maximum": 999
+    },
+    "vacation_rate": {
+      "type": "string",
+      "description": "The rate of accrual",
+      "pattern": "^[-+]?[0-9]{1,5}(?:.[0-9]{1,5})?$",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "vacation_method": {
+      "type": "integer",
+      "description": "Select the method of vacation time calculation",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "residence_locale": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The payroll tax district for the employee's residence",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "union": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee's union",
+      "minimum": 0,
+      "maximum": 99999999
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "qtr1_gross": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr2_gross": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr3_gross": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr4_gross": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr1_fica_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr2_fica_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr3_fica_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr4_fica_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr1_med_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr2_med_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr3_med_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "qtr4_med_wage": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "image_file": {
+      "type": "string",
+      "description": "The path of the bitmap"
+    },
+    "i_9_verified": {
+      "type": "integer",
+      "description": "Select when I-9 verification has been received",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "exempt_from_overtime_pay": {
+      "type": "integer",
+      "description": "Select to exempt the employee from overtime pay",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "employment_type": {
+      "type": "integer",
+      "description": "Select the classification of the employee",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "commission": {
+      "type": "string",
+      "description": "The rate (%) of the sales commission",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "account_number": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "routing_num": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 9,
+      "writeOnly": true
+    },
+    "prenote_status": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "account_type": {
+      "type": "integer",
+      "description": "Select the type of bank account",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "deposit_amount": {
+      "type": "string",
+      "description": "The amount to deposit to this account",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "account_number_2": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "routing_num_2": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 9,
+      "writeOnly": true
+    },
+    "prenote_status_2": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "account_type_2": {
+      "type": "integer",
+      "description": "Select the type of bank account",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "deposit_amount_2": {
+      "type": "string",
+      "description": "The amount to deposit to this account",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "account_number_3": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "routing_num_3": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 9,
+      "writeOnly": true
+    },
+    "prenote_status_3": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "account_type_3": {
+      "type": "integer",
+      "description": "Select the type of bank account",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "deposit_amount_3": {
+      "type": "string",
+      "description": "The amount to deposit to this account",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "account_number_4": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "routing_num_4": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 9,
+      "writeOnly": true
+    },
+    "prenote_status_4": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "account_type_4": {
+      "type": "integer",
+      "description": "Select the type of bank account",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "deposit_amount_4": {
+      "type": "string",
+      "description": "The amount to deposit to this account",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "enable_direct_deposit": {
+      "type": "integer",
+      "description": "Select if employee uses direct deposit",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mark_retirement_plan_on_w_2": {
+      "type": "integer",
+      "description": "Select to mark the 'Retirement Plan' checkbox on W-2 forms",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "last,_first,_mi": {
+      "type": "string",
+      "description": "",
+      "maxLength": 105
+    },
+    "first,_mi,_last": {
+      "type": "string",
+      "description": "",
+      "maxLength": 105
+    },
+    "direct_dep_rate_type": {
+      "type": "integer",
+      "description": "The type of rate calculation for direct deposit",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "direct_dep_rate_type_2": {
+      "type": "integer",
+      "description": "The type of rate calculation for direct deposit",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "direct_dep_rate_type_3": {
+      "type": "integer",
+      "description": "The type of rate calculation for direct deposit",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "direct_dep_rate_type_4": {
+      "type": "integer",
+      "description": "The type of rate calculation for direct deposit",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "mark_3rd_party_sick_pay_on_w_2": {
+      "type": "integer",
+      "description": "Select to mark the 'Third-Party Sick Pay' checkbox on W-2 forms",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "heritage_list_updated_flag": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "eligible_under_hire_act_of_2010": {
+      "type": "integer",
+      "description": "Check if this is a qualified employee under the federal HIRE Act of 2010",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "direct_deposit_email": {
+      "type": "string",
+      "description": "The email address to receive the direct deposit pay stub",
+      "maxLength": 75
+    },
+    "work_locale": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The payroll tax district for the employee's work location (for salaried employees)",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "other_authorized_deductions": {
+      "type": "string",
+      "description": "Enter any other annual deductions authorized by a tax service office",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "deduction_for_prescribed_zone": {
+      "type": "string",
+      "description": "The amount of any annual deduction for living in a prescribed northern zone (from TD1 form)",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "labour_sponsored_funds": {
+      "type": "string",
+      "description": "The amount withheld during the year for the purchase of a prescribed stock",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "additional_tax_to_withhold": {
+      "type": "string",
+      "description": "Enter any additional tax to be deducted from each payment (from TD1 form)",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "institution_account_status": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "institution_id_num": {
+      "type": "string",
+      "description": "The employee bank's institution identification number",
+      "maxLength": 3
+    },
+    "institution_routing_num": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 5,
+      "writeOnly": true
+    },
+    "institution_account_num": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 44,
+      "writeOnly": true
+    },
+    "institution_account_status_2": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "institution_id_num_2": {
+      "type": "string",
+      "description": "The employee bank's institution identification number",
+      "maxLength": 3
+    },
+    "institution_routing_num_2": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 5,
+      "writeOnly": true
+    },
+    "institution_account_num_2": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 44,
+      "writeOnly": true
+    },
+    "institution_account_status_3": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "institution_id_num_3": {
+      "type": "string",
+      "description": "The employee bank's institution identification number",
+      "maxLength": 3
+    },
+    "institution_routing_num_3": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 5,
+      "writeOnly": true
+    },
+    "institution_account_num_3": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 44,
+      "writeOnly": true
+    },
+    "institution_account_status_4": {
+      "type": "integer",
+      "description": "Select the employee's account status",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "institution_id_num_4": {
+      "type": "string",
+      "description": "The employee bank's institution identification number",
+      "maxLength": 3
+    },
+    "institution_routing_num_4": {
+      "type": "string",
+      "description": "The account routing number",
+      "maxLength": 5,
+      "writeOnly": true
+    },
+    "institution_account_num_4": {
+      "type": "string",
+      "description": "The employee's bank account number",
+      "maxLength": 44,
+      "writeOnly": true
+    },
+    "first_worked": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The employee's first worked date (for ROE reporting)"
+    },
+    "last_roe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of the most recently issued ROE"
+    },
+    "accrued_vacation_due": {
+      "type": "string",
+      "description": "Total amount of outstanding vacation accrual due",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "aatrix_electronic_w_2_consent": {
+      "type": "integer",
+      "description": "Select when employee has consented to an electronic W-2 from Aatrix",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "aatrix_electronic_aca_consent": {
+      "type": "integer",
+      "description": "Select when employee has consented to an electronic ACA statement from Aatrix",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "a_maximum": {
+      "type": "string",
+      "description": "The maximum amount of sick time to accrue",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "a_carry_forward": {
+      "type": "string",
+      "description": "The amount of available sick time carried forward from last year",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": -999,
+      "maximum": 999
+    },
+    "pay_classification": {
+      "type": "integer",
+      "description": "Pay classification (1-Hourly, 2-Shift, 3-Day, 4-Week, 5-Salary, 6-Piece, 7-Commission) ",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "inactive": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "b_maximum": {
+      "type": "string",
+      "description": "The maximum amount of vacation time to accrue",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "b_carry_forward": {
+      "type": "string",
+      "description": "The amount of available vacation time carried forward from last year",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": -999,
+      "maximum": 999
+    },
+    "a_annual_limit": {
+      "type": "string",
+      "description": "The annual limit of sick time accruable",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "a_accrued_ytd": {
+      "type": "string",
+      "description": "Total sick hours accrued this year",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "federal_rate": {
+      "type": "string",
+      "description": "The rate of accrual per hour worked for federal jobs",
+      "pattern": "^[-+]?[0-9]{1,5}(?:.[0-9]{1,5})?$",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "federal_limit": {
+      "type": "string",
+      "description": "The annual limit of sick time accruable for federal jobs",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "federal_ytd": {
+      "type": "string",
+      "description": "Total sick hours accrued this year for federal jobs",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "b_annual_limit": {
+      "type": "string",
+      "description": "The annual limit of vacation time accruable",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "b_accrued_ytd": {
+      "type": "string",
+      "description": "Total vacation hours accrued this year",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "use_proxy_hours_for_eeo_1_report": {
+      "type": "integer",
+      "description": "Select to use proxy hours (40 hours/week full-time; 20 hours/week part-time) for EE0-1 reporting",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "w_4_step_1_filing_status": {
+      "type": "integer",
+      "description": "Select the filing status from step 1 of the W-4",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "w_4_step_2_two_jobs_checkbox": {
+      "type": "integer",
+      "description": "Select if the checkbox in step 2 of the W-4 is selected",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "w_4_step_3_total_dependents": {
+      "type": "string",
+      "description": "The total amount for claimed dependents from step 3 of the W-4",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 9999999
+    },
+    "w_4_step_4_other_income": {
+      "type": "string",
+      "description": "The other income amount from step 4 of the W-4",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 9999999
+    },
+    "w_4_step_4_deductions": {
+      "type": "string",
+      "description": "The deductions amount from step 4 of the W-4",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 9999999
+    },
+    "w_4_step_4_extra_withholding": {
+      "type": "string",
+      "description": "The extra withholding amount from step 4 of the W-4",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 9999999
+    },
+    "w_4_step_5_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date signed from step 5 of the W-4"
+    }
+  },
+  "required": [
+    "idnum",
+    "employee_id",
+    "last_name",
+    "first_name"
+  ]
+}

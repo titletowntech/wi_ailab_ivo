@@ -1,0 +1,2008 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Jobs/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "job_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "cost_code_method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "cost_basis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "certified_payroll": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "job_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "overhead_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "county_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_pr_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "customer_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "project_manager_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "geo_area_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "project_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "original_contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "total_change_orders": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "income_incurred": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "tax_ap_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "original_cost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "tot_change_order_cost": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "tot_percent_complete": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "certified_last_paid_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "retainage_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "pay_weeks": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "suta_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "short_desc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "job_start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "tax_ar_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "dept_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "completion_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "certified_start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "workers_comp_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "non_union": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "override_union": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "customer_order_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "customer_job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "attention_of": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "terms_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "order_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "order_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "customer_contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "job_contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ship_via_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "prevailing_wage_union": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "overhead_rate_flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "apply_phases": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "county_pr_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "zip_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "job_location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "type_of_work": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "project_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "job_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "federal_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "employment_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "district": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "est_completion_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "work_days_remaining": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "contract_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "security_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "price_level_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_price_level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,1}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "overhead_rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "man_day_rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "gen_phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "material_entered": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "apply_shift_differential": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "stored_mat_retainage_perc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "wc_proration_basis": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "customer_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "customer_order_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "customer_job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "county_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "county_pr_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "dept_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "federal_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "geo_area_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "project_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "project_manager_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "price_level_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ship_via_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "security_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "terms_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_ap_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_ar_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tax_pr_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_income_cost_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_service_repair": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_billing_design_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "default_income_phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_override_income_phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_override_income_cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_retainage_percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "tm_tax_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "tm_sales_tax_base_default": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_labor": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_material": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_subcontract": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_owned_equipment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_rented_equipment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_burden_misc": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_overhead": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_income_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_billing_design_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_override_income_cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_override_income_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "tm_tax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "waiver_owner": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45,
+      "description": ""
+    },
+    "waiver_county": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_default": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ap_tax_exempt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ap_tax_exempt_cert": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "inv_usage_markup": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "federal_project_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "state_project_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "include_job_in_tm": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "default_tax_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "awarding_authority": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_default_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "lien_waiver_format_ar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "lien_waiver_format_ap": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "description_of_services": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "lien_waiver_owner_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_owner_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_owner_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_owner_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "lien_waiver_owner_zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "pre_lien_required": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "pre_lien_format": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "pre_lien_trust_fund_vendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "pre_lien_printed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "pre_lien_contractor_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_contractor_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_contractor_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_contractor_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_contractor_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "pre_lien_contractor_zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "pre_lien_con_lender_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_con_lender_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_con_lender_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_con_lender_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_con_lender_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "pre_lien_con_lender_zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "ovhd_post_to_job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ovhd_rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "ovhd_get_values_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "ovhd_post_to_phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ovhd_post_to_cost_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ovhd_post_to_cost_class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "type_of_work_pr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "davis_bacon_payrate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "date_of_letting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "zone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "project_serial_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "route": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "section": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "income_type_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "include_on_minority_compliance": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "income_type_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "job_country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "ship_to_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "verify_budget_vs_posub_dist": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ship_to_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "city_project_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "contract_awarded_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "city_contract_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "kc_cert_pr_local_tax_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "lien_waiver_owner_use_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "city_contract_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "city_project_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "kc_cert_pr_local_tax_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "sd_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "sd_site": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "sd_tech": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "import_batch_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "import_batch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "prevailing_wage_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "awarding_auth_project_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "tm_usetax_tax_base_default": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_labor": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_material": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_subcontract": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_owned_equipment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_rented_equipment": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_burden": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_usetax_overhead": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_tax_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "qb_labor_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_labor_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_burden_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_burden_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_fica_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_fica_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_unemployment_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_unemployment_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_wc_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_wc_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_fringe_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_fringe_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_401k_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_401k_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_extra_burden_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "qb_extra_burden_account_n": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7,
+      "description": ""
+    },
+    "qb_job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 209,
+      "description": ""
+    },
+    "pre_lien_contractor_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_owner_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "pre_lien_con_lender_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "lien_waiver_format_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "lien_waiver_design_no_ap": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "eq_job_usage_rates_comment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 45,
+      "description": ""
+    },
+    "aia_company_name_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "aia_company_name_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "exclude_in_epr_wrk_wage": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "foreign_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_ws_design_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "calc_daily_ot_based_on": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "OT_day_limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "apply_Sat_Sun_OT_rules": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "tm_ws_design_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "DT_day_limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Sat_all_OT": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Sat_DT_after": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Sun_all_DT": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "awarding_authority_address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "awarding_authority_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "awarding_authority_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "awarding_authority_zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "awarding_authority_phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "bid_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "bid_due_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "bid_status_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "bid_closed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "estimator_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "salesperson_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "original_bid_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "proest_estimate_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "bid_status_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "estimator_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "original_bid_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "salesperson_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "bid_submitted_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "gen_liab_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "gen_liab_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "gen_liab_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "bid_design_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "bid_design_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "mc_job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100,
+      "description": ""
+    },
+    "mc_database_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 256,
+      "description": ""
+    },
+    "mc_job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "job_no",
+    "description",
+    "cost_basis",
+    "certified_payroll",
+    "job_status",
+    "record_status",
+    "row_unique_id",
+    "wc_proration_basis",
+    "equipment_service_repair",
+    "tm_retainage_percent",
+    "tm_sales_tax_base_default",
+    "tm_tax_labor",
+    "tm_tax_material",
+    "tm_tax_subcontract",
+    "tm_tax_owned_equipment",
+    "tm_tax_rented_equipment",
+    "tm_tax_burden_misc",
+    "tm_tax_overhead",
+    "lien_waiver_default",
+    "ap_tax_exempt",
+    "inv_usage_markup",
+    "include_job_in_tm",
+    "default_tax_type",
+    "pre_lien_required",
+    "include_on_minority_compliance",
+    "verify_budget_vs_posub_dist",
+    "lien_waiver_owner_use_flag",
+    "sd_flag",
+    "tm_usetax_tax_base_default",
+    "tm_usetax_labor",
+    "tm_usetax_material",
+    "tm_usetax_subcontract",
+    "tm_usetax_owned_equipment",
+    "tm_usetax_rented_equipment",
+    "tm_usetax_burden",
+    "tm_usetax_overhead",
+    "tm_tax_type",
+    "lien_waiver_format_type",
+    "exclude_in_epr_wrk_wage",
+    "foreign_flag",
+    "calc_daily_ot_based_on",
+    "OT_day_limit",
+    "apply_Sat_Sun_OT_rules",
+    "DT_day_limit",
+    "Sat_all_OT",
+    "Sat_DT_after",
+    "Sun_all_DT",
+    "record_guid"
+  ]
+}

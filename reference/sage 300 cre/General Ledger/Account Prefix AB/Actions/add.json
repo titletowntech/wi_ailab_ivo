@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/gl/v1/object/account_prefix_ab/add.json",
+  "title": "Account Prefix AB Add Action Schema",
+  "description": "Schema for adding a new Account Prefix AB record.",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,1218 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Commitment/cache.json",
+  "type": "object",
+  "properties": {
+    "Actual_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Actual_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Being_Retained": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Invoiced": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Approved_Commitment_CO_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Approved_Commitment_CO_Cancelled": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Approved_Commitment_CO_Tax_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automobile_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Automobile_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automobile_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automobile_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automobile_Override": {
+      "type": "boolean"
+    },
+    "Automobile_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Automobile_Received": {
+      "type": "boolean"
+    },
+    "Automobile_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Automobile_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automobile_Required": {
+      "type": "boolean"
+    },
+    "Cert_Report_Last_Gen_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Closed": {
+      "type": "boolean"
+    },
+    "Cntrct_to_be_Issued_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Commitment_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Commitment_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Commitment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Committed_to_JC": {
+      "type": "boolean"
+    },
+    "Company_Verbal_Approval": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Contract_Amount_Cancelled": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contract_Issued": {
+      "type": "boolean"
+    },
+    "Contract_Issued_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Contract_Signed_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Contract_Signed_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Custom_1_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Expiration_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Override": {
+      "type": "boolean"
+    },
+    "Custom_1_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Custom_1_Received": {
+      "type": "boolean"
+    },
+    "Custom_1_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Custom_1_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Required": {
+      "type": "boolean"
+    },
+    "Custom_2_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Custom_2_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Expiration_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Override": {
+      "type": "boolean"
+    },
+    "Custom_2_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Custom_2_Received": {
+      "type": "boolean"
+    },
+    "Custom_2_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Custom_2_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Required": {
+      "type": "boolean"
+    },
+    "Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Delivery_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Doc_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Extra": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Free_on_Board": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Gen_Liability_Eff_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Gen_Liability_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Gen_Liability_Override": {
+      "type": "boolean"
+    },
+    "Gen_Liability_Rec_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Gen_Liability_Received": {
+      "type": "boolean"
+    },
+    "Gen_Liability_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Gen_Liability_Required": {
+      "type": "boolean"
+    },
+    "General_Liability_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "General_Liability_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "General_Liability_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Ins_Certificate_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Ins_Certificate_Received": {
+      "type": "boolean"
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Last_Check": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Invoice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Master_Compliance_Approvl": {
+      "type": "boolean"
+    },
+    "Misc_Alpha_5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Misc_Checklst_1": {
+      "type": "boolean"
+    },
+    "Misc_Checklst_1_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Checklst_2": {
+      "type": "boolean"
+    },
+    "Misc_Checklst_2_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Checklst_3": {
+      "type": "boolean"
+    },
+    "Misc_Checklst_3_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Checklst_4": {
+      "type": "boolean"
+    },
+    "Misc_Checklst_4_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Date_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Date_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "On_Hold": {
+      "type": "boolean"
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Ordered_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Payment_Bond_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Payment_Bond_Contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Payment_Bond_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Payment_Bond_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "writeOnly": true
+    },
+    "Payment_Bond_Received": {
+      "type": "boolean",
+      "writeOnly": true
+    },
+    "Payment_Bond_Required": {
+      "type": "boolean",
+      "writeOnly": true
+    },
+    "Payment_Bond_Surety": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Pending_Commitment_CO_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pending_Commitment_CO_Cancelled": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pending_Commitment_CO_Tax_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Performance_Bond_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Performance_Bond_Contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Performance_Bond_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Performance_Bond_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Performance_Bond_Rec": {
+      "type": "boolean"
+    },
+    "Performance_Bond_Req": {
+      "type": "boolean"
+    },
+    "Performance_Bond_Surety": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Printed": {
+      "type": "boolean"
+    },
+    "Release_to_Accounting": {
+      "type": "boolean"
+    },
+    "Retainage_Percent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scheduled_Completion_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scheduled_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scope_of_Work": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "Ship_To_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Ship_To_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Ship_To_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Ship_To_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Ship_To_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Ship_Via": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Signed_Contract_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Signed_Contract_Received": {
+      "type": "boolean"
+    },
+    "Startup_Notification_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Terms": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "To_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "To_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "To_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "To_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "To_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Umbrella_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Umbrella_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umbrella_Expiration_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umbrella_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umbrella_Override": {
+      "type": "boolean"
+    },
+    "Umbrella_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Umbrella_Received": {
+      "type": "boolean"
+    },
+    "Umbrella_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Umbrella_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umbrella_Required": {
+      "type": "boolean"
+    },
+    "Unit_Price_Commitment": {
+      "type": "boolean"
+    },
+    "Vend_Verb_Apprvl_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Vendor_Apprvl_Signed_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Vendor_Apprvl_Signed_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Vendor_Verbal_Approval": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Vendor_Verbal_Apprvl_Rec": {
+      "type": "boolean"
+    },
+    "Workers_Comp_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Workers_Comp_Eff_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Workers_Comp_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Workers_Comp_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Workers_Comp_Override": {
+      "type": "boolean"
+    },
+    "Workers_Comp_Policy": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Workers_Comp_Rec_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Workers_Comp_Received": {
+      "type": "boolean"
+    },
+    "Workers_Comp_Received_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Workers_Comp_Required": {
+      "type": "boolean"
+    },
+    "Line_Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Commitment": {
+            "type": "string"
+          },
+          "Item_Number": {
+            "type": "integer"
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Retainage_Percent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Delivery_Date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Scope_of_Work": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Extra": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Cost_Code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Category": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tax_Group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tax": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Units": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Unit_Cost": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Unit_Description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Commitment_CO": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Approved_Commitment_CO_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Approved_Commitment_CO_Tax_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Approved_Commitment_CO_Units": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pending_Commitment_CO_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pending_Commitment_CO_Tax_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pending_Commitment_CO_Units": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount_Invoiced": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Units_Invoiced": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount_Being_Retained": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount_Paid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Apprvd_Commitment_CO_Amt_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Apprvd_Commitment_CO_Unts_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pndng_Commitment_CO_Amt_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pndng_Commitment_CO_Units_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Contract_Amount_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Contract_Units_Cancelled": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Sent_to_WIP": {
+            "type": "boolean"
+          },
+          "CI_Doc_Index": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Commitment_CO_Index": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "CCOD_Index": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Operator_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Date_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Time_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Commitment_Item_Notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Commitment_Item_File_Lnks": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "__custom_fields": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "required": [
+          "Sent_to_WIP",
+          "Item_Number",
+          "Commitment"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Commitment",
+    "Unit_Price_Commitment",
+    "Release_to_Accounting",
+    "Committed_to_JC",
+    "On_Hold",
+    "Closed",
+    "Printed",
+    "Workers_Comp_Required",
+    "Workers_Comp_Received",
+    "Workers_Comp_Override",
+    "Automobile_Required",
+    "Automobile_Received",
+    "Automobile_Override",
+    "Gen_Liability_Required",
+    "Gen_Liability_Received",
+    "Gen_Liability_Override",
+    "Umbrella_Required",
+    "Umbrella_Received",
+    "Umbrella_Override",
+    "Custom_1_Required",
+    "Custom_1_Received",
+    "Custom_1_Override",
+    "Custom_2_Required",
+    "Custom_2_Received",
+    "Custom_2_Override",
+    "Vendor_Verbal_Apprvl_Rec",
+    "Contract_Issued",
+    "Signed_Contract_Received",
+    "Ins_Certificate_Received",
+    "Misc_Checklst_1",
+    "Misc_Checklst_2",
+    "Misc_Checklst_3",
+    "Misc_Checklst_4",
+    "Performance_Bond_Req",
+    "Performance_Bond_Rec",
+    "Payment_Bond_Required",
+    "Payment_Bond_Received",
+    "Master_Compliance_Approvl"
+  ]
+}

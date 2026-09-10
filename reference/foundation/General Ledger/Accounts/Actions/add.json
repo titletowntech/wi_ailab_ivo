@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://foundation.si.ryvit.com/gl/v1/object/accounts/add.json",
+  "title": "Accounts Add Action Schema",
+  "description": "Schema for adding a new Accounts record.",
+  "type": "object",
+  "properties": {}
+}

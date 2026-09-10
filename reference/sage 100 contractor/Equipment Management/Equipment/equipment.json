@@ -1,0 +1,629 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/Equipment/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "equip_id": {
+      "type": "integer",
+      "description": "The equipment number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "description": {
+      "type": "string",
+      "description": "Enter a description of the equipment",
+      "maxLength": 50
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Enter a brief name for sorting/finding the equipment",
+      "maxLength": 30
+    },
+    "serial_num": {
+      "type": "string",
+      "description": "The serial number",
+      "maxLength": 30
+    },
+    "license_num": {
+      "type": "string",
+      "description": "The license number",
+      "maxLength": 30
+    },
+    "puc_num": {
+      "type": "string",
+      "description": "The Public Utility Commission number for the equipment",
+      "maxLength": 30
+    },
+    "loan_num": {
+      "type": "string",
+      "description": "The lender's loan number (optional- for printing on payment checks)",
+      "maxLength": 30
+    },
+    "lender": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The vendor number of the lending institution",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "purchased": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of purchase (mm/dd/yyyy)"
+    },
+    "pay_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date the next payment is due (mm/dd/yyyy)"
+    },
+    "loan_type": {
+      "type": "integer",
+      "description": "Select the loan type",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "interest_rate": {
+      "type": "string",
+      "description": "The rate (%) of interest on the loan",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "payment_amount": {
+      "type": "string",
+      "description": "The amount of the loan payment",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999,
+      "writeOnly": true
+    },
+    "monthly_depreciation": {
+      "type": "string",
+      "description": "The amount of monthly depreciation",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "depreciation_expense": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The Depreciation Expense account number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "interest_expense": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The Financing/Leasing Interest Expense account number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "department": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The department number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "last_location": {
+      "type": "string",
+      "description": "The last location of the equipment",
+      "maxLength": 75
+    },
+    "operated_bill": {
+      "type": "string",
+      "description": "The unit billing rate for the equipment when operated",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "operated_cost": {
+      "type": "string",
+      "description": "The internal charge out rate for the equipment when operated",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "standby_bill": {
+      "type": "string",
+      "description": "The unit billing rate for the equipment when on standby",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "standby_cost": {
+      "type": "string",
+      "description": "The internal charge out rate for the equipment when on standby",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "idle_bill": {
+      "type": "string",
+      "description": "The unit billing rate for the equipment when idled",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "idle_cost": {
+      "type": "string",
+      "description": "The internal charge out rate for the equipment when idled",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "total_hours": {
+      "type": "string",
+      "description": "The lifetime hours of the equipment",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "total_miles": {
+      "type": "string",
+      "description": "The total miles for the life of the equipment",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "beginning_capitalization": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "current_capitalization": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "beginning_depreciation": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "current_depreciation": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "beginning_loan": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "current_loan": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the type",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The starting date for resource consumption"
+    },
+    "end_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The ending date for resource consumption"
+    },
+    "start_value": {
+      "type": "string",
+      "description": "The current value of the equipment",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999999
+    },
+    "ending_value": {
+      "type": "string",
+      "description": "The estimated value at the end of the resource period",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999999
+    },
+    "insurance": {
+      "type": "string",
+      "description": "The cost of insurance",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "financing": {
+      "type": "string",
+      "description": "The cost of loan interest",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "tax_and_license": {
+      "type": "string",
+      "description": "The cost of taxes and licensing fees",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "inspection": {
+      "type": "string",
+      "description": "The costs for inspection of equipment",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "overhaul": {
+      "type": "string",
+      "description": "The cost for equipment overhaul",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "storage": {
+      "type": "string",
+      "description": "The costs for storage",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "cost_of_capital": {
+      "type": "string",
+      "description": "The cost of capital invested in equipment",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "other_cost": {
+      "type": "string",
+      "description": "Enter other miscellaneous costs associated with ownership",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "unit": {
+      "type": "integer",
+      "description": "Select the unit of measure",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "estimated_use": {
+      "type": "string",
+      "description": "The estimated use of the equipment during the period",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "fuel_and_oil": {
+      "type": "string",
+      "description": "The cost of fuel and oil consumption per unit of measure",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "tires": {
+      "type": "string",
+      "description": "The cost of tires per unit of measure",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "maintenance": {
+      "type": "string",
+      "description": "The cost of maintenance per unit of measure",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "other_operated": {
+      "type": "string",
+      "description": "Enter any miscellaneous costs associated with ownership",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "last_posted": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "image_file": {
+      "type": "string",
+      "description": "The path of the bitmap"
+    },
+    "fluid_change": {
+      "type": "string",
+      "description": "The cost for fluid changes",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "minor_repair": {
+      "type": "string",
+      "description": "The cost for minor repair",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "oil_change": {
+      "type": "string",
+      "description": "The cost for oil change",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "mobilization_billing_amount": {
+      "type": "string",
+      "description": "The billing amount for mobilization",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "daily_operated_billing": {
+      "type": "string",
+      "description": "The daily billing rate for the equipment when operated",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "daily_standby_billing": {
+      "type": "string",
+      "description": "The daily billing rate for the equipment when on standby",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "daily_idle_billing": {
+      "type": "string",
+      "description": "The daily billing rate for the equipment when idled",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "weekly_operated_billing": {
+      "type": "string",
+      "description": "The weekly billing rate for the equipment when operated",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "weekly_standby_billing": {
+      "type": "string",
+      "description": "The weekly billing rate for the equipment when on standby",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "weekly_idle_billing": {
+      "type": "string",
+      "description": "The weekly billing rate for the equipment when idled",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "monthly_operated_billing": {
+      "type": "string",
+      "description": "The monthly billing rate for the equipment when operated",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "monthly_standby_billing": {
+      "type": "string",
+      "description": "The monthly billing rate for the equipment when on standby",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "monthly_idle_billing": {
+      "type": "string",
+      "description": "The monthly billing rate for the equipment when idled",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "entered": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "user": {
+      "type": "string",
+      "description": "",
+      "maxLength": 128
+    },
+    "status": {
+      "type": "integer",
+      "description": "Equipment status (1-Available, 2-Under Repair, 3-Out of Service, 4-Sold)",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "last_period": {
+      "type": "string",
+      "description": "Accounting period that depreciation was last posted to",
+      "maxLength": 8
+    },
+    "original_hours": {
+      "type": "string",
+      "description": "The total hours at time of acquisition",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "original_miles": {
+      "type": "string",
+      "description": "The total miles at time of acquisition",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "sold_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of sale (mm/dd/yyyy)"
+    },
+    "inactive": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "idnum",
+    "equip_id",
+    "description",
+    "short_name",
+    "serial_num",
+    "license_num",
+    "puc_num",
+    "loan_num",
+    "loan_type",
+    "interest_rate",
+    "payment_amount",
+    "monthly_depreciation",
+    "user_def1",
+    "user_def2",
+    "last_location",
+    "operated_bill",
+    "operated_cost",
+    "standby_bill",
+    "standby_cost",
+    "idle_bill",
+    "idle_cost",
+    "total_hours",
+    "total_miles",
+    "beginning_capitalization",
+    "current_capitalization",
+    "beginning_depreciation",
+    "current_depreciation",
+    "beginning_loan",
+    "current_loan",
+    "start_value",
+    "ending_value",
+    "insurance",
+    "financing",
+    "tax_and_license",
+    "inspection",
+    "overhaul",
+    "storage",
+    "cost_of_capital",
+    "other_cost",
+    "unit",
+    "estimated_use",
+    "fuel_and_oil",
+    "tires",
+    "maintenance",
+    "other_operated",
+    "notes",
+    "image_file",
+    "fluid_change",
+    "minor_repair",
+    "oil_change",
+    "mobilization_billing_amount",
+    "daily_operated_billing",
+    "daily_standby_billing",
+    "daily_idle_billing",
+    "weekly_operated_billing",
+    "weekly_standby_billing",
+    "weekly_idle_billing",
+    "monthly_operated_billing",
+    "monthly_standby_billing",
+    "monthly_idle_billing",
+    "user",
+    "status",
+    "last_period",
+    "original_hours",
+    "original_miles",
+    "inactive"
+  ]
+}

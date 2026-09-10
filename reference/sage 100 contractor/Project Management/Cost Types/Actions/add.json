@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pm/v1/object/cost_types/add.json",
+  "title": "Cost Types Add Action Schema",
+  "description": "Schema for adding a new Cost Types record.",
+  "type": "object",
+  "properties": {}
+}

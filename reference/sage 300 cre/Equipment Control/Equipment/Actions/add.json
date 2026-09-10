@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/eq/v1/object/equipment/add.json",
+  "title": "Equipment Add Action Schema",
+  "description": "Schema for adding a new Equipment record.",
+  "type": "object",
+  "properties": {}
+}

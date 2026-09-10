@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/deductions/cache.json",
+  "type": "object",
+  "properties": {
+    "Deduction_ID": {
+      "type": "string"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "In__Out": {
+      "type": "boolean"
+    },
+    "Deduct_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Retain_YTD": {
+      "type": "boolean"
+    },
+    "Printed_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Liability_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SuperStream_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "FWH_Exempt": {
+      "type": "boolean"
+    },
+    "FICA_Exempt": {
+      "type": "boolean"
+    },
+    "FUTA_Exempt": {
+      "type": "boolean"
+    },
+    "SWH_Exempt": {
+      "type": "boolean"
+    },
+    "SDI_Exempt": {
+      "type": "boolean"
+    },
+    "SUI_Exempt": {
+      "type": "boolean"
+    },
+    "Local_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_FICA_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_FUTA_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SWH_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SDI_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SUI_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_Local_Exempt": {
+      "type": "boolean"
+    },
+    "Before_WC_fringe": {
+      "type": "boolean"
+    },
+    "Deduction_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Deduction_ID"
+  ]
+}

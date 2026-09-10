@@ -100,6 +100,7 @@
     .workspace-row strong { display: block; }
     .workspace-row small { color: var(--cp-text-muted); }
     .row-meta { color: var(--cp-text-muted); font-size: 12px; text-align: right; }
+    .choice-stack { display: grid; gap: 20px; align-content: start; min-width: 0; }
     .reference-choice .choice-body { padding: 20px; }
     .reference-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border: 1px solid var(--cp-border); border-radius: 8px; overflow: hidden; margin: 18px 0; background: var(--cp-border); }
     .reference-stat { background: var(--cp-bg-elevated); padding: 14px; }
@@ -512,10 +513,16 @@
             <div class="workspace-row"><div class="workspace-avatar">N</div><div><strong>Northwind Construction</strong><small>ERP inputs requested</small></div><div class="row-meta">Not started</div><button class="icon-button" disabled title="Inputs required" aria-label="Inputs required"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
           </div>
         </section>
-        <section class="workspace-choice reference-choice">
-          <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><div><h2>Internal IVO references</h2><p class="subtle">Maintain destination contracts, validation rules, and lookup definitions.</p></div></div>
-          <div class="choice-body"><div class="reference-stats"><div class="reference-stat"><strong>2</strong><span>Reference objects</span></div><div class="reference-stat"><strong>1</strong><span>Needs review</span></div></div><button class="button primary" id="openReferences" style="width:100%">Manage IVO references</button></div>
-        </section>
+        <div class="choice-stack">
+          <section class="workspace-choice reference-choice">
+            <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><div><h2>Internal IVO references</h2><p class="subtle">Maintain destination contracts, validation rules, and lookup definitions.</p></div></div>
+            <div class="choice-body"><div class="reference-stats"><div class="reference-stat"><strong>2</strong><span>Reference objects</span></div><div class="reference-stat"><strong>1</strong><span>Needs review</span></div></div><button class="button primary" id="openReferences" style="width:100%">Manage IVO references</button></div>
+          </section>
+          <section class="workspace-choice reference-choice">
+            <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/><circle cx="12" cy="12" r="3"/></svg></div><div><h2>Integration definitions</h2><p class="subtle">Define features, job schedules, and configurations for each ERP connector.</p></div></div>
+            <div class="choice-body"><div class="reference-stats"><div class="reference-stat"><strong id="integrationConnectorCount">0</strong><span>ERP connectors</span></div><div class="reference-stat"><strong id="integrationFeatureCount">0</strong><span>Defined features</span></div></div><button class="button primary" id="openIntegrations" style="width:100%">Manage integrations</button></div>
+          </section>
+        </div>
       </div>
     </main>
   </section>

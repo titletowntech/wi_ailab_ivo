@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://foundation.si.ryvit.com/jc/v1/object/cost_classes/add.json",
+  "title": "Cost Classes Add Action Schema",
+  "description": "Schema for adding a new Cost Classes record.",
+  "type": "object",
+  "properties": {}
+}

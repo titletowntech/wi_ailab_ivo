@@ -9,6 +9,8 @@ There are two separate workflows:
 
 Once a customer's mappings are approved, flows are authored into the customer workspace. See [Object relationships](docs/object-relationships.md) for how IVO objects relate and which flows can share a cache trigger, [Service composition](docs/service-composition.md) for how App Xchange services are split and sequenced per customer, and the `appxchange-flow-design` skill under `.claude/skills/` for the flow authoring procedure and canonical flow JSON contract.
 
+The shared structure those flows sync into — features, job schedules, and integration configurations — is recorded per ERP connector under [Integration definitions](docs/integration-definitions.md).
+
 IVO is connected to five ERPs through App Xchange — Vista, Spectrum, Foundation, Sage 100 Contractor, and Sage 300 CRE. Only Vista and Spectrum have captured reference material under `reference/`; documentation for the others is still being gathered.
 
 The normal onboarding process requires:
@@ -27,9 +29,11 @@ Start the local workbench from the repository root:
 node tools/workbench-server.js
 ```
 
-Then open `http://127.0.0.1:43129`. The main page lists discovered customers and provides access to shared IVO references. Selecting a customer opens its flow workspace at `/workspace?customer=<customer-key>`. Source profiling and mapping tools remain available from the main page and at `/mapping`.
+Then open `http://127.0.0.1:43129`. The main page lists discovered customers and provides access to shared IVO references and integration definitions. Selecting a customer opens its flow workspace at `/workspace?customer=<customer-key>`. Source profiling and mapping tools remain available from the main page and at `/mapping`.
 
-The customer workspace stores an immutable generated baseline, editable draft, approved contract, and approval revisions under `customers/<customer>/workspace/`. Flow approval is required before workspace approval. Blocking structural validation findings prevent approval.
+The customer workspace stores an immutable generated baseline, editable draft, approved contract, and version history under `customers/<customer>/workspace/`. Flow approval is required before workspace approval. Blocking structural validation findings prevent approval.
+
+Each workspace also keeps a [discovery log and flow version history](docs/discovery-and-versions.md): imported call transcripts and typed notes, with the customer's concrete asks tagged as decisions, and a version of the workspace per editing session that any flow can be restored from.
 
 The mapping workbench discovers customers from `customers/` and IVO references from `reference/ivo/`. It can upload and analyze customer tables, create IVO references from source files, preview stored files, and save reviewed matches to `customers/<customer>/<object>/output/approved-mapping/mapping.csv`.
 
@@ -38,6 +42,10 @@ The local workbench uses the repository folders as its data store; no database i
 ## Structure
 
 ```text
+integrations/
+  <connector>/
+    definition.json       # features, job schedules, integration configurations
+
 reference-sources/ivo/
   <object>/
     schema.json
@@ -45,6 +53,7 @@ reference-sources/ivo/
     profile/                # generated source evidence
 
 reference/ivo/
+  modules.json            # groups IVO objects into modules for cache-writer services
   <object>/
     schema.json
     field-catalog.csv
@@ -56,7 +65,10 @@ customers/
       generated.json        # immutable AI-generated evidence
       draft.json            # current reviewer-edited canonical workspace
       approved.json         # latest approved workspace contract
-      revisions/            # timestamped approval snapshots
+      discovery.json        # transcripts, notes, and tagged customer decisions
+      versions/             # session, checkpoint, and approval snapshots
+    input/
+      context/              # imported transcripts and shared supporting documents
     <object>/
       input/
         erp/
@@ -94,6 +106,7 @@ customers/
 
 The organization rule is simple:
 
+- `integrations/` holds one App Xchange integration definition per ERP connector, shared across every customer on that connector.
 - `reference-sources/` preserves original IVO inputs and generated profiling evidence separately from the published contract.
 - `reference/` contains reusable, customer-independent IVO contracts.
 - `customers/<customer>/<object>/input/` contains files exported from external systems.
@@ -244,6 +257,8 @@ The builder profiles `sample.csv` when supplied and creates the remaining contra
 | Existing integration comparison | Built and tested; optional |
 | IVO Equipment reference bootstrap | Generated; business semantics need IVO confirmation |
 | Approved mapping workflow | Built in the local Mapping Workbench |
+| Integration definitions per ERP connector | Built in the local Mapping Workbench |
+| Discovery log and flow version history | Built in the local Mapping Workbench |
 | Pre-deployment validation and transform generation | Not built |
 
 See [docs/plan.md](docs/plan.md) for next steps.

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/pr/v1/object/pay_check_fringes/add.json",
+  "title": "Pay Check Fringes Add Action Schema",
+  "description": "Schema for adding a new Pay Check Fringes record.",
+  "type": "object",
+  "properties": {}
+}

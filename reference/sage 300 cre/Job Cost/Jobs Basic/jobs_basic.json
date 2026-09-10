@@ -1,0 +1,638 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/JcmMasterJobBasic/cache.json",
+  "type": "object",
+  "properties": {
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "AR_Customer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Bill_to_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Bill_to_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Bill_to_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Bill_to_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Bill_to_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Billing_Level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Billing_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Burden_Percent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cert_Rpt_Week_Ending_Day": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Certified_Project": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 21
+    },
+    "Checklist_1": {
+      "type": "boolean"
+    },
+    "Checklist_10": {
+      "type": "boolean"
+    },
+    "Checklist_11": {
+      "type": "boolean"
+    },
+    "Checklist_12": {
+      "type": "boolean"
+    },
+    "Checklist_2": {
+      "type": "boolean"
+    },
+    "Checklist_3": {
+      "type": "boolean"
+    },
+    "Checklist_4": {
+      "type": "boolean"
+    },
+    "Checklist_5": {
+      "type": "boolean"
+    },
+    "Checklist_6": {
+      "type": "boolean"
+    },
+    "Checklist_7": {
+      "type": "boolean"
+    },
+    "Checklist_8": {
+      "type": "boolean"
+    },
+    "Checklist_9": {
+      "type": "boolean"
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Contract_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Cost_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Cost_Account_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Cost_Account_Prefix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 22
+    },
+    "Cost_of_Sales_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Customer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Customer_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Customer_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Customer_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Customer_Contact_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Customer_Contact_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Customer_FAX": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Customer_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Customer_Phone_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Customer_Phone_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Customer_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Customer_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Daily_Entry_Control": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Default_Revenue_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Equipment_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Exempt_from_Finance_Charge": {
+      "type": "boolean"
+    },
+    "Extras": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Fax_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Finance_Charge_Flat_Rate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_Charge_Percentage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_Charge_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Job": {
+      "type": "string"
+    },
+    "Job_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Jurisdiction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Labor_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Last_Day_of_Month": {
+      "type": "integer"
+    },
+    "Master_Cmplnc_Tolerance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Material_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Misc_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Misc_Title_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Misc_Title_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Misc_Title_3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Misc_Title_4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "On_Hold": {
+      "type": "boolean"
+    },
+    "Orig_Estimate_Finalized": {
+      "type": "boolean"
+    },
+    "Original_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Contract_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Other_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Overhead_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Owner_Contract_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Project_Manager": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Project_Manager_Email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "Retainage_Percent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revenue_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Revenue_Recog_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Revised_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Contract_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scope_of_Work": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "Security_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 38
+    },
+    "Site_Phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Size": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Stored_Material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Subcontract_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Superintendent_Email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Use_PJ_Change_Management": {
+      "type": "boolean"
+    },
+    "User_Def_Key_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "User_Def_Key_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Verbal_Okay_Contract_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Work_Local": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Work_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Workers_Comp_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "__custom_fields": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "Checklist_1",
+    "Checklist_10",
+    "Checklist_11",
+    "Checklist_12",
+    "Checklist_2",
+    "Checklist_3",
+    "Checklist_4",
+    "Checklist_5",
+    "Checklist_6",
+    "Checklist_7",
+    "Checklist_8",
+    "Checklist_9",
+    "Exempt_from_Finance_Charge",
+    "Job",
+    "Last_Day_of_Month",
+    "On_Hold",
+    "Orig_Estimate_Finalized",
+    "Use_PJ_Change_Management"
+  ]
+}

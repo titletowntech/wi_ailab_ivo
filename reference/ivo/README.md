@@ -4,6 +4,7 @@ The IVO reference is the reusable destination contract for every customer onboar
 
 ```text
 reference/ivo/
+  modules.json
   <object>/
     schema.json
     field-catalog.csv
@@ -11,6 +12,27 @@ reference/ivo/
 ```
 
 Customer folders contain ERP-specific inputs. They must not contain independent edited copies of the IVO contract.
+
+## `modules.json`
+
+Object folders are flat. `modules.json` groups them into the modules IVO organizes these objects under, so IVO cache-writer services read the way the ERP connectors' module folders do.
+
+```json
+{
+  "schemaVersion": 1,
+  "defaultModule": "Equipment Management",
+  "modules": {
+    "Equipment Management": ["Equipment", "Equipment_Group", "..."],
+    "Headquarters": ["Company_Division", "Company_Organization", "..."],
+    "Payroll": ["Employee", "Group", "Linked_User"],
+    "Project Management": ["Job", "Job_Cost_Code", "Equipment_Pay_Class", "..."]
+  }
+}
+```
+
+An object not listed falls to `defaultModule`, so a newly published object groups under Equipment Management until it is placed deliberately. Keep the same manifest in `reference-sources/ivo/` so an object that is profiled but not yet published still groups correctly; the published contract's copy wins when the two disagree.
+
+These module names are IVO's own and several of them — Equipment Management, Headquarters, Payroll, Project Management — are also Vista and Spectrum module names. A module name alone never identifies a service; the connector does.
 
 ## Authority and confidence
 

@@ -1,0 +1,393 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage300.SI.ryvit.com/ap/v1/object/apmessagingbatch/cache.json",
+  "type": "object",
+  "required": [
+    "ID",
+    "ApplicationOfOrigin",
+    "Description",
+    "BatchSource",
+    "InvoiceList"
+  ],
+  "properties": {
+    "ID": {
+      "type": "string"
+    },
+    "ApplicationOfOrigin": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "BatchSource": {
+      "type": "string"
+    },
+    "InvoiceList": {
+      "$id": "#/properties/InvoiceList",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/InvoiceList/items",
+        "type": "object",
+        "required": [
+          "Vendor",
+          "ID",
+          "Description",
+          "Amount",
+          "InvoiceDate",
+          "AccountingDate"
+        ],
+        "properties": {
+          "Vendor": {
+            "type": "string"
+          },
+          "ID": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "Amount": {
+            "type": "string"
+          },
+          "Tax": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DiscountOffered": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "MiscDeduction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "InvoiceDate": {
+            "type": "string"
+          },
+          "ReceivedDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PaymentDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "AccountingDate": {
+            "type": "string"
+          },
+          "Code1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Code2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeAddress1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeAddress2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeCity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeState": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SummaryPayeeZip": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DistributionList": {
+            "$id": "#/properties/InvoiceList/DistributionList",
+            "type": "array",
+            "items": {
+              "$id": "#/properties/InvoiceList/DistributionList/items",
+              "type": "object",
+              "required": [
+                "TaxGroup",
+                "Description",
+                "JCCommitment",
+                "JCCommitmentItem",
+                "JCCategory",
+                "Amount",
+                "Tax",
+                "ExpenseAccount",
+                "PayableAccount"
+              ],
+              "properties": {
+                "Description": {
+                  "type": "string"
+                },
+                "Amount": {
+                  "type": "string"
+                },
+                "TaxGroup": {
+                  "type": "string"
+                },
+                "Tax": {
+                  "type": "string"
+                },
+                "TaxLiability": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "DiscountOffered": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Retainage": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "MiscDeduction": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "MiscDeduction2Percent": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Exempt1099": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "Authorization": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JointPayee": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Code": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ExpenseAccount": {
+                  "type": "string"
+                },
+                "PayableAccount": {
+                  "type": "string"
+                },
+                "JCJob": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JCJobExtra": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JCCostCode": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JCCategory": {
+                  "type": "string"
+                },
+                "JCCommitment": {
+                  "type": "string"
+                },
+                "JCCommitmentItem": {
+                  "type": "string"
+                },
+                "JCUnits": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JCUnitCost": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "JCDraw": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "BLStandardItem": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQCostCode": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQMiscEntry1": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQMiscEntryUnits1": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQMiscEntry2": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQMisEntryUnits2": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "EQMeter": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMTenant": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMLease": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMLeaseRevision": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMProperty": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMUnit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMChargeType": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMItemID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMChargeDescription": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMMarkupPercent": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMMarkupAmount": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PMMarkupChargeType": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
