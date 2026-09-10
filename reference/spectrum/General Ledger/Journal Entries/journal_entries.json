@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/journal_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "THIS FIELD CONTAINS A FOUR DIGIT YEAR"
+    },
+    "Gl_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FROM 01 TO 12 (OR 13) ONLY"
+    },
+    "Journal_Number": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "G/L JOURNAL TRANSACTION NUMBER"
+    },
+    "Transaction_Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "G/L JOURNAL TRANSACTION DESCRIPTION"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EITHER (A)ctive or (V)oid"
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "G/L JOURNAL TRANSACTION DATE"
+    },
+    "Posted_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "JE HEADER POSTED FLAG ''P'' = ALREADY POSTED"
+    },
+    "Reverse_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WILL A REVERSE ENTRY BE CREATED AUTOMATICALLY ?  ''Y'' OR ''N''"
+    },
+    "Date_Reversed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATE ENTRY IS TO BE REVERSED"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Allow_Unbalanced": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Journal_Remarks": {
+      "type": "string",
+      "maxLength": 250,
+      "description": ""
+    },
+    "__details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Line_Number": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "G/L JOURNAL ENTRY LINE NUMBER"
+          },
+          "Reference_1": {
+            "type": "string",
+            "maxLength": 15,
+            "description": ""
+          },
+          "GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "GL ACCOUNT CODE"
+          },
+          "GL_Debit_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "G/L JOURNAL TRANSACTION DEBIT AMOUNT"
+          },
+          "GL_Credit_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "G/L JOURNAL TRANSACTION CREDIT AMOUNT"
+          },
+          "Tran_Number": {
+            "type": "string",
+            "maxLength": 5,
+            "description": "SEQUENTIAL ASSIGNED IN UPDATES FOR UNIQUENESS OF KEY"
+          },
+          "Job_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+          },
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE JOB PHASE CODE (UP TO 12 NUMBERS)"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COST TYPE CODE (ONE LETTER OR NUMBER)"
+          },
+          "Posted_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "JE DETAIL POSTED FLAG ''P'' = ALREADY POSTED"
+          },
+          "Equipment_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE EQUIPMENT CODE"
+          },
+          "Equipment_Cost_Category": {
+            "type": "string",
+            "maxLength": 4,
+            "description": "ENTER THE EQUIPMENT COST CATEGORY"
+          },
+          "Maintenance_WO_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "PREVENTIVE MAINTENANCE WORK ORDER NUMBER"
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "COST CENTER CODE"
+          },
+          "WO_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "WORK ORDER NUMBER"
+          },
+          "WO_Equipment": {
+            "type": "string",
+            "maxLength": 8,
+            "description": "WORK ORDER EQUIPMENT"
+          },
+          "WO_Component": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "WORK ORDER COMPONENT"
+          },
+          "WO_Contract": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "WORK ORDER CONTRACT"
+          },
+          "WO_Sellprice": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "DEFAULT SELL PRICE"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Line_Number",
+          "Reference_1",
+          "GL_Account",
+          "GL_Debit_Amount",
+          "GL_Credit_Amount",
+          "Tran_Number",
+          "Job_Number",
+          "Phase_Code",
+          "Cost_Type",
+          "Posted_Flag",
+          "Equipment_Code",
+          "Equipment_Cost_Category",
+          "Maintenance_WO_Number",
+          "Cost_Center",
+          "WO_Number",
+          "WO_Equipment",
+          "WO_Component",
+          "WO_Contract",
+          "WO_Sellprice"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Year",
+    "Gl_Period",
+    "Journal_Number",
+    "Transaction_Description",
+    "Status",
+    "Posted_Flag",
+    "Reverse_Flag",
+    "Cost_Center",
+    "Allow_Unbalanced",
+    "Journal_Remarks"
+  ]
+}

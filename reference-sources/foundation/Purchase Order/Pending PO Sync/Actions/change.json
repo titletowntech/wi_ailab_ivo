@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://foundation.si.ryvit.com/po/v1/object/pending_po_sync/change.json",
+  "title": "Pending PO Sync Change Action Schema",
+  "description": "Schema for updating an existing Pending PO Sync record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

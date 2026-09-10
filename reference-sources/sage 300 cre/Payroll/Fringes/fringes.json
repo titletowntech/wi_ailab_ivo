@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/fringes/cache.json",
+  "type": "object",
+  "properties": {
+    "Fringe_ID": {
+      "type": "string"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Printed_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Distribute_To_GL": {
+      "type": "boolean"
+    },
+    "Distribute_To_JC": {
+      "type": "boolean"
+    },
+    "Distribute_To_EQ": {
+      "type": "boolean"
+    },
+    "Distribute_to_BL": {
+      "type": "boolean"
+    },
+    "Retain_YTD": {
+      "type": "boolean"
+    },
+    "Auto_Employee": {
+      "type": "boolean"
+    },
+    "Certified_Fringe": {
+      "type": "boolean"
+    },
+    "Workers_Comp_Rates": {
+      "type": "boolean"
+    },
+    "Taxable_Fringe_Benefits": {
+      "type": "boolean"
+    },
+    "GL_Liability_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Expense_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SuperStream_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JC_Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JC_Category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "EQ_Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": "string"
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Limit": {
+      "type": "string"
+    },
+    "Benefit_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fringe_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Fringe_ID"
+  ]
+}

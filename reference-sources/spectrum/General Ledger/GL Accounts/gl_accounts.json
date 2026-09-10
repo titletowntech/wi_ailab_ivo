@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/accounts/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "GL ACCOUNT CODE"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "G/L DESCRIPTION"
+    },
+    "Short_Description": {
+      "type": "string",
+      "maxLength": 18,
+      "description": "ABBREVIATED G/L DESCRIPTION"
+    },
+    "Account_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'A'SSETS, 'L'IABILITIES, 'C'APITAL, 'I'NCOME, 'E'XPENSE, 'S'TATISTIC"
+    },
+    "Post_AP_Detail_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER (Y)es OR (N)o TO RECORD DETAIL FROM ACCOUNTS PAYABLE"
+    },
+    "Direct_Cost_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER Y-job cost,N-non-direct cost, E-equipment cost,W-work order cost"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "COST TYPE FOR DIRECT COST GL CODES"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS - 'A'CTIVE, 'I'NACTIVE, 'N'OT USED"
+    },
+    "All_Cost_Centers": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO ALLOW ALL COST CENTERS FOR THE G/L ACCOUNT"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "CostCenters": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/account_cost_centers/cache.json",
+        "type": "object",
+        "properties": {
+          "Company_Code": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+          },
+          "GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "GL ACCOUNT CODE"
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "COST CENTER CODE"
+          }
+        }
+      }
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "GL_Account"
+  ]
+}

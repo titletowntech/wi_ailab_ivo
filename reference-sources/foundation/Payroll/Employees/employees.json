@@ -1,0 +1,1159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Employee/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "employee_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "first_name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "middle_initial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "last_name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "ss_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 11,
+      "description": ""
+    },
+    "sex": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "zip_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "phone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "date_of_birth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "date_hired": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "date_terminated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "date_rehired": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "termination_reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "date_last_worked": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "union_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "trade_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "minority_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "tax_pr_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fed_filing_status": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "state_filing_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "certified_payroll": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "direct_deposit": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "direct_deposit_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25,
+      "description": ""
+    },
+    "pay_period_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "deceased": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "futa_suta": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "security_access": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "hourly_or_salary": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "pay_rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "pay_periods_per_year": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "earn_type_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "comments": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "dept_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "override_for_941": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "wc_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "wc_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "sui_state_override": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "hrs_req_sal_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "wc_max_week_exposure": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "pension": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "al_file_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "ms_exemption": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "residence_tax": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "veteran": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "accrued_time_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "prevailing_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "prevailing_fringe_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "driver_license_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25,
+      "description": ""
+    },
+    "driver_license_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "email_address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100,
+      "description": ""
+    },
+    "prev_reduction_factor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "az_perc_of_federal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+      "description": ""
+    },
+    "ca_add_allowances": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "ct_apply_exempt_credits": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "dept_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "earn_type_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "employee_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "minority_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "pay_period_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "prevailing_fringe_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ss_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 11,
+      "description": ""
+    },
+    "tax_pr_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "trade_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "union_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "wc_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "state_of_hire": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "suffix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4,
+      "description": ""
+    },
+    "prev_reduction_per_pay": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "corporate_officer_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "suta_avg_hrs_per_week": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "in_dep_exemptions": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "county_pr_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "county_pr_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "statutory": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "mi_family_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "nonresident_alien": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "crew_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "cell_phone_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "cell_phone_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "crew_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ssn_applied_for": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ohsa_level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ohsa_cert_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "default_shift": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "kc_resident": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "experience_level": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "multiracial": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "hire_act_start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "la_dep_exemptions": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "trns_grad": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "equipment_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "union_id_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 11,
+      "description": ""
+    },
+    "ohsa_trade_license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16,
+      "description": ""
+    },
+    "swac_twic_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16,
+      "description": ""
+    },
+    "allow_recurring_timecards": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "attachment_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "driver_license_number_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ohsa_trade_license_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ohsa_cert_num_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "union_id_num_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "swac_twic_id_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ss_no_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "attachment_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "emp_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "emp_apprentice_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "emp_ojt_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "dc_owner_relationship": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "aca_exempt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "measurement_group_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "soc_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": ""
+    },
+    "unemployment_pay_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "geographic_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "measurement_group_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "use_job_based_accruals": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "apprentice_level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "owner_operator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "i9_verified": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "apprentice_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "apprentice_code_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "driver_license_exp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "claim_status_exemption": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "prev_reduction_pct_gross": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "gen_liab_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "gen_liab_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "gen_liab_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "hide_disabled_rows_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "estimator_salesperson": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "nj_rate_table": {
+      "type": "integer",
+      "description": ""
+    },
+    "fitness_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "non_binary_transgender": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "force_ss_limit_yr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "force_addl_medicare_yr": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "wa_ltc_exempt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "co_annual_allowance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "dc_include_out_of_state_wages": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "apprentice_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "fitness_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "electronic_w2_consent": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "batch_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "salary_nonexempt": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "wv_unemployment_county": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "remote_worker": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "in_medical_ins_eligible": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "batch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "employee_no",
+    "first_name",
+    "last_name",
+    "sex",
+    "fed_filing_status",
+    "certified_payroll",
+    "direct_deposit",
+    "deceased",
+    "futa_suta",
+    "hourly_or_salary",
+    "pay_periods_per_year",
+    "override_for_941",
+    "hrs_req_sal_flag",
+    "wc_max_week_exposure",
+    "pension",
+    "ms_exemption",
+    "residence_tax",
+    "veteran",
+    "accrued_time_flag",
+    "prevailing_rate",
+    "record_status",
+    "row_unique_id",
+    "prev_reduction_factor",
+    "ct_apply_exempt_credits",
+    "prev_reduction_per_pay",
+    "corporate_officer_flag",
+    "suta_avg_hrs_per_week",
+    "statutory",
+    "nonresident_alien",
+    "ssn_applied_for",
+    "kc_resident",
+    "multiracial",
+    "trns_grad",
+    "allow_recurring_timecards",
+    "emp_status",
+    "emp_apprentice_rate",
+    "emp_ojt_rate",
+    "aca_exempt",
+    "unemployment_pay_rate",
+    "use_job_based_accruals",
+    "owner_operator",
+    "i9_verified",
+    "claim_status_exemption",
+    "prev_reduction_pct_gross",
+    "record_guid",
+    "hide_disabled_rows_flag",
+    "estimator_salesperson",
+    "nj_rate_table",
+    "non_binary_transgender",
+    "wa_ltc_exempt",
+    "co_annual_allowance",
+    "dc_include_out_of_state_wages",
+    "electronic_w2_consent",
+    "salary_nonexempt",
+    "remote_worker"
+  ]
+}

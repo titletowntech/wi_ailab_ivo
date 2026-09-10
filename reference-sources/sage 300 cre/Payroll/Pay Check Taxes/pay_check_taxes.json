@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.SI.ryvit.com/sage300/v1/object/PayCheckTaxes/cache.json",
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Sequence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Liability_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period_End_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Resident_State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SUI_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SUI_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Tax_Level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Employee",
+    "Check_Sequence",
+    "Period_End_Date",
+    "Tax_Level",
+    "Tax_ID"
+  ]
+}

@@ -446,6 +446,7 @@
     let revisions = [];
     let validationIssues = [];
     const requestedFlow = new URLSearchParams(location.hash.slice(1)).get("flow");
+    const requestedView = new URLSearchParams(location.search).get("view");
     let activeFlow = Math.max(0, flows.findIndex((flow) => flow.name === requestedFlow));
     let selectedStep = 0;
     let selectedConfiguration = 0;
@@ -1009,6 +1010,7 @@
         }
         updateValidationCount();
         renderWorkspace();
+        if (requestedView === "overview") showView("overview");
       } catch (error) {
         saveState.style.color = "var(--cp-danger)";
         saveState.querySelector("span:last-child").textContent = error.message;

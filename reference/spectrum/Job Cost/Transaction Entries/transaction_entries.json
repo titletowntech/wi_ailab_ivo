@@ -1,0 +1,308 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/transaction_entries/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BATCH CODE FOR THIS TRANSACTION"
+    },
+    "Tran_Type_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "PR=PAYROLL,AP=ACCOUNTS PAYABLE,JC=JOB COST,IC=INVENTORY,EQ=EQUIPMENT"
+    },
+    "Tran_Date_Text": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "THIS IS THE TRANSACTION DATE IN THE FORMAT YYYYMMDD FOR KEY PURPOSES"
+    },
+    "Sequence": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "SYSTEM GENERATED SEQUENCE NUMBER"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)"
+    },
+    "Reference_1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "THIS IS THE REFERENCE NUMBER FOR THIS TRANSACTION TYPE"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE DESCRIPTION FOR THIS JOB COST ADJUSTMENT (UP TO 30 CHARACTERS)"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Item_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM CODE"
+    },
+    "Warehouse_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ITEMS WAREHOUSE CODE"
+    },
+    "Adjust_Reference": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "THE REFERENCE NUMBER FOR JOB COST ADJUSTMENTS"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "THE INVOICE DATE"
+    },
+    "Po_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ITEM PURCHASE ORDER NUMBER"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE CHECK NUMBER"
+    },
+    "Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL QUANTITY ISSUED"
+    },
+    "Pr_Burden": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL BURDEN AMOUNT"
+    },
+    "PR_Hours1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "Total_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE TOTAL NUMBER OF HOURS FOR THIS TRANSACTION"
+    },
+    "Tran_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE DOLLAR AMOUNT OF THE TRANSACTION"
+    },
+    "GL_Debit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCOUNT TO BE DEBITED"
+    },
+    "GL_Credit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCOUNT TO BE CREDITED"
+    },
+    "Transaction_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TRANSACTION RATE"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE FOR THIS TRANSACTION"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "THIS FIELD CONTAINS ONLY THE UNIT DIGIT (EX 2 FOR 82)"
+    },
+    "Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FROM 01 TO 12 (OR 13) ONLY"
+    },
+    "Update_Flag": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "FLAG FOR JC TRANS UPDATE"
+    },
+    "Bill_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "BILLING RATE"
+    },
+    "Bill_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BILLING CODE"
+    },
+    "Overhead_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "JC OVERHEAD TRANSACTION LINE - ''Y''"
+    },
+    "Cost_Center_Debit": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "DEBIT COST CENTER"
+    },
+    "Cost_Center_Credit": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CREDIT COST CENTER"
+    },
+    "Orig_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "JOB OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "PHASE OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "COST TYPE OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Tran_Type": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "TRAN TYPE OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Tran_Date": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "DATE OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Reference_1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "REFERENCE ONE OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Reference_2": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "REFERENCE TWO OF ORIGINAL TRANSACTION"
+    },
+    "Orig_Sequence": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SEQUENCE OF ORIGINAL TRANSACTION"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Batch_Code",
+    "Tran_Type_Code",
+    "Tran_Date_Text",
+    "Sequence",
+    "Job_Number",
+    "Phase_Code",
+    "Cost_Type",
+    "Reference_1",
+    "Description",
+    "Employee_Code",
+    "Vendor_Code",
+    "Item_Code",
+    "Warehouse_Code",
+    "Adjust_Reference",
+    "Invoice_Number",
+    "Po_Number",
+    "Check_Number",
+    "Quantity",
+    "Pr_Burden",
+    "PR_Hours1",
+    "PR_Hours2",
+    "PR_Hours3",
+    "PR_Hours4",
+    "PR_Hours5",
+    "PR_Hours6",
+    "Total_Hours",
+    "Tran_Amount",
+    "GL_Debit_Account",
+    "GL_Credit_Account",
+    "Transaction_Rate",
+    "Equipment_Code",
+    "Year",
+    "Period",
+    "Update_Flag",
+    "Bill_Rate",
+    "Bill_Code",
+    "Overhead_Flag",
+    "Cost_Center_Debit",
+    "Cost_Center_Credit",
+    "Orig_Job",
+    "Orig_Phase",
+    "Orig_Cost_Type",
+    "Orig_Tran_Type",
+    "Orig_Tran_Date",
+    "Orig_Reference_1",
+    "Orig_Reference_2",
+    "Orig_Sequence"
+  ]
+}

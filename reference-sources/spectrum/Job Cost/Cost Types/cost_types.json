@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/cost_types/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL                     "
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)                           "
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE COST TYPE DESCRIPTION (UP TO 15 CHARACTERS)                           "
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE GL ACCOUNT NUMBER FOR VALIDATION PURPOSES                             "
+    },
+    "Detail_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' TO POST JOB COST HISTORY IN DETAIL FOR THIS COST TYPE                 "
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Cost_Type"
+  ]
+}

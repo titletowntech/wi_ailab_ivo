@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/paid_invoices/action/refresh_many.json",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "__filter": {
+                "type": "object",
+                "oneOf": [
+                  {
+                    "properties": {
+                      "__mode": {
+                        "type": "string",
+                        "enum": [
+                          "bySubcontractJob"
+                        ]
+                      },
+                      "Company_Code": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": ""
+                      },
+                      "Subcontract_Job": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": ""
+                      },
+                      "__EnableRefreshCacheDeleteDetection": {
+                        "type": "boolean",
+                        "description": "Enable refresh deleted records. Enabling it increase action runtime draticaly. If omitted, false will be defaulted"
+                      }
+                    },
+                    "required": [
+                      "Company_Code",
+                      "Subcontract_Job"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "__filter"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

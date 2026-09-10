@@ -1,0 +1,291 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/TransactionHistory/cache.json",
+  "type": "object",
+  "properties": {
+    "__Aggregated_Id": {
+      "type": "string"
+    },
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (ONE LETTER OR NUMBER)"
+    },
+    "Tran_Type_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "PR=PAYROLL,AP=ACCOUNTS PAYABLE,JC=JOB COST,IC=INVENTORY,EQ=EQUIPMENT"
+    },
+    "Tran_Date_Text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": "THIS IS THE TRANSACTION DATE IN THE FORMAT YYYYMMDD FOR KEY PURPOSES"
+    },
+    "Reference_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": "THIS IS THE REFERENCE NUMBER FOR THIS TRANSACTION TYPE"
+    },
+    "Reference_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "SYSTEM ASSIGNED REFERENCE CODE BASED ON TRAN TYPE"
+    },
+    "Detail_Sequence": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "SEQUENCE NUMBER IF POSTED IN DETAIL"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE DESCRIPTION FOR THIS JOB COST ADJUSTMENT (UP TO 30 CHARACTERS)"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Item_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM CODE"
+    },
+    "Adjust_Reference": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "THE REFERENCE NUMBER FOR JOB COST ADJUSTMENTS"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "THE INVOICE DATE"
+    },
+    "Po_Number": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM PURCHASE ORDER NUMBER"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE CHECK NUMBER"
+    },
+    "Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL QUANTITY ISSUED"
+    },
+    "Pr_Burden": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL BURDEN AMOUNT"
+    },
+    "PR_Hours1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "PR_Hours6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL HOURS: (1) reg, (2) ovt, (3) dbl, (4) vac, (5) hol, (6) sic"
+    },
+    "Total_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE TOTAL NUMBER OF HOURS FOR THIS TRANSACTION"
+    },
+    "Tran_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE DOLLAR AMOUNT OF THE TRANSACTION"
+    },
+    "PR_Pay_Amount1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "PR_Pay_Amount7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PAYROLL PAY AMTS: (1)-REG,(2)-OT,(3)-DBL,(4)-VAC,(5)-HOL,(6)-SIC,(7)-ADDON"
+    },
+    "Pr_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "PAYROLL COMPANY CODE"
+    },
+    "Employee_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "SET UP FILE ALIAS"
+    },
+    "AP_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ACCOUNTS PAYABLE COMPANY CODE"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE VENDOR NAME"
+    },
+    "Equip_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "EQUIPMENT CONTROL COMPANY CODE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BATCH CODE FOR THIS TRANSACTION"
+    },
+    "Batch_Sequence": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "BATCH SEQUENCE NUMBER"
+    },
+    "Unit_of_Measure": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE UNIT OF MEASURE"
+    },
+    "Draw_Appl_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "THE APPLICATION NUMBER FOR THIS DRAW REQUEST"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "THE CUSTOMER CODE FOR THE DRAW REQUEST"
+    },
+    "Inventory_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "INVENTORY CONTROL COMPANY CODE"
+    },
+    "Item_Description": {
+      "type": "string",
+      "maxLength": 35,
+      "description": "ITEM DESCRIPTION"
+    },
+    "Crew_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CREW CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE COST CENTER CODE"
+    },
+    "Tran_Date_Text_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Transaction date text, 4 digit year"
+    },
+    "Tran_Date_Text_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR THIS TRANS. DATE TEXT"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "__Aggregated_Id",
+    "Company_Code",
+    "Job_Number",
+    "Phase_Code",
+    "Tran_Type_Code",
+    "Tran_Date_Text"
+  ]
+}

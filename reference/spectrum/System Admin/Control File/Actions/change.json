@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/sa/v1/object/control_file/change.json",
+  "title": "Control File Change Action Schema",
+  "description": "Schema for updating an existing Control File record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

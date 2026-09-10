@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/ProcessingDates/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Module_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE Module Code."
+    },
+    "Module_Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE Module Description"
+    },
+    "Current_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE Current Date"
+    },
+    "Minimum_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE Minimum Date"
+    },
+    "Maximum_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE Maximum Date"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Module_Code"
+  ]
+}

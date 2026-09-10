@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/PhaseMasterTotal/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 12 NUMBERS)"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (ONE LETTER OR NUMBER)"
+    },
+    "JTD_Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE JOB-TO-DATE QUANTITY"
+    },
+    "JTD_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE JOB-TO-DATE HOURS"
+    },
+    "JTD_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE JOB-TO-DATE DOLLAR AMOUNT"
+    },
+    "Cost_Percent_Complete": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE ENTERED PERCENT COMPLETE."
+    },
+    "Qty_Percent_Complete": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS IS THE CALCULATED PERCENT COMPLETE.  (ACTUAL QTY)/(ESTIMATED QTY)"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job_Number",
+    "Phase_Code",
+    "Cost_Type"
+  ]
+}

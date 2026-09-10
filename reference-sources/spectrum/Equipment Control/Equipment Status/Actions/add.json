@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/eq/v1/object/equipment_status/add.json",
+  "title": "Equipment Status Add Action Schema",
+  "description": "Schema for adding a new Equipment Status record.",
+  "type": "object",
+  "properties": {}
+}

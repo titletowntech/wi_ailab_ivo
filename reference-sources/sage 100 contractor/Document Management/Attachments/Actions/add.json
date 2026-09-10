@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/dm/v1/object/attachments/add.json",
+  "title": "Attachments Add Action Schema",
+  "description": "Schema for adding a new Attachments record.",
+  "type": "object",
+  "properties": {}
+}

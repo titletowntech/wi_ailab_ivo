@@ -1,0 +1,247 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/InventoryItem/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Item_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM CODE"
+    },
+    "Item_Description": {
+      "type": "string",
+      "maxLength": 35,
+      "description": "ITEM DESCRIPTION"
+    },
+    "Vendor_Code_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SUPPLIER VENDOR NUMBERS: [1] - PRIMARY, [2] - ALTERNATE"
+    },
+    "Vendor_Code_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SUPPLIER VENDOR NUMBERS: [1] - PRIMARY, [2] - ALTERNATE"
+    },
+    "Alternate_Item_Code1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM ALTERNATE ITEM CODES: [1] - PRIMARY, [2] - SECONDARY"
+    },
+    "Alternate_Item_Code2": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM ALTERNATE ITEM CODES: [1] - PRIMARY, [2] - SECONDARY"
+    },
+    "Item_Category": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ITEM CATEGORY CODE"
+    },
+    "Unit_Of_Measure1": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE UNIT OF MEASURE"
+    },
+    "Unit_Of_Measure2": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE UNIT OF MEASURE"
+    },
+    "Unit_Of_Measure_Conversion": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "PURCHASE TO SELL UNITS OF MEASURE CONVERSION"
+    },
+    "Unit_Weight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ITEM UNIT WEIGHT (SELL UM)"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM TAXABLE INDICATOR (Y/N)"
+    },
+    "Discontinue_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM DISCONTINUE INDICATOR (Y/N)"
+    },
+    "Commission_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM COMMISSIONABLE INDICATOR (Y/N)"
+    },
+    "Discount_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ITEM DISCOUNT CODE"
+    },
+    "Price_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ITEM PRICE"
+    },
+    "Price_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ITEM PRICE"
+    },
+    "Price_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ITEM PRICE"
+    },
+    "Price_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ITEM PRICE"
+    },
+    "Price_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ITEM PRICE"
+    },
+    "Date_Discontinued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ITEM DISCONTINUED DATE"
+    },
+    "Standard_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "STANDARD COST"
+    },
+    "Vendor_Part_Number": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE VENDOR PART NUMBER FOR THIS ITEM (15 CHARACTERS MAXIMUM)"
+    },
+    "ABC_Class": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE ABC CLASS FOR THE ITEM"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE ITEM PHASE CODE"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE"
+    },
+    "Markup_Price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MARKUP PRICE"
+    },
+    "Average_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AVERAGE COST"
+    },
+    "Price_Per_Factor": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THIS ITEM'S PRICE PER FACTOR"
+    },
+    "Mix_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' IF THIS IS A MIX PARENT CODE THAT WILL BE AUTO-CREATED IN SI UPDATE"
+    },
+    "Default_Cost_Category": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE ITEM DEFAULT EQUIPMENT COST CATEGORY CODE"
+    },
+    "Use_Tax_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF USE TAX SHOULD BE CHARGED FOR THIS ITEM ON JOB REQUISTIONS"
+    },
+    "Price_Changed_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Cost_Changed_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Exclude_SI_Ticket": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EXCLUDE THIS ITEM FROM SI TICKET QUANTITY?"
+    },
+    "Exclude_SI_Freight": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EXCLUDE THIS ITEM FROM SI FREIGHT QUANTITY?"
+    },
+    "All_Cost_Centers": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO ALLOW ALL COST CENTERS FOR THE ITEM"
+    },
+    "__custom_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Item_Code",
+    "Item_Description",
+    "Vendor_Code_List1",
+    "Vendor_Code_List2",
+    "Alternate_Item_Code1",
+    "Alternate_Item_Code2",
+    "Item_Category",
+    "Unit_Of_Measure1",
+    "Unit_Of_Measure2",
+    "Unit_Of_Measure_Conversion",
+    "Unit_Weight",
+    "Taxable_Flag",
+    "Discontinue_Flag",
+    "Commission_Flag",
+    "Discount_Code",
+    "Price_List1",
+    "Price_List2",
+    "Price_List3",
+    "Price_List4",
+    "Price_List5",
+    "Standard_Cost",
+    "Vendor_Part_Number",
+    "ABC_Class",
+    "Phase_Code",
+    "Cost_Type",
+    "Markup_Price",
+    "Average_Cost",
+    "Price_Per_Factor",
+    "Mix_Flag",
+    "Default_Cost_Category",
+    "Use_Tax_Flag",
+    "Exclude_SI_Ticket",
+    "Exclude_SI_Freight",
+    "All_Cost_Centers"
+  ]
+}

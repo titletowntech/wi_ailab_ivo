@@ -1,7 +1,8 @@
 'use strict';
 
 const state = {
-  catalog: { customers: [], references: [] },
+  catalog: { customers: [], references: [], connectors: [] },
+  connector: null,
   customer: null,
   object: null,
   reference: null,
@@ -137,19 +138,31 @@ async function loadCatalog() {
 }
 
 function renderLauncher() {
-  const select = byId('customerSelect');
-  select.innerHTML = state.catalog.customers.map((customer) => `<option value="${escapeHtml(customer.key)}">${escapeHtml(customer.name)}</option>`).join('');
-  byId('openCustomer').disabled = state.catalog.customers.length === 0;
+  const connectors = state.catalog.connectors || [];
+  if (!state.connector || !connectors.some((connector) => connector.key === state.connector)) {
+    state.connector = connectors[0]?.key || null;
+  }
+  renderConnectorSelect();
+  const customers = state.catalog.customers.filter((customer) => !state.connector || customer.connector.key === state.connector);
   const list = byId('customerRows') || document.querySelector('.workspace-list');
-  list.innerHTML = state.catalog.customers.map((customer) => {
+  list.innerHTML = customers.map((customer) => {
     const rows = customer.objects.reduce((total, object) => total + object.summary.rows, 0);
-    return `<div class="workspace-row"><div class="workspace-avatar">${escapeHtml(customer.name.slice(0, 1))}</div><div><strong>${escapeHtml(customer.name)}</strong><small>${customer.objects.length} data table${customer.objects.length === 1 ? '' : 's'} · ${compactNumber(rows)} rows</small></div><div class="row-meta">${customer.objects.filter((object) => object.status === 'Ready for review').length} ready to review</div><button class="icon-button" data-open-customer="${escapeHtml(customer.key)}" title="Open ${escapeHtml(customer.name)}" aria-label="Open ${escapeHtml(customer.name)}"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>`;
-  }).join('') || '<div class="empty-view"><strong>No customer folders found</strong><p class="subtle">Add a customer folder under customers/ to begin.</p></div>';
+    return `<div class="workspace-row" data-open-customer="${escapeHtml(customer.key)}"><div class="workspace-avatar">${escapeHtml(customer.name.slice(0, 1))}</div><div><strong>${escapeHtml(customer.name)}</strong><small>${customer.objects.length} data table${customer.objects.length === 1 ? '' : 's'} · ${compactNumber(rows)} rows</small></div><div class="row-meta">${customer.objects.filter((object) => object.status === 'Ready for review').length} ready to review</div><button class="icon-button" data-open-customer="${escapeHtml(customer.key)}" title="Open ${escapeHtml(customer.name)}" aria-label="Open ${escapeHtml(customer.name)}"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>`;
+  }).join('') || `<div class="empty-view"><strong>No customers found</strong><p class="subtle">${connectors.length ? 'No customer folders use this connector yet.' : 'Add a customer folder under customers/ to begin.'}</p></div>`;
   const ready = state.catalog.references.filter((reference) => reference.status === 'Ready').length;
   const review = state.catalog.references.length - ready;
   const stats = document.querySelectorAll('.reference-stats .reference-stat strong');
   if (stats[0]) stats[0].textContent = state.catalog.references.length;
   if (stats[1]) stats[1].textContent = review;
+}
+
+function renderConnectorSelect() {
+  const select = byId('connectorSelect');
+  if (!select) return;
+  const connectors = state.catalog.connectors || [];
+  select.innerHTML = connectors.map((connector) =>
+    `<option value="${escapeHtml(connector.key)}"${connector.key === state.connector ? ' selected' : ''}>${escapeHtml(connector.name)} · ${connector.customerCount} customer${connector.customerCount === 1 ? '' : 's'}</option>`,
+  ).join('') || '<option value="">No connectors detected</option>';
 }
 
 function renderReferenceCatalog() {
@@ -1042,12 +1055,20 @@ function bindEvents() {
   }));
   document.querySelectorAll('[data-back]').forEach((button) => button.addEventListener('click', returnToLauncher));
   byId('mappingHomeButton').addEventListener('click', returnToLauncher);
-  byId('openCustomer').addEventListener('click', () => openCustomer(byId('customerSelect').value));
+  byId('connectorSelect').addEventListener('change', () => {
+    state.connector = byId('connectorSelect').value;
+    renderLauncher();
+  });
   (byId('customerRows') || document.querySelector('.workspace-list')).addEventListener('click', (event) => {
     const button = event.target.closest('[data-open-customer]');
     if (button) openCustomer(button.dataset.openCustomer);
   });
   byId('openReferences').addEventListener('click', () => { openWorkspace('references'); showReferenceCatalog(); });
+  document.querySelectorAll('[data-workspace-view]').forEach((button) => button.addEventListener('click', () => {
+    const view = button.dataset.workspaceView;
+    if (view === 'sources') return;
+    location.href = `/workspace?customer=${encodeURIComponent(state.customer)}${view === 'overview' ? '&view=overview' : ''}`;
+  }));
   byId('referenceRows').addEventListener('click', (event) => {
     const button = event.target.closest('[data-reference-key]');
     if (button) showReferenceDetail(button.dataset.referenceKey).catch((error) => showMessage(error.message, 'error'));
@@ -1194,7 +1215,7 @@ async function start() {
       openCustomerSources(requestedCustomer);
     }
   } catch (error) {
-    byId('openCustomer').disabled = true;
+    byId('connectorSelect').disabled = true;
     showMessage(location.protocol === 'file:' ? 'Start the workbench server to load customer and IVO data.' : error.message, 'error');
   }
 }

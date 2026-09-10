@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/meter_histories/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Meter_Number": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Fiscal_Year": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "Fiscal_Period": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "Transaction_Date": {
+      "type": "string",
+      "maxLength": 8
+    },
+    "Batch_ID": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Meter_Reading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$"
+    },
+    "Meter_Remarks": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "Base_Reading": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Meter_Type": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Log_Operator": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Log_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Log_Time": {
+      "type": "string",
+      "maxLength": 6
+    },
+    "Meter_Transaction": {
+      "type": "string",
+      "maxLength": 36
+    },
+    "__concatenatedKey": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Equipment_Code",
+    "Meter_Number",
+    "Fiscal_Year",
+    "Fiscal_Period",
+    "Transaction_Date",
+    "Batch_ID",
+    "__concatenatedKey"
+  ]
+}

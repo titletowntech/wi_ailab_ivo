@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ar/v1/object/change_order/change.json",
+  "title": "Change Order Change Action Schema",
+  "description": "Schema for updating an existing Change Order record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

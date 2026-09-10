@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/gl/v1/object/journal_entries/add.json",
+  "title": "Journal Entries Add Action Schema",
+  "description": "Schema for adding a new Journal Entries record.",
+  "type": "object",
+  "properties": {}
+}

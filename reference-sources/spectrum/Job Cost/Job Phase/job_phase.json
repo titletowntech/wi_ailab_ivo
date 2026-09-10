@@ -1,0 +1,237 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/phase/cache.json",
+  "type": "object",
+  "description": "Job phases with empty or missing `Phase_Code`s will be ignored.",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL                     "
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)                                          "
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)                                     "
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)                           "
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE DESCRIPTION FOR THIS PHASE/COST TYPE                                  "
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VALID STATUS CODES ARE: A = ACTIVE, C = COMPLETE, I = INACTIVE                  "
+    },
+    "Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "THIS IS THE COMPLETION DATE FOR THIS PHASE/COST TYPE                            "
+    },
+    "Unit_of_Measure": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE UNITS OF MEASURE FOR THE QUANTITY.  EXAMPLES ARE: LF, YDS, FT         "
+    },
+    "Major_Group_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "SYSTEM MAINTAINED MAJOR GROUP CODE                                              "
+    },
+    "Minor_Group_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "SYSTEM MAINTAINED MINOR GROUP CODE                                              "
+    },
+    "Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "STARTING DATE FOR THIS PHASE                                                    "
+    },
+    "End_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENDING DATE FOR THIS JOB                                                        "
+    },
+    "Lead_Time_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "LEAD TIME IN DAYS NEEDED TO COMPLETE THIS JOB                                   "
+    },
+    "Original_Est_Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ORIGINAL ESTIMATED QUANTITY                                                     "
+    },
+    "Original_Est_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ORIGINAL ESTIMATED AMOUNT                                                       "
+    },
+    "Original_Est_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ORIGINAL ESTIMATED HOURS                                                        "
+    },
+    "Last_Cost_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "LAST COST DATE (SYSTEM MAINTAINED)                                              "
+    },
+    "Work_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "WORKMAN'S COMP CLASS CODE                                                       "
+    },
+    "TM_Markup_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' FOR THIS PHASE TO BE MARKED UP WHEN POSTING TO TIME AND MATERIAL      "
+    },
+    "Est_Unit_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE ESTIMATED UNIT COST                                                   "
+    },
+    "Bid_Item_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE REVENUE BID ITEM NUMBER                                               "
+    },
+    "Alt_Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE ALTERNATE PHASE CODE                                                  "
+    },
+    "Price_Method_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER PRICE METHOD: (F)IXED PRICE, (T)&M, OR (U)NIT PRICE                       "
+    },
+    "Projected_Cost_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "USE 'A'CTUAL, 'E'STIMATED, OR 'P'ROJECTED UNIT COST TO CALC PROJECTED COST      "
+    },
+    "Work_State_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK STATE TAX CODE FOR DEFAULT IN TIME CARD ENTRY                              "
+    },
+    "Work_County_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK COUNTY TAX CODE FOR DEFAULT IN TIME CARD ENTRY                             "
+    },
+    "Work_Local_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK LOCAL TAX CODE FOR DEFAULT IN TIME CARD ENTRY                              "
+    },
+    "Last_Payroll_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Last time payroll was updated using CT.FLAGS(9) rules                           "
+    },
+    "Certified_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT THE DEFAULT JOB CERTIFIED STATUS FOR TIME CARD ENTRY                     "
+    },
+    "Wage_Rate_Level": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SELECT THE WAGE RATE LEVEL NUMBER (1 - 9) OR LEAVE BLANK                        "
+    },
+    "Wage_Code_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'*' IF ANY WAGE CODES HAVE BEEN SET UP FOR THIS PHASE, OTHERWISE BLANK          "
+    },
+    "Phase_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE                                                                "
+    },
+    "Update_Proj_Qty": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO AUTOMATICALLY UPDATE PROJECTED CONTRACT QUANTITIES                     "
+    },
+    "Comment": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "COMMENT                                                                         "
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": "string",
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job_Number",
+    "Phase_Code",
+    "Cost_Type"
+  ]
+}

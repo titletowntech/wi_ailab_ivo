@@ -155,21 +155,58 @@ function referenceObject(object) {
   };
 }
 
+const CONNECTOR_HOSTS = new Map([
+  ['vista.si.ryvit.com', 'Vista'],
+  ['spectrum.si.ryvit.com', 'Spectrum'],
+]);
+
+function slug(value) {
+  return String(value || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'unknown';
+}
+
+// Connector identity isn't stored anywhere; recover it from the connector schema's $id host.
+function connectorFromSchema(schemaFile) {
+  if (!schemaFile || !exists(schemaFile)) return null;
+  try {
+    const schema = JSON.parse(fs.readFileSync(schemaFile, 'utf8'));
+    const host = String(schema.$id || '').match(/^https?:\/\/([^/]+)/)?.[1];
+    if (!host) return null;
+    return CONNECTOR_HOSTS.get(host) || host;
+  } catch {
+    return null;
+  }
+}
+
+function customerConnector(customer, objects) {
+  for (const object of objects) {
+    const name = connectorFromSchema(firstFile(path.join(ROOT, 'customers', customer, object, 'input', 'erp'), '.json'));
+    if (name) return name;
+  }
+  return 'Unknown';
+}
+
 function catalog() {
-  const customers = directories(path.join(ROOT, 'customers')).map((customer) => ({
-    key: customer,
-    name: displayName(customer),
-    objects: directories(path.join(ROOT, 'customers', customer))
-      .filter((object) => exists(path.join(ROOT, 'customers', customer, object, 'input', 'erp')))
-      .map((object) => {
+  const customers = directories(path.join(ROOT, 'customers')).map((customer) => {
+    const objects = directories(path.join(ROOT, 'customers', customer))
+      .filter((object) => exists(path.join(ROOT, 'customers', customer, object, 'input', 'erp')));
+    const connectorName = customerConnector(customer, objects);
+    return {
+      key: customer,
+      name: displayName(customer),
+      connector: { key: slug(connectorName), name: connectorName },
+      objects: objects.map((object) => {
         const detail = customerObject(customer, object);
         return { ...detail, fields: undefined, mappings: undefined };
       }),
-  }));
+    };
+  });
   const references = directories(path.join(ROOT, 'reference', 'ivo'))
     .filter((object) => exists(path.join(ROOT, 'reference', 'ivo', object, 'schema.json')))
     .map(referenceObject);
-  return { customers, references };
+  const connectors = [...new Map(customers.map((customer) => [customer.connector.key, customer.connector])).values()]
+    .map((connector) => ({ ...connector, customerCount: customers.filter((customer) => customer.connector.key === connector.key).length }))
+    .sort((left, right) => left.name.localeCompare(right.name));
+  return { customers, references, connectors };
 }
 
 function validKey(value) {

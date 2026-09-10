@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/worker_comp_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Worker_Comp_Class_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": ""
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Weekly_Earnings_Limits_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Annual_Earnings_Limits_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Temp_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Per_Hour": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "Composite_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,7}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "Method_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Override_Limit": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Limit_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Policy_Start_Date": {
+      "type": "string",
+      "maxLength": 4,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Worker_Comp_Class_Code",
+    "State"
+  ]
+}

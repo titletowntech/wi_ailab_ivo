@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/EWO/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Maintenance_WO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE MAINTENANCE WORK ORDER NUMBER"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE OPERATOR ID FOR SERVICE ENTRY BATCH"
+    },
+    "WO_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WORK ORDER STATUS: (O)PEN, (F)INISHED, OR (C)LOSED"
+    },
+    "Service_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "WORK ORDER SERVICE DATE"
+    },
+    "Service_Person": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "SERVICE PERSON"
+    },
+    "Meter_Reading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT METER READING"
+    },
+    "Equipment_Usage": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT USAGE AT TIME OF SERVICE"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "WORK ORDER REMARKS"
+    },
+    "Print_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER NUMBER"
+    },
+    "Problem_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PROBLEM TYPE"
+    },
+    "Problem_Cause": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PROBLEM CAUSE"
+    },
+    "Equipment_Repair_Status": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT REPAIR STATUS"
+    },
+    "Priority": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PRIORITY CODE"
+    },
+    "Order_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ORDER DATE"
+    },
+    "Required_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE REQUIRED DATE"
+    },
+    "Work_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE WORK START DATE"
+    },
+    "Work_Start_Time": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE WORK START TIME"
+    },
+    "Work_Finished_Time": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE WORK FINISHED TIME"
+    },
+    "Return_To_Service_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE RETURN TO SERVICE DATE"
+    },
+    "Closed_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE CLOSED TIME"
+    },
+    "Reported_By": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "REPORTED BY"
+    },
+    "Entered_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "OPERATOR ID"
+    },
+    "Contact_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "CONTACT NAME"
+    },
+    "Meter_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "METER DATE"
+    },
+    "Meter_Number": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER NUMBER"
+    },
+    "Routing_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ROUTING CODE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Maintenance_WO_Number"
+  ]
+}

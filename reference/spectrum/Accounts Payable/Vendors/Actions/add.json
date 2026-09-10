@@ -1,0 +1,503 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/vendors/add.json",
+  "title": "Vendor Add Action Schema",
+  "description": "Schema for adding a new Vendor record.",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE - **Required for Add**"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE VENDOR NAME - **Required for Add**"
+    },
+    "Alpha_Sort": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "VENDOR ALPHA CROSS REFERENCE"
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "VENDOR TYPE CROSS REFERENCE"
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 1"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 2"
+    },
+    "Address_3": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "VENDOR ADDRESS 3"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "VENDOR STATE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR ZIP CODE"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "VENDOR PHONE"
+    },
+    "Fax_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE VENDOR FAX NUMBER"
+    },
+    "Contact_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR CONTACT NAME"
+    },
+    "Our_Account_Number": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "OUR ACCOUNT NUMBER WITH VENDOR",
+      "writeOnly": true
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VENDOR PAYMENT TERMS DUE (A) FROM INV DATE, (B) FROM 1ST NEXT MONTH",
+      "enum": [
+        "A",
+        "B",
+        null
+      ]
+    },
+    "Terms_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DAYS PYMT IS DUE FROM INV DATE OR 1ST OF NEXT MONTH"
+    },
+    "Terms_Disc_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DISC ELIGIBLE DATE IS FROM (A) INV DATE, (B) 1ST OF NEXT MONTH",
+      "enum": [
+        "A",
+        "B",
+        null
+      ]
+    },
+    "Terms_Disc_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DAYS FROM INV OR 1ST OF NEXT MONTH FOR DISC ELIGIBLE"
+    },
+    "Terms_Disc_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNT PERCENTAGE AMOUNT"
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF VENDOR HAS INSURANCE CERTIFICATE OTHERWISE ENTER 'N'",
+      "enum": [
+        "Y",
+        "N",
+        null
+      ]
+    },
+    "Insurance_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE EXPIRATION DATE"
+    },
+    "Hold_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DEFAULT 'HOLD PYMT' INDICATOR FOR ENTRY OF INVOICES",
+      "enum": [
+        "Y",
+        "N",
+        null
+      ]
+    },
+    "Default_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "DEFAULT G/L ACCOUNT CODE FOR EXPENSE DISTRIBUTION OF INVOICE"
+    },
+    "GL_Distribution_Acct_List1": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List2": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List3": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List4": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List5": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List6": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List7": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List8": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List9": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List10": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distrib_Percent_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CODE FOR THIS USE TAX"
+    },
+    "Send_1099_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR N TO SEND 1099 AT END OF YEAR",
+      "enum": [
+        "Y",
+        "N",
+        null
+      ]
+    },
+    "Alt_1099_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE ALTERNATE VENDOR NAME"
+    },
+    "Fed_1099_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 1099 PAYMENT INDICATOR: 1 - 7, WINDOW FOR DESCRIPTIONS",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        null
+      ]
+    },
+    "Social_Sec_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "VENDOR SOCIAL SECURITY NUMBER"
+    },
+    "Fed_Id_Number": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "FEDERAL ID NUMBER FOR 1099'S"
+    },
+    "Disadv_Business_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' IF THIS IS A DISADVANTAGED BUSINESS ENTERPRISE, OTHERWISE 'N' OR BLANK",
+      "enum": [
+        "Y",
+        "N",
+        null,
+        ""
+      ]
+    },
+    "Disadv_Business_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE DISADVANTAGED BUSINESS ENTERPRISE TYPE"
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE APPROVAL ROUTING LIMIT"
+    },
+    "Vendor_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "ENTER THE VENDOR E-MAIL ADDRESS",
+      "format": "email"
+    },
+    "Contact_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE CONTACT PHONE NUMBER"
+    },
+    "UDF1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF6": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF7": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF8": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF9": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF10": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF11": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF12": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF13": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF14": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF15": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF16": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF17": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF18": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF19": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    },
+    "UDF20": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "Web Service Authorization ID Service UDF defined."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Vendor_Name",
+    "Alpha_Sort",
+    "Terms_Code",
+    "Terms_Days",
+    "Terms_Disc_Code"
+  ]
+}

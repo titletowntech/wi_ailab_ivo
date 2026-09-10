@@ -1,0 +1,463 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/vendors/change.json",
+  "title": "Vendor Change Action Schema",
+  "description": "Schema for updating an existing Vendor record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company Code. Valid Company in Spectrum. Defaults from the Authorization ID if not populated."
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Vendor Code"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Vendor Name. No commas allowed."
+    },
+    "Alpha_Sort": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Vendor Alpha Reference. No commas allowed."
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Vendor Type"
+    },
+    "Our_Account_Number": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "Account reference",
+      "writeOnly": true
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Address 1"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Address 2"
+    },
+    "City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "City"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "State/province - 2 character postal abbreviation"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Postal code"
+    },
+    "Addr_Country": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "Country"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Phone Number. Remove dashes when sending to Spectrum."
+    },
+    "Fax_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Fax Number. Remove dashes when sending to Spectrum."
+    },
+    "Vendor_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Vendor Email. Must be the basic layout for an email address."
+    },
+    "Web_Site": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Website (e.g., xxx.com)"
+    },
+    "Disadv_Business_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Disadvantaged Business Enterprise (DBE) flag"
+    },
+    "Disadv_Business_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "DBE Type"
+    },
+    "Small_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Small business enterprise (SBE)?"
+    },
+    "Minority_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Minority-owned business enterprise (MBE)?"
+    },
+    "Woman_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Woman-owned business enterprise (WBE)?"
+    },
+    "Veteran_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Veteran-owned business enterprise (VBE)?"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "I",
+        "N"
+      ],
+      "description": "Status: (A)ctive, (I)nactive, or (N)ot used"
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Routing Code for Invoice Approval"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "maxLength": 13,
+      "description": "Routing Limit Invoice Approval. Positive numbers only."
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Routing Code for Over Limit Invoice Approval"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Sales/Use Tax Code"
+    },
+    "Default_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Default G/L Code. Code must have an Active status."
+    },
+    "Hold_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "On Hold?"
+    },
+    "GL_Distribution_Acct_List1": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List2": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List3": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List4": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List5": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List6": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List7": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List8": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List9": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distribution_Acct_List10": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Multiple G/L Code. Must be a Non-Direct G/L code with an Active status."
+    },
+    "GL_Distrib_Percent_List1": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List2": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List3": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List4": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List5": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List6": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List7": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List8": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List9": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "GL_Distrib_Percent_List10": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Distribution %. Enter 10.5% as 10.5. Positive number only. The combined value of the 'Distribution %' fields must = 100%. For each GL Account defined a corresponding Distribution % must exist."
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "B"
+      ],
+      "description": "Payment due terms. Enter 'A' if based on invoice date. Enter 'B' if based on 1st of next month."
+    },
+    "Terms_Days": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Days Payment Due. Positive numbers only."
+    },
+    "Terms_Disc_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "B"
+      ],
+      "description": "Discount Due (A or B only). Enter 'A' if based on invoice date. Enter 'B' if based on 1st of next month."
+    },
+    "Terms_Disc_Days": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Days Discount Due. Positive numbers only."
+    },
+    "Terms_Disc_Percent": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Discount %. Enter 10.25% as 10.25. Positive numbers only."
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Ins Cert. (Y)es or(N)o only"
+    },
+    "Insurance_Exp_Date": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Ins Expiration Date. Enter as: MM/DD/CCYY (for example, 01/05/2027)."
+    },
+    "PO_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "1",
+        "2"
+      ],
+      "description": "Purchase Order Default? 1 = One Step Receiving, 2 = Two Step Receiving."
+    },
+    "Vendor_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "P",
+        "S",
+        "E",
+        "C",
+        "V"
+      ],
+      "description": "Payment method. (P)rint Check, (S)end electronic pre-note, (E)lectronic payment, (C)omdata, or (V) ePayments."
+    },
+    "Checking_Account_Code": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "Electronic payment account code."
+    },
+    "Account_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "C",
+        "S"
+      ],
+      "description": "Electronic payment account type. (C)hecking or (S)aving"
+    },
+    "ABA_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "Electronic payment ABA routing #"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Credit Card account code. Cash Management Credit Card account code"
+    },
+    "Send_1099_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "1099-Misc applicable?. Used for United States 1099."
+    },
+    "Alt_1099_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Alternate name. No commas. Used for United States 1099."
+    },
+    "Fed_1099_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "1099 Pmt Indicator. 1; 2; 3; 4; 5; 6; 7; 8; 9 or A only (7 for non-employee compensation box). Used for United States 1099. Defaults to 7 if blank and the Send_1099_Flag = Y"
+    },
+    "Social_Sec_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "Social Security #. Format = 123-45-6789 or 123456789. If defined then Fed_Id_Number must be blank. Used for United States 1099.**"
+    },
+    "Fed_Id_Number": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Federal ID #. If defined then Social_Soc_Number must be blank. Used for United States 1099."
+    },
+    "Recipient_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "1",
+        "3",
+        "4"
+      ],
+      "description": "Recipient type. (1) - Individual, (3) - Corporation or (4) - Partnership only. Used for Canadian T5018."
+    },
+    "Social_Insurance_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "Social insurance #. If defined then Recipient_Account_Number must be blank. No dashes. Must be 9 characters. Used for Canadian T5018."
+    },
+    "Recipient_Account_Number": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Recipient account #. If defined then Social_Insurance_Number must be blank. No dashes. Must be 15 characters. Used for Canadian T5018.",
+      "writeOnly": true
+    },
+    "Partnership_Filer_ID_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "Partnership filer #. Required when Recipient type = 4. Used for Canadian T5018."
+    },
+    "Alternate_T5018_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Alternate Name. Not available when Recipient type = 1. Used for Canadian T5018."
+    },
+    "Individual_First_Name": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "First name. Required when Recipient type = 1. Used for Canadian T5018.",
+      "writeOnly": true
+    },
+    "Individual_Middle_Initial": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Middle initial. Available when Recipient type = 1. Used for Canadian T5018."
+    },
+    "Individual_Last_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Last name. Required when Recipient type = 1. Used for Canadian T5018.",
+      "writeOnly": true
+    },
+    "Override_Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Override Currency Code. Multi-Currency module must be active. Currency Code"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code"
+  ],
+  "additionalProperties": false
+}

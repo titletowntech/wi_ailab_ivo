@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/EmployeeTax/cache.json",
+  "type": "object",
+  "properties": {
+    "Adj_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Adj_Formula": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Adj_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "MTD_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Prior_Month_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_QTD_SUI_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_QTD_SUI_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_SUI_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_SUI_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Reciprocal_Tax": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Tax_ID": {
+      "type": "string",
+      "maxLength": 10,
+      "writeOnly": true
+    },
+    "Tax_Level": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transfer_Subjto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transfer_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transfer_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Subjectto": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Taxable": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Employee",
+    "Tax_ID",
+    "Tax_Level"
+  ]
+}

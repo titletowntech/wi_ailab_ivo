@@ -1,0 +1,604 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/vendors/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE VENDOR NAME"
+    },
+    "Alpha_Sort": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "VENDOR ALPHA CROSS REFERENCE"
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "VENDOR TYPE CROSS REFERENCE"
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 1"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 2"
+    },
+    "Address_3": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "VENDOR ADDRESS 3"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "VENDOR STATE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR ZIP CODE"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "VENDOR PHONE"
+    },
+    "Contact_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR CONTACT NAME"
+    },
+    "Our_Account_Number": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "OUR ACCOUNT NUMBER WITH VENDOR",
+      "writeOnly": true
+    },
+    "Send_1099_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR N TO SEND 1099 AT END OF YEAR"
+    },
+    "Social_Sec_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "VENDOR SOCIAL SECURITY NUMBER"
+    },
+    "Date_Last_Invoice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATE OF LAST INVOICE ENTERED FOR THIS VENDOR"
+    },
+    "Date_Last_Payment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATE LAST PAYMENT WAS MADE TO THIS VENDOR"
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VENDOR PAYMENT TERMS DUE (A) FROM INV DATE, (B) FROM 1ST NEXT MONTH"
+    },
+    "Terms_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DAYS PYMT IS DUE FROM INV DATE OR 1ST OF NEXT MONTH"
+    },
+    "Terms_Disc_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DISC ELIGIBLE DATE IS FROM (A) INV DATE, (B) 1ST OF NEXT MONTH"
+    },
+    "Terms_Disc_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DAYS FROM INV OR 1ST OF NEXT MONTH FOR DISC ELIGIBLE"
+    },
+    "Terms_Disc_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNT PERCENTAGE AMOUNT"
+    },
+    "Default_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "DEFAULT G/L ACCOUNT CODE FOR EXPENSE DISTRIBUTION OF INVOICE"
+    },
+    "Hold_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DEFAULT 'HOLD PYMT' INDICATOR FOR ENTRY OF INVOICES"
+    },
+    "Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VENDOR CURRENT BALANCE"
+    },
+    "Total_Invoices1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL INVOICES ENTERED FOR THIS VENDOR   1-MTD  2-YTD"
+    },
+    "Total_Invoices2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL INVOICES ENTERED FOR THIS VENDOR   1-MTD  2-YTD"
+    },
+    "Total_Payments1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL PAYMENTS MADE TO THIS VENDOR    1-MTD  2-YTD"
+    },
+    "Total_Payments2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL PAYMENTS MADE TO THIS VENDOR    1-MTD  2-YTD"
+    },
+    "Total_Discounts1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL DISCOUNTS TAKEN FOR THIS VENDOR     1-MTD  2-YTD"
+    },
+    "Total_Discounts2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL DISCOUNTS TAKEN FOR THIS VENDOR     1-MTD  2-YTD"
+    },
+    "Negative_Check_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "NEGATIVE CHECK FLAG: Y = CHECK WILL BE 0 OR NEGATIVE, N = POSITIVE"
+    },
+    "Fed_Id_Number": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "FEDERAL ID NUMBER FOR 1099'S"
+    },
+    "Retention_Billed1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION BILLED AMOUNT    1-MTD  2-YTD"
+    },
+    "Retention_Billed2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION BILLED AMOUNT    1-MTD  2-YTD"
+    },
+    "Retention_Paid1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION PAID AMOUNT      1-MTD  2-YTD"
+    },
+    "Retention_Paid2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION PAID AMOUNT      1-MTD  2-YTD"
+    },
+    "Retention_Discount1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION DISCOUNT TAKEN   1-MTD  2-YTD"
+    },
+    "Retention_Discount2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION DISCOUNT TAKEN   1-MTD  2-YTD"
+    },
+    "Retention_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL RETENTION BALANCE"
+    },
+    "Fax_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE VENDOR FAX NUMBER"
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF VENDOR HAS INSURANCE CERTIFICATE OTHERWISE ENTER 'N'"
+    },
+    "Insurance_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE EXPIRATION DATE"
+    },
+    "Fed_1099_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 1099 PAYMENT INDICATOR: 1 - 7, WINDOW FOR DESCRIPTIONS"
+    },
+    "Disadv_Business_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE DISADVANTAGED BUSINESS ENTERPRISE TYPE"
+    },
+    "Disadv_Business_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' IF THIS IS A DISADVANTAGED BUSINESS ENTERPRISE, OTHERWISE 'N' OR BLANK"
+    },
+    "Alt_1099_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE ALTERNATE VENDOR NAME"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CODE FOR THIS USE TAX"
+    },
+    "GL_Distribution_Acct_List1": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List2": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List3": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List4": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List5": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List6": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List7": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List8": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List9": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_Acct_List10": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ARRAY OF GL CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distrib_Percent_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "GL_Distrib_Percent_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ARRAY OF PERCENTAGES FOR THE GL DISTRIBUTION CODES"
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE APPROVAL ROUTING LIMIT"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS - 'A'CTIVE, 'I'NACTIVE, 'N'OT USED"
+    },
+    "Amnt_Last_Payment": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "LAST PAYMENT AMOUNT",
+      "writeOnly": true
+    },
+    "All_Cost_Centers": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO ALLOW ALL COST CENTERS FOR THE VENDOR"
+    },
+    "GL_Distribution_CC_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List3": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List4": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List5": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List6": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List7": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List8": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List9": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "GL_Distribution_CC_List10": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ARRAY OF COST CENTER CODES FOR DISTRIBUTING INVOICE AMOUNT"
+    },
+    "Vendor_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "ENTER THE VENDOR E-MAIL ADDRESS"
+    },
+    "Contact_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE CONTACT PHONE NUMBER"
+    },
+    "Credit_Card_Issuer_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y if this vendor issues a credit card"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Vendor bank account code"
+    },
+    "Merchant_ID": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "for future use only"
+    },
+    "Checking_Account_Code": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "for future use only"
+    },
+    "Account_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "(C)hecking or (S)avings"
+    },
+    "ABA_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ABA number"
+    },
+    "Vendor_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "(Y)es, (P)re-notification, (blank) = No"
+    },
+    "Comdata_Payable": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y or blank"
+    },
+    "Address_ID": {
+      "type": "integer",
+      "description": "Address ID"
+    },
+    "Phone_ID": {
+      "type": "integer",
+      "description": "Telephone ID"
+    },
+    "Fax_ID": {
+      "type": "integer",
+      "description": "Fax ID"
+    },
+    "Primary_Contact": {
+      "type": "integer",
+      "description": "Primary contact ID"
+    },
+    "Web_Site": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Vendor web site"
+    },
+    "Small_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check if vendor is small business enterprise"
+    },
+    "Minority_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check if vendor is minority-owned business enterprise"
+    },
+    "Woman_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check if vendor is woman-owned business enterprise"
+    },
+    "Veteran_Business": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check if vendor is veteran-owned business enterprise"
+    },
+    "PO_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Purchase order receiving method"
+    },
+    "Pay_When_Paid": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Vendor pay when paid flag"
+    },
+    "Encrypted_Social_Sec_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Encrypted_Checking_Account_Code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code"
+  ]
+}

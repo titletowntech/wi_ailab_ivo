@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Payment/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM TYPE (I)nvoice or (C)redit memo"
+    },
+    "Payment_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "PAYMENT NUMBER (1-4) IN CASE OF PARTIAL PAYMENTS"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR CHECK LOG"
+    },
+    "Tran_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "SYSTEM ASSIGNED FOR UNIQUENESS - NOT USED (DETERMINED ON 1/5/89)"
+    },
+    "Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "CHECK DATE"
+    },
+    "Payment_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VENDOR HISTORY PAYMENT (OR APPLIED) AMOUNT",
+      "writeOnly": true
+    },
+    "Subcontract_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SUBCONTRACT JOB NUMBER"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "REMARKS FROM PAYMENTS"
+    },
+    "Original_Invoice_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ORIGINAL INVOICE AMOUNT"
+    },
+    "Original_Retention_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ORIGINAL RETENTION AMOUNT"
+    },
+    "Invoice_and_Due_Date1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ORIGINAL 1 = INV DATE, 2 = PAYMENT DUE DATE"
+    },
+    "Invoice_and_Due_Date2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ORIGINAL 1 = INV DATE, 2 = PAYMENT DUE DATE"
+    },
+    "Retention_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNT OF ACTUAL RETENTION PAID"
+    },
+    "Discount_Taken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNT TAKEN"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "HISTORY CONTRACT NUMBER"
+    },
+    "Trans_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "HISTORY TRANSACTION DATE"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "BANK ACCOUNT CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Check_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": ""
+    },
+    "Check_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "Comdata_Temp_Credit_Card": {
+      "type": "string",
+      "maxLength": 16,
+      "description": "",
+      "writeOnly": true
+    },
+    "Subcontract_Payment_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "description": ""
+    },
+    "Back_Charge_Subcontract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Pay_Loc_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": ""
+    },
+    "Payment_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Remarks_List1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": ""
+    },
+    "Remarks_List2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": ""
+    },
+    "Remarks_List3": {
+      "type": "string",
+      "maxLength": 60,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Invoice_Number",
+    "Invoice_Type_Code",
+    "Payment_Number",
+    "Check_Number",
+    "Tran_Number",
+    "Payment_Amount",
+    "Subcontract_Job",
+    "Remarks",
+    "Original_Invoice_Amount",
+    "Original_Retention_Amount",
+    "Retention_Paid",
+    "Discount_Taken",
+    "Contract_Number",
+    "Bank_Account_Code",
+    "Cost_Center",
+    "Check_Date_Year",
+    "Check_Date_Period",
+    "Comdata_Temp_Credit_Card",
+    "Subcontract_Payment_Number",
+    "Back_Charge_Subcontract",
+    "Pay_Loc_Code",
+    "Payment_Type",
+    "Remarks_List1",
+    "Remarks_List2",
+    "Remarks_List3"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/standard_categories/cache.json",
+  "type": "object",
+  "properties": {
+    "Category": {
+      "type": "string"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Accumulate_As": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Account_A": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Account_B": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Account_C": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Send_Cost_to_Billings": {
+      "type": "boolean"
+    },
+    "Exempt_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Category"
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/wage_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Wage_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Union_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Short_Description": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Full_Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "Hourly_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Hourly_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Double_Time_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Base_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Base_Rate9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Base_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Regular_Fringe_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "OT_Fringe_Rate9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "DT_Fringe_Rate_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Bill_Code_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List3": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List4": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List5": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List6": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List7": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List8": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Bill_Code_List9": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Worker_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": ""
+    },
+    "Auto_Ot_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Ot_Over_Hrs": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Dt_Over_Hrs": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Period_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Labor_Class": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Benefit_Tier_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Regular_Std_Job_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Overtime_Std_Job_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    },
+    "Doubletime_Std_Job_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": ""
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Wage_Code",
+    "Union_Code"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Transfer_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRAN TYPE (T)ransfer, (A)djust, (R)eceipt, (C)redit return, (O)n order"
+    },
+    "Transaction_Reference": {
+      "type": "string",
+      "maxLength": 7,
+      "description": "TRANSACTION REFERENCE NUMBER"
+    },
+    "Requisition_Sequence": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "REQUISITION SEQUENCE NUMBER"
+    },
+    "From_Warehouse": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "FROM WAREHOUSE CODE"
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "TRANSACTION DATE"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE REQUISITION STATUS:  'O'PEN OR 'S'HIPPED"
+    },
+    "Operator": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER OPERATOR INITIALS"
+    },
+    "Ship_Via": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER REQUISITION SHIP VIA INFORMATION"
+    },
+    "Ship_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE REQUISITION SHIP DATE"
+    },
+    "Special_Instructions": {
+      "type": "string",
+      "maxLength": 70,
+      "description": "ENTER REQUISITION SPECIAL INSTRUCTIONS"
+    },
+    "Default_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THIS REQUISITION'S DEFAULT JOB"
+    },
+    "Tool_Requisition_Number": {
+      "type": "string",
+      "maxLength": 7,
+      "description": "ENTER THE REQUISITION NUMBER OR PRESS RETURN FOR THE NEXT SEQUENCE NUMBER"
+    },
+    "Req_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE FOR THIS JOB REQUISITION"
+    },
+    "Error_Description1": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "GIVES REASON FOR UNABLE TO UPDATE, MUST BE BLANK TO UPDATE"
+    },
+    "Error_Description2": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "GIVES REASON FOR UNABLE TO UPDATE, MUST BE BLANK TO UPDATE"
+    },
+    "Print_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "THIS IS 'Y' IF IT HAS PRINTED ON THE TRANJ REPORT"
+    },
+    "Transaction_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR THIS TRANSACTION DATE FALLS ON"
+    },
+    "Transaction_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD THIS TRANSACTION DATE FALLS ON"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BATCH CODE"
+    },
+    "Details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Transaction_Sequence": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "TRANSACTION REFERENCE SEQUENCE NUMBER"
+          },
+          "Item_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ITEM CODE"
+          },
+          "Transaction_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "TRANSACTION QUANTITY"
+          },
+          "Unit_Of_Measure": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "TRAN UNIT OF MEASURE"
+          },
+          "Unit_Cost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "TRAN UNIT COST"
+          },
+          "GL_Debit_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "GL DEBIT ACCOUNT #"
+          },
+          "GL_Credit_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "GL CREDIT ACCOUNT #"
+          },
+          "Extended_Cost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "COST EXTENSION"
+          },
+          "Reason": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "REASON FOR ADJUSTMENT"
+          },
+          "Post_Flag1": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "'J' TRAN POST FLAG:  1-ITEMS FILE  2-GL/QTY/HIST  3-JC   (Y/N)"
+          },
+          "Post_Flag2": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "'J' TRAN POST FLAG:  1-ITEMS FILE  2-GL/QTY/HIST  3-JC   (Y/N)"
+          },
+          "Post_Flag3": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "'J' TRAN POST FLAG:  1-ITEMS FILE  2-GL/QTY/HIST  3-JC   (Y/N)"
+          },
+          "Post_Flag4": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "'J' TRAN POST FLAG:  1-ITEMS FILE  2-GL/QTY/HIST  3-JC   (Y/N)"
+          },
+          "Markup_Percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE MARKUP % FOR THIS REQUISITION LINE ITEM"
+          },
+          "Ship_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE REQUISITION QUANTITY SHIPPED"
+          },
+          "Job_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE REQUISITION ITEM JOB NUMBER"
+          },
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE REQUISITION ITEM PHASE CODE"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE REQUISITION ITEM COST TYPE"
+          },
+          "Standard_Cost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "SOLD COST"
+          },
+          "Warehouse": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THIS LINE ITEM'S WAREHOUSE"
+          },
+          "Job_Cost_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "JOB COST AS COMPUTED DURING UPDATE (USED DURING UPDATE ONLY)"
+          },
+          "GL_Department": {
+            "type": "string",
+            "maxLength": 4,
+            "description": "INVENTORY G/L DEPARTMENT CODE"
+          },
+          "Non_Stock_Description": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "ENTER THE DESCRIPTION FOR THIS NON-STOCK ITEM"
+          },
+          "Use_Tax_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ENTER 'Y' IF THERE IS USE TAX ON THIS ITEM"
+          },
+          "Use_Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ENTER THE USE TAX CODE"
+          },
+          "Use_Tax_Percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Transaction_Sequence"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Transfer_Type",
+    "Transaction_Reference",
+    "Requisition_Sequence"
+  ]
+}

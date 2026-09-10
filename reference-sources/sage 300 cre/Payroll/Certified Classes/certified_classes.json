@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/SystemCertifiedClass/cache.json",
+  "type": "object",
+  "properties": {
+    "Certified_Class": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Certified_Class_File_Lnks": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Certified_Class_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Certified_Class"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/jc/v1/object/job_phase/add.json",
+  "title": "Job Phase Add Action Schema",
+  "description": "Schema for adding a new Job Phase record.",
+  "type": "object",
+  "properties": {}
+}

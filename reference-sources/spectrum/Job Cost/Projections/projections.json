@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/jc/v1/object/projections/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company code identifier"
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Job identifier"
+    },
+    "Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Phase identifier"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Cost type code"
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Type indicator"
+    },
+    "System_Key": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "System-generated key"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Year identifier"
+    },
+    "Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Period identifier"
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Transaction date and time"
+    },
+    "Transaction_Time": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "Transaction time"
+    },
+    "Operator": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Operator code"
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Transaction amount (12,2 decimal precision)"
+    },
+    "Variance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Variance amount (12,2 decimal precision)"
+    },
+    "Projected_Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Projected quantity (12,2 decimal precision)"
+    },
+    "Projected_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Projected hours (12,2 decimal precision)"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Remarks field"
+    },
+    "Note": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Notes field"
+    },
+    "Transaction_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Transaction date year"
+    },
+    "Transaction_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Transaction date period"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job",
+    "Phase",
+    "Cost_Type",
+    "Type",
+    "System_Key",
+    "Year",
+    "Period",
+    "Transaction_Time",
+    "Operator",
+    "Amount",
+    "Variance",
+    "Projected_Quantity",
+    "Projected_Hours",
+    "Remarks",
+    "Note",
+    "Transaction_Date_Year",
+    "Transaction_Date_Period"
+  ]
+}

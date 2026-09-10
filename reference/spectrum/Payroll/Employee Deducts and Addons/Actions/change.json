@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/employee_deducts_and_adonis/change.json",
+  "title": "Employee Deducts and Adonis Change Action Schema",
+  "description": "Schema for updating an existing Employee Deducts and Adonis record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

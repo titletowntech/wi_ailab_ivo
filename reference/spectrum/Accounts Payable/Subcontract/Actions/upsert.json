@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/subcontract/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Valid Company in Spectrum. Defaults from the Authorization ID if not populated"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Vendor"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "No duplicate combination of Vendor and Subcontract number."
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Jobs - Required for new record only. The Job cannot be changed on an existing Subcontract"
+    },
+    "Default_Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Phases - No dashes."
+    },
+    "Default_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Cost Type"
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "I",
+        "C"
+      ],
+      "description": "(A)ctive, (I)nactive or (C)omplete. If blank then default to Active when creating a new record."
+    },
+    "Contract_Type": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "Y",
+        "N"
+      ],
+      "description": "(Y)es, (N)o or (A)for not applicable. Defaults from Vendor if blank."
+    },
+    "Sent_Date": {
+      "type": "string",
+      "format": "date",
+      "description": "Format: YYYY-MM-DD."
+    },
+    "Date_Issued": {
+      "type": "string",
+      "format": "date",
+      "description": "Format: YYYY-MM-DD. Defaults to current processing date if blank."
+    },
+    "Contact_Person": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Not part of the Contact Master in Spectrum."
+    },
+    "Unit_Price_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "(Y)es or (N)o. Defaults as yes if Unit Price Job. Defaults to N if blank."
+    },
+    "Comment": {
+      "type": "string",
+      "maxLength": 120,
+      "description": ""
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Routing Code Maintenance"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "maxLength": 13,
+      "pattern": "^[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Positive numbers only. Format = 10.2"
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Routing Code Maintenance"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L Master File Maintenance - Required when creating a new Subcontract. The GL Account code must be a direct Job cost account."
+    },
+    "Retention_Percent": {
+      "type": "string",
+      "maxLength": 5,
+      "pattern": "^[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Enter 10.2% as 10.2. Positive numbers only. Format = 2.1"
+    },
+    "Next_Payment_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "pattern": "^[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Positive numbers only. Defaults to 1 if adding a new subcontract."
+    },
+    "Pay_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Enter (Y)es to override. Defaults to N if blank."
+    },
+    "Pay_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "B"
+      ],
+      "description": "Defaults from Vendor, if Pay_Override is not a Y - Enter 'A' if based on invoice date. Enter 'B' if based on 1st of next month."
+    },
+    "Pay_Days": {
+      "type": "string",
+      "maxLength": 3,
+      "pattern": "^[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Defaults from Vendor, if Pay_Override is not a Y - Positive numbers only."
+    },
+    "Disc_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Enter (Y)es to override. Defaults to N if blank."
+    },
+    "Disc_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "A",
+        "B"
+      ],
+      "description": "Defaults from Vendor, if Disc_Override is not a Y - Enter 'A' if based on invoice date. Enter 'B' if based on 1st of next month."
+    },
+    "Disc_Days": {
+      "type": "string",
+      "maxLength": 3,
+      "pattern": "^[-+]?[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Defaults from Vendor, if Disc_Override is not a Y - Positive numbers only."
+    },
+    "Disc_Perc": {
+      "type": "string",
+      "maxLength": 6,
+      "pattern": "^[0-9]{1,2}(?:.[0-9]{1,4})?$",
+      "description": "Defaults from Vendor, if Disc_Override is not a Y- Enter 10.25% as 10.25. Positive numbers only."
+    },
+    "Pay_When_Paid": {
+      "type": "string",
+      "maxLength": 1,
+      "enum": [
+        "Y",
+        "N"
+      ],
+      "description": "Pay_Override field must be defined as Y to change this field to Yes - Enter (Y)es or (N)o. Defaults to N if blank."
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Subcontract_Number",
+    "Job_Number",
+    "GL_Account"
+  ]
+}

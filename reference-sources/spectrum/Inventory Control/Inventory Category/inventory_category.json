@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/InventoryCategory/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Item_Category": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ITEM CATEGORY CODE"
+    },
+    "Category_Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ITEM CATEGORY DESCRIPTION"
+    },
+    "Cost_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM CATEGORY COSTING METHOD: (L)ifo, (F)ifo, (A)verage"
+    },
+    "Include_Category_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS CATEGORY TO BE INCLUDED IN TRACKING SYSTEM? (Y)es, (N)o"
+    },
+    "Percent_Of_List_Price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE % OF LIST FOR STANDARD COST IN PRICE UPDATE (I.E. 70% OF LIST)"
+    },
+    "Inventory_GL_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE INVENTORY G/L DEPARTMENT CODE FOR THIS CATEGORY"
+    },
+    "Item_Mask": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE ITEM MASK"
+    },
+    "Next_Item_Sequence": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE NEXT AVAILABLE ITEM SEQUENCE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Item_Category",
+    "Category_Description",
+    "Cost_Method",
+    "Include_Category_Flag",
+    "Percent_Of_List_Price",
+    "Inventory_GL_Department",
+    "Item_Mask",
+    "Next_Item_Sequence"
+  ]
+}

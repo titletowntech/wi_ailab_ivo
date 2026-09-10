@@ -1,0 +1,423 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/po_headers/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PURCHASE ORDER NUMBER"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE VENDOR CODE"
+    },
+    "Ship_To_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER RETURN FOR DEFAULT SHIP-TO, 'I' FOR INPUT OR 'J' FOR JOB"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER"
+    },
+    "Ship_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP TO NAME"
+    },
+    "Ship_Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP TO ADDRESS 1"
+    },
+    "Ship_Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP TO ADDRESS 2"
+    },
+    "Ship_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE SHIP TO CITY"
+    },
+    "Ship_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE SHIP TO STATE"
+    },
+    "Ship_Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SHIP TO ZIP CODE"
+    },
+    "PO_Order_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PO DATES (1 = ORDER, 2 = DELIVERY, 3 = LAST RECEIVED)"
+    },
+    "PO_Delivery_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PO DATES (1 = ORDER, 2 = DELIVERY, 3 = LAST RECEIVED)"
+    },
+    "PO_Last_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PO DATES (1 = ORDER, 2 = DELIVERY, 3 = LAST RECEIVED)"
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE PAYMENT TERMS CODE (A) - FROM INV DATE (B) - FROM 1ST NEXT MONTH"
+    },
+    "Payment_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PAYMENT TERMS DAYS FROM INV DATE / 1ST NEXT MONTH"
+    },
+    "Terms_Description": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PAYMENT TERMS DESCRIPTION"
+    },
+    "Discount_From_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DISCOUNT TERMS CODE (A) - FROM INV DATE (B) - FROM 1ST NEXT MONT"
+    },
+    "Discount_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE DISCOUNT TERMS DAYS FROM INV DATE / 1ST NEXT MONTH"
+    },
+    "Terms_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE DISCOUNT TERMS PERCENTAGE"
+    },
+    "Ordered_By": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ORDERED BY ?"
+    },
+    "Confirmed_By": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "CONFIRMED BY ?"
+    },
+    "Resale_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "FOR RESALE ?"
+    },
+    "Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE TAX PERCENTAGE"
+    },
+    "PO_Print_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PURCHASE ORDER PRINT STATUS - (Y)ES / (N)O"
+    },
+    "Status_Flag": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "PURCHASE ORDER STATUS - OPEN / CLOSED"
+    },
+    "Ship_Via": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SHIP VIA OR * FOLLOWED BY A VALID SHIP VIA CODE"
+    },
+    "Ship_Terms": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE SHIPPING TERMS OR * FOLLOWED BY A VALID SHIPPING TERMS CODE"
+    },
+    "FOB": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE PURCHASE ORDER FREE ON BOARD"
+    },
+    "Special_Instructions": {
+      "type": "string",
+      "maxLength": 29,
+      "description": "ENTER SPECIAL INSTRUCTIONS OR * FOLLOWED BY A VALID INSTRUCTION CODE"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 29,
+      "description": "ENTER PURCHASE ORDER REMARKS"
+    },
+    "Warehouse_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PURCHASE ORDER WAREHOUSE CODE"
+    },
+    "Taxable_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL TAXABLE AMOUNT ON PURCHASE ORDER"
+    },
+    "Non_Taxable_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL NON-TAXABLE AMOUNT ON PURCHASE ORDER"
+    },
+    "Tax_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL TAX AMOUNT ON PURCHASE ORDER"
+    },
+    "PO_Total_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL AMOUNT ON PURCHASE ORDER"
+    },
+    "Payment_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DUE DATES (1 = PAYMENT DUE DATE, 2 = DISCOUNT DUE DATE)"
+    },
+    "Discount_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DUE DATES (1 = PAYMENT DUE DATE, 2 = DISCOUNT DUE DATE)"
+    },
+    "Total_Freight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL FREIGHT AMOUNT FOR THIS PURCHASE ORDER"
+    },
+    "Reference_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SHOULD THIS PURCHASE ORDER REFERENCE A 'J'OB OR 'W'ORK ORDER ?"
+    },
+    "PO_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TYPE: (L)UMP SUM OR (U)NIT PRICE"
+    },
+    "Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE RECEIVED"
+    },
+    "Received_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'E' IF RECEIPT ENTERED, BUT NOT PRINTED, 'P' IF PRINTED, OR BLANK"
+    },
+    "Last_Receipt_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE LAST RECEIPT NUMBER USED"
+    },
+    "Proposed_PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PROPOSED PURCHASE ORDER NUMBER"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BATCH CODE"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE USE TAX CODE FOR THIS LINE, IF ANY"
+    },
+    "Current_Revision": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": "CURRENT REVISION NUMBER"
+    },
+    "Blanket_PO": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS A BLANKET PURCHASE ORDER?"
+    },
+    "Blanket_Exp_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "BLANKET PO EXPIRATION DATE"
+    },
+    "Blanket_Total_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "BLANKET PO TOTAL AMOUNT"
+    },
+    "Blanket_Vendor_Num": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR'S BLANKET NUMBER"
+    },
+    "Current_Blanket_Release": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": "CURRENT BLANKET RELEASE NUMBER"
+    },
+    "Routing_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ROUTING CODE"
+    },
+    "Release_Schedule_Exists": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y=PO HAS SCHEDULED RELEASES"
+    },
+    "PO_Order_Date_Fiscal_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR FOR PO DATE LIST 1"
+    },
+    "PO_Delivery_Date_Fiscal_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR PO DATE LIST 1"
+    },
+    "PO_Last_Received_Date_Fiscal_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR FOR PO DATE LIST 3"
+    },
+    "PO_Last_Received_Date_Fiscal_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR PO DATE LIST 3"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Bank account"
+    },
+    "Card_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Sub-account card number"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "PO_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PO receiving method"
+    },
+    "Comment": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "Purchase order comment"
+    },
+    "VAT_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VALUE ADDED TAX CODE"
+    },
+    "Total_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT TOTAL AMOUNT"
+    },
+    "Purch_Loc_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "Purchase location code"
+    },
+    "Pay_Loc_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "Payment location code"
+    },
+    "Accrue_PO_Costs": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Accrue PO Costs flag"
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "PO_Number"
+  ]
+}

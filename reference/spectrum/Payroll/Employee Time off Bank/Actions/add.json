@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/employee_time_off_bank/add.json",
+  "title": "Employee Time off Bank Add Action Schema",
+  "description": "Schema for adding a new Employee Time off Bank record.",
+  "type": "object",
+  "properties": {}
+}

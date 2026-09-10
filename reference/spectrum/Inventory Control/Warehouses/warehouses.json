@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Warehouses/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Warehouse_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ITEMS WAREHOUSE CODE"
+    },
+    "Name": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "WAREHOUSE NAME"
+    },
+    "Address_Line_1": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "WAREHOUSE ADDRESS LINE 1"
+    },
+    "Address_Line_2": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "WAREHOUSE ADDRESS LINE 2"
+    },
+    "City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "WAREHOUSE CITY"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "WAREHOUSE STATE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WAREHOUSE ZIP CODE"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WAREHOUSE PHONE NUMBER"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE FOR THIS WAREHOUSE (FOR SCALE INTERFACE OPTION)"
+    },
+    "Warehouse_GL_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE INVENTORY G/L DEPARTMENT CODE FOR THIS WAREHOUSE"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE USE TAX CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Warehouse_Code"
+  ]
+}

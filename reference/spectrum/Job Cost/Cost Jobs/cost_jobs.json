@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/CostJob/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "CURRENT JOB COST PROCESSING DATE (USED FOR MTD, YTD CALCS)"
+    },
+    "GL_Year": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE BILLING BALANCE YEAR"
+    },
+    "Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "CURRENT PERIOD (01 - 13)"
+    },
+    "Billed_MTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL BILLINGS FOR THE MONTH (SYSTEM UPDATED)"
+    },
+    "Billed_YTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL BILLINGS FOR JOB/YR TO DATE (SYSTEM UPDATED)"
+    },
+    "Billed_JTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL BILLINGS FOR JOB/TO DATE (SYSTEM UPDATED)"
+    },
+    "Projected_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL PROJECTED COST FOR THE JOB (SYSTEM GENERATED)"
+    },
+    "Cost_MTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL COSTS FOR THE MONTH (SYSTEM UPDATED)"
+    },
+    "Cost_YTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL COSTS FOR THE COST/YR TO DATE (SYSTEM UPDATED"
+    },
+    "Cost_JTD": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE TOTAL COSTS FOR THE JOB TO DATE (SYSTEM UPDATED)"
+    },
+    "Percent_Complete": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THIS FIELD RECORDS THE PERCENT COMPLETE FOR THE JOB (SYSTEM UPDATED)"
+    },
+    "Original_Estimate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL TOTAL ESTIMATED AMOUNT FOR THIS JOB"
+    },
+    "TOT_Estimate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL ESTIMATED AMOUNT FOR THIS JOB"
+    },
+    "Est_Profit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,36}(?:.[0-9]{0,2})?$",
+      "description": "ENTER IN THE ESTIMATED PROFIT FOR THIS JOB"
+    },
+    "Last_Bill_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "THIS FIELD RECORDS THE LAST TIME THIS JOB WAS BILLED (SYSTEM UPDATED)"
+    },
+    "Certified_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE THIS JOB WAS FIRST CERTIFIED"
+    },
+    "Last_Cost_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "THIS FIELD RECORDS THE LAST TIME THIS JOB INCURRED A COST (SYSTEM UPDATED)"
+    },
+    "LAST_PAYROLL_DATE": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Last time payroll was updated using CT.FLAGS(9) rules"
+    },
+    "Committed_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,32}(?:.[0-9]{0,6})?$",
+      "description": "P.O. ORDERED AMOUNT (FOR COMMITTED COST)"
+    },
+    "PO_Received": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,32}(?:.[0-9]{0,6})?$",
+      "description": "P.O. RECEIVED AMOUNT (FOR COMMITTED COST)"
+    },
+    "Subcontract_Ordered": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,25}(?:.[0-9]{0,13})?$",
+      "description": "SUBCONTRACT ORDERED AMOUNT (FOR COMMITTED COST)"
+    },
+    "Subcontract_Received": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,25}(?:.[0-9]{0,13})?$",
+      "description": "SUBCONTRACT RECEIVED AMOUNT (FOR COMMITTED COST)"
+    },
+    "Job_Req_Ordered": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,32}(?:.[0-9]{0,6})?$",
+      "description": "JOB REQUISITION ORDERED AMOUNT (FOR COMMITTED COST)"
+    },
+    "Job_Req_Received": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,28}(?:.[0-9]{0,10})?$",
+      "description": "JOB REQUISITION RECEIVED AMOUNT (FOR COMMITTED COST)"
+    },
+    "Master_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE MASTER JOB NUMBER"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job_Number"
+  ]
+}

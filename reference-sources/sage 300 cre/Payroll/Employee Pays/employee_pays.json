@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/EmployeePay/cache.json",
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Automatic": {
+      "type": "boolean"
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Fund_Member_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Pay_ID": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Pay_Type": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Period": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Prior_Month_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Sequence": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Automatic",
+    "Employee",
+    "Pay_ID",
+    "Pay_Type"
+  ]
+}

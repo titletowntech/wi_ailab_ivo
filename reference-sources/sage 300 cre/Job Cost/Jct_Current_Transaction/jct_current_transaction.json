@@ -1,0 +1,567 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/jct_current_transaction/cache.json",
+  "type": "object",
+  "properties": {
+    "__naturalKey": {
+      "type": "string"
+    },
+    "Accounting_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Addon_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Adjustment_ID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Adjustment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "AP_Payment_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Application_of_Origin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "AR_Invoice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Batch": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Billed": {
+      "type": "boolean"
+    },
+    "Cash_Receipt_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Category": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "CCOD_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Change_Order": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Change_Order_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Change_Request_Detail_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Change_Request_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Check_Sequence": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Chg_Mgmt_Ref_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Chg_Mgmt_Ref_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Chg_Mgmt_URL": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 260
+    },
+    "Commitment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Commitment_CO": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Commitment_CO_Index": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Line_Item": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Commitment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Cost_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Credit_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Credit_Account_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Customer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Customer_Check": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Debit_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Debit_Account_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Deposit_Adjustment": {
+      "type": "boolean"
+    },
+    "Deposit_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Deposit_Id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Dist_Sequence": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "DP_Original_Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "DP_Run_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Sequence": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Draw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "EQ_Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Equipment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Extra": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Fringe_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "GL_Journal": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Invoice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Item": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Noncosted_Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Original_Source": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Paid_Secondary_Vendor_Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Payment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "Period_End_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PR_Tax_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "writeOnly": true
+    },
+    "Ref_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Ref_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Retainage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revenue_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Run": {
+      "type": "integer"
+    },
+    "Sequence": {
+      "type": "integer"
+    },
+    "SM_Work_Order": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Standard_Item": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Tax_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "writeOnly": true
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transaction_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Transaction_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Transaction_Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Transaction_Type": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Unit_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "WIP_ID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "__naturalKey"
+  ]
+}

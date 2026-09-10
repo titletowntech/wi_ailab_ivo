@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Supervisor/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Supervisor_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SUPERVISOR CODE"
+    },
+    "Name": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "SUPERVISOR NAME"
+    },
+    "Supervisor_Department": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "SUPERVISOR DEPARTMENT"
+    },
+    "Supervisor_Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum. Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Supervisor_Code",
+    "Name",
+    "Supervisor_Department",
+    "Supervisor_Employee_Code"
+  ]
+}

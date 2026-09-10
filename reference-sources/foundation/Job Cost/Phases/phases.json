@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Phase/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "phase_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "phase_no",
+    "row_unique_id"
+  ]
+}

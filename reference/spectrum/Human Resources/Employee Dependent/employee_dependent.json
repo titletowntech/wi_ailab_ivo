@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/EmployeeDependent/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Employee_Dependent_Seq": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SEQUENCE"
+    },
+    "Employee_Dependent_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DEPENDENT TYPE: [S]=SPOUSE, [C]=CHILD, [O]=OTHER"
+    },
+    "Employee_Dependent_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE DEPENDENT NAME"
+    },
+    "Employee_Dependent_Sex": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DEPENDENT SEX: [M]=MALE, [F]=FEMALE"
+    },
+    "Employee_Dependent_Birth": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DEPENDENT DATE OF BIRTH"
+    },
+    "Employee_Dependent_SSN": {
+      "type": "string",
+      "maxLength": 9,
+      "writeOnly": true,
+      "description": "ENTER THE DEPENDENT SOCIAL SECURITY NUMBER"
+    },
+    "Employee_Dependent_Notes": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER NOTES FOR THE DEPENDENT"
+    },
+    "Encrypted_Employee_Dependent_SSN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Employee_Dependent_Seq"
+  ]
+}

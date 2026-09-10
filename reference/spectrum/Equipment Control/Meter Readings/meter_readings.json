@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/MeterReading/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Batch_ID": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE OPERATOR ID FOR THIS TRANSACTION BATCH"
+    },
+    "Transaction_Date": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE TRANSACTION DATE"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE"
+    },
+    "Meter_Number": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER NUMBER"
+    },
+    "Fiscal_Year": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE FISCAL YEAR FOR THIS TRANSACTION"
+    },
+    "Fiscal_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE FISCAL PERIOD FOR THIS TRANSACTION"
+    },
+    "Meter_Reading": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE METER READING FOR THIS TRANSACTION"
+    },
+    "Meter_Remarks": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER ANY REMARKS FOR THIS METER READING"
+    },
+    "Company_Code_2": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Base_Reading": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "BASE READING"
+    },
+    "Meter_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER TYPE ('H'OUR, 'M'ILE, 'K'ILOMETER, 'U'SAGE)"
+    },
+    "Meter_Transaction": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "TRANSACTION ID"
+    },
+    "__concatenatedKey": {
+      "type": "string"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Batch_ID",
+    "Transaction_Date",
+    "Equipment_Code",
+    "Meter_Number",
+    "__concatenatedKey"
+  ]
+}

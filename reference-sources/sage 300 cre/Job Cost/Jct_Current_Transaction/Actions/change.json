@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/jc/v1/object/jct_current_transaction/change.json",
+  "title": "Jct Current Transaction Change Action Schema",
+  "description": "Schema for updating an existing Jct Current Transaction record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

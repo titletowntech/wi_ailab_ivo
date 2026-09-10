@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/use_taxes/data/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CODE FOR THIS USE TAX"
+    },
+    "Use_Tax_Description": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE DESCRIPTION FOR THIS USE TAX"
+    },
+    "Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE PERCENTAGE FOR THIS USE TAX"
+    },
+    "Tax_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCOUNT NUMBER FOR THIS USE TAX"
+    },
+    "Tax_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE TAX TYPE: 'S'ALES OR 'U'SE"
+    },
+    "Comments": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "COMMENTS FOR THIS RATE REVISION"
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Effective Date. Format YYYY-MM-DD."
+    },
+    "id": {
+      "type": "integer",
+      "description": "Id"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Use_Tax_Code",
+    "Use_Tax_Description",
+    "Tax_Percent",
+    "Tax_GL_Account",
+    "Tax_Type",
+    "Comments",
+    "id"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "examples": [
+    {
+      "Company_Code": "XXX",
+      "Status_Code": "A",
+      "Status_Description": "Active",
+      "Status_Type": "A"
+    }
+  ],
+  "required": [
+    "Company_Code",
+    "Status_Code"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "Company_Code": {
+      "$id": "#/properties/Company_Code",
+      "type": "string",
+      "title": "Company_Code",
+      "description": "Company Code containing this status code instance.",
+      "examples": [
+        "XXX"
+      ],
+      "maxLength": 3
+    },
+    "Status_Code": {
+      "$id": "#/properties/Status_Code",
+      "type": "string",
+      "title": "Status_Code",
+      "description": "Status Code",
+      "examples": [
+        "A"
+      ],
+      "maxLength": 1
+    },
+    "Status_Description": {
+      "$id": "#/properties/Status_Description",
+      "type": "string",
+      "title": "Status_Description",
+      "description": "Description of the Status Code.",
+      "examples": [
+        "Active"
+      ],
+      "maxLength": 10
+    },
+    "Status_Type": {
+      "$id": "#/properties/Status_Type",
+      "type": "string",
+      "title": "Status_Type",
+      "description": "Status type enumeration Active, Inactive, Deceased, Terminated.",
+      "enum": [
+        "A",
+        "I",
+        "D",
+        "T"
+      ],
+      "examples": [
+        "A"
+      ],
+      "maxLength": 1
+    }
+  }
+}

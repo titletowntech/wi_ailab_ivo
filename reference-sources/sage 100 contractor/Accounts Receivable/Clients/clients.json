@@ -1,0 +1,797 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/Contacts/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "client_id": {
+      "type": "integer",
+      "description": "The client number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Enter a brief name for sorting/finding the client",
+      "maxLength": 30
+    },
+    "client_name": {
+      "type": "string",
+      "description": "The full name of the client",
+      "maxLength": 75
+    },
+    "greeting": {
+      "type": "string",
+      "description": "Enter a familiar name (for printing documents)",
+      "maxLength": 50
+    },
+    "address_1": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 50
+    },
+    "address_2": {
+      "type": "string",
+      "description": "The address",
+      "maxLength": 50
+    },
+    "city": {
+      "type": "string",
+      "description": "The city",
+      "maxLength": 50
+    },
+    "state": {
+      "type": "string",
+      "description": "The State abbreviation",
+      "maxLength": 2
+    },
+    "zip": {
+      "type": "string",
+      "description": "The zip code",
+      "maxLength": 10
+    },
+    "bill_address_1": {
+      "type": "string",
+      "description": "The billing address",
+      "maxLength": 50
+    },
+    "bill_address_2": {
+      "type": "string",
+      "description": "The billing address",
+      "maxLength": 50
+    },
+    "bill_city": {
+      "type": "string",
+      "description": "The billing city",
+      "maxLength": 50
+    },
+    "bill_state": {
+      "type": "string",
+      "description": "The billing state",
+      "maxLength": 2
+    },
+    "bill_zip": {
+      "type": "string",
+      "description": "The billing zip code",
+      "maxLength": 10
+    },
+    "ship_address_1": {
+      "type": "string",
+      "description": "The shipping address",
+      "maxLength": 50
+    },
+    "ship_address_2": {
+      "type": "string",
+      "description": "The shipping address",
+      "maxLength": 50
+    },
+    "ship_city": {
+      "type": "string",
+      "description": "The shipping city",
+      "maxLength": 50
+    },
+    "ship_state": {
+      "type": "string",
+      "description": "The shipping state",
+      "maxLength": 2
+    },
+    "ship_zip": {
+      "type": "string",
+      "description": "The shipping zip code",
+      "maxLength": 10
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def3": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def4": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def5": {
+      "type": "string",
+      "description": "User defined",
+      "maxLength": 50
+    },
+    "user_def6": {
+      "type": "integer",
+      "description": "User defined check box",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "user_def7": {
+      "type": "integer",
+      "description": "User defined check box",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "user_def8": {
+      "type": "integer",
+      "description": "User defined check box",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "user_def9": {
+      "type": "integer",
+      "description": "User defined check box",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "contact_1": {
+      "type": "string",
+      "description": "The name of a contact person",
+      "maxLength": 30
+    },
+    "contact_2": {
+      "type": "string",
+      "description": "The name of a contact person",
+      "maxLength": 30
+    },
+    "contact_3": {
+      "type": "string",
+      "description": "The name of a contact person",
+      "maxLength": 30
+    },
+    "contact_1_desc": {
+      "type": "string",
+      "description": "Enter a description for the contact person",
+      "maxLength": 20
+    },
+    "contact_2_desc": {
+      "type": "string",
+      "description": "Enter a description for the contact person",
+      "maxLength": 20
+    },
+    "contact_3_desc": {
+      "type": "string",
+      "description": "Enter a description for the contact person",
+      "maxLength": 20
+    },
+    "phone_1": {
+      "type": "string",
+      "description": "Enter a telephone number for the contact",
+      "maxLength": 14
+    },
+    "phone_2": {
+      "type": "string",
+      "description": "Enter a telephone number for the contact",
+      "maxLength": 14
+    },
+    "phone_3": {
+      "type": "string",
+      "description": "Enter a telephone number for the contact",
+      "maxLength": 14
+    },
+    "phone_ext_1": {
+      "type": "string",
+      "description": "The telephone extension",
+      "maxLength": 6
+    },
+    "phone_ext_2": {
+      "type": "string",
+      "description": "The telephone extension",
+      "maxLength": 6
+    },
+    "phone_ext_3": {
+      "type": "string",
+      "description": "The telephone extension",
+      "maxLength": 6
+    },
+    "fax_1": {
+      "type": "string",
+      "description": "The fax number as dialed (use 1 + area code for long distance, exclude area code for local)",
+      "maxLength": 14
+    },
+    "fax_2": {
+      "type": "string",
+      "description": "The fax number as dialed (use 1 + area code for long distance, exclude area code for local)",
+      "maxLength": 14
+    },
+    "fax_3": {
+      "type": "string",
+      "description": "The fax number as dialed (use 1 + area code for long distance, exclude area code for local)",
+      "maxLength": 14
+    },
+    "cell_1": {
+      "type": "string",
+      "description": "The cell phone number for first contact",
+      "maxLength": 14
+    },
+    "cell_2": {
+      "type": "string",
+      "description": "The cell phone number for second contact",
+      "maxLength": 14
+    },
+    "cell_3": {
+      "type": "string",
+      "description": "The cell phone number for third contact",
+      "maxLength": 14
+    },
+    "pager_1": {
+      "type": "string",
+      "description": "The pager number for first contact",
+      "maxLength": 14
+    },
+    "pager_2": {
+      "type": "string",
+      "description": "The pager number for second contact",
+      "maxLength": 14
+    },
+    "pager_3": {
+      "type": "string",
+      "description": "The pager number for third contact",
+      "maxLength": 14
+    },
+    "email_1": {
+      "type": "string",
+      "description": "The email address for first contact",
+      "maxLength": 75
+    },
+    "email_2": {
+      "type": "string",
+      "description": "The email address for second contact",
+      "maxLength": 75
+    },
+    "email_3": {
+      "type": "string",
+      "description": "The email address for third contact",
+      "maxLength": 75
+    },
+    "received": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the lead is received (mm/dd/yyyy)"
+    },
+    "salesperson": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "manager": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "tax_district": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The sales-tax district number",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of the last contact (mm/dd/yyyy)"
+    },
+    "call_back": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date for next call (mm/dd/yyyy)"
+    },
+    "mail_piece": {
+      "type": "string",
+      "description": "The name of the most recent mail piece sent",
+      "maxLength": 30
+    },
+    "date_mailed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the most recent mail piece was sent (mm/dd/yyyy)"
+    },
+    "purchase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of the first purchase (mm/dd/yyyy)"
+    },
+    "reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the client was checked as a reference (mm/dd/yyyy)"
+    },
+    "product": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the product last purchased by the client",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "discount_terms": {
+      "type": "string",
+      "description": "The terms when payment is due to allow a discount (##DY, ##MO, ##TH)",
+      "maxLength": 5
+    },
+    "discount_rate": {
+      "type": "string",
+      "description": "The discount rate (%) for early payment",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "due_terms": {
+      "type": "string",
+      "description": "The terms when payment is due (##DY, ##MO, ##TH)",
+      "maxLength": 5
+    },
+    "finance_rate": {
+      "type": "string",
+      "description": "The finance charge (annual %)",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "source": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the source of the lead",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the type of client",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "status": {
+      "type": "integer",
+      "description": "Select the status of the record",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "mail_list": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the type of mail list",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "area": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the client region",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the size of the client's company",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "contract": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The type of service contract",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "expiration": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the service contract expires (mm/dd/yyyy)"
+    },
+    "discount": {
+      "type": "string",
+      "description": "The client's discount rate (%) on products",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{1,2})?$",
+      "minimum": -99,
+      "maximum": 999
+    },
+    "beginning_balance": {
+      "type": "string",
+      "description": "The client's balance at the beginning of the fiscal year",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "current_balance": {
+      "type": "string",
+      "description": "The client's ending balance",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999999,
+      "maximum": 999999999999
+    },
+    "map_location": {
+      "type": "string",
+      "description": "The map coordinates",
+      "maxLength": 10
+    },
+    "cross_street": {
+      "type": "string",
+      "description": "The name of the nearest cross street",
+      "maxLength": 50
+    },
+    "billing_basis": {
+      "type": "integer",
+      "description": "Part amount to use for mark up",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "po_num": {
+      "type": "string",
+      "description": "The default purchase order number for service invoices",
+      "maxLength": 30
+    },
+    "sales_tax_exempt_num": {
+      "type": "string",
+      "description": "The sales tax exemption number",
+      "maxLength": 15
+    },
+    "reference_2": {
+      "type": "string",
+      "description": "Reference 2 (Formerly: Credit Card #)",
+      "maxLength": 64,
+      "writeOnly": true
+    },
+    "reference_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Reference date (Formerly: Expiration)"
+    },
+    "reference_3": {
+      "type": "string",
+      "description": "Reference 3 (Formerly: Cardholder Name)",
+      "maxLength": 30
+    },
+    "reference_1": {
+      "type": "string",
+      "description": "Reference 1 (Formerly: Credit Card Type)",
+      "maxLength": 30
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "gst_hst_exempt": {
+      "type": "integer",
+      "description": "Select if client is exempt from GST/HST for service billing",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "pst_exempt": {
+      "type": "integer",
+      "description": "Select if client is exempt from PST for service billing",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "never_use_sage_exchange_vault": {
+      "type": "integer",
+      "description": "Select if this client does not want to store credit card or bank account information",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "sps_vault_id": {
+      "type": "string",
+      "description": "",
+      "maxLength": 36
+    },
+    "sps_default_vault_type": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "sps_default_name": {
+      "type": "string",
+      "description": "",
+      "maxLength": 103
+    },
+    "sps_default_middle_initial": {
+      "type": "string",
+      "description": "",
+      "maxLength": 1
+    },
+    "sps_default_last_name": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50,
+      "writeOnly": true
+    },
+    "sps_default_address_1": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_address_2": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_city": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_state": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_zip": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_country": {
+      "type": "string",
+      "description": "",
+      "maxLength": 50
+    },
+    "sps_default_email": {
+      "type": "string",
+      "description": "",
+      "maxLength": 256
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "inactive": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "statement_email": {
+      "type": "string",
+      "description": "The clients's email address to receive statements",
+      "maxLength": 75
+    }
+  },
+  "contacts": {
+    "type": "array",
+    "items": [
+      {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "idnum": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "PARENT_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "client_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "contact_name": {
+              "type": "string",
+              "description": "The contact's name",
+              "maxLength": 50
+            },
+            "job_title": {
+              "type": "string",
+              "description": "The contact's job title",
+              "maxLength": 50
+            },
+            "phone_num": {
+              "type": "string",
+              "description": "The contact's phone number",
+              "maxLength": 14
+            },
+            "extension": {
+              "type": "string",
+              "description": "The contact's phone extension",
+              "maxLength": 6
+            },
+            "email": {
+              "type": "string",
+              "description": "The contact's email address",
+              "maxLength": 75
+            },
+            "cell_phone_num": {
+              "type": "string",
+              "description": "The contact's cellular phone number",
+              "maxLength": 14
+            },
+            "fax_num": {
+              "type": "string",
+              "description": "The contact's fax number",
+              "maxLength": 14
+            },
+            "other_num": {
+              "type": "string",
+              "description": "The contact's other phone number",
+              "maxLength": 14
+            },
+            "other_description": {
+              "type": "string",
+              "description": "Enter a description for the contact's other phone number",
+              "maxLength": 50
+            },
+            "notes": {
+              "type": "string",
+              "description": "Enter notes for the contact"
+            },
+            "line_reference": {
+              "type": "string",
+              "description": "",
+              "maxLength": 32
+            },
+            "outllook_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 32
+            },
+            "unique_contact_for_outlook": {
+              "type": "string",
+              "description": "",
+              "maxLength": 1
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "PARENT_idnum",
+            "client_id",
+            "line_num",
+            "contact_name"
+          ]
+        }
+      }
+    ]
+  },
+  "required": [
+    "idnum",
+    "client_id",
+    "short_name",
+    "client_name"
+  ]
+}

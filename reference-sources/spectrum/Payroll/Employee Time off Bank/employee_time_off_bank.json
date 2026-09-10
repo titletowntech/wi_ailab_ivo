@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/TimeOffBankLog/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Entity_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "ENTITY CODE"
+    },
+    "Pay_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "TIME OFF PAY TYPE e.g. V, H, or S"
+    },
+    "Effective_Date": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "TIME OFF LOG EFFECTIVE DATE"
+    },
+    "Internal_Key": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "UNIQUE INTERNAL ID"
+    },
+    "Control_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": "VAC/HOL/SICK CONTROL CODE"
+    },
+    "Transaction_Hours": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TRANSACTION HOURS"
+    },
+    "Earned_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "EARNED FLAG"
+    },
+    "Check_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6,
+      "description": "PAYROLL CHECK NUMBER"
+    },
+    "Check_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "PR CHECK TYPE (R)egular, (M)anual,(V)oid"
+    },
+    "Adjustment_Reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50,
+      "description": "ADJUSTMENT REASON"
+    },
+    "Created_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "CREATE DATE"
+    },
+    "Created_Time": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": "CREATE TIME"
+    },
+    "Created_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": "CREATED BY OPERATOR"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Entity_Code",
+    "Pay_Type",
+    "Effective_Date",
+    "Internal_Key"
+  ]
+}

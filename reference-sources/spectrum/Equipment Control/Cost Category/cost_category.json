@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/cost_categories/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Cost_Category_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE COST CATEGORY CODE"
+    },
+    "Cost_Category_Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE COST CATEGORY DESCRIPTION"
+    },
+    "Cost_Category_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE COST CATEGORY TYPE (1-7)"
+    },
+    "GL_Debit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE DEFAULT G/L DEBIT ACCOUNT FOR THIS COST CATEGORY"
+    },
+    "GL_Entry_Number": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE GL JOURNAL ENTRY NUMBER"
+    },
+    "Cat_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER FOR EQUIPMENT COST CATEGORY"
+    },
+    "Component_Group": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE COMPONENT GROUP"
+    },
+    "Data_Entry": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'W' WORK ORDER REQUIRED, 'O' OPTIONAL, 'N' NONE"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'A' ACTIVE, 'I' INACTIVE"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Cost_Category_Code"
+  ]
+}

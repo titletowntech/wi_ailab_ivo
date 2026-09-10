@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/subcontract/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SUBCONTRACT NUMBER"
+    },
+    "Contract_Type": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CONTRACT TYPE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Comment_1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER COMMENTS 1"
+    },
+    "Comment_2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER COMMENTS 2"
+    },
+    "Original_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL CONTRACT AMOUNT"
+    },
+    "Current_Bill_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Current_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Discount_Taken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Current_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retention_Billed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retention_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retention_Discount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retention_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Total_Billed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Total_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Total_Discount_Taken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Total_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retention_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Date_Issued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Contact_Person": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Default_Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Default_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Next_Payment_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Unit_Price_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Trade_Service": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "Deselect_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Sent_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Date_Issued_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": ""
+    },
+    "Date_Issued_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "Pay_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Pay_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Pay_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Disc_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Disc_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Disc_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Disc_Perc": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Pay_When_Paid": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Subcontract_Phase_Details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/Subcontract_Phase_Details/cache.json",
+        "type": "object",
+        "properties": {
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE JOB PHASE CODE (UP TO 12 NUMBERS)"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COST TYPE CODE (ONE LETTER OR NUMBER)"
+          },
+          "Bid_Item_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE REVENUE BID ITEM NUMBER"
+          },
+          "Bill_Description": {
+            "type": "string",
+            "maxLength": 25,
+            "description": "ENTER THE BILLING DESCRIPTION FOR THIS PHASE"
+          },
+          "Unit_Of_Measure": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE UNITS OF MEASURE FOR THE QUANTITY.  EXAMPLES ARE: LF, YDS, FT"
+          },
+          "Unit_Price": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "ENTER THE UNIT PRICE FOR THIS PHASE"
+          },
+          "Original_Contract_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE ORIGINAL CONTRACT QUANTITY FOR THIS PHASE"
+          },
+          "Original_Contract_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE ORIGINAL CONTRACT AMOUNT FOR THIS PHASE"
+          },
+          "Quantity_Billed_To_Date": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Amount_Billed_To_Date": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": ""
+          },
+          "Retention_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "Qty_Upd_Over": {
+            "type": "string",
+            "maxLength": 1,
+            "description": ""
+          },
+          "id": {
+            "type": "integer",
+            "description": ""
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Phase_Code",
+          "Cost_Type",
+          "Bid_Item_Number",
+          "Bill_Description",
+          "Unit_Of_Measure",
+          "Unit_Price",
+          "Original_Contract_Quantity",
+          "Original_Contract_Amount",
+          "Quantity_Billed_To_Date",
+          "Amount_Billed_To_Date",
+          "Retention_Flag",
+          "Qty_Upd_Over",
+          "id"
+        ]
+      }
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": ""
+          },
+          "Alpha_Field": {
+            "type": "string",
+            "maxLength": 20,
+            "description": ""
+          },
+          "Date_Field": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": ""
+          },
+          "Amount_Field": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,14}(?:.[0-9]{0,6})?$",
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Subcontract_Number"
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/CR_CHNG_REQ_HDR_MC/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Change_Request_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE CHANGE REQUEST NUMBER"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER THE DESCRIPTION FOR THIS CHANGE REQUEST"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE STATUS FOR THIS CHANGE REQUEST"
+    },
+    "Proceed_Submitted_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE NOTICE TO PROCEED SUBMITTED DATE FOR THIS CHANGE REQUEST"
+    },
+    "Proceed_Received_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE NOTICE TO PROCEED RECEIVED DATE FOR THIS CHANGE REQUEST"
+    },
+    "Rough_Order_Of_Magnitude": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ROUGH ORDER OF MAGNITUDE OF THIS CHANGE REQUEST"
+    },
+    "Quotation_Submitted_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE QUOTATION SUBMITTED DATE FOR THIS CHANGE REQUEST"
+    },
+    "Quotation_Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE QUOTATION DUE DATE FOR THIS CHANGE REQUEST"
+    },
+    "Submitted_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE SUBMITTED AMOUNT OF THIS CHANGE REQUEST"
+    },
+    "Approved_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE APPROVED DATE FOR THIS CHANGE REQUEST"
+    },
+    "Approved_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE APPROVED AMOUNT FOR THIS CHANGE REQUEST"
+    },
+    "Requested_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE REQUESTED DAYS FOR THIS CHANGE REQUEST"
+    },
+    "Approved_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE APPROVED DAYS FOR THIS CHANGE REQUEST"
+    },
+    "Change_Order_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE CHANGE ORDER NUMBER ASSOCIATED WITH THIS CHANGE REQUEST"
+    },
+    "Cost_Reimbursable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK IF THIS CHANGE REQUEST IS COST REIMBURSABLE, ELSE LEAVE BLANK"
+    },
+    "Bill_Update_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "HAS THIS CHANGE REQUEST UPDATED THE BILL (Y/N) ?"
+    },
+    "Revenue_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL REVENUE AMOUNT FOR THIS CHANGE REQUEST"
+    },
+    "Profit_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PROFIT AMOUNT FOR THIS CHANGE REQUEST"
+    },
+    "AP_Update_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "HAS THIS CHANGE REQUEST BEEN UPDATED IN AP (Y/N)?"
+    },
+    "Origination_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ORIGINATION DATE FOR THIS CHANGE REQUEST"
+    },
+    "Total_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL COST FOR THIS CHANGE REQUEST"
+    },
+    "Billed_As_CR_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' IF THIS CHANGE REQUEST WAS POSTED TO DRAW BEFORE ASSIGNED TO CO"
+    },
+    "Application_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Approved_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR THAT THIS APPROVED DATE FALLS ON"
+    },
+    "Approved_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD THAT THIS APPROVED DATE FALLS ON"
+    },
+    "Billing_Adjustment": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "BILLING ADJUSTMENT"
+    },
+    "Fee_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "FEE PERCENT"
+    },
+    "Fee_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "FEE AMOUNT"
+    },
+    "TransactionId": {
+      "type": "string",
+      "maxLength": 36,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    },
+    "Change_Request_Details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/CR_CHNG_REQ_CON_DET_MC/cache.json",
+        "type": "object",
+        "properties": {
+          "Sequence_Number": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "SYSTEM MAINTAINED SEQUENCE NUMBER"
+          },
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)"
+          },
+          "Change_Request_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE QUANTITY THIS CHANGE REQUEST WILL ADD TO THIS PHASE"
+          },
+          "Change_Request_Hours": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE HOURS THIS CHANGE REQUEST WILL ADD TO THIS PHASE"
+          },
+          "Change_Request_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE DOLLAR AMOUNT THIS CHANGE REQUEST WILL ADD TO THIS PHASE"
+          },
+          "Subcontractor_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE SUBCONTRACTOR CODE FOR THIS CHANGE REQUEST"
+          },
+          "Subcontract_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "SUBCONTRACT NUMBER"
+          },
+          "Bid_Item_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE REVENUE BID ITEM NUMBER"
+          },
+          "Sub_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CHANGE REQUEST AMOUNT FOR THIS SUBCONTRACTOR PROPOSAL"
+          },
+          "Add_On_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ADD ON FLAG"
+          },
+          "Comments": {
+            "type": "string",
+            "maxLength": 250,
+            "description": "COMMENTS"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Sequence_Number",
+          "Phase_Code",
+          "Cost_Type",
+          "Change_Request_Quantity",
+          "Change_Request_Hours",
+          "Change_Request_Amount",
+          "Subcontractor_Code",
+          "Subcontract_Number",
+          "Bid_Item_Code",
+          "Sub_Amount",
+          "Add_On_Flag",
+          "Comments"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Job_Number",
+    "Change_Request_Number",
+    "Description",
+    "Status",
+    "Rough_Order_Of_Magnitude",
+    "Submitted_Amount",
+    "Approved_Amount",
+    "Requested_Days",
+    "Approved_Days",
+    "Change_Order_Number",
+    "Cost_Reimbursable_Flag",
+    "Bill_Update_Flag",
+    "Revenue_Amount",
+    "Profit_Amount",
+    "AP_Update_Flag",
+    "Total_Cost",
+    "Billed_As_CR_Flag",
+    "Application_Number",
+    "Approved_Date_Year",
+    "Approved_Date_Period",
+    "Billing_Adjustment",
+    "Fee_Percent",
+    "Fee_Amount",
+    "TransactionId"
+  ]
+}

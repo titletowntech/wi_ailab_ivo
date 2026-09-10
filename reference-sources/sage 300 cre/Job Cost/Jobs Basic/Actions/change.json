@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/jc/v1/object/jobs_basic/change.json",
+  "title": "Jobs Basic Change Action Schema",
+  "description": "Schema for updating an existing Jobs Basic record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

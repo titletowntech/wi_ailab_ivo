@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/cost_centers/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Cost_Center_Code": {
+      "type": "string",
+      "description": "Cost Center Code"
+    },
+    "Cost_Center_Description": {
+      "type": "string",
+      "description": "Cost Center Description"
+    },
+    "Status": {
+      "type": "string",
+      "description": "Cost Center Status"
+    },
+    "Address_1": {
+      "type": "string",
+      "description": ""
+    },
+    "Address_2": {
+      "type": "string",
+      "description": ""
+    },
+    "City": {
+      "type": "string",
+      "description": ""
+    },
+    "State": {
+      "type": "string",
+      "description": ""
+    },
+    "Zip": {
+      "type": "string",
+      "description": ""
+    },
+    "Phone": {
+      "type": "string",
+      "description": ""
+    },
+    "Contact": {
+      "type": "string",
+      "description": ""
+    },
+    "Fax": {
+      "type": "string",
+      "description": ""
+    },
+    "Cost_Center_ID": {
+      "type": "string",
+      "description": ""
+    },
+    "Web_Address": {
+      "type": "string",
+      "description": ""
+    },
+    "Email": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_Address_1": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_Address_2": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_City": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_State": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_Zip": {
+      "type": "string",
+      "description": ""
+    },
+    "Ship_Phone": {
+      "type": "string",
+      "description": ""
+    },
+    "User_Defined1": {
+      "type": "string",
+      "description": ""
+    },
+    "User_Defined2": {
+      "type": "string",
+      "description": ""
+    },
+    "User_Defined3": {
+      "type": "string",
+      "description": ""
+    },
+    "User_Defined4": {
+      "type": "string",
+      "description": ""
+    },
+    "User_Defined5": {
+      "type": "string",
+      "description": ""
+    },
+    "AP_Bank_Account": {
+      "type": "string",
+      "description": ""
+    },
+    "PR_Bank_Account": {
+      "type": "string",
+      "description": ""
+    },
+    "Entity_Code": {
+      "type": "string",
+      "description": ""
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "CD_Bank_Account": {
+      "type": "string",
+      "description": ""
+    },
+    "ePay_Bank_Account": {
+      "type": "string",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  }
+}

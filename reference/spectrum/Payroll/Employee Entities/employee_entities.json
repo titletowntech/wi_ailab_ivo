@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/employee_entity/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Entity_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTITY CODE"
+    },
+    "Override_CC": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "OVERRIDE ENTITY COST CENTER"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS: 'A'uthorized, 'I'nactive"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Entity_Code"
+  ]
+}

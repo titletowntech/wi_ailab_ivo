@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/equipment-rentals/cache.json",
+  "type": "object",
+  "properties": {
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "max-length": 10
+    },
+    "Rented": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Rental_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Return_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rental_company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rental_rate_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rate_per_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rental_Rate_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rate_per_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rental_Rate_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rate_per_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rates_quoted_on": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

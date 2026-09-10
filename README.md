@@ -7,6 +7,10 @@ There are two separate workflows:
 - [Load or update an IVO reference](docs/loading-ivo-references.md) when IVO publishes an object contract. The approved result under `reference/ivo/` is static between IVO contract changes.
 - [Run a customer mapping](docs/running-customer-mapping.md) for each onboarding. It consumes the reference and never regenerates it.
 
+Once a customer's mappings are approved, flows are authored into the customer workspace. See [Object relationships](docs/object-relationships.md) for how IVO objects relate and which flows can share a cache trigger, [Service composition](docs/service-composition.md) for how App Xchange services are split and sequenced per customer, and the `appxchange-flow-design` skill under `.claude/skills/` for the flow authoring procedure and canonical flow JSON contract.
+
+IVO is connected to five ERPs through App Xchange — Vista, Spectrum, Foundation, Sage 100 Contractor, and Sage 300 CRE. Only Vista and Spectrum have captured reference material under `reference/`; documentation for the others is still being gathered.
+
 The normal onboarding process requires:
 
 - the shared IVO object contract under `reference/ivo/`;

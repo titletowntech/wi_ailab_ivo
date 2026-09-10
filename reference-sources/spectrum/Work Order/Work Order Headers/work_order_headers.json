@@ -1,0 +1,395 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/WoHeader/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "WO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WORK ORDER NUMBER"
+    },
+    "WO_Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PROPOSED WORK ORDER JOB/SITE NUMBER"
+    },
+    "Bill_Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WORK ORDER CUSTOMER (BILLING) CODE"
+    },
+    "Hold_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE WORK ORDER STATUS: 'O'PEN, 'H'OLD, 'C'OMPLETE OR 'F'INISHED"
+    },
+    "Print_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE WORK ORDER PRINT STATUS, Y-PRINTED OR N-UNPRINTED"
+    },
+    "WO_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "WORK ORDER STATUS CHANGE DATE (YYYYMMDD) 5 - WAR DEF DATE"
+    },
+    "WO_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "WORK ORDER STATUS CHANGE DATE (YYYYMMDD) 5 - WAR DEF DATE"
+    },
+    "WO_Date_List3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "WORK ORDER STATUS CHANGE DATE (YYYYMMDD) 5 - WAR DEF DATE"
+    },
+    "WO_Date_List4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "WORK ORDER STATUS CHANGE DATE (YYYYMMDD) 5 - WAR DEF DATE"
+    },
+    "Time_Entered": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE TIME OF THIS WORK ORDER ENTRY"
+    },
+    "Bill_Address1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE WORK ORDER BILLING ADDRESS (NOT USED)"
+    },
+    "Bill_Address2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE WORK ORDER BILLING ADDRESS (NOT USED)"
+    },
+    "Bill_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "PROPOSED WO CITY 1 - SITE/JOB, 2 - BILLTO/CUST"
+    },
+    "Bill_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE WORK ORDER BILLING STATE (NOT USED)"
+    },
+    "Bill_Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PROPOSED WO ZIP CODE 1 - SITE/JOB, 2 - BILLTO/CUST"
+    },
+    "Bill_Contract": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE WORK ORDER BILLING CONTACT"
+    },
+    "WO_Phone_List1": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WORK ORDER PHONE 1 - OWNER, 2 - JOB/SITE PHONE, 3 - OTHER"
+    },
+    "WO_Phone_List2": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WORK ORDER PHONE 1 - OWNER, 2 - JOB/SITE PHONE, 3 - OTHER"
+    },
+    "WO_Phone_List3": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WORK ORDER PHONE 1 - OWNER, 2 - JOB/SITE PHONE, 3 - OTHER"
+    },
+    "WO_Phone_List4": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WORK ORDER PHONE 1 - OWNER, 2 - JOB/SITE PHONE, 3 - OTHER"
+    },
+    "WO_Phone_List5": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "WORK ORDER PHONE 1 - OWNER, 2 - JOB/SITE PHONE, 3 - OTHER"
+    },
+    "Price_Level": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PRICING LEVEL FOR THIS WORK ORDER LABOR (1 - 5)"
+    },
+    "AR_Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "A/R TERMS CODE FOR THIS PROPOSED WORK ORDER"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE FOR THIS WORK ORDER"
+    },
+    "Workman_List1": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "ENTER THE WORK ORDER WORKMAN 1-PROJECT MANAGER, 2-ALTERNATE  CODE"
+    },
+    "Workman_List2": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "ENTER THE WORK ORDER WORKMAN 1-PROJECT MANAGER, 2-ALTERNATE  CODE"
+    },
+    "WO_Job_Division": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "PROPOSED WORK ORDER JOB TYPE (DIVISION)"
+    },
+    "Estimated_Arrive_Time": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER ESTIMATED TIME OF ARRIVAL OR ANY ASSOCIATED COMMENTS"
+    },
+    "Total_Quote_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PROPOSED WO QUOTED AMOUNT"
+    },
+    "WO_Reference_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WILL THIS WORK ORDER REFERENCE JOB COST OR SITE?"
+    },
+    "Time_Assigned": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE TIME THIS WORK ORDER WAS ASSIGNED"
+    },
+    "Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL TAX AMOUNT FOR THIS WORK ORDER"
+    },
+    "Material_Price_Level": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PRICING LEVEL FOR THIS WORK ORDER MATERIAL (1 - 5)"
+    },
+    "Complete_Time": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THIS WORK ORDER'S FINISHED TIME"
+    },
+    "Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THIS WORK ORDER'S FINISHED DATE"
+    },
+    "AR_Invoice_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "A/R INVOICE CREATED FROM THIS WORK ORDER"
+    },
+    "Customer_PO_Number": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "CUSTOMER'S PO NUMBER"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CONTRACT NUMBER"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS WORK ORDER TAXABLE ?  (Y OR N)"
+    },
+    "Projected_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL PROJECTED HOURS FOR ENTIRE WORK ORDER VISIT"
+    },
+    "Warranty_Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL TAX AMOUNT FOR THE WARRANTY ITEMS"
+    },
+    "Sequence": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SYSTEM MAINTAINED IC HISTORY FILE SEQUENCE"
+    },
+    "Posted_From_SC_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "FLAG = 'S' IF WO WAS POSTED FROM SERVICE CONTRACT"
+    },
+    "Estimated_Complete_Time": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE ESTIMATED COMPLETE TIME FOR THIS WORK ORDER"
+    },
+    "Scheduled_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE SCHEDULED START DATE FOR THIS WORK ORDER"
+    },
+    "Scheduled_Start_Time": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE SCHEDULED START TIME FOR THIS WORK ORDER"
+    },
+    "Priority_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE PRIORITY FOR THIS WORK ORDER"
+    },
+    "Dispatch_Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DISPATCH STATUS CODE FOR THIS WORK ORDER"
+    },
+    "Summary_Description": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "SHOULD THE WO SUMMARY DISPLAY LONG OR SHORT DIPSATCH DESCRIPTIONS?"
+    },
+    "Price_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT FIXED PRICE OR T&M"
+    },
+    "Lead_Source": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE LEAD SOURCE CODE"
+    },
+    "Sales_Person": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE SALESPERSON CODE"
+    },
+    "Taken_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE TAKEN BY OPERATOR CODE"
+    },
+    "Zone": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE ZONE"
+    },
+    "Arrival_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ARRIVAL DATE FOR THIS WORK ORDER"
+    },
+    "Arrival_Time": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE ARRIVAL TIME FOR THIS WORK ORDER"
+    },
+    "Warranty_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE THAT WILL DECIDE IF THIS WO IS COVERED BY WARRANTY"
+    },
+    "Added_Stamp": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "SYSTEM DATETIME STAMP FOR WHEN RECORD WAS ADDED (YYYYMMDDHHMMSS)"
+    },
+    "Original_Invoice": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ORIGINAL INVOICE NUMBER"
+    },
+    "New_CreditMemo": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "NEW CREDIT MEMO CREATED FROM REVERSE"
+    },
+    "WO_Case_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WO CASE TYPE"
+    },
+    "WO_Date_List1_Year": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "FOUR DIGIT FISCAL YEAR BASED ON WO_DATE_LIST1"
+    },
+    "WO_Date_List1_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "TWO DIGIT FISCAL PERIOD BASED ON WO_DATE_LIST1"
+    },
+    "Markup_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "MARKUP CODE"
+    },
+    "Customer_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CUSTOMER JOB"
+    },
+    "GL_Department": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE WORK ORDER GL DEPARTMENT"
+    },
+    "ERO_Markup": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,2})?$",
+      "description": "EARNED REVENUE MARKUP PERCENT"
+    },
+    "Override_ERO_Markup": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "OVERRIDE COMPANY-WIDE EARNED REVENUE MARKUP"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WO COST CENTER CODE"
+    },
+    "Alternate_Address": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y TO USE ALTERNATE BILLING ADDRESS"
+    },
+    "Billto_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "BILL-TO CODE"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "WO_Number"
+  ]
+}

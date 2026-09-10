@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/employee_positions/cache.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "position_id": {
+      "type": "integer",
+      "description": "Enter a position number",
+      "minimum": 1,
+      "maximum": 999999
+    },
+    "description": {
+      "type": "string",
+      "description": "Enter a description of the position",
+      "maxLength": 50
+    },
+    "job_wages": {
+      "type": "integer",
+      "description": "The posting account for Job Wages",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "equip_shop_wages": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The posting account for Equipment Wages",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "other_wages": {
+      "type": "integer",
+      "description": "The posting account for Other Wages",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "department": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The department number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "notes": {
+      "type": "string",
+      "description": "Enter notes for this row"
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "eeoc_job_category": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The EEOC Job Category (for EEO-1 reporting)",
+      "minimum": 0,
+      "maximum": 10
+    }
+  },
+  "required": [
+    "idnum",
+    "position_id",
+    "description",
+    "job_wages",
+    "other_wages",
+    "notes"
+  ]
+}

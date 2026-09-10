@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/VendorCustomFields/cache.json",
+  "type": "object",
+  "properties": {
+    "Vendor": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Vendor_Cstm_Flds_Fil_Lnks": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Vendor_Custom_Fields_Nots": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    }
+  },
+  "required": [
+    "Vendor"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/hilti/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "ID": {
+      "type": "integer",
+      "description": "Record ID"
+    },
+    "Destination_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Destination type (Job or Yard)"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "THE TRANSACTION EQUIPMENT CODE"
+    },
+    "Transaction_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE TRANSACTION CODE"
+    },
+    "Yard_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE YARD IN WHICH THIS EMPLOYEE IS AUTHORIZED"
+    },
+    "Job_Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE FOR THIS JOB"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PHASE"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE"
+    },
+    "Billing_Period": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE EXPECTED BILLING PERIOD: 'D'AILY, 'W'EEKLY OR 'M'ONTHLY"
+    },
+    "Requisition_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE REQUISITION DATE"
+    },
+    "Requisition_Time": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "THE REQUISITION TIME"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "APPROVAL STATUS ('A'pproved, 'E'rror,'' - not validated"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "ID"
+  ]
+}

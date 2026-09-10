@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/EmployeeState/cache.json",
+  "type": "object",
+  "properties": {
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee": {
+      "type": "string"
+    },
+    "Employee_State_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee_State_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Filing_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Tax_Code": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Misc_Tax_Code_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Tax_Code_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "MTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Personal_Exemptions": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Prior_Month_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Prior_Month_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Overtime_Hour": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Prior_Year_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "QTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Spouses_Soc_Sec_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Use_Fed_Status__Exemp": {
+      "type": "boolean"
+    },
+    "Work_State": {
+      "type": "string"
+    },
+    "YTD_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "YTD_Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Employee",
+    "Work_State"
+  ]
+}

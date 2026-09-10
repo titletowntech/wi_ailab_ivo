@@ -1,0 +1,796 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/jobs/cache.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "job_id": {
+      "type": "integer",
+      "description": "Enter a job number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "job_name": {
+      "type": "string",
+      "description": "The full job name"
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Enter a brief name for sorting/finding the job"
+    },
+    "client": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The client number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "contact": {
+      "type": "string",
+      "description": "The name of the contact person"
+    },
+    "address_1": {
+      "type": "string",
+      "description": "The address"
+    },
+    "address_2": {
+      "type": "string",
+      "description": "The address"
+    },
+    "city": {
+      "type": "string",
+      "description": "The city"
+    },
+    "state": {
+      "type": "string",
+      "description": "The State abbreviation"
+    },
+    "zip": {
+      "type": "string",
+      "description": "The zip code"
+    },
+    "phone_num": {
+      "type": "string",
+      "description": "The telephone number"
+    },
+    "fax_num": {
+      "type": "string",
+      "description": "The fax number"
+    },
+    "architect": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The vendor number of the architect or engineer",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "lender": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The vendor number of the lending institution",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "supervisor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number of the job supervisor",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "salesperson": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number of the job salesperson",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "estimator": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The employee number of the job estimator",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "user_def1": {
+      "type": "string",
+      "description": "User defined"
+    },
+    "user_def2": {
+      "type": "string",
+      "description": "User defined"
+    },
+    "payroll_locale": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The local payroll-tax district number",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "sales_tax_district": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The sales-tax district number",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "income_account": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default ledger account number for posting",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "department_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default department number for tracking income and expense",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "discount_terms": {
+      "type": "string",
+      "description": "The terms when payment is due to allow a discount (##DY, ##MO, ##TH)"
+    },
+    "due_terms": {
+      "type": "string",
+      "description": "The terms when payment is due (##DY, ##MO, ##TH)"
+    },
+    "discount_rate": {
+      "type": "string",
+      "description": "The discount rate (%) for early payment",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "finance_rate": {
+      "type": "string",
+      "description": "The annual finance rate (%)",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "retainage_rate": {
+      "type": "string",
+      "description": "The rate (%)",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "contract_amount": {
+      "type": "string",
+      "description": "The amount of the original contract",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "beginning_balance": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "current_balance": {
+      "type": "string",
+      "description": "",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": -99999999,
+      "maximum": 999999999
+    },
+    "bid_opening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when a bid must be submitted (mm/dd/yyyy)"
+    },
+    "plans_received": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when plans for the job are received (mm/dd/yyyy)"
+    },
+    "bid_completed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the bid is completed (mm/dd/yyyy)"
+    },
+    "contract_signed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date of the contract (mm/dd/yyyy)"
+    },
+    "pre_lien_filed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the pre-lien was filed (mm/dd/yyyy)"
+    },
+    "project_started": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The starting date of the contract (mm/dd/yyyy)"
+    },
+    "project_completed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The completion date of the contract (mm/dd/yyyy)"
+    },
+    "lien_filed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the lien was filed (mm/dd/yyyy)"
+    },
+    "lien_released": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The date when the lien was released (mm/dd/yyyy)"
+    },
+    "job_type_id": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the job type",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "job_status": {
+      "type": "integer",
+      "description": "Job status (1-Bid, 2-Refused, 3-Contract, 4-Current, 5-Complete, 6-Closed)",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "post_to_wip": {
+      "type": "integer",
+      "description": "Select if job posts to WIP asset account",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "certified_payroll": {
+      "type": "integer",
+      "description": "Select if job requires certified payroll",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "contract_num": {
+      "type": "string",
+      "description": "The customer's contract number"
+    },
+    "client_po_num": {
+      "type": "string",
+      "description": "The customer's purchase order number"
+    },
+    "image_file": {
+      "type": "string",
+      "description": "The path of the bitmap"
+    },
+    "material": {
+      "type": "string",
+      "description": ""
+    },
+    "labor": {
+      "type": "string",
+      "description": ""
+    },
+    "equipment": {
+      "type": "string",
+      "description": ""
+    },
+    "subcontract": {
+      "type": "string",
+      "description": ""
+    },
+    "other": {
+      "type": "string",
+      "description": ""
+    },
+    "user_def_type_6": {
+      "type": "string",
+      "description": ""
+    },
+    "user_def_type_7": {
+      "type": "string",
+      "description": ""
+    },
+    "user_def_type_8": {
+      "type": "string",
+      "description": ""
+    },
+    "user_def_type_9": {
+      "type": "string",
+      "description": ""
+    },
+    "notes": {
+      "type": "string",
+      "description": ""
+    },
+    "export_data": {
+      "type": "string",
+      "description": ""
+    },
+    "color_scheme": {
+      "type": "string",
+      "description": "The color scheme"
+    },
+    "lot_premium": {
+      "type": "string",
+      "description": "The lot premium amount",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "est_sale_price": {
+      "type": "string",
+      "description": "The planned sales price",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "actual_sale_price": {
+      "type": "string",
+      "description": "The final sales price",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 999999999
+    },
+    "estimated_closing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The estimated closing sales date"
+    },
+    "actual_closing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The actual closing sales date"
+    },
+    "lot_number": {
+      "type": "string",
+      "description": "The lot number"
+    },
+    "model_name": {
+      "type": "string",
+      "description": "The model type or name"
+    },
+    "square_feet": {
+      "type": "integer",
+      "description": "The square footage",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "job_access_list": {
+      "type": "string",
+      "description": "Use short cut button to edit list of users with security access to job"
+    },
+    "gst_hst_exempt": {
+      "type": "integer",
+      "description": "Select if job is exempt from GST/HST for billing",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "pst_exempt": {
+      "type": "integer",
+      "description": "Select if job is exempt from PST for billing",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "job_type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Select the job type",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "department": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default department number for tracking income and expense",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "inactive": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "requires_federal_paid_sick_leave": {
+      "type": "integer",
+      "description": "Select if this is a federal job that requires accrual of paid sick leave",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "statement_email": {
+      "type": "string",
+      "description": "The job's email address to receive statements"
+    },
+    "skip_missing_vendor_certs_check": {
+      "type": "integer",
+      "description": "Select if you do not want to check this job for missing vendor certificates",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "phases": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "job_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "job_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "phase_num": {
+              "type": "integer",
+              "description": "Enter a phase number",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "description": {
+              "type": "string",
+              "description": "Enter a description of the phase"
+            },
+            "billing_amount": {
+              "type": "string",
+              "description": "The billable amount per phase (for invoicing by phase)",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "retention": {
+              "type": "string",
+              "description": "The rate (%)",
+              "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,4})?$",
+              "minimum": 0,
+              "maximum": 99
+            },
+            "model": {
+              "type": "string",
+              "description": "The type of model"
+            },
+            "unit": {
+              "type": "string",
+              "description": "The unit of measure (sqft, cuyds,etc.)"
+            },
+            "quantity": {
+              "type": "string",
+              "description": "The total measurement of the phase (total sqft, total cuyds, etc.)",
+              "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{1,2})?$",
+              "minimum": -99999999,
+              "maximum": 999999999
+            },
+            "notes": {
+              "type": "string",
+              "description": "Enter notes for this row"
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            }
+          },
+          "required": [
+            "idnum",
+            "job_idnum",
+            "job_id",
+            "phase_num",
+            "description",
+            "billing_amount",
+            "retention",
+            "model",
+            "unit",
+            "quantity",
+            "notes"
+          ]
+        }
+      ]
+    },
+    "contacts": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "job_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "job_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 9999999999
+            },
+            "line_num": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 999999
+            },
+            "contact_name": {
+              "type": "string",
+              "description": "The contact's name"
+            },
+            "job_title": {
+              "type": "string",
+              "description": "The contact's job title"
+            },
+            "phone_num": {
+              "type": "string",
+              "description": "The contact's phone number"
+            },
+            "extension": {
+              "type": "string",
+              "description": "The contact's phone extension"
+            },
+            "email": {
+              "type": "string",
+              "description": "The contact's email address"
+            },
+            "cell_phone_num": {
+              "type": "string",
+              "description": "The contact's cellular phone number"
+            },
+            "fax_num": {
+              "type": "string",
+              "description": "The contact's fax number"
+            },
+            "other_num": {
+              "type": "string",
+              "description": "The contact's other phone number"
+            },
+            "other_description": {
+              "type": "string",
+              "description": "Enter a description for the contact's other phone number"
+            },
+            "notes": {
+              "type": "string",
+              "description": "Enter notes for the contact"
+            },
+            "line_reference": {
+              "type": "string",
+              "description": ""
+            },
+            "outlook_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "unique_contact_for_outlook": {
+              "type": "string",
+              "description": ""
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            }
+          },
+          "required": [
+            "idnum",
+            "job_idnum",
+            "job_id",
+            "line_num",
+            "contact_name",
+            "job_title",
+            "phone_num",
+            "extension",
+            "email",
+            "cell_phone_num",
+            "fax_num",
+            "other_num",
+            "other_description",
+            "notes",
+            "line_reference",
+            "unique_contact_for_outlook"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "idnum",
+    "job_id",
+    "job_name",
+    "short_name",
+    "contact",
+    "address_1",
+    "address_2",
+    "city",
+    "state",
+    "zip",
+    "phone_num",
+    "fax_num",
+    "user_def1",
+    "user_def2",
+    "discount_terms",
+    "due_terms",
+    "discount_rate",
+    "finance_rate",
+    "retainage_rate",
+    "contract_amount",
+    "beginning_balance",
+    "current_balance",
+    "job_status",
+    "post_to_wip",
+    "certified_payroll",
+    "contract_num",
+    "client_po_num",
+    "image_file",
+    "material",
+    "labor",
+    "equipment",
+    "subcontract",
+    "other",
+    "user_def_type_6",
+    "user_def_type_7",
+    "user_def_type_8",
+    "user_def_type_9",
+    "notes",
+    "export_data",
+    "color_scheme",
+    "lot_premium",
+    "est_sale_price",
+    "actual_sale_price",
+    "lot_number",
+    "model_name",
+    "square_feet",
+    "job_access_list",
+    "gst_hst_exempt",
+    "pst_exempt"
+  ]
+}

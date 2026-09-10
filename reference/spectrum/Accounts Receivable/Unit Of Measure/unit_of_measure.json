@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Unit_Of_Measure": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE UNIT OF MEASURE (UP TO 3 CHARACTERS)"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE UNIT OF MEASURE DESCRIPTION"
+    },
+    "Price_Method_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PRICE METHOD FOR THIS U/M: (T)&M, (C)OST PLUS, (F)IXED OR (U)NIT PRICE"
+    },
+    "Markup": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' TO MARKUP WHEN POSTING TO TIME & MATERIALS, 'N' IF NO MARKUP"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Unit_Of_Measure"
+  ]
+}

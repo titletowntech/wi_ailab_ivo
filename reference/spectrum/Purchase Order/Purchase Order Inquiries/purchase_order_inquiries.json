@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/po_inquires/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PURCHASE ORDER NUMBER"
+    },
+    "Ordered": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Column Line_Extension_List1 FROM PO_INQUIRY_V_MC view"
+    },
+    "Received": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Column Received_Extension FROM PO_INQUIRY_V_MC view"
+    },
+    "Outstanding": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Column Outstanding FROM PO_INQUIRY_V_MC view"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "PO_Number"
+  ]
+}

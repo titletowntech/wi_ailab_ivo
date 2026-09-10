@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/wo/v1/object/work_order_headers/add.json",
+  "title": "Work Order Headers Add Action Schema",
+  "description": "Schema for adding a new Work Order Headers record.",
+  "type": "object",
+  "properties": {}
+}

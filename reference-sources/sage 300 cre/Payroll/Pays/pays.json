@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/pays/cache.json",
+  "type": "object",
+  "properties": {
+    "Pay_ID": {
+      "type": "string"
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "InOut_Pay": {
+      "type": "boolean"
+    },
+    "Salary": {
+      "type": "boolean"
+    },
+    "Units": {
+      "type": "boolean"
+    },
+    "Weighted_Average_OT": {
+      "type": "boolean"
+    },
+    "Straight_Pay": {
+      "type": "boolean"
+    },
+    "Supplemental_Pay": {
+      "type": "boolean"
+    },
+    "Retain_YTD": {
+      "type": "boolean"
+    },
+    "Printed_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Distribute_To_GL": {
+      "type": "boolean"
+    },
+    "Distribute_To_JC": {
+      "type": "boolean"
+    },
+    "Distribute_To_EQ": {
+      "type": "boolean"
+    },
+    "Distribute_to_BL": {
+      "type": "boolean"
+    },
+    "GL_Expense_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Liability_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JC_Category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Include_in_ACA_hours": {
+      "type": "boolean"
+    },
+    "SuperStream_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Factor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Reg_Pay_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "FWH_Exempt": {
+      "type": "boolean"
+    },
+    "FICA_Exempt": {
+      "type": "boolean"
+    },
+    "FUTA_Exempt": {
+      "type": "boolean"
+    },
+    "SWH_Exempt": {
+      "type": "boolean"
+    },
+    "SDI_Exempt": {
+      "type": "boolean"
+    },
+    "SUI_Exempt": {
+      "type": "boolean"
+    },
+    "Local_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_FICA_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_FUTA_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SWH_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SDI_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_SUI_Exempt": {
+      "type": "boolean"
+    },
+    "Emplr_Local_Exempt": {
+      "type": "boolean"
+    },
+    "Deduction_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Pay_ID"
+  ]
+}

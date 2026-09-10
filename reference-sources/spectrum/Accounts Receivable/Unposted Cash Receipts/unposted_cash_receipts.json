@@ -1,0 +1,275 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/cash_receipts/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Transaction_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE TRANSACTION CODE"
+    },
+    "Reference_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE REFERENCE OR CHECK NUMBER FOR THIS TRANSACTION"
+    },
+    "Reference_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE REFERENCE OR CHECK DATE FOR THIS TRANSACTION"
+    },
+    "ABA_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE ABA NUMBER FOR THIS CHECK"
+    },
+    "Transaction_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TRANSACTION AMOUNT"
+    },
+    "Calc_Transaction_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SYSTEM CALCULATED TRANSACTION BALANCE"
+    },
+    "Calc_Transaction_Discount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SYSTEM CALCULATED TRANSACTION DISCOUNT"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE OPEN ITEM JOB TO SELECT FOR, IF ANY - (LEAVE BLANK TO SELECT ALL"
+    },
+    "Update_Flag": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FLAG FOR CR CSH RCPT UPDATE"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE NUMBER"
+    },
+    "Sequence": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SEQUENCE NUMBER FOR DETAIL FILE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BATCH CODE"
+    },
+    "Payer_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "PAYER NAME"
+    },
+    "Misc_Cash_Remark": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "MISCELLANEAOUS CASH REMARK"
+    },
+    "Pre_Pay": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRANSACTION MARKED FOR PRE PAY"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "LOCAL CURRENCY CODE"
+    },
+    "Exchange_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+      "description": "CURRENCY EXCHANGE RATE"
+    },
+    "Local_Tran_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TRANSACTION AMOUNT IN LOCAL CURRENCY"
+    },
+    "Cash_Receipt_Details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/cash_receipt_details/cache.json",
+        "type": "object",
+        "properties": {
+          "Company_Code": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COMPANY CODE"
+          },
+          "Customer_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE CUSTOMER CODE"
+          },
+          "Transaction_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE TRANSACTION CODE"
+          },
+          "Reference_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE REFERENCE OR CHECK NUMBER FOR THIS TRANSACTION"
+          },
+          "Invoice_Reference_Date": {
+            "type": "string",
+            "maxLength": 5,
+            "description": "THE INVOICE REFERENCE DATE"
+          },
+          "Invoice_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE INVOICE NUMBER FOR THIS TRANSACTION"
+          },
+          "Invoice_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ENTER THE INVOICE TYPE (I = INVOICE, C = CREDIT)"
+          },
+          "Unused_Field": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "THIS FIELD NO LONGER USED (3/9/89 DCI/JCH)"
+          },
+          "Discount_Taken": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE DISCOUNT TAKEN FOR THIS TRANSACTION"
+          },
+          "Payment_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE PAYMENT AMOUNT FOR THIS TRANSACTION",
+            "writeOnly": true
+          },
+          "GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "ENTER THE G/L CODE FOR THIS MISC. TRANSACTION"
+          },
+          "Retention_Discount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE RETENTION DISCOUNT TAKEN FOR THIS TRANSACTION"
+          },
+          "Retention_Payment": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE RETENTION PAYMENT FOR THIS TRANSACTION",
+            "writeOnly": true
+          },
+          "Remark": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "ENTER THE REMARK OR REASON FOR THIS ENTRY"
+          },
+          "Update_Flag": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "FLAG FOR AR CASH RECEIPTS JOURNAL UPDATE"
+          },
+          "Job_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+          },
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE JOB PHASE CODE (UP TO 12 NUMBERS)"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COST TYPE CODE (ONE LETTER OR NUMBER)"
+          },
+          "Posted_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "JE DETAIL POSTED FLAG 'P' = ALREADY POSTED"
+          },
+          "Equipment_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE EQUIPMENT CODE"
+          },
+          "Cost_Category_Code": {
+            "type": "string",
+            "maxLength": 4,
+            "description": "ENTER THE COST CATEGORY CODE"
+          },
+          "PM_Work_Order": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "PREVENTIVE MAINTENANCE WORK ORDER NUMBER"
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "COST CENTER CODE"
+          },
+          "Local_Discount_Taken": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "DISCOUNT TAKEN IN LOCAL CURRENCY"
+          },
+          "Local_Payment_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "PAYMENT AMOUNT IN LOCAL CURRENCY",
+            "writeOnly": true
+          },
+          "Local_Retention_Discount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "RETENTION DISCOUNT TAKEN IN LOCAL CURRENCY"
+          },
+          "Local_Retention_Payment": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "RETENTION PAYMENT IN LOCAL CURRENCY",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "Invoice_Reference_Date",
+          "Invoice_Number",
+          "Invoice_Type"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Transaction_Code",
+    "Reference_Number"
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Commitment_CO/cache.json",
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_of_Quotes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Change_Order": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Commitment": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Commitment_CO": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "Commitment_Co_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Commitment_Co_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Verbal_Notice_Recd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Written_Notice_Recd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Doc_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Extra": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Prepared_By": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Printed": {
+      "type": "boolean"
+    },
+    "Release_to_Accounting": {
+      "type": "boolean"
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Scope": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "UCOR": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Verbal_Notice_Recd_From": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Verbal_Notice_Received": {
+      "type": "boolean"
+    },
+    "Written_Notice_Recd_From": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Written_Notice_Received": {
+      "type": "boolean"
+    },
+    "__custom_fields": {
+      "type": "object"
+    },
+    "Line_Items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount_of_Quotes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Category": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3
+          },
+          "Commitment": {
+            "type": "string",
+            "maxLength": 12
+          },
+          "Commitment_CO": {
+            "type": "string",
+            "maxLength": 5
+          },
+          "Cost_Code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15,
+            "description": "12 characters plus up to 3 punctuation characters"
+          },
+          "Date_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Extra": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Item_Number": {
+            "type": "integer"
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Operator_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Row_ID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 36
+          },
+          "Row_Version": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Tax": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Time_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UICOR": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 5
+          },
+          "Units": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "Commitment",
+          "Commitment_CO",
+          "Item_Number"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Commitment",
+    "Commitment_CO"
+  ]
+}

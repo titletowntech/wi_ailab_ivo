@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/deduction_addon_codes/add.json",
+  "title": "Deduction Addon Codes Add Action Schema",
+  "description": "Schema for adding a new Deduction Addon Codes record.",
+  "type": "object",
+  "properties": {}
+}

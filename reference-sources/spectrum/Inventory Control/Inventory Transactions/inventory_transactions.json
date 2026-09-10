@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Transfer_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRAN TYPE (T)ransfer, (A)djust, (R)eceipt, (C)redit return, (O)n order"
+    },
+    "Transaction_Reference": {
+      "type": "string",
+      "maxLength": 7,
+      "description": "TRANSACTION REFERENCE NUMBER"
+    },
+    "Transaction_Sequence": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "TRANSACTION REFERENCE SEQUENCE NUMBER"
+    },
+    "From_Warehouse": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "FROM WAREHOUSE CODE"
+    },
+    "Item_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ITEM CODE"
+    },
+    "To_Warehouse": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "TO WAREHOUSE (DESTINATION WAREHOUSE FOR TRANSFERS)"
+    },
+    "Transaction_Quantity": {
+      "type": "string",
+      "description": "TRANSACTION QUANTITY"
+    },
+    "Unit_Of_Measure": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "TRAN UNIT OF MEASURE"
+    },
+    "Unit_Cost": {
+      "type": "string",
+      "description": "TRAN UNIT COST"
+    },
+    "GL_Debit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "GL DEBIT ACCOUNT #"
+    },
+    "GL_Credit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "GL CREDIT ACCOUNT #"
+    },
+    "Extended_Cost": {
+      "type": "string",
+      "description": "COST EXTENSION"
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "TRANSACTION DATE. Format: YYYY-MM-DD."
+    },
+    "Reason": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "REASON FOR ADJUSTMENT"
+    },
+    "Post_Flag1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRANS POST FLAG,[1] - POSTED TO ITEM FILE(Y,N),[2] - POSETED TO GL (Y,N)"
+    },
+    "Post_Flag2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRANS POST FLAG,[1] - POSTED TO ITEM FILE(Y,N),[2] - POSETED TO GL (Y,N)"
+    },
+    "Source_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "COST ADJUSTMENT SOURCE CODE"
+    },
+    "GL_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "INVENTORY G/L DEPARTMENT CODE"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE"
+    },
+    "Cost_Category_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE COST CATEGORY CODE"
+    },
+    "PM_Work_Order_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE MAINTENANCE WORK ORDER NUMBER"
+    },
+    "PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE PURCHASE ORDER NUMBER"
+    },
+    "Freight_Cost": {
+      "type": "string",
+      "description": "FREIGHT CHARGE FOR THIS ITEM"
+    },
+    "Freight_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "GL DEPARTMENT CODE FOR FREIGHT"
+    },
+    "Misc_Charge": {
+      "type": "string",
+      "description": "MISC. CHARGE FOR THIS ITEM"
+    },
+    "Misc_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "GL DEPARTMENT CODE FOR MISC. CHARGE"
+    },
+    "Update_Error": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ERROR FLAG FOR TRANSACTION UPDATE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BATCH CODE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Transfer_Type",
+    "Transaction_Reference",
+    "Transaction_Sequence"
+  ]
+}

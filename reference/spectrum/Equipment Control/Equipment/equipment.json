@@ -1,0 +1,665 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/equipment/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE"
+    },
+    "Equipment_Type": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE EQUIPMENT TYPE"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE EQUIPMENT DESCRIPTION"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE YEAR THIS EQUIPMENT WAS MADE"
+    },
+    "Equipment_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE MAKE OF THIS EQUIPMENT"
+    },
+    "Equipment_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE MODEL OF THIS EQUIPMENT"
+    },
+    "License_Number": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE LICENSE NUMBER OF THIS EQUIPMENT"
+    },
+    "On_Road_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER (1) IF THIS EQUIPMENT IS ON-ROAD OR (2) IF OFF-ROAD"
+    },
+    "Meter_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE METER TYPE FOR THIS EQUIPMENT (M)ILES OR (H)OURS"
+    },
+    "Fuel_Oil_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE FUEL/OIL CODE"
+    },
+    "Capacity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE GROSS WEIGHT THIS EQUIPMENT IS LICENSED FOR"
+    },
+    "Owned_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER WHETHER THIS EQUIPMENT IS (O)WNED OR (L)EASED BY YOU"
+    },
+    "New_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER WHETHER THIS EQUIPMENT WAS PURCHASED (N)EW OR (U)SED"
+    },
+    "Last_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE LAST JOB NUMBER FOR THIS EQUIPMENT"
+    },
+    "PM_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE PREVENTIVE MAINTENANCE CODE FOR THIS EQUIPMENT"
+    },
+    "Purchase_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE PURCHASE DATE FOR THIS EQUIPMENT"
+    },
+    "Entry_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ENTRY DATE INTO THE COMPUTER FOR THIS EQUIPMENT"
+    },
+    "Purchase_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PURCHASE COST FOR THIS EQUIPMENT"
+    },
+    "Insurance_Cost_Per_Year": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE INSURANCE COST / YR FOR THIS EQUIPMENT"
+    },
+    "License_Per_Year": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE LICENSE COST / YR FOR THIS EQUIPMENT"
+    },
+    "Depreciation_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE DEPRECIATION COST FOR THIS EQUIPMENT"
+    },
+    "Engine_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE ENGINE MAKE FOR THIS EQUIPMENT"
+    },
+    "Engine_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE ENGINE MODEL FOR THIS EQUIPMENT"
+    },
+    "Transmission_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE TRANSMISSION MAKE FOR THIS EQUIPMENT"
+    },
+    "Transmission_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE TRANSMISSION MODEL FOR THIS EQUIPMENT"
+    },
+    "Power_Axle_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE POWER AXLE MAKE FOR THIS EQUIPMENT"
+    },
+    "Power_Axle_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE POWER AXLE MODEL FOR THIS EQUIPMENT"
+    },
+    "Number_Of_Axles": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NUMBER OF AXLES ON THIS EQUIPMENT"
+    },
+    "Number_Of_Tires": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NUMBER OF TIRES ON THIS EQUIPMENT"
+    },
+    "Front_Tire_Size": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE FRONT TIRE SIZE FOR THIS EQUIPMENT"
+    },
+    "Rear_Tire_Size": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE REAR TIRE SIZE FOR THIS EQUIPMENT"
+    },
+    "Resident_State_Permit": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE RESIDENT STATE PERMIT #"
+    },
+    "Work_State_Permit": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE WORK STATE PERMIT #"
+    },
+    "Gross_Weight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE VEHICLE GROSS WEIGHT"
+    },
+    "Scale_Weight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE VEHICLE SCALE WEIGHT"
+    },
+    "Rate_Per_Hour": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT JOB HOURLY RATE"
+    },
+    "Rate_Per_Day": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT JOB DAILY RATE"
+    },
+    "Rate_Per_Week": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT JOB WEEKLY RATE"
+    },
+    "Rate_Per_Month": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT JOB MONTHLY RATE"
+    },
+    "Hourly_Rental_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT RENTAL HOURLY RATE"
+    },
+    "Daily_Rental_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT RENTAL DAILY RATE"
+    },
+    "Weekly_Rental_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT RENTAL WEEKLY RATE"
+    },
+    "Monthly_Rental_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT RENTAL MONTHLY RATE"
+    },
+    "Serial_Number": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER THE EQUIPMENT SERIAL NUMBER OR VEHICLE IDENTIFICATION NUMBER"
+    },
+    "Depreciation_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DEPRECIATION METHOD FOR THIS EQ (Y)EAR, (M)ETER, (H)OURS"
+    },
+    "Last_Meter": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "LAST METER READING"
+    },
+    "Wage_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WAGE CODE"
+    },
+    "Union_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER A UNION CODE"
+    },
+    "Expiration_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "VEHICLE EXPIRATION DATE"
+    },
+    "Filter_Names1": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names2": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names3": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names4": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names5": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names6": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names7": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names8": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Filter_Names9": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILTER NAMES"
+    },
+    "Billing_Rate_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BILLING RATE CODE FOR THIS PIECE OF EQUIPMENT"
+    },
+    "Purchased_From": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "PURCHASED FROM"
+    },
+    "State_Licensed": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE STATE THAT THIS EQUIPMENT WAS LICENSED IN"
+    },
+    "Last_Meter_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "METER LAST READ DATE"
+    },
+    "Equipment_Status": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE EQUIPMENT STATUS"
+    },
+    "Yard_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE YARD"
+    },
+    "Division_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE DIVISION CODE FOR THIS EQUIPMENT"
+    },
+    "Job_Operating_Rate_Hourly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Job_Operating_Rate_Daily": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Job_Operating_Rate_Weekly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Job_Operating_Rate_Monthly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Stand_By_Rate_Hourly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Stand_By_Rate_Daily": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Stand_By_Rate_Weekly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Stand_By_Rate_Monthly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT JOB STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rent_Operating_Rate_Hourly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rent_Operating_Rate_Daily": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rent_Operating_Rate_Weekly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rent_Operating_Rate_Monthly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL OPERATING RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rental_Stand_By_Rate_Hourly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rental_Stand_By_Rate_Daily": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rental_Stand_By_Rate_Weekly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Rental_Stand_By_Rate_Monthly": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT RENTAL STAND-BY RATES - HOURLY, DAILY, WEEKLY, MONTHLY"
+    },
+    "Location": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE EQUIPMENT LOCATION"
+    },
+    "Equipment_Requisition_Number": {
+      "type": "string",
+      "maxLength": 7,
+      "description": "ENTER THE REQUISITION NUMBER OR PRESS RETURN FOR THE NEXT SEQUENCE NUMBER"
+    },
+    "Sequence": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "SEQUENCE"
+    },
+    "Previous_Status": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "THE PREVIOUS EQUIPMENT STATUS (FOR ET SYSTEM)"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "EQUIPMENT COST CENTER"
+    },
+    "Equipment_RFID": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "RADIO FREQUENCY IDENTIFICATION"
+    },
+    "Equipment_GPS": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "GLOBAL POSITIONING SYSTEM"
+    },
+    "Equipment_Meter_Type2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER TYPE ('H'OUR, 'M'ILE, 'K'ILOMETER, 'U'SAGE OR BLANK)"
+    },
+    "Equipment_Meter_Type3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER TYPE ('H'OUR, 'M'ILE, 'K'ILOMETER, 'U'SAGE OR BLANK)"
+    },
+    "Equipment_Meter_Type4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "METER TYPE ('H'OUR, 'M'ILE, 'K'ILOMETER, 'U'SAGE OR BLANK)"
+    },
+    "Equipment_Meter_Desc1": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "METER DESCRIPTION"
+    },
+    "Equipment_Meter_Desc2": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "METER DESCRIPTION"
+    },
+    "Equipment_Meter_Desc3": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "METER DESCRIPTION"
+    },
+    "Equipment_Meter_Desc4": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "METER DESCRIPTION"
+    },
+    "Equipment_Engine_Yr": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENGINE YEAR"
+    },
+    "Equipment_Trans_Yr": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "TRANSMISSION YEAR"
+    },
+    "Equipment_Power_Axle1_Yr": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "POWER AXLE YEAR"
+    },
+    "Equipment_Power_Axle2_Yr": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "POWER AXLE 2 YEAR"
+    },
+    "Equipment_Power_Axle2_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "POWER AXLE 2 MAKE"
+    },
+    "Equipment_Power_Axle2_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "POWER AXLE 2 MODEL"
+    },
+    "Equipment_Power_Axle3_Yr": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "POWER AXLE 3 YEAR"
+    },
+    "Equipment_Power_Axle3_Make": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "POWER AXLE 3 MAKE"
+    },
+    "Equipment_Power_Axle3_Model": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "POWER AXLE 3 MODEL"
+    },
+    "Equipment_Height": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT HEIGHT"
+    },
+    "Equipment_Width": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT WIDTH"
+    },
+    "Equipment_Length": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EQUIPMENT LENGTH"
+    },
+    "Equipment_Dim_UOM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "DIMENSION UNIT OF MEASURE"
+    },
+    "Equipment_Weight_UOM": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "WEIGHT UNIT OF MEASURE"
+    },
+    "Equipment_Weight_Class": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WEIGHT CLASS"
+    },
+    "Equipment_Retired": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "RETIRED DATE"
+    },
+    "Equipment_Sold": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SOLD FLAG"
+    },
+    "Equipment_Sell_Price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SELL PRICE"
+    },
+    "Equipment_Sell_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SELL DATE"
+    },
+    "Equipment_Sell_To": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "SELL TO DESCRIPTION"
+    },
+    "Equipment_Picture": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "PICTURE PATH"
+    },
+    "Market_Value": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MARKET VALUE"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Equipment_Code"
+  ]
+}

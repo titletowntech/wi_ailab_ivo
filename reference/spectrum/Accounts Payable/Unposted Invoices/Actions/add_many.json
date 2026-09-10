@@ -1,0 +1,381 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/invoices/actions/add-input.json",
+  "type": "object",
+  "description": "This action input was defined based on Spectrum Data Exchange web service \"Add Invoice Multi-Line\".  https://help.dexterchaney.com/WebServices/Content/Web%20Services/Vendor%20Invoice%20Multi-Line.htm",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company Code.  Valid company in Spectrum"
+    },
+    "APInvoices": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "GUID": {
+            "type": "string",
+            "maxLength": 36,
+            "description": "Unique reference number created by programming.  ** See GUID definition"
+          },
+          "Vendor_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Vendor Code.  Valid vendor code must exist in the defined company.  Status = Active or Inactive"
+          },
+          "Invoice_Number": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "Invoice Number.  Unique invoice number within each vendor code (including unapproved, unposted, open items, payment history or rejected)."
+          },
+          "Invoice_Type_Code": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Invoice Type.  If left blank, assign as Invoice.  I=Invoice  C=Credit memo"
+          },
+          "Approval_Status": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Approval Status.  If left blank, invoice will be treated as A (Approved Entry).  U=Unapproved  A=Approved"
+          },
+          "Routing_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Routing Code.  If left blank, routing code will be auto-assigned by the Web Service based on Job and Vendor setup (if defined)."
+          },
+          "GL_Date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "description": "G/L Date.  Format YYY-MM-DD.  Data in this field is ignored when importing an Unapproved item.  Must be within A/P processing date range when importing an Approved invoice"
+          },
+          "Invoice_Date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "description": "Invoice Date.  Format YYYY-MM-DD.  Enter as MM/DD/CCYY.  If left blank, assign current A/P processing date.  Cannot exceed A/P maximum processing date if A/P installation option selected."
+          },
+          "Invoice_Amount": {
+            "type": "string",
+            "maxLength": 14,
+            "description": "Invoice Amount Before Tax.  Enter total Invoice amount before tax, including retention.  If left blank, set equal to the sum of Amounts in the Detail records..  Must be Positive Amount only.  Must be greater than Discount amount.  No partial pennies.  Maximum allowable amount = 999,999,999.99 (commas optional)."
+          },
+          "Sales_Tax_Amount": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "Sales Tax Amount (Canada PST).  *** See Assumptions and Dependencies.  Negative value not allowed.  No partial pennies."
+          },
+          "VAT_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "VAT Code.  *** See Assumptions and Dependencies.  Valid VAT code must exist in the defined company"
+          },
+          "Total_VAT_Amount": {
+            "type": "string",
+            "maxLength": 13,
+            "description": "Vat Tax Amount.  If left blank, value will be calculated when VAT Code defined.  Entered VAT amount will override calculated value, if non-zero..  Negative value not allowed.  No partial pennies."
+          },
+          "Contract_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Subcontract #.  *** See Assumptions and Dependencies.  Valid subcontract # for defined vendor must exist in the defined company.  Vendor Status = Active or Inactive"
+          },
+          "Retention_Amount": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "Retention Amount (Canada).  This is the retention portion only of the invoice.  If Header record is entirely retention, then Invoice Amount field and this amount will be the same value.  Positive Amounts only.  No partial pennies."
+          },
+          "Batch_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Batch.  If left blank, assign Operator code (from Authorization_ID).  "
+          },
+          "Payment_Due_Date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "description": "Payment Due Date.  Format YYYY-MM-DD.  If left blank, then date will be calculated from subcontract or vendor defaults.  "
+          },
+          "Discount_Due_Date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "description": "Discount Due Date.  Format YYYY-MM-DD.  If left blank, then date will be calculated from subcontract or vendor defaults.  "
+          },
+          "Discount_Amount": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "Discount Amount.  If left blank, then date will be calculated from subcontract or vendor defaults.  Negative value not allowed.  Must be less than the Invoice Amount.  No partial pennies."
+          },
+          "Status": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "The possible values are H, C, O or P. If Payment_Status is set to M or C, Status will automatically be set to P."
+          },
+          "Payment_Status": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Payment Status.  If left blank, invoice will be treated as Unpaid.  *** See Assumptions and Dependencies.  U=Unpaid  M=Manual Check  C=Credit Card.  Payment Status must be Unpaid if retention is non-zero.  Payment Status cannot be set to Manual Check if invoice is Unapproved."
+          },
+          "Bank_Account_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "Credit Card or Bank Account Code.  Ignored unless Payment Status = Manual Check or Credit Card.  Account type must be Bank for Payment Status=M.  Account must be Credit Card for Payment Status=C.  Valid Account Code must exist in defined company"
+          },
+          "Check_Number": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "Manual Check #.  Required if paid with Manual Check.  Must be un-used check # for Bank Account"
+          },
+          "Card_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Card #.  Required if defined Account tracks Card Numbers.  Valid card number must exist in defined Credit Card Account Code"
+          },
+          "Check_Date": {
+            "type": "string",
+            "format": "date",
+            "maxLength": 10,
+            "description": "Payment Date.  Format YYYY-MM-DD.  Ignore unless Payment Status = Manual Check or Credit Card.  Must be within A/P processing date range, and within the same Fiscal Year and Period as the G/L Date"
+          },
+          "AP_GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "Liability G/L Code.  No dashes.  If left blank, assign 'Default A/P Trade G/L account' from Accounts Payable Installation..  Valid G/L code must exist in the defined company.  Account Status = Active or Inactive.  G/L account must be 'Non-direct cost'."
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Liability Cost Center.  *** See Assumptions and Dependencies.  Valid Cost Center code must exist in the defined company if Cost Centers = Yes"
+          },
+          "Remarks": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "Invoice Remarks Header."
+          },
+          "Images": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "object",
+              "description": "",
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "$id": "#/properties/Images/items",
+              "properties": {
+                "Image_File": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "description": "File ID returned from AppNetwork File API / A pre-signed download URL (e.g., from AWS S3 or Azure Blob) that the system can use to fetch the file bytes."
+                    },
+                    {
+                      "type": "object",
+                      "description": "A File Pointer object as defined by the Trimble SDK.",
+                      "properties": {
+                        "filename": {
+                          "type": "string",
+                          "title": "Filename"
+                        },
+                        "contentType": {
+                          "type": "string",
+                          "title": "Content Type",
+                          "description": "MIME type of the file, e.g. 'application/pdf', 'image/png', etc."
+                        },
+                        "size": {
+                          "type": "integer",
+                          "format": "int64",
+                          "title": "Size",
+                          "description": "Size of the file in bytes."
+                        },
+                        "location": {
+                          "type": "string",
+                          "writeOnly": true,
+                          "title": "Location",
+                          "description": "Location (public or pre-signed URL) where the file can be accessed or downloaded from."
+                        }
+                      },
+                      "required": [
+                        "location"
+                      ]
+                    }
+                  ]
+                },
+                "Image_Type": {
+                  "type": "string",
+                  "description": "File Extension."
+                },
+                "Document_ID": {
+                  "type": "string",
+                  "maxLength": 19,
+                  "description": "*** See Assumptions and Dependencies.  Must be unique in Spectrum."
+                },
+                "Image_Description": {
+                  "type": "string",
+                  "maxLength": 40,
+                  "description": "*** See Assumptions and Dependencies."
+                }
+              },
+              "required": [
+                "Image_File",
+                "Image_Type"
+              ]
+            }
+          },
+          "APInvoiceDetails": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "object",
+              "description": "",
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "$id": "#/properties/APInvoiceDetails/items",
+              "properties": {
+                "Distribution": {
+                  "type": "object",
+                  "description": "",
+                  "properties": {
+                    "Company_Code": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "description": "Distribution Company.  If left blank, then the defined company will be assigned.  A/P Installation must be set in the defined company to allow multi-company transactions"
+                    },
+                    "GL_Account": {
+                      "type": "string",
+                      "maxLength": 12,
+                      "description": "Distribution G/L Account.  *** See Assumptions and Dependencies.  No dashes.  If a cost type is assigned to the G/L Account, it must match the Cost Type Code in the Detail record (below)..  Valid G/L code must exist in the distribution company.  Account Status = Active or Inactive"
+                    },
+                    "Cost_Center": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Distribution Cost Center.  *** See Assumptions and Dependencies.  Valid Cost Center code must exist in the distribution company, if Cost Centers = Yes"
+                    }
+                  }
+                },
+                "Unit_Of_Measure": {
+                  "type": "string",
+                  "maxLength": 3,
+                  "description": "Non-Stock Unit of Measure.  Data in this field is ignored if the Item Code is valid.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  "
+                },
+                "Quantity": {
+                  "type": "string",
+                  "maxLength": 12,
+                  "description": " Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Maximum allowable quantity = 9,999,999.99 (commas optional)"
+                },
+                "Amount": {
+                  "type": "string",
+                  "maxLength": 14,
+                  "description": "Amount Before Tax.  *** See Assumptions and Dependencies.  Amount may be negative, but sum of all lines must result in positive value.  No partial pennies.  Maximum allowable unit price = 999,999,999.99 (commas optional)"
+                },
+                "Tax_Code": {
+                  "type": "string",
+                  "maxLength": 15,
+                  "description": "Tax Code.  *** See Assumptions and Dependencies.  Valid Sales/Use Tax code must exist in the defined company"
+                },
+                "Job": {
+                  "type": "object",
+                  "description": "",
+                  "properties": {
+                    "Job_Number": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Data in this field is ignored if the G/L account is not 'Direct job cost'.  Required when Distribution G/L account is 'Direct job cost'.  Valid job code must exist in the Distribution company.  Status = Active or Inactive"
+                    },
+                    "Phase_Code": {
+                      "type": "string",
+                      "maxLength": 20,
+                      "description": "No dashes.  Data in this field is ignored if the G/L account is not 'Direct job cost'..  Required when Distribution G/L account is 'Direct job cost'"
+                    },
+                    "Cost_Type": {
+                      "type": "string",
+                      "maxLength": 3,
+                      "description": "If a G/L Account is assigned to the Cost Type Code, it must match the G/L Account in the Detail record (above).  Data in this field is ignored if the G/L account is not 'Direct job cost'..  Required when Distribution G/L account is 'Direct job cost'.  Valid Phase Code + Cost Type Code combination for the Job Code must exist in the distribution company.  Phase Code + Cost Type Code cannot be 'Completed'."
+                    }
+                  }
+                },
+                "Equipment": {
+                  "type": "object",
+                  "description": "",
+                  "properties": {
+                    "Equipment_Code": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Equipment Code.  Data in this field is ignored if the G/L account is not 'Direct equipment cost'.  Required when Distribution G/L account is 'Direct equipment cost'.  Valid equipment code must exist in the Distribution company.  Status = Active or Inactive."
+                    },
+                    "Equipment_Category": {
+                      "type": "string",
+                      "maxLength": 4,
+                      "description": "Equipment Category.  Data in this field is ignored if the G/L account is not 'Direct equipment cost'.  Required when Distribution G/L account is 'Direct equipment cost'.  Valid equipment cost category code must exist in the Distribution company."
+                    },
+                    "Equipment_Work_Order": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Equipment Work Order.  If the Cost Category File Maintenance 'Data entry' radio group is set to 'Require equipment work order' in the Distribution company, then entry in this field is required. WO# is ignored if radio group set to 'None'.  Data in this field is ignored if the G/L account is not Direct equipment cost..  PM Work Order must be valid in the Distribution company, if assigned."
+                    }
+                  }
+                },
+                "Work_Order": {
+                  "type": "object",
+                  "description": "",
+                  "properties": {
+                    "WO_Number": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Work Order #.  Work Order status cannot be 'C'omplete.  Work Order cannot be a job Work Order.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Required when Distribution G/L account is 'Direct work order cost'.  Valid Work Order # must exist in the defined company."
+                    },
+                    "Item_Code": {
+                      "type": "string",
+                      "maxLength": 15,
+                      "description": "Item Code.  When the first character of the code is '!' it will be treated a non-stock item.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Valid item code must exist in the defined company, unless it is a non-stock item.  Item Code cannot have status = 'Not used'."
+                    },
+                    "Item_Description": {
+                      "type": "string",
+                      "maxLength": 35,
+                      "description": "Non-Stock Item Description.  Data in this field is ignored if the Item Code is valid.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  "
+                    },
+                    "Unit_Price": {
+                      "type": "string",
+                      "maxLength": 13,
+                      "description": "Work Order Billing Price.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Maximum allowable unit price = 99,999,999.99 (commas optional)"
+                    },
+                    "Equipment": {
+                      "type": "string",
+                      "maxLength": 8,
+                      "description": "Work Order Site Equipment.  Required if Work Order installation flag is selected.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Valid site equipment code must exist for the Site assigned to the defined Work Order # in the defined company."
+                    },
+                    "Component": {
+                      "type": "string",
+                      "maxLength": 2,
+                      "description": "Work Order Site Component.  Required if Work Order installation flag is selected.  Data in this field is ignored if the G/L account is not 'Direct work order cost'..  Valid site equipment component must exist for the Site assigned to the defined Work Order # in the defined company."
+                    },
+                    "Service_Contract": {
+                      "type": "string",
+                      "maxLength": 10,
+                      "description": "Work Order Service Contract.  Data in this field is ignored if the G/L account is not 'Direct work order cost'.  Data in this field will be ignored if Service Contract is not present in the defined company..  Valid service contract must exist for the Site assigned to the defined Work Order # in the defined company."
+                    }
+                  }
+                },
+                "Remarks": {
+                  "type": "string",
+                  "maxLength": 30,
+                  "description": "Remarks child.  If left blank, assign Invoice Remarks text string from Header.  "
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "Vendor_Code",
+          "Invoice_Number",
+          "Invoice_Type_Code"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "APInvoices"
+  ]
+}

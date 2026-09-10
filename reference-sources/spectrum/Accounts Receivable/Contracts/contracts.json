@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/contracts/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Description_Line_1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER THE FIRST LINE OF CONTRACT DESCRIPTION"
+    },
+    "Description_Line_2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER THE SECOND LINE OF CONTRACT DESCRIPTION"
+    },
+    "Description_Line_3": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER THE THIRD LINE OF CONTRACT DESCRIPTION"
+    },
+    "Architect": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE ARCHITECT FOR THIS CONTRACT"
+    },
+    "Original_Contract_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL AMOUNT FOR THIS CONTRACT"
+    },
+    "Retention_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE RETENTION PERCENTAGE FOR THIS CONTRACT"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCOUNT NUMBER"
+    },
+    "Contract_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE OF THIS CONTRACT"
+    },
+    "Unit_Price_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF BILLING IS BY UNIT PRICE"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS A TAXABLE CONTRACT ?  (Y OR N)"
+    },
+    "GL_Retention_Revenue": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L RETENTION REVENUE ACCOUNT"
+    },
+    "Salesperson": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE SALESPERSON  FOR THIS CUSTOMER"
+    },
+    "Alternate_Address": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET TO 'Y' TO USE ALTERNATE BILLING ADDRESS FROM CM.BTCODE"
+    },
+    "Billto_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE BILL-TO CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CONTRACT COST CENTER"
+    },
+    "Dist_By_GL": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT TO DISTRIBUTE DRAW REQUEST TO INVOICE BY G/L CODE"
+    },
+    "Terms_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET TO 'Y' TO OVERRIDE TERMS"
+    },
+    "Terms_Override_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "OVERRIDE TERMS CODE"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CONTRACT STATUS"
+    },
+    "Pricing_Fee": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PRICING FEE"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Customer_PO": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Job_Number"
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/DEPARTMENT/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Department_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": ""
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "Salary_Wage_Salaries_And_Wages": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Other_Earnings_1": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Other_Earnings_2": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Other_Earnings_3": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Federal_FICA": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Federal_Unemployment": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "State_Resident_Unemployment": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "State_Work_Unemployment": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Vacation": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Holiday": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Sick": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Department_GL_List12": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Salary_Wage_Miscellaneous": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "State_Resident_Disability": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Direct_Cost_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        "E",
+        "W",
+        "",
+        " "
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Other_Earn_1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Other_Earn_2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Other_Earn_3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Vacation_Direct_Cost_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Holiday_Direct_Cost_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Sick_Expense_Direct_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Meal_Expense_Direct_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Overhead_Credit_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Overhead_Debit_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Fringe_GL_Expense_List": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Work_SDI_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Retro_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Retro_Direct_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        "E",
+        "W",
+        "",
+        " "
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "Burden_Payable_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Burden_Expense_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Equipment_Expense_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Equipment_Expense_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "",
+      "enum": [
+        "Y",
+        "N",
+        "E",
+        "W",
+        "",
+        " "
+      ]
+    },
+    "County_Unemploy_GL_Expense": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Local_Unemployment_Expense_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "County_Disability_GL_Expense": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Local_Disability_GL_Expense": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Worker_Comp_Expense_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Default_Worker_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": ""
+    },
+    "JX_GL_Debit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "JX_GL_Credit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Vacation_Accrual_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Vacation_Accrual_Credit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Holiday_Accrual_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Holiday_Accrual_Credit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Sick_Pay_Accrual_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Sick_Pay_Accrual_Credit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Addon_Allocation_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Std_Cost_Variance_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Dir_Cost_Adjustment_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": ""
+    },
+    "Post_With_Standard_Rates": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Department_Code"
+  ]
+}

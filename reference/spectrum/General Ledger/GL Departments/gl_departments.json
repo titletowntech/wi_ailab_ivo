@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/departments/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Department_Code": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THE Department Code."
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE Description"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Department_Code"
+  ]
+}

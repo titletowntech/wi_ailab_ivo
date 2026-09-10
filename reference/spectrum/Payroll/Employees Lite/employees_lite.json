@@ -1,0 +1,252 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/PR_EMP/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Employee_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "SET UP FILE ALIAS"
+    },
+    "Alpha_Sort": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "EMPLOYEE ALPHA SORT FIELD"
+    },
+    "Hire_Employee_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Rehire_Employee_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Termination_Employee_Date_List3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Casual_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE CASUAL (Y/N)"
+    },
+    "Title": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "EMPLOYEE TITLE"
+    },
+    "Supervisor_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SUPERVISOR CODE"
+    },
+    "Delete_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DELETE TERM EMPL AFTER END OF YEAR? (Y)es, (N)o"
+    },
+    "Employment_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE STATUS: (A)ctive, (I)nactive, (T)erminated, (D)eceased"
+    },
+    "Worker_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "EMPLOYEE WORKMAN'S COMP CLASS CODE"
+    },
+    "Department_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "EMPLOYEE DEPARTMENT CODE"
+    },
+    "Union_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER A UNION CODE (SSCNNN): SS = STATE, C = CRAFT, NNN = UNION# (IE LOCAL"
+    },
+    "Employee_Work_Class": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE EMPLOYEE WORK CLASS: 'J'OURNEYMAN/OTHER, 'A'PPRENTICE, 'T'RAINEE"
+    },
+    "Wage_Class": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WAGE CLASS CODE FOR THIS EMPLOYEE"
+    },
+    "Certified_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'N' IF THIS EMPLOYEE SHOULD NEVER BE ON CERTIFIED REPORT"
+    },
+    "EEO_Class_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE EEO CLASSIFICATION CODE"
+    },
+    "First_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE FIRST NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Middle_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE MIDDLE NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Last_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE LAST NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Occupation": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER THE OCCUPATION"
+    },
+    "Trade": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER THE EMPLOYEE TRADE"
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Revision Effective Date"
+    },
+    "Comments": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Revision Comments"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "EMPLOYEE COST CENTER"
+    },
+    "Contact_ID": {
+      "type": "integer",
+      "description": "CONTACT IS (KEY TO CONTACTS TABLE)"
+    },
+    "Wrk_Mobile_ID": {
+      "type": "integer",
+      "description": "PHONE ID FOR WORK MOBILE PHONE"
+    },
+    "Wrk_Ext_ID": {
+      "type": "integer",
+      "description": "PHONE ID FOR WORK EXTENSION"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Legal_First_Name": {
+      "type": "string",
+      "description": "EMPLOYEE LEGAL FIRST NAME",
+      "writeOnly": true
+    },
+    "Legal_Last_Name": {
+      "type": "string",
+      "description": "EMPLOYEE LEGAL LAST NAME",
+      "writeOnly": true
+    },
+    "Legal_Middle_Name": {
+      "type": "string",
+      "description": "EMPLOYEE LEGAL MIDDLE NAME",
+      "writeOnly": true
+    },
+    "Legal_Suffix": {
+      "type": "string",
+      "description": "EMPLOYEE LEGAL SUFFIX"
+    },
+    "Employee_Location": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EMPLOYEE'S LOCATION"
+    },
+    "Employee_Picture": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER THE EMPLOYEE'S PICTURE PATH AND FILE NAME"
+    },
+    "Employee_Mobile_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE EMPLOYEE MOBILE PHONE"
+    },
+    "Employee_Fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE EMPLOYEE FAX"
+    },
+    "Employee_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "ENTER THE EMPLOYEE E-MAIL ADDRESS"
+    },
+    "Employee_Telephone_Memo": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "TELEPHONE MEMO"
+    },
+    "Employee_Rehire_Rating": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EMPLOYEE'S REHIRE RATING (0 - 10)"
+    },
+    "Employee_Termination_Reason": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE REASON FOR TERMINATION"
+    },
+    "Employee_Suffix": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER SUFFIX"
+    },
+    "Summary_Post_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Summary post flag"
+    },
+    "Apprentice_ID": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Apprentice ID"
+    },
+    "Apprentice_Wage_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Apprentice wage percent"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code"
+  ]
+}

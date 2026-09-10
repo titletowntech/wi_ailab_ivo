@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/paid_invoices_headers/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM TYPE (I)nvoice or (C)redit memo"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BATCH CODE"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CONTRACT NUMBER"
+    },
+    "Subcontract_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SUBCONTRACT JOB NUMBER"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE STATUS"
+    },
+    "AP_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE ACCOUNTS PAYABLE G/L CODE (E.G., TRADE, SUBCONTRACTOR, RETENTION"
+    },
+    "Cash_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE PRE-PAID G/L CASH ACCOUNT CODE"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "THE GL FISCAL YEAR"
+    },
+    "Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "THE GL FISCAL PERIOD"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE PRE-PAID CHECK NUMBER"
+    },
+    "Check_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PRE-PAID CHECK AMOUNT"
+    },
+    "Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE PRE-PAID CHECK DATE"
+    },
+    "Invoice_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE INVOICE/CREDIT MEMO AMOUNT"
+    },
+    "Discount_Eligible_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE DISCOUNT ELIGIBLE AMOUNT"
+    },
+    "Retention_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE RETENTION AMOUNT"
+    },
+    "Invoice_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: (1) INV DTE, (2) PO, (3)ENTRY, (4) PAY DUE, (5) DISC DUE"
+    },
+    "PO_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: (1) INV DTE, (2) PO, (3)ENTRY, (4) PAY DUE, (5) DISC DUE"
+    },
+    "Entry_Date_List3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: (1) INV DTE, (2) PO, (3)ENTRY, (4) PAY DUE, (5) DISC DUE"
+    },
+    "Pay_Due_Date_List4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: (1) INV DTE, (2) PO, (3)ENTRY, (4) PAY DUE, (5) DISC DUE"
+    },
+    "Discount_Due_Date_List5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: (1) INV DTE, (2) PO, (3)ENTRY, (4) PAY DUE, (5) DISC DUE"
+    },
+    "PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE ITEM PURCHASE ORDER NUMBER"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER ANY REMARKS OR DESCRIPTION FOR THIS INVOICE"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE VENDOR NAME"
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 1"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 2"
+    },
+    "Address_3": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "VENDOR ADDRESS 3"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "VENDOR STATE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR ZIP CODE"
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SERVER DATE STAMP WHEN THE INVOICE IS MADE"
+    },
+    "Time_Stamp": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "SERVER TIME STAMP WHEN THE INVOICE IS MADE"
+    },
+    "Subcontract_Job_Company": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "COMPANY CODE OF SUBCONTRACT JOB"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Fiscal_Date_List3_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR FOR DATE LIST 3"
+    },
+    "Fiscal_Date_List3_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR DATE LIST 3"
+    },
+    "Card_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Sub-account card number"
+    },
+    "Back_Charge_Subcontract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Back charge subcontract"
+    },
+    "Entered_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Entered-by operator"
+    },
+    "Payment_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Progress billing number"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "Exchange_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+      "description": "Currency exchange rate"
+    },
+    "VAT_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VALUE ADDED TAX CODE"
+    },
+    "VAT_Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "VAT TAX PERCENT"
+    },
+    "Total_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT TOTAL AMOUNT"
+    },
+    "Retention_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT RETENTION AMOUNT"
+    },
+    "VAT_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VAT OVERRIDE"
+    },
+    "Pay_Loc_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "Payment Location Code"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Invoice_Number",
+    "Invoice_Type_Code"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/invoice_payment/cache.json",
+  "type": "object",
+  "properties": {
+    "Invoice": {
+      "type": "string"
+    },
+    "Vendor": {
+      "type": "string"
+    },
+    "Payment_ID": {
+      "type": "number",
+      "writeOnly": true
+    },
+    "Amount_Paid": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Discount_Lost": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Discount_Taken": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Journal": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Deducted": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Misc_Deduction_Applied": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Paid_From_Open_Inv": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Payment_Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Payment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Retainage_Held": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Retainage_Paid": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_Paid": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Invoice",
+    "Vendor",
+    "Payment_ID"
+  ]
+}

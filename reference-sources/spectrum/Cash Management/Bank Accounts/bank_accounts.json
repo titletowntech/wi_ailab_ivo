@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/bank_accounts/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ACCOUNT CODE"
+    },
+    "Bank_Account_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ACCOUNT NAME"
+    },
+    "Bank_Account_Number": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ACCOUNT NUMBER",
+      "writeOnly": true
+    },
+    "Bank_Phone_Number": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "BANK PHONE NUMBER"
+    },
+    "Bank_Fax_Number": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "BANK FAX NUMBER"
+    },
+    "Bank_Representative": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "BANK REPRESENTATIVE"
+    },
+    "Bank_Rep_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "BANK REPRESENTATIVE PHONE"
+    },
+    "Bank_Rep_Fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "BANK REPRESENTATIVE FAX"
+    },
+    "Bank_Rep_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "BANK REPRESENTATIVE E-MAIL ADDRESS"
+    },
+    "Notes": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "NOTES"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "GL ACCOUNT CODE"
+    },
+    "Last_Check_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE LAST CHECK NUMBER"
+    },
+    "Last_Wire_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE LAST WIRE NUMBER"
+    },
+    "Data_Format": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE DATA FORMAT CODE"
+    },
+    "Last_Posted_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "LAST POSTED STATEMENT BALANCE"
+    },
+    "Separate_Manual_Check_Seq": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS A SEPARATE NUMBER USED FOR MANUAL CHECKS?"
+    },
+    "Last_Manual_Check_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE LAST MANUAL CHECK NUMBER"
+    },
+    "Manual_Checks_Post_H": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SHOULD AN 'H' BE POSTED IN FRONT OF THE MANUAL CHECK NUMBER?"
+    },
+    "Bank_Phone_Extension": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "BANK PHONE EXTENSION"
+    },
+    "Bank_Fax_Extension": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "BANK FAX EXTENSION"
+    },
+    "Bank_Rep_Phone_Extension": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "BANK REPRESENTATIVE PHONE EXTENSION"
+    },
+    "Bank_Rep_Fax_Extension": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "BANK REPRESENTATIVE FAX EXTENSION"
+    },
+    "Last_Statement": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "LAST STATEMENT DATE"
+    },
+    "Sequence": {
+      "type": "string",
+      "maxLength": 7,
+      "description": "SEQUENCE NUMBER (LONG)"
+    },
+    "Pos_Pay_Format_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE POSITIVE PAY FORMAT CODE"
+    },
+    "All_Cost_Centers": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' TO ALLOW ALL COST CENTERS FOR THIS ACCOUNT"
+    },
+    "Account_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "(B)ank or (C)redit Card"
+    },
+    "Use_Card_Detail": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' if credit card sub-accounts are allowed"
+    },
+    "Branch_Division": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Bank branch description"
+    },
+    "Last_ACH": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Last ACH / Auto deposit number"
+    },
+    "Web_Site": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "BANK WEBSITE"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "Check_Report_File": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Check report file"
+    },
+    "Currency_Gain_Loss_GL": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "Currency Gain/loss G/L account"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Bank_Account_Code"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/cm/v1/object/bank_accounts/add.json",
+  "title": "Bank Accounts Add Action Schema",
+  "description": "Schema for adding a new Bank Accounts record.",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/sc_details/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SUBCONTRACT NUMBER"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)"
+    },
+    "Bid_Item_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "ENTER THE REVENUE BID ITEM NUMBER"
+    },
+    "Bill_Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE BILLING DESCRIPTION FOR THIS PHASE"
+    },
+    "Unit_Of_Measure": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE UNITS OF MEASURE FOR THE QUANTITY.  EXAMPLES ARE: LF, YDS, FT"
+    },
+    "Unit_Price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE UNIT PRICE FOR THIS PHASE"
+    },
+    "Original_Contract_Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL CONTRACT QUANTITY FOR THIS PHASE"
+    },
+    "Original_Contract_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL CONTRACT AMOUNT FOR THIS PHASE"
+    },
+    "Quantity_Billed_To_Date": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE QUANTITY BILLED TO DATE FOR THIS PHASE"
+    },
+    "Amount_Billed_To_Date": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE AMOUNT BILLED TO DATE FOR THIS PHASE"
+    },
+    "Retention_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF THIS LINE IS SUBJECT TO RETAINAGE, 'N' IF NOT"
+    },
+    "Qty_Upd_Over": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Quantity Update Override Flag"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Subcontract_Number",
+    "Phase_Code",
+    "Cost_Type",
+    "Bid_Item_Number"
+  ]
+}

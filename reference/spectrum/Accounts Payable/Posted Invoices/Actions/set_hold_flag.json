@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/invoices/actions/set-input.json",
+  "type": "object",
+  "description": "This action input was defined based on Spectrum Data Exchange web service \"Update Hold Status\".  https://help.viewpoint.com/en/spectrum/spectrum/api-web-services/list-of-web-services/accounts-payable-services/update-hold-status",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company Code.  Valid Company Code"
+    },
+    "aPInvoiceHoldFlagImports": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "properties": {
+          "GUID": {
+            "type": "string",
+            "maxLength": 36,
+            "description": "Unique reference number created by programming.  ** See GUID definition"
+          },
+          "Vendor_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Vendor Code.   Valid vendor must exist for the defined Company Code"
+          },
+          "Invoice_Number": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "Invoice Number.  Invoice must be updated in Open Items"
+          },
+          "Invoice_Type_Code": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Invoice Type.  I=Invoice  C=Credit memo"
+          },
+          "Selection_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "Selection Flag.  H = Hold  O = Open"
+          }
+        }
+      },
+      "required": [
+        "Vendor_Code",
+        "Invoice_Number",
+        "Invoice_Type_Code",
+        "Selection_Flag"
+      ]
+    }
+  },
+  "required": [
+    "Company_Code",
+    "aPInvoiceHoldFlagImports"
+  ]
+}

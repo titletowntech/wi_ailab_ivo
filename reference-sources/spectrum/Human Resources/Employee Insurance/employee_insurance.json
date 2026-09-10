@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/EmployeeInsurance/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Dependent_Sequence": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SEQUENCE"
+    },
+    "Insurance_Type": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE INSURANCE TYPE CODE"
+    },
+    "Insurance_Code": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE INSURANCE CODE"
+    },
+    "Policy_Number": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE POLICY NUMBER"
+    },
+    "Insurance_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT THE INSURANCE STATUS"
+    },
+    "Insurance_Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE EFFECTIVE DATE"
+    },
+    "Insurance_Expiration_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE EXPIRATION DATE"
+    },
+    "Insurance_Memo": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER THE MEMO"
+    },
+    "Insurance_Cobra_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE COBRA AMOUNT FOR THIS INSURANCE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code"
+  ]
+}

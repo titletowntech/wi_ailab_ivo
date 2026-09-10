@@ -1,0 +1,249 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/customer_contacts/cache.json",
+  "type": "object",
+  "properties": {
+    "Contact_ID": {
+      "type": "integer"
+    },
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "First_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "Middle_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "Last_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "CSuffix": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Concat_Name": {
+      "type": "string",
+      "maxLength": 76
+    },
+    "Title": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "Email1": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "Email2": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "Email3": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "Operator_ID": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Employee_Contact": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Default_Job_Contact": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Sample_Contact": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Phone_ID": {
+      "type": "integer",
+      "description": "Telephone ID"
+    },
+    "Addr_ID": {
+      "type": "integer",
+      "description": "Address ID"
+    },
+    "Contact_Phone_Numbers": {
+      "description": "Phone Numbers for this Contact.",
+      "type": "array",
+      "items": {
+        "$id": "http://spectrum.si.ryvit.com//v/object/customer_contacts/cache.json",
+        "type": "object",
+        "properties": {
+          "Phone_ID": {
+            "type": "integer",
+            "description": "Telephone ID"
+          },
+          "Phone_Number": {
+            "type": "string",
+            "maxLength": 14,
+            "description": "Telephone number"
+          },
+          "Phone_Ext": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15,
+            "description": "Extension"
+          },
+          "Phone_Country": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4,
+            "description": "Country code"
+          },
+          "Phone_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": "Telephone type"
+          },
+          "Phone_Remark": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 250,
+            "description": "Remarks"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    },
+    "Contact_Addresses": {
+      "description": "Addresses for this Contact.",
+      "type": "array",
+      "items": {
+        "$id": "http://spectrum.si.ryvit.com//v/object/customer_contacts/cache.json",
+        "type": "object",
+        "properties": {
+          "Addr_ID": {
+            "type": "integer",
+            "description": "Address ID"
+          },
+          "Addr_1": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": "Address"
+          },
+          "Addr_2": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": "Address"
+          },
+          "Addr_City": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25,
+            "description": "City"
+          },
+          "Addr_State": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2,
+            "description": "State"
+          },
+          "Addr_Zip": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10,
+            "description": "Zip code"
+          },
+          "Addr_Country": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25,
+            "description": "Country"
+          },
+          "Addr_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30,
+            "description": "Address type"
+          },
+          "Addr_Display": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 250,
+            "description": "Display address (i. e. Mailing Address)"
+          },
+          "Addr_Remark": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 250,
+            "description": "Remarks"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    },
+    "Contact_Attributes": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "Contact_Gone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Contact_ID"
+  ]
+}

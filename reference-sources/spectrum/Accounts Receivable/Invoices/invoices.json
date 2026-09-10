@@ -1,0 +1,608 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/invoices/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Invoice_Or_Transaction": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE NUMBER OR CASH RECEIPTS TRANSACTION NUMBER"
+    },
+    "Transaction_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TYPE OF INVOICE OR PAYMENT (I-INVOICE,C-CREDIT,P-PAYMENT,A-ADJUST,O-ORDER)"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER FOR THIS INVOICE"
+    },
+    "Invoice_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE FOR THIS INVOICE"
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE TERMS CODE FOR THIS INVOICE"
+    },
+    "Salesperson_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE SALESPERSON CODE FOR THIS INVOICE"
+    },
+    "Retention_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE RETENTION PERCENTAGE FOR THIS INVOICE"
+    },
+    "GL_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE G/L DATE FOR THIS INVOICE"
+    },
+    "GL_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE G/L PERIOD FOR THIS INVOICE"
+    },
+    "GL_Year": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE G/L YEAR FOR THIS INVOICE"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 65,
+      "description": "ENTER ANY COMMENT FOR THIS INVOICE"
+    },
+    "AR_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE ACCOUNTS RECEIVABLE G/L ACCOUNT NUMBER"
+    },
+    "Non_Taxable_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NON-TAXABLE AMOUNT FOR THIS INVOICE"
+    },
+    "Taxable_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAXABLE AMOUNT FOR THIS INVOICE"
+    },
+    "Sales_Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL TAX AMOUNT FOR THIS INVOICE"
+    },
+    "Invoice_Extension": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL EXTENSION OF THIS INVOICE"
+    },
+    "Retention_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL RETENTION FOR THIS INVOICE"
+    },
+    "Post_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "POSTED FLAG TO DISALLOW CHANGES TO THIS RECORD AFTER IT'S POSTED"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE FOR THIS INVOICE/CREDIT MEMO"
+    },
+    "Sales_Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "SALES TAX % FOR THIS INVOICE/CREDIT MEMO"
+    },
+    "Print_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER Y IF THE INVOICE HAS BEEN PRINTED"
+    },
+    "Print_Job_Address_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER Y IF THE JOB ADDRESS SHOULD APPEAR ON THE PRINTED INVOICE"
+    },
+    "Ship_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE SHIP DATE"
+    },
+    "Ship_Address1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP-TO ADDRESS"
+    },
+    "Ship_Address2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP-TO ADDRESS"
+    },
+    "Ship_Address3": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP-TO ADDRESS"
+    },
+    "Ship_Address4": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP-TO ADDRESS"
+    },
+    "Ship_Address5": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SHIP-TO ADDRESS"
+    },
+    "Cost_Of_Sale": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL COST OF SALE FIELD FOR THIS INVOICE(NON JOB INVOICES ONLY)"
+    },
+    "Customer_PO": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THIS CUSTOMER'S PO NUMBER"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS INVOICE TAXABLE ?  (Y OR N)"
+    },
+    "Work_Order": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "BLANK IF NOT FROM WO (USED FOR WO VERSION OF INVOICE PRINT)"
+    },
+    "Tax_Code_List1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Tax_Code_List2": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Tax_Code_List3": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Tax_Code_List4": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Tax_Code_List5": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Tax_Code_List6": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "MULTIPLE SALES TAX CODES  (USED IF IH.STCODE = '*')"
+    },
+    "Taxable_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Taxable_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Taxable_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Taxable_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Taxable_Amount_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Taxable_Amount_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MULTIPLE TAXED AMOUNTS (IF USING MULTI SALES TAX, 1-6 = IH.TAXED)"
+    },
+    "Tax_Percent_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Percent_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Percent_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Percent_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Percent_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Percent_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "MULTIPLE SALES TAX PERCENTAGES"
+    },
+    "Tax_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Tax_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Tax_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Tax_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Tax_Amount_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Tax_Amount_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TAX AMOUNT FOR THIS SALES TAX CODE"
+    },
+    "Source_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "INVOICE SOURCE FLAG: 'W' = CAME FROM WORK ORDER"
+    },
+    "TM_Billing_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "THIS IS THE T&M BILLING NUMBER"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BATCH CODE"
+    },
+    "Update_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' IF THIS FLAG WAS PRINTED ON TRANSACTION REGISTER AND IS BEING UPDATED"
+    },
+    "Area_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE AREA CODE / CUSTOMER'S JOB"
+    },
+    "Alternate_Address": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET TO 'Y' TO USE ALTERNATE BILLING ADDRESS FROM CM.BTCODE"
+    },
+    "Billto_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE BILL-TO CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE COST CENTER CODE"
+    },
+    "Site_ID": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CONTRACT SITE"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CONTRACT NUMBER"
+    },
+    "Contract_Key": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "INTERNAL KEY FOR CONTRACT"
+    },
+    "Reversed": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "REVERSED?"
+    },
+    "Sales_Tax_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SALES TAX OVERRIDE"
+    },
+    "Retention_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "RETENTION OVERRIDE"
+    },
+    "VAT_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VALUE ADDED TAX CODE"
+    },
+    "VAT_Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "VAT TAX PERCENT"
+    },
+    "Total_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT TOTAL  AMOUNT"
+    },
+    "Retention_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT RETENTION AMOUNT"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "Exchange_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+      "description": "Currency exchange rate"
+    },
+    "Use_Online_Tax": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Use online tax calculations flag"
+    },
+    "Online_Tax_Transaction_Code": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Online tax transaction code"
+    },
+    "Online_Tax_Commit_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Online tax commit status"
+    },
+    "Notes_Text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 65535,
+      "description": ""
+    },
+    "Invoice_Details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/InvoiceDetails/items",
+        "type": "object",
+        "properties": {
+          "Sequence": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "SYSTEM MAINTAINED SEQUENCE NUMBER FOR TEMP INVOICE DETAIL FILE"
+          },
+          "Item_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": "ENTER THE QUANTITY FOR THIS INVOICE ITEM"
+          },
+          "Unit_Of_Measure": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE UNIT OF MEASURE FOR THIS LINE ITEM"
+          },
+          "Detail_Description": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "DESCRIPTION (TECH NAME, ITEM DESC, OTHER DESC, FLAT DESC)"
+          },
+          "Unit_Price": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": "ENTER THE UNIT PRICE FOR THIS LINE ITEM"
+          },
+          "Line_Extension": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE EXTENSION  FOR THIS LINE ITEM (DOES NOT INCLUDE SALES TAX)"
+          },
+          "GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "ENTER THE G/L ACCOUNT NUMBER FOR THIS LINE ITEM"
+          },
+          "Sales_Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ENTER THE SALES TAX CODE FOR THIS LINE ITEM"
+          },
+          "Message": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 250,
+            "description": "ENTER ANY MESSAGE FOR THIS INVOICE LINE ITEM"
+          },
+          "Post_Flag": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "AR SALES JOURNAL POST FLAG FOR DETAIL ITEMS"
+          },
+          "Cost_Of_Sale": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE COST OF SALE FIELD FOR THIS LINE ITEM (NON JOB INVOICES ONLY)"
+          },
+          "GL_Department": {
+            "type": "string",
+            "maxLength": 5,
+            "description": "ENTER THIS LINE ITEM'S GL DEPARTMENT CODE"
+          },
+          "Line_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ENTER THIS LINE'S TYPE AS POSTED FROM WORK ORDER:'L'ABOR OR 'M'ATERIAL"
+          },
+          "Equipment_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE EQUIPMENT CODE"
+          },
+          "Rate_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ENTER THE EQUIPMENT RATE TYPE - 'H'OURLY, 'D'AILY, 'W'EEKLY, 'M'ONTHLY"
+          },
+          "Plant_ID": {
+            "type": "string",
+            "maxLength": 5,
+            "description": "IF POSTED FROM SI AS 1 TICKET / LINE, THIS IS THE SCALE PLANT / PIT ID"
+          },
+          "Scale_Ticket": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "IF POSTED FROM SI AS 1 TICKET PER LINE, THIS IS THE SCALE TICKET"
+          },
+          "Other_Cost_Item": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ENTER THE OTHER COST ITEM CODE"
+          },
+          "Message_ID": {
+            "type": "string",
+            "maxLength": 10,
+            "description": ""
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "COST CENTER CODE"
+          },
+          "Detail_Line_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "LINE TYPE \"D\", \"E\", \"M\""
+          },
+          "Use_Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "USE TAX CODE"
+          },
+          "Use_Tax_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": "USE TAX AMOUNT"
+          },
+          "Online_Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ONLINE TAX CODE"
+          }
+        },
+        "required": [
+          "Sequence"
+        ]
+      }
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": "string",
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Invoice_Or_Transaction",
+    "Transaction_Type"
+  ]
+}

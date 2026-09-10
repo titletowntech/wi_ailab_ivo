@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/sc_change_orders/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number). THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number).ENTER THE CUSTOMER CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number).ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Change_Request_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number).ENTER THE CHANGE REQUEST NUMBER"
+    },
+    "Subcontractor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number).ENTER THE SUBCONTRACTOR CODE FOR THIS CHANGE REQUEST"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Key (Company_Code, Customer_Code, Job_Number, Change_Request_Number, Subcontractor_Code, Subcontract_Number).SUBCONTRACT NUMBER"
+    },
+    "Pricing_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE STATUS FOR THIS CHANGE REQUEST SUBCONTRACTOR PROPOSAL"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE DESCRIPTION FOR THIS CHANGE REQUEST SUBCONTRACTOR PROPOSAL"
+    },
+    "Sent_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE SENT DATE FOR THIS CHANGE REQUEST SUBCONTRACTOR PROPOSAL"
+    },
+    "Due_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DUE DATE FOR THIS SUBCONTRACTOR PROPOSAL"
+    },
+    "Proposal_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE PROPOSAL DATE FOR THIS SUBCONTRACTOR PROPOSAL"
+    },
+    "Type": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE TYPE FOR THIS SUBCONTRACTOR PROPOSAL"
+    },
+    "Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE CHANGE REQUEST TOTAL AMOUNT FOR THIS SUBCONTRACTOR PROPOSAL"
+    },
+    "Sub_Change_Order_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE SUBCON CHANGE ORDER NUMBER ASSOCIATED WITH THIS CHANGE REQUEST"
+    },
+    "Proposal_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR FOR PROPOSAL DATE"
+    },
+    "Proposal_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR PROPOSAL DATE"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    },
+    "__details": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "Key to this array(Phase_Code, Cost_Type, Bid_Item_Code). PHASE NUMBER"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "Key to this array(Phase_Code, Cost_Type, Bid_Item_Code). COST TYPE"
+          },
+          "Bid_Item_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Key to this array(Phase_Code, Cost_Type, Bid_Item_Code). ENTER THE REVENUE BID ITEM NUMBER"
+          },
+          "CR_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CHANGE REQUEST AMOUNT FOR THIS SUBCONTRACTOR PROPOSAL"
+          },
+          "CR_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CHANGE REQUEST QUANTITY FOR THIS SUBCONTRACTOR PROPOSAL"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Phase_Code",
+          "Cost_Type",
+          "Bid_Item_Code",
+          "CR_Amount",
+          "CR_Quantity"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Job_Number",
+    "Change_Request_Number",
+    "Subcontractor_Code",
+    "Subcontract_Number",
+    "Pricing_Status",
+    "Description",
+    "Type",
+    "Amount",
+    "Sub_Change_Order_Number",
+    "Proposal_Date_Year",
+    "Proposal_Date_Period"
+  ]
+}

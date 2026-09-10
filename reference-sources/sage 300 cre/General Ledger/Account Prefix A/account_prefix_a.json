@@ -1,0 +1,1409 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com/ap/v2/object/account_prefix_a/cache.json",
+  "type": "object",
+  "properties": {
+    "Account_Prefix_A": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Fiscal_Entity_Level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Account_Prefix_A_ZIP_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Phone_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Intercompany_Payable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Intercompany_Receivable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Security_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_Ending_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_Code": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Fiscal_Ending_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "AP_Bank": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Approval": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Federal_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Foreign_Entity": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "ABN": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Balance_Sheet_Level": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Property_Control": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Using_13_Periods": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Fiscal_Yr_Begin_2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_1__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_2__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_3__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_4__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_5__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_6__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_7__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_8__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_9__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_10__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_11__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_12__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_13__2_Yrs_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_1__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_2__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_3__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_4__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_5__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_6__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_7__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_8__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_9__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_10__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_11__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_12__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_13__1_Yr_Ago": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_1__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_2__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_3__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_4__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_5__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_6__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_7__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_8__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_9__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_10__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_11__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_12__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_13__Current": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_1__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_2__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_3__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_4__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_5__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_6__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_7__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_8__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_9__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_10__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_11__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_12__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_End_13__Future": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_1_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_2_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_3_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_4_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_5_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_6_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_7_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_8_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_9_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_10_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_11_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_12_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_13_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_14_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_15_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_16_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_17_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_18_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_19_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_20_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_21_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_22_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_23_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_24_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_25_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_26_Closed": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_1": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_1_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_1_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_2": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_2_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_2_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_3": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_3_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_3_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_4": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_4_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_4_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_5": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_5_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_5_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_6": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_6_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_6_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_7": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_7_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_7_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_8": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_8_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_8_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_9": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_9_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_9_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_10": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_10_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_10_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_11": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_11_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_11_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_12": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_12_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_12_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_13": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_13_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_13_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_14": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_14_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_14_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_15": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_15_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_15_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_16": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_16_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_16_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_17": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_17_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_17_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_18": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_18_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_18_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_19": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_19_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_19_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_20": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_20_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_20_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_21": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_21_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_21_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_22": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_22_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_22_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_23": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_23_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_23_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_24": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_24_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_24_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_25": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_25_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_25_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_26": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_26_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_26_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_27": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_27_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_27_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_28": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_28_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_28_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_29": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_29_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_29_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_30": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_30_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_30_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_31": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_31_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_31_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_32": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_32_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_32_Ret_Earn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_33": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    },
+    "Partner_33_Percent": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": ""
+    }
+  }
+}

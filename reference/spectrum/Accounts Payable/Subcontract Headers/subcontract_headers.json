@@ -1,0 +1,308 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/sc_headers/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SUBCONTRACT NUMBER"
+    },
+    "Contract_Type": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CONTRACT TYPE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Comment_1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER COMMENTS 1"
+    },
+    "Comment_2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER COMMENTS 2"
+    },
+    "Original_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL CONTRACT AMOUNT"
+    },
+    "Current_Bill_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "CURRENT BILLED AMOUNT"
+    },
+    "Current_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "CURRENT PAID AMOUNT"
+    },
+    "Discount_Taken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "CURRENT DISCOUNT TAKEN"
+    },
+    "Current_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "CURRENT BALANCE"
+    },
+    "Retention_Billed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION BILLED AMOUNT"
+    },
+    "Retention_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION PAID AMOUNT"
+    },
+    "Retention_Discount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT TAKEN"
+    },
+    "Retention_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION BALANCE"
+    },
+    "Total_Billed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL BILLED"
+    },
+    "Total_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL PAID"
+    },
+    "Total_Discount_Taken": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL DISCOUNTS TAKEN"
+    },
+    "Total_Balance": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL BALANCE"
+    },
+    "Retention_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION %"
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE SUBCONTRACT STATUS CODE (A - ACTIVE, I - INACTIVE, C - COMPLETE)"
+    },
+    "Date_Issued": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE THE SUBCONTRACT WAS ISSUED"
+    },
+    "Contact_Person": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PERSON TO CONTACT"
+    },
+    "Default_Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE DEFAULT PHASE CODE FOR THIS SUBCONTRACT"
+    },
+    "Default_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE DEFAULT COST TYPE FOR THIS SUBCONTRACT"
+    },
+    "Insurance_Cert_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF SUBCONTRACT HAS INSURANCE CERTIFICATE OTHERWISE ENTER 'N'"
+    },
+    "Next_Payment_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NEXT PAYMENT NUMBER"
+    },
+    "Unit_Price_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF THIS SUBCONTRACT SHOULD USE UNIT PRICING"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE GL CODE FOR THIS SUBCONTRACTOR"
+    },
+    "Trade_Service": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE TRADE / SERVICE FOR THIS SUBCONTRACT"
+    },
+    "Deselect_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IF PRINTING CHECKS BY SUBCON, 'Y' IF CHECK WILL BE DESELECTED"
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODES (1 - BELOW DOLLAR LIMIT, 2 - ABOVE LIMIT)"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE APPROVAL ROUTING LIMIT"
+    },
+    "Sent_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE THE SUBCONTRACT WAS SENT"
+    },
+    "Date_Issued_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR THAT DATE ISSUED FALLS ON"
+    },
+    "Date_Issued_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD THAT DATE ISSUED FALLS ON"
+    },
+    "Pay_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Override payment options?"
+    },
+    "Pay_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Payment terms due: (A) From invoice date, (B) From 1st next month"
+    },
+    "Pay_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Number of days payment is due from invoice date or 1st next month"
+    },
+    "Disc_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Override discount options?"
+    },
+    "Disc_Terms": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Discount eligible date is from (A) Invoice date, (B) 1st of next month"
+    },
+    "Disc_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Number of days from invoice date or 1st next month for discount eligible"
+    },
+    "Disc_Perc": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Discount percentage amount"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "Pay_When_Paid": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Subcontract pay when paid flag"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Subcontract_Number"
+  ]
+}

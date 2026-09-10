@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/union_classes/cache.json",
+  "type": "object",
+  "properties": {
+    "Union_ID": {
+      "type": "string"
+    },
+    "Union_Local": {
+      "type": "string"
+    },
+    "Union_Class": {
+      "type": "string"
+    },
+    "Union_Class_Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Union_ID",
+    "Union_Local",
+    "Union_Class"
+  ]
+}

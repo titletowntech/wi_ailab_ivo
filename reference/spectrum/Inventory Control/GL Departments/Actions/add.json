@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ic/v1/object/gl_departments/add.json",
+  "title": "GL Departments Add Action Schema",
+  "description": "Schema for adding a new GL Departments record.",
+  "type": "object",
+  "properties": {}
+}

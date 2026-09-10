@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/hr/v1/object/employee_dependent_crypto/add.json",
+  "title": "Employee Dependent Crypto Add Action Schema",
+  "description": "Schema for adding a new Employee Dependent Crypto record.",
+  "type": "object",
+  "properties": {}
+}

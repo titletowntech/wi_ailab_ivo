@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/bank_acct_card_dets/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ACCOUNT CODE"
+    },
+    "Card_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Credit card code/number"
+    },
+    "Card_Description": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Credit card description"
+    },
+    "Memo": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "Credit card memo"
+    },
+    "Card_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "(A)ctive, (I)nactive, (N)ot Used"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Bank_Account_Code",
+    "Card_Number"
+  ]
+}

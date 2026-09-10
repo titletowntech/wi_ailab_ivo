@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Description/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "PO_Number": {
+      "type": "string",
+      "description": "ENTER THE PURCHASE ORDER NUMBER"
+    },
+    "Detail_Sequence": {
+      "type": "string",
+      "description": "DETAIL LINE SEQUENCE NUMBER"
+    },
+    "Description_Sequence": {
+      "type": "string",
+      "description": "AUTO SEQUENCED DESCRIPTION LINE NUMBER"
+    },
+    "Description": {
+      "type": "string",
+      "description": "PO DESCRIPTION"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "PO_Number",
+    "Detail_Sequence",
+    "Description_Sequence"
+  ]
+}

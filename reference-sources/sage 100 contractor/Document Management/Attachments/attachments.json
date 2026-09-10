@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/dm/2/object/attachments/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "attachment_id": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 922330000000000
+    },
+    "attachment_owners_table": {
+      "type": "string",
+      "description": "",
+      "maxLength": 6
+    },
+    "attachment_owners_record_id": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 922330000000000
+    },
+    "owners_parent_table": {
+      "type": "string",
+      "description": "",
+      "maxLength": 6
+    },
+    "owners_parent_record_id": {
+      "type": "integer",
+      "description": "",
+      "minimum": 0,
+      "maximum": 922330000000000
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "details": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "attachment_idnum": {
+              "type": "string",
+              "description": "",
+              "minLength": 36,
+              "maxLength": 36,
+              "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+            },
+            "attachment_id": {
+              "type": "integer",
+              "description": "",
+              "minimum": 0,
+              "maximum": 922330000000000
+            },
+            "attachment_file_link": {
+              "type": "string",
+              "description": ""
+            },
+            "description_of_attachment": {
+              "type": "string",
+              "description": "",
+              "maxLength": 100
+            },
+            "user_who_added_attachment": {
+              "type": "string",
+              "description": "",
+              "maxLength": 128
+            },
+            "date_attachment_was_added": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insdte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "insusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            },
+            "upddte": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": ""
+            },
+            "updusr": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "",
+              "maxLength": 128
+            }
+          },
+          "required": [
+            "idnum",
+            "attachment_idnum",
+            "attachment_id",
+            "attachment_file_link",
+            "description_of_attachment",
+            "user_who_added_attachment"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "idnum",
+    "attachment_id",
+    "attachment_owners_table",
+    "attachment_owners_record_id",
+    "owners_parent_table",
+    "owners_parent_record_id",
+    "details"
+  ]
+}

@@ -1,0 +1,1239 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/CostCode/cache.json",
+  "type": "object",
+  "properties": {
+    "Accumulate_As": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Actual_Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Actual_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Approved_Commitment_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Approved_Est_Unit_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Apprvd_Prodctn_Unit_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Billing_Item_Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Bought_Out": {
+      "type": "boolean"
+    },
+    "CO_Request_Schdld_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Equipment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Labor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Other": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Overhead": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Commitment_Invoiced__Sub": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Contract": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Cost_At_Comp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Cost_Code_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Cost_Code_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Cost_To_Comp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cost_Unit_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Custom_Total_1_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Total_2_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Total_3_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Total_4_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Total_5_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Total_6_Total": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Last_Rptd_Prdctn_Uts": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Pct_Complete_Entered": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Estimated_Comp_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Estimated_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Exempt_Status": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Extra": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Group_Cost_Code": {
+      "type": "boolean"
+    },
+    "Item": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Job": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "JTD_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Equipment_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Equipment_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Equipment_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Labor_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Labor_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Labor_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Mat_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Material_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Other_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Other_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Overhead_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Overhead_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Sub_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Subcontract_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "JTD_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Lab_Hrs_To_Comp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Cost_Update": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Reported_Prdctn_Unts": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Equipment_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Equipment_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Labor_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Labor_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Material_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Other_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Overhead_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Subcontract_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LM_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LW_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LW_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LW_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "LW_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_Cat_Amt_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_Cat_Amt_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_Cat_Amt_3": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_Cat_Amt_4": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_CC_Amt_5": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Msc_CC_Amt_6": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Equipment_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Equipment_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Labor_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Labor_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Material_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Other_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Overhead_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Subcontract_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Equipment_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Equipment_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Labor_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Labor_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Material_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Other_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Overhead_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Subcontract_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NM_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Orig_Production_Units_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Orig_Scheduled_Value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Original_Estimate_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pending_Commitment_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pending_Est_Unit_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pending_Estimate_Changes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Percent_Complete": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pndng_Prodctn_Unit_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Potential_CO_Schdld_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Previous_Percent_Complete": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Production_Unit_Desc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "QTD_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Comp_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Prodctn_Units_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Scheduled_Value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Revised_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Send_Cost_to_Billings": {
+      "type": "boolean"
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Stored_Material": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_JTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_JTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_LM_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_LM_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_LW_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_LW_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_MTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_MTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_NM_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_NM_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_QTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_QTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_WTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_WTD_Dollars_Pd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_YTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_on_YTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Equipment_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Equipment_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Equipment_Units_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Estimate_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Labor_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Labor_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Labor_Units_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Material_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Material_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Other_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Other_Estimate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Overhead_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Overhead_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Sub_Commitment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Subcontract_Est": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Use_Empl_Work_StateLocal": {
+      "type": "boolean"
+    },
+    "Verbal_Okay_Schdld_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Equipment_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Equipment_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Labor_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Labor_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Aprvd_Estimate_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Aprvd_Schd_Value_Chgs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Cost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Dollars_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Production_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Units": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Work_Billed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Bought_Out",
+    "Cost_Code",
+    "Exempt_Status",
+    "Extra",
+    "Group_Cost_Code",
+    "Job",
+    "Send_Cost_to_Billings",
+    "Use_Empl_Work_StateLocal"
+  ]
+}

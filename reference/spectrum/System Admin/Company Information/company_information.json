@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/company_information/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "COMPANY CODE                                                                    "
+    },
+    "Company_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY NAME                                                                    "
+    },
+    "Company_Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY ADDRESS 1                                                               "
+    },
+    "Company_Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY ADDRESS 2                                                               "
+    },
+    "Company_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "COMPANY CITY                                                                    "
+    },
+    "Company_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "COMPANY STATE                                                                   "
+    },
+    "Company_Zip": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COMPANY ZIP CODE                                                                "
+    },
+    "Company_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "COMPANY PHONE NUMBER                                                            "
+    },
+    "Company_Contact": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY MAIN CONTACT                                                            "
+    },
+    "Company_Fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "COMPANY FAX NUMBER                                                              "
+    },
+    "Company_ID": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "COMPANY ID                                                                      "
+    },
+    "Company_Web_Address": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "COMPANY WEB ADDRESS                                                             "
+    },
+    "Company_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "COMPANY E-MAIL ADDRESS                                                          "
+    },
+    "Company_Ship_Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY SHIPPING ADDRESS LINE 1                                                 "
+    },
+    "Company_Ship_Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY SHIPPING ADDRESS LINE 2                                                 "
+    },
+    "Company_Ship_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "COMPANY SHIPPING CITY                                                           "
+    },
+    "Company_Ship_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "COMPANY SHIPPING STATE                                                          "
+    },
+    "Company_Ship_Zip": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COMPANY SHIPPING ZIP CODE                                                       "
+    },
+    "Company_Ship_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "COMPANY SHIPPING PHONE NUMBER                                                   "
+    },
+    "Company_User_Defined1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY USER DEFINED FIELDS                                                     "
+    },
+    "Company_User_Defined2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY USER DEFINED FIELDS                                                     "
+    },
+    "Company_User_Defined3": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY USER DEFINED FIELDS                                                     "
+    },
+    "Company_User_Defined4": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY USER DEFINED FIELDS                                                     "
+    },
+    "Company_User_Defined5": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "COMPANY USER DEFINED FIELDS                                                     "
+    },
+    "Company_Custom_Image": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "COMPANY CUSTOM IMAGE                                                            "
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code"
+  ]
+}

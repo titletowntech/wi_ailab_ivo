@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://foundation.si.ryvit.com/jc/v1/object/job_cost_codes/add.json",
+  "title": "Job Cost Codes Add Action Schema",
+  "description": "Schema for adding a new Job Cost Codes record.",
+  "type": "object",
+  "properties": {}
+}

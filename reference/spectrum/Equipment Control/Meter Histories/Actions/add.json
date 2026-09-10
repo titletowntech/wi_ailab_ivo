@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/eq/v1/object/meter_histories/add.json",
+  "title": "Meter Histories Add Action Schema",
+  "description": "Schema for adding a new Meter Histories record.",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage100.SI.ryvit.com/sipart/version/object/cost_code/cache.json",
+  "type": "object",
+  "properties": {
+    "idnum": {
+      "type": "string",
+      "description": "",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}"
+    },
+    "cost_code_id": {
+      "type": "string",
+      "description": "Enter a cost code",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{1,3})?$",
+      "minimum": 1,
+      "maximum": 99999999999
+    },
+    "description": {
+      "type": "string",
+      "description": "Enter a description of the cost code",
+      "maxLength": 50
+    },
+    "unit": {
+      "type": "string",
+      "description": "The unit of measure (lnft, each, lb, etc.)",
+      "maxLength": 10
+    },
+    "division": {
+      "type": "integer",
+      "description": "Enter a cost division number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "comp_code1": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default workers' compensation code",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "wage_max": {
+      "type": "string",
+      "description": "The wage maximum (used in certain states)",
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{1,2})?$",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "comp_code2": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The default workers' compensation code over maximum",
+      "minimum": 0,
+      "maximum": 999999
+    },
+    "department": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "The department number",
+      "minimum": 0,
+      "maximum": 9999999999
+    },
+    "notes": {
+      "type": "string",
+      "description": "Enter notes for this row"
+    },
+    "insdte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "insusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "upddte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "updusr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "maxLength": 128
+    },
+    "inactive": {
+      "type": "string",
+      "description": "Enter Y (Yes) for inactive or N (No) or blank for active",
+      "maxLength": 1
+    }
+  },
+  "required": [
+    "idnum",
+    "cost_code_id",
+    "description",
+    "unit",
+    "division",
+    "wage_max",
+    "notes",
+    "inactive"
+  ]
+}

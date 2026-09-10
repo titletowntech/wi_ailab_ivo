@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://Sage300.SI.ryvit.com/ap/v1/object/apmessaginginvoice/cache.json",
+  "type": "object",
+  "required": [
+    "ID",
+    "Vendor",
+    "Status"
+  ],
+  "properties": {
+    "ID": {
+      "type": "string"
+    },
+    "VendorID": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "ErrorMessage": {
+      "type": "string"
+    }
+  }
+}

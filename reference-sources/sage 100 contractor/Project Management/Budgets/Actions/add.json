@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pm/v1/object/budgets/add.json",
+  "title": "Budgets Add Action Schema",
+  "description": "Schema for adding a new Budgets record.",
+  "type": "object",
+  "properties": {}
+}

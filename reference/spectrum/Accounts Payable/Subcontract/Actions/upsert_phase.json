@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/upsert_subcontract_phase/actions/upsert.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company Code. Valid Company in Spectrum."
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "No duplicate combination of Vendor and Subcontract number."
+    },
+    "Phase_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": "No dashes. Must exist on the Job and required if not defined on Subcontract."
+    },
+    "Cost_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": "Must exist on the Job and required if not defined on Subcontract."
+    },
+    "Bid_Item_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": "The billing item is broken into Group and Item for Unit Price jobs. The first 2 characters will be defined as the Group when the Job is Unit Price."
+    },
+    "Bill_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25,
+      "description": ""
+    },
+    "Unit_Of_Measure": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3,
+      "description": ""
+    },
+    "Retention_Flag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": "(Y)es or (N)o. Defaults to N if blank or based on Phase."
+    },
+    "Unit_Price": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "Allows negatives. Format = -6.4"
+    },
+    "Original_Contract_Quantity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "Allows negatives. Format = -8.2"
+    },
+    "Original_Contract_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 13,
+      "description": "If Unit_Price and Original_Contract_Quantity are populated then Original_Contract_Amount is calculated. Allows negatives. Format = -9.2"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Subcontract_Number"
+  ]
+}

@@ -1,0 +1,1996 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/PR_EMP_1/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Employee_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "SET UP FILE ALIAS"
+    },
+    "Alpha_Sort": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "EMPLOYEE ALPHA SORT FIELD"
+    },
+    "Street_Address": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "EMPLOYEE STREET ADDRESS"
+    },
+    "Address": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "EMPLOYEE CITY ADDRESS"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "EMPLOYEE STATE ADDRESS"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "EMPLOYEE ZIP CODE"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "EMPLOYEE PHONE"
+    },
+    "Social_Security": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "EMPLOYEE SOCIAL SECURITY NUMBER",
+      "writeOnly": true
+    },
+    "Hire_Employee_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Rehire_Employee_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Termination_Employee_Date_List3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Birth_Employee_Date_List4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW",
+      "writeOnly": true
+    },
+    "RateChange_Employee_Date_List5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "SpouseBirth_Employee_Date_List6": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW",
+      "writeOnly": true
+    },
+    "LastReview_Employee_Date_List7": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES:1-HIRE,2-REHIRE,3-TERM,4-BIRTH,5-RATE CHG,6-SP BIR,7-LST REVIEW"
+    },
+    "Sex": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE SEX: (M)ale, (F)emale"
+    },
+    "Race": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE RACE: (C)au, (B)lck, (H)isp, (A)sian A, (N)ative A, (O)ther"
+    },
+    "Marital_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE MARITAL STATUS (S)gl, (M)arried, (D)ivorced, (W)idowed"
+    },
+    "Casual_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE CASUAL (Y/N)"
+    },
+    "Pay_Frequency_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE PAY FREQ: (W)eekly, (B)i-wk, (S)emi-mo, (M)onthly"
+    },
+    "Pay_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE PAY TYPE: (H)ourly, (S)alary, (O)vt (salary), (C)ommission"
+    },
+    "Last_Pay_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE LAST PAY TYPE"
+    },
+    "Spouse_Name": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "EMPLOYEE SPOUSE NAME"
+    },
+    "Title": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "EMPLOYEE TITLE"
+    },
+    "Supervisor_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SUPERVISOR CODE"
+    },
+    "FIT_Tax_Control_Flag_List1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "WSIT_Tax_Control_Flag_List2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "FICA_Tax_Control_Flag_List3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "WSDI_Tax_Control_Flag_List4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "LIT_Tax_Control_Flag_List5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "RSIT_Tax_Control_Flag_List6": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "CNTY_Tax_Control_Flag_List7": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "FUI_Tax_Control_Flag_List8": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "RSDI_Tax_Control_Flag_List9": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "RSUI_Tax_Control_Flag_List10": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "WSU_Tax_Control_Flag_List11": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STP TX CTL:1FIT,2WSIT,3FICA,4WSDI,5LIT,6RSIT,7CNTY,8FUI,9RSDI,10RSUI,11WSU"
+    },
+    "Fed_Filing_Status_List1": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILING STAT:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(S)gl,(M)ar,(H)s"
+    },
+    "ResSt_Filing_Status_List2": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILING STAT:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(S)gl,(M)ar,(H)s"
+    },
+    "Loc_Filing_Status_List3": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILING STAT:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(S)gl,(M)ar,(H)s"
+    },
+    "WkSt_Filing_Status_List4": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILING STAT:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(S)gl,(M)ar,(H)s"
+    },
+    "Cnty_Filing_Status_List5": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "FILING STAT:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(S)gl,(M)ar,(H)s"
+    },
+    "Fed_Tax_Table_Codes_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INC TAX TABLE CODES:[1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "ResSt_Tax_Table_Codes_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INC TAX TABLE CODES:[1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Loc_Tax_Table_Codes_List3": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INC TAX TABLE CODES:[1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "WkSt_Tax_Table_Codes_List4": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INC TAX TABLE CODES:[1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Cnty_Tax_Table_Codes_List5": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INC TAX TABLE CODES:[1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Fed_Number_Of_Exemptions_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "# EXEMPTIONS: [1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "ResSt_Number_Of_Exemptions_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "# EXEMPTIONS: [1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Loc_Number_Of_Exemptions_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "# EXEMPTIONS: [1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "WkSt_Number_Of_Exemptions_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "# EXEMPTIONS: [1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Cnty_Number_Of_Exemptions_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "# EXEMPTIONS: [1]-FED, [2]-RES ST, [3]-LOCAL, [4]-WK ST, [5]-CNTY"
+    },
+    "Fed_Tax_Add_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TX ADD/FIXED,%:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:USE W/PR.LOGT"
+    },
+    "ResSt_Tax_Add_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TX ADD/FIXED,%:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:USE W/PR.LOGT"
+    },
+    "Loc_Tax_Add_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TX ADD/FIXED,%:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:USE W/PR.LOGT"
+    },
+    "WkSt_Tax_Add_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TX ADD/FIXED,%:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:USE W/PR.LOGT"
+    },
+    "Cnty_Tax_Add_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TX ADD/FIXED,%:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:USE W/PR.LOGT"
+    },
+    "Fed_Tax_Amount_Control_List1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TAX AMT CTRL:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(F)ix amt,(P)ct"
+    },
+    "ResSt_Tax_Amount_Control_List2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TAX AMT CTRL:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(F)ix amt,(P)ct"
+    },
+    "Loc_Tax_Amount_Control_List3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TAX AMT CTRL:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(F)ix amt,(P)ct"
+    },
+    "WkSt_Tax_Amount_Control_List4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TAX AMT CTRL:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(F)ix amt,(P)ct"
+    },
+    "Cnty_Tax_Amount_Control_List5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TAX AMT CTRL:[1]-FED,[2]-RES ST,[3]-LOC,[4]-WK ST,[5]-CNTY:(F)ix amt,(P)ct"
+    },
+    "Delete_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DELETE TERM EMPL AFTER END OF YEAR? (Y)es, (N)o"
+    },
+    "Employment_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE STATUS: (A)ctive, (I)nactive, (T)erminated, (D)eceased"
+    },
+    "Minimum_Earnings": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE MINIMUM EARNINGS - TEST FOR VOLUNTARY DEDUCTION - USUALLY 0",
+      "writeOnly": true
+    },
+    "Number_Of_Dependents": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DEPENDENTS"
+    },
+    "Worker_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "EMPLOYEE WORKMAN'S COMP CLASS CODE"
+    },
+    "Bank_Account_Number": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Driver_License": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THIS EMPLOYEE'S DRIVERS LICENSE NUMBER",
+      "writeOnly": true
+    },
+    "Last_Pay_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "LAST PAY RATE",
+      "writeOnly": true
+    },
+    "Hourly_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "HOURLY RATE",
+      "writeOnly": true
+    },
+    "Salary_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SALARY AMOUNT PER PAY PERIOD",
+      "writeOnly": true
+    },
+    "Annual_Pay_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ANNUAL PAY RATE",
+      "writeOnly": true
+    },
+    "Special_Pay_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SPECIAL PAY RATE",
+      "writeOnly": true
+    },
+    "Special_Pay_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "SPECIAL PAY AMOUNT",
+      "writeOnly": true
+    },
+    "Meal_Allowance_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MEAL ALLOWANCE RATE",
+      "writeOnly": true
+    },
+    "Department_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "EMPLOYEE DEPARTMENT CODE"
+    },
+    "Selected_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPLOYEE SELECTED FOR PAY CYCLE"
+    },
+    "Months_To_Next_Review": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF MONTHS TILL NEXT REVIEW"
+    },
+    "Emergency_Contact": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "CONTACT IN CASE OF EMERGENCY"
+    },
+    "Emergency_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "PHONE IN CASE OF EMERGENCY"
+    },
+    "Emergency_Relationship": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "RELATIONSHIP OF EMERGENCY CONTACT"
+    },
+    "Not_Used1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Not_Used2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Not_Used3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Hours_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Hours_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Hours_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Standard_Work_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF STANDARD WORKING HOURS FOR THE PAY PERIOD"
+    },
+    "Union_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER A UNION CODE (SSCNNN): SS = STATE, C = CRAFT, NNN = UNION# (IE LOCAL"
+    },
+    "Total_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL TIME CARD HOURS"
+    },
+    "Check_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TYPE (R)egular, (M)anual, (V)oid"
+    },
+    "Manual_Check_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MANUAL CHECK NUMBER (FOR TIME CARD ENTRY)"
+    },
+    "OT_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "OVERTIME HOURS FOR TIME CARD ENTRY SCREEN"
+    },
+    "Domicile_Address": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE DOMICILE STREET ADDRESS"
+    },
+    "Domicile_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE DOMICILE CITY"
+    },
+    "Domicile_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE DOMICILE STATE"
+    },
+    "Domicile_Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE DOMICILE ZIP CODE"
+    },
+    "Pay_Rate_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE ONE DIGIT PAY RATE CODE FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Employee_Work_Class": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE EMPLOYEE WORK CLASS: 'J'OURNEYMAN/OTHER, 'A'PPRENTICE, 'T'RAINEE"
+    },
+    "ABA_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THIS EMPLOYEE'S ABA NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Bank_Account_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THIS EMPLOYEE'S ACCOUNT TYPE FOR AUTOMATIC DEPOSIT:'C'HECK,'S'AVINGS"
+    },
+    "Wage_Class": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WAGE CLASS CODE FOR THIS EMPLOYEE"
+    },
+    "Certified_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'N' IF THIS EMPLOYEE SHOULD NEVER BE ON CERTIFIED REPORT"
+    },
+    "Billing_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THIS EMPLOYEE'S BILLING CODE"
+    },
+    "I9_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "I9 INFO"
+    },
+    "I9_Expire_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "I9 EXPIRATION DATE"
+    },
+    "EEO_Class_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE EEO CLASSIFICATION CODE"
+    },
+    "CntySDI_Stop_Tax_Flag_List1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STOP TAX CONTROL: 1 - CNTY SDI, 2 - CNTY SUI, 3 - LOCAL SDI, 4 - LOCAL SUI"
+    },
+    "CntySUI_Stop_Tax_Flag_List2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STOP TAX CONTROL: 1 - CNTY SDI, 2 - CNTY SUI, 3 - LOCAL SDI, 4 - LOCAL SUI"
+    },
+    "LocalSDI_Stop_Tax_Flag_List3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STOP TAX CONTROL: 1 - CNTY SDI, 2 - CNTY SUI, 3 - LOCAL SDI, 4 - LOCAL SUI"
+    },
+    "LocalSUI_Stop_Tax_Flag_List4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STOP TAX CONTROL: 1 - CNTY SDI, 2 - CNTY SUI, 3 - LOCAL SDI, 4 - LOCAL SUI"
+    },
+    "Auto_Deposit_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "AUTO-DEPOSIT?  ENTER 'Y' FOR YES, 'N' FOR NO, OR 'P' FOR PRE-NOTIFICATION"
+    },
+    "Burden_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE BURDEN PERCENTAGE FOR THIS EMPLOYEE"
+    },
+    "Prevail_Wage_Fringe_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE AMOUNT PER HOUR FOR PREVAILING WAGE FRINGE BENEFITS",
+      "writeOnly": true
+    },
+    "Pay_Rate_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PERCENTAGE OF PAY RATE TO USE, OR BLANK FOR FULL RATE",
+      "writeOnly": true
+    },
+    "ABA_Number_2": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THIS EMPLOYEE'S 2ND ABA NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "ABA_Number_3": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THIS EMPLOYEE'S 3RD ABA NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "ABA_Number_4": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THIS EMPLOYEE'S 4TH ABA NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "ABA_Number_5": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THIS EMPLOYEE'S 5TH ABA NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Bank_Account_Type_2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THIS EMPLOYEE'S 2ND ACCOUNT TYPE FOR AUTO DEPOSIT:'C'HECK,'S'AVINGS"
+    },
+    "Bank_Account_Type_3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THIS EMPLOYEE'S 3RD ACCOUNT TYPE FOR AUTO DEPOSIT:'C'HECK,'S'AVINGS"
+    },
+    "Bank_Account_Type_4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THIS EMPLOYEE'S 4TH ACCOUNT TYPE FOR AUTO DEPOSIT:'C'HECK,'S'AVINGS"
+    },
+    "Bank_Account_Type_5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THIS EMPLOYEE'S 5TH ACCOUNT TYPE FOR AUTO DEPOSIT:'C'HECK,'S'AVINGS"
+    },
+    "Bank_Account_Number_2": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 2ND CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_3": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 3RD CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_4": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 4TH CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_5": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 5TH CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT",
+      "writeOnly": true
+    },
+    "Auto_Deposit_Flag_2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS FOR 2ND AUTO DEPOSIT ACCT: 'N', 'Y', OR 'P' FOR PRE-NOTIFICATION"
+    },
+    "Auto_Deposit_Flag_3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS FOR 3RD AUTO DEPOSIT ACCT: 'N', 'Y', OR 'P' FOR PRE-NOTIFICATION"
+    },
+    "Auto_Deposit_Flag_4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS FOR 4TH AUTO DEPOSIT ACCT: 'N', 'Y', OR 'P' FOR PRE-NOTIFICATION"
+    },
+    "Auto_Deposit_Flag_5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS FOR 5TH AUTO DEPOSIT ACCT: 'N', 'Y', OR 'P' FOR PRE-NOTIFICATION"
+    },
+    "Auto_Deposit_Allocation": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE AUTO DEPOSIT ALLOCATION METHOD, 'P'ERCENT OR 'F'IXED AMOUNT"
+    },
+    "Auto_Deposit_Rate1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ALLOCATED AUTO DEPOSIT RATE FOR THIS ACCOUNT"
+    },
+    "Auto_Deposit_Rate2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ALLOCATED AUTO DEPOSIT RATE FOR THIS ACCOUNT"
+    },
+    "Auto_Deposit_Rate3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ALLOCATED AUTO DEPOSIT RATE FOR THIS ACCOUNT"
+    },
+    "Auto_Deposit_Rate4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ALLOCATED AUTO DEPOSIT RATE FOR THIS ACCOUNT"
+    },
+    "Auto_Deposit_Rate5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ALLOCATED AUTO DEPOSIT RATE FOR THIS ACCOUNT"
+    },
+    "First_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE FIRST NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Middle_Name": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE MIDDLE NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Last_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE LAST NAME FOR THIS EMPLOYEE",
+      "writeOnly": true
+    },
+    "Occupation": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER THE OCCUPATION"
+    },
+    "Trade": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "ENTER THE EMPLOYEE TRADE"
+    },
+    "Street_Address2": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "EMPLOYEE STREET ADDRESS"
+    },
+    "Domicile_Address2": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE DOMICILE STREET ADDRESS"
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Revision Effective Date"
+    },
+    "Comments": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Revision Comments"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "EMPLOYEE COST CENTER"
+    },
+    "Emp_Foreign": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET IF THE EMPLOYEE IS A FOREIGN CITIZEN"
+    },
+    "Perm_Work_Comp": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET TO INDICATE THE WORK COMP IS PERMANENT"
+    },
+    "Contact_ID": {
+      "type": "integer",
+      "description": "CONTACT IS (KEY TO CONTACTS TABLE)"
+    },
+    "Permanent_Unemployment_State": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PERMANENT UNEMPLOYMENT STATE"
+    },
+    "Wrk_Mobile_ID": {
+      "type": "integer",
+      "description": "PHONE ID FOR WORK MOBILE PHONE"
+    },
+    "Wrk_Ext_ID": {
+      "type": "integer",
+      "description": "PHONE ID FOR WORK EXTENSION"
+    },
+    "Encrypted_Social_Security": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Driver_License": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Bank_Account_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Bank_Account_Number_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Bank_Account_Number_3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Bank_Account_Number_4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "Encrypted_Bank_Account_Number_5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "",
+      "writeOnly": true
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Gross_YTD_Pay_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "FIT_YTD_Pay_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "FICA_YTD_Pay_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "WSIT_YTD_Pay_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "WSDI_YTD_Pay_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "Local_YTD_Pay_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "TotVol_YTD_Pay_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "Net_YTD_Pay_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "RSIT_YTD_Pay_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "RSDI_YTD_Pay_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "COUN_YTD_Pay_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1)GROSS 2)FIT 3)FICA 4)WSIT 5)WSDI 6LOCAL 7TOTVOL 8NET 9RSIT 10RSDI 11COUN",
+      "writeOnly": true
+    },
+    "Gross_QTD_Amounts_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "FIT_QTD_Amounts_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "FICA_QTD_Amounts_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "WSIT_QTD_Amounts_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "WSDI_QTD_Amounts_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "Local_QTD_Amounts_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "TotVol_QTD_Amounts_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "Net_QTD_Amounts_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "RSIT_QTD_Amounts_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "RSDI_QTD_Amounts_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "COUN_QTD_Amounts_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "QUARTER-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "Gross_MTD_Amounts_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "FIT_MTD_Amounts_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "FICA_MTD_Amounts_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "WSIT_MTD_Amounts_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "WSDI_MTD_Amounts_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "Local_MTD_Amounts_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "TotVol_MTD_Amounts_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "Net_MTD_Amounts_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "RSIT_MTD_Amounts_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "RSDI_MTD_Amounts_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "COUN_MTD_Amounts_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "MONTH-TO-DATE EMPLOYEE AMOUNTS",
+      "writeOnly": true
+    },
+    "MTD_EMFICA_Burden_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "MTD_FUI_Burden_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "MTD_RSUI_Burden_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "MTD_WSUI_Burden_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "QTD_EMFICA_Burden_Amount_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "QTD_FUI_Burden_Amount_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "QTD_RSUI_Burden_Amount_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "QTD_WSUI_Burden_Amount_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "YTD_EMFICA_Burden_Amount_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "YTD_FUI_Burden_Amount_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "YTD_RSUI_Burden_Amount_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "YTD_WSUI_Burden_Amount_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "1-4MTD,5-8QTD,9-12YTD 1)EMFICA 2)FUI 3)RSUI 4)WSUI...",
+      "writeOnly": true
+    },
+    "Total_Vacation_Hours_Balance_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE VACATION HOURS BALANCE (1) - TOTAL (2) - YTD",
+      "writeOnly": true
+    },
+    "YTD_Vacation_Hours_Balance_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE VACATION HOURS BALANCE (1) - TOTAL (2) - YTD",
+      "writeOnly": true
+    },
+    "Total_Holiday_Hours_Balance_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE'S HOLIDAYS HOURS BALANCE (1) - TOTAL  (2) - YTD",
+      "writeOnly": true
+    },
+    "YTD_Holiday_Hours_Balance_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE'S HOLIDAYS HOURS BALANCE (1) - TOTAL  (2) - YTD",
+      "writeOnly": true
+    },
+    "Total_Sick_Hours_Balance_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE SICK HOURS BALANCE (1) - TOTAL (2) - YTD",
+      "writeOnly": true
+    },
+    "YTD_Sick_Hours_Balance_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "EMPLOYEE SICK HOURS BALANCE (1) - TOTAL (2) - YTD",
+      "writeOnly": true
+    },
+    "Vacation_Accrual_Control_Code_List1": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "(1) - VACATION ACCRUAL CTL CODE, (2) - HOLIDAY, (3) - SICK LEAVE"
+    },
+    "Holiday_Accrual_Control_Code_List2": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "(1) - VACATION ACCRUAL CTL CODE, (2) - HOLIDAY, (3) - SICK LEAVE"
+    },
+    "SickLeave_Accrual_Control_Code_List3": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "(1) - VACATION ACCRUAL CTL CODE, (2) - HOLIDAY, (3) - SICK LEAVE"
+    },
+    "Control_Flag": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE NO PAY CONTROL FLAG"
+    },
+    "MTD_Employee_401K_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD 401K, (2) QTD 401K, (3) YTD 401K",
+      "writeOnly": true
+    },
+    "QTD_Employee_401K_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD 401K, (2) QTD 401K, (3) YTD 401K",
+      "writeOnly": true
+    },
+    "YTD_Employee_401K_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD 401K, (2) QTD 401K, (3) YTD 401K",
+      "writeOnly": true
+    },
+    "MTD_Cafeteria_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD CAFETERIA, (2) QTD CAFETERIA, (3) YTD CAFETERIA",
+      "writeOnly": true
+    },
+    "QTD_Cafeteria_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD CAFETERIA, (2) QTD CAFETERIA, (3) YTD CAFETERIA",
+      "writeOnly": true
+    },
+    "YTD_Cafeteria_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "(1) MTD CAFETERIA, (2) QTD CAFETERIA, (3) YTD CAFETERIA",
+      "writeOnly": true
+    },
+    "YTD_Medicare": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE MEDICARE YTD",
+      "writeOnly": true
+    },
+    "Employer_Medicare": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYER COST MEDICARE",
+      "writeOnly": true
+    },
+    "EFICA_Temp_FICA_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TEMP CHECK CALC FICA:  (1) - EFICA, (2) - EMED, (3) - RFICA, (4) - RMED",
+      "writeOnly": true
+    },
+    "EMED_Temp_FICA_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TEMP CHECK CALC FICA:  (1) - EFICA, (2) - EMED, (3) - RFICA, (4) - RMED",
+      "writeOnly": true
+    },
+    "RFICA_Temp_FICA_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TEMP CHECK CALC FICA:  (1) - EFICA, (2) - EMED, (3) - RFICA, (4) - RMED",
+      "writeOnly": true
+    },
+    "FMED_Temp_FICA_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TEMP CHECK CALC FICA:  (1) - EFICA, (2) - EMED, (3) - RFICA, (4) - RMED",
+      "writeOnly": true
+    },
+    "QTD_Medicare": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE MEDICARE QTD",
+      "writeOnly": true
+    },
+    "MTD_Medicare": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE MEDICARE MTD",
+      "writeOnly": true
+    },
+    "MTD_Hours_Worked_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "HOURS WORKED: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "QTD_Hours_Worked_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "HOURS WORKED: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "YTD_Hours_Worked_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "HOURS WORKED: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "MTD_Other_Hours_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "OTHER HOURS: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "QTD_Other_Hours_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "OTHER HOURS: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "YTD_Other_Hours_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "OTHER HOURS: 1 - MTD, 2 - QTD, 3 - YTD"
+    },
+    "MTD_Worker_Comp_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "WORKERS COMP AMOUNT: 1 - MTD, 2 - QTD, 3 - YTD",
+      "writeOnly": true
+    },
+    "QTD_Worker_Comp_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "WORKERS COMP AMOUNT: 1 - MTD, 2 - QTD, 3 - YTD",
+      "writeOnly": true
+    },
+    "YTD_Worker_Comp_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "WORKERS COMP AMOUNT: 1 - MTD, 2 - QTD, 3 - YTD",
+      "writeOnly": true
+    },
+    "IT_Total_State_Taxable_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL STATES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "EESDI_Total_State_Taxable_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL STATES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "ERSDI_Total_State_Taxable_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL STATES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "SUI_Total_State_Taxable_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL STATES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "Employee_Liability1_Vacation": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE LIABILITY FOR: [1] VACATION [2] HOLIDAY [3] SICK",
+      "writeOnly": true
+    },
+    "Employee_Liability2_Holiday": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE LIABILITY FOR: [1] VACATION [2] HOLIDAY [3] SICK",
+      "writeOnly": true
+    },
+    "Employee_Liability3_Sick": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPLOYEE LIABILITY FOR: [1] VACATION [2] HOLIDAY [3] SICK",
+      "writeOnly": true
+    },
+    "Employee_Previous_Accrual1_Vacation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PREVIOUS ACCRUAL DATE FOR: [1] VACATION [2] HOLIDAY [3] SICK"
+    },
+    "Employee_Previous_Accrual2_Holiday": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PREVIOUS ACCRUAL DATE FOR: [1] VACATION [2] HOLIDAY [3] SICK"
+    },
+    "Employee_Previous_Accrual3_Sick": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PREVIOUS ACCRUAL DATE FOR: [1] VACATION [2] HOLIDAY [3] SICK"
+    },
+    "IT_Total_County_Taxable_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL COUNTIES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "EESDI_Total_County_Taxable_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL COUNTIES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "ERSDI_Total_County_Taxable_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL COUNTIES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "SUI_Total_County_Taxable_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL COUNTIES 1-IT, 2-EE SDI, 3-ER SDI, 4-SUI",
+      "writeOnly": true
+    },
+    "IT_Total_Local_Taxable_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL LOCALITIES 1-IT, 2-EE SDI, 3-ER SDI,4-SUI",
+      "writeOnly": true
+    },
+    "EESDI_Total_Local_Taxable_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL LOCALITIES 1-IT, 2-EE SDI, 3-ER SDI,4-SUI",
+      "writeOnly": true
+    },
+    "ERSDI_Total_Local_Taxable_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL LOCALITIES 1-IT, 2-EE SDI, 3-ER SDI,4-SUI",
+      "writeOnly": true
+    },
+    "SUI_Total_Local_Taxable_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "YTD TOTAL TAXABLE AMT ACROSS ALL LOCALITIES 1-IT, 2-EE SDI, 3-ER SDI,4-SUI",
+      "writeOnly": true
+    },
+    "MTD_Davis_Bacon_Gross_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM DAVIS-BACON JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "QTD_Davis_Bacon_Gross_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM DAVIS-BACON JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "YTD_Davis_Bacon_Gross_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM DAVIS-BACON JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "MTD_Prevailing_Wage_Gross_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM PREVAILING WAGE JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "QTD_Prevailing_Wage_Gross_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM PREVAILING WAGE JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "YTD_Prevailing_Wage_Gross_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "GROSS FROM PREVAILING WAGE JOBS: 1 - MTD, 2- QTD, 3-YTD",
+      "writeOnly": true
+    },
+    "Total_State_SUTA_Excess": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL STATE SUTA EXCESS",
+      "writeOnly": true
+    },
+    "Total_County_SUTA_Excess": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL COUNTY SUTA EXCESS",
+      "writeOnly": true
+    },
+    "Total_Local_SUTA_Excess": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Employee_Location": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EMPLOYEE'S LOCATION"
+    },
+    "Employee_Picture": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER THE EMPLOYEE'S PICTURE PATH AND FILE NAME"
+    },
+    "Employee_Mobile_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE EMPLOYEE MOBILE PHONE"
+    },
+    "Employee_Fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE EMPLOYEE FAX"
+    },
+    "Employee_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "ENTER THE EMPLOYEE E-MAIL ADDRESS"
+    },
+    "Employee_Telephone_Memo": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "TELEPHONE MEMO"
+    },
+    "Employee_Driver_License_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "DRIVER'S LICENSE STATE/PROVINCE",
+      "writeOnly": true
+    },
+    "Employee_Driver_License_Expire": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DRIVER'S LICENSE EXPIRATION DATE",
+      "writeOnly": true
+    },
+    "Employee_Driver_License_Class": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "DRIVER'S LICENSE CLASS",
+      "writeOnly": true
+    },
+    "Employee_Disabled": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT IF THE EMPLOYEE HAS A DISABILITY",
+      "writeOnly": true
+    },
+    "Employee_Disabled_Note": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE DISABILITY DESCRIPTION",
+      "writeOnly": true
+    },
+    "Employee_FMLA_Eligible": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Select if the employee is eligible for FMLA",
+      "writeOnly": true
+    },
+    "Employee_FMLA_Weeks_Used": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE USED WEEKS FOR FMLA",
+      "writeOnly": true
+    },
+    "Employee_FMLA_Weeks_Rem": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE REMAINING WEEKS FOR FMLA",
+      "writeOnly": true
+    },
+    "Employee_FMLA_AsOfDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE DATE USED TO CALCULATE THE REMAINING WEEKS",
+      "writeOnly": true
+    },
+    "Employee_FMLA_Used": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT IF THE EMPLOYEE IS ACTUALLY TAKING A FMLA ABSENCE",
+      "writeOnly": true
+    },
+    "Employee_FMLA_Start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE START DATE FOR THE FMLA LEAVE",
+      "writeOnly": true
+    },
+    "Employee_FMLA_End": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE END DATE FOR THE FMLA LEAVE",
+      "writeOnly": true
+    },
+    "Employee_Resume": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "EMPLOYEE'S ATTACHED RESUME FILE (FULL PATH, BLANK, OR DI FOR IMAGE)"
+    },
+    "Employee_Application": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "EMPLOYEE'S ATTACHED APPLICATION FILE (FULL PATH, BLANK, OR DI FOR IMAGE)"
+    },
+    "Employee_Transfer_Applicant": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO TRANSFER THE EMPLOYEE TO THE APPLICANT FILE AT YEAR-END"
+    },
+    "Employee_Rehire_Rating": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EMPLOYEE'S REHIRE RATING (0 - 10)"
+    },
+    "Employee_Termination_Reason": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE REASON FOR TERMINATION"
+    },
+    "Desired_Salary": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Enter the desired salary or salary range for this employee",
+      "writeOnly": true
+    },
+    "Relocate": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check if employee is willing to relocate"
+    },
+    "Relocate_Memo": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Enter any relocation notes"
+    },
+    "Travel": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Check box if employee is willing to travel as part of the job"
+    },
+    "Travel_Memo": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Enter any notes regarding willingness to travel"
+    },
+    "Pref_Hours": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Select employee's preferred hours type: Full-time or Part-time"
+    },
+    "Pref_Status": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Enter the employee's preferred status: Permanent, Temporary or Contract"
+    },
+    "Pref_Shift": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Enter the employee's preferred shift: Days or Nights/weekends"
+    },
+    "Employee_FMLA_Incident": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CURRENT FMLA INCIDENT LOG NUMBER",
+      "writeOnly": true
+    },
+    "Emp_Referred": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE PERSON(S) WHO REFERRED THIS EMPLOYEE"
+    },
+    "Hired_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE OPERATOR THAT HIRED THIS EMPLOYEE"
+    },
+    "Hired_By_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE NAME OF THE OPERATOR THAT HIRED THIS EMPLOYEE"
+    },
+    "Employee_Suffix": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER SUFFIX"
+    },
+    "Employee_Place_Birth": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE PLACE OF BIRTH"
+    },
+    "Employee_Citizenship": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE CITIZENSHIP"
+    },
+    "Employee_Security_Stat": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SECURITY STATUS"
+    },
+    "Employee_Veteran_Stat": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELECT THE VETERAN STATUS"
+    },
+    "Employee_New_Vet": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SELEFT IF NEWLY SEPARATED VETERAN"
+    },
+    "Employee_Extension": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE EMPLOYEE'S EXTENSION"
+    },
+    "Scheduling_Status": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE SCHEDULING STATUS OR WINDOW"
+    },
+    "Lst_Equ_Comp": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "LAST QUICK TIME EQUIPMENT COMPANY CODE"
+    },
+    "Lst_Equ_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "LAST QUICK TIME EQUIPMENT CODE"
+    },
+    "Summary_Post_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Summary post flag"
+    },
+    "Apprentice_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Apprentice flag 'Y' or blank"
+    },
+    "Apprentice_ID": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "Apprentice ID"
+    },
+    "Apprentice_Wage_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "Apprentice wage percent"
+    },
+    "Employee_Personal_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "Employee personal email"
+    },
+    "Employee_W4_Two_Jobs_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Employee has two jobs"
+    },
+    "Employee_W4_Dependent_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "W-4 dependent amount claimed annually"
+    },
+    "Employee_W4_Other_Income": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "W-4 other annual income"
+    },
+    "Employee_W4_Other_Deduct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "W-4 other annual deductions"
+    },
+    "Last_Job_Company": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "LAST JOB COMPANY"
+    },
+    "Last_Job_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "LAST JOB DATE"
+    },
+    "Last_Job_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "LAST JOB NUMBER"
+    },
+    "Suppress_Last_Job_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' TO SUPPRESS AUTOMATIC UPDATING OF LAST JOB FIELD IN CHECK CALC"
+    },
+    "Last_Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE LATEST EQUIPMENT CODE FOR THIS EMPLOYEE"
+    },
+    "Last_Equipment_Company": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "LAST EQUIPMENT COMPANY"
+    },
+    "Last_Equipment_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "LAST EQUIPMENT DATE"
+    },
+    "PR_EMPLOYEE_DATES": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/PR_EMPLOYEE_DATES/items",
+        "type": "object",
+        "properties": {
+          "Emp_Date_Key": {
+            "type": "string",
+            "maxLength": 36,
+            "description": "INTERNAL KEY"
+          },
+          "Emp_Date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "DATE"
+          },
+          "Emp_Date_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "DATE TYPE: 'H'ire, 'T'erminate, 'O'ther"
+          },
+          "Emp_Date_Comment": {
+            "type": "string",
+            "maxLength": 250,
+            "description": "DATE COMMENT"
+          }
+        }
+      }
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE"
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD"
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE"
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)"
+          }
+        }
+      }
+    },
+    "PR_RATE_REVISIONS": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/PR_RATE_REVISIONS/items",
+        "type": "object",
+        "properties": {
+          "Rate_Type": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "PR REVISION RATE TYPE"
+          },
+          "System_Key": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "SYSTEM KEY"
+          },
+          "Pay_Type": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "EMPLOYEE PAY TYPE: (H)ourly, (S)alary, (O)vt (salary), (C)ommission"
+          },
+          "Pay_Frequency_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "EMPLOYEE PAY FREQ: (W)eekly, (B)i-wk, (S)emi-mo, (M)onthly"
+          },
+          "Standard_Work_Hours": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "NUMBER OF STANDARD WORKING HOURS FOR THE PAY PERIOD"
+          },
+          "Salary_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "SALARY AMOUNT PER PAY PERIOD",
+            "writeOnly": true
+          },
+          "Hourly_Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "HOURLY RATE",
+            "writeOnly": true
+          },
+          "Annual_Pay_Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ANNUAL PAY RATE",
+            "writeOnly": true
+          },
+          "Effective_Date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Revision Effective Date"
+          },
+          "Comments": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "Revision Comments"
+          },
+          "Operator_Code": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "OPERATOR CODE"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code"
+  ]
+}

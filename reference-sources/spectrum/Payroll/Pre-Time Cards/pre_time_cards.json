@@ -1,0 +1,370 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/v/object/PreTimeCards/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Check_Sequence_Number": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPL/CHECK SEQ NUMBER"
+    },
+    "System_Key": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "TIME CARD SEQUENCE NUMBER - DATE, TIME, TERMINAL ID"
+    },
+    "Check_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE CHECK TYPE - (R)EGULAR OR (M)ANUAL"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE CHECK NUMBER"
+    },
+    "Pay_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "(R)eg,(O)t,(D)b,(V)ac,(H)ol,(S)ick,(C)om,(M)isc,SA,SR,RP,1,2,3, vol code"
+    },
+    "Day_Of_Week": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE DAY: 1 - 7 FOR THE DAY OF THE WEEK, 0 FOR THE PAY PERIOD"
+    },
+    "Union_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE UNION CODE FOR THIS TIME CARD LINE (e.g. WA01C1)"
+    },
+    "Certified_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER A 'Y' IF THIS IS A CERTIFIED JOB OR 'N' IF IT IS NOT CERTIFIED"
+    },
+    "Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE HOURS FOR THIS TIME CARD LINE"
+    },
+    "Pay_Rate_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE PAY RATE CODE: 1 - 9  FOR THE UNION CODE"
+    },
+    "Pay_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE PAY RATE FOR THIS TIME CARD LINE"
+    },
+    "Pay_Extension": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "THE PAY EXTENSION DISPLAYS"
+    },
+    "Department_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "DEPARTMENT CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER FOR THIS TIME CARD LINE"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PHASE NUMBER FOR THIS TIME CARD LINE"
+    },
+    "Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE FOR THIS TIME CARD LINE"
+    },
+    "Burden_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TIME CARD BURDEN BY LINE"
+    },
+    "Worker_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE WORKER'S COMPENSATION CODE FOR THIS LINE"
+    },
+    "Update_Flag": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FLAG FOR PR UPDATE"
+    },
+    "Equipment_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE EQUIPMENT CODE"
+    },
+    "Cost_Category_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE COST CATEGORY CODE"
+    },
+    "Equipment_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EQUIPMENT HOURS FOR THIS TIME CARD LINE"
+    },
+    "Equipment_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE EQUIPMENT RATE FOR THIS TIME CARD LINE"
+    },
+    "Wage_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WAGE CODE FOR THIS TIME CARD LINE"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE BATCH CODE"
+    },
+    "Bill_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE BILLING RATE FOR THIS TIME CARD LINE"
+    },
+    "Equipment_Bill_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE EQUIPMENT BILLING RATE FOR THIS TIME CARD LINE"
+    },
+    "Labor_Bill_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "THE LABOR BILLING CODE"
+    },
+    "Equipment_Bill_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "THE EQUIPMENT BILLING CODE"
+    },
+    "Company_Code_2": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Day_Of_Month": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE TWO DIGIT DAY OF THE MONTH"
+    },
+    "TM_Update_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y = PRE TC LINE UPDATE TO TM, DON'T ALLOW CHANGE OR UPDATE AGAIN"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK STATE FOR THIS TIME CARD LINE"
+    },
+    "Work_County": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK COUNTY FOR THIS TIME CARD LINE"
+    },
+    "Work_Locality": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK LOCALITY FOR THIS TIME CARD LINE"
+    },
+    "Message": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER A MESSAGE OR DESCRIPTION FOR THIS TIME CARD LINE"
+    },
+    "Union_Fringe": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL UNION FRINGE AMOUNT FOR THIS LINE"
+    },
+    "Worker_Comp_Burden": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TIME CARD WORKERS COMP BURDEN AMOUNT"
+    },
+    "Worker_Comp_Deduct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TIME CARD WORKERS COMP DEDUCT AMOUNT"
+    },
+    "PM_Work_Order": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PREVENTIVE MAINTENANCE WORK ORDER NUMBER"
+    },
+    "Equipment_Rate_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DEFAULT EQUIPMENT RATE FROM (F)ULL CHARGE RATE OR (O)PERATING RATE?"
+    },
+    "Certified_Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB FOR THIS TIME CARD LINE (FOR CERTIFIED PAYROLL)"
+    },
+    "Status_Flag": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "STATUS FLAG (CUSTOMIZABLE FIELD)"
+    },
+    "Incentive_Pay_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "INDICATES WHETHER AN INCENTIVE PAY CODE WAS USED"
+    },
+    "Prevailing_Wage_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "RATE FROM UNION/PAY GROUP - USED FOR PREVAILING WAGE CASH FRINGE CALC"
+    },
+    "Repl_Check_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "FLAG INDICATING THE LINE ORIGINATED FROM A REPLACEMENT CHECK ENTRY"
+    },
+    "Union_Fringe_Parts1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Union_Fringe_Parts8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "UNION FRINGE PARTS"
+    },
+    "Crew_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CREW"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE COST CENTER CODE"
+    },
+    "Cash_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CASH COST CENTER"
+    },
+    "Bank_Account": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "BANK ACCOUNT FOR LINE"
+    },
+    "WO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK ORDER NUMBER"
+    },
+    "WO_Equipment": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "WO EQUIPMENT ID"
+    },
+    "WO_Component": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "WO COMPONENT ID"
+    },
+    "SC_Contract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SERVICE CONTRACT NUMBER"
+    },
+    "Control_Code": {
+      "type": "string",
+      "maxLength": 36,
+      "description": "WO / TC CONTROL CODE"
+    },
+    "Billing_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "AVAILABLE FOR BILLING?"
+    },
+    "WO_Labor_Bill_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK ORDER LABOR BILLING CODE"
+    },
+    "TM_Labor_Billing_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "TM LABOR BILLING CODE"
+    },
+    "TM_Labor_Billing_Level": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TM LABOR BILLING LEVEL"
+    },
+    "TM_Equipment_Billing_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "TM EQUIPMENT BILLING CODE"
+    },
+    "TM_Equipment_Billing_Level": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TM EQUIPMENT BILLING LEVEL"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Check_Sequence_Number",
+    "System_Key"
+  ]
+}

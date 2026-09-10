@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ap/v1/object/purchase_orders/data/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ".  Valid company in Spectrum"
+    },
+    "PO_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "If left blank, auto-assign the next P.O. number.  No duplicates"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ".  Valid vendor code must exist in the defined company Status = Active or Inactive"
+    }
+  }
+}

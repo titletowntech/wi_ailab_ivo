@@ -1,0 +1,1029 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "AB_Company_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Account_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 33
+    },
+    "Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 33
+    },
+    "Amt_Paid_Last_Yr_1099": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amt_Paid_Next_Yr_1099": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amt_Paid_This_Yr_1099": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Ins_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Auto_Ins_Effect_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Ins_Expir_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Ins_Override": {
+      "type": "boolean"
+    },
+    "Auto_Ins_Policy_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Auto_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "Auto_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Auto_Ins_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 17
+    },
+    "Bank_ID": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Business_Name_Line_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Business_Name_Line_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Category": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "Check_Stub_Detail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Contact_1_Email_Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "Contact_1_Extension": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Contact_1_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Contact_1_Telephone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Contact_2_Email_Address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "Contact_2_Extension": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5
+    },
+    "Contact_2_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Contact_2_Telephone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Credit_Card_Payable": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25,
+      "writeOnly": true
+    },
+    "Custom_1_Ins_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Custom_1_Ins_Effective_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Ins_Expiration_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Ins_Override": {
+      "type": "boolean"
+    },
+    "Custom_1_Ins_Policy_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Custom_1_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "Custom_1_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_1_Ins_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "Custom_2_Ins_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Custom_2_Ins_Effective_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Ins_Expiration_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Ins_Override": {
+      "type": "boolean"
+    },
+    "Custom_2_Ins_Policy_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Custom_2_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "Custom_2_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_2_Ins_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "Customer_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Default_Payment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "Discount_Days": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Discount_Percent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Dist_Code_Default": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Expense_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Fax_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "First_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "writeOnly": true
+    },
+    "Form_Type_1099": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Gen_Liab_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "GL_Ins_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "GL_Ins_Effective_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Ins_Expiration_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Ins_Override": {
+      "type": "boolean"
+    },
+    "GL_Ins_Policy_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "GL_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GL_Ins_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "Gross_proceeds_to_atty": {
+      "type": "boolean"
+    },
+    "Gross_revenue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Inactive": {
+      "type": "boolean"
+    },
+    "Included_for_Pmt": {
+      "type": "boolean"
+    },
+    "Invoice_Code_1_Default": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Invoice_Code_2_Default": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Last_Auto_Number_Used": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Last_Check": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Last_Check_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Check_Bank_Acct": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Last_Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Inv_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Inv_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Invoice": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Last_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "writeOnly": true
+    },
+    "Last_Yr_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Yr_Amt_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Yr_Disc_Lost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Yr_Disc_Ofrd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Yr_Disc_Takn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Yr_Misc_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Middle_Initial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1
+    },
+    "Misc_Deduction_Rate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction_Withheld": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Amt_Deducted_Last_Yr": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Amt_Deducted_Next_Yr": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Amt_Deducted_This_Yr": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Rate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "Next_Yr_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Yr_Amt_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Yr_Disc_Lost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Yr_Disc_Ofrd": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Yr_Disc_Takn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Next_Yr_Misc_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "One_Invoice_per_Check": {
+      "type": "boolean"
+    },
+    "Onhold_Status": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Open_Payments_by_CC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Outstndg_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Outstndg_Discount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Payment_Days": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Payment_Reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 18,
+      "writeOnly": true
+    },
+    "Pmt_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Days_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Pmt_Discount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Misc_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Retainage_to_Hold": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Retainage_to_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prefilled_Tax_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Prenote_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prenote_Only": {
+      "type": "boolean"
+    },
+    "Receives_Form_1099": {
+      "type": "boolean"
+    },
+    "Receives_Form_T5018": {
+      "type": "boolean"
+    },
+    "Receives_Lien_Waiver": {
+      "type": "boolean"
+    },
+    "Recipient_Account_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "writeOnly": true
+    },
+    "Recipient_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Recipient_Tax_ID_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Recipient_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Retainage_Being_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Second_TIN_Notice": {
+      "type": "boolean"
+    },
+    "Social_Insurance_Number": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Telephone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Title_of_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Umb_Ins_Effective_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umb_Ins_Expir_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umb_Ins_Policy_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Umb_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umb_Ins_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "Umbrella_Ins_Company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Umbrella_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Umbrella_Ins_Override": {
+      "type": "boolean"
+    },
+    "Umbrella_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "Vendor": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Vendor_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Vendor_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Vendor_Tax_Group": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 6
+    },
+    "Work_Comp_Effect_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Work_Comp_Expir_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Work_Comp_Ins_Cmpany": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "writeOnly": true
+    },
+    "Work_Comp_Ins_Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Work_Comp_Ins_Override": {
+      "type": "boolean"
+    },
+    "Work_Comp_Ins_Proof_Req": {
+      "type": "boolean"
+    },
+    "Work_Comp_Ins_Received_Dt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Work_Comp_Policy_Num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Work_Comp_Require_per_Commitment": {
+      "type": "boolean"
+    },
+    "YTD_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Discount_Lost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Discount_Offered": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Discount_Taken": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Misc_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ZIP": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "__custom_fields": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Auto_Ins_Override",
+    "Auto_Ins_Proof_Req",
+    "Auto_Ins_Require_per_Commitment",
+    "Custom_1_Ins_Override",
+    "Custom_1_Ins_Proof_Req",
+    "Custom_1_Ins_Require_per_Commitment",
+    "Custom_2_Ins_Override",
+    "Custom_2_Ins_Proof_Req",
+    "Custom_2_Ins_Require_per_Commitment",
+    "Gen_Liab_Ins_Proof_Req",
+    "GL_Ins_Override",
+    "GL_Ins_Require_per_Commitment",
+    "Gross_proceeds_to_atty",
+    "Inactive",
+    "Included_for_Pmt",
+    "Name",
+    "One_Invoice_per_Check",
+    "Prenote_Only",
+    "Receives_Form_1099",
+    "Receives_Form_T5018",
+    "Receives_Lien_Waiver",
+    "Second_TIN_Notice",
+    "Umb_Ins_Require_per_Commitment",
+    "Umbrella_Ins_Override",
+    "Umbrella_Ins_Proof_Req",
+    "Vendor",
+    "Work_Comp_Ins_Override",
+    "Work_Comp_Ins_Proof_Req",
+    "Work_Comp_Require_per_Commitment"
+  ]
+}

@@ -90,11 +90,12 @@
     .choice-icon { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border: 1px solid var(--cp-border); border-radius: 8px; color: var(--cp-accent); background: var(--cp-accent-soft); }
     .choice-head h2 { margin-bottom: 4px; }
     .choice-head p { margin-bottom: 0; }
-    .customer-picker { padding: 16px 20px; background: var(--cp-bg-elevated); border-bottom: 1px solid var(--cp-border); display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+    .customer-picker { padding: 16px 20px; background: var(--cp-bg-elevated); border-bottom: 1px solid var(--cp-border); display: grid; gap: 10px; }
     .customer-picker select { width: 100%; }
-    .workspace-list { display: grid; }
-    .workspace-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto auto; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--cp-border); }
+    .workspace-list { display: grid; max-height: 336px; overflow-y: auto; }
+    .workspace-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto auto; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--cp-border); cursor: pointer; }
     .workspace-row:last-child { border-bottom: 0; }
+    .workspace-row:hover { background: var(--cp-surface-soft); }
     .workspace-avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; background: var(--cp-surface-soft); border: 1px solid var(--cp-border); font-weight: 700; }
     .workspace-row strong { display: block; }
     .workspace-row small { color: var(--cp-text-muted); }
@@ -107,6 +108,9 @@
     .reference-shell { height: 100%; overflow: auto; background: var(--cp-bg); }
     .reference-bar { min-height: 64px; padding: 10px 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-bg-elevated); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .reference-title { display: flex; align-items: center; gap: 12px; }
+    .tabs { min-height: 48px; padding: 0 24px; display: flex; align-items: end; gap: 24px; border-bottom: 1px solid var(--cp-border); background: var(--cp-surface); }
+    .tab { height: 48px; padding: 0 2px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--cp-text-muted); font-weight: 650; cursor: pointer; }
+    .tab.active { color: var(--cp-accent); border-color: var(--cp-accent); }
     .reference-content { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 32px 0 56px; }
     .reference-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--cp-border); border-radius: 10px; overflow: hidden; margin: 24px 0; }
     .reference-summary .metric { background: var(--cp-surface); }
@@ -227,7 +231,7 @@
     .nav-item.done .nav-index { border-color: var(--cp-success); color: var(--cp-success); }
     .nav-count { font-size: 11px; color: var(--cp-text-muted); }
     .sidebar-foot { margin-top: auto; padding: 16px 20px; border-top: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: 12px; }
-    .main { min-width: 0; min-height: 0; height: 100%; overflow: hidden; display: grid; grid-template-rows: 64px minmax(0, 1fr); }
+    .main { min-width: 0; min-height: 0; height: 100%; overflow: hidden; display: grid; grid-template-rows: 64px 48px minmax(0, 1fr); }
     .topbar { background: var(--cp-bg-elevated); border-bottom: 1px solid var(--cp-border); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; gap: 16px; }
     .breadcrumbs { color: var(--cp-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .breadcrumbs strong { color: var(--cp-text); }
@@ -429,6 +433,7 @@
       .customer-picker { grid-template-columns: 1fr; }
       .workspace-row { grid-template-columns: 40px 1fr auto; }
       .workspace-row .row-meta { display: none; }
+      .workspace-list { max-height: 280px; }
       .reference-summary { grid-template-columns: 1fr; }
       .reference-summary .metric { border-right: 0; border-bottom: 1px solid var(--cp-border); }
       .reference-summary .metric:last-child { border-bottom: 0; }
@@ -500,8 +505,8 @@
       <p class="subtle">Continue a customer onboarding or maintain the reusable IVO contracts that every mapping depends on.</p>
       <div class="workspace-choices">
         <section class="workspace-choice">
-          <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h2>Customer onboardings</h2><p class="subtle">Profile ERP data, approve mappings, and prepare Trimble flows.</p></div></div>
-          <div class="customer-picker"><select id="customerSelect" aria-label="Select customer"><option value="KNA">KNA</option><option value="Northwind">Northwind Construction</option><option value="Contoso">Contoso Infrastructure</option></select><button class="button primary" id="openCustomer">Open customer</button></div>
+          <div class="choice-head"><div class="choice-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h2>Customer onboardings</h2><p class="subtle">Choose a connector, then profile ERP data, approve mappings, and prepare Trimble flows.</p></div></div>
+          <div class="customer-picker"><select id="connectorSelect" aria-label="Select connector"></select></div>
           <div class="workspace-list">
             <div class="workspace-row"><div class="workspace-avatar">K</div><div><strong>KNA</strong><small>Vista ERP · Equipment</small></div><div class="row-meta">5 decisions open<br>71% complete</div><button class="icon-button open-kna" title="Open KNA" aria-label="Open KNA"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
             <div class="workspace-row"><div class="workspace-avatar">N</div><div><strong>Northwind Construction</strong><small>ERP inputs requested</small></div><div class="row-meta">Not started</div><button class="icon-button" disabled title="Inputs required" aria-label="Inputs required"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
@@ -579,6 +584,7 @@
 
   <section class="reference-shell" id="customerObjectWorkspace" hidden>
     <header class="reference-bar"><div class="reference-title"><button class="icon-button back-button" data-back title="Change workspace" aria-label="Change workspace"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button><div><strong id="erpCustomerTitle">KNA ERP tables</strong><small class="subtle" style="display:block">Customer source objects</small></div></div><div class="top-actions"><button class="icon-button theme-toggle" title="Toggle theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button><button class="button primary" id="addErpTable">Add table</button></div></header>
+    <nav class="tabs" aria-label="Customer workspace"><button class="tab" data-workspace-view="overview">Overview</button><button class="tab active" data-workspace-view="sources">Sources &amp; mappings</button><button class="tab" data-workspace-view="flows">Flows</button></nav>
     <main class="reference-content reference-screen" id="erpCatalog">
       <div class="eyebrow"><span id="erpCatalogCustomer">KNA</span> · ERP source</div><h1>ERP Table Objects</h1><p class="subtle">Manage the customer tables, schemas, and source files used to build mappings.</p>
       <div class="reference-summary"><div class="metric good"><div class="metric-value" id="erpTableCount">2</div><div class="metric-label">Table objects</div></div><div class="metric"><div class="metric-value" id="erpRowCount">49.2K</div><div class="metric-label">Source rows</div></div><div class="metric"><div class="metric-value" id="erpColumnCount">202</div><div class="metric-label">Cataloged columns</div></div></div>
@@ -629,6 +635,7 @@
           <button class="button primary" id="buildButton">Generate Trimble draft</button>
         </div>
       </header>
+      <nav class="tabs" aria-label="Customer workspace"><button class="tab" data-workspace-view="overview">Overview</button><button class="tab active" data-workspace-view="sources">Sources &amp; mappings</button><button class="tab" data-workspace-view="flows">Flows</button></nav>
 
       <div class="content">
         <section class="view" id="view-profile">

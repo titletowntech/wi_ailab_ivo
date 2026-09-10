@@ -1,0 +1,1098 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/earning_histories/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": ""
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": ""
+    },
+    "Check_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Check_Date_History_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "PE_Date_History_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Regular_Hours_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Overtime_Hours_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Double_Hours_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vacation_Hours_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Holiday_Hours_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Sick_Hours_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Special_Hours_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Regular_Earnings_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Overtime_Earnings_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Double_Time_Earnings_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vacation_Earnings_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Holiday_Earnings_Amount_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Sick_Earnings_Amount_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Special_Rate_Earnings_Amount_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Earnings_Amount_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Commission_Earnings_Amount_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Piece_Earnings_Amount_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Retro_Pay_Earnings_Amount_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Other_Earnings_Amount_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Truck_Earnings_Amount_List13": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Travel_Earnings_Amount_List14": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Meal_Earnings_Amount_List15": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Adjg_Earnings_Amount_List16": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Federal_Income_Tax_Employee_Tax_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Income_Tax_Employee_Tax_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FICA_Employee_Tax_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Disability_Insurance_Employee_Tax_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Local_Income_Tax_Employee_Tax_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Income_Tax_Employee_Tax_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "County_Employee_Tax_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Disability_Insurance_Employee_Tax_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Federal_Unemployment_Insurance_Employer_Cost_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FICA_Employer_Cost_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Unemployment_Insurance_Employer_Cost_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Unemployment_Insurance_Employer_Cost_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Disability_Insurance_Employer_Cost_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Disability_Insurance_Employer_Cost_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Code_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List3": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List4": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List5": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List6": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Code_List7": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Other_Total_Vol_Deduct_Code_List8": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Vol_Deduct_Amount_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Other_Total_Vol_Deduct_Amount_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Net_Check_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Gross_Earnings": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Union_Fringe_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Federal_Employee_State_List1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Resident_Employee_State_List2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Local_Employee_State_List3": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Work_Employee_State_List4": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "County_Employee_State_List5": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Tax_Medicare_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Cost_Medicare_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Auto_Deposit_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Vol_Deduct_Flag_List1": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List2": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List3": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List4": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List5": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List6": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List7": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Vol_Deduct_Flag_List8": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "If N, then vol. deduction is not included in check amount"
+    },
+    "Resident_EE_Ded_Total_Worker_Comp_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_ER_Burd_Total_Worker_Comp_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_EE_Ded_Total_Worker_Comp_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_ER_Burd_Total_Worker_Comp_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Income_Tax_State_Taxable_Total_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EE_State_Disability_Insurance_State_Taxable_Total_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ER_State_Disability_Insurance_State_Taxable_Total_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Unemployment_Insurance_State_Taxable_Total_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_SDI_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_SDI_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Period_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Period_Number": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Days_Worked": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Bank_Account_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Income_Tax_County_Taxable_Total_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EE_State_Disability_Insurance_County_Taxable_Total_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ER_State_Disability_Insurance_County_Taxable_Total_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Unemployment_Insurance_County_Taxable_Total_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Income_Tax_Local_Taxable_Total_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "EE_State_Disability_Insurance_Local_Taxable_Total_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ER_State_Disability_Insurance_Local_Taxable_Total_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Unemployment_Insurance_Local_Taxable_Total_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Hours1_Regular": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Hours2_Overtime": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Hours3_Double_Time": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Hours4_Special": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Hours5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Hours1_Regular": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Hours2_Overtime": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Hours3_Double_Time": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Hours4_Special": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Hours5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Davis_Bacon_Gross": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Prevailing_Wage_Gross": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Check_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "YTD_Gross": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "YTD_Addon_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "YTD_Tax_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "YTD_Deduction_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "YTD_Net": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Federal_Income_Tax_YTD_Tax_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "FICA_YTD_Tax_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Income_Tax_YTD_Tax_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Resident_State_Disability_Insurance_YTD_Tax_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Income_Tax_YTD_Tax_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Work_State_Disability_Insurance_YTD_Tax_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "County_YTD_Tax_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Local_YTD_Tax_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Medicare_YTD_Tax_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "YTD_Vac_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "YTD_Hol_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "YTD_Sic_Hours": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Vac_Hours_Bal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Hol_Hours_Bal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Sic_Hours_Bal": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "Employee_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "Address_Line1": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "Address_Line2": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": ""
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": ""
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Fed_Filing_Status": {
+      "type": "string",
+      "maxLength": 20,
+      "description": ""
+    },
+    "Fed_Exemptions": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Desc_List1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List2": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List3": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List4": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List5": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List6": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List7": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List8": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List9": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List10": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List11": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Desc_List12": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Addon_Cur_Amt_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_Cur_Amt_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Addon_YTD_Amt_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Desc_List1": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List2": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List3": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List4": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List5": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List6": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List7": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List8": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List9": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List10": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List11": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Desc_List12": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_Cur_Amt_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List5": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List6": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List7": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List8": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List9": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List10": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List11": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Deduct_YTD_Amt_List12": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "Entity_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "Pay_Cycle_Message": {
+      "type": "string",
+      "maxLength": 100,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Check_Number",
+    "Check_Type"
+  ]
+}

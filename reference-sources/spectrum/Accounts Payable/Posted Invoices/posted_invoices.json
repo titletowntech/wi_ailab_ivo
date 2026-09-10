@@ -1,0 +1,799 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/PostedInvoices/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM TYPE (I)nvoice or (C)redit memo"
+    },
+    "Po_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ITEM PURCHASE ORDER NUMBER"
+    },
+    "Invoice_Date_List1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: [1] INV DTE, [2] PO, [3] ENTRY, [4] PAY DUE, [5] DISC DUE"
+    },
+    "PO_Date_List2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: [1] INV DTE, [2] PO, [3] ENTRY, [4] PAY DUE, [5] DISC DUE"
+    },
+    "Entry_Date_List3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: [1] INV DTE, [2] PO, [3] ENTRY, [4] PAY DUE, [5] DISC DUE"
+    },
+    "Pay_Due_Date_List4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: [1] INV DTE, [2] PO, [3] ENTRY, [4] PAY DUE, [5] DISC DUE"
+    },
+    "Discount_Due_Date_List5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATES: [1] INV DTE, [2] PO, [3] ENTRY, [4] PAY DUE, [5] DISC DUE"
+    },
+    "Tran_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "SYSTEM ASSIGNED FOR UNIQUENESS - NOT USED (DETERMINED ON 1/5/89)"
+    },
+    "Selection_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PAYMENT SELECTION STATUS FLAG"
+    },
+    "Not_Used_A": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "NOT USED(CONSTRUCTION)(DETERMINED ON 1/5/89jch)"
+    },
+    "Discount_Eligible_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNT ELIGIBLE AMOUNT"
+    },
+    "Invoice_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE OR CREDIT MEMO AMOUNT"
+    },
+    "Check_Number_List1": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Check_Number_List2": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Check_Number_List3": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Check_Number_List4": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Amount_Paid_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNTS PAID FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Amount_Paid_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNTS PAID FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Amount_Paid_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNTS PAID FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Amount_Paid_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNTS PAID FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "PO_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "HAS THIS INVOICE UPDATED A PURCHASE ORDER"
+    },
+    "Discount_Taken_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNTS TAKEN FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Taken_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNTS TAKEN FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Taken_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNTS TAKEN FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Taken_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNTS TAKEN FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "AP_Post_Flag_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "AP_Post_Flag_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "AP_Post_Flag_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "AP_Post_Flag_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Payment_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL AMOUNT OF ALL PAYMENTS FOR THIS ITEM",
+      "writeOnly": true
+    },
+    "Discount_Total": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL AMOUNT OF ALL DISCOUNTS FOR THIS ITEM"
+    },
+    "Payment_Number": {
+      "type": "string",
+      "description": "PAYMENT NUMBER - USED TO ADD PAYMENT TO HISTORY"
+    },
+    "Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER ANY REMARKS OR DESCRIPTION FOR THIS INVOICE"
+    },
+    "AP_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE ACCOUNTS PAYABLE G/L CODE (E.G., TRADE, SUBCONTRACTOR, RETENTION"
+    },
+    "Retention_Paid_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION PAID UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Retention_Paid_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION PAID UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Retention_Paid_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION PAID UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Retention_Paid_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION PAID UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Retention": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "RETENTION AMOUNT"
+    },
+    "Discount_Amount_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT AMOUNT UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Amount_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT AMOUNT UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Amount_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT AMOUNT UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Discount_Amount_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT AMOUNT UP TO 4 SEPARATE PARTIAL PAYMENTS"
+    },
+    "Retention_Check_List1": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 RETENTION PARTIAL PAYMENTS"
+    },
+    "Retention_Check_List2": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 RETENTION PARTIAL PAYMENTS"
+    },
+    "Retention_Check_List3": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 RETENTION PARTIAL PAYMENTS"
+    },
+    "Retention_Check_List4": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR UP TO 4 RETENTION PARTIAL PAYMENTS"
+    },
+    "Post_Flag_List1": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE RETENTION PAYMENTS"
+    },
+    "Post_Flag_List2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE RETENTION PAYMENTS"
+    },
+    "Post_Flag_List3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE RETENTION PAYMENTS"
+    },
+    "Post_Flag_List4": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "POST TO A/P FLAG FOR UP TO 4 SEPARATE RETENTION PAYMENTS"
+    },
+    "Total_Retention_Payments": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL AMOUNT OF ALL RETENTION PAYMENTS FOR THIS ITEM",
+      "writeOnly": true
+    },
+    "Total_Retention_Discount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TOTAL AMOUNT OF ALL RETENTION DISCOUNTS FOR THIS ITEM"
+    },
+    "Subcontract_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SUBCONTRACT JOB NUMBER"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE CHECK NUMBER FOR THE PRE-PAID CHECK"
+    },
+    "Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE CHECK DATE FOR THE PRE-PAID CHECK"
+    },
+    "Check_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE CHECK AMOUNT FOR THE PRE-PAID CHECK"
+    },
+    "Cash_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE PRE-PAID G/L CASH ACCOUNT CODE"
+    },
+    "Subcontract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CONTRACT NUMBER"
+    },
+    "Remarks_List1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE PRINTED ON THE REMITTANCE REPORT"
+    },
+    "Remarks_List2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE PRINTED ON THE REMITTANCE REPORT"
+    },
+    "Remarks_List3": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE PRINTED ON THE REMITTANCE REPORT"
+    },
+    "Subcontract_Job_Company": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "COMPANY CODE FOR VN.SCJOB"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Currency_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Currency code"
+    },
+    "Exchange_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+      "description": "Currency exchange rate"
+    },
+    "VAT_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VALUE ADDED TAX CODE"
+    },
+    "Total_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT TOTAL AMOUNT"
+    },
+    "Retention_VAT_Amt": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT RETENTION AMOUNT"
+    },
+    "Total_VAT_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT TOTAL PAID"
+    },
+    "Retention_VAT_Paid": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "VAT RETENTION PAID"
+    },
+    "Pay_Loc_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "Payment Location Code"
+    },
+    "Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BATCH CODE"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CONTRACT NUMBER"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE STATUS"
+    },
+    "Year": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "THE GL FISCAL YEAR"
+    },
+    "Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "THE GL FISCAL PERIOD"
+    },
+    "Retention_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE RETENTION AMOUNT"
+    },
+    "Gl_Distribution_Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER ANY REMARKS OR DESCRIPTION FOR THIS INVOICE"
+    },
+    "Vendor_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE VENDOR NAME"
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 1"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "VENDOR ADDRESS 2"
+    },
+    "Address_3": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "VENDOR ADDRESS 3"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "VENDOR STATE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR ZIP CODE"
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "SERVER DATE STAMP WHEN THE INVOICE IS MADE"
+    },
+    "Time_Stamp": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "SERVER TIME STAMP WHEN THE INVOICE IS MADE"
+    },
+    "Fiscal_Date_List3_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR FOR DATE LIST 3"
+    },
+    "Fiscal_Date_List3_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD FOR DATE LIST 3"
+    },
+    "Card_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Sub-account card number"
+    },
+    "Back_Charge_Subcontract": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Back charge subcontract"
+    },
+    "Entered_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Entered-by operator"
+    },
+    "Gl_Distribution_Payment_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Progress billing number"
+    },
+    "VAT_Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "VAT TAX PERCENT"
+    },
+    "VAT_Override": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VAT OVERRIDE"
+    },
+    "Invoice_Details": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/InvoiceDetails/cache.json",
+        "type": "object",
+        "properties": {
+          "Sequence": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "SEQUENCE NUMBER"
+          },
+          "GL_Distribution_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "G/L DISTRIBUTION ACCOUNT CODE (FROM A/P DATA ENTRY)"
+          },
+          "Debit_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "DEBIT AMOUNT"
+          },
+          "Credit_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "CREDIT AMOUNT"
+          },
+          "Job_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+          },
+          "Phase_Code": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+          },
+          "Cost_Type": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COST TYPE CODE (UP TO 3 LETTERS OR NUMBERS)"
+          },
+          "Remarks": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "ENTER THE REMARKS FOR THIS LINE ITEM"
+          },
+          "Equipment_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE EQUIPMENT CODE"
+          },
+          "Equipment_Category": {
+            "type": "string",
+            "maxLength": 4,
+            "description": "ENTER THE EQUIPMENT CATEGORY"
+          },
+          "Company_Code_2": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE COMPANY CODE"
+          },
+          "This_Company_GL": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "ENTER THE G/L ACCOUNT CODE FOR THIS LINE ITEM TO BE POSTED TO THIS COMPANY"
+          },
+          "Other_Company_GL": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "ENTER THE G/L ACCOUNT CODE FOR THIS LINE ITEM TO BE POSTED TO OTHER COMPANY"
+          },
+          "Unit_Of_Measure": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ENTER THE UNIT OF MEASURE"
+          },
+          "Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE QUANTITY"
+          },
+          "Use_Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ENTER THE CODE FOR THIS USE TAX"
+          },
+          "Tax_Extension": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "USE TAX EXTENSION AMOUNT FOR THIS LINE (CALCULATED)"
+          },
+          "Tax_GL_Account": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "ENTER THE G/L ACCOUNT NUMBER FOR THIS USE TAX"
+          },
+          "PM_Work_Order": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "PREVENTIVE MAINTENANCE WORK ORDER NUMBER"
+          },
+          "Tax_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ENTER THE USE TAX CODE FOR THIS LINE, IF ANY"
+          },
+          "Taxable_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "IS THIS DETAIL LINE TAXABLE?  (Y OR N)"
+          },
+          "Tax_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE LINE TAX AMOUNT"
+          },
+          "Tax_Percent": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "ENTER THE LINE TAX %"
+          },
+          "Bid_Item_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE REVENUE BID ITEM NUMBER"
+          },
+          "Reg_Subcontractor_Worked_Hours1": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Ovt_Subcontractor_Worked_Hours2": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Dbl_Subcontractor_Worked_Hours3": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Reg_Subcontractor_Worked_Ext1": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS EXTENSIONS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Ovt_Subcontractor_Worked_Ext2": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS EXTENSIONS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Dbl_Subcontractor_Worked_Ext3": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE SUBCONTRACTOR WORKED HOURS EXTENSIONS: (1) REG, (2) OVT, (3) DBL"
+          },
+          "Subcontractor_Message": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "ENTER THE SUBCONTRACTOR'S WORKER NAME OR OTHER INFORMATION"
+          },
+          "Labor_Bill_Rate_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER THE SUBCONTRACTOR TIME & MATERIAL LABOR BILLING RATE CODE"
+          },
+          "Cost_Center": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "COST CENTER CODE"
+          },
+          "WO_Number": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "WORK ORDER NUMBER"
+          },
+          "Item_Code": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "ITEM CODE"
+          },
+          "Item_Desc": {
+            "type": "string",
+            "maxLength": 35,
+            "description": "ITEM DESCRIPTION"
+          },
+          "WO_Equipment": {
+            "type": "string",
+            "maxLength": 8,
+            "description": "WORK ORDER EQUIPMENT ID"
+          },
+          "WO_Component": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "WORK ORDER COMPONENT ID"
+          },
+          "SC_Contract": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "ENTER SERVICE CONTRACT"
+          },
+          "Control_Code": {
+            "type": "string",
+            "maxLength": 36,
+            "description": "CONTROL CODE"
+          },
+          "WO_Unit_Price": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "DEFAULT UNIT PRICE"
+          },
+          "Unit_Price": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+            "description": "ENTER THE UNIT PRICE FOR THIS PHASE"
+          },
+          "Current_Bill_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CURRENT QUANTITY TO BE BILLED FOR THIS PHASE"
+          },
+          "Current_Bill_Amount": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CURRENT AMOUNT TO BE BILLED FOR THIS PHASE"
+          },
+          "Quantity_Billed_To_Date": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": "ENTER THE QUANTITY BILLED TO DATE FOR THIS PHASE"
+          },
+          "Amount_Billed_To_Date": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+            "description": "ENTER THE AMOUNT BILLED TO DATE FOR THIS PHASE"
+          },
+          "Estimated_Quantity": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE TOTAL ESTIMATED QUANTITY FOR THIS PHASE"
+          },
+          "Estimated_Bid": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE TOTAL ESTIMATED BID AMOUNT FOR THIS PHASE"
+          },
+          "Retention_Flag": {
+            "type": "string",
+            "maxLength": 1,
+            "description": "ENTER 'Y' IF THIS LINE IS SUBJECT TO RETAINAGE, 'N' IF NOT"
+          },
+          "Currency_Code": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "Currency code"
+          },
+          "Exchange_Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+            "description": "Currency exchange rate"
+          },
+          "PO_Line_Sequence": {
+            "type": "string",
+            "maxLength": 14,
+            "description": "PO Line Sequence"
+          },
+          "Accrued_Cost": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "Accrued Cost"
+          },
+          "Accrued_Cost_Exchange_Rate": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,6})?$",
+            "description": "Accrued cost exchange rate"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Invoice_Number",
+    "Invoice_Type_Code"
+  ]
+}

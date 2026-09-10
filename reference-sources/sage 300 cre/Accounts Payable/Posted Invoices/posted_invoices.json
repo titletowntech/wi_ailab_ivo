@@ -1,0 +1,905 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "Accounting_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Appl_of_Origin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "Batch": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Batch_Source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Created_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Date_Received": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Discount_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Discount_Lost": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Discount_Offered": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Discount_Taken": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "DP_Map_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8
+    },
+    "Due_Back_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Included_for_Pmt": {
+      "type": "boolean"
+    },
+    "Invoice": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "Invoice_Code_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Invoice_Code_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Invoice_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Invoice_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Invoice_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Journal": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Misc_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction_Applied": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Misc_Deduction2_Deducted": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Onhold_Status": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Payment_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Payment_Memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60,
+      "writeOnly": true
+    },
+    "Pending_Invoice": {
+      "type": "boolean"
+    },
+    "Pmt_Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Disc_to_Apply": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Misc_Deduction_to_Deduct": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Retainage_to_Hold": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pmt_Retainage_to_Pay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Retainage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Retainage_Held": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Retainage_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Run": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Sequence": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Session": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Smry_Payee_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 33
+    },
+    "Smry_Payee_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 33
+    },
+    "Smry_Payee_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Smry_Payee_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Smry_Payee_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4
+    },
+    "Smry_Payee_ZIP": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Tax": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tax_Paid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Dist_Line_Items": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "Accounts_Payable_Account": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25
+          },
+          "Allocation_Name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Amount_Paid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Approved": {
+            "type": "boolean"
+          },
+          "Authorization": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Bank_Account": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Category": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3
+          },
+          "Commitment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Commitment_Line_Item": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "Completed": {
+            "type": "boolean"
+          },
+          "Cost_Code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15,
+            "description": "12 characters plus up to 3 punctuation characters"
+          },
+          "Credit_Card_ID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "writeOnly": true
+          },
+          "Date_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Default_Payment_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "Discount_Lost": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Discount_Offered": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Discount_Taken": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Dist_Code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Dist_Seq": {
+            "type": "integer"
+          },
+          "Draw": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "EQ_Cost_Code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15,
+            "description": "12 characters plus up to 3 punctuation characters"
+          },
+          "Equipment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Exempt_1099": {
+            "type": "boolean"
+          },
+          "Expense_Account": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25
+          },
+          "Extra": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Final_Lien_Waiver": {
+            "type": "boolean"
+          },
+          "Included_for_Pmt": {
+            "type": "boolean"
+          },
+          "Job": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 12
+          },
+          "Joint_Payee": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "MeterOdometer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Deduction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Deduction_Applied": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Deduction_Credit_Acct": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25
+          },
+          "Misc_Deduction2_Deducted": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Deduction2_Percent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Entry_1": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Misc_Entry_2": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Misc_Entry_Units_1": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Misc_Entry_Units_2": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Onhold_Status": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "Operator_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "PM_Charge_Date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PM_Charge_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "PM_Chargeback": {
+            "type": "boolean"
+          },
+          "PM_Chargeback_Description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 30
+          },
+          "PM_Item_ID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "PM_Lease": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "PM_Lease_Revision_Num": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "PM_Markup_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PM_Markup_Charge_Type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "PM_Markup_Percent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PM_Property": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "PM_Tenant": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "PM_Unit": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Pmt_Amount": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pmt_Disc_to_Apply": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pmt_Misc_Deduction_to_Deduct": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pmt_Retainage_to_Hold": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pmt_Retainage_to_Pay": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Post_Cond_Lien_Waiver_Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Post_Uncond_Lien_Wvr_Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Retainage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Retainage_Held": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Retainage_Paid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Retainage_Payable_Account": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 25
+          },
+          "Row_ID": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 36
+          },
+          "Row_Version": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Secondary_Vendor_Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Sel_Cond_Lien_Waiver_Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Sel_Uncond_Lien_Waiver_Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Standard_Item": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 10
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20
+          },
+          "Tax": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tax_Group": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6
+          },
+          "Tax_Liability": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tax_Liability_Accounted": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tax_Paid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Time_Stamp": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Unit_Cost": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Units": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Upgrade_Flags": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "Approved",
+          "Completed",
+          "Dist_Seq",
+          "Exempt_1099",
+          "Final_Lien_Waiver",
+          "Included_for_Pmt",
+          "PM_Chargeback"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Included_for_Pmt",
+    "Invoice",
+    "Pending_Invoice",
+    "Vendor"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/wo/v1/object/work_order_sites/add.json",
+  "title": "Work Order Sites Add Action Schema",
+  "description": "Schema for adding a new Work Order Sites record.",
+  "type": "object",
+  "properties": {}
+}

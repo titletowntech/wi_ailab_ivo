@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage100.si.ryvit.com/pr/v1/object/daily_payrolls/add.json",
+  "title": "Daily Payrolls Add Action Schema",
+  "description": "Schema for adding a new Daily Payrolls record.",
+  "type": "object",
+  "properties": {}
+}

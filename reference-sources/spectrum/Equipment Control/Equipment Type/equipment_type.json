@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/equipment_types/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Equipment_Type": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "Equipment_Type_Description": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "GL_Debit_Depreciation": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "GL_Credit_Account": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "GL_Debit_Licensing": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "GL_Credit_Licensing": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "GL_Debit_Insurance": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "GL_Credit_Insurance_Account": {
+      "type": "string",
+      "maxLength": 12
+    },
+    "Equipment_Type_Class": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Schedule_Move": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_Attachable": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_Exclusion": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_WC_Tracking": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_Attrib_Tracking": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_Comp_Tracking": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_Stat_Tracking": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "Equipment_Type_HWeek": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$"
+    },
+    "Equipment_Type_MWeek": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$"
+    },
+    "Equipment_Type_KWeek": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$"
+    },
+    "Hilti_OnTrack": {
+      "type": "string",
+      "maxLength": 1
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Equipment_Type"
+  ]
+}

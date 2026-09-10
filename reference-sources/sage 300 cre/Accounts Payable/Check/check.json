@@ -1,0 +1,193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/Check/cache.json",
+  "type": "object",
+  "properties": {
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Payment_ID": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Old_Payment_ID": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Vendor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Associated_Check": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Smry_Payee_Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Smry_Payee_Address_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Smry_Payee_Address_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Smry_Payee_City": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Smry_Payee_State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Smry_Payee_ZIP": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Joint_Payee": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Appl_of_Origin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Batch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Batch_Source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Location": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Map_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Run": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Sequence": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Bank_Account",
+    "Check"
+  ]
+}

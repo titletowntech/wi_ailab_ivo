@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ar/v1/object/unposted_cash_receipts/change.json",
+  "title": "Unposted Cash Receipts Change Action Schema",
+  "description": "Schema for updating an existing Unposted Cash Receipts record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

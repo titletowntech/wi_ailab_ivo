@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.SI.ryvit.com/sage300/v1/object/ApnInvoiceBatch/cache.json",
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Amount_Posted": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Application_of_Origin": {
+      "type": "string",
+      "maxLength": 3
+    },
+    "Batch": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Batch_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Batch_Source": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "Batch_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Location": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "Items": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Items_Posted": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Source_Description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Application_of_Origin",
+    "Batch",
+    "Batch_Source",
+    "DP_Location"
+  ]
+}

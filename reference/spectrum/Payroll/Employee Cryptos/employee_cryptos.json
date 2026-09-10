@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/employee_cryptos/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE    "
+    },
+    "Social_Security": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "EMPLOYEE SOCIAL SECURITY NUMBER       ",
+      "writeOnly": true
+    },
+    "Driver_License": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THIS EMPLOYEE'S DRIVERS LICENSE NUMBER               ",
+      "writeOnly": true
+    },
+    "Bank_Account_Number": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT             ",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_2": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 2ND CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT         ",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_3": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 3RD CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT         ",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_4": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 4TH CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT         ",
+      "writeOnly": true
+    },
+    "Bank_Account_Number_5": {
+      "type": "string",
+      "maxLength": 17,
+      "description": "ENTER THIS EMPLOYEE'S 5TH CHECKING ACCOUNT NUMBER FOR AUTOMATIC DEPOSIT         ",
+      "writeOnly": true
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Social_Security",
+    "Driver_License",
+    "Bank_Account_Number",
+    "Bank_Account_Number_2",
+    "Bank_Account_Number_3",
+    "Bank_Account_Number_4",
+    "Bank_Account_Number_5"
+  ]
+}

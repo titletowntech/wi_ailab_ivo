@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/ShipVias/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Ship_Via_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "SHIP VIA CODE"
+    },
+    "Ship_Via_Description": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "SHIP VIA DESCRIPTION"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Ship_Via_Code"
+  ]
+}

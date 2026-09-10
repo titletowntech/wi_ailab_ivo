@@ -1,0 +1,485 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/jobs/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PROPOSED WORK ORDER JOB/SITE NUMBER"
+    },
+    "Master_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE MASTER JOB NUMBER"
+    },
+    "Division": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "THE DIVISION CODE ALLOWS YOU TO ASSOCIATE SEVERAL JOBS TO ONE DIVISION"
+    },
+    "Job_Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER A JOB DESCRIPTION FOR THIS JOB"
+    },
+    "Address_1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE FIRST LINE OF THE ADDRESS FOR THIS JOB"
+    },
+    "Address_2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE SECOND LINE OF THE ADDRESS FOR THIS JOB"
+    },
+    "City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE CITY FOR THIS JOB (UP TO 15 CHARACTERS)"
+    },
+    "State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE 2 CHARACTER STATE CODE"
+    },
+    "Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOBSITE ZIP CODE (UP TO 10 CHARACTERS)"
+    },
+    "Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER IN THE PHONE NUMBER FOR THIS JOB"
+    },
+    "Superintendent": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER IN THE JOB SUPERINTENDENT"
+    },
+    "Estimator": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER IN THE ESTIMATOR FOR THIS JOB"
+    },
+    "Certified_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS JOB CERTIFIED? (Y/N)"
+    },
+    "Contract_Number": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER IN THE CONTRACT NUMBER FOR THIS JOB"
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE JOB STATUS CODE ('A' - ACTIVE, 'I' - INACTIVE, 'C' - COMPLETE)"
+    },
+    "Total_Units": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL UNITS (e.g. sq ft) FOR THE JOB.  THE COST/UNIT IS REPORTED"
+    },
+    "Unit_of_Measure": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE DESCRIPTION (e.g. sq ft) FOR THE JOB UNITS"
+    },
+    "Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ACTUAL COMPLETION DATE"
+    },
+    "Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ACTUAL START DATE"
+    },
+    "Est_Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ESTIMATED COMPLETION DATE"
+    },
+    "Est_Start_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE ESTIMATED START DATE"
+    },
+    "Payroll_OH_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PAYROLL OVERHEAD PERCENTAGE FOR THIS JOB"
+    },
+    "OH_Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PHASE CODE FOR THE OVERHEAD AMOUNT"
+    },
+    "OH_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COST TYPE FOR THE OVERHEAD AMOUNT"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CUSTOMER CODE"
+    },
+    "Index_Variable": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SYSTEM UPKEPT INDEX VAR"
+    },
+    "Index_Variable_2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SYSTEM UPKEPT INDEX VAR"
+    },
+    "Burden_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER Y OR N FOR WHETHER YOU WANT BURDENS POSTED FROM PAYROLL"
+    },
+    "Burden_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PAYROLL PERCENTAGE FOR THIS JOB"
+    },
+    "Burden_Phase": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PAYROLL PHASE CODE"
+    },
+    "Burden_Cost_Type": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE PAYROLL COST TYPE"
+    },
+    "Job_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB  TYPE (UP TO 10 CHARACTERS)"
+    },
+    "Entered_Projected_Cost": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ENTERED PROJECTED COST"
+    },
+    "Original_Contract": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ORIGINAL CONTRACT AMOUNT FOR THIS JOB (DOES NOT INCLUDE CHANGES)"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE FOR THIS JOB"
+    },
+    "Job_Site_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE JOB SITE PHONE NUMBER"
+    },
+    "Entered_Percent_Complete": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE JOB % COMPLETE"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS A TAXABLE JOB ?  (Y OR N)"
+    },
+    "Wage_Rate_Level": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE WAGE RATE LEVEL NUMBER (1 - 9)"
+    },
+    "Work_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE WORKER'S COMPENSATION CODE FOR THIS JOB"
+    },
+    "Price_Method_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER PRICE METHOD: (F)IXED PRICE, (T)&M, OR (U)NIT PRICE"
+    },
+    "Pre_TC_Burden_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PERCENTAGE TO BE USED TO ESTIMATE PRE-TIME CARD BURDENS"
+    },
+    "Phase_Display_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE PHASE CODE DISPLAY MASK FOR THIS JOB"
+    },
+    "Major_Group_Start": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MAJOR GROUP START POSITION FOR THIS JOB"
+    },
+    "Major_Group_End": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MAJOR GROUP END POSITION FOR THIS JOB"
+    },
+    "Minor_Group_Start": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MINOR GROUP START POSITION FOR THIS JOB"
+    },
+    "Minor_Group_End": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MINOR GROUP END POSITION FOR THIS JOB"
+    },
+    "Fax_Phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE FAX NUMBER FOR THIS JOB"
+    },
+    "PR_OH_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE P/R OVERHEAD TYPE - (P)ERCENT, (A)MOUNT/HOUR OR BLANK FOR NONE"
+    },
+    "PR_OH_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PAYROLL OVERHEAD AMOUNT/HOUR FOR THIS JOB"
+    },
+    "Job_Oh_Batch_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE BATCH CODE FOR JOB OVERHEAD ALLOCATION"
+    },
+    "Wage_Code_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'*' IF ANY WAGE CODES HAVE BEEN SET UP FOR THIS JOB, OTHERWISE BLANK"
+    },
+    "Work_State_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK STATE TAX CODE FOR DEFAULT IN TIME CARD ENTRY"
+    },
+    "Work_County_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK COUNTY TAX CODE FOR DEFAULT IN TIME CARD ENTRY"
+    },
+    "Work_Local_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK LOCAL TAX CODE FOR DEFAULT IN TIME CARD ENTRY"
+    },
+    "Pay_Group": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE PAY GROUP FOR THIS JOB"
+    },
+    "Project_Manager": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER IN THE PROJECT MANAGER FOR THIS JOB"
+    },
+    "Earned_Calc_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE EARNED CALCULATION: (P)ERCENT, (B)ILLED, OR (C)OST"
+    },
+    "Under_Billed": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE UNBILLED AMOUNT"
+    },
+    "Cost_Markup_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PERCENTAGE FOR THE COST MARKUP"
+    },
+    "Tax_Class_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE TAX CLASS CODE"
+    },
+    "Auto_Ot_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DO YOU WANT AUTO OVERTIME CALCULATION? (Y/N)"
+    },
+    "Ot_Over_Hrs": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER OVERTIME CUTOFF HOURS"
+    },
+    "Dt_Over_Hrs": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER DOUBLE TIME CUTOFF HOURS"
+    },
+    "Period_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'D' FOR PER DAY OR 'P' FOR PER PAY PERIOD"
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODE (1 - BELOW DOLLAR LIMIT, 2- IF ABOVE DOLLAR)"
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE APPROVAL ROUTING CODE (1 - BELOW DOLLAR LIMIT, 2- IF ABOVE DOLLAR)"
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE APPROVAL ROUTING LIMIT"
+    },
+    "Standard_Phase_Category": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE STANDARD PHASE CATEGORY OR WINDOW TO SELECT"
+    },
+    "Track_Prevailing_Wage": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK IF THIS IS A PREVAILING WAGE JOB"
+    },
+    "Track_Davis_Bacon": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK IF THIS IS A DAVIS-BACON JOB"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Projected_Complete_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "PROJECTED COMPLETE DATE"
+    },
+    "Latitude": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+      "description": "LATITUDE FOR GLOBAL POSITIONING"
+    },
+    "Longitude": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+      "description": "LONGITUDE FOR GLOBAL POSITIONING"
+    },
+    "Create_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER WHEN THE NEW JOB IS ADDED TO COMPANY"
+    },
+    "WO_Site": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK ORDER SITE CODE"
+    },
+    "Comment": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "COMMENTS"
+    },
+    "Certified_Project_ID": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "CERTIFIED PROJECT ID"
+    },
+    "Certified_Week_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CERTIFIED WEEK NUMBER TYPE"
+    },
+    "Lock_Revenue_Entry": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "LOCK REVENUE ENTRY FLAG"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "__custom_objects": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "#/properties/USER_DEFINED_FIELDS/items",
+        "type": "object",
+        "properties": {
+          "User_Def_Sequence": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "ENTER THE USER-DEFINED FIELD SEQUENCE                                           "
+          },
+          "Value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 127,
+            "description": "Value of the user defined Field"
+          },
+          "Prompt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 20,
+            "description": "ENTER A PROMPT FOR THIS USER-DEFINED ALPHA FIELD                                "
+          },
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 6,
+            "description": "SEQUENCE                                                                        "
+          },
+          "Display_Mask": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 27,
+            "description": "ENTER A DISPLAY MASK FOR THIS USER-DEFINED AMOUNT FIELD (I.E. 8,2-)             "
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job_Number"
+  ]
+}

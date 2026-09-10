@@ -82,6 +82,14 @@ Secondary driver: existing customers are on an **old format**; migrating them is
 - **Sage 100 / 300** — also via App Xchange today, but Eric would consider moving off it eventually. Not now.
 - Non-connected ERPs are built entirely outside App Xchange.
 
+> **Update, Sep 9 2026 (Cody, not from the transcript):** IVO is currently connected to
+> **five** ERPs through App Xchange — Vista, Spectrum, Foundation, Sage 100 Contractor, and
+> Sage 300 CRE. Foundation was not mentioned in the July 31 meeting, and the "Sage 100 / 300"
+> line above resolves to Sage 100 Contractor and Sage 300 CRE. Documentation for the three
+> newly named systems is still being gathered; no reference material is captured for them
+> yet. See [Connected source systems](../.claude/skills/appxchange-flow-design/references/connector-capabilities.md)
+> for the current state.
+
 ---
 
 ## 3. Known traps (from IVO's experience)

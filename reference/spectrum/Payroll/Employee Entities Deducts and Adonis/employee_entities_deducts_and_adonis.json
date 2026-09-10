@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/empl_ent_deducts_addons/cache.json",
+  "title": "Employee Entities Deductions and Add-ons Cache (Extended)",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company code identifier"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "Employee code identifier"
+    },
+    "Entity_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Entity code identifier"
+    },
+    "Vol_Deduct_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Voluntary deduction code"
+    },
+    "Vol_Deduct_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Voluntary deduction type"
+    },
+    "Vol_Deduct_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Voluntary deduction status"
+    },
+    "Vol_Deduct_Percent": {
+      "type": "string",
+      "description": "Voluntary deduction percentage (decimal 12,3)"
+    },
+    "Vol_Deduct_Amount": {
+      "type": "string",
+      "description": "Voluntary deduction amount (decimal 12,3)"
+    },
+    "Vol_Deduct_Accumulation": {
+      "type": "string",
+      "description": "Voluntary deduction accumulation (decimal 12,2)"
+    },
+    "Vol_Deduct_Limit": {
+      "type": "string",
+      "description": "Voluntary deduction limit (decimal 12,2)"
+    },
+    "Vol_Deduct_Current": {
+      "type": "string",
+      "description": "Current voluntary deduction (decimal 12,2)"
+    },
+    "QTD_Vol_Deduct": {
+      "type": "string",
+      "description": "Quarter-to-date voluntary deduction (decimal 12,2)"
+    },
+    "YTD_Vol_Deduct": {
+      "type": "string",
+      "description": "Year-to-date voluntary deduction (decimal 12,2)"
+    },
+    "MTD_Vol_Deduct": {
+      "type": "string",
+      "description": "Month-to-date voluntary deduction (decimal 12,2)"
+    },
+    "Monthly_Limit": {
+      "type": "string",
+      "description": "Monthly limit (decimal 12,2)"
+    },
+    "Formula_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "Formula code"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Vendor code"
+    },
+    "AP_Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Accounts payable remarks"
+    },
+    "Extended_Remarks1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "Extended remarks field 1"
+    },
+    "Extended_Remarks2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "Extended remarks field 2"
+    },
+    "Extended_Remarks3": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "Extended remarks field 3"
+    },
+    "Formula_Value_2": {
+      "type": "string",
+      "description": "Formula value 2 (decimal 12,3)"
+    },
+    "Formula_Value_3": {
+      "type": "string",
+      "description": "Formula value 3 (decimal 12,3)"
+    },
+    "Cycle_Percent_Limit": {
+      "type": "string",
+      "description": "Cycle percentage limit (decimal 12,3)"
+    },
+    "Cycle_Amount_Limit": {
+      "type": "string",
+      "description": "Cycle amount limit (decimal 12,2)"
+    },
+    "Invoice_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Invoice cost center"
+    },
+    "Shared_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Shared code"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Entity_Code",
+    "Vol_Deduct_Code"
+  ],
+  "additionalProperties": false
+}

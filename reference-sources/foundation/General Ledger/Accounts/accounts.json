@@ -1,0 +1,499 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Accounts/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "account_no": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "debit_credit": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "apply_subdivision": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "inc_exp_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "overhead_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "overhead_formula_percent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,7})?$",
+      "description": ""
+    },
+    "force_job_costing": {
+      "type": "integer",
+      "description": ""
+    },
+    "jc_income_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "cash_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "bonding_class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime",
+      "description": "Format: YYYY-MM-DD"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "ovhd_alloc_income_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1,
+      "description": ""
+    },
+    "percent_to_allocate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,3}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "overhead_weight_factor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "account_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "direct_deposit_format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "dir_dep_exp_dsg_report_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "direct_deposit_pr_file": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "ach_dest_routing_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_dest_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 23,
+      "description": ""
+    },
+    "ach_origin_routing_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_origin_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 23,
+      "description": ""
+    },
+    "ach_origin_reference_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 8,
+      "description": ""
+    },
+    "ach_company_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 16,
+      "description": ""
+    },
+    "ach_company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_pr_entry_desc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_pr_discretionary_data": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "ach_pr_emp_identifier": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ach_pr_emp_name_format": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "dir_dep_exp_dsg_report_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "condense_on_cash_rec": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "statement_category_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "bank_account_num": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 17,
+      "description": ""
+    },
+    "bank_account_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ach_balanced_file": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "statement_category_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "include_in_canned_financials": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ach_origin_dfi_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "positive_pay_exp_dsg_report_no": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "positive_pay_export_file": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "positive_pay_exp_dsg_report_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_use_origin_routing_bal_dfi": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ach_use_dest_routing_bal_dfi": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "ach_origin_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "account_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "gl_history_report_rollup": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Batch_No": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "dir_dep_exp_header": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "Batch_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_ap_entry_desc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "ach_ap_discretionary_data": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20,
+      "description": ""
+    },
+    "vnd_dir_pay_exp_header": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "vnd_dir_pay_export_file": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255,
+      "description": ""
+    },
+    "ach_dest_routing_num_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ach_origin_routing_num_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "bank_account_num_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "ach_origin_dfi_id_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "dir_dep_exp_header_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "vnd_dir_pay_exp_header_eid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": ""
+    },
+    "create_addenda_records": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "micr_account": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "integrations_account_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 191,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "account_no",
+    "description",
+    "debit_credit",
+    "apply_subdivision",
+    "force_job_costing",
+    "cash_flag",
+    "record_status",
+    "row_unique_id",
+    "direct_deposit_format",
+    "ach_pr_emp_identifier",
+    "ach_pr_emp_name_format",
+    "condense_on_cash_rec",
+    "bank_account_type",
+    "ach_balanced_file",
+    "include_in_canned_financials",
+    "ach_use_origin_routing_bal_dfi",
+    "ach_use_dest_routing_bal_dfi",
+    "ach_origin_type",
+    "account_type",
+    "gl_history_report_rollup",
+    "create_addenda_records",
+    "micr_account"
+  ]
+}

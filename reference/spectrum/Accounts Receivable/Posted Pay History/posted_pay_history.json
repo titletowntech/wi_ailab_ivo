@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/PostedPayHstory/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Reference_Number": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "REFERENCE NUMBER -(TAKE PAY DATE ADD CONVERT TO ALPHA IN JULIAN FORM)"
+    },
+    "Invoice_Or_Transaction": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "INVOICE NUMBER OR CASH RECEIPTS TRANSACTION NUMBER"
+    },
+    "Transaction_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TYPE OF INVOICE OR PAYMENT (I-INVOICE,C-CREDIT,P-PAYMENT,A-ADJUST,O-ORDER)"
+    },
+    "Payment_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "PAYMENT NUMBER"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "JOB NUMBER FOR PAYMENT OR ADJUSTMENT"
+    },
+    "Transaction_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATE OF INVOICE OR CASH RECEIPTS TRANSACTION"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 65,
+      "description": "INVOICE OR CASH RECEIPTS DESCRIPTION"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CHECK OR REFERENCE NUMBER"
+    },
+    "Payment_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "DATE OF PAYMENT/ADJUSTMENT"
+    },
+    "Payment_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "AMOUNT OF PAYMENT OR ADJUSTMENT",
+      "writeOnly": true
+    },
+    "Discount_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DISCOUNT AMOUNT FOR PAYMENT OR ADJUSTMENT"
+    },
+    "Days_To_Pay": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "NUMBER OF DAYS TO PAY"
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "A/R TERMS CODE"
+    },
+    "Transaction_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE TRANSACTION CODE"
+    },
+    "GL_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE G/L DATE FOR THIS INVOICE"
+    },
+    "Retention_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE RETENTION AMOUNT"
+    },
+    "Salesman": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE SALESMAN FOR THIS ITEM"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Payment_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "GL YEAR (BASED ON PAYMENT DATE)"
+    },
+    "Payment_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "GL PERIOD (BASED ON PAYMENT DATE)"
+    },
+    "Retention_Discount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RETENTION DISCOUNT"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Invoice_Or_Transaction",
+    "Payment_Number",
+    "Reference_Number",
+    "Transaction_Type"
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/equipment/cache.json",
+  "type": "object",
+  "properties": {
+    "Equipment": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "Serial_Number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Make": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15
+    },
+    "Year_Built": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Weight": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tare_Weight": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Length": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Width": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Height": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Wheelbase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Equipment_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Misc_Code_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Misc_Code_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Misc_Code_3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Job": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Current_Location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "Last_Location_Update_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Attached_to": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Status_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Status_Time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MeterOdometer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Current_Reading_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total_Reading": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Initial_Reading": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Configuration_Informat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "Last_Maintenance_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Last_Maintenance_Activity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 800
+    },
+    "GL_Prefix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 22
+    },
+    "Revenue_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Cost_Code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": "12 characters plus up to 3 punctuation characters"
+    },
+    "Category": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 3
+    },
+    "Fixed_Asset_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12
+    },
+    "Component": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Fuel_Consumption_Factor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Equipment_Notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "Equipment_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15999
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "Add properties to this object for any custom fields you want to set as this record is added to Sage300."
+    }
+  },
+  "required": [
+    "Equipment",
+    "Description"
+  ]
+}

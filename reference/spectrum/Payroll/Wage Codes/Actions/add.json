@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/wage_codes/add.json",
+  "title": "Wage Codes Add Action Schema",
+  "description": "Schema for adding a new Wage Codes record.",
+  "type": "object",
+  "properties": {}
+}

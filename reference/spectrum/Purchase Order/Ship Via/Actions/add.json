@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/po/v1/object/ship_via/add.json",
+  "title": "Ship Via Add Action Schema",
+  "description": "Schema for adding a new Ship Via record.",
+  "type": "object",
+  "properties": {}
+}

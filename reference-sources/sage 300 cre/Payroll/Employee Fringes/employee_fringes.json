@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/employee_fringes/cache.json",
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the ID of the employee associated with the fringe information.NameDisplays the name of the employee associated with the fringe information.Columns in the table in this windowEnter as many fringes as necessary for this employee."
+    },
+    "Fringe_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the fringe ID. If you are setting up a fringe for this employee, type the fringe ID?or click [List] and select  an existing fringe; the fringe must already be set up for your company."
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select the calculation  method for the fringe. If you select Default, the fringe calculates according to the  Calc Method selected in the Union Class Setup window (if using unions),  or from the Fringe Setup window. See About calculation methods for more information."
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "What you enter for this item depends on the  Calc Method selected in the previous column:"
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If you selected the  Formula for the  Calc Method, type the formula ID (no more than 25 characters) to use to calculate  this fringe?or click [List]  and select a formula. "
+    },
+    "Automatic": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Select this check box to have the system automatically calculate this fringe for the employee  when earnings are processed.Note:  Certain fringes that are calculated for all employees and do  not require set up of other information by employee (such  as, workers' compensation)  can be set up to  calculate automatically for all employees in the Fringe Setup window."
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select how often the automatic fringe is calculated for  the employee: Weekly (once a week), Bi-weekly (every two weeks), Semi-monthly  (twice a month), Monthly (once a month), Semi-annually (twice a year),  Annually (once a year), Check (on a check-by-check basis), or On demand  (on an irregular, on-demand basis). For example, a car allowance may be paid monthly but a vacation accrual pay is accumulated every check.When processing payroll, if a match is found between your  selection in this window and the calculation frequency specified when  processing payroll (using Process Payroll or [Process]  in Enter Checks), this auto fringe is calculated. "
+    },
+    "Limit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "If there is a limit to the amount for this fringe during the Limit Period (the next column), enter the maximum dollar amount for this fringe (no more than   8.2 digits). If this fringe  uses a Workers' Comp table, the limit is applied to wages to accommodate  states that have a workers' compensation wage limit. If this limit  is for any other kind of fringe, this limit applies to the fringe amount  rather than the wages. This limit supersedes the limit specified in the Fringe Setup window. Leave Limit blank  if there is no maximum amount. Note: This column is available for any items that can be placed on a Union Class  table (such as a union pension) as well as any non-WC fringes and any WC fringes  marked as  Auto in this window. If a  Limit is entered for non-union deductions that are not marked as Auto, processing is not  affected."
+    },
+    "Period": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Select the time period that the limit amount is based on  for this fringe. The time period can be a single check, month, quarter, or year. If there is no set time limit, select No period. To retain  YTD amounts at year-end for deductions with No period (such as an employee loan that has not been paid back in full), select the Retain YTD  totals at close year check box in the Fringe Setup window before  using the Close Year task.Note: This column is available for non-WC fringes and any WC fringes selected as  Auto in this window. For any items that can be placed on a Union Class  table, such as union dues, this column is always available. If a  Limit Period is entered for non-union deductions that are not marked as Auto, processing is not  affected.Fringe amount columns in the table in this windowImportant! This information is maintained automatically for you. DO NOT  change the amounts unless you are sure changes are required. "
+    },
+    "Prior_Year_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's total fringe amount for the prior year.When you close a year, this amount is replaced with the YTD Fringe amount.  "
+    },
+    "YTD_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated year-to-date fringe amount for the employee  when posting Payroll.When you close a year,  this amount moves to the Prior Yr Fringe column, and then this column is cleared."
+    },
+    "Prior_Qtr_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's total fringe amount for the prior quarter.When you close a quarter, this amount is replaced with the         QTD Fringe amount.   "
+    },
+    "QTD_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated quarter-to-date fringe amounts for the employee  when posting Payroll.When you close a quarter,  this amount moves to the Prior Qtr Fringe column, and then this column is cleared."
+    },
+    "Prior_Month_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated  total fringe amount for the prior month.When you close a month, this amount is replaced with the         MTD Fringe amount."
+    },
+    "MTD_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays month-to-date fringe amounts for the employee  when posting Payroll.When you close a month,  this amount moves to the Prior Month Fringe column, and then this column is cleared."
+    },
+    "Transfer_Fringe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "To track fringe amounts for this employee in a second  Payroll Master file, enter the fringe amount to transfer (no more than 7.5  digits). Transfer Fringe and YTD Fringe are combined when checking  the year-to-date limit (if any)."
+    },
+    "Prior_Year_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's total basis amount for the prior year.When you close a year, this amount is replaced with the YTD Basis amount.  "
+    },
+    "YTD_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated year-to-date basis amount for the employee when  posting Payroll. If you set up a workers' compensation fringe with a YTD  wage limit, the system checks this amount to determine if the YTD limit was reached.When you close a year,  this amount moves to the Prior Year Basis column, and then this column is cleared."
+    },
+    "Prior_Qtr_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's total basis amount for the prior quarter.When you close a quarter, this amount is replaced with the         QTD Basis.   "
+    },
+    "QTD_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated quarter-to-date basis amount for the employee  when posting Payroll. If you set up a workers' compensation fringe and  enter a Limit with a Limit Period of Quarter to Date, the system checks this amount to determine if the limit was reached. Do not  change this value since it provides a basis for Payroll reports and quarterly forms.When you close a quarter,  this amount moves to the Prior  Qtr Basis column, and then this column is cleared."
+    },
+    "Prior_Month_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the employee's total basis amount for the prior month.When you close a month, this amount is replaced with the         MTD Basis. "
+    },
+    "MTD_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Displays the accumulated month-to-date basis amount for the employee  when posting Payroll. If you set up a workers' compensation fringe and  enter a Limit with a Limit Period of Month to Date, the system checks this amount to determine if the limit was reached.When you close a month,  this amount moves to the Prior  Month Basis column, and then this column is cleared."
+    },
+    "Transfer_Basis": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "To track basis amounts for this employee in a second  Payroll Master file, enter the basis amount to transfer (no more than 7.5  digits). Transfer Fringe and YTD Fringe are combined when checking  the year-to-date limit (if any).Buttons in this window[Accept line]Accepts your entries on the current line of the table.[Accept table]Click this button to   accept all entries in the table and exit this window.[Cancel line]Cancels your entries on the current line of the table.[Cancel table]Cancels  all entries in the table and exits this window."
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Fund_Member_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,699 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Union/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Union_Code": {
+      "type": "string",
+      "description": "ENTER A UNION CODE (SSCNNN): SS = STATE, C = CRAFT, NNN = UNION# (IE LOCAL"
+    },
+    "Union_Name": {
+      "type": "string",
+      "description": "ENTER THE UNION NAME"
+    },
+    "Craft_Description": {
+      "type": "string",
+      "description": "ENTER THE CRAFT DESCRIPTION  (i.e. CARPENTRY)"
+    },
+    "Work_Class_Description": {
+      "type": "string",
+      "description": "ENTER THE WORK CLASS DESCRIPTION  (i.e. LABORER)"
+    },
+    "Vacation_Rate_1": {
+      "type": "string",
+      "description": "ENTER THE VACATION DEDUCTION RATE FOR VACATION CODE 1 (RATE PER HOUR)"
+    },
+    "Dues_Deduct_Rate_1": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 1 (RATE PER HOUR)"
+    },
+    "Description1": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description2": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description3": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description4": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description5": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description6": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description7": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Description8": {
+      "type": "string",
+      "description": "ENTER A DESCRIPTION FOR THE FRINGE"
+    },
+    "Fringe_Rate1": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate2": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate3": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate4": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate5": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate6": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate7": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Fringe_Rate8": {
+      "type": "string",
+      "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+    },
+    "Regular_Hourly_Rate_List1": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List2": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List3": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List4": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List5": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List6": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List7": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List8": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "Regular_Hourly_Rate_List9": {
+      "type": "string",
+      "description": "ENTER THE REGULAR HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List1": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List2": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List3": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List4": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List5": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List6": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List7": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List8": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "OT_Hourly_Rate_List9": {
+      "type": "string",
+      "description": "ENTER THE OVERTIME HOURLY RATE FOR THIS LEVEL"
+    },
+    "Double_Time_Hourly_Rate1": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate2": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate3": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate4": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate5": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate6": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate7": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate8": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Double_Time_Hourly_Rate9": {
+      "type": "string",
+      "description": "ENTER THE DOUBLETIME HOURLY RATE FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List1": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List2": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List3": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List4": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List5": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List6": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List7": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List8": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Rate_Level_Description_List9": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS RATE LEVEL"
+    },
+    "Fringe_Payable_GL1": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL2": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL3": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL4": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL5": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL6": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL7": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Payable_GL8": {
+      "type": "string",
+      "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+    },
+    "Fringe_Expense_GL": {
+      "type": "string",
+      "description": "ENTER THE FRINGE EXPENSE GENERAL LEDGER CODE"
+    },
+    "Base_Type1": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type2": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type3": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type4": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type5": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type6": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type7": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Base_Type8": {
+      "type": "string",
+      "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+    },
+    "Vacation_Deduct_Code_List1": {
+      "type": "string",
+      "description": "ENTER THE VACATION VOLUNTARY DEDUCTION CODE"
+    },
+    "Vacation_Deduct_Code_List2": {
+      "type": "string",
+      "description": "ENTER THE VACATION VOLUNTARY DEDUCTION CODE"
+    },
+    "Dues_Vol_Deduct_Code1": {
+      "type": "string",
+      "description": "ENTER THE DUES VOLUNTARY DEDUCTION CODE"
+    },
+    "Dues_Vol_Deduct_Code2": {
+      "type": "string",
+      "description": "ENTER THE DUES VOLUNTARY DEDUCTION CODE"
+    },
+    "Vacation_Rate_2": {
+      "type": "string",
+      "description": "ENTER THE VACATION DEDUCTION RATE FOR VACATION CODE 2 (RATE PER HOUR)"
+    },
+    "Dues_Deduct_Rate_2": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 2 (RATE PER HOUR)"
+    },
+    "Calculation_Method_Flag1": {
+      "type": "string",
+      "description": "CALC METHOD: % OF (B)ASE, (G)ROSS, (R)EG, (O)T, (D)BL, (F)IXED, (A)LL HRS"
+    },
+    "Calculation_Method_Flag2": {
+      "type": "string",
+      "description": "CALC METHOD: % OF (B)ASE, (G)ROSS, (R)EG, (O)T, (D)BL, (F)IXED, (A)LL HRS"
+    },
+    "Calculation_Method_Flag3": {
+      "type": "string",
+      "description": "CALC METHOD: % OF (B)ASE, (G)ROSS, (R)EG, (O)T, (D)BL, (F)IXED, (A)LL HRS"
+    },
+    "Calculation_Method_Flag4": {
+      "type": "string",
+      "description": "CALC METHOD: % OF (B)ASE, (G)ROSS, (R)EG, (O)T, (D)BL, (F)IXED, (A)LL HRS"
+    },
+    "Include_In_Gross_Flag_List1": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 1 (RATE PER HOUR)"
+    },
+    "Include_In_Gross_Flag_List2": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 1 (RATE PER HOUR)"
+    },
+    "Include_In_Gross_Flag_List3": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 1 (RATE PER HOUR)"
+    },
+    "Include_In_Gross_Flag_List4": {
+      "type": "string",
+      "description": "ENTER THE UNION DUES DEDUCTION RATE FOR DUES CODE 1 (RATE PER HOUR)"
+    },
+    "Vacation_Description_List1": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS VOLUNTARY DEDUCTION CODE"
+    },
+    "Vacation_Description_List2": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS VOLUNTARY DEDUCTION CODE"
+    },
+    "Dues_Description1": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS VOLUNTARY DEDUCTION CODE"
+    },
+    "Dues_Description2": {
+      "type": "string",
+      "description": "ENTER THE DESCRIPTION FOR THIS VOLUNTARY DEDUCTION CODE"
+    },
+    "Bill_Code_List1": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List2": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List3": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List4": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List5": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List6": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List7": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List8": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Bill_Code_List9": {
+      "type": "string",
+      "description": "ENTER THE TIME AND MATERIAL BILLING CODE FOR THIS LEVEL"
+    },
+    "Deduct_Formula_Code_List1": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+    },
+    "Deduct_Formula_Code_List2": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+    },
+    "Deduct_Formula_Code_List3": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+    },
+    "Deduct_Formula_Code_List4": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+    },
+    "Fringe_Formula_Code_List1": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List2": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List3": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List4": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List5": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List6": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List7": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Fringe_Formula_Code_List8": {
+      "type": "string",
+      "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED FRINGE TYPE"
+    },
+    "Deduct_Variable_2_List1": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_2_List2": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_2_List3": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_2_List4": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_3_List1": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_3_List2": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_3_List3": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS DEDUCTION FORMULA"
+    },
+    "Deduct_Variable_3_List4": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS DEDUCTION FORMULA"
+    },
+    "Fringe_Variable_2_List1": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List2": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List3": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List4": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List5": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List6": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List7": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_2_List8": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 2 (V2) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List1": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List2": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List3": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List4": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List5": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List6": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List7": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Fringe_Variable_3_List8": {
+      "type": "string",
+      "description": "ENTER THE AMOUNT TO USE FOR VARIABLE 3 (V3) FOR THIS FRINGE FORMULA"
+    },
+    "Status": {
+      "type": "string",
+      "description": "ENTER THE UNION STATUS (A-active, I-inactive)"
+    },
+    "Craft_Code": {
+      "type": "string",
+      "description": "ENTER THE CRAFT CODE"
+    },
+    "RPP_Number": {
+      "type": "string",
+      "description": "Enter the Canadian RPP Number"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "Fringes_List": {
+    "type": "array",
+    "description": "",
+    "items": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$id": "#/properties/PR_FRINGES/items",
+      "type": "object",
+      "properties": {
+        "Fringe_Code": {
+          "type": "string",
+          "description": "ENTER A FRINGE CODE"
+        },
+        "Base_Type": {
+          "type": "string",
+          "description": "ENTER THE TYPE: (A)LL, (O)T, (R)EG, (D)BL, (P)ERCENT OF GROSS, % OF (B)ASE"
+        },
+        "Formula_Code": {
+          "type": "string",
+          "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+        },
+        "Fringe_Rate": {
+          "type": "string",
+          "description": "ENTER THE FRINGE RATE  (THIS IS A DOLLAR RATE PER HOUR)"
+        },
+        "Fringe_Payable_GL": {
+          "type": "string",
+          "description": "ENTER THE FRINGE PAYABLE GENERAL LEDGER CODE"
+        },
+        "Status": {
+          "type": "string",
+          "description": "ENTER THE STATUS FOR THIS FRINGE CODE"
+        },
+        "User_Defined_Var2": {
+          "type": "string",
+          "description": "USER-DEFINED VARIABLE 2 (FOR USER-DEFINED FORMULAS ONLY)"
+        },
+        "User_Defined_Var3": {
+          "type": "string",
+          "description": "USER-DEFINED VARIABLE 3 (FOR USER-DEFINED FORMULAS ONLY)"
+        },
+        "Effective_Date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Revision Effective Date"
+        },
+        "__custom_fields": {
+          "type": "object",
+          "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+        }
+      }
+    }
+  },
+  "Deductions_List": {
+    "type": "array",
+    "description": "",
+    "items": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "$id": "#/properties/PR_DEDUCTIONS/items",
+      "type": "object",
+      "properties": {
+        "Deduction_Code": {
+          "type": "string",
+          "description": "TOTAL DEDUCT AMOUNT FOR THIS WORKMANS COMP CODE"
+        },
+        "Deduct_Description": {
+          "type": "string",
+          "description": "ENTER THE DESCRIPTION FOR THIS VOLUNTARY DEDUCTION CODE"
+        },
+        "Calculation_Method_Flag": {
+          "type": "string",
+          "description": "CALC METHOD: % OF (B)ASE, (G)ROSS, (R)EG, (O)T, (D)BL, (F)IXED, (A)LL HRS"
+        },
+        "Formula_Code": {
+          "type": "string",
+          "description": "ENTER THE FORMULA CODE FOR THIS USER DEFINED DEDUCTION METHOD"
+        },
+        "Deduction_Rate": {
+          "type": "string",
+          "description": "ENTER THE DEDUCTION RATE OR PERCENT"
+        },
+        "Gross_Pay_Flag": {
+          "type": "string",
+          "description": "INCLUDE THIS AMOUNT IN GROSS PAY ?"
+        },
+        "Status": {
+          "type": "string",
+          "description": "STATUS FOR THIS DEDUCTION CODE"
+        },
+        "User_Defined_Var2": {
+          "type": "string",
+          "description": "USER-DEFINED VARIABLE 2 (FOR USER-DEFINED FORMULAS ONLY)"
+        },
+        "User_Defined_Var3": {
+          "type": "string",
+          "description": "USER-DEFINED VARIABLE 3 (FOR USER-DEFINED FORMULAS ONLY)"
+        },
+        "Effective_Date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Revision Effective Date"
+        },
+        "GL_Account_Override": {
+          "type": "string",
+          "description": "ENTER THE G/L ACCT TO WHICH THE DEDUCTION/ADD-ON IS TO BE POSTED"
+        },
+        "__custom_fields": {
+          "type": "object",
+          "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+        }
+      }
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Union_Code"
+  ]
+}

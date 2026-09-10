@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/EPaymentReturn/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VENDOR CODE"
+    },
+    "Invoice_Number": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "VENDOR ITEMS CODE (I.E. INVOICE # OR CR MEMO #)"
+    },
+    "Invoice_Type_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ITEM TYPE (I)nvoice or (C)redit memo"
+    },
+    "Check_Number": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "CHECK NUMBER FOR CHECK LOG"
+    },
+    "Ref_Number": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ePayment reference (comp + check number)"
+    },
+    "Payment_Method": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "Payment method"
+    },
+    "Payment_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Payment date"
+    },
+    "Payment_Time": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Payment time"
+    },
+    "Import_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Date return file was imported"
+    },
+    "Import_Time": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Time return file was impored"
+    },
+    "Imported_By": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Importing operator"
+    },
+    "Import_Number": {
+      "type": "integer",
+      "description": "Import number within the company"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vendor_Code",
+    "Invoice_Number",
+    "Invoice_Type_Code",
+    "Check_Number",
+    "Ref_Number",
+    "Payment_Method",
+    "Payment_Time",
+    "Import_Time",
+    "Imported_By",
+    "Import_Number"
+  ]
+}

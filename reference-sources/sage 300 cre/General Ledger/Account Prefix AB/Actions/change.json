@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/gl/v1/object/account_prefix_ab/change.json",
+  "title": "Account Prefix AB Change Action Schema",
+  "description": "Schema for updating an existing Account Prefix AB record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pa/v1/object/company_information/change.json",
+  "title": "Company Information Change Action Schema",
+  "description": "Schema for updating an existing Company Information record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}

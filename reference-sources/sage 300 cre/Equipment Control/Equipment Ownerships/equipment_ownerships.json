@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.si.ryvit.com/sage300/v1/object/equipment_ownerships/cache.json",
+  "type": "object",
+  "properties": {
+    "Equipment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_acquired": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Price": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Purchased_from": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Phone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Appraisal_1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Appraisal_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Appraised_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_sold": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Selling_price": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Sold_to": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Finance_company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Amount_financed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Rate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Term": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Payment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Pay_off_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Buyout_price": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Equipment"
+  ]
+}

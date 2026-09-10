@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Terms/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Terms_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TERMS CODE"
+    },
+    "Terms_Description": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE DESCRIPTION FOR THIS SET OF TERMS"
+    },
+    "Terms_Month_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF THE TERMS BELOW ARE BASED ON THE FIRST OF THE MONTH"
+    },
+    "Days_Balance_Due": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NUMBER OF DAYS FOR THE BALANCE DUE (IE '10' FOR NET 10 DAYS)"
+    },
+    "Number_Of_Days": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NUMBER OF DAYS BY WHICH THE PAYMNT MUST BE MADE FOR THE DISCOUNT"
+    },
+    "Discount_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE DISCOUNT PERCENTAGE"
+    },
+    "Override_Quantity_Discount": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "OVERRIDE QUANTITY DISCOUNT WITH TERMS DISCOUNT?"
+    },
+    "Include_Tax_On_Discount": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "Include_Freight_On_Discount": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "INCLUDE FREIGHT IN DISCOUNT?"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Terms_Code"
+  ]
+}

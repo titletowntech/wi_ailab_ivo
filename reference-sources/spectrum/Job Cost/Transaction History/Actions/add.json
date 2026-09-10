@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/jc/v1/object/transaction_history/add.json",
+  "title": "Transaction History Add Action Schema",
+  "description": "Schema for adding a new Transaction History record.",
+  "type": "object",
+  "properties": {}
+}

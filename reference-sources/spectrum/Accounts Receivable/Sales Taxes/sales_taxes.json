@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ar/v1/object/sales_taxes/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE CODE FOR THIS TYPE OF SALES TAX"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE DESCRIPTION FOR THIS TYPE OF SALES TAX"
+    },
+    "Sales_Tax_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE PERCENTAGE FOR THIS TYPE OF SALES TAX"
+    },
+    "GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCOUNT NUMBER FOR THIS TYPE OF SALES TAX"
+    },
+    "Freight_Tax_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF FREIGHT IS TAXABLE"
+    },
+    "MTD_Sales": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MONTH TO DATE SALES FOR THIS SALES TAX CATEGORY"
+    },
+    "QTD_Sales": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE QUARTER TO DATE SALES FOR THIS SALES TAX CATEGORY"
+    },
+    "YTD_Sales": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE YEAR TO DATE SALES FOR THIS SALES TAX CATEGORY"
+    },
+    "MTD_Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE MONTH TO DATE TAX AMOUNT FOR THIS TAX CATEGORY"
+    },
+    "QTD_Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE QUARTER TO DATE TAX AMOUNT FOR THIS TAX CATEGORY"
+    },
+    "YTD_Tax_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE YEAR TO DATE TAX AMOUNT FOR THIS TAX CATEGORY"
+    },
+    "Comments": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "COMMENTS FOR THIS RATE REVISION"
+    },
+    "Effective_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "TAX RATE EFFECTIVE DATE"
+    },
+    "id": {
+      "type": "integer",
+      "description": "SALES TAX ID"
+    },
+    "Online_Tax_Code_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF ONLINE TAX IS USED"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Sales_Tax_Code"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Vendor/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Billto_Code": {
+      "type": "string",
+      "description": "ENTER THE BILL-TO CODE"
+    },
+    "AltName": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE CUSTOMER NAME"
+    },
+    "AltAddr1": {
+      "type": "string",
+      "description": "ENTER THE FIRST ALTERNATE ADDRESS LINE FOR THIS CUSTOMER"
+    },
+    "AltAddr2": {
+      "type": "string",
+      "description": "ENTER THE SECOND ALTERNATE ADDRESS LINE FOR THIS CUSTOMER"
+    },
+    "AltCity": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE CITY FOR THIS CUSTOMER"
+    },
+    "AltState": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE STATE FOR THIS CUSTOMER"
+    },
+    "AltZip": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE ZIP CODE FOR THIS CUSTOMER"
+    },
+    "AltPhone": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE PHONE NUMBER FOR THIS CUSTOMER"
+    },
+    "AltFax": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE FAX NUMBER FOR THIS CUSTOMER"
+    },
+    "AltContact": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE CONTACT NAME FOR THIS CUSTOMER"
+    },
+    "AltEmail": {
+      "type": "string",
+      "description": "ENTER THE ALTERNATE E-MAIL ADDRESS FOR THIS CUSTOMER"
+    },
+    "Address_ID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Addr_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Address"
+    },
+    "Addr_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Address"
+    },
+    "Addr_City": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "City"
+    },
+    "Addr_State": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "State"
+    },
+    "Addr_Zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Zip code"
+    },
+    "Addr_Country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Country"
+    },
+    "Addr_Type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Address type"
+    },
+    "Addr_Display": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Display address (i. e. Mailing Address)"
+    },
+    "Addr_Remark": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Remarks"
+    },
+    "Phone_ID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Fax_ID": {
+      "type": "integer",
+      "description": ""
+    },
+    "Remark": {
+      "type": "string",
+      "description": ""
+    },
+    "Status": {
+      "type": "string",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Billto_Code"
+  ]
+}

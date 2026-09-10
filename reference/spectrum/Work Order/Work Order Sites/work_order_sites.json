@@ -1,0 +1,288 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/WoSite/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Ship_To_ID": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "PROPOSED WORK ORDER JOB/SITE NUMBER"
+    },
+    "Ship_To_Name": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE WORK ORDER SHIP-TO NAME"
+    },
+    "Ship_To_Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WORK ORDER SHIP-TO CUSTOMER"
+    },
+    "Ship_To_Address1": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE WORK ORDER SHIP-TO ADDRESS"
+    },
+    "Ship_To_Address2": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE WORK ORDER SHIP-TO ADDRESS"
+    },
+    "Ship_To_City": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE WORK ORDER SHIP-TO CITY"
+    },
+    "Ship_To_State": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE WORK ORDER SHIP-TO STATE"
+    },
+    "Ship_To_Zip_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE WORK ORDER SHIP-TO ZIP"
+    },
+    "Ship_To_Phone1": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE WORK ORDER SHIP-TO PHONE (1)JOB  (2)OTHER"
+    },
+    "Ship_To_Phone2": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "ENTER THE WORK ORDER SHIP-TO PHONE (1)JOB  (2)OTHER"
+    },
+    "WO_Type": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE WORK ORDER TYPE"
+    },
+    "Site_Contact_Person": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE WORK SITE CONTACT PERSON"
+    },
+    "Sales_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE SALES TAX CODE FOR THIS WORK SITE"
+    },
+    "Special_Instructions": {
+      "type": "string",
+      "maxLength": 70,
+      "description": "ENTER ANY SPECIAL INSTRUCTIONS FOR THIS WORK SITE"
+    },
+    "Zone": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE ZONE"
+    },
+    "Taxable_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS A TAXABLE SITE ?  (Y OR N)"
+    },
+    "Requested_Tech": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "ENTER THE REQUESTED TECHNICIAN"
+    },
+    "Service_Contr_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IF SC IS NOT INSTALLED, DOES A SERVICE CONTRACT EXIST FOR THIS SITE?"
+    },
+    "Labor_Taxable": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PLACE A CHECK MARK IF LABOR IS TAXABLE FOR THIS SITE"
+    },
+    "Material_Taxable": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "PLACE A CHECK MARK IF MATERIAL IS TAXABLE FOR THIS SITE"
+    },
+    "Work_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE WORKER'S COMPENSATION CODE FOR THIS SITE"
+    },
+    "Wage_Rate_Level": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE WAGE RATE LEVEL NUMBER (1 - 9)"
+    },
+    "Wage_Code_Indicator": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'*' IF ANY WAGE CODES HAVE BEEN SET UP FOR THIS JOB, OTHERWISE BLANK"
+    },
+    "Pay_Group": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "ENTER THE PAY GROUP FOR THIS JOB"
+    },
+    "Work_State_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK STATE TAX CODE FOR DEFAULT IN LABOR ENTRY"
+    },
+    "Work_County_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK COUNTY TAX CODE FOR DEFAULT IN LABOR ENTRY"
+    },
+    "Work_Local_Tax_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WORK LOCAL TAX CODE FOR DEFAULT IN LABOR ENTRY"
+    },
+    "Lead_Source": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE LEAD SOURCE CODE"
+    },
+    "Show_Notes": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SHOW NOTES IN WO ENTRY ?"
+    },
+    "Telephone_Ext_1": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "JOB TELEPHONE EXTENSION"
+    },
+    "Telephone_Ext_2": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "OTHER TELEPHONE EXTENSION"
+    },
+    "Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "STATUS - 'A'CTIVE, 'I'NACTIVE, 'N'OT USED"
+    },
+    "Alternate_Address": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SET TO 'Y' TO USE ALTERNATE BILLING ADDRESS FROM CM.BTCODE"
+    },
+    "Billto_Code": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "ENTER THE BILL-TO CODE"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER CODE"
+    },
+    "Site_Case_Type": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "SITE CASE TYPE"
+    },
+    "WO_Notes": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "WORK ORDER NOTES"
+    },
+    "Work_Site_Email": {
+      "type": "string",
+      "maxLength": 80,
+      "description": "ENTER THE WORK SITE ADDRESS E-MAIL"
+    },
+    "Markup_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "MARKUP CODE"
+    },
+    "Customer_Job": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "CUSTOMER JOB"
+    },
+    "Latitude": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+      "description": "LATITUDE FOR GLOBAL POSITIONING"
+    },
+    "Longitude": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,6}(?:.[0-9]{0,6})?$",
+      "description": "LONGITUDE FOR GLOBAL POSITIONING"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    },
+    "Use_Tax_Code": {
+      "type": "string",
+      "maxLength": 15,
+      "description": ""
+    },
+    "Mat_Use_Tax": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Ship_To_ID",
+    "Ship_To_Name",
+    "Ship_To_Customer_Code",
+    "Ship_To_Address1",
+    "Ship_To_Address2",
+    "Ship_To_City",
+    "Ship_To_State",
+    "Ship_To_Zip_Code",
+    "Ship_To_Phone1",
+    "Ship_To_Phone2",
+    "WO_Type",
+    "Site_Contact_Person",
+    "Sales_Tax_Code",
+    "Special_Instructions",
+    "Zone",
+    "Taxable_Flag",
+    "Requested_Tech",
+    "Service_Contr_Flag",
+    "Labor_Taxable",
+    "Material_Taxable",
+    "Work_Comp_Code",
+    "Wage_Rate_Level",
+    "Wage_Code_Indicator",
+    "Pay_Group",
+    "Work_State_Tax_Code",
+    "Work_County_Tax_Code",
+    "Work_Local_Tax_Code",
+    "Lead_Source",
+    "Show_Notes",
+    "Telephone_Ext_1",
+    "Telephone_Ext_2",
+    "Status",
+    "Alternate_Address",
+    "Billto_Code",
+    "Cost_Center",
+    "Site_Case_Type",
+    "WO_Notes",
+    "Work_Site_Email",
+    "Markup_Code",
+    "Customer_Job",
+    "Latitude",
+    "Longitude",
+    "id",
+    "Use_Tax_Code",
+    "Mat_Use_Tax"
+  ]
+}

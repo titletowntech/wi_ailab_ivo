@@ -1,0 +1,209 @@
+{
+  "type": "object",
+  "properties": {
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Deduction_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10
+    },
+    "Calc_Method": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Amount": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Formula": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 25
+    },
+    "Automatic": {
+      "type": "boolean"
+    },
+    "Frequency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Sequence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Year_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "YTD_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Qtr_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QTD_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prior_Month_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MTD_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Transfer_Deduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Bank_ID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 17,
+      "writeOnly": true
+    },
+    "Account_Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Prenote_Only": {
+      "type": "boolean"
+    },
+    "Prenote_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Title_of_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 32
+    },
+    "Fund_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Other_Contributor_Type": {
+      "type": "boolean"
+    },
+    "Other_Contributor_Name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 80
+    },
+    "Fund_Member_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Row_ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 36
+    },
+    "Row_Version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20
+    }
+  },
+  "required": [
+    "Employee",
+    "Deduction_ID"
+  ]
+}

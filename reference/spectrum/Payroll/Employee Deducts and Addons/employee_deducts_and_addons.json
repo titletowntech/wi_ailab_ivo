@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/empl_deducts_addons/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Employee_Code": {
+      "type": "string",
+      "maxLength": 11,
+      "description": "EMPLOYEE CODE"
+    },
+    "Vol_Deduct_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VOLUNTARY DEDUCTION CODE"
+    },
+    "Vol_Deduct_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPL VOL DED TYPE: (D)educt, (A)dd-on"
+    },
+    "Vol_Deduct_Status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "EMPL VOL DED STATUS: (R)ecurring,(O)ne time,(I)nactive,(S)kip once"
+    },
+    "Vol_Deduct_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "EMPL VOL DED PERCENT AMOUNT"
+    },
+    "Vol_Deduct_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "EMPL VOL DED AMOUNT"
+    },
+    "Vol_Deduct_Accumulation": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED ACCUMULATION"
+    },
+    "Vol_Deduct_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED LIMIT"
+    },
+    "Vol_Deduct_Current": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED CURRENT AMOUNT"
+    },
+    "QTD_Vol_Deduct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED QUARTER-TO-DATE"
+    },
+    "YTD_Vol_Deduct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED YEAR-TO-DATE"
+    },
+    "MTD_Vol_Deduct": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "EMPL VOL DED MONTH-TO-DATE"
+    },
+    "Monthly_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE EMPLOYEE'S MONTHLY LIMIT FOR THIS VOLUNTARY DEDUCTION CODE"
+    },
+    "Formula_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "ENTER THE FORMULA CODE FOR THIS VOLUNTARY DEDUCTION ('U'SER DEF METHOD)"
+    },
+    "Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE VENDOR CODE FOR THIS VOLUNTARY DEDUCTION"
+    },
+    "AP_Remarks": {
+      "type": "string",
+      "maxLength": 30,
+      "description": "ENTER THE REMARKS TO BE TRANSFERRED TO THE AP INVOICE"
+    },
+    "Extended_Remarks1": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE TRANSFERRED TO THE AP INVOICE"
+    },
+    "Extended_Remarks2": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE TRANSFERRED TO THE AP INVOICE"
+    },
+    "Extended_Remarks3": {
+      "type": "string",
+      "maxLength": 60,
+      "description": "ENTER ANY EXTENDED REMARKS TO BE TRANSFERRED TO THE AP INVOICE"
+    },
+    "Formula_Value_2": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE VALUE TO USE FOR THIS FORMULA VARIABLE"
+    },
+    "Formula_Value_3": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "ENTER THE VALUE TO USE FOR THIS FORMULA VARIABLE"
+    },
+    "Cycle_Percent_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "PER CYCLE PERCENT OF GROSS LIMIT"
+    },
+    "Cycle_Amount_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "PER CYCLE AMOUNT LIMIT"
+    },
+    "Invoice_Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "COST CENTER FOR INVOICE (USE EMPL CC IF BLANK)"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Employee_Code",
+    "Vol_Deduct_Code"
+  ]
+}

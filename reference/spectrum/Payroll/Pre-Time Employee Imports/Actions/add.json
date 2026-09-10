@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/pr/v1/object/pre_time_employee_imports/add.json",
+  "title": "Pre-Time Employee Imports Add Action Schema",
+  "description": "Schema for adding a new Pre-Time Employee Imports record.",
+  "type": "object",
+  "properties": {}
+}

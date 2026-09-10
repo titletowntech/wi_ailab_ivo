@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/po/v1/object/ship_via/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Company code identifier"
+    },
+    "Ship_Via_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "Ship via method code"
+    },
+    "Ship_Via_Description": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "Description of the ship via method"
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Ship_Via_Code",
+    "Ship_Via_Description"
+  ]
+}

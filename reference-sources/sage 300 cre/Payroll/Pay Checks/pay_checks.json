@@ -1,0 +1,309 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sage300.SI.ryvit.com/sage300/v1/object/PayChecks/cache.json",
+  "type": "object",
+  "properties": {
+    "Accounting_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Accrued": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Appl_of_Origin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Bank_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Batch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Cash_Account": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Check_Amount": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Check_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_File_Links": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Sequence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Check_Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Custom_Sort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Date_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Days": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DD_Sent_to_CM": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Deposit_Run_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Direct_Deposit_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Direct_Deposits": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Run_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Seq_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DP_Site": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employee_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Employer_Taxes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Fringes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Gross_Pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Local_Total": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Misc_Deductions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Net_Pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Operator_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Other_Pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Overtime_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Overtime_Pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Pay_Group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Pay_Periods": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period_Begin_Date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Period_End_Date": {
+      "type": "string"
+    },
+    "Process_Seq_Number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Regular_Hours": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Regular_Pay": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "SDI_Total": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SUI_Total": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "SWH_Total": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "writeOnly": true
+    },
+    "Time_Stamp": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Weeks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Employee",
+    "Check_Sequence",
+    "Period_End_Date"
+  ]
+}

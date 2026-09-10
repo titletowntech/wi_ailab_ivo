@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/Change_Order_Header/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "Customer_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE CUSTOMER CODE"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Change_Order_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE CHANGE ORDER NUMBER"
+    },
+    "CO_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER THE CHANGE ORDER TYPE (P - PROPOSED, E - EXECUTED)"
+    },
+    "Change_Order_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE CHANGE ORDER DATE"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 250,
+      "description": "ENTER THE DESCRIPTION FOR THIS CHANGE ORDER"
+    },
+    "Change_Order_Revenue_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE TOTAL REVENUE AMOUNT FOR THIS CHANGE ORDER"
+    },
+    "Profit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE PROFIT AMOUNT FOR THIS CHANGE ORDER"
+    },
+    "Unit_Of_Measure": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE UNIT OF MEASURE"
+    },
+    "Unit_Price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": "ENTER THE UNIT PRICE"
+    },
+    "Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE QUANTITY"
+    },
+    "Post_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER 'Y' IF THIS CHANGE ORDER HAS BEEN POSTED TO DRAW REQUEST"
+    },
+    "Executed_CO_Number": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "ENTER THE EXECUTED CHANGE ORDER NUMBER"
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "ENTER THE STATUS CODE"
+    },
+    "Last_Revise_Date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ENTER THE LAST REVISION DATE"
+    },
+    "Days_Increased": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE NUMBER OF DAYS THAT THE CONTRACT WILL BE INCREASED BY THIS CO"
+    },
+    "Application_Number": {
+      "type": "string",
+      "maxLength": 3,
+      "description": ""
+    },
+    "Change_Order_Date_Year": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "FISCAL YEAR THAT THIS CHANGE ORDER DATE FALLS ON"
+    },
+    "Change_Order_Date_Period": {
+      "type": "string",
+      "maxLength": 2,
+      "description": "FISCAL PERIOD THAT THIS CHANGE ORDER DATE FALLS ON"
+    },
+    "Billing_Adjustment": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "BILLING ADJUSTMENT"
+    },
+    "Fee_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "FEE PERCENT"
+    },
+    "Fee_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "FEE AMOUNT"
+    },
+    "Revenues": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/Change_Order_Revenue/cache.json",
+        "type": "object",
+        "properties": {
+          "Sequence": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 3,
+            "description": "SEQUENCE NUMBER"
+          },
+          "Bill_Group_Code": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "UNIT PRICE - ENTER THE BILL GROUP (2 CHARACTERS)"
+          },
+          "Bill_Item_Code": {
+            "type": "string",
+            "maxLength": 8,
+            "description": "UNIT PRICE - ENTER THE BILLING ITEM CODE"
+          },
+          "Quantity": {
+            "type": "string",
+            "description": "ENTER THE CHANGE ORDER QUANTITY FOR THIS ITEM"
+          },
+          "Billing_Item_Code": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "FIXED PRICE ONLY - ENTER THE ITEM CODE FOR THIS BILLING REQUEST"
+          },
+          "Revenue": {
+            "type": "string",
+            "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+            "description": "ENTER THE CHANGE ORDER REVENUE FOR THIS ITEM"
+          },
+          "Description": {
+            "type": "string",
+            "maxLength": 30,
+            "description": ""
+          },
+          "Unit_Of_Measure": {
+            "type": "string",
+            "maxLength": 3,
+            "description": ""
+          },
+          "Unit_Price": {
+            "type": "string",
+            "description": ""
+          },
+          "Additional_Description": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "ENTER ANY ADDITIONAL DESCRIPTION"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        }
+      }
+    },
+    "Notes": {
+      "type": "array",
+      "items": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "http://spectrum.si.ryvit.com//v/object/Change_Order_Notes/cache.json",
+        "type": "object",
+        "properties": {
+          "Sequence": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "CHANGE ORDER NOTES SEQ #"
+          },
+          "Change_Order_Notes": {
+            "type": "string",
+            "maxLength": 70,
+            "description": "ENTER NOTES FOR THIS CHANGE ORDER"
+          },
+          "__custom_fields": {
+            "type": "object",
+            "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+          }
+        },
+        "required": [
+          "Sequence"
+        ]
+      }
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Customer_Code",
+    "Job_Number",
+    "Change_Order_Number"
+  ]
+}

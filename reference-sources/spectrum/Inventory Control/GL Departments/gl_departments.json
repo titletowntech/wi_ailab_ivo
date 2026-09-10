@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/GLDepartments/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE COMPANY CODE"
+    },
+    "GL_Department": {
+      "type": "string",
+      "maxLength": 4,
+      "description": "INVENTORY G/L DEPARTMENT CODE"
+    },
+    "GL_Department_Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "INVENTORY G/L DEPARTMENT DESCRIPTION"
+    },
+    "GL_Account_List1": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "GL_Account_List2": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "GL_Account_List3": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "GL_Account_List4": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "GL_Account_List5": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "GL_Account_List6": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "G/L CODES 1)SALES,2)COST SALES,3)INVENTORY,4)ADJUST,5)CRED RETURN,6)RECPT"
+    },
+    "Markup_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE JC MARKUP GL ACCOUNT"
+    },
+    "Direct_Cost_Code": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE JC DIRECT COST CODE"
+    },
+    "Mix_Usage_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE MIX USAGE GL ACCOUNT"
+    },
+    "Equipment_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE EQUIPMENT COST GL ACCOUNT"
+    },
+    "Transfer_Charge_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE TRANSFER CHARGES GL ACCOUNT"
+    },
+    "Trans_Freight_Var_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE TRANSFER FREIGHT VARIANCE GL ACCOUNT"
+    },
+    "Rec_Freight_Var_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE RECEIPTS FREIGHT VARIANCE GL ACCOUNT"
+    },
+    "Cost_Adj_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE COST ADJUSTMENT GL ACCOUNT"
+    },
+    "Job_Sale_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE JOB SALE GL ACCOUNT"
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "GL_Department"
+  ]
+}

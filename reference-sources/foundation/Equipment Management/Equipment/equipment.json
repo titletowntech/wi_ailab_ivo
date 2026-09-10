@@ -1,0 +1,645 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://vista.si.ryvit.com//v/object/Equipment/cache.json",
+  "type": "object",
+  "properties": {
+    "company_no": {
+      "type": "integer",
+      "description": ""
+    },
+    "equipment_no": {
+      "type": "string",
+      "maxLength": 10,
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 30,
+      "description": ""
+    },
+    "status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "eq_category_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "secondary_eq_category_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "gl_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "gl_credit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "license_plate_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "license_fee": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "license_expiration": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "distributor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "serial_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "make_model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "model_year": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,4}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "ownership": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "new_or_used": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "purchase_price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "purchase_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "sale_price": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "sale_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "insured_value": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "market_value": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "axles": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "commercial_or_private": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "gross_weight": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,5})?$",
+      "description": ""
+    },
+    "warranty_start_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "warranty_end_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "datetime"
+    },
+    "warranty_coverage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "warranty_limitations": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": ""
+    },
+    "warranty_company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "warranty_address_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "warranty_address_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "warranty_city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "warranty_state": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2,
+      "description": ""
+    },
+    "warranty_zip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": ""
+    },
+    "warranty_contact_1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "warranty_contact_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30,
+      "description": ""
+    },
+    "default_hourly_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "default_daily_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "default_weekly_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "default_monthly_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "default_idle_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "default_down_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "record_status": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "row_modified_by": {
+      "type": "string",
+      "maxLength": 32,
+      "description": ""
+    },
+    "row_modified_on": {
+      "type": "string",
+      "format": "datetime"
+    },
+    "row_unique_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "company_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "eq_category_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "equipment_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "license_plate_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 15,
+      "description": ""
+    },
+    "secondary_eq_category_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "meter_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "service_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_billing_rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "service_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_location_job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_wo_job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_location_job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "default_wo_job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "track_asset_in": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "asset_category_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "salvage_value": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": ""
+    },
+    "ppt_asset_category": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "ppt_percent_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "gl_accum_depr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "gl_depr_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "asset_category_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "crew_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "crew_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_type_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_capacity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,8}(?:.[0-9]{0,4})?$",
+      "description": ""
+    },
+    "gl_fuel_expense": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "gl_fuel_credit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[-+]?[0-9]{1,12}(?:.[0-9]{0,0})?$",
+      "description": ""
+    },
+    "consumption_type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "enable_fuel_tracking_flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": ""
+    },
+    "fuel_job_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_phase_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_cost_code_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_cost_class_no": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 5,
+      "description": ""
+    },
+    "fuel_cost_class_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_cost_code_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_job_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_phase_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "fuel_type_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 10,
+      "description": ""
+    },
+    "record_guid": {
+      "type": "string",
+      "minLength": 36,
+      "maxLength": 36,
+      "pattern": "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}",
+      "description": ""
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Vista.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "company_no",
+    "equipment_no",
+    "description",
+    "status",
+    "license_fee",
+    "ownership",
+    "new_or_used",
+    "purchase_price",
+    "sale_price",
+    "insured_value",
+    "market_value",
+    "axles",
+    "commercial_or_private",
+    "gross_weight",
+    "default_hourly_rate",
+    "default_daily_rate",
+    "default_weekly_rate",
+    "default_monthly_rate",
+    "default_idle_rate",
+    "default_down_rate",
+    "record_status",
+    "row_modified_by",
+    "row_modified_on",
+    "row_unique_id",
+    "meter_type",
+    "default_billing_rate",
+    "track_asset_in",
+    "salvage_value",
+    "fuel_capacity",
+    "consumption_type",
+    "enable_fuel_tracking_flag",
+    "record_guid"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//v/object/phase_summaries/cache.json",
+  "description": "Job phases with empty or missing `Phase_Code`s will be ignored.",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL"
+    },
+    "Job_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE JOB NUMBER (UP TO 10 DIGITS)"
+    },
+    "Phase_Code": {
+      "type": "string",
+      "maxLength": 20,
+      "description": "ENTER THE JOB PHASE CODE (UP TO 20 NUMBERS)"
+    },
+    "Description": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "ENTER THE DESCRIPTION FOR THIS PHASE/COST TYPE"
+    },
+    "Major_Group_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "SYSTEM MAINTAINED MAJOR GROUP CODE"
+    },
+    "Minor_Group_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "SYSTEM MAINTAINED MINOR GROUP CODE"
+    },
+    "Status_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VALID STATUS CODES ARE: A = ACTIVE, C = COMPLETE, I = INACTIVE"
+    },
+    "Unit_of_Measure": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "ENTER THE UNITS OF MEASURE FOR THE QUANTITY.  EXAMPLES ARE: LF, YDS, FT"
+    },
+    "Est_Quantity": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "ENTER THE ESTIMATED QUANTITY FOR THIS PHASE"
+    },
+    "Work_Comp_Code": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "WORKMAN'S COMP CLASS CODE."
+    },
+    "Bid_Item_Number": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE REVENUE BID ITEM NUMBER"
+    },
+    "Cost_Center": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "ENTER THE COST CENTER CODE"
+    },
+    "id": {
+      "type": "integer",
+      "description": ""
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Job_Number",
+    "Phase_Code"
+  ]
+}

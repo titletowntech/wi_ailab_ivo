@@ -1,0 +1,307 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com//1/object/deduct_addon_codes/cache.json",
+  "type": "object",
+  "properties": {
+    "Company_Code": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "(SYSTEM) COMPANY/DIVISION CODE ASSIGNED TO CALLING TERMINAL                     "
+    },
+    "Vol_Deduct_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "VOLUNTARY DEDUCTION CODE                                                        "
+    },
+    "Vol_Deduct_Description": {
+      "type": "string",
+      "maxLength": 15,
+      "description": "ENTER THE VOLUNTARY DEDUCTION DESCRIPTION                                       "
+    },
+    "Deduct_Frequency_Code": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "DEDUCTION FREQUENCY: (D)AILY (W)EEK (B)I-WK (S)EMI-MON (M)ON (Q)TR (A)NN        "
+    },
+    "Deduct_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VOLUNTARY DEDUCTION TYPE - (D)EDUCTION OR (A)DD-ON                              "
+    },
+    "Calc_Method": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CALCULATION METHOD: (F)IXED AMT, % OF (G)ROSS/(N)ET, (R)EG/(O)VT/(A)LL HRS      "
+    },
+    "Deduct_GL_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "ENTER THE G/L ACCT TO WHICH THE DEDUCTION/ADD-ON IS TO BE POSTED                "
+    },
+    "Selected_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "VOLUNTARY DEDUCTION SELECTED FOR CURRENT PAY PERIOD?                            "
+    },
+    "Direct_Cost_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "ENTER Y-job cost,N-non-direct cost,E-equipment cost,W -work order cost          "
+    },
+    "Week_Number": {
+      "type": "string",
+      "maxLength": 9,
+      "description": "ENTER THE WEEK NUMBER ASSOCIATED WITH THIS VOLUNTARY DEDUCTION                  "
+    },
+    "Clear_At_Year_End": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "SHOULD THIS VOLUNTARY DEDUCTION CODE BE CLEARED AT YEAR END ?                   "
+    },
+    "Deduct_Pre_Tax_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "IS THIS DEDUCTION/ADD-ON A PRE-TAX CODE? (IF 'Y', WINDOW FOR STATE ENTRY)       "
+    },
+    "Add_On_Cash_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "GL_Debit_Account": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Formula_Code": {
+      "type": "string",
+      "maxLength": 5,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Vol_Deduct_AP_Invoice_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WILL THIS VOLUNTARY DEDUCTION CREATE AP INVOICES WHEN CHECKS ARE UPDATED?       "
+    },
+    "Default_Vendor_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Add_On_Print_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Routing_Code1": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Routing_Code2": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "WILL THIS ADD-ON AMOUNT BE PAID TO EMPLOYEES ON THE PAY CHECK?                  "
+    },
+    "Routing_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "INVOICE APPROVAL ROUTING LIMIT                                                  "
+    },
+    "Track_Prevailing_Wage": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "'Y' TO INCLUDE THIS ADD-ON IN ACTUAL EMPLOYER BENEFITS                          "
+    },
+    "Default_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "DEFAULT PERCENT FOR THIS CODE                                                   "
+    },
+    "Default_Rate": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DEFAULT RATE FOR THIS CODE                                                      "
+    },
+    "Default_Annual_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DEFAULT RATE FOR THIS CODE                                                      "
+    },
+    "Default_Monthly_Limit": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "DEFAULT RATE FOR THIS CODE                                                      "
+    },
+    "Related_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "RELATED DEDUCTION / ADD-ON CODE, FOR 'P' METHOD CALCULATION                     "
+    },
+    "Cycle_Limit_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "RELATED DEDUCTION / ADD-ON CODE, FOR 'P' METHOD CALCULATION                     "
+    },
+    "Cycle_Limit_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "RELATED DEDUCTION / ADD-ON CODE, FOR 'P' METHOD CALCULATION                     "
+    },
+    "Cycle_Limit_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "RELATED DEDUCTION / ADD-ON CODE, FOR 'P' METHOD CALCULATION                     "
+    },
+    "True_Up_Eligible": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "RELATED DEDUCTION / ADD-ON CODE, FOR 'P' METHOD CALCULATION                     "
+    },
+    "True_Up_Limit_Type": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "TRUE UP LIMIT TYPE ('N'O LIMIT, 'P'ERCENT OF GROSS, FIXED 'A'MOUNT)             "
+    },
+    "True_Up_Limit_Percent": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,9}(?:.[0-9]{0,3})?$",
+      "description": "TRUE UP PERCENT OF GROSS LIMIT                                                  "
+    },
+    "True_Up_Limit_Amount": {
+      "type": "string",
+      "pattern": "^[-+]?[0-9]{1,10}(?:.[0-9]{0,2})?$",
+      "description": "TRUE UP LIMIT (AMOUNT OR PERCENT)                                               "
+    },
+    "Include_Davis_Bacon_Pay": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR BLANK TO INCLUDE PAY FROM DAVIS-BACON JOBS IN CALCULATION                  "
+    },
+    "Include_Prev_Wage_Pay": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR BLANK TO INCLUDE PAY FROM PREVAILING WAGE JOBS IN CALCULATION              "
+    },
+    "Include_Other_Pay": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR BLANK TO INCLUDE ALL OTHER PAY IN CALCULATION                              "
+    },
+    "Pension_Report": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Y OR BLANK TO INCLUDE ALL OTHER PAY IN CALCULATION                              "
+    },
+    "All_Cost_Centers": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "CHECK TO ALLOW ALL COST CENTERS FOR THE VOLUNTARY DEDUCTION CODE                "
+    },
+    "TCGross_Nondirect_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "TC Gross Non-Direct G/L Debit                                                   "
+    },
+    "TCGross_Job_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "TC Gross Job G/L Debit                                                          "
+    },
+    "TCGross_Equipment_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "TC Gross Equipment G/L Debit                                                    "
+    },
+    "TCGross_WorkOrder_Debit": {
+      "type": "string",
+      "maxLength": 12,
+      "description": "TC Gross Work Order G/L Debit                                                   "
+    },
+    "Payout_Accrual_Code": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "Payout Related Accrual Code                                                     "
+    },
+    "Union_Benefits": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Apply Union Add-on Benefits flag                                                "
+    },
+    "Display_Accumulated_Balance": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Display accumulated balance on paycheck?                                        "
+    },
+    "Union_Limit_Flag": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Apply limits to union?                                                          "
+    },
+    "Allocate_Across_Time_Cards": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Allocate across time cards?                                                     "
+    },
+    "Post_As_Union_Fringe": {
+      "type": "string",
+      "maxLength": 1,
+      "description": "Post as union fringe?                                                           "
+    },
+    "__custom_fields": {
+      "type": "object",
+      "description": "This property will be added if there are any custom fields defined for this object in Spectrum.  Each custom field will be a property of this object."
+    }
+  },
+  "required": [
+    "Company_Code",
+    "Vol_Deduct_Code",
+    "Vol_Deduct_Description",
+    "Deduct_Frequency_Code",
+    "Deduct_Type",
+    "Calc_Method",
+    "Deduct_GL_Account",
+    "Selected_Flag",
+    "Direct_Cost_Flag",
+    "Week_Number",
+    "Clear_At_Year_End",
+    "Deduct_Pre_Tax_Flag",
+    "Add_On_Cash_Flag",
+    "GL_Debit_Account",
+    "Formula_Code",
+    "Vol_Deduct_AP_Invoice_Flag",
+    "Default_Vendor_Code",
+    "Add_On_Print_Flag",
+    "Routing_Code1",
+    "Routing_Code2",
+    "Routing_Limit",
+    "Track_Prevailing_Wage",
+    "Default_Percent",
+    "Default_Rate",
+    "Default_Annual_Limit",
+    "Default_Monthly_Limit",
+    "Related_Code",
+    "Cycle_Limit_Type",
+    "Cycle_Limit_Percent",
+    "Cycle_Limit_Amount",
+    "True_Up_Eligible",
+    "True_Up_Limit_Type",
+    "True_Up_Limit_Percent",
+    "True_Up_Limit_Amount",
+    "Include_Davis_Bacon_Pay",
+    "Include_Prev_Wage_Pay",
+    "Include_Other_Pay",
+    "Pension_Report",
+    "All_Cost_Centers",
+    "TCGross_Nondirect_Debit",
+    "TCGross_Job_Debit",
+    "TCGross_Equipment_Debit",
+    "TCGross_WorkOrder_Debit",
+    "Payout_Accrual_Code",
+    "Union_Benefits",
+    "Display_Accumulated_Balance",
+    "Union_Limit_Flag",
+    "Allocate_Across_Time_Cards",
+    "Post_As_Union_Fringe"
+  ]
+}

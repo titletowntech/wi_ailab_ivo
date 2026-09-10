@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://sagecre300.si.ryvit.com/jc/v1/object/jct_current_transaction/add.json",
+  "title": "Jct Current Transaction Add Action Schema",
+  "description": "Schema for adding a new Jct Current Transaction record.",
+  "type": "object",
+  "properties": {}
+}

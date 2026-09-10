@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://spectrum.si.ryvit.com/ic/v1/object/inventory_transactions/change.json",
+  "title": "Inventory Transactions Change Action Schema",
+  "description": "Schema for updating an existing Inventory Transactions record. Only the primary key fields and the properties to be changed should be included.",
+  "type": "object",
+  "properties": {}
+}
