@@ -1,0 +1,21 @@
+[project]
+name = "ivo-analysis"
+version = "0.1.0"
+description = "Statistical analysis engine for IVO customer mapping: CSV profiling, ERP/IVO comparison, and correlation scoring."
+requires-python = ">=3.12"
+dependencies = [
+    "polars>=1.0",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# The package lives under tools/ alongside the Node tools it replaces, but the
+# project root is the repository root so `uv run` works from where the workbench
+# server runs (uv discovers a project by walking up from the working directory).
+[tool.hatch.build.targets.wheel]
+packages = ["tools/ivo_analysis"]

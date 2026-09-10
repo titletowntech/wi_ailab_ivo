@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "connector": {
+    "key": "vista",
+    "name": "Vista"
+  },
+  "name": "Vista integration",
+  "description": "",
+  "features": [],
+  "schedules": [],
+  "configurations": [],
+  "updatedAt": "2026-09-10T15:03:13.863Z"
+}
